@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs title="__UP_my_name__" height="500" scrolling="false" width="620" scaling="false" title_url="http://www.grbasket.gr" description="News |::| Display news in your blog or website " author="grbasket" author_email="grbasket@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s275/centralTitlesLogo.png" thumbnail="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s125/centralTitlesLogo.png" category="sport" category2="news" > 
+    <Require feature="setprefs" />    
+  </ModulePrefs>
+  <UserPref name="my_name" display_name="Name" default_value="Main News" />
+
+  <UserPref name="my_URLfeed_1" display_name="Source Sheet1:" default_value="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdGhkUFhCaHZYTWFlbFdMVHBXUll2YWc" />
+
+  <UserPref name="my_Tab_1" display_name="Tab1:" default_value="" />
+  <UserPref name="my_Tab_2" display_name="Tab2:" default_value="" />
+  <UserPref name="my_Tab_3" display_name="Tab3:" default_value="" />    
+  
+  <Content type="html">
+    <![CDATA[
+
+<style>
+img { border: 0; }
+.clear-fix { clear: both; }
+iframe { border: 0; }
+a:link,
+a:visited { color: #000; text-decoration: none; }
+a:active { text-decoration: none }
+a:hover { color: #EB6005; text-decoration: underline; }
+
+.mainContainer{
+ float: left;
+ position: relative;
+ overflow: auto;
+
+ height: 500px;
+}
+
+.tabsContainer{
+ width: 600px;
+ height: 390px;
+ color: lime;
+ background-color:#535899;
+ border : 1px solid silver;
+
+ border-top-left-radius: 15px;
+ border-top-right-radius: 15px;
+ border-bottom-right-radius: 15px;
+ border-bottom-left-radius: 0;
+}
+
+.boxKampylesPano{
+ border : 1px solid silver;
+ border-top-left-radius: 15px;
+ border-top-right-radius: 15px;
+}
+
+//------ gia ta ind tab inside
+
+.home-list {
+  position: relative;
+  height: 394px;
+}
+
+.myNaviContainer1, 
+.myNaviContainer2, 
+.myNaviContainer3{
+  
+  margin-top: 324px;
+  float: left;
+  padding: 0 10px 0 5px;
+  margin-right: 5px;
+  border-right: 1px solid #535888;
+}
+
+.myNaviContainer1:last-child,
+.myNaviContainer2:last-child, 
+.myNaviContainer3:last-child { border-right: 0; margin-right: 0; padding-right: 0; }
+
+
+.myNaviContainer1 a ,
+.myNaviContainer2 a , 
+.myNaviContainer3 a { border: solid 3px #535888; display: block; width: 118px; height: 50px; }
+
+
+.f_indexSelected a { border: solid 3px #FF5113; }
+
+.imantasDataItem {
+position: absolute;
+left: 2px;
+top: 2px;
+}
+
+.imantasImgContainer{
+  float:left;
+}
+
+.imantasDataContainer{
+background: black;
+opacity: 0.9;
+position: absolute;
+bottom: 0;
+left: 0;
+padding: 10px;
+color: white;
+width: 578px;
+height: 48px;
+}
+
+h3 {
+font-size: 1em;
+font-weight: normal;
+display:block;
+margin: 0;
+padding: 0;
+}
+
+a.imantasTilosMegalosLink, 
+a.imantasTilosMegalosLink:visited {
+color: #1351FF;
+font-size: 14px;
+font-weight: bold;
+text-decoration: none;
+}
+
+.imantasYpotitloi{
+font-size: 9px;
+color:white;
+}
+
+.imantasDataCategoryTop {
+background: #FF5113;
+opacity: 0.8;
+position: absolute;
+top: 0;
+right: 0;
+padding: 10px;
+color: white;
+width: 100px;
+height: 18px;
+text-align:center;
+font-size: 16px;
+font-weight: bold;
+
+ border: 1px solid silver;
+ border-top-left-radius: 15px;
+ border-top-right-radius: 15px;
+ border-bottom-right-radius: 15px;
+ border-bottom-left-radius: 15px;
+}
+
+
+//----  tabs area
+.tabs{
+ margin-top: -9px;
+ position: relative;
+ z-index: 100;
+ height: 40px;
+ border:1px solid red;
+}
+
+div{
+
+}
+
+#myTabs {
+ margin-top: -3px;
+ position: relative;
+ z-index: 100;
+ height: 40px;
+ display: block;
+}
+
+#myTabs a{
+ float: left;
+ display: block;
+ width: 120px;
+ height: 40px;
+ background: url('https://lh5.googleusercontent.com/-sfsZVpWstt0/T4RGUD3Ag8I/AAAAAAAAjl4/q6gEMVe5d9s/s800/dejia-kato-akrh-ble.png') no-repeat;
+ color: white;
+  font-weight: bold;
+ text-decoration: none;
+ font-size: 12px;
+ line-height: 35px;
+ text-align: center;
+ margin-left: -30px;
+ position: relative;
+ cursor:pointer;
+}
+
+
+#proto-tab{
+  z-index: 30;
+}
+#deytero-tab{
+  z-index: 20;
+}
+
+#myTabs a.tab-selected{
+  background: url('https://lh6.googleusercontent.com/-sScOLfHaOPY/T4RGUg8bqwI/AAAAAAAAjmE/5TABI7Pf9zI/s800/dejia-koto-akrh-mavrh.png') no-repeat;
+}
+
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+         google.load("visualization", "1");
+</script>
+
+<script>
+
+  var prefs = new gadgets.Prefs();
+  var myURLfeed1= prefs.getString("my_URLfeed_1");
+
+  var myTab1= prefs.getString("my_Tab_1");
+  var myTab2= prefs.getString("my_Tab_2");
+  var myTab3= prefs.getString("my_Tab_3");
+
+  var query1;
+
+  var msgTxt="<span style='font-size:9px;'>Δεν υπάρχει το αντίστοιχο URL του πηγαίου αρχείου.  Για να ξεπερασθεί το πρόβλημα, παρακαλούμε από την επιλογή επεξεργασία των παραμέτρων, εισάγεται την αντίστοιη URL διεύθυνση του πηγαίου αρχείου των πληροφοριών [πληροφορίες για την δομή του αρχείου: grbasket@gmail.com] |..|<br/><br/> There is no corresponding URL (source file). Please edit the parameters, enter the URL file address, with the infos categories ... [more for the file structure: grbasket@gmail.com]</span>";
+
+//---- make query tab 1 (old bathmologia)
+function sendQueryMakeItems() {
+    query1.setQuery('select * order by A, B');
+    query1.send(handleQueryResponseMakeItems);
+}
+
+
+//---------------------------
+//-------------- ResponseMakaeItems
+//---------------------------
+function handleQueryResponseMakeItems(response) {
+   if (response.isError()) {
+    alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+  }
+//---  GET THE DATA 
+ var html =[];  
+ var data = response.getDataTable();
+
+ var posesEggrafes = data.getNumberOfRows();
+ 
+ html.push('<div id="perioxh_1_ID" class="wp-data-items-list wp-base home-list tab-container">');
+
+ for (var row = 0; row < 4; row++) {
+
+   if(row != 0) {
+     html.push('<div id="it_1_'+row+'" class="imantasDataItem" style="display: none;">');
+   } else{
+     html.push('<div id="it_1_'+row+'" class="imantasDataItem" style="">');
+   }
+
+   html.push('<div class="imantasImgContainer">');
+   html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(row, 2) +'" alt="'+data.getFormattedValue(row, 4)+'" style="height:316px;width:598px;border-width:0px;">');
+   html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop">'+ data.getFormattedValue(row, 6)+'</div> '); 
+   html.push('</div>');
+
+
+   html.push('<div class="imantasDataContainer">');
+   html.push('<h3 class="imantasEpikefalides">');
+   html.push(' <a title="'+ data.getFormattedValue(row, 4) +'" class="imantasTilosMegalosLink" target="_top" href="'+data.getFormattedValue(row, 7)+'">'+ data.getFormattedValue(row, 4)+'</a> ');
+   html.push('</h3>');
+   html.push('<div id="imantasYpotitloi" class="imantasYpotitloi">'+data.getFormattedValue(row, 5)+'</div> ');                 
+   
+
+
+  html.push('</div>');
+
+
+ html.push('</div>');  //---- end me imantas data, img, titles
+
+   if(row > 0) {
+     html.push('<div id="indx_1_'+row+'" class="myNaviContainer1"> ');
+   } else{
+     html.push('<div id="indx_1_'+row+'" class="myNaviContainer1 f_indexSelected"> ');
+   }
+
+   html.push('<a href="'+ data.getFormattedValue(row, 7)  +'" onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
+   html.push('<img src="' + data.getFormattedValue(row, 2) +'" alt="" title="'+ data.getFormattedValue(row, 4) +'" style="height:50px;width:118px;border-width:0px;">');
+   html.push('</a>');
+   html.push('</div>');
+ } //-- end for
+
+  html.push('</div>');
+  document.getElementById("panoXorosItems").innerHTML = html.join('');
+}
+
+
+//--------------------------------------
+function SelectItem (container, selected, selectedItem) {
+
+//---
+    $(container+" div").removeClass("f_indexSelected");
+    $(".imantasDataItem").hide();
+//--- gia to item
+    $(selectedItem).show();
+    $(selected).addClass("f_indexSelected");
+}
+
+// --- gia ta tabs 
+function selectTab (myID, myTab, myCaption ) {
+
+//--- krybei perioxh  
+    $(".periexomenaCL").hide();
+
+    $("#myTabs a").removeClass("tab-selected");
+//--- gia perioxh
+    $("#"+myID).show();
+//--- gia to tab
+    $("#"+myTab).addClass("tab-selected");
+//---
+  if(myCaption !=""){
+   //---   document.getElementById("myTitleID").innerHTML = myCaption;
+ }
+
+//---
+
+  if(myTab == "proto-tab"){  
+    // -----   click tab 1
+  }
+
+  if( myTab == "deytero-tab" ){
+    //---  sendQueryAgonistikes();
+  }
+
+  if(myTab == "trito-tab"){  
+    //---      document.getElementById("myTitleID").innerHTML += "<span style='font-size:9px;'> (" + strAllDate +")</span>";
+    //---      document.getElementById("trito-tab").title = "Οι αγώνες ανά ημέρα (" + strAllDate +")";
+    //---      sendQueryEbdomadiaioAnaHmera();
+  }
+
+}
+
+
+function init(){
+  makeTabs();
+  if( myURLfeed1 !="" ){
+    query1 = new google.visualization.Query(myURLfeed1);
+    sendQueryMakeItems();
+  }else{
+   //--- document.getElementById("sourceIDBathm").innerHTML = msgTxt;
+  }
+
+}
+//--- make Tabs
+function makeTabs(){
+ var tabsHtml =[];
+
+ if( myTab1 !="" ){
+    tabsHtml.push('<a id="proto-tab" href="javascript:void(0);" title="'+myTab1+'" onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;proto-tab&quot;,&quot;'+ myTab1+'&quot;);return false;">'+ myTab1+ '</a>' );
+   }else{
+    tabsHtml.push('<a id="proto-tab" href="javascript:void(0);" onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;proto-tab&quot;,&quot;myTab1&quot;);return false;">Tab1</a>' );
+  }
+
+  if( myTab2 !="" ){
+    tabsHtml.push('<a id="deytero-tab" href="javascript:void(0);" title="'+myTab2+'" onclick="javascript:selectTab(&quot;sourceID&quot;,&quot;deytero-tab&quot;,&quot;'+ myTab2+'&quot;);return false;">'+ myTab2+ '</a>' );
+   }else{
+/*
+    tabsHtml.push('<a id="deytero-tab" href="javascript:void(0);" title="myTab2" onclick="javascript:selectTab(&quot;sourceID&quot;,&quot;deytero-tab&quot;,&quot;myTab2&quot;);return false;">Tab2</a>' );
+*/
+  }
+
+  if( myTab3 !="" ){
+    tabsHtml.push('<a id="trito-tab" href="javascript:void(0);" title="'+myTab3+'" onclick="javascript:selectTab(&quot;sourceIDebdanahmera&quot;,&quot;trito-tab&quot;,&quot;'+ myTab3+'&quot;);return false;">'+ myTab3+ '</a>' );
+   }else{
+/*
+    tabsHtml.push('<a id="trito-tab" href="javascript:void(0);" title="myTab3" onclick="javascript:selectTab(&quot;sourceIDebdanahmera&quot;,&quot;trito-tab&quot;,&quot;myTab3&quot;);return false;">Tab3</a>' );
+*/
+  }
+
+
+    document.getElementById("myTabs").innerHTML = tabsHtml.join('');
+}
+
+
+
+ gadgets.util.registerOnLoadHandler(init);  
+
+</script>
+
+
+
+<div class="mainContainer">
+
+ <!--   **** 1 perioxh tvn periexomenoy ****  -->
+ <div id="panoXorosItems" class="tabsContainer">
+
+ </div> <!-- end ano tmhma  -->
+
+ <!--   **** 2 perioxh tvn tab ****  -->
+  <div id="myTabs" width="100%">
+   <a id="proto-tab" onclick="javascript:selectTab('first_perioxhID','proto-tab','');return false;" class="tab-selected">Nέα</a>
+   <a id="deytero-tab"  onclick="javascript:selectTab('sourceID','deytero-tab','');return false;">Ανακοινώσεις</a>
+   <a id="trito-tab"  onclick="javascript:selectTab('sourceIDebdanahmera','trito-tab','');return false;">Video</a>
+  </div>
+ 
+ <!--   **** 3 perioxh tvn diashmhsevn ****  -->
+ <div class="ViewItemContainer">
+  <center>
+   <script type="text/javascript"><!--
+google_ad_client = "ca-pub-9529818444792202";
+/* 468x60 ga titles news */
+google_ad_slot = "4512294539";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+   </script>
+   <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+  </center>
+
+ </div>  <!--  end trito meros  -->
+
+
+</div>   <!-- end mainContainer  -->
+
+    ]]>
+  </Content>
+</Module>
