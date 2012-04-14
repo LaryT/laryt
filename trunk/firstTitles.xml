@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-    <ModulePrefs title="__UP_my_name__" height="500" scrolling="false" width="620" scaling="false" title_url="http://www.grbasket.gr" description="News |::| Display news in your blog or website " author="grbasket" author_email="grbasket@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s275/centralTitlesLogo.png" thumbnail="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s125/centralTitlesLogo.png" category="sport" category2="news" > 
+    <ModulePrefs title="__UP_my_name__" height="500" scrolling="false" width="620" scaling="false" title_url="http://www.grbasket.gr" description="News |::| Display news in your blog or website " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s275/centralTitlesLogo.png" thumbnail="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s125/centralTitlesLogo.png" category="sport" category2="news" > 
     <Require feature="setprefs" />    
   </ModulePrefs>
   <UserPref name="my_name" display_name="Name" default_value="Main News" />
 
   <UserPref name="my_URLfeed_1" display_name="Source Sheet1:" default_value="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdGhkUFhCaHZYTWFlbFdMVHBXUll2YWc" />
 
-  <UserPref name="my_Tab_1" display_name="Tab1:" default_value="" />
+  <UserPref name="my_Tab_1" display_name="Tab1:" default_value="News" />
   <UserPref name="my_Tab_2" display_name="Tab2:" default_value="" />
   <UserPref name="my_Tab_3" display_name="Tab3:" default_value="" />    
   
