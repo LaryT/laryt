@@ -212,15 +212,30 @@ div{
   var myTab2= prefs.getString("my_Tab_2");
   var myTab3= prefs.getString("my_Tab_3");
 
-  var query1;
+  var query1,query2,query3;
   var poiaSeiraItem=0;
 
   var msgTxt="<span style='font-size:9px;'>Δεν υπάρχει το αντίστοιχο URL του πηγαίου αρχείου.  Για να ξεπερασθεί το πρόβλημα, παρακαλούμε από την επιλογή επεξεργασία των παραμέτρων, εισάγεται την αντίστοιη URL διεύθυνση του πηγαίου αρχείου των πληροφοριών [πληροφορίες για την δομή του αρχείου: grbasket@gmail.com] |..|<br/><br/> There is no corresponding URL (source file). Please edit the parameters, enter the URL file address, with the infos categories ... [more for the file structure: grbasket@gmail.com]</span>";
 
 //---- make query tab 1 (old bathmologia)
 function sendQueryMakeItems() {
-    query1.setQuery('select * order by A, B');
+   if(poiaSeiraItem=0)
+   {
+    query1.setQuery('select * order A=1 by A, B');
     query1.send(handleQueryResponseMakeItems);
+   }
+   if(poiaSeiraItem=1)
+   {
+    query2.setQuery('select * where A=2 order by A, B');
+    query2.send(handleQueryResponseMakeItems);
+   }
+   
+   if(poiaSeiraItem=2)
+   {
+    query3.setQuery('select * where A=3 order by A, B');
+    query3.send(handleQueryResponseMakeItems);
+   }
+   
 }
 
 
@@ -249,7 +264,8 @@ function handleQueryResponseMakeItems(response) {
      html.push('<div id="it_1_'+row+'" class="imantasDataItem" style="">');
    }
    
-   rowForItem = row+(poiaSeiraItem*4);
+   rowForItem = row;
+   //-----  old  rowForItem = row+(poiaSeiraItem*4);
 
    alert('rowForItem = '+rowForItem);
 
