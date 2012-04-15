@@ -243,7 +243,7 @@ function handleQueryResponseMakeItems(response) {
  
  html.push('<div id="perioxh_1_ID" class="wp-data-items-list wp-base home-list tab-container">');
 
- for (var row = 0; row < 4; row++) {
+ for (var row = 0; row < 12; row++) {
 
    if(row != 0) {
      html.push('<div id="it_1_'+row+'" class="imantasDataItem" style="display: none;">');
@@ -287,9 +287,6 @@ function handleQueryResponseMakeItems(response) {
   //-----------  end tabs1-items 1->4
   
   
-   
-  
-  
   document.getElementById("panoXorosItems").innerHTML = html.join('');
 }
 
@@ -328,16 +325,45 @@ function selectTab (myID, myTab, myCaption ) {
   if(myTab == "proto-tab"){  
     // -----   click tab 1
     poiaSeiraItem=0;
+    $(".imantasDataItem").hide();
+    $(".myNaviContainer1").hide();
+    $("#it_1_0").show();
+    $("#indx_1_0")show();
+    $("#it_1_1").show();
+    $("#indx_1_1")show();    
+    $("#it_1_2").show();
+    $("#indx_1_2")show();  
+    $("#it_1_3").show();
+    $("#indx_1_3")show();  
+    
   }
 
   if( myTab == "deytero-tab" ){
       poiaSeiraItem=1;
-      alert('2 tab');
+    $(".imantasDataItem").hide();
+    $(".myNaviContainer1").hide();
+    $("#it_1_4").show();
+    $("#indx_1_4")show();
+    $("#it_1_5").show();
+    $("#indx_1_5")show();    
+    $("#it_1_6").show();
+    $("#indx_1_6")show();  
+    $("#it_1_7").show();
+    $("#indx_1_7")show(); 
   }
 
   if(myTab == "trito-tab"){  
       poiaSeiraItem=2;
-      alert('3 tab');
+    $(".imantasDataItem").hide();
+    $(".myNaviContainer1").hide();
+    $("#it_1_8").show();
+    $("#indx_1_8")show();
+    $("#it_1_9").show();
+    $("#indx_1_9")show();    
+    $("#it_1_10").show();
+    $("#indx_1_10")show();  
+    $("#it_1_11").show();
+    $("#indx_1_11")show();
   }
   
   sendQueryMakeItems();
