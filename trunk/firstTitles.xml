@@ -340,6 +340,9 @@ function selectTab (myID, myTab, myCaption ) {
     $("#it_1_3").show();
     $("#indx_1_3").show();  
     
+    SelectItem("#perioxh_1_ID","#indx_1_0","#it_1_0" );
+    $("#indx_1_0").addClass("f_indexSelected");
+    
   }
 
   if( myTab == "deytero-tab" ){
@@ -354,6 +357,8 @@ function selectTab (myID, myTab, myCaption ) {
     $("#indx_1_6").show();  
     $("#it_1_7").show();
     $("#indx_1_7").show(); 
+    SelectItem("#perioxh_1_ID","#indx_1_4","#it_1_4" );
+    $("#indx_1_4").addClass("f_indexSelected");    
   }
 
   if(myTab == "trito-tab"){  
@@ -368,6 +373,8 @@ function selectTab (myID, myTab, myCaption ) {
     $("#indx_1_10").show();  
     $("#it_1_11").show();
     $("#indx_1_11").show();
+    SelectItem("#perioxh_1_ID","#indx_1_8","#it_1_8" );    
+    $("#indx_1_8").addClass("f_indexSelected");    
   }
   
   sendQueryMakeItems();
