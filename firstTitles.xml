@@ -271,11 +271,16 @@ function handleQueryResponseMakeItems(response) {
 
  html.push('</div>');  //---- end me imantas data, img, titles
 
-   if(row > 0) {
-     html.push('<div id="indx_1_'+row+'" class="myNaviContainer1"> ');
-   } else{
-     html.push('<div id="indx_1_'+row+'" class="myNaviContainer1 f_indexSelected"> ');
-   }
+ if(row < 4) {
+    if(row > 0) {
+      html.push('<div id="indx_1_'+row+'" class="myNaviContainer1"> ');
+    } else{
+      html.push('<div id="indx_1_'+row+'" class="myNaviContainer1 f_indexSelected"> ');
+    }
+  }else{
+     html.push('<div id="indx_1_'+row+'" class="myNaviContainer1" style="display: none;"> ');
+  }
+  
 
    html.push('<a href="'+ data.getFormattedValue(row, 7)  +'" onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
    html.push('<img src="' + data.getFormattedValue(rowForItem, 2) +'" alt="" title="'+ data.getFormattedValue(rowForItem, 4) +'" style="height:50px;width:118px;border-width:0px;">');
