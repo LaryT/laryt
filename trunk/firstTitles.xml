@@ -287,51 +287,6 @@ function handleQueryResponseMakeItems(response) {
   //-----------  end tabs1-items 1->4
   
   
-  //----------- perioxh
-   html.push('<div id="perioxh_2_ID" class="wp-data-items-list wp-base home-list tab-container">');
-
- for (var row = 4; row < 8; row++) {
-
-   if(row != 0) {
-     html.push('<div id="it_2_'+row+'" class="imantasDataItem" style="display: none;">');
-   } else{
-     html.push('<div id="it_2_'+row+'" class="imantasDataItem" style="">');
-   }
-   
-   rowForItem = row;
-   //-----  old  rowForItem = row+(poiaSeiraItem*4);
-
-   html.push('<div class="imantasImgContainer">');
-   html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(rowForItem, 2) +'" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:598px;border-width:0px;">');
-   html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop">'+ data.getFormattedValue(rowForItem, 6)+'</div> '); 
-   html.push('</div>');
-
-
-   html.push('<div class="imantasDataContainer">');
-   html.push('<h3 class="imantasEpikefalides">');
-   html.push(' <a title="'+ data.getFormattedValue(rowForItem, 4) +'" class="imantasTilosMegalosLink" target="_top" href="'+data.getFormattedValue(rowForItem, 7)+'">'+ data.getFormattedValue(rowForItem, 4)+'</a> ');
-   html.push('</h3>');
-   html.push('<div id="imantasYpotitloi" class="imantasYpotitloi">'+data.getFormattedValue(rowForItem, 5)+'</div> ');                 
-   
-  html.push('</div>');
-
-
- html.push('</div>');  //---- end me imantas data, img, titles
-
-   if(row > 0) {
-     html.push('<div id="indx_2_'+row+'" class="myNaviContainer1"> ');
-   } else{
-     html.push('<div id="indx_2_'+row+'" class="myNaviContainer1 f_indexSelected"> ');
-   }
-
-   html.push('<a href="'+ data.getFormattedValue(row, 7)  +'" onclick="javascript:SelectItem(&quot;#perioxh_2_ID&quot;,&quot;#indx_2_'+row+'&quot;,&quot;#it_2_'+row+'&quot; );return false;">');
-   html.push('<img src="' + data.getFormattedValue(rowForItem, 2) +'" alt="" title="'+ data.getFormattedValue(rowForItem, 4) +'" style="height:50px;width:118px;border-width:0px;">');
-   html.push('</a>');
-   html.push('</div>');
- } //-- end for
-
-  html.push('</div>');
-  
    
   
   
