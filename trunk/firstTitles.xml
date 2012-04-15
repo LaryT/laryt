@@ -219,18 +219,18 @@ div{
 
 //---- make query tab 1 (old bathmologia)
 function sendQueryMakeItems() {
-   if(poiaSeiraItem=0)
+   if(poiaSeiraItem == 0)
    {
-    query1.setQuery('select * order A=1 by A, B');
+    query1.setQuery('select * where A=1 order  by A, B');
     query1.send(handleQueryResponseMakeItems);
    }
-   if(poiaSeiraItem=1)
+   if(poiaSeiraItem == 1 )
    {
     query2.setQuery('select * where A=2 order by A, B');
     query2.send(handleQueryResponseMakeItems);
    }
    
-   if(poiaSeiraItem=2)
+   if(poiaSeiraItem == 2)
    {
     query3.setQuery('select * where A=3 order by A, B');
     query3.send(handleQueryResponseMakeItems);
