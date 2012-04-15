@@ -213,6 +213,7 @@ div{
   var myTab3= prefs.getString("my_Tab_3");
 
   var query1;
+  var poiaSeiraItem=0;
 
   var msgTxt="<span style='font-size:9px;'>Δεν υπάρχει το αντίστοιχο URL του πηγαίου αρχείου.  Για να ξεπερασθεί το πρόβλημα, παρακαλούμε από την επιλογή επεξεργασία των παραμέτρων, εισάγεται την αντίστοιη URL διεύθυνση του πηγαίου αρχείου των πληροφοριών [πληροφορίες για την δομή του αρχείου: grbasket@gmail.com] |..|<br/><br/> There is no corresponding URL (source file). Please edit the parameters, enter the URL file address, with the infos categories ... [more for the file structure: grbasket@gmail.com]</span>";
 
@@ -232,6 +233,7 @@ function handleQueryResponseMakeItems(response) {
     return;
   }
 //---  GET THE DATA 
+ var rowForItem=0;
  var html =[];  
  var data = response.getDataTable();
 
@@ -246,21 +248,23 @@ function handleQueryResponseMakeItems(response) {
    } else{
      html.push('<div id="it_1_'+row+'" class="imantasDataItem" style="">');
    }
+   
+   rowForItem = row+(poiaSeiraItem*4);
+
+
 
    html.push('<div class="imantasImgContainer">');
-   html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(row, 2) +'" alt="'+data.getFormattedValue(row, 4)+'" style="height:316px;width:598px;border-width:0px;">');
-   html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop">'+ data.getFormattedValue(row, 6)+'</div> '); 
+   html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(rowForItem, 2) +'" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:598px;border-width:0px;">');
+   html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop">'+ data.getFormattedValue(rowForItem, 6)+'</div> '); 
    html.push('</div>');
 
 
    html.push('<div class="imantasDataContainer">');
    html.push('<h3 class="imantasEpikefalides">');
-   html.push(' <a title="'+ data.getFormattedValue(row, 4) +'" class="imantasTilosMegalosLink" target="_top" href="'+data.getFormattedValue(row, 7)+'">'+ data.getFormattedValue(row, 4)+'</a> ');
+   html.push(' <a title="'+ data.getFormattedValue(rowForItem, 4) +'" class="imantasTilosMegalosLink" target="_top" href="'+data.getFormattedValue(rowForItem, 7)+'">'+ data.getFormattedValue(rowForItem, 4)+'</a> ');
    html.push('</h3>');
-   html.push('<div id="imantasYpotitloi" class="imantasYpotitloi">'+data.getFormattedValue(row, 5)+'</div> ');                 
+   html.push('<div id="imantasYpotitloi" class="imantasYpotitloi">'+data.getFormattedValue(rowForItem, 5)+'</div> ');                 
    
-
-
   html.push('</div>');
 
 
@@ -273,7 +277,7 @@ function handleQueryResponseMakeItems(response) {
    }
 
    html.push('<a href="'+ data.getFormattedValue(row, 7)  +'" onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
-   html.push('<img src="' + data.getFormattedValue(row, 2) +'" alt="" title="'+ data.getFormattedValue(row, 4) +'" style="height:50px;width:118px;border-width:0px;">');
+   html.push('<img src="' + data.getFormattedValue(rowForItem, 2) +'" alt="" title="'+ data.getFormattedValue(rowForItem, 4) +'" style="height:50px;width:118px;border-width:0px;">');
    html.push('</a>');
    html.push('</div>');
  } //-- end for
@@ -294,10 +298,12 @@ function SelectItem (container, selected, selectedItem) {
     $(selected).addClass("f_indexSelected");
 }
 
-// --- gia ta tabs 
+//-----------------
+// --- gia ta tabs
+//-----------------
 function selectTab (myID, myTab, myCaption ) {
 
-//--- krybei perioxh  
+//--- krybei perioxh  first_perioxhID
     $(".periexomenaCL").hide();
 
     $("#myTabs a").removeClass("tab-selected");
@@ -314,18 +320,18 @@ function selectTab (myID, myTab, myCaption ) {
 
   if(myTab == "proto-tab"){  
     // -----   click tab 1
+    poiaSeiraItem=0;
   }
 
   if( myTab == "deytero-tab" ){
-    //---  sendQueryAgonistikes();
+      poiaSeiraItem=1;
   }
 
   if(myTab == "trito-tab"){  
-    //---      document.getElementById("myTitleID").innerHTML += "<span style='font-size:9px;'> (" + strAllDate +")</span>";
-    //---      document.getElementById("trito-tab").title = "Οι αγώνες ανά ημέρα (" + strAllDate +")";
-    //---      sendQueryEbdomadiaioAnaHmera();
+      poiaSeiraItem=2;
   }
-
+  
+  sendQueryMakeItems();
 }
 
 
