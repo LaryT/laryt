@@ -251,7 +251,7 @@ function handleQueryResponseMakeItems(response) {
    
    rowForItem = row+(poiaSeiraItem*4);
 
-
+   alert('rowForItem = '+rowForItem);
 
    html.push('<div class="imantasImgContainer">');
    html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(rowForItem, 2) +'" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:598px;border-width:0px;">');
@@ -325,10 +325,12 @@ function selectTab (myID, myTab, myCaption ) {
 
   if( myTab == "deytero-tab" ){
       poiaSeiraItem=1;
+      alert('2 tab');
   }
 
   if(myTab == "trito-tab"){  
       poiaSeiraItem=2;
+      alert('3 tab');
   }
   
   sendQueryMakeItems();
