@@ -57,10 +57,7 @@ a:hover { color: #EB6005; text-decoration: underline; }
   height: 394px;
 }
 
-.myNaviContainer1, 
-.myNaviContainer2, 
-.myNaviContainer3{
-  
+.myNaviContainer1{
   margin-top: 324px;
   float: left;
   padding: 0 10px 0 5px;
@@ -68,15 +65,9 @@ a:hover { color: #EB6005; text-decoration: underline; }
   border-right: 1px solid #535888;
 }
 
-.myNaviContainer1:last-child,
-.myNaviContainer2:last-child, 
-.myNaviContainer3:last-child { border-right: 0; margin-right: 0; padding-right: 0; }
+.myNaviContainer1:last-child{ border-right: 0; margin-right: 0; padding-right: 0; }
 
-
-.myNaviContainer1 a ,
-.myNaviContainer2 a , 
-.myNaviContainer3 a { border: solid 3px #535888; display: block; width: 118px; height: 50px; }
-
+.myNaviContainer1 a{ border: solid 3px #535888; display: block; width: 118px; height: 50px; }
 
 .f_indexSelected a { border: solid 3px #FF5113; }
 
@@ -89,7 +80,6 @@ top: 2px;
 .imantasImgContainer{
   float:left;
 }
-
 .imantasDataContainer{
 background: black;
 opacity: 0.9;
@@ -124,8 +114,8 @@ color:white;
 }
 
 .imantasDataMarquee {
-background-image: url('https://lh5.googleusercontent.com/-l811SPtOsbo/T0Y-vGCGYHI/AAAAAAAAgMY/1Ciyl2tJenY/s24/black-gray1x30.png');
-//  ---background: #535899;
+//-------background-image: url('https://lh5.googleusercontent.com/-l811SPtOsbo/T0Y-vGCGYHI/AAAAAAAAgMY/1Ciyl2tJenY/s18/black-gray1x30.png');
+background: #535899;
 opacity: 0.9;
 position: absolute;
 top: 0;
