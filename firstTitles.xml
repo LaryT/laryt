@@ -291,7 +291,7 @@ function handleQueryResponseMakeItems(response) {
    html.push('<a href="'+ data.getFormattedValue(row, 7)  +'" onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
    
    if( data.getFormattedValue(rowForItem, 8)!=""  ) {
-         html.push('<img src="http://i1.ytimg/com/vi/' + data.getFormattedValue(rowForItem, 8) +'/1.jpg" alt="" title="'+ data.getFormattedValue(rowForItem, 4) +'" style="height:50px;width:118px;border-width:0px;">');
+         html.push('<img src="http://i1.ytimg.com/vi/' + data.getFormattedValue(rowForItem, 8) +'/1.jpg" alt="" title="'+ data.getFormattedValue(rowForItem, 4) +'" style="height:50px;width:118px;border-width:0px;">');
    } else{
       html.push('<img src="' + data.getFormattedValue(rowForItem, 2) +'" alt="" title="'+ data.getFormattedValue(rowForItem, 4) +'" style="height:50px;width:118px;border-width:0px;">');
    }
