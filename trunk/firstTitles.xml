@@ -124,7 +124,7 @@ color:white;
 }
 
 .imantasDataMarquee {
-background: #1351FF;
+background: #535899;
 opacity: 0.9;
 position: absolute;
 top: 0;
