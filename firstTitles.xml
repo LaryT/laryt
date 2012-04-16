@@ -264,7 +264,8 @@ function handleQueryResponseMakeItems(response) {
          html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(rowForItem, 2) +'" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:598px;border-width:0px;">');
    }
 
-   if( data.getFormattedValue(rowForItem, 8) =""  ) {
+   if( data.getFormattedValue(rowForItem, 8) !=""  ) {
+   }else{
      html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop">'+ data.getFormattedValue(rowForItem, 6)+'</div> '); 
    }
    html.push('</div>');
