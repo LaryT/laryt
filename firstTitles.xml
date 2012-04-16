@@ -124,7 +124,8 @@ color:white;
 }
 
 .imantasDataMarquee {
-background: #535899;
+background-image: url('https://lh5.googleusercontent.com/-l811SPtOsbo/T0Y-vGCGYHI/AAAAAAAAgMY/1Ciyl2tJenY/s24/black-gray1x30.png');
+//  ---background: #535899;
 opacity: 0.9;
 position: absolute;
 top: 0;
@@ -133,7 +134,6 @@ padding: 10px;
 color: white;
 width: 473px;
 height: 18px;
-text-align:center;
 font-size: 16px;
 font-weight: bold;
 
