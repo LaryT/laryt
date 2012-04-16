@@ -256,7 +256,7 @@ function handleQueryResponseMakeItems(response) {
    html.push('<div class="imantasImgContainer">');
    
    if( data.getFormattedValue(rowForItem, 8)!=""  ) {
-        html.push('<iframe class="boxKampylesPano" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/'+data.getFormattedValue(rowForItem, 8)+'?rel=0&autohide=1&showinfo=0" style="height:246px;width:578px;border-width:0px;margin:5px 10px;"></iframe>');
+        html.push('<iframe class="boxKampylesPano" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/'+data.getFormattedValue(rowForItem, 8)+'?rel=0&autohide=1&showinfo=0" style="height:244px;width:578px;border-width:0px;margin:5px 7px;"></iframe>');
         
 //--   old       html.push('<img class="boxKampylesPano" src="http://i1.ytimg.com/vi/' + data.getFormattedValue(rowForItem, 8) +'/1.jpg" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:598px;border-width:0px;">');           
         
@@ -264,8 +264,9 @@ function handleQueryResponseMakeItems(response) {
          html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(rowForItem, 2) +'" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:598px;border-width:0px;">');
    }
 
-   
-   html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop" style="z-index: 100;">'+ data.getFormattedValue(rowForItem, 6)+'</div> '); 
+   if( data.getFormattedValue(rowForItem, 8) =""  ) {
+     html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop">'+ data.getFormattedValue(rowForItem, 6)+'</div> '); 
+   }
    html.push('</div>');
 
 
