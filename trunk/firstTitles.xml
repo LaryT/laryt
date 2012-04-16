@@ -131,7 +131,7 @@ top: 0;
 left: 0;
 padding: 10px;
 color: white;
-width: 498px;
+width: 478px;
 height: 18px;
 text-align:center;
 font-size: 16px;
@@ -139,14 +139,10 @@ font-weight: bold;
 
  border: 1px solid silver;
  border-top-left-radius: 15px;
- border-top-right-radius: 0px;
- border-bottom-right-radius: 0px;
+ border-top-right-radius: 15px;
+ border-bottom-right-radius: 15px;
  border-bottom-left-radius: 15px;
 }
-
-
-
-
 
 .imantasDataCategoryTop {
 background: #FF5113;
