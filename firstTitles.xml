@@ -125,13 +125,13 @@ color:white;
 
 .imantasDataMarquee {
 background: #1351FF;
-opacity: 0.8;
+opacity: 0.9;
 position: absolute;
 top: 0;
 left: 0;
 padding: 10px;
 color: white;
-width: 478px;
+width: 473px;
 height: 18px;
 text-align:center;
 font-size: 16px;
