@@ -245,9 +245,9 @@ function handleQueryResponseMakeItems(response) {
  for (var row = 0; row < 12; row++) {
 
    if(row != 0) {
-     html.push('<div id="it_1_'+row+'" class="imantasDataItem" style="display: none;">');
+     html.push('<div id="it_1_'+row+'" class="imantasDataItem" style="display: none;height:316px;">');
    } else{
-     html.push('<div id="it_1_'+row+'" class="imantasDataItem" style="">');
+     html.push('<div id="it_1_'+row+'" class="imantasDataItem" style="height:316px;">');
    }
    
    rowForItem = row;
@@ -256,8 +256,10 @@ function handleQueryResponseMakeItems(response) {
    html.push('<div class="imantasImgContainer">');
    
    if( data.getFormattedValue(rowForItem, 8)!=""  ) {
-        html.push('<img class="boxKampylesPano" src="http://i1.ytimg.com/vi/' + data.getFormattedValue(rowForItem, 8) +'/1.jpg" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:598px;border-width:0px;">');   
-//--   old       html.push('<iframe class="boxKampylesPano" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/'+data.getFormattedValue(rowForItem, 8)+'?rel=0&autohide=1&showinfo=0" style="height:246px;width:598px;border-width:0px;margin-top:20px;"></iframe>');
+        html.push('<iframe class="boxKampylesPano" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/'+data.getFormattedValue(rowForItem, 8)+'?rel=0&autohide=1&showinfo=0" style="height:246px;width:598px;border-width:0px;top:20px;"></iframe>');
+        
+//--   old       html.push('<img class="boxKampylesPano" src="http://i1.ytimg.com/vi/' + data.getFormattedValue(rowForItem, 8) +'/1.jpg" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:598px;border-width:0px;">');           
+        
    }else{
          html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(rowForItem, 2) +'" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:598px;border-width:0px;">');
    }
