@@ -245,13 +245,13 @@ function handleQueryResponseMakeItems(response) {
     return;
   }
 //---  GET THE DATA 
- var rowForItem=0;
+
  var html =[];  
  var data = response.getDataTable();
 
  var posesEggrafes = data.getNumberOfRows();
  
- html.push('<div id="perioxh_1_ID" class="wp-data-items-list wp-base home-list tab-container">');
+ html.push('<div id="perioxh_1_ID" >');
 
  for (var row = 0; row < 12; row++) {
 
@@ -261,36 +261,31 @@ function handleQueryResponseMakeItems(response) {
      html.push('<div id="it_1_'+row+'" class="imantasDataItem" style="height:316px;">');
    }
    
-   rowForItem = row;
-   //-----  old  rowForItem = row+(poiaSeiraItem*4);
 
    html.push('<div class="imantasImgContainer">');
    
-   if( data.getFormattedValue(rowForItem, 8)!=""  ) {
-        html.push('<iframe class="boxKampylesPano" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/'+data.getFormattedValue(rowForItem, 8)+'?rel=0&autohide=1&showinfo=0" style="height:244px;width:587px;border-width:0px;margin:5px 7px;"></iframe>');
-        
-//--   old       html.push('<img class="boxKampylesPano" src="http://i1.ytimg.com/vi/' + data.getFormattedValue(rowForItem, 8) +'/1.jpg" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:599px;border-width:0px;">');           
-        
+   if( data.getFormattedValue(row, 8)!=""  ) {
+        html.push('<iframe class="boxKampylesPano" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/'+data.getFormattedValue(row, 8)+'?rel=0&autohide=1&showinfo=0" style="height:244px;width:587px;border-width:0px;margin:5px 7px;"></iframe>');
+
    }else{
-         html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(rowForItem, 2) +'" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:599px;border-width:0px;">');
+         html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(row, 2) +'" alt="'+data.getFormattedValue(row, 4)+'" style="height:316px;width:599px;border-width:0px;">');
    }
 
-   if( data.getFormattedValue(rowForItem, 8) !=""  ) {
+   if( data.getFormattedValue(row, 8) !=""  ) {
    }else{
-
-     if( data.getFormattedValue(rowForItem, 9) !=""  ) {
-       html.push('<div id="imantasDataMarquee" class="imantasDataMarquee"><marquee>'+ data.getFormattedValue(rowForItem, 9)+'</marquee></div> '); 
-     }
-     html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop">'+ data.getFormattedValue(rowForItem, 6)+'</div> '); 
+     if( data.getFormattedValue(row, 9) !=""  ) {
+        html.push('<div id="imantasDataMarquee" class="imantasDataMarquee"><marquee>'+ data.getFormattedValue(row, 9)+'</marquee></div> '); 
+      }
+     html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop">'+ data.getFormattedValue(row, 6)+'</div> '); 
    }
    html.push('</div>');
 
 
    html.push('<div class="imantasDataContainer">');
    html.push('<h3 class="imantasEpikefalides">');
-   html.push(' <a title="'+ data.getFormattedValue(rowForItem, 4) +'" class="imantasTilosMegalosLink" target="_top" href="'+data.getFormattedValue(rowForItem, 7)+'">'+ data.getFormattedValue(rowForItem, 4)+'</a> ');
+   html.push(' <a title="'+ data.getFormattedValue(row, 4) +'" class="imantasTilosMegalosLink" target="_top" href="'+data.getFormattedValue(row, 7)+'">'+ data.getFormattedValue(row, 4)+'</a> ');
    html.push('</h3>');
-   html.push('<div id="imantasYpotitloi" class="imantasYpotitloi">'+data.getFormattedValue(rowForItem, 5)+'</div> ');                 
+   html.push('<div id="imantasYpotitloi" class="imantasYpotitloi">'+data.getFormattedValue(row, 5)+'</div> ');                 
    
   html.push('</div>');
 
@@ -310,10 +305,10 @@ function handleQueryResponseMakeItems(response) {
 
    html.push('<a href="'+ data.getFormattedValue(row, 7)  +'" onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
    
-   if( data.getFormattedValue(rowForItem, 8)!=""  ) {
-         html.push('<img src="http://i1.ytimg.com/vi/' + data.getFormattedValue(rowForItem, 8) +'/1.jpg" alt="" title="'+ data.getFormattedValue(rowForItem, 4) +'" style="height:50px;width:118px;border-width:0px;">');
+   if( data.getFormattedValue(row, 8)!=""  ) {
+         html.push('<img src="http://i1.ytimg.com/vi/' + data.getFormattedValue(row, 8) +'/1.jpg" alt="" title="'+ data.getFormattedValue(row, 4) +'" style="height:50px;width:118px;border-width:0px;">');
    } else{
-      html.push('<img src="' + data.getFormattedValue(rowForItem, 2) +'" alt="" title="'+ data.getFormattedValue(rowForItem, 4) +'" style="height:50px;width:118px;border-width:0px;">');
+      html.push('<img src="' + data.getFormattedValue(row, 2) +'" alt="" title="'+ data.getFormattedValue(row, 4) +'" style="height:50px;width:118px;border-width:0px;">');
    }
    html.push('</a>');
    html.push('</div>');
@@ -329,7 +324,6 @@ function handleQueryResponseMakeItems(response) {
 //--------------------------------------
 function SelectItem (container, selected, selectedItem) {
 
-//---
     $(container+" div").removeClass("f_indexSelected");
     $(".imantasDataItem").hide();
 //--- gia to item
@@ -342,18 +336,11 @@ function SelectItem (container, selected, selectedItem) {
 //-----------------
 function selectTab (myID, myTab, myCaption ) {
 
-//--- krybei perioxh  first_perioxhID
-    //---  old $(".periexomenaCL").hide();
-
     $("#myTabs a").removeClass("tab-selected");
 //--- gia perioxh
     $("#"+myID).show();
 //--- gia to tab
     $("#"+myTab).addClass("tab-selected");
-//---
-  if(myCaption !=""){
-   //---   document.getElementById("myTitleID").innerHTML = myCaption;
- }
 
 //---
 
@@ -434,18 +421,10 @@ function makeTabs(){
 
   if( myTab2 !="" ){
     tabsHtml.push('<a id="deytero-tab" href="javascript:void(0);" title="'+myTab2+'" onclick="javascript:selectTab(&quot;sourceID&quot;,&quot;deytero-tab&quot;,&quot;'+ myTab2+'&quot;);return false;">'+ myTab2+ '</a>' );
-   }else{
-/*
-    tabsHtml.push('<a id="deytero-tab" href="javascript:void(0);" title="myTab2" onclick="javascript:selectTab(&quot;sourceID&quot;,&quot;deytero-tab&quot;,&quot;myTab2&quot;);return false;">Tab2</a>' );
-*/
   }
 
   if( myTab3 !="" ){
     tabsHtml.push('<a id="trito-tab" href="javascript:void(0);" title="'+myTab3+'" onclick="javascript:selectTab(&quot;sourceIDebdanahmera&quot;,&quot;trito-tab&quot;,&quot;'+ myTab3+'&quot;);return false;">'+ myTab3+ '</a>' );
-   }else{
-/*
-    tabsHtml.push('<a id="trito-tab" href="javascript:void(0);" title="myTab3" onclick="javascript:selectTab(&quot;sourceIDebdanahmera&quot;,&quot;trito-tab&quot;,&quot;myTab3&quot;);return false;">Tab3</a>' );
-*/
   }
 
 
