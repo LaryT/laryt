@@ -215,19 +215,18 @@ div{
   var query1;
   var poiaSeiraItem=0;
 
-  var msgTxt="<span style='font-size:9px;'>Δεν υπάρχει το αντίστοιχο URL του πηγαίου αρχείου.  Για να ξεπερασθεί το πρόβλημα, παρακαλούμε από την επιλογή επεξεργασία των παραμέτρων, εισάγεται την αντίστοιη URL διεύθυνση του πηγαίου αρχείου των πληροφοριών [πληροφορίες για την δομή του αρχείου: grbasket@gmail.com] |..|<br/><br/> There is no corresponding URL (source file). Please edit the parameters, enter the URL file address, with the infos categories ... [more for the file structure: grbasket@gmail.com]</span>";
-
-//---- make query tab 1 (old bathmologia)
-function sendQueryMakeItems() {
-
-    query1.setQuery('select * order  by A, B');
-    query1.send(handleQueryResponseMakeItems);
-   
-}
-
+  var msgTxt="<span style='font-size:9px;'>Δεν υπάρχει το αντίστοιχο URL του πηγαίου αρχείου.  Για να ξεπερασθεί το πρόβλημα, παρακαλούμε από την επιλογή επεξεργασία των παραμέτρων, εισάγεται την αντίστοιη URL διεύθυνση του πηγαίου αρχείου των πληροφοριών [πληροφορίες για την δομή του αρχείου: grbasket@gmail.com] |..|<br/><br/> There is no corresponding URL (source file). Please edit the parameters, enter the URL file address, with the infos categories ... [more for the file structure: terzisla@gmail.com]</span>";
 
 //---------------------------
-//-------------- ResponseMakaeItems
+//---- make query tab 1 (old bathmologia)
+//---------------------------
+function sendQueryMakeItems() {
+    query1.setQuery('select * order  by A, B');
+    query1.send(handleQueryResponseMakeItems);
+}
+
+//---------------------------
+//---- ResponseMakaeItems
 //---------------------------
 function handleQueryResponseMakeItems(response) {
    if (response.isError()) {
@@ -255,7 +254,14 @@ function handleQueryResponseMakeItems(response) {
    //-----  old  rowForItem = row+(poiaSeiraItem*4);
 
    html.push('<div class="imantasImgContainer">');
-   html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(rowForItem, 2) +'" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:598px;border-width:0px;">');
+   
+   if( data.getFormattedValue(rowForItem, 8)!=""  ) {
+         html.push('<iframe class="boxKampylesPano" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/'+data.getFormattedValue(rowForItem, 8)+'?rel=0&autohide=1&showinfo=0" style="height:316px;width:598px;border-width:0px;"></iframe>');
+   }else{
+         html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(rowForItem, 2) +'" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:598px;border-width:0px;">');
+   }
+
+   
    html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop">'+ data.getFormattedValue(rowForItem, 6)+'</div> '); 
    html.push('</div>');
 
@@ -283,7 +289,12 @@ function handleQueryResponseMakeItems(response) {
   
 
    html.push('<a href="'+ data.getFormattedValue(row, 7)  +'" onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
-   html.push('<img src="' + data.getFormattedValue(rowForItem, 2) +'" alt="" title="'+ data.getFormattedValue(rowForItem, 4) +'" style="height:50px;width:118px;border-width:0px;">');
+   
+   if( data.getFormattedValue(rowForItem, 8)!=""  ) {
+         html.push('<img src="http://i1.ytimg/com/vi/' + data.getFormattedValue(rowForItem, 8) +'/1.jpg" alt="" title="'+ data.getFormattedValue(rowForItem, 4) +'" style="height:50px;width:118px;border-width:0px;">');
+   } else{
+      html.push('<img src="' + data.getFormattedValue(rowForItem, 2) +'" alt="" title="'+ data.getFormattedValue(rowForItem, 4) +'" style="height:50px;width:118px;border-width:0px;">');
+   }
    html.push('</a>');
    html.push('</div>');
  } //-- end for
@@ -387,7 +398,7 @@ function init(){
     query1 = new google.visualization.Query(myURLfeed1);
     sendQueryMakeItems();
   }else{
-   //--- document.getElementById("sourceIDBathm").innerHTML = msgTxt;
+    document.getElementById("perioxh_1_ID").innerHTML = msgTxt;
   }
 
 }
