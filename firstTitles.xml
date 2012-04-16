@@ -256,12 +256,12 @@ function handleQueryResponseMakeItems(response) {
    html.push('<div class="imantasImgContainer">');
    
    if( data.getFormattedValue(rowForItem, 8)!=""  ) {
-        html.push('<iframe class="boxKampylesPano" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/'+data.getFormattedValue(rowForItem, 8)+'?rel=0&autohide=1&showinfo=0" style="height:244px;width:585px;border-width:0px;margin:5px 7px;"></iframe>');
+        html.push('<iframe class="boxKampylesPano" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/'+data.getFormattedValue(rowForItem, 8)+'?rel=0&autohide=1&showinfo=0" style="height:244px;width:587px;border-width:0px;margin:5px 7px;"></iframe>');
         
-//--   old       html.push('<img class="boxKampylesPano" src="http://i1.ytimg.com/vi/' + data.getFormattedValue(rowForItem, 8) +'/1.jpg" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:598px;border-width:0px;">');           
+//--   old       html.push('<img class="boxKampylesPano" src="http://i1.ytimg.com/vi/' + data.getFormattedValue(rowForItem, 8) +'/1.jpg" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:599px;border-width:0px;">');           
         
    }else{
-         html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(rowForItem, 2) +'" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:598px;border-width:0px;">');
+         html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(rowForItem, 2) +'" alt="'+data.getFormattedValue(rowForItem, 4)+'" style="height:316px;width:599px;border-width:0px;">');
    }
 
    if( data.getFormattedValue(rowForItem, 8) !=""  ) {
@@ -328,7 +328,7 @@ function SelectItem (container, selected, selectedItem) {
 function selectTab (myID, myTab, myCaption ) {
 
 //--- krybei perioxh  first_perioxhID
-    $(".periexomenaCL").hide();
+    //---  old $(".periexomenaCL").hide();
 
     $("#myTabs a").removeClass("tab-selected");
 //--- gia perioxh
@@ -405,7 +405,7 @@ function init(){
   }else{
     document.getElementById("perioxh_1_ID").innerHTML = msgTxt;
   }
-
+    $("#proto-tab").addClass("tab-selected");
 }
 //--- make Tabs
 function makeTabs(){
