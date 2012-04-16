@@ -88,7 +88,7 @@ bottom: 0;
 left: 0;
 padding: 10px;
 color: white;
-width: 580px;
+width: 579px;
 height: 48px;
 }
 
@@ -265,7 +265,7 @@ function handleQueryResponseMakeItems(response) {
    html.push('<div class="imantasImgContainer">');
    
    if( data.getFormattedValue(row, 8)!=""  ) {
-        html.push('<iframe class="boxKampylesPano" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/'+data.getFormattedValue(row, 8)+'?rel=0&autohide=1&showinfo=0" style="height:244px;width:587px;border-width:0px;margin:5px 7px;"></iframe>');
+        html.push('<iframe class="boxKampylesPano" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/'+data.getFormattedValue(row, 8)+'?rel=0&autohide=1&showinfo=0" style="height:240px;width:585px;border-width:0px;margin:5px 7px;"></iframe>');
 
    }else{
          html.push('<img class="boxKampylesPano" src="'+data.getFormattedValue(row, 2) +'" alt="'+data.getFormattedValue(row, 4)+'" style="height:316px;width:599px;border-width:0px;">');
