@@ -54,7 +54,7 @@ a:hover { color: #EB6005; text-decoration: underline; }
 //------ gia ta title trigonoy
 
 .speech-bubble {
-    position: relative;
+//    position: relative;
     background-color: #292929;
  
     width: 200px;
