@@ -23,6 +23,8 @@ a:visited { color: #000; text-decoration: none; }
 a:active { text-decoration: none }
 a:hover { color: #EB6005; text-decoration: underline; }
 
+
+
 .mainContainer{
  float: left;
  position: relative;
@@ -49,6 +51,21 @@ a:hover { color: #EB6005; text-decoration: underline; }
  border-top-left-radius: 15px;
  border-top-right-radius: 15px;
 }
+//------ gia ta title trigonoy
+
+.speech-bubble {
+
+    position: relative;
+    background-color: #292929;
+ 
+    width: 200px;
+    height: 150px;
+    line-height: 150px;
+ 
+    color: white;
+    text-align: center;
+}
+
 
 //------ gia ta ind tab inside
 
@@ -445,6 +462,8 @@ function makeTabs(){
  <div id="panoXorosItems" class="tabsContainer">
 
  </div> <!-- end ano tmhma  -->
+
+  <div class="speech-bubble">Hi there!</div>
 
  <!--   **** 2 perioxh tvn tab ****  -->
   <div id="myTabs" width="100%">
