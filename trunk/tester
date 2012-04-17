@@ -54,7 +54,6 @@ a:hover { color: #EB6005; text-decoration: underline; }
 //------ gia ta title trigonoy
 
 .speech-bubble {
-
     position: relative;
     background-color: #292929;
  
@@ -64,8 +63,24 @@ a:hover { color: #EB6005; text-decoration: underline; }
  
     color: white;
     text-align: center;
+    
+     border-radius: 10px;
 }
 
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+ 
+  width: 0;
+  height: 0;
+ 
+  border: 15px solid;
+  border-top-color: #292929;
+ 
+  top: 100%;
+  left: 50%;
+  margin-left: -15px; /* adjust for border width */
+}
 
 //------ gia ta ind tab inside
 
