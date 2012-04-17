@@ -51,36 +51,6 @@ a:hover { color: #EB6005; text-decoration: underline; }
  border-top-left-radius: 15px;
  border-top-right-radius: 15px;
 }
-//------ gia ta title trigonoy
-
-.speech-bubble {
-//    position: relative;
-    background-color: #292929;
- 
-    width: 200px;
-    height: 150px;
-    line-height: 150px;
- 
-    color: white;
-    text-align: center;
-    
-     border-radius: 10px;
-}
-
-.speech-bubble:after {
-  content: '';
-  position: absolute;
- 
-  width: 0;
-  height: 0;
- 
-  border: 15px solid;
-  border-top-color: #292929;
- 
-  top: 100%;
-  left: 50%;
-  margin-left: -15px; /* adjust for border width */
-}
 
 //------ gia ta ind tab inside
 
@@ -236,6 +206,36 @@ div{
 
 #myTabs a.tab-selected{
   background: url('https://lh6.googleusercontent.com/-sScOLfHaOPY/T4RGUg8bqwI/AAAAAAAAjmE/5TABI7Pf9zI/s800/dejia-koto-akrh-mavrh.png') no-repeat;
+}
+//------ gia ta title trigonoy
+
+.speech-bubble {
+//    position: relative;
+    background-color: #292929;
+ 
+    width: 200px;
+    height: 150px;
+    line-height: 150px;
+ 
+    color: white;
+    text-align: center;
+    
+     border-radius: 10px;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+ 
+  width: 0;
+  height: 0;
+ 
+  border: 15px solid;
+  border-top-color: #292929;
+ 
+  top: 100%;
+  left: 50%;
+  margin-left: -15px; /* adjust for border width */
 }
 
 </style>
@@ -470,7 +470,7 @@ function makeTabs(){
 </script>
 
 
-
+<div class="speech-bubble">Hi there!</div>
 <div class="mainContainer">
 
  <!--   **** 1 perioxh tvn periexomenoy ****  -->
@@ -478,7 +478,7 @@ function makeTabs(){
 
  </div> <!-- end ano tmhma  -->
 
-  <div class="speech-bubble">Hi there!</div>
+
 
  <!--   **** 2 perioxh tvn tab ****  -->
   <div id="myTabs" width="100%">
