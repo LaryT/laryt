@@ -232,11 +232,12 @@ a.tip:hover span{
     color: black;
     
     padding: 0px;
-    margin: 0px;
-    width: 118px;
+
+    width: 114px;
     left: 0px;    
 
     bottom:0px;
+    margin-bottom: 60px;    
  /* top: -60px; */
  
    
