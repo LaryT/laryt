@@ -242,21 +242,16 @@ a {
 }
 
 a:hover {
-
   color: orange;
-  position: relative;
 }
 
 a[data-title]:hover{
     position: relative;
    
-    top: 50px;
-    left: 0px;
-  
     content: attr(data-title);
             
     background-color: #292929;
-    width: 118px;
+    width: 158px;
     height: 100px;
     line-height: 100px;
     color: white;
