@@ -237,17 +237,17 @@ div.mybubble:after {
 */
 
 a {
-  color: #900;
+/*   color: #900;  */
   text-decoration: none;
 }
 
 a:hover {
-  color: red;
+  color: orange;
   position: relative;
 }
 
 
-a[title]:hover:after {
+a[data-title]:hover:after {
   content: attr(title);
   padding: 4px 8px;
   color: #333;
@@ -348,7 +348,7 @@ function handleQueryResponseMakeItems(response) {
 
    html.push('<div class="imantasDataContainer">');
    html.push('<h3 class="imantasEpikefalides">');
-   html.push(' <a title="'+ data.getFormattedValue(row, 4) +'" class="imantasTilosMegalosLink" target="_top" href="'+data.getFormattedValue(row, 7)+'">'+ data.getFormattedValue(row, 4)+'</a> ');
+   html.push(' <a data-title="'+ data.getFormattedValue(row, 4) +'" class="imantasTilosMegalosLink" target="_top" href="'+data.getFormattedValue(row, 7)+'">'+ data.getFormattedValue(row, 4)+'</a> ');
    html.push('</h3>');
    html.push('<div id="imantasYpotitloi" class="imantasYpotitloi">'+data.getFormattedValue(row, 5)+'</div> ');                 
    
@@ -368,7 +368,7 @@ function handleQueryResponseMakeItems(response) {
   }
   
 
-   html.push('<a href="'+ data.getFormattedValue(row, 7)  +'"  title="'+ data.getFormattedValue(row, 4) +'"   onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
+   html.push('<a href="'+ data.getFormattedValue(row, 7)  +'"  data-title="'+ data.getFormattedValue(row, 4) +'"   onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
    
    if( data.getFormattedValue(row, 8)!=""  ) {
          html.push('<img src="http://i1.ytimg.com/vi/' + data.getFormattedValue(row, 8) +'/1.jpg" alt="" style="height:50px;width:118px;border-width:0px;">');
@@ -479,17 +479,17 @@ function makeTabs(){
  var tabsHtml =[];
 
  if( myTab1 !="" ){
-    tabsHtml.push('<a id="proto-tab" href="javascript:void(0);" title="'+myTab1+'" onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;proto-tab&quot;,&quot;'+ myTab1+'&quot;);return false;">'+ myTab1+ '</a>' );
+    tabsHtml.push('<a id="proto-tab" href="javascript:void(0);"   onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;proto-tab&quot;,&quot;'+ myTab1+'&quot;);return false;">'+ myTab1+ '</a>' );
    }else{
     tabsHtml.push('<a id="proto-tab" href="javascript:void(0);" onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;proto-tab&quot;,&quot;myTab1&quot;);return false;">Tab1</a>' );
   }
 
   if( myTab2 !="" ){
-    tabsHtml.push('<a id="deytero-tab" href="javascript:void(0);" title="'+myTab2+'" onclick="javascript:selectTab(&quot;sourceID&quot;,&quot;deytero-tab&quot;,&quot;'+ myTab2+'&quot;);return false;">'+ myTab2+ '</a>' );
+    tabsHtml.push('<a id="deytero-tab" href="javascript:void(0);"   onclick="javascript:selectTab(&quot;sourceID&quot;,&quot;deytero-tab&quot;,&quot;'+ myTab2+'&quot;);return false;">'+ myTab2+ '</a>' );
   }
 
   if( myTab3 !="" ){
-    tabsHtml.push('<a id="trito-tab" href="javascript:void(0);" title="'+myTab3+'" onclick="javascript:selectTab(&quot;sourceIDebdanahmera&quot;,&quot;trito-tab&quot;,&quot;'+ myTab3+'&quot;);return false;">'+ myTab3+ '</a>' );
+    tabsHtml.push('<a id="trito-tab" href="javascript:void(0);"   onclick="javascript:selectTab(&quot;sourceIDebdanahmera&quot;,&quot;trito-tab&quot;,&quot;'+ myTab3+'&quot;);return false;">'+ myTab3+ '</a>' );
   }
 
 
