@@ -250,7 +250,7 @@ a:hover {
 a[data-title]:hover{
     position: relative;
     
-    margin-top: -350px;
+    top: -100px;
     left: 0px;
     
     
@@ -270,7 +270,7 @@ a[data-title]:hover{
 
 a[data-title]:hover:after {
  
-    content: attr('');
+/*    content: attr('');  */
     position: absolute;
    
     width: 0;
