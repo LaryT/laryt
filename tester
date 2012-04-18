@@ -237,7 +237,7 @@ div.mybubble:after {
 */
 
 a {
-/*   color: #900;  */
+  /* color: #900;  */
   text-decoration: none;
 }
 
@@ -248,7 +248,7 @@ a:hover {
 
 
 a[data-title]:hover:after {
-  content: attr(title);
+  content: attr(data-title);
   padding: 4px 8px;
   color: #333;
   position: absolute;
