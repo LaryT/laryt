@@ -208,6 +208,7 @@ div{
   background: url('https://lh6.googleusercontent.com/-sScOLfHaOPY/T4RGUg8bqwI/AAAAAAAAjmE/5TABI7Pf9zI/s800/dejia-koto-akrh-mavrh.png') no-repeat;
 }
 //------ gia ta title trigonoy
+
 a.tip {
     border-bottom 5px solid silver;
     text-decoration: none
@@ -222,21 +223,25 @@ a.tip span {
 }
 a.tip:hover span{
 
-    border: #d8d8d8 5px solid;
-    padding: 5px 20px 5px 5px;
-
-    display: block;
-    z-index: 100;
     background-color: #f0f0f0 ;
-    left: 0px;
+    border: #d8d8d8 2px solid;
+    color: black;
+    
+    padding: 0px;
     margin: 0px;
     width: 118px;
+    left: 0px;    
+    bottom: -60px;
+ /* top: -60px; */
+ 
     position: absolute;
-    top: -60px;
+    display: block;
+    z-index: 100;
+    
     text-decoration: none;
     text-align: center;
     font-size:10px;
-    color: black;
+    
             
 }
 a.tip:hover:after  {
