@@ -223,7 +223,7 @@ a.tip span {
 }
 a.tip:hover span{
     
-    position: relative;
+    position: absolute;
     display: block;
     z-index: 100;
     
@@ -235,7 +235,8 @@ a.tip:hover span{
     margin: 0px;
     width: 118px;
     left: 0px;    
-    bottom: -20px;
+    top: 0px;
+    margin-bottom:60px;
  /* top: -60px; */
  
    
