@@ -242,12 +242,40 @@ a {
 }
 
 a:hover {
+
   color: orange;
   position: relative;
 }
 
+a[data-title]:hover{
+    position: relative;
+    background-color: #292929;
+    width: 200px;
+    height: 150px;
+    line-height: 150px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
 
 a[data-title]:hover:after {
+ 
+    content: '';
+    position: absolute;
+    content: attr(data-title);
+
+    width: 0;
+    height: 0;
+ 
+    border: 15px solid;
+    border-top-color: #292929;
+ 
+    top: 100%;
+    left: 50%;
+    margin-left: -15px; 
+
+
+/*
   content: attr(data-title);
   padding: 4px 8px;
   color: #333;
@@ -268,6 +296,7 @@ a[data-title]:hover:after {
   background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+  */
 }
 
 
