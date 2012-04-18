@@ -210,7 +210,7 @@ div{
 //------ gia ta title trigonoy
 
 div.mybubble {
-//    position: relative;
+    position: relative;
     background-color: #292929;
     width: 200px;
     height: 150px;
@@ -466,10 +466,8 @@ function makeTabs(){
 
 </script>
 
-
-<div class="mybubble">Hi there!</div>
 <div class="mainContainer">
-
+<div class="mybubble">Hi there!</div>
  <!--   **** 1 perioxh tvn periexomenoy ****  -->
  <div id="panoXorosItems" class="tabsContainer">
 
