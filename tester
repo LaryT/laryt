@@ -265,7 +265,7 @@ a.tip:hover:after  {
   margin-bottom: 38px; 
 
   margin-left: -40px; 
-  z-index: 0;
+  z-index: 101;
 }
 
 </style>
