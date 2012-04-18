@@ -235,7 +235,7 @@ div.mybubble:after {
   margin-left: -15px; 
 }
 */
-
+img[title]:hover:after,
 a[title]:hover:after {
   content: attr(title);
   padding: 4px 8px;
