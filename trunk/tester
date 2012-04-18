@@ -223,7 +223,7 @@ a.tip span {
 }
 a.tip:hover span{
     
-    position: absolute;
+    position: relative;
     display: block;
     z-index: 100;
     
@@ -238,9 +238,7 @@ a.tip:hover span{
     bottom: -20px;
  /* top: -60px; */
  
-
-
-    
+   
     text-decoration: none;
     text-align: center;
     font-size:10px;
@@ -341,7 +339,7 @@ function handleQueryResponseMakeItems(response) {
 
    html.push('<div class="imantasDataContainer">');
    html.push('<h3 class="imantasEpikefalides">');
-   html.push(' <a data-title="'+ data.getFormattedValue(row, 4) +'" class="imantasTilosMegalosLink" target="_top" href="'+data.getFormattedValue(row, 7)+'">'+ data.getFormattedValue(row, 4)+'</a> ');
+   html.push(' <a class="imantasTilosMegalosLink" target="_top" href="'+data.getFormattedValue(row, 7)+'">'+ data.getFormattedValue(row, 4)+'</a> ');
    html.push('</h3>');
    html.push('<div id="imantasYpotitloi" class="imantasYpotitloi">'+data.getFormattedValue(row, 5)+'</div> ');                 
    
@@ -361,14 +359,15 @@ function handleQueryResponseMakeItems(response) {
   }
   
 
-   html.push('<a href="'+ data.getFormattedValue(row, 7)  +'"  data-title="'+ data.getFormattedValue(row, 4) +'" class="tip"  onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
+   html.push('<a href="'+ data.getFormattedValue(row, 7)  +'" class="tip" onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
+   html.push('<span>'+ data.getFormattedValue(row, 4) +'</span>');
    
    if( data.getFormattedValue(row, 8)!=""  ) {
          html.push('<img src="http://i1.ytimg.com/vi/' + data.getFormattedValue(row, 8) +'/1.jpg" alt="" style="height:50px;width:118px;border-width:0px;">');
    } else{
       html.push('<img src="' + data.getFormattedValue(row, 2) +'" alt=""  style="height:50px;width:118px;border-width:0px;">');
    }
-   html.push('<span>'+ data.getFormattedValue(row, 4) +'</span>');
+
    html.push('</a>');
    html.push('</div>');
  } //-- end for
