@@ -208,7 +208,7 @@ div{
   background: url('https://lh6.googleusercontent.com/-sScOLfHaOPY/T4RGUg8bqwI/AAAAAAAAjmE/5TABI7Pf9zI/s800/dejia-koto-akrh-mavrh.png') no-repeat;
 }
 //------ gia ta title trigonoy
-
+/*
 div.mybubble {
     position: relative;
     background-color: #292929;
@@ -234,6 +234,31 @@ div.mybubble:after {
   left: 50%;
   margin-left: -15px; 
 }
+*/
+
+a[title]:hover:after {
+  content: attr(title);
+  padding: 4px 8px;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  white-space: nowrap;
+  z-index: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px 0px 4px #222;
+  -webkit-box-shadow: 0px 0px 4px #222;
+  box-shadow: 0px 0px 4px #222;
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #cccccc));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+}
+
 
 </style>
 
@@ -467,7 +492,7 @@ function makeTabs(){
 </script>
 
 <div class="mainContainer">
-<div class="mybubble">Hi there!</div>
+
  <!--   **** 1 perioxh tvn periexomenoy ****  -->
  <div id="panoXorosItems" class="tabsContainer">
 
