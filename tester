@@ -229,6 +229,7 @@ a.tip:hover span{
     
     background-color: #f0f0f0 ;
     border: #d8d8d8 2px solid;
+    border-bottom-color: #f0f0f0;
     color: black;
     
     padding: 0px;
@@ -265,7 +266,7 @@ a.tip:hover:after  {
   margin-bottom: 38px; 
 
   margin-left: -40px; 
-  z-index: 101;
+  z-index: 0;
 }
 
 </style>
