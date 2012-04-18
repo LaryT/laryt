@@ -27,7 +27,6 @@ a:hover { color: #EB6005; text-decoration: underline; }
  float: left;
  position: relative;
  overflow: auto;
-
  height: 500px;
 }
 
@@ -114,7 +113,6 @@ color:white;
 }
 
 .imantasDataMarquee {
-//-------background-image: url('https://lh5.googleusercontent.com/-l811SPtOsbo/T0Y-vGCGYHI/AAAAAAAAgMY/1Ciyl2tJenY/s18/black-gray1x30.png');
 background: #535899;
 opacity: 0.9;
 position: absolute;
@@ -205,6 +203,55 @@ div{
 #myTabs a.tab-selected{
   background: url('https://lh6.googleusercontent.com/-sScOLfHaOPY/T4RGUg8bqwI/AAAAAAAAjmE/5TABI7Pf9zI/s800/dejia-koto-akrh-mavrh.png') no-repeat;
 }
+//------ gia ta title trigonoy
+
+a.tip {
+    border-bottom 5px solid silver;
+    text-decoration: none
+}
+a.tip:hover {
+    cursor: help;
+    position: relative
+}
+a.tip span {
+    display: none
+}
+a.tip:hover span{
+    
+ position: absolute;
+ display: block;
+ z-index: 100;
+ background-color: #f0f0f0 ;
+ border: #d8d8d8 2px solid;
+ border-bottom-color: #f0f0f0;
+ color: black;
+ padding: 0px;
+ width: 114px;
+ left: 0px;    
+ bottom:0px;
+ margin-bottom: 60px;    
+ text-decoration: none;
+ text-align: center;
+ font-size:10px;
+ border-top-left-radius: 2px;
+ border-top-right-radius: 2px;
+ border-bottom-right-radius: 2px;
+ border-bottom-left-radius: 2px;
+}
+
+a.tip:hover:after  {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid;
+  border-top-color: #f0f0f0;
+  color:transparent;
+  bottom:0px;
+  margin-bottom: 38px; 
+  margin-left: -40px; 
+  z-index: 0;
+}
 
 </style>
 
@@ -215,7 +262,6 @@ div{
 </script>
 
 <script>
-
   var prefs = new gadgets.Prefs();
   var myURLfeed1= prefs.getString("my_URLfeed_1");
 
@@ -245,7 +291,6 @@ function handleQueryResponseMakeItems(response) {
     return;
   }
 //---  GET THE DATA 
-
  var html =[];  
  var data = response.getDataTable();
 
@@ -260,7 +305,6 @@ function handleQueryResponseMakeItems(response) {
    } else{
      html.push('<div id="it_1_'+row+'" class="imantasDataItem" style="height:316px;">');
    }
-   
 
    html.push('<div class="imantasImgContainer">');
    
@@ -283,12 +327,11 @@ function handleQueryResponseMakeItems(response) {
 
    html.push('<div class="imantasDataContainer">');
    html.push('<h3 class="imantasEpikefalides">');
-   html.push(' <a title="'+ data.getFormattedValue(row, 4) +'" class="imantasTilosMegalosLink" target="_top" href="'+data.getFormattedValue(row, 7)+'">'+ data.getFormattedValue(row, 4)+'</a> ');
+   html.push(' <a class="imantasTilosMegalosLink" target="_top" href="'+data.getFormattedValue(row, 7)+'">'+ data.getFormattedValue(row, 4)+'</a> ');
    html.push('</h3>');
    html.push('<div id="imantasYpotitloi" class="imantasYpotitloi">'+data.getFormattedValue(row, 5)+'</div> ');                 
    
   html.push('</div>');
-
 
  html.push('</div>');  //---- end me imantas data, img, titles
 
@@ -303,27 +346,26 @@ function handleQueryResponseMakeItems(response) {
   }
   
 
-   html.push('<a href="'+ data.getFormattedValue(row, 7)  +'" onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
+   html.push('<a href="'+ data.getFormattedValue(row, 7)  +'" class="tip" onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
+   html.push('<span>'+ data.getFormattedValue(row, 4) +'</span>');
    
    if( data.getFormattedValue(row, 8)!=""  ) {
-         html.push('<img src="http://i1.ytimg.com/vi/' + data.getFormattedValue(row, 8) +'/1.jpg" alt="" title="'+ data.getFormattedValue(row, 4) +'" style="height:50px;width:118px;border-width:0px;">');
+         html.push('<img src="http://i1.ytimg.com/vi/' + data.getFormattedValue(row, 8) +'/1.jpg" alt="" style="height:50px;width:118px;border-width:0px;">');
    } else{
-      html.push('<img src="' + data.getFormattedValue(row, 2) +'" alt="" title="'+ data.getFormattedValue(row, 4) +'" style="height:50px;width:118px;border-width:0px;">');
+      html.push('<img src="' + data.getFormattedValue(row, 2) +'" alt=""  style="height:50px;width:118px;border-width:0px;">');
    }
+
    html.push('</a>');
    html.push('</div>');
  } //-- end for
 
   html.push('</div>');
   
-  
   document.getElementById("panoXorosItems").innerHTML = html.join('');
 }
-
-
 //--------------------------------------
-function SelectItem (container, selected, selectedItem) {
 
+function SelectItem (container, selected, selectedItem) {
     $(container+" div").removeClass("f_indexSelected");
     $(".imantasDataItem").hide();
 //--- gia to item
@@ -335,13 +377,11 @@ function SelectItem (container, selected, selectedItem) {
 // --- gia ta tabs
 //-----------------
 function selectTab (myID, myTab, myCaption ) {
-
     $("#myTabs a").removeClass("tab-selected");
 //--- gia perioxh
     $("#"+myID).show();
 //--- gia to tab
     $("#"+myTab).addClass("tab-selected");
-
 //---
 
   if(myTab == "proto-tab"){  
@@ -414,33 +454,25 @@ function makeTabs(){
  var tabsHtml =[];
 
  if( myTab1 !="" ){
-    tabsHtml.push('<a id="proto-tab" href="javascript:void(0);" title="'+myTab1+'" onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;proto-tab&quot;,&quot;'+ myTab1+'&quot;);return false;">'+ myTab1+ '</a>' );
+    tabsHtml.push('<a id="proto-tab" href="javascript:void(0);"   onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;proto-tab&quot;,&quot;'+ myTab1+'&quot;);return false;">'+ myTab1+ '</a>' );
    }else{
     tabsHtml.push('<a id="proto-tab" href="javascript:void(0);" onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;proto-tab&quot;,&quot;myTab1&quot;);return false;">Tab1</a>' );
   }
 
   if( myTab2 !="" ){
-    tabsHtml.push('<a id="deytero-tab" href="javascript:void(0);" title="'+myTab2+'" onclick="javascript:selectTab(&quot;sourceID&quot;,&quot;deytero-tab&quot;,&quot;'+ myTab2+'&quot;);return false;">'+ myTab2+ '</a>' );
+    tabsHtml.push('<a id="deytero-tab" href="javascript:void(0);"   onclick="javascript:selectTab(&quot;sourceID&quot;,&quot;deytero-tab&quot;,&quot;'+ myTab2+'&quot;);return false;">'+ myTab2+ '</a>' );
   }
 
   if( myTab3 !="" ){
-    tabsHtml.push('<a id="trito-tab" href="javascript:void(0);" title="'+myTab3+'" onclick="javascript:selectTab(&quot;sourceIDebdanahmera&quot;,&quot;trito-tab&quot;,&quot;'+ myTab3+'&quot;);return false;">'+ myTab3+ '</a>' );
+    tabsHtml.push('<a id="trito-tab" href="javascript:void(0);"   onclick="javascript:selectTab(&quot;sourceIDebdanahmera&quot;,&quot;trito-tab&quot;,&quot;'+ myTab3+'&quot;);return false;">'+ myTab3+ '</a>' );
   }
-
-
-    document.getElementById("myTabs").innerHTML = tabsHtml.join('');
+  document.getElementById("myTabs").innerHTML = tabsHtml.join('');
 }
 
-
-
  gadgets.util.registerOnLoadHandler(init);  
-
 </script>
 
-
-
 <div class="mainContainer">
-
  <!--   **** 1 perioxh tvn periexomenoy ****  -->
  <div id="panoXorosItems" class="tabsContainer">
 
@@ -468,8 +500,6 @@ google_ad_height = 60;
   </center>
 
  </div>  <!--  end trito meros  -->
-
-
 </div>   <!-- end mainContainer  -->
 
     ]]>
