@@ -470,7 +470,7 @@ function makeTabs(){
 </script>
 
 
-<div class="speech-bubble">Hi there!</div>
+<div class="speech-bubble" style="background-color:#282828;color:#bbbbbb;">Hi there!</div>
 <div class="mainContainer">
 
  <!--   **** 1 perioxh tvn periexomenoy ****  -->
