@@ -259,7 +259,7 @@ a.tip:hover:after  {
  
   border: 15px solid;
   border-top-color: #d8d8d8;
-  color:white;
+  color:#535899;
 
     bottom:0px;
     margin-bottom: 40px; 
@@ -267,7 +267,8 @@ a.tip:hover:after  {
   top: 100%;
   left: 0;
 */  
-  margin-left: 10px; 
+  margin-left: -20px; 
+  z-index: 0;
 }
 
 </style>
