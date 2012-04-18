@@ -208,99 +208,53 @@ div{
   background: url('https://lh6.googleusercontent.com/-sScOLfHaOPY/T4RGUg8bqwI/AAAAAAAAjmE/5TABI7Pf9zI/s800/dejia-koto-akrh-mavrh.png') no-repeat;
 }
 //------ gia ta title trigonoy
-/*
-div.mybubble {
-    position: relative;
-    background-color: #292929;
-    width: 200px;
-    height: 150px;
-    line-height: 150px;
-    color: white;
-    text-align: center;
-    border-radius: 10px;
-}
+a.tip {
+    border-bottom 5px solid silver;
+    text-decoration: none
 
-div.mybubble:after {
+}
+a.tip:hover {
+    cursor: help;
+    position: relative
+}
+a.tip span {
+    display: none
+}
+a.tip:hover span{
+
+    border: #d8d8d8 5px solid;
+    padding: 5px 20px 5px 5px;
+
+    display: block;
+    z-index: 100;
+    background-color: #f0f0f0 ;
+    left: -59px;
+    margin: 0px;
+    width: 118px;
+    position: absolute;
+    top: -60px;
+    text-decoration: none;
+    text-align: center;
+    font-size:12px;
+    color: black;
+            
+}
+a.tip:hover:after  {
+    
   content: '';
-  position: absolute;
+  position: relative;
  
   width: 0;
   height: 0;
  
   border: 15px solid;
-  border-top-color: #292929;
- 
-  top: 100%;
-  left: 50%;
-  margin-left: -15px; 
-}
-*/
-
-a {
-  /* color: #900;  */
-  text-decoration: none;
-}
-
-a:hover {
-  color: orange;
-}
-
-a[data-title]:hover{
-    position: relative;
-   
-    content: attr(data-title);
-            
-    background-color: #292929;
-    width: 158px;
-    height: 100px;
-    line-height: 100px;
-    color: white;
-    text-align: center;
-    border-radius: 10px;
-
-}
-
-a[data-title]:hover:after {
- 
-    content: attr('');
-    position: absolute;
-   
-    width: 0;
-    height: 0;
- 
-    border: 15px solid;
-    border-top-color: #292929;
- 
-    top: 100%;
-    left: 50%;
-    margin-left: -15px; 
+  border-top-color: #d8d8d8;
+  color:white;
     
-   
-
-/*
-  content: attr(data-title);
-  padding: 4px 8px;
-  color: #333;
-  position: absolute;
-  left: 0;
   top: 100%;
-  white-space: nowrap;
-  z-index: 20px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -moz-box-shadow: 0px 0px 4px #222;
-  -webkit-box-shadow: 0px 0px 4px #222;
-  box-shadow: 0px 0px 4px #222;
-  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #cccccc));
-  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
-  */
+  left: 0;
+  margin-left: 10px; 
 }
-
 
 </style>
 
@@ -399,13 +353,14 @@ function handleQueryResponseMakeItems(response) {
   }
   
 
-   html.push('<a href="'+ data.getFormattedValue(row, 7)  +'"  data-title="'+ data.getFormattedValue(row, 4) +'"   onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
+   html.push('<a href="'+ data.getFormattedValue(row, 7)  +'"  data-title="'+ data.getFormattedValue(row, 4) +'" class="tip"  onclick="javascript:SelectItem(&quot;#perioxh_1_ID&quot;,&quot;#indx_1_'+row+'&quot;,&quot;#it_1_'+row+'&quot; );return false;">');
    
    if( data.getFormattedValue(row, 8)!=""  ) {
          html.push('<img src="http://i1.ytimg.com/vi/' + data.getFormattedValue(row, 8) +'/1.jpg" alt="" style="height:50px;width:118px;border-width:0px;">');
    } else{
       html.push('<img src="' + data.getFormattedValue(row, 2) +'" alt=""  style="height:50px;width:118px;border-width:0px;">');
    }
+   html.push('<span>'+ data.getFormattedValue(row, 4) +'</span>');
    html.push('</a>');
    html.push('</div>');
  } //-- end for
