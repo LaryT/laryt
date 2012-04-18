@@ -250,7 +250,7 @@ a:hover {
 a[data-title]:hover{
     position: relative;
     background-color: #292929;
-    width: 200px;
+    width: 118px;
     height: 150px;
     line-height: 150px;
     color: white;
@@ -260,7 +260,7 @@ a[data-title]:hover{
 
 a[data-title]:hover:after {
  
-    content: '';
+    content: attr('');
     position: absolute;
     content: attr(data-title);
 
@@ -273,7 +273,8 @@ a[data-title]:hover:after {
     top: 100%;
     left: 50%;
     margin-left: -15px; 
-
+    
+    z-index: 20px;
 
 /*
   content: attr(data-title);
