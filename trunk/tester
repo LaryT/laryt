@@ -228,14 +228,14 @@ a.tip:hover span{
     display: block;
     z-index: 100;
     background-color: #f0f0f0 ;
-    left: -59px;
+    left: 0px;
     margin: 0px;
     width: 118px;
     position: absolute;
     top: -60px;
     text-decoration: none;
     text-align: center;
-    font-size:12px;
+    font-size:10px;
     color: black;
             
 }
