@@ -209,21 +209,18 @@ div{
 }
 //------ gia ta title trigonoy
 
-.speech-bubble {
+div.mybubble {
 //    position: relative;
     background-color: #292929;
- 
     width: 200px;
     height: 150px;
     line-height: 150px;
- 
     color: white;
     text-align: center;
-    
-     border-radius: 10px;
+    border-radius: 10px;
 }
 
-.speech-bubble:after {
+div.mybubble:after {
   content: '';
   position: absolute;
  
@@ -235,7 +232,7 @@ div{
  
   top: 100%;
   left: 50%;
-  margin-left: -15px; /* adjust for border width */
+  margin-left: -15px; 
 }
 
 </style>
@@ -470,7 +467,7 @@ function makeTabs(){
 </script>
 
 
-<div class="speech-bubble" style="background-color:#282828;color:#bbbbbb;">Hi there!</div>
+<div class="mybubble">Hi there!</div>
 <div class="mainContainer">
 
  <!--   **** 1 perioxh tvn periexomenoy ****  -->
