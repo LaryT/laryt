@@ -259,15 +259,12 @@ a.tip:hover:after  {
  
   border: 15px solid;
   border-top-color: #d8d8d8;
-  color:#535899;
+  color:transparent;
 
-    bottom:0px;
-    margin-bottom: 40px; 
-/*
-  top: 100%;
-  left: 0;
-*/  
-  margin-left: -20px; 
+  bottom:0px;
+  margin-bottom: 40px; 
+
+  margin-left: -40px; 
   z-index: 0;
 }
 
