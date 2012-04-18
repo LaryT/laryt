@@ -222,7 +222,11 @@ a.tip span {
     display: none
 }
 a.tip:hover span{
-
+    
+    position: absolute;
+    display: block;
+    z-index: 100;
+    
     background-color: #f0f0f0 ;
     border: #d8d8d8 2px solid;
     color: black;
@@ -231,12 +235,11 @@ a.tip:hover span{
     margin: 0px;
     width: 118px;
     left: 0px;    
-    bottom: 60px;
+    top: 160px;
  /* top: -60px; */
  
-    position: absolute;
-    display: block;
-    z-index: 100;
+
+
     
     text-decoration: none;
     text-align: center;
