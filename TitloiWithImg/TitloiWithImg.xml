@@ -100,7 +100,7 @@
             var html =[];
         var entry = result.feed.entries[0]; 
            
-            html.push('<div id="laryDiv" style="height:230px;overflow:hidden;"><img id="my2img" style="border:3px dashed gray;height:230px;" />'+ entry.content+'</div>');
+            html.push('<div style="height:230px;overflow:hidden;"><img id="my2img" style="border:3px dashed gray;height:230px;" /><div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div></div>');
             html.push('<div class="ns2-inner">');
             html.push('<h4 class="ns2-title"  style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
             html.push('<a href="' + entry.link + '" target="_top">' + entry.title.substring(0,45) + ' ...</a>');
@@ -124,7 +124,8 @@
         html.push('</div></div></div>');        
         content.innerHTML = html.join('');
       
-
+           myStrWidth=(myStrWidth+'px');
+           
           if(myColorTitle != ''){
              $("a").css("color", myColorTitle); 
              $("h3.headerCL span").css("color", myColorTitle); 
@@ -140,13 +141,13 @@
             }
 
             if(myStrWidth != ''){
-                myStrWidth=(myStrWidth+'px');
+                
                 $("div#moduleID").css("width",myStrWidth);         
                 $("div#laryDiv img").css("width",myStrWidth);
             }
         
-            $("div#laryDiv").css("visibility","hidden"); 
-              $("div#laryDiv img").css("visibility","visible");      
+
+     
           
              if($("div#laryDiv img").attr("src") != ''){
                 $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
@@ -157,8 +158,9 @@
                 $("img#my2img").attr("src", defautImg);    
                 
             }
-            $("img#my2img").css("visibility","visible");              
-            $("div#laryDiv img").css("visibility","hidden");   
+            $("div#laryDiv").css("visibility","hidden"); 
+//            $("img#my2img").css("visibility","visible");              
+            
     
 
        }
