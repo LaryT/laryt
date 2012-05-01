@@ -114,7 +114,9 @@
 
      <div class="moduleCL" style="overflow:hidden;" id="moduleID"> 
          <div class="moWrapperCL">
-           <h3 class="headerCL"><span id="titlosID">.</span></h3>
+           <div class="moWrapperHeader" style="background-color:#F8F8F8;width:100%;">
+             <h3 class="headerCL"><span id="titlosID">.</span></h3>
+           </div>
            <div class="moContentCL">
              <div class="moInnerContentCL">               
                 <div id="mocontentID">.</div>
