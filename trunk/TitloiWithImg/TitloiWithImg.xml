@@ -146,8 +146,9 @@
             }
         
             $("div#laryDiv").css("visibility","hidden"); 
-            
-             if($("div#laryDiv img").attr("src") !=''){
+              $("div#laryDiv img").css("visibility","visible");      
+          
+             if($("div#laryDiv img").attr("src") != ''){
                 $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
                 $("img#my2img").attr("width", myStrWidth);
                 
@@ -156,7 +157,9 @@
                 $("img#my2img").attr("src", defautImg);    
                 
             }
-            $("img#my2img").css("visibility","visible");           
+            $("img#my2img").css("visibility","visible");              
+            $("div#laryDiv img").css("visibility","hidden");   
+    
 
        }
 
