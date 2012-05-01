@@ -27,7 +27,7 @@
       var myStrHeight = prefs.getString("my_StrHeight");
       var myStrWidth = prefs.getString("my_StrWidth");
       var myStrFeed = prefs.getString("my_StrFeed");    
-      var myPosoiTitloi = prefs.getInt("my_PosoiTitloi"); 
+      var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
       
       google.load("feeds", "1");
         
