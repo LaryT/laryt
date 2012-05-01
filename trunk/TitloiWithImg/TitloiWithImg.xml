@@ -111,7 +111,7 @@
                
                     entry = result.feed.entries[i]; 
                     html.push('<div class="ns2-inner">');
-                    html.push('<h4 class="ns2-title">');
+                    html.push('<h4 class="ns2-title" style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
                     html.push('<a href="' + entry.link + '" target="_top">' + entry.title + ' ...</a>');
                     html.push('<div style="clear:both"></div>');
                     html.push('</h4>');      
@@ -145,7 +145,8 @@
         
             $("div#laryDiv").css("visibility","hidden");        
             $("div#laryDiv img").css("visibility","visible");
-
+            $("div#laryDiv img").css("top","0px");
+            $("div#laryDiv img").css("left","0px");
        }
 
       });
@@ -160,7 +161,7 @@
              <div class="moWrapperHeader" style="background-color:#F8F8F8;width:100%; padding:5px; border-bottom: 1px solid #E5E5E5;">
                <h3 class="headerCL"><span id="titlosID" style="color: #BC0202;">.</span></h3>
              </div>
-             <div class="moContentCL" style="width:100%; padding:5pxns2-title; border-bottom: 1px solid #E5E5E5;">
+             <div class="moContentCL" style="width:100%; padding:5px; border-bottom: 1px solid #E5E5E5;">
                <div class="moInnerContentCL">               
                   <div id="mocontentID">.</div>
                 </div>
