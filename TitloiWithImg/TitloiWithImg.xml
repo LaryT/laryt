@@ -100,11 +100,11 @@
             html.push('<div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div>');
             html.push('<div class="ns2-inner">');
             html.push('<h4 class="ns2-title"  style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
-            html.push('<a href="' + entry.link + '" target="_top">' + entry.title + ' ...</a>');
+            html.push('<a href="' + entry.link + '" target="_top">' + entry.title.substring(0,80) + ' ...</a>');
             html.push('<div style="clear:both"></div>');
             html.push('</h4>');      
             html.push('</div>');        
-            html.push('<div id="contentDivSn">'+ entry.contentSnippet +'</div>');    
+            html.push('<div id="contentDivSn">'+ entry.contentSnippet.substring(0,80) +'...</div>');    
 
             html.push('<div class="ns2-links-wrap"><div class="ns2-links-pages"><div class="ns2-page">');
             for (var i = 1; i<result.feed.entries.length;i++) {
@@ -112,7 +112,7 @@
                     entry = result.feed.entries[i]; 
                     html.push('<div class="ns2-inner">');
                     html.push('<h4 class="ns2-title" style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
-                    html.push('<a href="' + entry.link + '" target="_top">' + entry.title + ' ...</a>');
+                    html.push('<a href="' + entry.link + '" target="_top">' + entry.title.substring(0,80) + ' ...</a>');
                     html.push('<div style="clear:both"></div>');
                     html.push('</h4>');      
                     html.push('</div>');
