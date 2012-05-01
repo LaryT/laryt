@@ -15,13 +15,15 @@
   
   <Content type="html">
     <![CDATA[
-    <!--  link rel="stylesheet" href="http://code.google.com/p/laryt/source/browse/tags/TitloiWithImg/TitloiWithImg.css" type="text/css"  -->
     <link rel="stylesheet" href="http://laryt.googlecode.com/svn/tags/TitloiWithImg/TitloiWithImg.css" type="text/css">
     
     
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>      
-    <script type="text/javascript">
+
+     <script type="text/javascript">
+      google.load("feeds", "1");
+     
       var prefs = new gadgets.Prefs();
       
       var myColorTitle = prefs.getString("my_ColorTitle");
@@ -30,16 +32,18 @@
       var myStrWidth = prefs.getString("my_StrWidth");
       var myStrFeed = prefs.getString("my_StrFeed");    
       var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
-      
-      google.load("feeds", "1");
-        
+
       alert('Lary1');
 
-function initialize() {
+
+        
+
+
+   function initialize() {
       if(strFeed != ''){   
         var feed = new google.feeds.Feed(myStrFeed);
       }else{
-        var feed = new google.feeds.Feed('http://grbasket.blogspot.com/feeds/posts/default');
+        var feed = new google.feeds.Feed("http://grbasket.blogspot.com/feeds/posts/default");
       }
 
 
@@ -76,7 +80,7 @@ function initialize() {
              
             }
         html.push('</div></div></div>');        
-        content.innerHTML = html;
+        content.innerHTML = html.join('');
       
 
       
