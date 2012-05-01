@@ -60,6 +60,11 @@ padding: 0;
  text-transform: uppercase;
 }
 
+ h3.headerCL {
+  color: #BC0202;
+  background: #F8F8F8;  
+}
+
  h3.headerCL span {
   color: #BC0202;
 }
