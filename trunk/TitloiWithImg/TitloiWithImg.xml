@@ -19,9 +19,10 @@
     
     
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>      
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" ></script>      
     <script type="text/javascript">
       google.load("feeds", "1");
+      google.load("visualization", "1");
     </script>
 
 
