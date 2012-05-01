@@ -33,21 +33,16 @@
       
       google.load("feeds", "1");
         
-/*
-        var myColorTitle = '#BC0202';
-        var myStrTitle ='Τελευταια Νεα';
-        var myStrHeight = '450';
-        var myStrWidth = '350';
-        var myStrFeed = 'http://esperideswbc.blogspot.com/feeds/posts/default'
-*/
+      alert('Lary1');
 
 function initialize() {
       if(strFeed != ''){   
-        var feed = new google.feeds.Feed(strFeed);
-      }else{
         var feed = new google.feeds.Feed(myStrFeed);
+      }else{
+        var feed = new google.feeds.Feed('http://grbasket.blogspot.com/feeds/posts/default');
       }
-        
+
+
      feed.setNumEntries(4);
         
       feed.load(function(result){
@@ -55,7 +50,7 @@ function initialize() {
           if (!result.error) {
                  
             var content = document.getElementById("mocontentID");
-alert('Lary');
+
             var html =[];
         var entry = result.feed.entries[0]; 
            
@@ -83,25 +78,33 @@ alert('Lary');
         html.push('</div></div></div>');        
         content.innerHTML = html;
       
-        
-          if(colorTitle != ''){
-             $("a").css("color", colorTitle); 
-             $("h3.headerCL span").css("color", colorTitle); 
+
+      
+      var myStrHeight = prefs.getString("my_StrHeight");
+      var myStrWidth = prefs.getString("my_StrWidth");
+      var myStrFeed = prefs.getString("my_StrFeed");    
+      var myPosoiTitloi = prefs.getString("my_PosoiTitloi");    
+
+
+
+          if(myColorTitle != ''){
+             $("a").css("color", myColorTitle); 
+             $("h3.headerCL span").css("color", myColorTitle); 
           }        
          
-          if(strTitle != ''){
-            document.getElementById("titlosID").innerHTML = strTitle;
+          if(myStrTitle != ''){
+            document.getElementById("titlosID").innerHTML = myStrTitle;
           }
         
-             if(strHeight != ''){
-               strHeight=(strHeight+'px');
-               $("div#moduleID").css("height",strHeight);   
+             if(myStrHeight != ''){
+               strHeight=(myStrHeight +'px');
+               $("div#moduleID").css("height",myStrHeight);   
             }
 
-            if(strWidth != ''){
+            if(myStrWidth != ''){
                 strWidth=(strWidth+'px');
-                $("div#moduleID").css("width",strWidth);         
-                $("div#laryDiv img").css("width",strWidth);
+                $("div#moduleID").css("width",myStrWidth);         
+                $("div#laryDiv img").css("width",myStrWidth);
             }
         
         
