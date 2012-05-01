@@ -145,21 +145,18 @@
                 $("div#laryDiv img").css("width",myStrWidth);
             }
         
-        
-            $("div#laryDiv").css("visibility","hidden");  
-      /*      
-          //  $("div#laryDiv img").css("visibility","visible");
-      */    
+            $("div#laryDiv").css("visibility","hidden"); 
+            
              if($("div#laryDiv img").attr("src") !=''){
-    
                 $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
                 $("img#my2img").attr("width", myStrWidth);
                 
              } else{
                 $("img#my2img").attr("width", myStrWidth);
                 $("img#my2img").attr("src", defautImg);    
+                
             }
-          
+            $("img#my2img").css("visibility","visible");           
 
        }
 
