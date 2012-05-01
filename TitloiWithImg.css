@@ -21,15 +21,7 @@ margin-bottom: 5px;
 }
 
 div {
-border: 0;
-outline: 0;
-font-size: 100%;
-vertical-align: baseline;
-background: transparent;
-margin: 0;
-padding: 0;
-    
-display: block;
+
 }
 
 .moduleCL{
@@ -43,34 +35,6 @@ padding: 0;
 }
 
 .moWrapperCL{
-}
-
-.headerCL{
- background: #F8F8F8;
- font-size: 18px;
- font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
- line-height: normal;
- margin: -10px -10px 10px -10px;
- padding: 8px 10px;
- color: #888;
- border-bottom: 1px solid #E5E5E5;
- text-transform: uppercase;
-}
-
- h3.headerCL {
-  color: #BC0202;
-    background: none repeat scroll 0 0 #F8F8F8;
-    border-bottom: 1px solid #E5E5E5;
-    font-size: 18px;
-    line-height: normal;
-    margin: -10px -10px 10px;
-    padding: 8px 10px;
-    text-transform: uppercase;
-
-}
-
- h3.headerCL span {
-  color: #BC0202;
 }
 
 .moContentCL{
@@ -105,7 +69,6 @@ h4.ns2-title {
 
 a {
 color: #BC0202;
-   
 transition: color .5s;
 -moz-transition: color .5s;
 -webkit-transition: color .5s;
