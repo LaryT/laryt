@@ -45,7 +45,7 @@ function initialize() {
       if(strFeed != ''){   
         var feed = new google.feeds.Feed(strFeed);
       }else{
-        var feed = new google.feeds.Feed("http://grbasket.blogspot.com/feeds/posts/default");
+        var feed = new google.feeds.Feed(myStrFeed);
       }
         
      feed.setNumEntries(4);
@@ -55,32 +55,32 @@ function initialize() {
           if (!result.error) {
                  
             var content = document.getElementById("mocontentID");
-            var html = "";
-     
+alert('Lary');
+            var html =[];
         var entry = result.feed.entries[0]; 
            
-            html += '<div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div>';
-                    html += '<div class="ns2-inner">';
-                    html += '<h4 class="ns2-title">';
-                    html += '<a href="' + entry.link + '">' + entry.title + ' ...</a>';
-                    html += '<div style="clear:both"></div>';
-                    html += '</h4>';      
-                    html += '</div>';        
-            html += '<div id="contentDivSn">'+ entry.contentSnippet +'</div>';    
+            html.push('<div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div>');
+            html.push(''<div class="ns2-inner">');
+            html.push('<h4 class="ns2-title">');
+            html.push('<a href="' + entry.link + '">' + entry.title + ' ...</a>');
+            html.push('<div style="clear:both"></div>');
+            html.push('</h4>');      
+            html.push('</div>');        
+            html.push('<div id="contentDivSn">'+ entry.contentSnippet +'</div>');    
 
-            html += '<div class="ns2-links-wrap"><div class="ns2-links-pages"><div class="ns2-page">';
+            html.push('<div class="ns2-links-wrap"><div class="ns2-links-pages"><div class="ns2-page">');
             for (var i = 1; i<result.feed.entries.length;i++) {
                
                     entry = result.feed.entries[i]; 
-                    html += '<div class="ns2-inner">';
-                    html += '<h4 class="ns2-title">';
-                    html += '<a href="' + entry.link + '">' + entry.title + ' ...</a>';
-                    html += '<div style="clear:both"></div>';
-                    html += '</h4>';      
-                    html += '</div>';
+                    html.push('<div class="ns2-inner">');
+                    html.push('<h4 class="ns2-title">');
+                    html.push('<a href="' + entry.link + '">' + entry.title + ' ...</a>');
+                    html.push('<div style="clear:both"></div>');
+                    html.push('</h4>');      
+                    html.push('</div>');
              
             }
-        html += '</div></div></div>';        
+        html.push('</div></div></div>');        
         content.innerHTML = html;
       
         
