@@ -1,0 +1,113 @@
+h3 {
+ display: block;
+ font-size: 1.17em;
+ -webkit-margin-before: 1em;
+ -webkit-margin-after: 1em;
+ -webkit-margin-start: 0px;
+ -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+
+h4{
+line-height: 100%;
+margin-bottom: 5px;
+    line-height: 100%;
+}
+
+div {
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+margin: 0;
+padding: 0;
+    
+display: block;
+}
+
+.moduleCL{
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+margin: 0;
+padding: 0;
+}
+
+.moWrapperCL{
+ background: white;
+ padding: 10px;
+ border-top: 1px solid #E5E5E5;
+}
+
+.headerCL{
+ background: #F8F8F8;
+ font-size: 18px;
+ font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+ line-height: normal;
+ margin: -10px -10px 10px -10px;
+ padding: 8px 10px;
+ color: #888;
+ border-bottom: 1px solid #E5E5E5;
+ text-transform: uppercase;
+}
+
+ h3.headerCL span {
+  color: #BC0202;
+}
+
+.moContentCL{
+ 
+}
+
+.ns2-links-wrap {
+  border-top: 1px dashed #E5E5E5;
+  padding-top: 10px;
+}
+
+.ns2-links-pages{
+  overflow: hidden;
+  position: relative;
+}
+
+.ns2-page {
+ overflow: hidden;
+}
+
+.ns2-inner{
+    overflow: hidden;
+}
+
+h4.ns2-title {
+ font-size: 11px;
+ margin: 0;
+ padding-bottom: 8px;
+ font-weight: bold;
+
+}
+
+a {
+color: #BC0202;
+   
+transition: color .5s;
+-moz-transition: color .5s;
+-webkit-transition: color .5s;
+-o-transition: color .5s;
+text-decoration: none; 
+}
+
+a:hover {
+ color: orange;
+}
+#contentDivSn{
+ font-size: 10px;
+ margin: 0;
+ padding-bottom: 8px;
+
+}
+
+div#laryDiv img:hover{
+    opacity:.6
+}
