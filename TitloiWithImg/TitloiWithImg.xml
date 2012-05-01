@@ -79,6 +79,7 @@
       var myStrWidth = prefs.getString("my_StrWidth");
       var myStrFeed = prefs.getString("my_StrFeed");    
       var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
+      var defautImg = "http://4.bp.blogspot.com/-hNF6yp_NBlg/TuqR2aJaBKI/AAAAAAAAdjk/mkoNTYSBbrs/s200/basket-basketball-sports-loisirs2-708765.jpg";
 
    function init() {
       if(myStrFeed!= ''){   
@@ -99,10 +100,10 @@
             var html =[];
         var entry = result.feed.entries[0]; 
            
-            html.push('<div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div>');
+            html.push('<div id="laryDiv" style="height:230px;overflow:hidden;"><img id="my2img" style="border:3px dashed gray;height:230px;" />'+ entry.content+'</div>');
             html.push('<div class="ns2-inner">');
             html.push('<h4 class="ns2-title"  style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
-            html.push('<a href="' + entry.link + '" target="_top">' + entry.title.substring(0,50) + ' ...</a>');
+            html.push('<a href="' + entry.link + '" target="_top">' + entry.title.substring(0,45) + ' ...</a>');
             html.push('<div style="clear:both"></div>');
             html.push('</h4>');      
             html.push('</div>');        
@@ -114,7 +115,7 @@
                     entry = result.feed.entries[i]; 
                     html.push('<div class="ns2-inner">');
                     html.push('<h4 class="ns2-title" style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
-                    html.push('<a href="' + entry.link + '" target="_top">' + entry.title.substring(0,50) + ' ...</a>');
+                    html.push('<a href="' + entry.link + '" target="_top">' + entry.title.substring(0,45) + ' ...</a>');
                     html.push('<div style="clear:both"></div>');
                     html.push('</h4>');      
                     html.push('</div>');
@@ -145,10 +146,21 @@
             }
         
         
-            $("div#laryDiv").css("visibility","hidden");        
-            $("div#laryDiv img").css("visibility","visible");
-            $("div#laryDiv img").css("top","0px");
-            $("div#laryDiv img").css("left","0px");
+            $("div#laryDiv").css("visibility","hidden");  
+      /*      
+          //  $("div#laryDiv img").css("visibility","visible");
+      */    
+             if($("div#laryDiv img").attr("src") !=''){
+    
+                $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
+                $("img#my2img").attr("width", myStrWidth);
+                
+             } else{
+                $("img#my2img").attr("width", myStrWidth);
+                $("img#my2img").attr("src", defautImg);    
+            }
+          
+
        }
 
       });
