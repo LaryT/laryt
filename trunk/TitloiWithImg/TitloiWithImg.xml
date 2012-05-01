@@ -20,10 +20,14 @@
     
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>      
+    <script type="text/javascript">
+      google.load("feeds", "1");
+    </script>
+
 
      <script type="text/javascript">
-      google.load("feeds", "1");
-     
+      alert('Lary1');  
+      
       var prefs = new gadgets.Prefs();
       
       var myColorTitle = prefs.getString("my_ColorTitle");
@@ -33,14 +37,12 @@
       var myStrFeed = prefs.getString("my_StrFeed");    
       var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
 
-      alert('Lary1');
 
-
-        
+    
 
 
    function initialize() {
-      if(strFeed != ''){   
+      if(myStrFeed!= ''){   
         var feed = new google.feeds.Feed(myStrFeed);
       }else{
         var feed = new google.feeds.Feed("http://grbasket.blogspot.com/feeds/posts/default");
@@ -83,14 +85,6 @@
         content.innerHTML = html.join('');
       
 
-      
-      var myStrHeight = prefs.getString("my_StrHeight");
-      var myStrWidth = prefs.getString("my_StrWidth");
-      var myStrFeed = prefs.getString("my_StrFeed");    
-      var myPosoiTitloi = prefs.getString("my_PosoiTitloi");    
-
-
-
           if(myColorTitle != ''){
              $("a").css("color", myColorTitle); 
              $("h3.headerCL span").css("color", myColorTitle); 
@@ -101,12 +95,12 @@
           }
         
              if(myStrHeight != ''){
-               strHeight=(myStrHeight +'px');
+               myStrHeight=(myStrHeight +'px');
                $("div#moduleID").css("height",myStrHeight);   
             }
 
             if(myStrWidth != ''){
-                strWidth=(strWidth+'px');
+                myStrWidth=(myStrWidth+'px');
                 $("div#moduleID").css("width",myStrWidth);         
                 $("div#laryDiv img").css("width",myStrWidth);
             }
