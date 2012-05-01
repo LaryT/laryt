@@ -15,9 +15,52 @@
   
   <Content type="html">
     <![CDATA[
-    <link rel="stylesheet" href="http://laryt.googlecode.com/svn/tags/TitloiWithImg/TitloiWithImg.css" type="text/css">
     
-    
+     <style>   
+      a{
+        text-decoration: none;
+        color: #BC0202;
+        transition: color .5s;
+        -moz-transition: color .5s;
+        -webkit-transition: color .5s;
+        -o-transition: color .5s;
+      }
+      a:hover {
+         color: orange;
+      }
+
+      .ns2-links-wrap {
+          border-top: 1px dashed #E5E5E5;
+          padding-top: 10px;
+      }
+
+      .ns2-links-pages{
+        overflow: hidden;
+        position: relative;
+      }
+
+      .ns2-page {
+         overflow: hidden;
+      }
+
+    .ns2-inner{
+        overflow: hidden;
+    }
+
+
+
+     #contentDivSn{
+       font-size: 10px;
+       margin: 0;
+       padding-bottom: 8px;
+     }
+
+      div#laryDiv img:hover{
+        opacity:.6
+      }
+      
+     </style>   
+     
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" ></script>      
     <script type="text/javascript">
@@ -56,7 +99,7 @@
            
             html.push('<div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div>');
             html.push('<div class="ns2-inner">');
-            html.push('<h4 class="ns2-title">');
+            html.push('<h4 class="ns2-title"  style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
             html.push('<a href="' + entry.link + '" target="_top">' + entry.title + ' ...</a>');
             html.push('<div style="clear:both"></div>');
             html.push('</h4>');      
@@ -112,12 +155,12 @@
           // google.setOnLoadCallback(initialize);
    </script>
 
-     <div class="moduleCL" id="moduleID" style="overflow:hidden;border: 0;outline: 0;vertical-align: baseline;background: transparent; margin: 0;padding: 0;"> 
+     <div class="moduleCL" id="moduleID" style="overflow:hidden;border: 0;outline: 0;background: transparent; margin: 0;padding: 0;"> 
          <div class="moWrapperCL">
-             <div class="moWrapperHeader" style="background-color:#F8F8F8;width:100%; padding:5px 5px 5px 5px; border-bottom: 1px solid #E5E5E5;">
+             <div class="moWrapperHeader" style="background-color:#F8F8F8;width:100%; padding:5px; border-bottom: 1px solid #E5E5E5;">
                <h3 class="headerCL"><span id="titlosID" style="color: #BC0202;">.</span></h3>
              </div>
-             <div class="moContentCL" style="width:100%; padding:5px 5px 5px 5px; border-bottom: 1px solid #E5E5E5;">
+             <div class="moContentCL" style="width:100%; padding:5pxns2-title; border-bottom: 1px solid #E5E5E5;">
                <div class="moInnerContentCL">               
                   <div id="mocontentID">.</div>
                 </div>
