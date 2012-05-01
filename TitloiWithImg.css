@@ -62,7 +62,14 @@ padding: 0;
 
  h3.headerCL {
   color: #BC0202;
-  background: #F8F8F8;  
+    background: none repeat scroll 0 0 #F8F8F8;
+    border-bottom: 1px solid #E5E5E5;
+    font-size: 18px;
+    line-height: normal;
+    margin: -10px -10px 10px;
+    padding: 8px 10px;
+    text-transform: uppercase;
+
 }
 
  h3.headerCL span {
