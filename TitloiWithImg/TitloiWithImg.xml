@@ -41,7 +41,7 @@
     
 
 
-   function initialize() {
+   function init() {
       if(myStrFeed!= ''){   
         var feed = new google.feeds.Feed(myStrFeed);
       }else{
@@ -114,8 +114,9 @@
 
       });
 
-   }         
-          google.setOnLoadCallback(initialize);
+   }        
+    gadgets.util.registerOnLoadHandler(init);   
+          // google.setOnLoadCallback(initialize);
    </script>
 
      <div class="moduleCL" style="overflow:hidden;" id="moduleID"> 
