@@ -15,7 +15,9 @@
   
   <Content type="html">
     <![CDATA[
-    <link rel="stylesheet" href="http://code.google.com/p/laryt/source/browse/tags/TitloiWithImg/TitloiWithImg.css" type="text/css">
+    <!--  link rel="stylesheet" href="http://code.google.com/p/laryt/source/browse/tags/TitloiWithImg/TitloiWithImg.css" type="text/css"  -->
+    <link rel="stylesheet" href="http://laryt.googlecode.com/svn/tags/TitloiWithImg/TitloiWithImg.css" type="text/css">
+    
     
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>      
