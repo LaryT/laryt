@@ -46,7 +46,7 @@ function initialize() {
         var feed = new google.feeds.Feed("http://grbasket.blogspot.com/feeds/posts/default");
       }
         
-     feed.setNumEntries(myPosoiTitloi);
+     feed.setNumEntries(4);
         
       feed.load(function(result){
  
