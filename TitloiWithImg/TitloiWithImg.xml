@@ -102,8 +102,11 @@
         var feed = new google.feeds.Feed("http://grbasket.blogspot.com/feeds/posts/default");
       }
 
-
-     feed.setNumEntries(4);
+      if(myPosoiTitloi !=''){
+        feed.setNumEntries(myPosoiTitloi);
+      }else{
+        feed.setNumEntries(4);
+      }
         
       feed.load(function(result){
  
