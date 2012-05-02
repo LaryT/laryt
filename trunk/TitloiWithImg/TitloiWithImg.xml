@@ -4,16 +4,22 @@
     <Require feature="setprefs" />    
   </ModulePrefs>
   <UserPref name="my_name" display_name="Name" default_value="Titles with Img" />
-    
+
+  <UserPref name="my_StrFeed" display_name="Feed,RSS:" default_value="http://grbasket.blogspot.com/feeds/posts/default" />    
   <UserPref name="my_ColorTitle" display_name="Color:" default_value="#BC0202" />
   <UserPref name="my_StrTitle" display_name="Title :" default_value="NEWS" />
   <UserPref name="my_StrHeight" display_name="Height:" default_value="450" />    
   <UserPref name="my_StrWidth" display_name="Width:" default_value="300" />  
   <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
-  
-  <UserPref name="my_StrFeed" display_name="Feed,RSS:" default_value="http://grbasket.blogspot.com/feeds/posts/default" />    
-  
-  <Content type="html">
+
+  <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
+  <UserPref name="my_defautImg" display_name="Default Img:" default_value="http://4.bp.blogspot.com/-hNF6yp_NBlg/TuqR2aJaBKI/AAAAAAAAdjk/mkoNTYSBbrs/s200/basket-basketball-sports-loisirs2-708765.jpg" />
+  <UserPref name="my_ShowImages" display_name="Show Image" default_value="0" datatype="enum" required="false">
+    <EnumValue value="0" display_value="No"/>
+    <EnumValue value="1" display_value="Yes"/>
+  </UserPref>  
+
+<Content type="html">
     <![CDATA[
     
      <style>   
@@ -79,6 +85,14 @@
       var myStrWidth = prefs.getString("my_StrWidth");
       var myStrFeed = prefs.getString("my_StrFeed");    
       var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
+
+      var myBgColorTitle = prefs.getString("my_BgColorTitle"); 
+      var mydefautImg  = prefs.getString("my_defautImg");       
+      var myShowImages = prefs.getString("my_ShowImages");       
+      
+    
+      
+      
       var defautImg = "http://4.bp.blogspot.com/-hNF6yp_NBlg/TuqR2aJaBKI/AAAAAAAAdjk/mkoNTYSBbrs/s200/basket-basketball-sports-loisirs2-708765.jpg";
 
    function init() {
@@ -100,7 +114,7 @@
             var html =[];
         var entry = result.feed.entries[0]; 
            
-            html.push('<div style="height:230px;overflow:hidden;"><img id="my2img" style="border:3px dashed gray;height:230px;width:300px;" /><div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div></div>');
+            html.push('<div id="imgDivID" style="height:230px;overflow:hidden;"><img id="my2img" style="border:0px dashed gray;height:230px;width:300px;" /><div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div></div>');
             html.push('<div class="ns2-inner">');
             html.push('<h4 class="ns2-title"  style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
             html.push('<a href="' + entry.link + '" target="_top">' + entry.title.substring(0,45) + ' ...</a>');
@@ -131,6 +145,11 @@
              $("h3.headerCL span").css("color", myColorTitle); 
           }        
          
+          if(myBgColorTitle != ''){
+             $("#moWrapperHeader").css("background-color", myBgColorTitle ); 
+          }                 
+         
+         
           if(myStrTitle != ''){
             document.getElementById("titlosID").innerHTML = myStrTitle;
           }
@@ -146,23 +165,21 @@
                 $("div#laryDiv img").css("width",myStrWidth);
             }
         
-
-     
-          
-             if($("div#laryDiv img").attr("src") != ''){
+            if($("div#laryDiv img").attr("src") != ''){
                 $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
                 $("img#my2img").attr("width", myStrWidth);
                 
-             } else{
+            } else{
                 $("img#my2img").attr("width", myStrWidth);
-                $("img#my2img").attr("src", defautImg);    
-                
+                $("img#my2img").attr("src", mydefautImg);  
             }
-            $("div#laryDiv").css("visibility","hidden"); 
-           $("img#my2img").css("visibility","visible");              
-            
-    
-
+           $("div#laryDiv").css("visibility","hidden"); 
+           
+           if(myShowImages=="1") {
+               $("img#my2img").css("visibility","visible");
+           }else{
+               $("#imgDivID").css("display","none");
+           }
        }
 
       });
@@ -174,7 +191,7 @@
 
      <div class="moduleCL" id="moduleID" style="overflow:hidden;border: 0;outline: 0;background: transparent; margin: 0;padding: 0;"> 
          <div class="moWrapperCL">
-             <div class="moWrapperHeader" style="background-color:#F8F8F8;width:100%; padding:5px; border-bottom: 1px solid #E5E5E5;">
+             <div id="moWrapperHeader" style="background-color:#F8F8F8;width:100%; padding:5px; border-bottom: 1px solid #E5E5E5;">
                <h3 class="headerCL"><span id="titlosID" style="color: #BC0202;">.</span></h3>
              </div>
              <div class="moContentCL" style="width:100%; padding:5px; border-bottom: 1px solid #E5E5E5;">
