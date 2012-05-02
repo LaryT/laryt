@@ -14,7 +14,7 @@
 
   <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
   <UserPref name="my_defautImg" display_name="Default Img:" default_value="http://4.bp.blogspot.com/-hNF6yp_NBlg/TuqR2aJaBKI/AAAAAAAAdjk/mkoNTYSBbrs/s200/basket-basketball-sports-loisirs2-708765.jpg" />
-  <UserPref name="my_ShowImages" display_name="Show Image" default_value="0" datatype="enum" required="false">
+  <UserPref name="my_ShowImages" display_name="Show Image" default_value="1" datatype="enum" required="false">
     <EnumValue value="0" display_value="No"/>
     <EnumValue value="1" display_value="Yes"/>
   </UserPref>  
@@ -175,7 +175,7 @@
             }
            $("div#laryDiv").css("visibility","hidden"); 
            
-           if(myShowImages=="1") {
+           if(myShowImages=="Yes") {
                $("img#my2img").css("visibility","visible");
            }else{
                $("#imgDivID").css("display","none");
