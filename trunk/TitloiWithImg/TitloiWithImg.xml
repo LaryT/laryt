@@ -128,11 +128,12 @@
 
             html.push('<div class="ns2-links-wrap"><div class="ns2-links-pages"><div class="ns2-page">');
             for (var i = 1; i<result.feed.entries.length;i++) {
-               
+
                     entry = result.feed.entries[i]; 
+                    myPubDate = new Date(entry.publishedDate);
                     html.push('<div class="ns2-inner">');
                     html.push('<h4 class="ns2-title" style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
-                    html.push('<a href="' + entry.link + '" target="_top">' + entry.title.substring(0,45) + ' ...</a>');
+                    html.push('<a href="' + entry.link + '" target="_top" title="'+ myPubDate +'">' + entry.title.substring(0,45) + ' ...</a>');
                     html.push('<div style="clear:both"></div>');
                     html.push('</h4>');      
                     html.push('</div>');
@@ -178,7 +179,7 @@
             }
            $("div#laryDiv").css("visibility","hidden"); 
            
-           if(myShowImages=="Yes") {
+           if(myShowImages=="1") {
                $("img#my2img").css("visibility","visible");
            }else{
                $("#imgDivID").css("display","none");
