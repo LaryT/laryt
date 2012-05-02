@@ -13,7 +13,7 @@
   <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
 
   <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
-  <UserPref name="my_defautImg" display_name="Default Img:" default_value="http://4.bp.blogspot.com/-hNF6yp_NBlg/TuqR2aJaBKI/AAAAAAAAdjk/mkoNTYSBbrs/s200/basket-basketball-sports-loisirs2-708765.jpg" />
+  <UserPref name="my_defautImg" display_name="Default Img:" default_value="https://lh4.googleusercontent.com/-i3cAyUfiiuw/T2DiGBO7rOI/AAAAAAAAhJk/xThK1nbRuwQ/s300/balles.png" />
   <UserPref name="my_ShowImages" display_name="Show Image" default_value="1" datatype="enum" required="false">
     <EnumValue value="0" display_value="No"/>
     <EnumValue value="1" display_value="Yes"/>
@@ -131,9 +131,10 @@
 
                     entry = result.feed.entries[i]; 
                     myPubDate = new Date(entry.publishedDate);
+                    strPubDate = myPubDate.getDate()+"."+myPubDate.getUTCMonth()+"."myPubDate.getUTCFullYear();
                     html.push('<div class="ns2-inner">');
                     html.push('<h4 class="ns2-title" style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
-                    html.push('<a href="' + entry.link + '" target="_top" title="'+ myPubDate +'">' + entry.title.substring(0,45) + ' ...</a>');
+                    html.push('<a href="' + entry.link + '" target="_top" title="'+ strPubDate +'">' + entry.title.substring(0,45) + ' ...</a>');
                     html.push('<div style="clear:both"></div>');
                     html.push('</h4>');      
                     html.push('</div>');
