@@ -63,7 +63,7 @@
        padding-right: 5px;       
      }
 
-      div#laryDiv img:hover{
+      img:hover{
         opacity:.6
       }
       
