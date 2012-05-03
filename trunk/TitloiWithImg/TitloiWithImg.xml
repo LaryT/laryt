@@ -219,7 +219,7 @@
 
      <div class="moduleCL" id="moduleID" style="overflow:hidden;border: 0;outline: 0;background: transparent; margin: 0;padding: 0;"> 
          <div class="moWrapperCL">
-             <div id="moWrapperHeader" style="background-color:#F8F8F8;width:100%; padding:5px; border-bottom: 1px solid #E5E5E5;">
+             <div id="moWrapperHeader" style="background-color:#F8F8F8;width:97%; padding:5px; border-bottom: 1px solid #E5E5E5;">
                <h3 class="headerCL"><span id="titlosID" style="color: #BC0202;">.</span></h3>
              </div>
              <div class="moContentCL" style="width:100%; padding:5px; border-bottom: 1px solid #E5E5E5;">
