@@ -131,8 +131,9 @@
             var content = document.getElementById("mocontentID");
 
             var html =[];
-        var entry = result.feed.entries[0]; 
-        strPubDate = myPubDate.getDate()+"."+ (myPubDate.getMonth()+1)   +": "+ entry.title ;
+        var entry = result.feed.entries[0];
+        var myPubDate = new Date(entry.publishedDate);
+        var strPubDate = myPubDate.getDate()+"."+ (myPubDate.getMonth()+1)   +": "+ entry.title ;
                     
             html.push('<div id="imgDivID" style="height:230px;overflow:hidden;"><img id="my2img" style="border:0px dashed gray;height:230px;width:300px;" /><div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div></div>');
             html.push('<div class="ns2-inner">');
