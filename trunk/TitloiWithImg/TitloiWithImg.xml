@@ -63,7 +63,7 @@
        padding-right: 5px;       
      }
 
-      img:hover{
+      img#my2img:hover{
         opacity:.6
       }
       
