@@ -26,10 +26,11 @@
       a{
         text-decoration: none;
         color: #BC0202;
-        transition: color .5s;
-        -moz-transition: color .5s;
-        -webkit-transition: color .5s;
-        -o-transition: color .5s;
+         -webkit-transition: all 300ms ease-in-out;
+         -moz-transition: all 300ms ease-in-out;
+         -o-transition: all 300ms ease-in-out;
+         -ms-transition: all 300ms ease-in-out;
+         transition: all 300ms ease-in-out;
       }
       a:hover {
          color: orange;
