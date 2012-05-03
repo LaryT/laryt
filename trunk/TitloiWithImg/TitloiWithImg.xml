@@ -23,16 +23,19 @@
     <![CDATA[
     
      <style>   
-      a{
-        text-decoration: none;
-        color: #BC0202;
+      a.aLinkCL{
+
          -webkit-transition: all 300ms ease-in-out;
          -moz-transition: all 300ms ease-in-out;
          -o-transition: all 300ms ease-in-out;
          -ms-transition: all 300ms ease-in-out;
          transition: all 300ms ease-in-out;
+/*         
+        text-decoration: none;
+        color: #BC0202;         
+*/        
       }
-      a:hover {
+      a.aLinkCL:hover {
          color: orange;
       }
 
@@ -129,11 +132,12 @@
 
             var html =[];
         var entry = result.feed.entries[0]; 
-           
+        strPubDate = myPubDate.getDate()+"."+ (myPubDate.getMonth()+1)   +": "+ entry.title ;
+                    
             html.push('<div id="imgDivID" style="height:230px;overflow:hidden;"><img id="my2img" style="border:0px dashed gray;height:230px;width:300px;" /><div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div></div>');
             html.push('<div class="ns2-inner">');
             html.push('<h4 class="ns2-title"  style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
-            html.push('<a href="' + entry.link + '" target="_top">' + entry.title.substring(0,45) + ' ...</a>');
+            html.push('<a href="' + entry.link + '" target="_top" title="'+ strPubDate +'">' + strPubDate.title.substring(0,45) + ' ...</a>');
             html.push('<div style="clear:both"></div>');
             html.push('</h4>');      
             html.push('</div>');        
@@ -144,10 +148,10 @@
 
                     entry = result.feed.entries[i]; 
                     myPubDate = new Date(entry.publishedDate);
-                    strPubDate = myPubDate.getDate()+"."+ (myPubDate.getMonth()+1) +"."+ myPubDate.getFullYear()+": "+ entry.title ;
+                    strPubDate = myPubDate.getDate()+"."+ (myPubDate.getMonth()+1)  +": "+ entry.title ;
                     html.push('<div class="ns2-inner">');
                     html.push('<h4 class="ns2-title" style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
-                    html.push('<a href="' + entry.link + '" target="_top" title="'+ strPubDate +'">' + entry.title.substring(0,45) + ' ...</a>');
+                    html.push('<a href="' + entry.link + '" target="_top" title="'+ strPubDate +'" class="aLinkCL">' + entry.title.substring(0,45) + ' ...</a>');
                     html.push('<div style="clear:both"></div>');
                     html.push('</h4>');      
                     html.push('</div>');
