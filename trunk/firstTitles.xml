@@ -130,15 +130,15 @@ font-size: 16px;
 font-weight: bold;
 
  border: 1px solid silver;
- border-top-left-radius: 15px;
- border-top-right-radius: 15px;
- border-bottom-right-radius: 15px;
- border-bottom-left-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -goog-ms-border-radius: 15px;
+  border-radius: 15px; 
 }
 
-.imantasDataCategoryTop {
+.imantasDataCategoryTopCL{
 background: #FF5113;
-opacity: 0.9;
+opacity: 1;
 position: absolute;
 top: 0;
 right: 0;
@@ -324,7 +324,7 @@ function handleQueryResponseMakeItems(response) {
      if( data.getFormattedValue(row, 9) !=""  ) {
         html.push('<div id="imantasDataMarquee" class="imantasDataMarquee"><marquee>'+ data.getFormattedValue(row, 9)+'</marquee></div> '); 
       }
-     html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop">'+ data.getFormattedValue(row, 6)+'</div> '); 
+     html.push('<div id="imantasDataCategoryTopID" class="imantasDataCategoryTopCL">'+ data.getFormattedValue(row, 6)+'</div> '); 
    }
    html.push('</div>');
 
