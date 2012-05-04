@@ -134,48 +134,23 @@ font-weight: bold;
 
 .imantasDataCategoryTop {
 background: #FF5113;
-opacity: 0.8;
+opacity: 0.9;
 position: absolute;
 top: 0;
 right: 0;
 padding: 10px;
 color: white;
 width: 120px;
-height: 16px;
+height: 18px;
 text-align:center;
 font-size: 14px;
 font-weight: bold;
 
  border: 1px solid silver;
- 
- /*
--moz-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
--webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
--goog-ms-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
-box-shadow: 0 0 0 rgba(0, 0, 0, .2);
-*/
-
--moz-border-radius: 15px;
--webkit-border-radius: 15px;
--goog-ms-border-radius: 15px;
-border-radius: 15px;
- 
- 
- /*
- border: 1px solid #E5E5E5;
- border-top-left-radius: 15px;
- -moz-border-radius-topleft: 15px;
- 
- border-top-right-radius: 15px;
- -moz-border-radius-topright: 15px;
- 
- 
- border-bottom-right-radius: 15px;
- -moz-border-radius-bottomright: 15px; 
- 
- border-bottom-left-radius: 15px;
- -moz-border-radius-bottomleft: 15px;
- */
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -goog-ms-border-radius: 15px;
+  border-radius: 15px; 
 }
 
 
@@ -345,7 +320,7 @@ function handleQueryResponseMakeItems(response) {
      if( data.getFormattedValue(row, 9) !=""  ) {
         html.push('<div id="imantasDataMarquee" class="imantasDataMarquee"><marquee>'+ data.getFormattedValue(row, 9)+'</marquee></div> '); 
       }
-     html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop box">'+ data.getFormattedValue(row, 6)+'</div> '); 
+     html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop">'+ data.getFormattedValue(row, 6)+'</div> '); 
    }
    html.push('</div>');
 
