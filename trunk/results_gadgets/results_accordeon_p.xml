@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="__UP_my_name__" height="678" scrolling="false" width="335" scaling="false" title_url="http://www.grbasket.gr" description="Results, Αποτελέσματα |::| Display results in your blog or website " author="grbasket" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s275/box_match_center.png" thumbnail="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s125/box_match_center.png" category="sport" category2="sports" > 
+  <ModulePrefs title="__UP_my_name__" height="678" scrolling="false" width="335" scaling="false" title_url="http://www.grbasket.gr" description="Results, Αποτελέσματα |::| Display results in your blog or website " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s275/box_match_center.png" thumbnail="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s125/box_match_center.png" category="sport" category2="news" > 
     <Require feature="setprefs" />    
-    <Require feature="minimessage" />
     <Require feature="dynamic-height" />
   </ModulePrefs>
   <UserPref name="my_name" display_name="Name" default_value="ResultsBox4U" />
@@ -1142,7 +1141,6 @@ function handleQueryApotelesmataDiorgResponse(response){
 
 //--------
 //--- gia kaue agvna
-
 //--------
      strForCentralMarq = data.getFormattedValue(row,18)+ ' | ' + data.getFormattedValue(row,19)+ ' | ' + data.getFormattedValue(row,20);
 
