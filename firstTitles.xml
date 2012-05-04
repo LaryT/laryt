@@ -14,6 +14,10 @@
   <Content type="html">
     <![CDATA[
 <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
+<!--[if IE]><script type="text/javascript" src="http://www.blogger.com/static/v1/jsbin/883382354-ieretrofit.js"></script>
+<![endif]-->
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+
 <style>
 img { border: 0; }
 .clear-fix { clear: both; }
