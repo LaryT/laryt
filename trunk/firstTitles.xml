@@ -140,17 +140,27 @@ top: 0;
 right: 0;
 padding: 10px;
 color: white;
-width: 100px;
-height: 18px;
+width: 120px;
+height: 16px;
 text-align:center;
-font-size: 16px;
+font-size: 14px;
 font-weight: bold;
 
  border: 1px solid silver;
+ 
+ 
  border-top-left-radius: 15px;
+ -moz-border-radius-topleft: 15px;
+ 
  border-top-right-radius: 15px;
+ -moz-border-radius-topright: 15px;
+ 
+ 
  border-bottom-right-radius: 15px;
+ -moz-border-radius-bottomright: 15px; 
+ 
  border-bottom-left-radius: 15px;
+ -moz-border-radius-bottomleft: 15px;
 }
 
 
@@ -320,7 +330,7 @@ function handleQueryResponseMakeItems(response) {
      if( data.getFormattedValue(row, 9) !=""  ) {
         html.push('<div id="imantasDataMarquee" class="imantasDataMarquee"><marquee>'+ data.getFormattedValue(row, 9)+'</marquee></div> '); 
       }
-     html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop">'+ data.getFormattedValue(row, 6)+'</div> '); 
+     html.push('<div id="imantasDataCategoryTop" class="imantasDataCategoryTop box">'+ data.getFormattedValue(row, 6)+'</div> '); 
    }
    html.push('</div>');
 
