@@ -23,7 +23,7 @@
     <![CDATA[
     
      <style>   
-      a.aLinkCL{
+      a#myLinkCL{
 
          -webkit-transition: all 300ms ease-in-out;
          -moz-transition: all 300ms ease-in-out;
@@ -32,7 +32,7 @@
          transition: all 300ms ease-in-out;
        
       }
-      a.aLinkCL:hover {
+      a#myLinkCL:hover {
          color: orange;
       }
 
@@ -135,7 +135,7 @@
             html.push('<div id="imgDivID" style="height:230px;overflow:hidden;"><img id="my2img" style="border:0px dashed gray;height:230px;width:300px;" /><div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div></div>');
             html.push('<div class="ns2-inner">');
             html.push('<h4 class="ns2-title"  style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
-            html.push('<a href="' + entry.link + '" target="_top" title="'+ strPubDate +'">' + strPubDate.title.substring(0,45) + ' ...</a>');
+            html.push('<a href="' + entry.link + '" target="_top" title="'+ strPubDate +'">' + strPubDate.substring(0,45) + ' ...</a>');
             html.push('<div style="clear:both"></div>');
             html.push('</h4>');      
             html.push('</div>');        
@@ -145,11 +145,11 @@
             for (var i = 1; i<result.feed.entries.length;i++) {
 
                     entry = result.feed.entries[i]; 
-                    myPubDate = Date(entry.publishedDate);
+                    myPubDate = new Date(entry.publishedDate);
                     strPubDate = myPubDate.getDate()+"."+ (myPubDate.getMonth()+1)  +": "+ entry.title ;
                     html.push('<div class="ns2-inner">');
                     html.push('<h4 class="ns2-title" style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
-                    html.push('<a href="' + entry.link + '" target="_top" title="'+ strPubDate +'" class="aLinkCL">' + entry.title.substring(0,45) + ' ...</a>');
+                    html.push('<a href="' + entry.link + '" target="_top" title="'+ strPubDate +'" id="myLinkCL">' + entry.title.substring(0,45) + ' ...</a>');
                     html.push('<div style="clear:both"></div>');
                     html.push('</h4>');      
                     html.push('</div>');
