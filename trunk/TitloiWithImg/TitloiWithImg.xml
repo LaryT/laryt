@@ -34,8 +34,8 @@
        
       }
       a#myLinkCL:hover {
-         opacity:.9;
-         color: orange;
+         opacity:.8;
+ 
       }
 
       .ns2-links-wrap {
@@ -139,9 +139,9 @@
             strPubDate = myPubDate.getDate()+".";
           }
           if( (myPubDate.getMonth()+1) <10 ) {
-             strPubDate = strPubDate+".0"+ (myPubDate.getMonth()+1);
+             strPubDate = strPubDate+"0"+ (myPubDate.getMonth()+1);
           }else{
-             strPubDate = strPubDate+"."+ (myPubDate.getMonth()+1);
+             strPubDate = strPubDate +(myPubDate.getMonth()+1);
           }
           strPubDate =  strPubDate +": "+ entry.title ;
                     
