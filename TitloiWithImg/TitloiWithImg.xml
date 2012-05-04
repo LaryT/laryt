@@ -25,14 +25,16 @@
      <style>   
       a#myLinkCL{
 
-         -webkit-transition: all 300ms ease-in-out;
-         -moz-transition: all 300ms ease-in-out;
-         -o-transition: all 300ms ease-in-out;
-         -ms-transition: all 300ms ease-in-out;
-         transition: all 300ms ease-in-out;
+         -webkit-transition: all 800ms ease-in-out;
+         -moz-transition: all 800ms ease-in-out;
+         -o-transition: all 800ms ease-in-out;
+         -ms-transition: all 800ms ease-in-out;
+         transition: all 800ms ease-in-out;
+         text-decoration:none;
        
       }
       a#myLinkCL:hover {
+         opacity:.9;
          color: orange;
       }
 
@@ -130,7 +132,18 @@
             var html =[];
         var entry = result.feed.entries[0];
         var myPubDate = new Date(entry.publishedDate);
-        var strPubDate = myPubDate.getDate()+"."+ (myPubDate.getMonth()+1) +": "+ entry.title ;
+        var strPubDate ="";
+          if(myPubDate.getDate()<10){
+            strPubDate = "0"+myPubDate.getDate()+".";
+          }else{
+            strPubDate = myPubDate.getDate()+".";
+          }
+          if( (myPubDate.getMonth()+1) <10 ) {
+             strPubDate = strPubDate+".0"+ (myPubDate.getMonth()+1);
+          }else{
+             strPubDate = strPubDate+"."+ (myPubDate.getMonth()+1);
+          }
+          strPubDate =  strPubDate +": "+ entry.title ;
                     
             html.push('<div id="imgDivID" style="height:230px;overflow:hidden;"><img id="my2img" style="border:0px dashed gray;height:230px;width:300px;" /><div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div></div>');
             html.push('<div class="ns2-inner">');
