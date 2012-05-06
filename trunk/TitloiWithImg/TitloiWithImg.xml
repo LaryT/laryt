@@ -54,6 +54,9 @@
 
     .ns2-inner{
         overflow: hidden;
+        padding: 0 0 0 10px;
+        font-size: .917em;
+        background: url('https://lh4.googleusercontent.com/-OsntZYtcsnk/T6YCbbQsNLI/AAAAAAAAmbI/-ibKaoV6Mow/s800/sfera.gif') no-repeat left .4em;
     }
 
 
