@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs title="__UP_my_name__" height="500" title_url="http://www.grbasket.gr" description="News |::| Display news in your blog or website " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s275/centralTitlesLogo.png" thumbnail="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s125/centralTitlesLogo.png" category="sport" category2="news" > 
+    <Require feature="setprefs" />    
+  </ModulePrefs>
+  <UserPref name="my_name" display_name="Name" default_value="Titles with Img" />
+
+  <UserPref name="my_StrFeed" display_name="Feed,RSS:" default_value="http://grbasket.blogspot.com/feeds/posts/default" />    
+  <UserPref name="my_ColorTitle" display_name="Color:" default_value="#BC0202" />
+  <UserPref name="my_StrTitle" display_name="Title :" default_value="NEWS" />
+  <UserPref name="my_StrHeight" display_name="Height:" default_value="450" />    
+  <UserPref name="my_StrWidth" display_name="Width:" default_value="300" />  
+  <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
+
+  <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
+  <UserPref name="my_defautImg" display_name="Default Img:" default_value="https://lh4.googleusercontent.com/-i3cAyUfiiuw/T2DiGBO7rOI/AAAAAAAAhJk/xThK1nbRuwQ/s300/balles.png" />
+  <UserPref name="my_ShowImages" display_name="Show Image" default_value="1" datatype="enum" required="false">
+    <EnumValue value="0" display_value="No"/>
+    <EnumValue value="1" display_value="Yes"/>
+  </UserPref>  
+
+<Content type="html">
+    <![CDATA[
+    
+     <style>   
+      a#myLinkCL{
+
+         -webkit-transition: all 600ms ease-in-out;
+         -moz-transition: all 600ms ease-in-out;
+         -o-transition: all 600ms ease-in-out;
+         -ms-transition: all 600ms ease-in-out;
+         transition: all 600ms ease-in-out;
+         text-decoration:none;
+       
+      }
+      a#myLinkCL:hover {
+         color:black;
+ 
+      }
+
+      .ns2-links-wrap {
+          border-top: 1px dashed #E5E5E5;
+          padding-top: 10px;
+      }
+
+      .ns2-links-pages{
+        overflow: hidden;
+        position: relative;
+      }
+
+      .ns2-page {
+         overflow: hidden;
+      }
+
+    .ns2-inner{
+        overflow: hidden;
+        padding: 0 0 0 10px;
+        font-size: .917em;
+        background: url('https://lh4.googleusercontent.com/-OsntZYtcsnk/T6YCbbQsNLI/AAAAAAAAmbI/-ibKaoV6Mow/s800/sfera.gif') no-repeat left .4em;
+    }
+
+
+
+     #contentDivSn{
+       font-size: 10px;
+       margin: 0;
+       padding-bottom: 8px;
+       text-align: justify;
+       padding-right: 5px;       
+     }
+
+      img#my2img:hover{
+        opacity:.6
+      }
+      
+      img#my2img{
+       -webkit-transition: all 300ms ease-in-out;
+       -moz-transition: all 300ms ease-in-out;
+       -o-transition: all 300ms ease-in-out;
+       -ms-transition: all 300ms ease-in-out;
+       transition: all 300ms ease-in-out;
+       }
+      
+      div#moWrapperHeader{
+
+      }
+      
+      div.moWrapperCL{
+
+      }
+      
+     </style>   
+     
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" ></script>      
+    <script type="text/javascript">
+      google.load("feeds", "1");
+    </script>
+
+
+     <script type="text/javascript">
+      var prefs = new gadgets.Prefs();
+      
+      var myColorTitle = prefs.getString("my_ColorTitle");
+      var myStrTitle = prefs.getString("my_StrTitle");
+      var myStrHeight = prefs.getString("my_StrHeight");
+      var myStrWidth = prefs.getString("my_StrWidth");
+      var myStrFeed = prefs.getString("my_StrFeed");    
+      var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
+
+      var myBgColorTitle = prefs.getString("my_BgColorTitle"); 
+      var mydefautImg  = prefs.getString("my_defautImg");       
+      var myShowImages = prefs.getString("my_ShowImages");       
+      
+    
+   function init() {
+      if(myStrFeed!= ''){   
+        var feed = new google.feeds.Feed(myStrFeed);
+      }else{
+        var feed = new google.feeds.Feed("http://grbasket.blogspot.com/feeds/posts/default");
+      }
+
+      if(myPosoiTitloi !=''){
+        feed.setNumEntries(myPosoiTitloi);
+      }else{
+        feed.setNumEntries(4);
+      }
+        
+      feed.load(function(result){
+ 
+          if (!result.error) {
+                 
+            var content = document.getElementById("mocontentID");
+
+            var html =[];
+        var entry = result.feed.entries[0];
+        var myPubDate = new Date(entry.publishedDate);
+        var strPubDate ="";
+          if(myPubDate.getDate()<10){
+            strPubDate = "0"+myPubDate.getDate()+".";
+          }else{
+            strPubDate = myPubDate.getDate()+".";
+          }
+          if( (myPubDate.getMonth()+1) <10 ) {
+             strPubDate = strPubDate+"0"+ (myPubDate.getMonth()+1);
+          }else{
+             strPubDate = strPubDate +(myPubDate.getMonth()+1);
+          }
+          strPubDate =  strPubDate +": "+ entry.title ;
+                    
+            html.push('<div id="imgDivID" style="height:230px;overflow:hidden;"><img id="my2img" style="border:0px dashed gray;height:230px;width:300px;" /><div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div></div>');
+            html.push('<div class="ns2-inner">');
+            html.push('<h4 class="ns2-title"  style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
+            html.push('<a href="' + entry.link + '" target="_top" title="'+ strPubDate +'" id="myLinkCL">' + strPubDate.substring(0,45) + ' ...</a>');
+            html.push('<div style="clear:both"></div>');
+            html.push('</h4>');      
+            html.push('</div>');        
+            html.push('<div id="contentDivSn">'+ entry.contentSnippet.substring(0,100) +'...</div>');    
+
+            html.push('<div class="ns2-links-wrap"><div class="ns2-links-pages"><div class="ns2-page">');
+            for (var i = 1; i<result.feed.entries.length;i++) {
+
+                    entry = result.feed.entries[i]; 
+                    myPubDate = new Date(entry.publishedDate);
+                    strPubDate = myPubDate.getDate()+"."+ (myPubDate.getMonth()+1)  +": "+ entry.title ;
+                    html.push('<div class="ns2-inner">');
+                    html.push('<h4 class="ns2-title" style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
+                    html.push('<a href="' + entry.link + '" target="_top" title="'+ strPubDate +'" id="myLinkCL">' + entry.title.substring(0,45) + ' ...</a>');
+                    html.push('<div style="clear:both"></div>');
+                    html.push('</h4>');      
+                    html.push('</div>');
+             
+            }
+        html.push('</div></div></div>');        
+        content.innerHTML = html.join('');
+      
+           myStrWidth=(myStrWidth+'px');
+           
+          if(myColorTitle != ''){
+             $("a").css("color", myColorTitle); 
+             $("h3.headerCL span").css("color", myColorTitle); 
+          }        
+         
+          if(myBgColorTitle != ''){
+             $("#moWrapperHeader").css("background-color", myBgColorTitle ); 
+             $("#moduleID").css("background-color", myBgColorTitle ); 
+          }                 
+         
+         
+          if(myStrTitle != ''){
+            document.getElementById("titlosID").innerHTML = myStrTitle;
+          }
+        
+             if(myStrHeight != ''){
+               myStrHeight=(myStrHeight +'px');
+               $("div#moduleID").css("height",myStrHeight);   
+            }
+
+            if(myStrWidth != ''){
+                
+                $("div#moduleID").css("width",myStrWidth);         
+                $("div#laryDiv img").css("width",myStrWidth);
+            }
+        
+            if($("div#laryDiv img").attr("src") != ''){
+                $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
+                $("img#my2img").attr("width", myStrWidth);
+                
+            } else{
+                $("img#my2img").attr("width", myStrWidth);
+                $("img#my2img").attr("src", mydefautImg);  
+            }
+           $("div#laryDiv").css("visibility","hidden"); 
+           
+           if(myShowImages=="1") {
+               $("img#my2img").css("visibility","visible");
+           }else{
+               $("#imgDivID").css("display","none");
+           }
+       }
+
+      });
+
+   }        
+    gadgets.util.registerOnLoadHandler(init);   
+          // google.setOnLoadCallback(initialize);
+   </script>
+
+     <!--  div class="moduleCL" id="moduleID" style="overflow:hidden;border: 0;outline: 0;background: transparent; margin: 0;padding: 0;"  --> 
+     <div class="moduleCL" id="moduleID" style="overflow:hidden;border: 0;outline: 0;background: #F8F8F8; margin: 0;padding: 0;"> 
+         <div class="moWrapperCL">
+             <div id="moWrapperHeader" style="background-color:#F8F8F8;width:100%; padding:5px; border-bottom: 1px solid #E5E5E5;">
+               <h3 class="headerCL"><span id="titlosID" style="color: #BC0202;">.</span></h3>
+             </div>
+             <div class="moContentCL" style="width:100%; padding:5px; border-bottom: 1px solid #E5E5E5;">
+               <div class="moInnerContentCL">               
+                  <div id="mocontentID">.</div>
+                </div>
+             </div>
+         </div>
+     </div>
+ 
+    
+    ]]>
+  </Content>
+</Module>    
