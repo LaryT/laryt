@@ -35,36 +35,9 @@
   font-weight: bold;
 }
 
-.koyti-pano{
-
-background-color: transparent;
-background: url("https://lh5.googleusercontent.com/-VM9-SmzB0v4/T0ax2UsRa8I/AAAAAAAAgMw/D_GVhSAoK-0/s800/koyti-pano.png") no-repeat bottom left;
-height: 10px;
- border-top-left-radius:  8px;  
- border-top-right-radius:  8px;  
-
- -webkit-border-top-left-radius:  8px;  
- -webkit-border-top-right-radius:  8px;  
-}
 
 .koyti{
   background-color: transparent;
-
-/*  
-  width: 304px;
-  background: url("https://lh4.googleusercontent.com/-yqHtTAd57jo/T0aWX5WK6JI/AAAAAAAAgMk/hpXi6NmNXSc/s800/koyti.png") no-repeat bottom left;
-  background-position-y: 100%;
-  clear: both;
-  overflow: hidden;
-  padding: 0px 6px 6px 6px;
- 
- border-botom-left-radius:  8px;  
- border-botom-right-radius:  8px;  
-
--webkit-border-bottom-right-radius:  8px;  
--webkit-border-bottom-left-radius:  8px;  
-*/
-
 }
 
 div.numDiv{
@@ -998,7 +971,6 @@ function handleQueryResponseBathmologia(response) {
 
              //--- to klisimo gia to geniko periex;omeno -- fpEmbCont_  --
              html.push('</div>'); 
-//             alert(' close div 3-> p');
      }
      countTitlesGroup3++;
 
@@ -1390,7 +1362,6 @@ gadgets.util.registerOnLoadHandler(init);
 </center>
 </div>
 
-<!-- div class="koyti-pano"></div  --> 
 
 <div class="koyti">
  <div id="pano-tmhma" width="320px">
