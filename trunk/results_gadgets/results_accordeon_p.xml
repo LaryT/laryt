@@ -365,7 +365,7 @@ display: block;
 #myTabs a{
  float: right;
  display: block;
- width: 120px;
+ width: 116px;
  height: 35px;
  background: url('https://lh5.googleusercontent.com/-gp2xukI8Ss8/T0wBBlpa-ZI/AAAAAAAAg2E/6GLl2EDLzT8/s800/dejia-akrh-ble.png') no-repeat;
  color: white;
@@ -374,7 +374,7 @@ display: block;
  font-size: 12px;
  line-height: 35px;
  text-align: center;
- margin-left: -30px;
+ margin-left: -25px;
  position: relative;
  cursor:pointer;
 }
