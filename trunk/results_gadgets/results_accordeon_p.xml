@@ -36,8 +36,9 @@
 }
 
 .koyti-pano{
-background: url("https://lh5.googleusercontent.com/-VM9-SmzB0v4/T0ax2UsRa8I/AAAAAAAAgMw/D_GVhSAoK-0/s800/koyti-pano.png") no-repeat bottom left;
+
 background-color: transparent;
+background: url("https://lh5.googleusercontent.com/-VM9-SmzB0v4/T0ax2UsRa8I/AAAAAAAAgMw/D_GVhSAoK-0/s800/koyti-pano.png") no-repeat bottom left;
 height: 10px;
  border-top-left-radius:  8px;  
  border-top-right-radius:  8px;  
@@ -48,6 +49,8 @@ height: 10px;
 
 .koyti{
   background-color: transparent;
+
+/*  
   width: 304px;
   background: url("https://lh4.googleusercontent.com/-yqHtTAd57jo/T0aWX5WK6JI/AAAAAAAAgMk/hpXi6NmNXSc/s800/koyti.png") no-repeat bottom left;
   background-position-y: 100%;
@@ -60,6 +63,8 @@ height: 10px;
 
 -webkit-border-bottom-right-radius:  8px;  
 -webkit-border-bottom-left-radius:  8px;  
+*/
+
 }
 
 div.numDiv{
