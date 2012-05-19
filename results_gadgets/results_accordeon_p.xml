@@ -1385,7 +1385,7 @@ gadgets.util.registerOnLoadHandler(init);
 </center>
 </div>
 
-<div class="koyti-pano"></div>
+<!-- div class="koyti-pano"></div  --> 
 
 <div class="koyti">
  <div id="pano-tmhma" width="320px">
