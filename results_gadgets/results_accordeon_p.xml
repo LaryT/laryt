@@ -60,16 +60,9 @@ div#sourceIDBathm{
  overflow: hidden;
 }
 
-.G-BN, .G-GN {
-padding: 0px;
-margin-left: 0px;
-}
 
 body {
-/*  margin-left:-2px;  */
-padding: 0px;
 background-color: transparent;
-/*   width:335;       */
 }
 
 
@@ -93,7 +86,7 @@ background-color: transparent;
 #myTitleID{
  
 border-top: 1px solid #444;
-color: #22f222;
+color: #2222f2;
 font-size: 14px;
 font-weight: bold;
 padding: 3px 10px;
@@ -352,7 +345,6 @@ div{
 
 #myTabs {
 margin-bottom: -1px;
-
 position: relative;
 z-index: 100;
 height: 35px;
@@ -360,13 +352,16 @@ display: block;
 }
 
 #myTabs li{
+/*
  float: right;
  display: block;
  width: 120px;
  height: 35px;
+
  background: url('https://lh5.googleusercontent.com/-gp2xukI8Ss8/T0wBBlpa-ZI/AAAAAAAAg2E/6GLl2EDLzT8/s800/dejia-akrh-ble.png') no-repeat;
+ 
  color: white;
-  font-weight: bold;
+ font-weight: bold;
  text-decoration: none;
  font-size: 12px;
  line-height: 35px;
@@ -374,6 +369,17 @@ display: block;
  margin-left: -30px;
  position: relative;
  cursor:pointer;
+*/
+display: inline-block;
+padding: .6em 1em;
+font: normal normal 14px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+color: 
+#999999;
+border-left: 1px solid 
+#ffffff;
+border-right: 1px solid 
+#eeeeee;
+
 }
 
 #bathmologies-tab{
@@ -383,8 +389,11 @@ display: block;
   z-index: 20;
 }
 
-#myTabs li.tab-selected{
-background: url('https://lh4.googleusercontent.com/-wm0Ijy15ar0/T0wA7A13k0I/AAAAAAAAg18/o1sbTpMIFUA/s800/dejia-akrh-mavrh.png') no-repeat;
+#myTabs li.tab-selected a, #myTabs li.tab-selected a:hover {
+ color: #000000;
+ background-color: #eeeeee;
+ text-decoration: none;
+
 }
 
 
