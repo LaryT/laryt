@@ -93,7 +93,7 @@ background-color: transparent;
 #myTitleID{
  
 border-top: 1px solid #444;
-color: #2222f2;
+color: #22f222;
 font-size: 14px;
 font-weight: bold;
 padding: 3px 10px;
@@ -359,7 +359,7 @@ height: 35px;
 display: block;
 }
 
-#myTabs a{
+#myTabs li{
  float: right;
  display: block;
  width: 120px;
@@ -383,7 +383,7 @@ display: block;
   z-index: 20;
 }
 
-#myTabs a.tab-selected{
+#myTabs li.tab-selected{
 background: url('https://lh4.googleusercontent.com/-wm0Ijy15ar0/T0wA7A13k0I/AAAAAAAAg18/o1sbTpMIFUA/s800/dejia-akrh-mavrh.png') no-repeat;
 }
 
@@ -569,7 +569,7 @@ function selectTab (myID, myTab, myCaption ) {
 //--- krybei perioxh  
     $(".periexomenaCL").hide();
 
-    $("#myTabs a").removeClass("tab-selected");
+    $("#myTabs li").removeClass("tab-selected");
 //--- gia perioxh
     $("#"+myID).show();
 //--- gia to tab
@@ -1365,10 +1365,11 @@ gadgets.util.registerOnLoadHandler(init);
 
    <div id="pano-tmhma" >
    <div id="myTabs">
-     <a id="bathmologies-tab" href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a>
-     <a id="apotelesmata-tab" title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="javascript:selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;">Πρόγραμμα</a>
-     <a id="ebdomada-tab" title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;">Ανά Ημέρα</a>
-
+   <ul>
+     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a></li>
+     <li id="apotelesmata-tab" ><a title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="javascript:selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;">Πρόγραμμα</a></li>
+     <li id="ebdomada-tab"><a title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;">Ανά Ημέρα</a></li>
+     </ul>
    </div>
  </div>
  <div>
