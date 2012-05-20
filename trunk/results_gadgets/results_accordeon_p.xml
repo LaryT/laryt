@@ -381,7 +381,7 @@ border-right: 1px solid #eeeeee;
  text-decoration: none;
 }
 
-#myTabs ul li.tab-selected a, #myTabs ul li a:hover, #myTabs ul li:hover {
+#mytabs ul li.tab-selected, #myTabs ul li.tab-selected a, #myTabs ul li a:hover, #myTabs ul li:hover {
  color: #000000;
  background-color: #eeeeee;
  text-decoration: none;
