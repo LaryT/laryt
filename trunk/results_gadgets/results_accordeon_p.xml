@@ -602,7 +602,7 @@ function selectTab (myID, myTab, myCaption ) {
 function init(){
  if (myURLfeed !=""){
   //sendQuery(); 
-  selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');
+  // selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');
  }
  else{
    document.getElementById("sourceID").innerHTML = "Δεν υπάρχει το αντίστοιχο URL του αρχείο των υπο παρακολούθηση κατηγοριών.  Παρακαλούμε από την επιλογή επεξεργασία των παραμέτρων, εισάγεται την αντίστοιη URL Διεύθυνση του Φύλλου των docs, με τον πίνακα των κατηγοριών  |..| There is no corresponding URL file of the monitored categories. Please edit the parameters, enter the URL address corresponding global sheet of googledocs, with the list of categories ... [more : grbasket@gmail.com]";
@@ -1365,8 +1365,9 @@ gadgets.util.registerOnLoadHandler(init);
 
 
 <div class="koyti">
- <div id="pano-tmhma" width="320px">
-   <div id="myTabs" width="100%">
+
+   <div id="pano-tmhma" >
+   <div id="myTabs">
      <a id="bathmologies-tab" href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a>
      <a id="apotelesmata-tab" title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="javascript:selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;">Πρόγραμμα</a>
      <a id="ebdomada-tab" title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;">Ανά Ημέρα</a>
