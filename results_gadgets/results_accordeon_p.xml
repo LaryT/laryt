@@ -770,7 +770,7 @@ function handleQueryResponseEbdomadiaioAnaHmera(response) {
 
      if(data.getFormattedValue(row, 13) > 0 || data.getFormattedValue(row, 14)>0 ){
 
-     html.push('<tr title="'+strHmeromhniesGhpeda_t +' '+strDiathtes +'"><td colspan="2" align="right"><a class="anametrhsh big">'+ data.getFormattedValue(row, 13)+ '</a></td>');
+     html.push('<tr title="'+strHmeromhniesGhpeda_t +' '+strDiathtes +'"><td colspan="2" align="right"><a href="javascript:void(0);" class="anametrhsh big">'+ data.getFormattedValue(row, 13)+ '</a></td>');
      html.push('<td align="center" class="noborder" style="padding:0 !important;"><img src="https://lh5.googleusercontent.com/-bIA3JYgMAzw/TObApoUYmcI/AAAAAAAATNU/Q171ifTcksE/s800/bkg.png" width="2" height="20" alt=""></td>');
      html.push('<td colspan="2" align="left"><span class="anametrhsh big">'+ data.getFormattedValue(row, 14)+ '</span>');
 
@@ -1177,7 +1177,7 @@ function handleQueryApotelesmataDiorgResponse(response){
 
 
      html.push('<tr title="'+strHmeromhniesGhpeda +' '+strDiathtes +'"><td colspan="2" align="right">');
-     html.push('<a class="anametrhsh big">'+ data.getFormattedValue(row, 7)+ '</a></td>');
+     html.push('<a href="javascript:void(0);" class="anametrhsh big">'+ data.getFormattedValue(row, 7)+ '</a></td>');
      html.push('<td align="center" class="noborder" style="padding:0 !important;"><img src="https://lh5.googleusercontent.com/-bIA3JYgMAzw/TObApoUYmcI/AAAAAAAATNU/Q171ifTcksE/s800/bkg.png" width="2" height="16" alt=""></td>')
      html.push('<td colspan="2" align="left"><span class="anametrhsh big">'+ data.getFormattedValue(row, 8)+ '</span>');
 
