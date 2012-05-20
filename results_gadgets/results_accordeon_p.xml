@@ -66,10 +66,10 @@ margin-left: 0px;
 }
 
 body {
-margin-left:-2px;
+/*  margin-left:-2px;  */
 padding: 0px;
 background-color: transparent;
-width:335;
+/*   width:335;       */
 }
 
 
