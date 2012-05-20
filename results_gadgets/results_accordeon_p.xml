@@ -602,6 +602,7 @@ function selectTab (myID, myTab, myCaption ) {
 function init(){
  if (myURLfeed !=""){
   //sendQuery(); 
+  selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');
  }
  else{
    document.getElementById("sourceID").innerHTML = "Δεν υπάρχει το αντίστοιχο URL του αρχείο των υπο παρακολούθηση κατηγοριών.  Παρακαλούμε από την επιλογή επεξεργασία των παραμέτρων, εισάγεται την αντίστοιη URL Διεύθυνση του Φύλλου των docs, με τον πίνακα των κατηγοριών  |..| There is no corresponding URL file of the monitored categories. Please edit the parameters, enter the URL address corresponding global sheet of googledocs, with the list of categories ... [more : grbasket@gmail.com]";
