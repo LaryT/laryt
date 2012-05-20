@@ -93,7 +93,7 @@ background-color: transparent;
 #myTitleID{
  
 border-top: 1px solid #444;
-color: #222222;
+color: #2222f2;
 font-size: 14px;
 font-weight: bold;
 padding: 3px 10px;
