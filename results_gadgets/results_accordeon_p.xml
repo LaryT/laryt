@@ -652,7 +652,7 @@ function handleQueryResponseEbdomadiaioAnaHmera(response) {
  var exeiAnoixeiDivEpipedo2="";
 
  var strForCentralMarq="";
- var infoTitleForMore="";
+
 
   html.push('<div valign="top" width="100%" id="otherContainer'+ prosthetoID +'">'); // ejvteriko kelifos epi 0
   html.push('<div class="fpOther" id="fpOther_1'+ prosthetoID +'" >'); // ejvteriko kelifos epi 1
@@ -711,15 +711,10 @@ function handleQueryResponseEbdomadiaioAnaHmera(response) {
      strForCentralMarq = data.getFormattedValue(row,50)+ ' | ' + data.getFormattedValue(row,51)+ ' | ' + data.getFormattedValue(row,52);
 
 
-   if(strForCentralMarq  == " |  | "){
-      infoTitleForMore="";
-      strForCentralMarq="";
-   }else{
-      infoTitleForMore="Click for more.. για παρουσίαση συνθέσεων-σκόρερ..";
-   }
+
    
 
-     html.push('<div class="numDiv" title="'+ infoTitleForMore +'" style="display: block;" onclick="makeMarque(&quot;'+ strForCentralMarq  + '&quot;)">');
+     html.push('<div class="numDiv"   style="display: block;" onclick="makeMarque(&quot;'+ strForCentralMarq  + '&quot;)">');
 
 //---     html.push('<div class="numDiv" style="display: block;">');
 
@@ -735,7 +730,7 @@ function handleQueryResponseEbdomadiaioAnaHmera(response) {
 
       //--- xarths ghpedoyxoy
      if (data.getFormattedValue(row, 58) != "" & data.getFormattedValue(row, 58) != "---" & data.getFormattedValue(row, 4) != "-" & data.getFormattedValue(row, 4) != "") {
-       html.push('<img title="show map, προβολή χάρτη" class="ImgMapVI" src="https://lh6.googleusercontent.com/-wpkZlfBiqWY/TrpDw07IPQI/AAAAAAAAbhY/9QfyHOgWY1A/s800/maps_button.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 58)+'&quot;,&quot;&quot;,&quot;Map&quot;);">');
+       html.push('<img  class="ImgMapVI" src="https://lh6.googleusercontent.com/-wpkZlfBiqWY/TrpDw07IPQI/AAAAAAAAbhY/9QfyHOgWY1A/s800/maps_button.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 58)+'&quot;,&quot;&quot;,&quot;Map&quot;);">');
      }
 
      html.push('<span class="anametrhsh" >' + data.getFormattedValue(row, 11)+'</span></td>');
@@ -778,22 +773,22 @@ function handleQueryResponseEbdomadiaioAnaHmera(response) {
 
     //--- Img ghped
      if (data.getFormattedValue(row, 53) != "" & data.getFormattedValue(row, 53) != "---" ) {
-       html.push('<img title="show photo, προβολή φωτογραφίας" class="ImgMapVIRight" src="'+ data.getFormattedValue(row, 53) +'" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 53)+'&quot;,&quot;&quot;,&quot;Img&quot;);">');
+       html.push('<img class="ImgMapVIRight" src="'+ data.getFormattedValue(row, 53) +'" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 53)+'&quot;,&quot;&quot;,&quot;Img&quot;);">');
      }
 
     //--- Img filox
      if (data.getFormattedValue(row, 54) != "" & data.getFormattedValue(row, 54) != "---" ) {
-       html.push('<img title="show photo, προβολή φωτογραφίας" class="ImgMapVIRight" src="'+ data.getFormattedValue(row, 54) +'" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 54)+'&quot;,&quot;&quot;,&quot;Img&quot;);">');
+       html.push('<img   class="ImgMapVIRight" src="'+ data.getFormattedValue(row, 54) +'" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 54)+'&quot;,&quot;&quot;,&quot;Img&quot;);">');
      }
 
     //--- Yt video ghped
      if (data.getFormattedValue(row, 55) != "" & data.getFormattedValue(row, 55) != "---" ) {
-       html.push('<img title="show video, προβολή video" class="ImgMapVIRight" src="https://lh5.googleusercontent.com/-C9Aewsj5onQ/TLFNrD07k3I/AAAAAAAAS3M/8zOAyhYgMFs/s800/youtube.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 55) +'&quot;,&quot;&quot;,&quot;Video&quot;);">');
+       html.push('<img   class="ImgMapVIRight" src="https://lh5.googleusercontent.com/-C9Aewsj5onQ/TLFNrD07k3I/AAAAAAAAS3M/8zOAyhYgMFs/s800/youtube.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 55) +'&quot;,&quot;&quot;,&quot;Video&quot;);">');
      } 
 
      //--- Yt video filox
      if (data.getFormattedValue(row, 56) != "" & data.getFormattedValue(row, 56) != "---" ) {
-       html.push('<img title="show video, προβολή video" class="ImgMapVIRight" src="https://lh5.googleusercontent.com/-C9Aewsj5onQ/TLFNrD07k3I/AAAAAAAAS3M/8zOAyhYgMFs/s800/youtube.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 56) +'&quot;,&quot;&quot;,&quot;Video&quot;);">');
+       html.push('<img  class="ImgMapVIRight" src="https://lh5.googleusercontent.com/-C9Aewsj5onQ/TLFNrD07k3I/AAAAAAAAS3M/8zOAyhYgMFs/s800/youtube.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 56) +'&quot;,&quot;&quot;,&quot;Video&quot;);">');
      }
 
      html.push('</td></tr>');
@@ -1091,7 +1086,7 @@ function handleQueryApotelesmataDiorgResponse(response){
 
   var tmpHtmlF="";
   var strForCentralMarq="";
-  var infoTitleForMore="";
+
 
   var myToday = new Date();
   var poses_omades_sthn_kathgoria = data.getNumberOfRows();
@@ -1120,15 +1115,9 @@ function handleQueryApotelesmataDiorgResponse(response){
      strForCentralMarq = data.getFormattedValue(row,18)+ ' | ' + data.getFormattedValue(row,19)+ ' | ' + data.getFormattedValue(row,20);
 
 
-   if(strForCentralMarq  == " |  | "){
-      infoTitleForMore="";
-      strForCentralMarq="";
-   }else{
-      infoTitleForMore="Click for more.. για παρουσίαση συνθέσεων-σκόρερ..";
-   }
    
 
-     html.push('<div class="numDiv" title="'+ infoTitleForMore +'" style="display: block;" onclick="makeMarque(&quot;'+ strForCentralMarq  + '&quot;)">');
+     html.push('<div class="numDiv"  style="display: block;" onclick="makeMarque(&quot;'+ strForCentralMarq  + '&quot;)">');
      html.push('<table border="0" width="100%" cellspacing="0" cellpadding="0" ><tbody>');
      html.push('<tr><td colspan="6"></td></tr>');
      html.push('<tr><td colspan="6"> <table width="100%" cellspacing="0" cellpadding="0" border="0" class="agonasApotelesmataDiorRec scoreboard"><tbody><tr>');
@@ -1142,7 +1131,7 @@ function handleQueryApotelesmataDiorgResponse(response){
 
       //--- xarths ghpedoyxoy
      if (data.getFormattedValue(row, 25) != "" & data.getFormattedValue(row, 25) != "---" & data.getFormattedValue(row, 4) != "-" & data.getFormattedValue(row, 4) != "") {
-       html.push('<img title="show map, προβολή χάρτη" class="ImgMapVI" src="https://lh6.googleusercontent.com/-wpkZlfBiqWY/TrpDw07IPQI/AAAAAAAAbhY/9QfyHOgWY1A/s800/maps_button.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 25)+'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Map&quot;);">');
+       html.push('<img   class="ImgMapVI" src="https://lh6.googleusercontent.com/-wpkZlfBiqWY/TrpDw07IPQI/AAAAAAAAbhY/9QfyHOgWY1A/s800/maps_button.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 25)+'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Map&quot;);">');
      }
 
      html.push('<span class="anametrhsh">' + data.getFormattedValue(row, 5)+'</span></td>');
@@ -1184,22 +1173,22 @@ function handleQueryApotelesmataDiorgResponse(response){
 
     //--- Img ghped
      if (data.getFormattedValue(row, 21) != "" & data.getFormattedValue(row, 21) != "---" ) {
-       html.push('<img title="show photo, προβολή φωτογραφίας" class="ImgMapVIRight" src="'+ data.getFormattedValue(row, 21) +'" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 21)+'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Img&quot;);">');
+       html.push('<img  class="ImgMapVIRight" src="'+ data.getFormattedValue(row, 21) +'" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 21)+'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Img&quot;);">');
      }
 
     //--- Img filox
      if (data.getFormattedValue(row, 22) != "" & data.getFormattedValue(row, 22) != "---" ) {
-       html.push('<img title="show photo, προβολή φωτογραφίας" class="ImgMapVIRight" src="'+ data.getFormattedValue(row, 22) +'" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 22)+'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Img&quot;);">');
+       html.push('<img   class="ImgMapVIRight" src="'+ data.getFormattedValue(row, 22) +'" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 22)+'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Img&quot;);">');
      }
 
     //--- Yt video ghped
      if (data.getFormattedValue(row, 23) != "" & data.getFormattedValue(row, 23) != "---" ) {
-       html.push('<img title="show video, προβολή video" class="ImgMapVIRight" src="https://lh5.googleusercontent.com/-C9Aewsj5onQ/TLFNrD07k3I/AAAAAAAAS3M/8zOAyhYgMFs/s800/youtube.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 23) +'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Video&quot;);">');
+       html.push('<img   class="ImgMapVIRight" src="https://lh5.googleusercontent.com/-C9Aewsj5onQ/TLFNrD07k3I/AAAAAAAAS3M/8zOAyhYgMFs/s800/youtube.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 23) +'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Video&quot;);">');
      } 
 
      //--- Yt video filox
      if (data.getFormattedValue(row, 24) != "" & data.getFormattedValue(row, 24) != "---" ) {
-       html.push('<img title="show video, προβολή video" class="ImgMapVIRight" src="https://lh5.googleusercontent.com/-C9Aewsj5onQ/TLFNrD07k3I/AAAAAAAAS3M/8zOAyhYgMFs/s800/youtube.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 24) +'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Video&quot;);">');
+       html.push('<img   class="ImgMapVIRight" src="https://lh5.googleusercontent.com/-C9Aewsj5onQ/TLFNrD07k3I/AAAAAAAAS3M/8zOAyhYgMFs/s800/youtube.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 24) +'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Video&quot;);">');
      }
 
      html.push('</td></tr>');
