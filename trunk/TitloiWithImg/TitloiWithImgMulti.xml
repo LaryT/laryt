@@ -204,12 +204,10 @@
         
               var myImages = $("div#laryDiv img");
               var numberOfImages = myImages.length;
-
+              
+              alert ( $("div#laryDiv img:first").attr("src"); )
                            
-              for(i=0; i<numberOfImages; i++){
-                 alert(myImages.length + " : " +i);
-                 / * alert( myImages[i].getAttribute("src");  */
-              }
+             
 
             if($("div#laryDiv img").attr("src") != ''){
                 $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
