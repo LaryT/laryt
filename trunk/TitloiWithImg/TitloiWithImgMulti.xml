@@ -206,9 +206,9 @@
 
 alert ( myStrHeight);
 alert ( myStrWidth);
-              var logos  = int(myStrHeight) / int(myStrWidth) ;
+//              var logos  = myStrHeight /  myStrWidth ;
               
-              alert ( logos );
+      
                            
              
 
