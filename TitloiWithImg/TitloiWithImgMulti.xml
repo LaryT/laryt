@@ -179,6 +179,7 @@
               var logos =0;
               if( $("div#laryDiv img").attr("width") > $("div#laryDiv img").attr("height")  ){           
                   logos = $("img#my2img").attr("width") / $("div#laryDiv img").attr("width");
+                  $("img#my2img").attr("width", $("div#laryDiv img").attr("width") );
                   $("img#my2img").attr("height", ($("div#laryDiv img").attr("height")*logos) );
               }else{
                   logos = $("img#my2img").attr("height") / $("div#laryDiv img").attr("height");
