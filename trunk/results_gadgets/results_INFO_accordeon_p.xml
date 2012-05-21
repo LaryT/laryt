@@ -45,31 +45,9 @@
   font-weight: bold;
 }
 
-.koyti-pano{
-background: url("https://lh5.googleusercontent.com/-VM9-SmzB0v4/T0ax2UsRa8I/AAAAAAAAgMw/D_GVhSAoK-0/s800/koyti-pano.png") no-repeat bottom left;
-background-color: transparent;
-height: 10px;
- border-top-left-radius:  8px;  
- border-top-right-radius:  8px;  
-
- -webkit-border-top-left-radius:  8px;  
- -webkit-border-top-right-radius:  8px;  
-}
 
 .koyti{
-  background-color: transparent;
-  width: 304px;
-  background: url("https://lh4.googleusercontent.com/-yqHtTAd57jo/T0aWX5WK6JI/AAAAAAAAgMk/hpXi6NmNXSc/s800/koyti.png") no-repeat bottom left;
-  background-position-y: 100%;
-  clear: both;
-  overflow: hidden;
-  padding: 0px 6px 6px 6px;
- 
- border-botom-left-radius:  8px;  
- border-botom-right-radius:  8px;  
-
--webkit-border-bottom-right-radius:  8px;  
--webkit-border-bottom-left-radius:  8px;  
+  background-color: transparent;  
 }
 
 div.numDiv{
@@ -122,15 +100,12 @@ width:330px;
 }
 
 #myTitleID{
- background-image: url('https://lh5.googleusercontent.com/-l811SPtOsbo/T0Y-vGCGYHI/AAAAAAAAgMY/1Ciyl2tJenY/s24/black-gray1x30.png');
-
+ 
+border-top: 1px solid #444;
+color: #2222f2;
 font-size: 14px;
-color: white;
-padding: 3px 10px;
 font-weight: bold;
-
-border: 1px solid #444;
-border-top-left-radius:  5px;  
+padding: 3px 10px;
 }
 
 
@@ -359,31 +334,6 @@ div{
 
 }
 
-#myTabs {
-margin-bottom: -1px;
-margin-right: -4px;
-position: relative;
-z-index: 100;
-height: 35px;
-display: block;
-}
-
-#myTabs a{
- float: right;
- display: block;
- width: 120px;
- height: 35px;
- background: url('https://lh5.googleusercontent.com/-rdZqm3XCt4g/T2n0uSVWjmI/AAAAAAAAhqo/1T6sNFMvV18/s800/dejia-akrh-prasino.png') no-repeat;
- color: white;
-  font-weight: bold;
- text-decoration: none;
- font-size: 12px;
- line-height: 35px;
- text-align: center;
- margin-left: -30px;
- position: relative;
- cursor:pointer;
-}
 
 #bathmologies-tab{
   z-index: 30;
@@ -392,8 +342,38 @@ display: block;
   z-index: 20;
 }
 
-#myTabs a.tab-selected{
-background: url('https://lh4.googleusercontent.com/-wm0Ijy15ar0/T0wA7A13k0I/AAAAAAAAg18/o1sbTpMIFUA/s800/dejia-akrh-mavrh.png') no-repeat;
+#myTabs {
+margin-bottom: -1px;
+position: relative;
+z-index: 100;
+height: 35px;
+display: block;
+}
+
+#myTabs ul {
+  margin-top: 0;
+}
+
+#myTabs ul li{
+display: inline-block;
+float: left;
+padding: .6em 1em;
+font: normal normal 14px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+color: #999999;
+border-left: 1px solid #ffffff;
+border-right: 1px solid #eeeeee;
+
+ cursor:pointer;
+}
+
+#myTabs ul li a{
+ text-decoration: none;
+}
+
+#mytabs ul li.tab-selected, #myTabs ul li.tab-selected a, #myTabs ul li a:hover, #myTabs ul li:hover {
+ color: #000000;
+ background-color: #eeeeee;
+ text-decoration: none;
 }
 
 
@@ -1066,15 +1046,15 @@ gadgets.util.registerOnLoadHandler(init);
 </div>
 
 
-<div class="koyti-pano"></div>
 
 <div class="koyti">
- <div id="pano-tmhma" width="320px">
-   <div id="myTabs" width="100%">
-     <a id="bathmologies-tab" href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a>
-     <a id="apotelesmata-tab" title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="javascript:selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;">Πρόγραμμα</a>
-     <a id="ebdomada-tab" title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;">Ανά Ημέρα</a>
-
+ <div id="pano-tmhma">
+   <div id="myTabs">
+   <ul>
+      <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a></li>
+     <li id="apotelesmata-tab" ><a  href="javascript:void(0);"  onclick="javascript:selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;">Πρόγραμμα</a></li>
+     <li id="ebdomada-tab"><a href="javascript:void(0);"  onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;">Ανά Ημέρα</a></li>
+    </ul>
    </div>
  </div>
  <div>
