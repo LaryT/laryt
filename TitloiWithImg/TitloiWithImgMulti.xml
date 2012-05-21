@@ -205,7 +205,7 @@
               var myImages = $("div#laryDiv img");
               var numberOfImages = myImages.length;
               
-              alert ( $("div#laryDiv img:first").attr("src"); )
+              alert ( $("div#laryDiv img:first").attr("src") );
                            
              
 
