@@ -180,7 +180,7 @@
               $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
               alert('1.' + $("img#my2img").attr("src") );
               
-              var logos =0;
+              var logos =1;
               if( $("div#laryDiv img").attr("width") > $("div#laryDiv img").attr("height")  ){           
 
               }else{
