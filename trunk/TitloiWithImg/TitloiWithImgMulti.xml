@@ -173,6 +173,15 @@
             }
         html.push('</div></div></div>');        
         content.innerHTML = html.join('');
+        
+        
+        
+        alert ( myStrHeight);
+        alert ( myStrWidth);
+        var logos  = myStrHeight /  myStrWidth ;
+        alert (logos);
+        
+        
       
            myStrWidth=(myStrWidth+'px');
            
@@ -204,9 +213,7 @@
         
               var myImages = $("div#laryDiv img").attr("src");
 
-alert ( myStrHeight);
-alert ( myStrWidth);
-//              var logos  = myStrHeight /  myStrWidth ;
+
               
       
                            
