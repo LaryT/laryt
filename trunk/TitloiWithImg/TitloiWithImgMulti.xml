@@ -178,24 +178,14 @@
               $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
               
               if( $("div#laryDiv img").attr("width") > $("div#laryDiv img").attr("height")  ){                              
-                 alert('w>h');
-                 alert( $("div#laryDiv img").attr("width") );
-
                   $("img#my2img").attr("width", $("div#laryDiv img").attr("width") );
-
-               
               }else{
-                 alert('w<h');
-                 alert( $("div#laryDiv img").attr("height") );               
-                
                   $("img#my2img").attr("height", $("div#laryDiv img").attr("height") );
-
               }
              
         
       
-//           myStrWidth=(myStrWidth+'px');
-           
+         
           if(myColorTitle != ''){
              $("a").css("color", myColorTitle); 
              $("h3.headerCL span").css("color", myColorTitle); 
@@ -212,7 +202,6 @@
           }
         
              if(myStrHeight != ''){
-               // myStrHeight=(myStrHeight +'px');
                $("div#moduleID").attr("height",myStrHeight);   
             }
 
