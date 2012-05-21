@@ -148,7 +148,7 @@
           }
           strPubDate =  strPubDate +": "+ entry.title ;
                     
-            html.push('<div id="imgDivID" style="height:230px;overflow:hidden;"><center><img id="my2img" height="230" width="300" style="border:0px dashed gray;" /></center><div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div></div>');
+            html.push('<div id="imgDivID" style="height:230px;overflow:hidden;"><center><img id="my2img" height="230" width="300" style="border:0px dashed gray;" /></center><div id="laryDiv" height="230" style="overflow:hidden;">'+ entry.content+'</div></div>');
             html.push('<div class="ns2-inner">');
             html.push('<h4 class="ns2-title"  style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
             html.push('<a href="' + entry.link + '" target="_top" title="'+ strPubDate +'" id="myLinkCL">' + strPubDate.substring(0,45) + ' ...</a>');
