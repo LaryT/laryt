@@ -194,7 +194,7 @@
              
         
       
-           myStrWidth=(myStrWidth+'px');
+//           myStrWidth=(myStrWidth+'px');
            
           if(myColorTitle != ''){
              $("a").css("color", myColorTitle); 
@@ -212,14 +212,14 @@
           }
         
              if(myStrHeight != ''){
-               myStrHeight=(myStrHeight +'px');
-               $("div#moduleID").css("height",myStrHeight);   
+               // myStrHeight=(myStrHeight +'px');
+               $("div#moduleID").attr("height",myStrHeight);   
             }
 
             if(myStrWidth != ''){
                 
-                $("div#moduleID").css("width",myStrWidth);         
-                $("div#laryDiv img").css("width",myStrWidth);
+                $("div#moduleID").attr("width",myStrWidth);         
+                $("div#laryDiv img").attr("width",myStrWidth);
             }
         
               
