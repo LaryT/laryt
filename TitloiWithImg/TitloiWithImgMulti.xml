@@ -177,21 +177,15 @@
         
               $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
               var logos =0;
-              if( $("div#laryDiv img").attr("width") > $("div#laryDiv img").attr("height")  ){                              
-              
+              if( $("div#laryDiv img").attr("width") > $("div#laryDiv img").attr("height")  ){           
                   logos = $("img#my2img").attr("width") / $("div#laryDiv img").attr("width");
-                  alert(logos );
-                  $("img#my2img").attr("width", $("div#laryDiv img").attr("width") );
+                  $("img#my2img").attr("height", ($("div#laryDiv img").attr("height")*logos) );
               }else{
-              //    $("img#my2img").attr("height", $("div#laryDiv img").attr("height") );
                   logos = $("img#my2img").attr("height") / $("div#laryDiv img").attr("height");
-                  alert(logos );
                   $("img#my2img").attr("width", ($("div#laryDiv img").attr("width")*logos) );
               }
              
         
-      
-         
           if(myColorTitle != ''){
              $("a").css("color", myColorTitle); 
              $("h3.headerCL span").css("color", myColorTitle); 
