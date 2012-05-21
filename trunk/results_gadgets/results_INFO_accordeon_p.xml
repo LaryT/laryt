@@ -564,7 +564,7 @@ function selectTab (myID, myTab, myCaption ) {
 //--- krybei perioxh  
     $(".periexomenaCL").hide();
 
-    $("#myTabs a").removeClass("tab-selected");
+    $("#myTabs li").removeClass("tab-selected");
 //--- gia perioxh
     $("#"+myID).show();
 //--- gia to tab
@@ -619,32 +619,27 @@ function init(){
 function makeTabs(){
  var tabsHtml =[];
 
+    tabsHtml.push('<ul>');
  if( myTab1 !="" ){
-    tabsHtml.push('<a id="bathmologies-tab" href="javascript:void(0);" title="'+myTab1+'" onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;bathmologies-tab&quot;,&quot;'+ myTab1+'&quot;);return false;">'+ myTab1+ '</a>' );
+    tabsHtml.push('<li id="bathmologies-tab"><a  href="javascript:void(0);" onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;bathmologies-tab&quot;,&quot;'+ myTab1+'&quot;);return false;">'+ myTab1+ '</a></li>' );
    }else{
-    tabsHtml.push('<a id="bathmologies-tab" href="javascript:void(0);" onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;bathmologies-tab&quot;,&quot;myTab1&quot;);return false;">Tab1</a>' );
+    tabsHtml.push('<li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;bathmologies-tab&quot;,&quot;myTab1&quot;);return false;">Tab1</a></li>' );
   }
 
   if( myTab2 !="" ){
-    tabsHtml.push('<a id="apotelesmata-tab" href="javascript:void(0);" title="'+myTab2+'" onclick="javascript:selectTab(&quot;sourceID&quot;,&quot;apotelesmata-tab&quot;,&quot;'+ myTab2+'&quot;);return false;">'+ myTab2+ '</a>' );
+    tabsHtml.push('<li id="apotelesmata-tab"><a  href="javascript:void(0);"  onclick="javascript:selectTab(&quot;sourceID&quot;,&quot;apotelesmata-tab&quot;,&quot;'+ myTab2+'&quot;);return false;">'+ myTab2+ '</a></li>' );
    }else{
-/*
-    tabsHtml.push('<a id="apotelesmata-tab" href="javascript:void(0);" title="myTab2" onclick="javascript:selectTab(&quot;sourceID&quot;,&quot;apotelesmata-tab&quot;,&quot;myTab2&quot;);return false;">Tab2</a>' );
-*/
+
   }
 
   if( myTab3 !="" ){
-    tabsHtml.push('<a id="ebdomada-tab" href="javascript:void(0);" title="'+myTab3+'" onclick="javascript:selectTab(&quot;sourceIDebdanahmera&quot;,&quot;ebdomada-tab&quot;,&quot;'+ myTab3+'&quot;);return false;">'+ myTab3+ '</a>' );
+    tabsHtml.push('<li id="ebdomada-tab"><a  href="javascript:void(0);" onclick="javascript:selectTab(&quot;sourceIDebdanahmera&quot;,&quot;ebdomada-tab&quot;,&quot;'+ myTab3+'&quot;);return false;">'+ myTab3+ '</a></li>' );
    }else{
-/*
-    tabsHtml.push('<a id="ebdomada-tab" href="javascript:void(0);" title="myTab3" onclick="javascript:selectTab(&quot;sourceIDebdanahmera&quot;,&quot;ebdomada-tab&quot;,&quot;myTab3&quot;);return false;">Tab3</a>' );
-*/
+
   }
 
-
+    tabsHtml.push('</ul>');
     document.getElementById("myTabs").innerHTML = tabsHtml.join('');
-
-
 }
 
 //---- make query tab 1 (old bathmologia)
