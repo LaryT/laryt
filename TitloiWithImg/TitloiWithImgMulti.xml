@@ -148,7 +148,7 @@
           }
           strPubDate =  strPubDate +": "+ entry.title ;
                     
-            html.push('<div id="imgDivID" style="height:230px;overflow:hidden;"><img id="my2img" height="230" width="300" style="border:0px dashed gray;" /><div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div></div>');
+            html.push('<div id="imgDivID" style="height:230px;overflow:hidden;"><center><img id="my2img" height="230" width="300" style="border:0px dashed gray;" /></center><div id="laryDiv" style="height:230px;overflow:hidden;">'+ entry.content+'</div></div>');
             html.push('<div class="ns2-inner">');
             html.push('<h4 class="ns2-title"  style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
             html.push('<a href="' + entry.link + '" target="_top" title="'+ strPubDate +'" id="myLinkCL">' + strPubDate.substring(0,45) + ' ...</a>');
@@ -174,12 +174,22 @@
         html.push('</div></div></div>');        
         content.innerHTML = html.join('');
         
+        
+              $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
+              
               if( $("div#laryDiv img").attr("width") > $("div#laryDiv img").attr("height")  ){                              
-               alert('w>h');
-               alert( $("div#laryDiv img").attr("width") );
+                 alert('w>h');
+                 alert( $("div#laryDiv img").attr("width") );
+
+                  $("img#my2img").attr("width", $("div#laryDiv img").attr("width") );
+
+               
               }else{
-               alert('w<h');
-               alert( $("div#laryDiv img").attr("height") );               
+                 alert('w<h');
+                 alert( $("div#laryDiv img").attr("height") );               
+                
+                  $("img#my2img").attr("height", $("div#laryDiv img").attr("height") );
+
               }
              
         
@@ -212,19 +222,9 @@
                 $("div#laryDiv img").css("width",myStrWidth);
             }
         
-              var myImages = $("div#laryDiv img").attr("src");
+              
 
 
-
-
-            if($("div#laryDiv img").attr("src") != ''){
-                $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
-                $("img#my2img").attr("width", myStrWidth);
-                
-            } else{
-                $("img#my2img").attr("width", myStrWidth);
-                $("img#my2img").attr("src", mydefautImg);  
-            }
            $("div#laryDiv").css("visibility","hidden"); 
            
            if(myShowImages=="1") {
