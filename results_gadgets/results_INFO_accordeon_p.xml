@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="__UP_my_name__" height="638" scrolling="false" width="330" scaling="false" title_url="http://www.grbasket.gr" description="Infos, Πληροφορίες |::| Display infos in your blog or website " author="grbasket" author_email="grbasket@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s275/box_match_center.png" thumbnail="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s125/box_match_center.png" category="sport" category2="sports" > 
+    <Require feature="setprefs" />    
+  </ModulePrefs>
+  <UserPref name="my_name" display_name="Name" default_value="InfoBox4U" />
+  <UserPref name="my_Scroll_Title" display_name="ScrollTitle" default_value="Infos - Πληροφορίες" />  
+  
+  <UserPref name="my_URLfeed_1" display_name="Source Sheet1:" default_value="" />
+  <UserPref name="my_URLfeed_2" display_name="Source Sheet2:" default_value="" />
+  <UserPref name="my_URLfeed_3" display_name="Source Sheet3:" default_value="" />
+  <UserPref name="my_Tab_1" display_name="Tab1:" default_value="" />
+  <UserPref name="my_Tab_2" display_name="Tab2:" default_value="" />
+  <UserPref name="my_Tab_3" display_name="Tab3:" default_value="" />
+  
+  <UserPref name="my_posoPxScroll" display_name="Pixel Scroll:" default_value="70" />
+  
+   
+  
+<Content type="html">
+    
+  <![CDATA[
+<style>
+* {
+ margin: 0;
+ padding: 0;
+}
+.small-7{
+  font-size: 7px !important;
+  font-weight: normal;
+}
+
+.small-9 {
+  font-size: 9px !important;
+  font-weight: normal;
+}
+
+.font-10{
+  font-size: 10px !important;
+  font-weight: bold;
+}
+
+.big {
+  font-size: 12px !important;
+  font-weight: bold;
+}
+
+.koyti-pano{
+background: url("https://lh5.googleusercontent.com/-VM9-SmzB0v4/T0ax2UsRa8I/AAAAAAAAgMw/D_GVhSAoK-0/s800/koyti-pano.png") no-repeat bottom left;
+background-color: transparent;
+height: 10px;
+ border-top-left-radius:  8px;  
+ border-top-right-radius:  8px;  
+
+ -webkit-border-top-left-radius:  8px;  
+ -webkit-border-top-right-radius:  8px;  
+}
+
+.koyti{
+  background-color: transparent;
+  width: 304px;
+  background: url("https://lh4.googleusercontent.com/-yqHtTAd57jo/T0aWX5WK6JI/AAAAAAAAgMk/hpXi6NmNXSc/s800/koyti.png") no-repeat bottom left;
+  background-position-y: 100%;
+  clear: both;
+  overflow: hidden;
+  padding: 0px 6px 6px 6px;
+ 
+ border-botom-left-radius:  8px;  
+ border-botom-right-radius:  8px;  
+
+-webkit-border-bottom-right-radius:  8px;  
+-webkit-border-bottom-left-radius:  8px;  
+}
+
+div.numDiv{
+  cursor:pointer;
+}
+
+div.periexomenaCL{
+ height: 550px;
+ display:none;
+}
+
+div#sourceIDBathm{
+ display:block;
+}
+
+.fpOther {
+ height: 549px;
+ border-bottom: solid 1px #03273C;
+ border-top: solid 0px white;
+ overflow: hidden;
+}
+
+.G-BN, .G-GN {
+padding: 0px;
+margin-left: 0px;
+}
+
+body {
+margin-left:-2px;
+padding: 0px;
+background-color: transparent;
+width:330px;
+}
+
+#disDiv{
+ background-color:#343437;
+  border-top-left-radius:  5px;
+  border-top-right-radius:  5px;
+  top:74px;
+  left:7px;
+  width:300px;
+  height:250px;
+}
+
+#inDisplay{
+ background-color:#e7e7e8;
+ border: 1px color white;
+ width:298px;
+ height:236px;
+}
+
+#myTitleID{
+ background-image: url('https://lh5.googleusercontent.com/-l811SPtOsbo/T0Y-vGCGYHI/AAAAAAAAgMY/1Ciyl2tJenY/s24/black-gray1x30.png');
+
+font-size: 14px;
+color: white;
+padding: 3px 10px;
+font-weight: bold;
+
+border: 1px solid #444;
+border-top-left-radius:  5px;  
+}
+
+
+.fpOtherInner {
+ height: 525px;  
+ width: 100%;
+ overflow: hidden;
+}
+
+.fpEmbTitle1, .fpEmbTitle2, .fpEmbTitle3, .fpEmbTitle4{
+ border: solid 1px #0B6BA5;
+ cursor: pointer;
+ font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+ text-transform: uppercase;
+ color: white;
+ font-size: 12px;
+ font-weight: bold;
+ height: 14px;
+}
+
+.fpEmbTitle1{
+ background-image: url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s24/blueBG.png');
+ padding: 3px 10px 3px 10px;
+}
+
+.fpEmbTitle2{
+  padding: 3px 10px 3px 35px;
+  background-image: url('https://lh5.googleusercontent.com/-ZfK9IGg7qeY/T0HuOBOLfgI/AAAAAAAAgIQ/sg6V6TWeqM8/s20/galdiplo1x67.png');
+}
+
+.fpEmbTitle3{
+  padding: 3px 10px 3px 50px;
+  background-image: url('https://lh3.googleusercontent.com/-QN_NMo_a1YA/T0Hxm24eIZI/AAAAAAAAgIc/hnBUgXrg77Q/s20/gray_glosy1x60.png');
+}
+
+.fpEmbTitle4{
+  padding: 3px 10px 3px 65px;
+  background-image: url('https://lh4.googleusercontent.com/-vhO393b6OJ4/T0LHvuxnPmI/AAAAAAAAgI0/ule1n_BfzII/s24/orange1x30.png');
+
+}
+
+
+.fpEmbTitle1 .icon {
+ float: right;
+ padding-top: 6px;
+padding-right: 10px;
+}
+
+.fpEmbTitle2 .icon {
+ float: right;
+ padding-top: 6px;
+ padding-right: 20px;
+}
+
+.fpEmbTitle3 .icon {
+ float: right;
+ padding-top: 6px;
+ padding-right: 30px;
+}
+
+.fpEmbTitle4 .icon {
+ float: right;
+ padding-top: 6px;
+ padding-right: 40px;
+}
+
+.fpEmbCont1, .fpEmbCont2, .fpEmbCont3, fpEmbCont4  {
+ display: none;
+ overflow: hidden;
+}
+
+.fpOtherPfeil {
+  text-align: center;
+}
+
+.pad{
+ border-bottom: 1px solid #D6D6D6;
+ padding-bottom:2px;
+}
+
+.padBath{
+ border-bottom: 0px solid #D6D6D6;
+ padding-bottom:1px;
+}
+
+
+#theLoadingID {
+ width: 100%;
+ height: 100%;
+}
+
+.theLoading {
+ position: absolute;
+ background-color: white;
+ background-image: url('https://lh3.googleusercontent.com/-U1qC603CKXQ/TSOH_e4K4pI/AAAAAAAATiY/FWwWiU4QOl4/s50/loading.gif');
+ background-repeat: no-repeat;
+ background-position: 50% 0%;
+ display: block;
+}
+
+.scoreboard {
+  clear: both;
+  background-image: url(https://lh5.googleusercontent.com/-bIA3JYgMAzw/TObApoUYmcI/AAAAAAAATNU/Q171ifTcksE/s800/bkg.png);
+  background-repeat-x: repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: initial;
+  background-position-x: 50%;
+  background-position-y: 0%;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: #DFDFDF;
+}
+
+table.agonasRec {
+  clear: both;
+  border: 1px solid #D6D6D6;
+  border-bottom: 3px solid #D6D6D6;
+  font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+  padding-top: 3px;
+}
+
+table.agonasApotelesmataDiorRec {
+  clear: both;
+  border: 0px solid #D6D6D6;
+  border-bottom: 1px solid #D6D6D6;
+  font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+  padding-top: 1px;
+}
+
+table.bathmolRec {
+  clear: both;
+  border: 1px solid #D6D6D6;
+  border-bottom: 0px solid #D6D6D6;
+  font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+  padding-top: 1px;
+}
+
+td.emblhmaImg{
+ margin: 0;
+ padding: 0;
+ border-bottom: 1px solid #D6D6D6;
+ padding-bottom: 2px;
+}
+
+img.emblhmaImg{
+  border: 1px solid #C5C5C5;
+  height:24px;
+  width :24px;
+}
+
+td.emblhmaImgBathmo{
+ margin: 0;
+ padding: 0;
+ border-bottom: 1px solid #D6D6D6;
+ padding-bottom: 1px;
+}
+
+img.emblhmaImgBathmo{
+  border: 1px solid #C5C5C5;
+  height:15px;
+  width :15px;
+}
+
+span.anametrhsh{
+  color:black;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+a.anametrhsh{
+  color:black;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+
+ul.tabG4{
+display: block;
+list-style: none;
+font-size: 11px;
+margin: 0 0 10px 0;
+font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+font-size: 10px;
+}
+
+ul.tabG4 li{
+display: inline;
+font-size: 10px;
+font-weight: bold;
+text-decoration: none;
+}
+
+ul.tabG4 li a{
+font-size: 14px;
+font-weight: bold;
+margin: 10px 0px 6px 0;
+color: black;
+padding: 0 6px;
+text-decoration: none;
+}
+
+ul.tabG4 li a.selected,  ul.tabG4 li a:hover {
+background: #03273C url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s12/blueBG.png') repeat-x;
+color: white;
+border: 1px solid #aaaaff;
+padding: 0 5px;
+text-decoration: none;
+}
+
+div.titleAgvnistikh{
+  width:100%;
+  background: #03273C url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s18/blueBG.png') repeat-x;
+  border: 1px solid #aaaaff;
+  padding: 0 5px;
+}
+
+div.titleAgvnistikh a{
+  color: white;
+  font-size:12px;
+  font-weight:bold;
+  text-decoration: none;
+}
+
+//----  tabs area
+div{
+
+}
+
+#myTabs {
+margin-bottom: -1px;
+margin-right: -4px;
+position: relative;
+z-index: 100;
+height: 35px;
+display: block;
+}
+
+#myTabs a{
+ float: right;
+ display: block;
+ width: 120px;
+ height: 35px;
+ background: url('https://lh5.googleusercontent.com/-rdZqm3XCt4g/T2n0uSVWjmI/AAAAAAAAhqo/1T6sNFMvV18/s800/dejia-akrh-prasino.png') no-repeat;
+ color: white;
+  font-weight: bold;
+ text-decoration: none;
+ font-size: 12px;
+ line-height: 35px;
+ text-align: center;
+ margin-left: -30px;
+ position: relative;
+ cursor:pointer;
+}
+
+#bathmologies-tab{
+  z-index: 30;
+}
+#apotelesmata-tab{
+  z-index: 20;
+}
+
+#myTabs a.tab-selected{
+background: url('https://lh4.googleusercontent.com/-wm0Ijy15ar0/T0wA7A13k0I/AAAAAAAAg18/o1sbTpMIFUA/s800/dejia-akrh-mavrh.png') no-repeat;
+}
+
+
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+
+    <script type="text/javascript">
+         google.load("visualization", "1");
+    </script>
+
+<script type="text/javascript">
+  var prefs = new gadgets.Prefs();
+
+  var myScrollTitle = prefs.getString("my_Scroll_Title");
+
+  var myURLfeed1= prefs.getString("my_URLfeed_1");
+  var myURLfeed2= prefs.getString("my_URLfeed_2");
+  var myURLfeed3= prefs.getString("my_URLfeed_3");
+
+  var myTab1= prefs.getString("my_Tab_1");
+  var myTab2= prefs.getString("my_Tab_2");
+  var myTab3= prefs.getString("my_Tab_3");
+
+  var query1,query2,query3;
+
+  var myposoPxScroll= prefs.getString("my_posoPxScroll");
+
+   if( myposoPxScroll !="" ){
+   }else{
+     myposoPxScroll=70;
+   }
+
+  var prosthetoID="";
+  var pubID="";
+
+var msgTxt="<span style='font-size:9px;'>Δεν υπάρχει το αντίστοιχο URL του πηγαίου αρχείου.  Για να ξεπερασθεί το πρόβλημα, παρακαλούμε από την επιλογή επεξεργασία των παραμέτρων, εισάγεται την αντίστοιη URL διεύθυνση του πηγαίου αρχείου των πληροφοριών [πληροφορίες για την δομή του αρχείου: grbasket@gmail.com] |..|<br/><br/> There is no corresponding URL (source file). Please edit the parameters, enter the URL file address, with the infos categories ... [more for the file structure: grbasket@gmail.com]</span>";
+   
+
+//--- hmeromhnia apo eos symfvna me to central -7, +6hme
+ var myToday = new Date();
+ var strMinDate = new Date(Date.parse(myToday)-(7*24*60*60*1000));
+ var strMaxDate = new Date(Date.parse(myToday)+(6*24*60*60*1000));
+ var strAllDate = strMinDate.getDate()+'.'+(strMinDate.getMonth()+1)+'->' +strMaxDate.getDate()+'.'+(strMaxDate.getMonth()+1)+'.'+strMaxDate .getFullYear();
+//-------------------------------
+
+function embExpand(id,epiclass,URLforBathmologia)
+{
+
+  $(".fpEmbTitle"+ epiclass +" .icon").attr("src", "https://lh6.googleusercontent.com/-FlqMiSON9SM/TLcMIbO9tqI/AAAAAAAAS6U/-BQZAQgV5yw/s800/velaki_kato.png");  
+
+  if ($("#fpEmbCont_" + id).is(":visible")){
+ 
+     $("#fpEmbCont_" + id).find(".fpOtherInner").animate({"height" : "0px"}, function(){
+       $("#fpEmbCont_" + id).hide();
+     });
+  
+  }
+  else {
+    $(".fpEmbCont"+epiclass).hide(); 
+    $("#fpEmbCont_" + id).find(".fpOtherInner").css({"height": 0});
+
+    var nextEp = parseInt(epiclass)+1;
+    var count =  $("#fpEmbCont_" + id).parent().find(".fpEmbCont"+ epiclass ).length;
+    var availableHeight = $("#fpEmbCont_" + id).parent().height();
+    $("#fpEmbCont_" + id).show();
+
+     //--- periptvsh me 4 epipeda kai mono agvnistikes ypologizei ycos kai velaki
+
+       $("#fpEmbCont_" + id).find(".fpOtherInner").animate({"height" : availableHeight - count*22});
+       if (epiclass=='4'){
+         $("#fpEmbCont_" + id).find(".fpOtherInner").animate({"height" : availableHeight - count*22 - 2*19});
+       }
+       if (epiclass=='3' && id.charAt(id.length - 1)=='a'){ 
+         $("#fpEmbCont_" + id).find(".fpOtherInner").animate({"height" : availableHeight - count*22 - 2*19});
+       }
+       if (epiclass=='3' && id.charAt(id.length - 1)=='b'){ 
+         $("#fpEmbCont_" + id).find(".fpOtherInner").animate({"height" : availableHeight - count*22 - 2*19});
+       }
+       if (epiclass=='3' && id.charAt(id.length - 1)=='e'){ 
+         $("#fpEmbCont_" + id).find(".fpOtherInner").animate({"height" : availableHeight - count*22 - 2*19});
+       }
+
+    $("#fpEmbTitle_" + id).find(".icon").attr("src", "https://lh5.googleusercontent.com/-3BFmmhvzd_o/Tz-TLfcYrmI/AAAAAAAAf-M/rfkl33c1Jdk/s800/velaki_pano.png");  
+
+     //-- elegxos an einai to 3o epipedo (tab 1) 
+     if (epiclass=='3' && id.charAt(id.length - 1)=='b'){ 
+       pubID=id;
+       makeApotelesmataDiorganvshs(URLforBathmologia);
+     }
+
+     //-- elegxos an einai to 3o epipedo (tab 2) 
+     if (epiclass=='3' && id.charAt(id.length - 1)=='a'){ 
+       pubID=id;
+       makeApotelesmataDiorganvshs(URLforBathmologia);
+     }
+
+     //-- elegxos an einai to 3o epipedo (tab 3) 
+     if (epiclass=='3' && id.charAt(id.length - 1)=='e'){ 
+       pubID=id;
+       makeApotelesmataDiorganvshs(URLforBathmologia);
+     }
+
+
+  } //--- end if (to if mazeyei to else aplonei)
+
+
+
+}//---- end fnc expand
+
+
+function scroll(id, direction, stepPX)
+{
+  var scrollTo = $("#fpOtherInner_" + id).scrollTop() + stepPX * direction;
+  var scrollHeight = $("#fpOtherInner_" + id)[0].scrollHeight;
+  var height = $("#fpOtherInner_" + id).height();
+  if (scrollTo < 0) scrollTo = 0;
+  if (scrollTo > scrollHeight - height) scrollTo = scrollHeight - height;
+  $("#fpOtherInner_" + id).animate({scrollTop: scrollTo}, 300);
+}
+
+function scrolltoAgonistikh(id, stepPX)
+{
+  var scrollTo=stepPX;
+  var scrollHeight = $("#fpOtherInner_" + id)[0].scrollHeight;
+  var height = $("#fpOtherInner_" + id).height();
+  if (scrollTo < 0) scrollTo = 0;
+  if (scrollTo > scrollHeight - height) scrollTo = scrollHeight - height;
+  $("#fpOtherInner_" + id).animate({scrollTop: scrollTo}, 3000);
+}
+
+
+//--- gia to display Div
+function hideDivDisp(){
+   $("#disDiv").animate({"top":"100px", "height" : "0px"}, function(){
+        document.getElementById("inDisplay").innerHTML = "";
+       $("#disDiv").hide();
+     });
+}
+
+function showDivDisp(myURL,strHtml,isImgVideoMap){
+   if ($("#disDiv").is(":visible")){
+     hideDivDisp();
+  }
+   if ($("#addiv").is(":visible")){
+     hideDivAds();
+  }
+  $("#disDiv").animate({"height" : "250px", "top":"74px"}, function(){
+     if(isImgVideoMap=='Img'){
+     document.getElementById("inDisplay").innerHTML = "<img src='"+ myURL +"' style='border:1px solid gray; padding:5px;margin:1px;' />"+strHtml;
+     }
+     if(isImgVideoMap=='Video'){
+     document.getElementById("inDisplay").innerHTML = "<iframe src='"+ myURL +"?rel=0&autohide=1&showinfo=0' style='border:1px solid gray; padding:5px;margin:1px;height:222px;width:283px;' allowfullscreen  /></iframe>";
+     }
+
+     if(isImgVideoMap=='Map'){
+     document.getElementById("inDisplay").innerHTML = "<iframe src='"+ myURL +"&t=h&output=embed' style='border:1px solid gray; padding:5px;margin:1px;height:222px;width:283px;'  scrolling='no' marginheight='0' marginwidth='0' /></iframe>";
+     }
+
+       $("#disDiv").show();
+    });
+}
+
+//--- gia ta ads
+function hideDivAds(){
+   $("#addiv").animate({"height" : "0px"}, function(){
+       $("#addiv").hide();
+     });
+   $("#emfaniseAdsID").show();
+}
+
+function showDivAds(){
+   $("#addiv").animate({"height" : "250px"}, function(){
+       $("#addiv").show();
+     });
+   $("#emfaniseAdsID").hide();
+}
+
+function makeMarque(strForRoll){
+
+  if(strForRoll !=""){
+   document.getElementById("myTitleID").innerHTML = "<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();' title='"+strForRoll + "'>"+strForRoll+"</marquee>";
+  }else{
+   document.getElementById("myTitleID").innerHTML = "";
+  }
+
+}
+
+
+// --- gia ta tabs 
+
+function selectTab (myID, myTab, myCaption ) {
+
+//--- krybei perioxh  
+    $(".periexomenaCL").hide();
+
+    $("#myTabs a").removeClass("tab-selected");
+//--- gia perioxh
+    $("#"+myID).show();
+//--- gia to tab
+    $("#"+myTab).addClass("tab-selected");
+//---
+  if(myCaption !=""){
+   document.getElementById("myTitleID").innerHTML = myCaption;
+ }
+
+//---
+  if( myTab == "apotelesmata-tab" ){
+    sendQueryAgonistikes();
+  }
+
+  if(myTab == "bathmologies-tab"){  
+    sendQueryBathmologia();
+  }
+
+  if(myTab == "ebdomada-tab"){  
+    sendQueryEbdomadiaioAnaHmera();
+  }
+
+}
+
+function init(){
+  makeTabs();
+  if( myScrollTitle !="" ){
+     makeMarque(myScrollTitle);
+  }
+
+   if( myURLfeed1 !="" ){
+     query1 = new google.visualization.Query(myURLfeed1);
+   }else{
+     document.getElementById("sourceIDBathm").innerHTML = msgTxt;
+   }
+
+   if( myURLfeed2 !="" ){
+     query2 = new google.visualization.Query(myURLfeed2);
+   }else{
+     document.getElementById("sourceID").innerHTML = msgTxt;
+   }
+
+   if( myURLfeed3 !="" ){
+      query3 = new google.visualization.Query(myURLfeed3);
+    }else{ 
+      document.getElementById("sourceIDebdanahmera").innerHTML = msgTxt;
+   }
+
+
+}
+//--- make Tabs
+function makeTabs(){
+ var tabsHtml =[];
+
+ if( myTab1 !="" ){
+    tabsHtml.push('<a id="bathmologies-tab" href="javascript:void(0);" title="'+myTab1+'" onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;bathmologies-tab&quot;,&quot;'+ myTab1+'&quot;);return false;">'+ myTab1+ '</a>' );
+   }else{
+    tabsHtml.push('<a id="bathmologies-tab" href="javascript:void(0);" onclick="javascript:selectTab(&quot;sourceIDBathm&quot;,&quot;bathmologies-tab&quot;,&quot;myTab1&quot;);return false;">Tab1</a>' );
+  }
+
+  if( myTab2 !="" ){
+    tabsHtml.push('<a id="apotelesmata-tab" href="javascript:void(0);" title="'+myTab2+'" onclick="javascript:selectTab(&quot;sourceID&quot;,&quot;apotelesmata-tab&quot;,&quot;'+ myTab2+'&quot;);return false;">'+ myTab2+ '</a>' );
+   }else{
+/*
+    tabsHtml.push('<a id="apotelesmata-tab" href="javascript:void(0);" title="myTab2" onclick="javascript:selectTab(&quot;sourceID&quot;,&quot;apotelesmata-tab&quot;,&quot;myTab2&quot;);return false;">Tab2</a>' );
+*/
+  }
+
+  if( myTab3 !="" ){
+    tabsHtml.push('<a id="ebdomada-tab" href="javascript:void(0);" title="'+myTab3+'" onclick="javascript:selectTab(&quot;sourceIDebdanahmera&quot;,&quot;ebdomada-tab&quot;,&quot;'+ myTab3+'&quot;);return false;">'+ myTab3+ '</a>' );
+   }else{
+/*
+    tabsHtml.push('<a id="ebdomada-tab" href="javascript:void(0);" title="myTab3" onclick="javascript:selectTab(&quot;sourceIDebdanahmera&quot;,&quot;ebdomada-tab&quot;,&quot;myTab3&quot;);return false;">Tab3</a>' );
+*/
+  }
+
+
+    document.getElementById("myTabs").innerHTML = tabsHtml.join('');
+
+
+}
+
+//---- make query tab 1 (old bathmologia)
+function sendQueryBathmologia() {
+    query1.setQuery('select * order by B, D, F');
+    prosthetoID="_b";
+    query1.send(handleQueryResponseBathmologia);
+}
+
+//---- make query tab 2 (agvnistikes)
+function sendQueryAgonistikes() {
+  query2.setQuery('select * order by B, D, F');
+  prosthetoID="_a";
+  query2.send(handleQueryResponseBathmologia);
+}
+
+//---- make query tab 3 (ebdomadiaio programma)
+function sendQueryEbdomadiaioAnaHmera(){
+  query3.setQuery('select * order by B, D, F');
+  prosthetoID="_e";
+  query3.send(handleQueryResponseBathmologia);
+}
+
+//---------------------------
+//-------------- Bathmologia
+//---------------------------
+function handleQueryResponseBathmologia(response) {
+   if (response.isError()) {
+    alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+  }
+//---  GET THE DATA 
+ var html =[];  
+ var data = response.getDataTable();
+
+ var posesEggrafes = data.getNumberOfRows();
+ var strGroup1="";
+ var strGroup2="";
+ var strGroup3="";
+
+ var countTitlesGroup1=0;
+ var countTitlesGroup2=0;
+ var countTitlesGroup3=0;
+
+ var exeiAnoixeiDivEpipedo1="";
+ var exeiAnoixeiDivEpipedo2="";
+ var exeiAnoixeiDivEpipedo3="";
+
+  html.push('<div valign="top" width="100%" id="otherContainer'+ prosthetoID +'">'); // ejvteriko kelifos epi 0
+
+  html.push('<div class="fpOther" id="fpOther_1'+ prosthetoID +'" >'); // ejvteriko kelifos epi 1
+  html.push('<div class="fpOtherInner" id="fpOtherInner_exo'+ prosthetoID +'" style="height: 550px;">'); // ejv kelifos epi 2
+
+
+ for (var row = 0; row < posesEggrafes; row++) {
+
+   if( strGroup1!= data.getFormattedValue(row, 0)){
+
+     if (exeiAnoixeiDivEpipedo1 != data.getFormattedValue(row, 0) && exeiAnoixeiDivEpipedo1 !="" ){
+
+         if ( exeiAnoixeiDivEpipedo3 !="" ){
+             //---- to klisimo me t periblma tvn agvnvn  3o epipedo me velaki
+             html.push('</div>');
+             //---- kato velos  -------
+             html.push('<div class="fpOtherPfeil"><table><tbody><tr><td id="katovelosIndex_'+countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3 + prosthetoID+'" width="250">&nbsp;</td><td width="60"><img src="https://lh5.googleusercontent.com/-ENyeMpNZI4A/T0NTDCbJIsI/AAAAAAAAgKE/PgTGfC7yAdw/s30/velos_kato.png" border="0" onclick="scroll(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3 + prosthetoID +'&quot;, 1, myposoPxScroll )"></td></tr></tbody></table></div>');
+
+             //--- to klisimo gia to geniko periex;omeno -- fpEmbCont_  --
+             html.push('</div>'); 
+             //--- alert(' close div 3-> p');
+ 
+             exeiAnoixeiDivEpipedo3 ="";
+         } //--- endif exei anoixto 3 epipedo
+         
+         if ( exeiAnoixeiDivEpipedo2 !="" ){
+            //---- 2o epipedo klisimo me periblma an yparxei anoixto
+             html.push('</div>');
+             //--- to klisimi toy emfcont 2o epipedo
+             html.push('</div>');
+             exeiAnoixeiDivEpipedo2 ="";
+         }
+         //---- 1o epipedo klisimo me periblma
+         html.push('</div>');
+         //---- to klisimi toy emfcont
+         html.push('</div>');
+
+     }//--- endif exeiAnoixeiDivEpipedo1
+
+     countTitlesGroup1++;
+
+     //---- dhmioyrgia titloy (anoigei kai kleinei to div toy den xrvstaei)
+     html.push('<div class="fpEmbTitle1" onclick="embExpand(&quot;'+ countTitlesGroup1+prosthetoID+'&quot;,&quot;1&quot;)" id="fpEmbTitle_'+countTitlesGroup1+prosthetoID+'"><img src="https://lh6.googleusercontent.com/-FlqMiSON9SM/TLcMIbO9tqI/AAAAAAAAS6U/-BQZAQgV5yw/s12/velaki_kato.png" class="icon" alt="άνοιγμα - expand">'+data.getFormattedValue(row, 0)+'</div>');
+
+     strGroup1 = data.getFormattedValue(row, 0);
+
+     //----- dhmioyrgei paisio esokleistoy periexomenoy (afhnei 2 div anoixta)
+     html.push('<div id="fpEmbCont_'+countTitlesGroup1+prosthetoID+'" class="fpEmbCont1" style="display: none;"> ');
+     //---- to periblma periexomenoy epipedoy 1
+     html.push('<div class="fpOtherInner" id="fpOtherInner_'+ countTitlesGroup1+prosthetoID+'" style="display: block; ">');
+
+       exeiAnoixeiDivEpipedo1 = data.getFormattedValue(row, 0);
+
+   }//-- endif strGroup1
+
+   //-------------------   2o epipedo
+   if( strGroup2!= data.getFormattedValue(row, 2)){
+
+     if (exeiAnoixeiDivEpipedo2 != data.getFormattedValue(row, 2) && exeiAnoixeiDivEpipedo2 !="" ){
+
+         if ( exeiAnoixeiDivEpipedo3 !="" ){
+             //---- to klisimo me t periblma tvn agvnvn  3o epipedo me velaki
+             html.push('</div>');
+             //---- kato velos  -------
+             html.push('<div class="fpOtherPfeil"><table><tbody><tr><td id="katovelosIndex_'+countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3 + prosthetoID+'" width="250">&nbsp;</td><td width="60"><img src="https://lh5.googleusercontent.com/-ENyeMpNZI4A/T0NTDCbJIsI/AAAAAAAAgKE/PgTGfC7yAdw/s30/velos_kato.png" border="0" onclick="scroll(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3 + prosthetoID +'&quot;, 1, myposoPxScroll )"></td></tr></tbody></table></div>');
+
+             //--- to klisimo gia to geniko periex;omeno -- fpEmbCont_  --
+             html.push('</div>'); 
+             //--- alert(' close div 3-> p');
+ 
+             exeiAnoixeiDivEpipedo3 ="";
+         } //--- endif exei anoixto 3 epipedo
+
+         //---- to klisimo me t periblma tvn agvnvn  2o epipedo
+         html.push('</div>');
+           //---- to kleisimo to content  
+         html.push('</div>');
+     }
+       countTitlesGroup2++;
+
+       html.push('<div class="fpEmbTitle2" onclick="embExpand(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2 + prosthetoID +'&quot;,&quot;2&quot;)" id="fpEmbTitle_'+countTitlesGroup1+'_'+ countTitlesGroup2+ prosthetoID+'"><img src="https://lh6.googleusercontent.com/-FlqMiSON9SM/TLcMIbO9tqI/AAAAAAAAS6U/-BQZAQgV5yw/s12/velaki_kato.png" class="icon" alt="άνοιγμα - expand">'+data.getFormattedValue(row, 2)+'</div>');
+
+       strGroup2 = data.getFormattedValue(row, 2);
+
+       html.push('<div id="fpEmbCont_'+countTitlesGroup1 +'_'+ countTitlesGroup2+prosthetoID +'" class="fpEmbCont2" style="display:none;">');
+       //---- to periblma periexomenoy epipedoy 2
+       html.push('<div class="fpOtherInner" id="fpOtherInner_'+ countTitlesGroup1 +'_'+ countTitlesGroup2+prosthetoID+'" style="display: block; ">');
+
+       exeiAnoixeiDivEpipedo2 = data.getFormattedValue(row, 2);
+
+   } //---endif epipedo 2
+
+
+ //-------------------   3o epipedo last epipedo
+ if( strGroup3 != data.getFormattedValue(row, 4)){
+
+     if (exeiAnoixeiDivEpipedo3 != data.getFormattedValue(row, 4) && exeiAnoixeiDivEpipedo3 !="" ){
+             //---- to klisimo me t periblma tvn agvnvn  3o epipedo me velaki
+             html.push('</div>');
+             //---- kato velos  -------
+             html.push('<div class="fpOtherPfeil"><table><tbody><tr><td id="katovelosIndex_'+countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3 + prosthetoID+'" width="250">&nbsp;</td><td width="60"><img src="https://lh5.googleusercontent.com/-ENyeMpNZI4A/T0NTDCbJIsI/AAAAAAAAgKE/PgTGfC7yAdw/s30/velos_kato.png" border="0" onclick="scroll(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3 + prosthetoID +'&quot;, 1, myposoPxScroll )"></td></tr></tbody></table></div>');
+
+
+
+             //--- to klisimo gia to geniko periex;omeno -- fpEmbCont_  --
+             html.push('</div>'); 
+//             alert(' close div 3-> p');
+     }
+     countTitlesGroup3++;
+
+      html.push('<div class="fpEmbTitle3" onclick="embExpand(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3+ prosthetoID   +'&quot;,&quot;3&quot;,&quot;'+data.getFormattedValue(row, 7)+'&quot;)" id="fpEmbTitle_'+countTitlesGroup1+'_'+ countTitlesGroup2+'_'+ countTitlesGroup3+ prosthetoID +'"><img src="https://lh6.googleusercontent.com/-FlqMiSON9SM/TLcMIbO9tqI/AAAAAAAAS6U/-BQZAQgV5yw/s12/velaki_kato.png" class="icon" alt="άνοιγμα - expand">'+data.getFormattedValue(row, 4)+'</div>');
+
+
+       strGroup3 = data.getFormattedValue(row, 4);
+
+       html.push('<div id="fpEmbCont_'+countTitlesGroup1 +'_'+ countTitlesGroup2 +'_'+ countTitlesGroup3 + prosthetoID +'" class="fpEmbCont3" style="display:none;">');
+
+      //---- velos pano
+       html.push('<div class="fpOtherPfeil"><img src="https://lh6.googleusercontent.com/-ZuNCj1hzNww/T0NTC0-Hf9I/AAAAAAAAgJ8/evL6XwtD56E/s30/velos_epano.png" border="0"  onclick="scroll(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3+ prosthetoID  + '&quot;, -1, myposoPxScroll)"> </div>' );
+       //---- to periblma gia toys agones
+       html.push('<div class="fpOtherInner" id="fpOtherInner_'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3 + prosthetoID + '" style="height: 336px; display: block;" >');
+
+       exeiAnoixeiDivEpipedo3 = data.getFormattedValue(row, 4);
+}
+
+}  //-- end for
+
+  //--------------------
+  //---- kleinei ta 2 anoixta div apo to 3o epipedo (edv einai to last epi)(exei kai belaki to 3epi) (ths teleytaias eggrafhs)
+  //-------------------
+             html.push('</div>');  //--- prota kleinei to periblhma agvnvn
+
+             html.push('<div class="fpOtherPfeil"><table><tbody><tr><td id="katovelosIndex_'+countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3 + prosthetoID+'" width="250">&nbsp;</td><td width="60"><img src="https://lh5.googleusercontent.com/-ENyeMpNZI4A/T0NTDCbJIsI/AAAAAAAAgKE/PgTGfC7yAdw/s30/velos_kato.png" border="0" onclick="scroll(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3 + prosthetoID +'&quot;, 1, myposoPxScroll )"></td></tr></tbody></table></div>');
+
+             html.push('</div>');
+  //--------------------
+  //---- kleinei ta 2 anoixta div apo to 2o epipedo (ths teleytaias eggrafhs)
+  //-------------------
+      html.push('</div>');
+      html.push('</div>');
+  //--------------------
+  //---- kleinei ta 2 anoixta div apo to 1o epipedo (ths teleytaias eggrafhs)
+  //-------------------
+      html.push('</div>');
+      html.push('</div>');
+  //----- afoy kleisei ta anoixta div apo to for tvn eggrafvn
+  //----- kleinei ta teleytaia 3 ektos for kaibazei kai mia grammh bashs
+
+  html.push('</div>'); // ejvteriko kelifos epi 2(fpOtherInner)
+
+  html.push('<img id="grammhImg'+prosthetoID+'" src="https://lh3.googleusercontent.com/-b7pEJ6xh9m4/Tz90h9bkhyI/AAAAAAAAf9c/5tA3miUdA38/s1/pix1black.gif"  height="1" />');
+
+  html.push('</div>'); // end ejvteriko kelifos epi 1  (fpOther)
+  html.push('</div>'); // end of ejvteriko kelifos epi 0
+
+
+ //-- apodosei html sto iD tvn anistoixvn tabs
+ if(prosthetoID == "_a"){
+  document.getElementById("sourceID").innerHTML = html.join('');
+ }
+
+ if (prosthetoID == "_b"){
+  document.getElementById("sourceIDBathm").innerHTML = html.join('');
+ }
+
+ if (prosthetoID == "_e"){
+  document.getElementById("sourceIDebdanahmera").innerHTML = html.join('');
+ }
+
+} //--- end handleQueryResponseBathmologia
+
+//---------------------------
+//----------ktizei anejarthtoys pinakew apotelesmata Diorganvshs ana agvnistikvn
+//---------------------------
+function makeApotelesmataDiorganvshs(URLforBathmologia){
+
+   if( URLforBathmologia!="" ){
+     var queryApotelesmataDiorganvsh = new google.visualization.Query(URLforBathmologia);
+     var strSQL ="select B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, AW, AX, AY, AZ, BA where  Q is not null  order by Q, D, E";
+     queryApotelesmataDiorganvsh.setQuery(strSQL);
+     queryApotelesmataDiorganvsh.send(handleQueryApotelesmataDiorgResponse);
+
+   }else{
+     alert('Δεν βρέθηκε το αρχείο με τα αποτελέσματα της διοργανώσης - κατηγορίας...');
+   }
+
+}//--- end fnc makeApotelesmataDiorganvshs
+
+
+//-----------------------
+//---- To anejarthta handleQueryApotelesmataDiorgResponse 
+//-----------------------
+function handleQueryApotelesmataDiorgResponse(response){
+
+  if (response.isError()) {
+    alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+  }
+//---  GET THE DATA 
+  var html =[];  
+  var htmlkatovelos=[];
+  var data = response.getDataTable();
+
+  var strGroup1="";
+  var countAgvnistikes=0;
+  var shmeioScroll=0;
+
+  var strFontSize="7px";
+  var strColor="black";
+
+  var strForCentralMarq="";
+  var infoTitleForMore="";
+  var tmpHtmlF="";
+
+  var myToday = new Date();
+  var poses_omades_sthn_kathgoria = data.getNumberOfRows();
+
+  for (var row = 0; row < poses_omades_sthn_kathgoria; row++) {
+
+ //-------------------   2o epipedo last epipedo gkavo epipedo mono titlos
+ if( strGroup1 != data.getFormattedValue(row, 0)){
+      html.push('<div class="fpEmbTitle4">'+data.getFormattedValue(row, 0)+'</div>');
+      strGroup1 = data.getFormattedValue(row, 0);
+      //--- index gia scroll
+      countAgvnistikes++;
+//     shmeioScroll=(row*40)+((countAgvnistikes-1)*22);
+     shmeioScroll=(row*34)+((countAgvnistikes-1)*22);
+
+       if( data.getValue(row, 2) > myToday ){
+        strFontSize="8px;font-weight:bold;";
+        strColor="blue";
+      }
+
+     htmlkatovelos.push('<span title="Go to... Μετάβαση...['+data.getFormattedValue(row, 0)+']" style="font-size:'+ strFontSize + ';cursor:pointer;color:' + strColor + ';"  onclick="scrolltoAgonistikh(&quot;'+ pubID + '&quot;,'+ shmeioScroll+')">'+ countAgvnistikes +' </span>');
+  }
+
+//--------
+//--- gia kaue agvna
+
+//--------
+     strForCentralMarq = data.getFormattedValue(row,18)+ ' | ' + data.getFormattedValue(row,19)+ ' | ' + data.getFormattedValue(row,20);
+
+
+   if(strForCentralMarq  == " |  | "){
+      infoTitleForMore="";
+      strForCentralMarq="";
+   }else{
+      infoTitleForMore="Click for more.. κλικ για περισσότερα..";
+   }
+   
+
+     html.push('<div class="numDiv" title="'+ infoTitleForMore +'" style="display: block;" onclick="makeMarque(&quot;'+ strForCentralMarq  + '&quot;)">');
+     html.push('<table border="0" width="100%" cellspacing="0" cellpadding="0" ><tbody>');
+     html.push('<tr><td colspan="4"></td></tr>');
+     html.push('<tr><td colspan="4"> <table width="100%" cellspacing="0" cellpadding="0" border="0" class="agonasApotelesmataDiorRec scoreboard"><tbody><tr>');
+
+    // --  ----    1h seira omades - embhmata          -----   --
+    //-- sthlh 2 emblhma
+     if (data.getFormattedValue(row, 16) == "" || data.getFormattedValue(row, 16) == "---" ) {
+       html.push('<td class="emblhmaImgBathmo" width="3%"align="left" >&nbsp;</td>');     
+     }else{
+         tmpHtmlF="<div style='font-size:10px;font-family:verdana;'><center> ";
+         tmpHtmlF +="<br/>"+data.getFormattedValue(row, 2)+" " +data.getFormattedValue(row, 3)+"<br/>";
+         tmpHtmlF +=" "+data.getFormattedValue(row, 1)+"<br>" + data.getFormattedValue(row, 4) + "<br/>" + data.getFormattedValue(row, 5)+"<br/>"+ data.getFormattedValue(row, 6)+"<br/>";
+           //----- url
+           if (data.getFormattedValue(row, 7) != "" ){
+                tmpHtmlF += "<a href='"+data.getFormattedValue(row, 7)+"' target='_blank'>"+data.getFormattedValue(row, 7)+"</a>";
+            }
+        tmpHtmlF += "</center></div>";
+
+       html.push('<td class="emblhmaImgBathmo" width="3%" align="left"><img class="emblhmaImgBathmo" src="'+ data.getFormattedValue(row, 16) +'" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 16)+'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Img&quot;);"></td>');
+     }
+
+  html.push('<td class="pad font-10" width="87%" align="left"><span class="anametrhsh">' + data.getFormattedValue(row, 2)+' '+ data.getFormattedValue(row, 3)+'</span></td>');
+
+
+    //--- video  an yparxei parametros perasmenh
+     if (data.getFormattedValue(row, 17) == "" || data.getFormattedValue(row, 17) == "---" ) {
+       html.push('<td class="emblhmaImgBathmo" width="3%" align="right" >&nbsp;</td>');     
+     }else{
+       html.push('<td class="emblhmaImgBathmo" width="3%" align="right"><img title="show video, προβολή video" class="emblhmaImgBathmo" src="https://lh5.googleusercontent.com/-C9Aewsj5onQ/TLFNrD07k3I/AAAAAAAAS3M/8zOAyhYgMFs/s800/youtube.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 17)+'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Video&quot;);"></td>');
+    
+     }
+
+
+    //--- maps 1 an yparxei parametros perasmenh
+     if (data.getFormattedValue(row, 13) == "" || data.getFormattedValue(row, 13) == "---" ) {
+       html.push('<td class="emblhmaImgBathmo" width="3%" align="right" >&nbsp;</td>');     
+     }else{
+       html.push('<td class="emblhmaImgBathmo" width="3%" align="right"><img title="show map, προβολή χάρτη" class="emblhmaImgBathmo" src="https://lh6.googleusercontent.com/-wpkZlfBiqWY/TrpDw07IPQI/AAAAAAAAbhY/9QfyHOgWY1A/s800/maps_button.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 13)+'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Map&quot;);"></td>');
+    
+     }
+
+    //--- maps 2 an yparxei parametros perasmenh
+     if (data.getFormattedValue(row, 14) == "" || data.getFormattedValue(row, 14) == "---" ) {
+       html.push('<td class="emblhmaImgBathmo" width="3%" align="right" >&nbsp;</td>');     
+     }else{
+       html.push('<td class="emblhmaImgBathmo" width="3%" align="right"><img title="show map, προβολή χάρτη" class="emblhmaImgBathmo" src="https://lh6.googleusercontent.com/-wpkZlfBiqWY/TrpDw07IPQI/AAAAAAAAbhY/9QfyHOgWY1A/s800/maps_button.png" onclick="javascript:showDivDisp(&quot;'+data.getFormattedValue(row, 14)+'&quot;,&quot;'+tmpHtmlF+'&quot;,&quot;Map&quot;);"></td>');
+    
+     }
+
+
+
+     html.push('</tr>');
+     strDiathtes ='';
+
+     strHmeromhniesGhpeda = data.getFormattedValue(row, 1);
+
+    //   ----    2h seira prin ton agvna stoixeia (an den yparxei skor)   ---    
+
+     html.push('<tr><td colspan="5"  align="right"><span class="anametrhsh small-9">'+ strHmeromhniesGhpeda + '</span></td></tr>' );
+
+    // ----    2h seira prin ton agvna stoixeia DIATHTES-KOMISARIOI-KRITES (an den yparxei skor) --
+
+
+     html.push('<tr><td colspan="5"  align="right" title="'+strDiathtes+'"><span class="anametrhsh small-7">'+ strDiathtes+ '</span></td></tr>' );
+
+     html.push('</tbody></table></td></tr>' );
+
+     html.push('</tbody></table></div>');
+
+
+ }//--- end for
+
+  var strIDpinakas= "fpOtherInner_"+pubID;
+  document.getElementById(strIDpinakas).innerHTML = html.join('');
+
+  //--- xtizei ta indexscroll sto katv velaki
+  strIDpinakas= "katovelosIndex_"+pubID;
+  document.getElementById(strIDpinakas).innerHTML = htmlkatovelos.join('');
+
+
+}//--- end handleQueryApotelesmataDiorgResponse 
+
+gadgets.util.registerOnLoadHandler(init);  
+
+</script>
+
+<div id="disDiv" style="position:absolute;display:none;"><center>
+<a id="apokrychDisplay" href="javascript:hideDivDisp();" style="text-decoration:none;font-size:9px;color:#e7e7e8;height:10px;" title="απόκρυψη - hide">X</a><br/>
+<div id="inDisplay" >load...φορτώνει..
+</div>
+</center>
+</div>
+
+
+<div class="koyti-pano"></div>
+
+<div class="koyti">
+ <div id="pano-tmhma" width="320px">
+   <div id="myTabs" width="100%">
+     <a id="bathmologies-tab" href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a>
+     <a id="apotelesmata-tab" title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="javascript:selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;">Πρόγραμμα</a>
+     <a id="ebdomada-tab" title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;">Ανά Ημέρα</a>
+
+   </div>
+ </div>
+ <div>
+    <div id="myTitleID"><marquee>...</marquee></div>
+    <div id="sourceIDebdanahmera" class="periexomenaCL"><span style="font-size:9px;">.</span></div>
+    <div id="sourceID" class="periexomenaCL"><span style="font-size:9px;">.</span></div>
+    <div id="sourceIDBathm" class="periexomenaCL">.</div>
+  </div>
+
+<center>
+<a id="ensvmatvsh" href="http://www.google.com/ig/directory?url=hosting.gmodules.com/ig/gadgets/file/114395774883919956955/results_INFO_accordeon.xml" target="_blank" style="text-decoration:none;font-size:9px;color:gray;height:10px;">ενσωμάτωση boxInfoCenter</a><span style="font-size:9px;color:gray;height:10px;" >&nbsp;|&nbsp;</span><a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a><br/>
+
+<div id="addiv" style="position:absolute;top:180px;left:8px;"><center>
+<a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="απόκρυψη - hide ads">X</a><br/>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-9529818444792202";
+/* 300x250 box info center */
+google_ad_slot = "5017931393";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></center>
+</div>
+</center>
+
+</div>
+    ]]>
+  </Content>
+</Module>
