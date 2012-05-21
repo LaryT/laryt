@@ -204,7 +204,9 @@
         
               var myImages = $("div#laryDiv img").attr("src");
 
-              var logos  = myStrHeight / myStrWidth ;
+alert ( myStrHeight);
+alert ( myStrWidth);
+              var logos  = int(myStrHeight) / int(myStrWidth) ;
               
               alert ( logos );
                            
