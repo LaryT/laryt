@@ -174,7 +174,14 @@
         html.push('</div></div></div>');        
         content.innerHTML = html.join('');
         
-
+              if( $("div#laryDiv img").attr("width") > $("div#laryDiv img").attr("height")  ){                              
+               alert('w>h');
+               alert( $("div#laryDiv img").attr("width") );
+              }else{
+               alert('w<h');
+               alert( $("div#laryDiv img").attr("height") );               
+              }
+             
         
       
            myStrWidth=(myStrWidth+'px');
@@ -208,12 +215,7 @@
               var myImages = $("div#laryDiv img").attr("src");
 
 
-              if( $("div#laryDiv img").attr("width") > $("div#laryDiv img").attr("height")  ){                              
-               alert('w>h');
-              }else{
-               alert('w<h');
-              }
-             
+
 
             if($("div#laryDiv img").attr("src") != ''){
                 $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
