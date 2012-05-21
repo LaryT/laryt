@@ -212,9 +212,9 @@
                 
                 $("div#moduleID").attr("width",myStrWidth);         
                 $("div#laryDiv img").attr("width",myStrWidth);
-*/            }
+           }
         
-              
+  */             
 
 
            $("div#laryDiv").css("visibility","hidden");
