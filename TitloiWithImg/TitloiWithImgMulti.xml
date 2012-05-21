@@ -207,17 +207,18 @@
              if(myStrHeight != ''){
                $("div#moduleID").attr("height",myStrHeight);   
             }
-
+/*
             if(myStrWidth != ''){
                 
                 $("div#moduleID").attr("width",myStrWidth);         
                 $("div#laryDiv img").attr("width",myStrWidth);
-            }
+*/            }
         
               
 
 
-           $("div#laryDiv").css("visibility","hidden"); 
+           $("div#laryDiv").css("visibility","hidden");
+           $("div#laryDiv").css("display","none");
            
            if(myShowImages=="1") {
                $("img#my2img").css("visibility","visible");
