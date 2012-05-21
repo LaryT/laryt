@@ -202,10 +202,10 @@
                 $("div#laryDiv img").css("width",myStrWidth);
             }
         
-              var myImages = $("div#laryDiv img");
-              var numberOfImages = myImages.length;
+              var myImages = $("div#laryDiv img").attr("src");
+
               
-              alert ( $("div#laryDiv img:first").attr("src") );
+              alert ( myImages  );
                            
              
 
