@@ -178,9 +178,9 @@
               $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
               
               if( $("div#laryDiv img").attr("width") > $("div#laryDiv img").attr("height")  ){                              
-                  $("img#my2img").attr("width", $("div#laryDiv img").attr("width") );
+              //    $("img#my2img").attr("width", $("div#laryDiv img").attr("width") );
               }else{
-                  $("img#my2img").attr("height", $("div#laryDiv img").attr("height") );
+              //    $("img#my2img").attr("height", $("div#laryDiv img").attr("height") );
               }
              
         
