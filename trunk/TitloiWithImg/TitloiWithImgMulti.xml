@@ -206,8 +206,9 @@
               var numberOfImages = myImages.length;
 
                            
-              for(i=0; i<numberOfImages;i++){
-                 alert( myImages[i].getAttribute('src');
+              for(i=0; i<numberOfImages; i++){
+                 alert(myImages.length + " : " +i);
+                 / * alert( myImages[i].getAttribute("src");  */
               }
 
             if($("div#laryDiv img").attr("src") != ''){
