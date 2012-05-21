@@ -176,11 +176,15 @@
         
         
               $("img#my2img").attr("src", $("div#laryDiv img").attr("src"));
-              
+              var logos =0;
               if( $("div#laryDiv img").attr("width") > $("div#laryDiv img").attr("height")  ){                              
               //    $("img#my2img").attr("width", $("div#laryDiv img").attr("width") );
+                  logos = $("img#my2img").attr("width") / $("div#laryDiv img").attr("width");
+                  alert(logos );
               }else{
               //    $("img#my2img").attr("height", $("div#laryDiv img").attr("height") );
+                  logos = $("img#my2img").attr("height") / $("div#laryDiv img").attr("height");
+                  alert(logos );
               }
              
         
