@@ -11,14 +11,8 @@
   <UserPref name="my_StrHeight" display_name="Height:" default_value="450" />    
   <UserPref name="my_StrWidth" display_name="Width:" default_value="300" />  
   <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
-
   <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
-  <UserPref name="my_defautImg" display_name="Default Img:" default_value="https://lh4.googleusercontent.com/-i3cAyUfiiuw/T2DiGBO7rOI/AAAAAAAAhJk/xThK1nbRuwQ/s300/balles.png" />
-  <UserPref name="my_ShowImages" display_name="Show Image" default_value="1" datatype="enum" required="false">
-    <EnumValue value="0" display_value="No"/>
-    <EnumValue value="1" display_value="Yes"/>
-  </UserPref>  
-
+ 
 <Content type="html">
 <![CDATA[
     
@@ -35,7 +29,6 @@
 }
 .mytdFirst{
         background-color:#f6f6f6;
-//        border-top:1px solid #cccccc;
         border-bottom:1px solid #cccccc;
 }
 .myImgFirst{
@@ -109,23 +102,20 @@ td{
       var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
 
       var myBgColorTitle = prefs.getString("my_BgColorTitle"); 
-      var mydefautImg  = prefs.getString("my_defautImg");       
-      var myShowImages = prefs.getString("my_ShowImages");       
+    
+       
       
       function feedLoaded(result) {
       if (!result.error) {
-        // Get and clear our content div.
         var content = document.getElementById('content');
         content.innerHTML = '';
         
         var html =[];
-        // Get all items returned.
-   var items = result.xmlDocument.getElementsByTagName('entry');
-    // Loop through our items
+        var items = result.xmlDocument.getElementsByTagName('entry');
         html.push('<div style="overflow:hidden;"><table width="300"><tbody>');
         html.push('<tr>');
         html.push('<td colspan="2">');
-        html.push('<div class="bigTitle"> Women </div>'); 
+        html.push('<div id="bigTitleID" class="bigTitle"> Women </div>'); 
         html.push('</td>');
         html.push('</tr>');
         
@@ -156,6 +146,30 @@ td{
       }
       html.push('</tbody></table></div>');
       content.innerHTML = html.join('');
+      
+      if(myColorTitle != ''){
+             $(".ns2-title a").css("color", myColorTitle); 
+             $(".ns2-titleFirst a").css("color", myColorTitle); 
+          }        
+         
+          if(myBgColorTitle != ''){
+             $(".bigTitle").css("background-color", myBgColorTitle ); 
+             $(".mytdFirst").css("background-color", myBgColorTitle ); 
+          }                 
+         
+         
+          if(myStrTitle != ''){
+            document.getElementById("bigTitleID").innerHTML = myStrTitle;
+          }
+        
+             if(myStrHeight != ''){
+               $("div#content").attr("height",myStrHeight);   
+            }
+
+            if(myStrWidth != ''){
+                $("div#content").attr("width",myStrWidth);         
+           }
+
    }
 }
         
@@ -178,17 +192,25 @@ function myDateMonth(myPdate){
 
 function init() {
   // Create a feed instance that will grab Digg's feed.
-  var feed = new google.feeds.Feed("http://www.blogger.com/feeds/1250534396920824067/posts/default/-/women");
+       if(myStrFeed!= ''){   
+        var feed = new google.feeds.Feed(myStrFeed);
+      }else{
+        var feed = new google.feeds.Feed("http://www.blogger.com/feeds/1250534396920824067/posts/default/-/women");
+      }
     
-      // Request the results in XML
       feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
-      feed.setNumEntries(5);
-      // Calling load sends the request off.  It requires a callback function.
+      
+      if(myPosoiTitloi !=''){
+        feed.setNumEntries(myPosoiTitloi);
+      }else{
+        feed.setNumEntries(5);
+      }
+      
       feed.load(feedLoaded);
     }
 
- gadgets.util.registerOnLoadHandler(init); 
- // google.setOnLoadCallback(init);
+  gadgets.util.registerOnLoadHandler(init); 
+  // google.setOnLoadCallback(init);
  
 </script>
 <div id="content">Loading...</div>
