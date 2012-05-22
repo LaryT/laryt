@@ -112,7 +112,7 @@ td{
         
         var html =[];
         var items = result.xmlDocument.getElementsByTagName('entry');
-        html.push('<div style="overflow:hidden;"><table width="300"><tbody>');
+        html.push('<div id="myFiDiv" style="overflow:hidden;"><table id="myTable" width="300"><tbody>');
         html.push('<tr>');
         html.push('<td colspan="2">');
         html.push('<div id="bigTitleID" class="bigTitle"> Women </div>'); 
@@ -161,6 +161,10 @@ td{
            
           if(myStrHeight != ''){$("div#content").attr("height",myStrHeight);}
           if(myStrWidth != ''){ $("div#content").attr("width",myStrWidth);}
+          
+          if(myStrHeight != ''){$("#myTable").attr("height",myStrHeight);}
+          if(myStrWidth != ''){ $("#myTable").attr("width",myStrWidth);}
+          
        
    }
 }
