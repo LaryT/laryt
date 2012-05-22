@@ -146,7 +146,7 @@ td{
       }
       html.push('</tbody></table></div>');
       content.innerHTML = html.join('');
-      /*
+  
           if(myColorTitle != ''){
              $(".ns2-title a").css("color", myColorTitle); 
              $(".ns2-titleFirst a").css("color", myColorTitle); 
@@ -156,11 +156,12 @@ td{
              $(".bigTitle").css("background-color", myBgColorTitle ); 
              $(".mytdFirst").css("background-color", myBgColorTitle ); 
           }                 
-         
+       
           if(myStrTitle != ''){document.getElementById("bigTitleID").innerHTML = myStrTitle;}    
+           
           if(myStrHeight != ''){$("div#content").attr("height",myStrHeight);}
           if(myStrWidth != ''){ $("div#content").attr("width",myStrWidth);}
-      */
+       
    }
 }
         
