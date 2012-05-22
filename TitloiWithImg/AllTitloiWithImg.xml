@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs title="__UP_my_name__" height="500" title_url="http://www.grbasket.gr" description="News |::| Display news in your blog or website " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s275/centralTitlesLogo.png" thumbnail="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s125/centralTitlesLogo.png" category="sport" category2="news" > 
+    <Require feature="setprefs" />    
+  </ModulePrefs>
+  <UserPref name="my_name" display_name="Name" default_value="All Titles with Img" />
+
+  <UserPref name="my_StrFeed" display_name="Feed,RSS:" default_value="http://grbasket.blogspot.com/feeds/posts/default" />    
+  <UserPref name="my_ColorTitle" display_name="Color:" default_value="#BC0202" />
+  <UserPref name="my_StrTitle" display_name="Title :" default_value="NEWS" />
+  <UserPref name="my_StrHeight" display_name="Height:" default_value="450" />    
+  <UserPref name="my_StrWidth" display_name="Width:" default_value="300" />  
+  <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
+
+  <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
+  <UserPref name="my_defautImg" display_name="Default Img:" default_value="https://lh4.googleusercontent.com/-i3cAyUfiiuw/T2DiGBO7rOI/AAAAAAAAhJk/xThK1nbRuwQ/s300/balles.png" />
+  <UserPref name="my_ShowImages" display_name="Show Image" default_value="1" datatype="enum" required="false">
+    <EnumValue value="0" display_value="No"/>
+    <EnumValue value="1" display_value="Yes"/>
+  </UserPref>  
+
+<Content type="html">
+<![CDATA[
+    
+<style>   
+.myImg{
+    border-bottom:2px solid #cccccc;
+    border-right:2px solid #cccccc;
+    height:40px;
+    margin-top:2px;
+    margin-left:2px;
+    padding-bottom:1px;
+    padding-right:1px;
+    width:50px;
+}
+.mytdFirst{
+        background-color:#f6f6f6;
+//        border-top:1px solid #cccccc;
+        border-bottom:1px solid #cccccc;
+}
+.myImgFirst{
+    height:90px;
+    margin-top:2px;
+    margin-left:2px;
+    padding-bottom:1px;
+    padding-right:1px;
+    width:120px;
+    float:right;
+}
+
+.bigTitle{
+    background-color:#f6f6f6;
+    color:#BC0202;
+    font-size: 18px; 
+    font-weight: bold;
+    margin: 0; 
+    padding-bottom: 10px; 
+    padding-left:10px;
+    padding-top: 10px; 
+    text-align:left;    
+}
+.ns2-title, .ns2-titleFirst {
+    font-size: 10px; 
+    font-weight: bold;
+    margin: 0; 
+    padding-bottom: 1px; 
+    padding-left:10px;
+    text-align:left;
+ }
+.ns2-titleFirst {
+
+    padding-top: 20px;
+    font-size: 16px; 
+}
+.ns2-title a, .ns2-titleFirst a{
+    color:#BC0202;
+    text-decoration:none;
+}
+.ns2-title a:hover, .ns2-titleFirst a:hover{
+    color:#000000;
+}
+.strDateMonth{    
+     color:#dddddd;
+     font-size: 10px;
+     font-weight: bold;
+}
+
+td{
+   border-bottom: 1px dashed #ededed;
+}
+  
+</style>   
+     
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" ></script>      
+    <script type="text/javascript">
+      google.load("feeds", "1");
+    </script>
+
+
+     <script type="text/javascript">
+      var prefs = new gadgets.Prefs();
+      
+      var myColorTitle = prefs.getString("my_ColorTitle");
+      var myStrTitle = prefs.getString("my_StrTitle");
+      var myStrHeight = prefs.getString("my_StrHeight");
+      var myStrWidth = prefs.getString("my_StrWidth");
+      var myStrFeed = prefs.getString("my_StrFeed");    
+      var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
+
+      var myBgColorTitle = prefs.getString("my_BgColorTitle"); 
+      var mydefautImg  = prefs.getString("my_defautImg");       
+      var myShowImages = prefs.getString("my_ShowImages");       
+      
+      function feedLoaded(result) {
+      if (!result.error) {
+        // Get and clear our content div.
+        var content = document.getElementById('content');
+        content.innerHTML = '';
+        
+        var html =[];
+        // Get all items returned.
+   var items = result.xmlDocument.getElementsByTagName('entry');
+    // Loop through our items
+        html.push('<div style="overflow:hidden;"><table width="300"><tbody>');
+        html.push('<tr>');
+        html.push('<td colspan="2">');
+        html.push('<div class="bigTitle"> Women </div>'); 
+        html.push('</td>');
+        html.push('</tr>');
+        
+    for (var i = 0; i < items.length; i++) {
+      var item = items[i];
+
+      var myPdate = item.getElementsByTagName('published')[0].firstChild.nodeValue;
+      var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
+      var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
+      var imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
+        
+      html.push('<tr>');
+      
+      if(i == 0){
+          html.push('<td class="mytdFirst" colspan="2">');
+          html.push('<img class="myImgFirst" src="'+ imgUrl + '" />');
+          html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span></div>');        
+      }else{
+          html.push('<td colspan="1">');        
+          html.push('<img class="myImg" src="'+ imgUrl + '" />');
+          html.push('</td>');
+          html.push('<td style="vertical-align:center;">');
+          html.push('<div class="ns2-title"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span></div>');
+      }
+       
+      html.push('</td>');
+      html.push('</tr>');
+      }
+      html.push('</tbody></table></div>');
+      content.innerHTML = html.join('');
+   }
+}
+        
+function myDateMonth(myPdate){
+        var myPubDate = new Date(myPdate);
+        var strPubDate ="";
+          if(myPubDate.getDate()<10){
+            strPubDate = "0"+myPubDate.getDate()+".";
+          }else{
+            strPubDate = myPubDate.getDate()+".";
+          }
+          if( (myPubDate.getMonth()+1) <10 ) {
+             strPubDate = strPubDate+"0"+ (myPubDate.getMonth()+1);
+          }else{
+             strPubDate = strPubDate +(myPubDate.getMonth()+1);
+          }
+          
+        return strPubDate;
+}        
+
+function OnLoad() {
+  // Create a feed instance that will grab Digg's feed.
+  var feed = new google.feeds.Feed("http://www.blogger.com/feeds/1250534396920824067/posts/default/-/women");
+    
+      // Request the results in XML
+      feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
+      feed.setNumEntries(5);
+      // Calling load sends the request off.  It requires a callback function.
+      feed.load(feedLoaded);
+    }
+
+ gadgets.util.registerOnLoadHandler(init); 
+ // google.setOnLoadCallback(OnLoad);
+ 
+</script>
+<div id="content">Loading...</div>
+    
+    ]]>
+  </Content>
+</Module>    
