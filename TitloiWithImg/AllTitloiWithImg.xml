@@ -176,7 +176,7 @@ function myDateMonth(myPdate){
         return strPubDate;
 }        
 
-function OnLoad() {
+function init() {
   // Create a feed instance that will grab Digg's feed.
   var feed = new google.feeds.Feed("http://www.blogger.com/feeds/1250534396920824067/posts/default/-/women");
     
@@ -188,7 +188,7 @@ function OnLoad() {
     }
 
  gadgets.util.registerOnLoadHandler(init); 
- // google.setOnLoadCallback(OnLoad);
+ // google.setOnLoadCallback(init);
  
 </script>
 <div id="content">Loading...</div>
