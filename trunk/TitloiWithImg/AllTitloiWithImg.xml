@@ -146,8 +146,8 @@ td{
       }
       html.push('</tbody></table></div>');
       content.innerHTML = html.join('');
-      
-      if(myColorTitle != ''){
+      /*
+          if(myColorTitle != ''){
              $(".ns2-title a").css("color", myColorTitle); 
              $(".ns2-titleFirst a").css("color", myColorTitle); 
           }        
@@ -157,19 +157,10 @@ td{
              $(".mytdFirst").css("background-color", myBgColorTitle ); 
           }                 
          
-         
-          if(myStrTitle != ''){
-            document.getElementById("bigTitleID").innerHTML = myStrTitle;
-          }
-        
-             if(myStrHeight != ''){
-               $("div#content").attr("height",myStrHeight);   
-            }
-
-            if(myStrWidth != ''){
-                $("div#content").attr("width",myStrWidth);         
-           }
-
+          if(myStrTitle != ''){document.getElementById("bigTitleID").innerHTML = myStrTitle;}    
+          if(myStrHeight != ''){$("div#content").attr("height",myStrHeight);}
+          if(myStrWidth != ''){ $("div#content").attr("width",myStrWidth);}
+      */
    }
 }
         
@@ -191,19 +182,18 @@ function myDateMonth(myPdate){
 }        
 
 function init() {
-  // Create a feed instance that will grab Digg's feed.
-       if(myStrFeed!= ''){   
-        var feed = new google.feeds.Feed(myStrFeed);
-      }else{
-        var feed = new google.feeds.Feed("http://www.blogger.com/feeds/1250534396920824067/posts/default/-/women");
-      }
+        if(myStrFeed!= ''){ 
+           var feed = new google.feeds.Feed(myStrFeed);
+        }else{
+           var feed = new google.feeds.Feed("http://www.blogger.com/feeds/1250534396920824067/posts/default/-/women");
+        }
     
       feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
       
       if(myPosoiTitloi !=''){
         feed.setNumEntries(myPosoiTitloi);
       }else{
-        feed.setNumEntries(5);
+        feed.setNumEntries(6);
       }
       
       feed.load(feedLoaded);
