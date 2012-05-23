@@ -131,9 +131,7 @@ function init() {
   }else{
     feed.setNumEntries(6);
   }
-  feed.load(feedLoaded);
-  
-  function feedLoaded(result) {
+  feed.load( feedLoaded(result) {
       if (!result.error) {
         var content = document.getElementById('content');
         content.innerHTML = '';
@@ -152,7 +150,8 @@ function init() {
         //------  xxx date
         var strPubDate ="";
         var myPubDate = new Date(myPdate);
-
+        strPubDate =[myPubDate.getDays(), myPubDate.getMonth()+1, myPubDate.getFullYear()].join('/');
+/*        
           if(myPubDate.getDate()<10){
             strPubDate = "0"+myPubDate.getDate()+".";
           }else{
@@ -163,6 +162,7 @@ function init() {
           }else{
              strPubDate = strPubDate +(myPubDate.getMonth()+1);
           }   
+*/          
         //--------
         var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
         var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
@@ -179,9 +179,11 @@ function init() {
       var myPdate = item.getElementsByTagName('published')[0].firstChild.nodeValue;
         
         //------  xxx date
-        var strPubDate ="";
-        var myPubDate = new Date(myPdate);
-
+        // var strPubDate ="";
+        var myPubDate2 = new Date(myPdate);
+        strPubDate =[myPubDate2.getDays(), myPubDate2.getMonth()+1, myPubDate2.getFullYear()].join('/');
+        alert(strPubDate);
+/*          
           if(myPubDate.getDate()<10){
             strPubDate = "0"+myPubDate.getDate()+".";
           }else{
@@ -192,6 +194,7 @@ function init() {
           }else{
              strPubDate = strPubDate +(myPubDate.getMonth()+1);
           }   
+*/          
         //--------
       
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
@@ -209,8 +212,16 @@ function init() {
 
       html.push('</div></div>');
       content.innerHTML = html.join('');
+   
+   }
   
+   
+});//---end fnc feedload
 
+
+          if(myStrTitle != ''){document.getElementById("bigTitleID").innerHTML = myStrTitle;}  
+          
+/*
           if(myColorTitle != ''){
              $(".ns2-title a").css("color", myColorTitle); 
              $(".ns2-titleFirst a").css("color", myColorTitle); 
@@ -222,24 +233,17 @@ function init() {
              $(".mytdFirst").css("background-color", myBgColorTitle ); 
           }                 
        
-          if(myStrTitle != ''){document.getElementById("bigTitleID").innerHTML = myStrTitle;}    
+  
            
-//          if(myStrHeight != ''){$("#content").attr("height",myStrHeight);}
           if(myStrWidth != ''){ $("#content").attr("width",myStrWidth);}
           
-//          if(myStrHeight != ''){$("#myTable").attr("height",myStrHeight);}
           if(myStrWidth != ''){ $("#myTable").attr("width",myStrWidth);}
           
-//          if(myStrHeight != ''){$("#myFiDiv").attr("height",myStrHeight);}
+
           if(myStrWidth != ''){ $("#myFiDiv").attr("width",myStrWidth);}
           
-          
-       
-   }
-  
-   
-}//---end fnc feedload
-        
+*/
+
 
   
 } //-- end init
