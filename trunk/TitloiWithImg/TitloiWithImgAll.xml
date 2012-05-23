@@ -164,8 +164,9 @@
                     myPubDate = new Date(entry.publishedDate);
                     strPubDate = myPubDate.getDate()+"."+ (myPubDate.getMonth()+1)  +": "+ entry.title ;
                     
-                  alert('.-.');
-                  var imgUrl = $("entry media:thumbnail").attr('url');
+                  alert('.thumbnail.');
+                  var imgUrl = $("entry thumbnail").attr('url');
+                  //var imgUrl = $("entry media:thumbnail").attr('url');
                   //var imgUrl= entry.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
                   alert(imgUrl);
                    
