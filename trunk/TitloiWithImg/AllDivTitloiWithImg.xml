@@ -114,7 +114,7 @@
 
       var myBgColorTitle = prefs.getString("my_BgColorTitle"); 
     
-      var strPubDate ="";   
+      
       
         
 
@@ -149,7 +149,21 @@ function init() {
         
         var item = items[0];
         var myPdate = item.getElementsByTagName('published')[0].firstChild.nodeValue;
-        myDateMonth(myPdate);
+        //------  xxx date
+        var strPubDate ="";
+        var myPubDate = new Date(myPdate);
+
+          if(myPubDate.getDate()<10){
+            strPubDate = "0"+myPubDate.getDate()+".";
+          }else{
+            strPubDate = myPubDate.getDate()+".";
+          }
+          if( (myPubDate.getMonth()+1) <10 ) {
+             strPubDate = strPubDate+"0"+ (myPubDate.getMonth()+1);
+          }else{
+             strPubDate = strPubDate +(myPubDate.getMonth()+1);
+          }   
+        //--------
         var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
         var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
         var imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
@@ -163,7 +177,22 @@ function init() {
     for (var i = 1; i < items.length; i++) {
       var item = items[i];
       var myPdate = item.getElementsByTagName('published')[0].firstChild.nodeValue;
-      myDateMonth(myPdate);
+        
+        //------  xxx date
+        var strPubDate ="";
+        var myPubDate = new Date(myPdate);
+
+          if(myPubDate.getDate()<10){
+            strPubDate = "0"+myPubDate.getDate()+".";
+          }else{
+            strPubDate = myPubDate.getDate()+".";
+          }
+          if( (myPubDate.getMonth()+1) <10 ) {
+             strPubDate = strPubDate+"0"+ (myPubDate.getMonth()+1);
+          }else{
+             strPubDate = strPubDate +(myPubDate.getMonth()+1);
+          }   
+        //--------
       
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
@@ -207,22 +236,7 @@ function init() {
           
        
    }
- function myDateMonth(myPdate){
-        var myPubDate = new Date(myPdate);
-
-          if(myPubDate.getDate()<10){
-            strPubDate = "0"+myPubDate.getDate()+".";
-          }else{
-            strPubDate = myPubDate.getDate()+".";
-          }
-          if( (myPubDate.getMonth()+1) <10 ) {
-             strPubDate = strPubDate+"0"+ (myPubDate.getMonth()+1);
-          }else{
-             strPubDate = strPubDate +(myPubDate.getMonth()+1);
-          }
-  //-----  return strPubDate;
-} //---end fnc myDateMonth
-   
+  
    
 }//---end fnc feedload
         
