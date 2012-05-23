@@ -132,10 +132,8 @@
           html.push('<img class="myImgFirst" src="'+ imgUrl + '" />');
           html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span> </div>');        
       }else{
-          html.push('<div>');        
+          html.push('<div style="vertical-align:center;">');        
           html.push('<img class="myImg" src="'+ imgUrl + '" />');
-          html.push('</div>');
-          html.push('<div style="vertical-align:center;">');
           html.push('<div class="ns2-title"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span></div>');
       }
        
