@@ -3,7 +3,7 @@
     <ModulePrefs title="__UP_my_name__" height="500" title_url="http://www.grbasket.gr" description="News |::| Display news in your blog or website " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s275/centralTitlesLogo.png" thumbnail="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s125/centralTitlesLogo.png" category="sport" category2="news" > 
     <Require feature="setprefs" />    
   </ModulePrefs>
-  <UserPref name="my_name" display_name="Name" default_value="Titles with Img" />
+  <UserPref name="my_name" display_name="Name" default_value="Titles with Img all" />
 
   <UserPref name="my_StrFeed" display_name="Feed,RSS:" default_value="http://grbasket.blogspot.com/feeds/posts/default" />    
   <UserPref name="my_ColorTitle" display_name="Color:" default_value="#BC0202" />
@@ -164,9 +164,10 @@
                     myPubDate = new Date(entry.publishedDate);
                     strPubDate = myPubDate.getDate()+"."+ (myPubDate.getMonth()+1)  +": "+ entry.title ;
                     
-                    var imgUrl= entry.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
-                    alert(imgUrl);
-                    
+                  //  var imgUrl= entry.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
+                 //   alert(imgUrl);
+                   
+                  alert('...'); 
                     html.push('<div class="ns2-inner">');
                     html.push('<h4 class="ns2-title" style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">');
                     html.push('<a href="' + entry.link + '" target="_top" title="'+ strPubDate +'" id="myLinkCL">' + entry.title.substring(0,45) + ' ...</a>');
