@@ -116,7 +116,24 @@
     
        
       
-      function feedLoaded(result) {
+        
+
+function init() {
+  if(myStrFeed!= ''){ 
+    var feed = new google.feeds.Feed(myStrFeed);
+  }else{
+    var feed = new google.feeds.Feed("http://www.blogger.com/feeds/1250534396920824067/posts/default/-/women");
+  }
+  
+  feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
+  if(myPosoiTitloi !=''){
+    feed.setNumEntries(myPosoiTitloi);
+  }else{
+    feed.setNumEntries(6);
+  }
+  feed.load(feedLoaded);
+  
+  function feedLoaded(result) {
       if (!result.error) {
         var content = document.getElementById('content');
         content.innerHTML = '';
@@ -185,7 +202,7 @@
           if(myStrWidth != ''){ $("#myFiDiv").attr("width",myStrWidth);}
        
    }
-}
+}//---end fnc feedload
         
 function myDateMonth(myPdate){
         var myPubDate = new Date(myPdate);
@@ -202,25 +219,9 @@ function myDateMonth(myPdate){
           }
           
         return strPubDate;
-}        
-
-function init() {
-        if(myStrFeed!= ''){ 
-           var feed = new google.feeds.Feed(myStrFeed);
-        }else{
-           var feed = new google.feeds.Feed("http://www.blogger.com/feeds/1250534396920824067/posts/default/-/women");
-        }
-    
-      feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
-      
-      if(myPosoiTitloi !=''){
-        feed.setNumEntries(myPosoiTitloi);
-      }else{
-        feed.setNumEntries(6);
-      }
-      
-      feed.load(feedLoaded);
-    }
+} //---end fnc myDateMonth
+  
+} //-- end init
 
   gadgets.util.registerOnLoadHandler(init); 
   // google.setOnLoadCallback(init);
