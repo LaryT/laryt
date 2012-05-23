@@ -17,6 +17,10 @@
 <![CDATA[
     
 <style>   
+.divImg{
+  width: 60px;
+  float: left;
+}
 .myImg{
     border-bottom:2px solid #cccccc;
     border-right:2px solid #cccccc;
