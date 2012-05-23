@@ -18,7 +18,7 @@
     
 <style>   
 .divImg{
-  width: 60px;
+//  width: 60px;
   float: left;
 }
 .myImg{
@@ -145,7 +145,7 @@
         
       html.push('<div class="divRowWrap">');
       html.push('<div>');        
-      html.push('<div class="divImg" style="width:80px;"><img class="myImg" src="'+ imgUrl + '" /></div>');
+      html.push('<div class="divImg"><img class="myImg" src="'+ imgUrl + '" /></div>');
       html.push('<div class="ns2-title"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span></div>');
       html.push('</div>');
       html.push('</div>');
