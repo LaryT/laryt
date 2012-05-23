@@ -150,8 +150,7 @@ td{
           if(myColorTitle != ''){
              $(".ns2-title a").css("color", myColorTitle); 
              $(".ns2-titleFirst a").css("color", myColorTitle);
-             $("#bigTitleID).css("color", myColorTitle);
-
+ 
           }        
          
           if(myBgColorTitle != ''){
