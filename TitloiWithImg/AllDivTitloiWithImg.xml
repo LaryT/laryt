@@ -78,9 +78,7 @@
      font-weight: bold;
 }
 
-td{
-   border-bottom: 1px dashed #ededed;
-}
+
   
 </style>   
      
@@ -112,12 +110,12 @@ td{
         
         var html =[];
         var items = result.xmlDocument.getElementsByTagName('entry');
-        html.push('<div id="myFiDiv" width="300"><table id="myTable" width="300"><tbody>');
-        html.push('<tr>');
-        html.push('<td colspan="2">');
+        html.push('<div id="myFiDiv" width="300"><div id="myTable" width="300">');
+        html.push('<div>');
+        html.push('<div>');
         html.push('<div id="bigTitleID" class="bigTitle"> Women </div>'); 
-        html.push('</td>');
-        html.push('</tr>');
+        html.push('</div>');
+        html.push('</div>');
         
     for (var i = 0; i < items.length; i++) {
       var item = items[i];
@@ -127,24 +125,24 @@ td{
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
       var imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
         
-      html.push('<tr>');
+      html.push('<div>');
       
       if(i == 0){
-          html.push('<td class="mytdFirst" colspan="2">');
+          html.push('<div class="mytdFirst">');
           html.push('<img class="myImgFirst" src="'+ imgUrl + '" />');
           html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span> </div>');        
       }else{
-          html.push('<td colspan="1">');        
+          html.push('<div>');        
           html.push('<img class="myImg" src="'+ imgUrl + '" />');
-          html.push('</td>');
-          html.push('<td style="vertical-align:center;">');
+          html.push('</div>');
+          html.push('<div style="vertical-align:center;">');
           html.push('<div class="ns2-title"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span></div>');
       }
        
-      html.push('</td>');
-      html.push('</tr>');
+      html.push('</div>');
+      html.push('</div>');
       }
-      html.push('</tbody></table></div>');
+      html.push('</div></div>');
       content.innerHTML = html.join('');
   
 
@@ -212,9 +210,9 @@ function init() {
   // google.setOnLoadCallback(init);
  
 </script>
-<div>
-   <div id="content">Loading...</div>
-</div>
+
+<div id="content">Loading...</div>
+
     
     ]]>
   </Content>
