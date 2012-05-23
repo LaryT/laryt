@@ -56,6 +56,9 @@
     padding-top: 10px; 
     text-align:left;    
 }
+.divRowWrap{
+  height:50px;
+}
 .ns2-title, .ns2-titleFirst {
     font-size: 10px; 
     font-weight: bold;
@@ -140,7 +143,7 @@
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
       var imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
         
-      html.push('<div>');
+      html.push('<div class="divRowWrap">');
       html.push('<div>');        
       html.push('<div class="divImg" style="width:80px;"><img class="myImg" src="'+ imgUrl + '" /></div>');
       html.push('<div class="ns2-title"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span></div>');
