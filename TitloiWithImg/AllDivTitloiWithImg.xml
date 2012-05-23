@@ -131,7 +131,8 @@ function init() {
   }else{
     feed.setNumEntries(6);
   }
-  feed.load( feedLoaded(result) {
+  
+  feed.load( function(result) {
       if (!result.error) {
         var content = document.getElementById('content');
         content.innerHTML = '';
@@ -212,11 +213,6 @@ function init() {
 
       html.push('</div></div>');
       content.innerHTML = html.join('');
-   
-   }
-  
-   
-});//---end fnc feedload
 
 
           if(myStrTitle != ''){document.getElementById("bigTitleID").innerHTML = myStrTitle;}  
@@ -243,6 +239,12 @@ function init() {
           if(myStrWidth != ''){ $("#myFiDiv").attr("width",myStrWidth);}
           
 */
+
+
+
+   }
+});//---end fnc feedload
+
 
 
   
