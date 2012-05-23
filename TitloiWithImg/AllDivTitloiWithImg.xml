@@ -150,7 +150,7 @@ function init() {
         //------  xxx date
         var strPubDate ="";
         var myPubDate = new Date(myPdate);
-        strPubDate =[myPubDate.getDays(), myPubDate.getMonth()+1, myPubDate.getFullYear()].join('/');
+        strPubDate =myPubDate.toDateString().substr(4);;
 /*        
           if(myPubDate.getDate()<10){
             strPubDate = "0"+myPubDate.getDate()+".";
@@ -179,9 +179,9 @@ function init() {
       var myPdate = item.getElementsByTagName('published')[0].firstChild.nodeValue;
         
         //------  xxx date
-        // var strPubDate ="";
+        var strPubDate ="";
         var myPubDate2 = new Date(myPdate);
-        strPubDate =[myPubDate2.getDays(), myPubDate2.getMonth()+1, myPubDate2.getFullYear()].join('/');
+        strPubDate = myPubDate2.toDateString().substr(4); 
         alert(strPubDate);
 /*          
           if(myPubDate.getDate()<10){
