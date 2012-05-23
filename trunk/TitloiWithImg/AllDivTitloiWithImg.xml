@@ -200,11 +200,11 @@ function init() {
           
           if(myStrHeight != ''){$("#myFiDiv").attr("height",myStrHeight);}
           if(myStrWidth != ''){ $("#myFiDiv").attr("width",myStrWidth);}
+          
+          
        
    }
-}//---end fnc feedload
-        
-function myDateMonth(myPdate){
+ function myDateMonth(myPdate){
         var myPubDate = new Date(myPdate);
         var strPubDate ="";
           if(myPubDate.getDate()<10){
@@ -220,6 +220,11 @@ function myDateMonth(myPdate){
           
         return strPubDate;
 } //---end fnc myDateMonth
+   
+   
+}//---end fnc feedload
+        
+
   
 } //-- end init
 
