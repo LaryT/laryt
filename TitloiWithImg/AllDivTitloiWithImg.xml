@@ -129,12 +129,12 @@
       
       if(i == 0){
           html.push('<div class="mytdFirst">');
-          html.push('<div><img class="myImgFirst" src="'+ imgUrl + '" /></div>');
-          html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span> </div>');        
+          html.push('<div><img class="myImgFirst" src="'+ imgUrl + '" /><!-- /div  -->');
+          html.push('<!-- div class="ns2-titleFirst"  --><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span> </div>');        
       }else{
-          html.push('<div style="vertical-align:center;">');        
-          html.push('<div><img class="myImg" src="'+ imgUrl + '" /><div>');
-          html.push('<div class="ns2-title"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span></div>');
+          html.push('<div>');        
+          html.push('<div><img class="myImg" src="'+ imgUrl + '" /><!-- /div  -->');
+          html.push('<!--  div class="ns2-title"  --><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span></div>');
       }
        
       html.push('</div>');
