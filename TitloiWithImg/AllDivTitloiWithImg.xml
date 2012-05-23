@@ -121,29 +121,33 @@
         html.push('</div>');
         html.push('</div>');
         
-    for (var i = 0; i < items.length; i++) {
-      var item = items[i];
+        var item = items[0];
+        var myPdate = item.getElementsByTagName('published')[0].firstChild.nodeValue;
+        var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
+        var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
+        var imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
+      
+        html.push('<div class="mytdFirst">');
+        html.push('<div class="divImgFirst"><img class="myImgFirst" src="'+ imgUrl + '" /></div>');
+        html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span> </div>');   
+        html.push('</div>');    
 
+    html.push('<div>');    
+    for (var i = 1; i < items.length; i++) {
       var myPdate = item.getElementsByTagName('published')[0].firstChild.nodeValue;
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
       var imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
         
       html.push('<div>');
-      
-      if(i == 0){
-          html.push('<div class="mytdFirst">');
-          html.push('<div class="divImgFirst"><img class="myImgFirst" src="'+ imgUrl + '" /></div>');
-          html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span> </div>');        
-      }else{
-          html.push('<div>');        
-          html.push('<div class="divImg" style="width:80px;"><img class="myImg" src="'+ imgUrl + '" /></div>');
-          html.push('<div class="ns2-title"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span></div>');
-      }
-       
+      html.push('<div>');        
+      html.push('<div class="divImg" style="width:80px;"><img class="myImg" src="'+ imgUrl + '" /></div>');
+      html.push('<div class="ns2-title"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span></div>');
       html.push('</div>');
       html.push('</div>');
-      }
+    }
+    html.push('</div>');    
+
       html.push('</div></div>');
       content.innerHTML = html.join('');
   
