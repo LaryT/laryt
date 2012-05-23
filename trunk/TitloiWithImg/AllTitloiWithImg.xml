@@ -128,17 +128,17 @@ td{
       var imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
         
       html.push('<tr>');
-      
+      /* <span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span>  */
       if(i == 0){
           html.push('<td class="mytdFirst" colspan="2">');
           html.push('<img class="myImgFirst" src="'+ imgUrl + '" />');
-          html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span></div>');        
+          html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'">'+myTitle+'</a></div>');        
       }else{
           html.push('<td colspan="1">');        
           html.push('<img class="myImg" src="'+ imgUrl + '" />');
           html.push('</td>');
           html.push('<td style="vertical-align:center;">');
-          html.push('<div class="ns2-title"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ myDateMonth(myPdate) +')</span></div>');
+          html.push('<div class="ns2-title"><a target="_blank" href="'+myLink+'">'+myTitle+'</a></div>');
       }
        
       html.push('</td>');
