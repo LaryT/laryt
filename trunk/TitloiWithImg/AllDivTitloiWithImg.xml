@@ -156,9 +156,9 @@ function init() {
         //------  xxx date
         var strPubDate ="";
         var myPubDate = new Date(myPdate);
-        strPubDate = [myPubDate.getDate(), myPubDate.getMonth()+1, myPubDate.getFullYear()].join('/');
+//        strPubDate = [myPubDate.getDate(), myPubDate.getMonth()+1, myPubDate.getFullYear()].join('/');
 //         strPubDate =myPubDate.toLocaleDateString().substr(4);
-/*        
+        
           if(myPubDate.getDate()<10){
             strPubDate = "0"+myPubDate.getDate()+".";
           }else{
@@ -169,7 +169,7 @@ function init() {
           }else{
              strPubDate = strPubDate +(myPubDate.getMonth()+1);
           }   
-*/          
+          
         //--------
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
@@ -196,11 +196,11 @@ function init() {
         
         //------  xxx date
         var strPubDate ="";
-        var myPubDate2 = new Date(myPdate);
-        strPubDate = [myPubDate2.getDate(), myPubDate2.getMonth()+1, myPubDate2.getFullYear()].join('/');
-//        strPubDate = myPubDate2.toLocaleDateString().substr(4); 
+        var myPubDate = new Date(myPdate);
+//       strPubDate = [myPubDate.getDate(), myPubDate2.getMonth()+1, myPubDate2.getFullYear()].join('/');
+//        strPubDate = myPubDate.toLocaleDateString().substr(4); 
 //        alert(strPubDate);
-/*          
+          
           if(myPubDate.getDate()<10){
             strPubDate = "0"+myPubDate.getDate()+".";
           }else{
@@ -211,7 +211,7 @@ function init() {
           }else{
              strPubDate = strPubDate +(myPubDate.getMonth()+1);
           }   
-*/          
+          
         //--------
       
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
