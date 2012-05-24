@@ -155,7 +155,7 @@ function init() {
         var myPdate = item.getElementsByTagName('published')[0].firstChild.nodeValue;
         //------  xxx date
         var strPubDate ="";
-        var myPubDate = new Date(myPdate);
+        var myPubDate = new Date(item.getElementsByTagName('published')[0].firstChild.nodeValue);
 //        strPubDate = [myPubDate.getDate(), myPubDate.getMonth()+1, myPubDate.getFullYear()].join('/');
 //         strPubDate =myPubDate.toLocaleDateString().substr(4);
         
@@ -196,7 +196,7 @@ function init() {
         
         //------  xxx date
         var strPubDate ="";
-        var myPubDate = new Date(myPdate);
+        var myPubDate = new Date(item.getElementsByTagName('published')[0].firstChild.nodeValue);
 //       strPubDate = [myPubDate.getDate(), myPubDate2.getMonth()+1, myPubDate2.getFullYear()].join('/');
 //        strPubDate = myPubDate.toLocaleDateString().substr(4); 
 //        alert(strPubDate);
