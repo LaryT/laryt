@@ -86,7 +86,7 @@
     color:#000000;
 }
 .strDateMonth{    
-     color:#dddddd;
+     color:#333333;
      font-size: 10px;
      font-weight: bold;
 }
@@ -166,9 +166,9 @@ function init() {
 //         strPubDate =myPubDate.toLocaleDateString().substr(4);
         
           if(myPubDate.getDate()<10){
-            strPubDate = "0"+myPubDate.getDate()+"..";
+            strPubDate = "0"+myPubDate.getDate()+".";
           }else{
-            strPubDate = myPubDate.getDate()+"..";
+            strPubDate = myPubDate.getDate()+".";
           }
           if( (myPubDate.getMonth()+1) <10 ) {
              strPubDate = strPubDate+"0"+ (myPubDate.getMonth()+1);
@@ -211,9 +211,9 @@ function init() {
 //        alert(strPubDate);
           
           if(myPubDate.getDate()<10){
-            strPubDate = "0"+myPubDate.getDate()+"..";
+            strPubDate = "0"+myPubDate.getDate()+".";
           }else{
-            strPubDate = myPubDate.getDate()+"..";
+            strPubDate = myPubDate.getDate()+".";
           }
           if( (myPubDate.getMonth()+1) <10 ) {
              strPubDate = strPubDate+"0"+ (myPubDate.getMonth()+1);
