@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" xmlns:media="http://search.yahoo.com/mrss/" ?>
 <Module>
     <ModulePrefs title="__UP_my_name__" height="500" title_url="http://www.grbasket.gr" description="News |::| Display news in your blog or website " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s275/centralTitlesLogo.png" thumbnail="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s125/centralTitlesLogo.png" category="sport" category2="news" > 
     <Require feature="setprefs" />    
@@ -12,10 +12,11 @@
   <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
   <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
  
-<Content type="html" xmlns:media='http://search.yahoo.com/mrss/' >
+<Content type="html">
 <![CDATA[
     
 <style>   
+
 .visVis {
     opacity:1.0; 
    
@@ -136,6 +137,7 @@ transition: 0.2s ease-in-out;
         
 
 function init() {
+  alert(myStrFeed);
   if(myStrFeed!= ''){ 
     var feed = new google.feeds.Feed(myStrFeed);
   }else{
