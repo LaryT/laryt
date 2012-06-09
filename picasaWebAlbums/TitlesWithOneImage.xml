@@ -162,17 +162,17 @@ function init() {
         
      
         //--------
-        alert('ιτεμσ');
+
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
-         alert (myLink );
+
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
-        alert (myTitle);
+
       var imgUrl='';
       if(strMIExplorer){
           // imgUrl= item.getElementsByTagName('content')[0].firstChild.nodeValue.match(/img src=\"([^"]*)\"/i);
           imgUrl= item.getElementsByTagName('media:content')[0].getAttributeNode('url').nodeValue;          
       }else{
-          imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
+          imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content')[0].getAttributeNode('url').nodeValue;
       }
 
         alert (imgUrl);
@@ -201,7 +201,7 @@ function init() {
           // imgUrl= item.getElementsByTagName('content')[0].firstChild.nodeValue.match(/img src=\"([^"]*)\"/i);
           imgUrl= item.getElementsByTagName('media:content')[0].getAttributeNode('url').nodeValue;          
       }else{
-          imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
+          imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content')[0].getAttributeNode('url').nodeValue;
       }
 
       
