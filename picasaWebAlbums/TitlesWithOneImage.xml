@@ -154,9 +154,9 @@ function init() {
         html.push('</div>');
         
         var item = items[0];
-        alert('XML item');
-        var myPdate = item.getElementsByTagName('pubDate')[0].firstChild.nodeValue;
-        alert ('myPdate = '+myPdate);
+        alert('XML item OUT PDATE');
+//        var myPdate = item.getElementsByTagName('pubDate')[0].firstChild.nodeValue;
+//        alert ('myPdate = '+myPdate);
         //------  xxx date
         var strPubDate ="";
          alert (' 2.');
@@ -180,7 +180,7 @@ function init() {
     html.push('<div>');    
     for (var i = 1; i < items.length; i++) {
       var item = items[i];
-      var myPdate = item.getElementsByTagName('pubDate')[0].firstChild.nodeValue;
+//      var myPdate = item.getElementsByTagName('pubDate')[0].firstChild.nodeValue;
         
         //------  xxx date
          var strPubDate ="";
