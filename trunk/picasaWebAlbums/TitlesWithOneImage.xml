@@ -140,10 +140,11 @@ function init() {
         
             strMIExplorer = true;
         }
-         alert (' 1 xml.');
+         alert (' ... 1 xml.');
         // --  var items = result.xmlDocument.getElementsByTagName('entry');
         var items = result.xmlDocument.getElementsByTagName('item');
         
+         alert (' after items = result.xmlDocument.getElementsByTagName(');        
         
         html.push('<div id="myFiDiv" width="300"><div id="myTable" width="300">');
         html.push('<div>');
@@ -156,10 +157,11 @@ function init() {
         var myPdate = item.getElementsByTagName('pubDate')[0].firstChild.nodeValue;
         //------  xxx date
         var strPubDate ="";
+         alert (' 2.');
 /*        
         var entry = result.feed.items[0];
         var myPubDate = new Date(entry.publishedDate);        
-         alert (' 2.');
+        
         
           if(myPubDate.getDate()<10){
             strPubDate = "0"+myPubDate.getDate()+".";
