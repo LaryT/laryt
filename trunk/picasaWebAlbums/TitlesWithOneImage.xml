@@ -121,8 +121,8 @@ function init() {
     var feed = new google.feeds.Feed("https://picasaweb.google.com/data/feed/api/user/105531333335129547555?kind=photo&max-results=10");
   }
   
-//  feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
-  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+  feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
+//  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
   if(myPosoiTitloi !=''){
     feed.setNumEntries(myPosoiTitloi);
   }else{
@@ -154,53 +154,24 @@ function init() {
         html.push('</div>');
         
         var item = items[0];
-        alert('item');
+        alert('XML item');
         var myPdate = item.getElementsByTagName('pubDate')[0].firstChild.nodeValue;
         alert ('myPdate = '+myPdate);
         //------  xxx date
         var strPubDate ="";
          alert (' 2.');
-/*        
-        var entry = result.feed.items[0];
-        var myPubDate = new Date(entry.publishedDate);        
-        
-        
-          if(myPubDate.getDate()<10){
-            strPubDate = "0"+myPubDate.getDate()+".";
-          }else{
-            strPubDate = myPubDate.getDate()+".";
-          }
-          if( (myPubDate.getMonth()+1) <10 ) {
-             strPubDate = strPubDate+"0"+ (myPubDate.getMonth()+1);
-          }else{
-             strPubDate = strPubDate +(myPubDate.getMonth()+1);
-          }   
-  */        
+     
         //--------
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
       var imgUrl='';
       
       imgUrl = item.getElementsByTagName('enclosure')[0].getAttributeNode('url').nodeValue;
-      
-      //---------------- se sxolia giati yparxei allos tropos na pareis to url
-/*         
-      if(strMIExplorer){
-          imgUrl= item.getElementsByTagName('content')[0].firstChild.nodeValue.match(/img src=\"([^"]*)\"/i);
-      }else{
-          imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
-      }
-*/      
+
+    
       
       
-      html.push('<div class="mytdFirst">');
-/*      
-      if(strMIExplorer){
-        html.push('<div class="divImgFirst"><'+ imgUrl + '" class="myImgFirst" /></div>');
-      }else{
-        html.push('<div class="divImgFirst"><img class="myImgFirst" src="'+ imgUrl + '" /></div>');
-      }      
-*/      
+      html.push('<div class="mytdFirst">');    
       html.push('<div class="divImgFirst"><img class="myImgFirst" src="'+ imgUrl + '" /></div>');
         
       html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ strPubDate +')</span> </div>');   
@@ -213,46 +184,16 @@ function init() {
         
         //------  xxx date
          var strPubDate ="";
-         /*
-         entry = result.feed.entries[i]; 
-         myPubDate = new Date(entry.publishedDate);        
-
-          
-          if(myPubDate.getDate()<10){
-            strPubDate = "0"+myPubDate.getDate()+".";
-          }else{
-            strPubDate = myPubDate.getDate()+".";
-          }
-          if( (myPubDate.getMonth()+1) <10 ) {
-             strPubDate = strPubDate+"0"+ (myPubDate.getMonth()+1);
-          }else{
-             strPubDate = strPubDate +(myPubDate.getMonth()+1);
-          }   
-          */
         //--------
       
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
       imgUrl = item.getElementsByTagName('enclosure')[0].getAttributeNode('url').nodeValue;
-      /*
-      if(strMIExplorer){
-          imgUrl= item.getElementsByTagName('content')[0].firstChild.nodeValue.match(/img src=\"([^"]*)\"/i);
-      }else{
-          imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
-      } 
-      */    
       
       html.push('<div class="divRowWrap">');
       html.push('<div>');        
       
-      /*
-      if(strMIExplorer){
-        html.push('<div class="divImg"><'+ imgUrl + '" class="myImg" /></div>');
-      }else{
-        html.push('<div class="divImg"><img class="myImg" src="'+ imgUrl + '" /></div>');
-      } 
-      */    
-        html.push('<div class="divImg"><img class="myImg" src="'+ imgUrl + '" /></div>');
+      html.push('<div class="divImg"><img class="myImg" src="'+ imgUrl + '" /></div>');
 
       html.push('<div class="ns2-title"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ strPubDate +')</span></div>');
       html.push('</div>');
@@ -264,9 +205,10 @@ function init() {
       content.innerHTML = html.join('');
 
 
-      if(myStrTitle != ''){document.getElementById("bigTitleID").innerHTML = myStrTitle;}  
+      if(myStrTitle != '')
+      {document.getElementById("bigTitleID").innerHTML = myStrTitle;}  
           
-     }
+    }
 });//---end fnc feedload
 
   
