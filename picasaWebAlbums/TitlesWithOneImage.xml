@@ -12,7 +12,7 @@
   <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
   <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
  
-<Content type="html">
+<Content type="html" xmlns:media='http://search.yahoo.com/mrss/' >
 <![CDATA[
     
 <style>   
@@ -168,8 +168,13 @@ function init() {
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
         alert (myTitle);
       var imgUrl='';
-      
-      imgUrl = item.getElementsByTagName('enclosure')[0].getAttributeNode('url').nodeValue;
+      if(strMIExplorer){
+          // imgUrl= item.getElementsByTagName('content')[0].firstChild.nodeValue.match(/img src=\"([^"]*)\"/i);
+          imgUrl= item.getElementsByTagName('media:content')[0].getAttributeNode('url').nodeValue;          
+      }else{
+          imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
+      }
+
         alert (imgUrl);
     
       
@@ -191,7 +196,14 @@ function init() {
       
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
-      imgUrl = item.getElementsByTagName('enclosure')[0].getAttributeNode('url').nodeValue;
+      
+      if(strMIExplorer){
+          // imgUrl= item.getElementsByTagName('content')[0].firstChild.nodeValue.match(/img src=\"([^"]*)\"/i);
+          imgUrl= item.getElementsByTagName('media:content')[0].getAttributeNode('url').nodeValue;          
+      }else{
+          imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
+      }
+
       
       html.push('<div class="divRowWrap">');
       html.push('<div>');        
