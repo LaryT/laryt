@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-    <ModulePrefs title="__UP_my_name__" height="500" title_url="http://www.grbasket.gr" description="News |::| Display news in your blog or website " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s275/centralTitlesLogo.png" thumbnail="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s125/centralTitlesLogo.png" category="sport" category2="news" > 
+    <ModulePrefs title="__UP_my_name__" height="500" title_url="http://www.grbasket.gr" description="News |::| Display photos in your blog or website from a picasa web photo-rss " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s275/centralTitlesLogo.png" thumbnail="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s125/centralTitlesLogo.png" category="sport" category2="news" > 
     <Require feature="setprefs" />    
   </ModulePrefs>
   <UserPref name="my_name" display_name="Name" default_value="Titles Img from PicasaWeb" />
@@ -249,7 +249,7 @@ function init() {
  
 </script>
 
-<div id="content">..2</div>
+<div id="content">.|.</div>
 
     
     ]]>
