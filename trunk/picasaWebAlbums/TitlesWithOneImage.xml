@@ -140,7 +140,7 @@ function init() {
         
             strMIExplorer = true;
         }
-         alert (' 1.');
+         alert (' 1 xml.');
         // --  var items = result.xmlDocument.getElementsByTagName('entry');
         var items = result.xmlDocument.getElementsByTagName('item');
         
@@ -156,7 +156,7 @@ function init() {
         var myPdate = item.getElementsByTagName('pubDate')[0].firstChild.nodeValue;
         //------  xxx date
         var strPubDate ="";
-        var entry = result.feed.entries[0];
+        var entry = result.feed.items[0];
         var myPubDate = new Date(entry.publishedDate);        
          alert (' 2.');
         
