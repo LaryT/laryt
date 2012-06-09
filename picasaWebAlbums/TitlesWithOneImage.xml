@@ -141,9 +141,9 @@ function init() {
   if(myStrFeed!= ''){ 
     var feed = new google.feeds.Feed(myStrFeed);
   }else{
-    var feed = new google.feeds.Feed("https://picasaweb.google.com/data/feed/api/user/105531333335129547555?kind=photo&max-results=10");
+    var feed = new google.feeds.Feed("https://picasaweb.google.com/data/feed/api/user/105531333335129547555/albumid/5751354468699377921?imgmax=640");
   }
-  alert(myStrFeed);
+
   feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
 //---  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
   if(myPosoiTitloi !=''){
@@ -187,19 +187,19 @@ function init() {
           html.push('</div>');          
           html.push('</div>');
          html.push('<table style="width:100%;"><tbody><hr>');
-        } //--- else{
+        } 
              
            html.push('<tr class="trClass" onclick="javascript:theMouseClick(&quot;myImg_'+i+'&quot;,&quot;'+myTitle+'&quot;);return true;">');
            html.push('<td><img class="myImg" id="myImg_'+i+'"src="'+ imgUrl + '" /></td>');
            html.push('<td><h4 class="ns2-title"  style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">'+myTitle+'</h4></td>');
            html.push('</tr>');
-        //  }//--- endif an einai proto h ta ypoloipa
+
     }//--- end for-loop
     html.push('</tbody></table>');
     content.innerHTML = html.join('');
     }//--- end if erorr
-       
-}//--- end function feedLoaded
+
+
 
 
 function theClick(strUrl){
@@ -235,6 +235,13 @@ function theMouseOver(strUrl){
         //document.getElementById('topImg_0').src = document.getElementById(strUrl).src;
         //document.getElementById('imgCentralYpotitlos').innerHTML=strTitle;
 } 
+
+
+
+
+}//--- end function feedLoaded
+
+
 
 
 } //-- end init
