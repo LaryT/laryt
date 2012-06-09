@@ -137,7 +137,7 @@ transition: 0.2s ease-in-out;
 //-----------------------
 
 function theClick(strUrl){
-        alert(strUrl);
+        // alert(strUrl);
 }
         
 function theTopMouseOver(strUrl){
@@ -174,16 +174,14 @@ function theMouseOver(strUrl){
 
 function init() {
 
-
   if(myStrFeed!= ''){ 
     var feed = new google.feeds.Feed(myStrFeed);
   }else{
     var feed = new google.feeds.Feed("https://picasaweb.google.com/data/feed/api/user/105531333335129547555/albumid/5751354468699377921?imgmax=640");
   }
-  alert(myStrFeed);
   
   feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
-//---  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+  //---  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
   if(myPosoiTitloi !=''){
     feed.setNumEntries(myPosoiTitloi);
   }else{
