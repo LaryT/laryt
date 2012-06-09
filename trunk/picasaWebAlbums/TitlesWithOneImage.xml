@@ -144,7 +144,7 @@ function init() {
         // --  var items = result.xmlDocument.getElementsByTagName('entry');
         var items = result.xmlDocument.getElementsByTagName('item');
         
-         alert (' after items = result.xmlDocument.getElementsByTagName item');        
+              
         
         html.push('<div id="myFiDiv" width="300"><div id="myTable" width="300">');
         html.push('<div>');
@@ -154,6 +154,7 @@ function init() {
         html.push('</div>');
         
         var item = items[0];
+        alert('item');
         var myPdate = item.getElementsByTagName('pubDate')[0].firstChild.nodeValue;
         alert ('myPdate = '+myPdate);
         //------  xxx date
