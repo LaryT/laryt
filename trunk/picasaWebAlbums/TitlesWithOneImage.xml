@@ -137,12 +137,13 @@ function init() {
         var html =[];
         var strMIExplorer = false;
         if(navigator.appName =='Microsoft Internet Explorer'){
-            // alert (navigator.appName +' == Microsoft Internet Explorer');
+        
             strMIExplorer = true;
         }
-        
+         alert (' 1.');
         // --  var items = result.xmlDocument.getElementsByTagName('entry');
         var items = result.xmlDocument.getElementsByTagName('item');
+        
         
         html.push('<div id="myFiDiv" width="300"><div id="myTable" width="300">');
         html.push('<div>');
@@ -157,7 +158,7 @@ function init() {
         var strPubDate ="";
         var entry = result.feed.entries[0];
         var myPubDate = new Date(entry.publishedDate);        
-
+         alert (' 2.');
         
           if(myPubDate.getDate()<10){
             strPubDate = "0"+myPubDate.getDate()+".";
