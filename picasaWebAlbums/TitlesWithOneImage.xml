@@ -121,8 +121,8 @@ function init() {
     var feed = new google.feeds.Feed("https://picasaweb.google.com/data/feed/api/user/105531333335129547555?kind=photo&max-results=10");
   }
   
-  feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
-//  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+//  feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
+  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
   if(myPosoiTitloi !=''){
     feed.setNumEntries(myPosoiTitloi);
   }else{
@@ -156,6 +156,7 @@ function init() {
         var myPdate = item.getElementsByTagName('pubDate')[0].firstChild.nodeValue;
         //------  xxx date
         var strPubDate ="";
+/*        
         var entry = result.feed.items[0];
         var myPubDate = new Date(entry.publishedDate);        
          alert (' 2.');
@@ -170,7 +171,7 @@ function init() {
           }else{
              strPubDate = strPubDate +(myPubDate.getMonth()+1);
           }   
-          
+  */        
         //--------
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
@@ -208,6 +209,7 @@ function init() {
         
         //------  xxx date
          var strPubDate ="";
+         /*
          entry = result.feed.entries[i]; 
          myPubDate = new Date(entry.publishedDate);        
 
@@ -222,7 +224,7 @@ function init() {
           }else{
              strPubDate = strPubDate +(myPubDate.getMonth()+1);
           }   
-          
+          */
         //--------
       
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
