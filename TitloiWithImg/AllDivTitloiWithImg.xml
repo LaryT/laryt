@@ -13,7 +13,7 @@
   <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
   <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
  
-<Content type="html" xmlns:media='http://search.yahoo.com/mrss/'>
+<Content type="html">
 <![CDATA[
     
 <style>   
@@ -124,8 +124,8 @@ function init() {
     var feed = new google.feeds.Feed("http://www.blogger.com/feeds/1250534396920824067/posts/default/-/women");
   }
   
-  feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
-//  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+  // feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
+ feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
   if(myPosoiTitloi !=''){
     feed.setNumEntries(myPosoiTitloi);
   }else{
@@ -181,22 +181,20 @@ function init() {
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
       var imgUrl='';
       if(strMIExplorer){
-          // imgUrl= item.getElementsByTagName('content')[0].firstChild.nodeValue.match(/img src=\"([^"]*)\"/i);
-          imgUrl= item.getElementsByTagName('media:content')[0].getAttributeNode('url').nodeValue;          
+          imgUrl= item.getElementsByTagName('content')[0].firstChild.nodeValue.match(/img src=\"([^"]*)\"/i);
+          // imgUrl= item.getElementsByTagName('media:content')[0].getAttributeNode('url').nodeValue;          
       }else{
-          imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content')[0].getAttributeNode('url').nodeValue;
+          imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
       }
       html.push('<div class="mytdFirst">');
       
-/*
+
       if(strMIExplorer){
         html.push('<div class="divImgFirst"><'+ imgUrl + '" class="myImgFirst" /></div>');
       }else{
         html.push('<div class="divImgFirst"><img class="myImgFirst" src="'+ imgUrl + '" /></div>');
       }      
-      
-*/
-      html.push('<div class="divImgFirst"><img class="myImgFirst" src="'+ imgUrl + '" /></div>');
+
       html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ strPubDate +')</span> </div>');   
       html.push('</div>');    
 
@@ -231,21 +229,20 @@ function init() {
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
       if(strMIExplorer){
-          // imgUrl= item.getElementsByTagName('content')[0].firstChild.nodeValue.match(/img src=\"([^"]*)\"/i);
-          imgUrl= item.getElementsByTagName('media:content')[0].getAttributeNode('url').nodeValue;          
+          imgUrl= item.getElementsByTagName('content')[0].firstChild.nodeValue.match(/img src=\"([^"]*)\"/i);
+          // imgUrl= item.getElementsByTagName('media:content')[0].getAttributeNode('url').nodeValue;          
       }else{
-          imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content')[0].getAttributeNode('url').nodeValue;
+          imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
       }      
       html.push('<div class="divRowWrap">');
       html.push('<div>');      
-/*      
+
       if(strMIExplorer){
         html.push('<div class="divImg"><'+ imgUrl + '" class="myImg" /></div>');
       }else{
         html.push('<div class="divImg"><img class="myImg" src="'+ imgUrl + '" /></div>');
       }      
-*/
-      html.push('<div class="divImg"><img class="myImg" src="'+ imgUrl + '" /></div>');
+
       html.push('<div class="ns2-title"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ strPubDate +')</span></div>');
       html.push('</div>');
       html.push('</div>');
