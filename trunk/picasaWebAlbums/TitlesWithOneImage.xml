@@ -201,6 +201,9 @@ function init() {
     }//--- end if erorr
 
 
+});//--- end function feedLoaded
+
+
 
 
 function theClick(strUrl){
@@ -240,11 +243,6 @@ function theMouseOver(strUrl){
 
 
 
-});//--- end function feedLoaded
-
-
-
-
 } //-- end init
 
   gadgets.util.registerOnLoadHandler(init); 
@@ -252,7 +250,7 @@ function theMouseOver(strUrl){
  
 </script>
 
-<div id="content">..|</div>
+<div id="content">..2</div>
 
     
     ]]>
