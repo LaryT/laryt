@@ -132,18 +132,56 @@ transition: 0.2s ease-in-out;
 
       var myBgColorTitle = prefs.getString("my_BgColorTitle"); 
     
-      
 
+
+//-----------------------
+
+function theClick(strUrl){
+        alert(strUrl);
+}
+        
+function theTopMouseOver(strUrl){
+        document.getElementById(strUrl).className='visHid'; 
+        document.getElementById("imgCentralYpotitlos").style.top="-100px";
+        document.getElementById("imgCentralYpotitlos").style.color="white";
+        document.getElementById("imgCentralYpotitlos").style.fontSize ="10pt";
+        document.getElementById("imgCentralYpotitlos").style.backgroundColor="#cccccc";        
+        document.getElementById("imgCentralYpotitlos").style.backgroundColor="rgba(0, 0, 0, .6)";         
+        
+}  
+        
+function theTopMouseOut(strUrl){
+        document.getElementById(strUrl).className='visVis';
+        document.getElementById("imgCentralYpotitlos").style.top="0px";
+        document.getElementById("imgCentralYpotitlos").style.color="black";
+        document.getElementById("imgCentralYpotitlos").style.fontSize ="20px";        
+        document.getElementById("imgCentralYpotitlos").style.backgroundColor="transparent";
+        document.getElementById("imgCentralYpotitlos").style.backgroundColor="rgba(0, 0, 0, .0)";         
+
+
+}        
+
+function theMouseClick(strUrl,strTitle){
+    document.getElementById('topImg_0').src = document.getElementById(strUrl).src;
+    document.getElementById('imgCentralYpotitlos').innerHTML=strTitle;
+}      
+function theMouseOver(strUrl){
+        //document.getElementById('topImg_0').src = document.getElementById(strUrl).src;
+        //document.getElementById('imgCentralYpotitlos').innerHTML=strTitle;
+} 
+
+//---------------------- 
 
 function init() {
 
-  alert('.2.');
+
   if(myStrFeed!= ''){ 
     var feed = new google.feeds.Feed(myStrFeed);
   }else{
     var feed = new google.feeds.Feed("https://picasaweb.google.com/data/feed/api/user/105531333335129547555/albumid/5751354468699377921?imgmax=640");
   }
-
+  alert(myStrFeed);
+  
   feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
 //---  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
   if(myPosoiTitloi !=''){
@@ -202,45 +240,6 @@ function init() {
 
 
 });//--- end function feedLoaded
-
-
-
-
-function theClick(strUrl){
-        alert(strUrl);
-}
-        
-function theTopMouseOver(strUrl){
-        document.getElementById(strUrl).className='visHid'; 
-        document.getElementById("imgCentralYpotitlos").style.top="-100px";
-        document.getElementById("imgCentralYpotitlos").style.color="white";
-        document.getElementById("imgCentralYpotitlos").style.fontSize ="10pt";
-        document.getElementById("imgCentralYpotitlos").style.backgroundColor="#cccccc";        
-        document.getElementById("imgCentralYpotitlos").style.backgroundColor="rgba(0, 0, 0, .6)";         
-        
-}  
-        
-function theTopMouseOut(strUrl){
-        document.getElementById(strUrl).className='visVis';
-        document.getElementById("imgCentralYpotitlos").style.top="0px";
-        document.getElementById("imgCentralYpotitlos").style.color="black";
-        document.getElementById("imgCentralYpotitlos").style.fontSize ="20px";        
-        document.getElementById("imgCentralYpotitlos").style.backgroundColor="transparent";
-        document.getElementById("imgCentralYpotitlos").style.backgroundColor="rgba(0, 0, 0, .0)";         
-
-
-}        
-
-function theMouseClick(strUrl,strTitle){
-    document.getElementById('topImg_0').src = document.getElementById(strUrl).src;
-    document.getElementById('imgCentralYpotitlos').innerHTML=strTitle;
-}      
-function theMouseOver(strUrl){
-        //document.getElementById('topImg_0').src = document.getElementById(strUrl).src;
-        //document.getElementById('imgCentralYpotitlos').innerHTML=strTitle;
-} 
-
-
 
 
 } //-- end init
