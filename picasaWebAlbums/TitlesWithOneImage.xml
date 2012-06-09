@@ -12,7 +12,7 @@
   <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
   <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
  
-<Content type="html">
+<Content type="html" xmlns:media='http://search.yahoo.com/mrss/'>
 <![CDATA[
     
 <style>   
@@ -133,8 +133,7 @@ transition: 0.2s ease-in-out;
       var myBgColorTitle = prefs.getString("my_BgColorTitle"); 
     
       
-       alert('..');
-        
+
 
 function init() {
 
@@ -253,7 +252,7 @@ function theMouseOver(strUrl){
  
 </script>
 
-<div id="content">|..+</div>
+<div id="content">..|</div>
 
     
     ]]>
