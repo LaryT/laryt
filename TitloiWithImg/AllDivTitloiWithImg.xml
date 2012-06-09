@@ -124,8 +124,8 @@ function init() {
     var feed = new google.feeds.Feed("http://www.blogger.com/feeds/1250534396920824067/posts/default/-/women");
   }
   
-//  feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
-  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+  feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
+//  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
   if(myPosoiTitloi !=''){
     feed.setNumEntries(myPosoiTitloi);
   }else{
