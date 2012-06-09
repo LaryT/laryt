@@ -137,7 +137,7 @@ transition: 0.2s ease-in-out;
         
 
 function init() {
-  alert(myStrFeed);
+  alert('..');
   if(myStrFeed!= ''){ 
     var feed = new google.feeds.Feed(myStrFeed);
   }else{
@@ -244,7 +244,7 @@ function theMouseOver(strUrl){
  
 </script>
 
-<div id="content">.|.|</div>
+<div id="content">|..|</div>
 
     
     ]]>
