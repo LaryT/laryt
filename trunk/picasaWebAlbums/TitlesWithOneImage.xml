@@ -5,7 +5,7 @@
   </ModulePrefs>
   <UserPref name="my_name" display_name="Name" default_value="All Div Titles with Img" />
 
-  <UserPref name="my_StrFeed" display_name="Feed,RSS:" default_value="https://picasaweb.google.com/data/feed/api/user/105531333335129547555?kind=photo&max-results=10" />    
+  <UserPref name="my_StrFeed" display_name="Feed,RSS:" default_value="" />    
   <UserPref name="my_ColorTitle" display_name="Color:" default_value="#BC0202" />
   <UserPref name="my_StrTitle" display_name="Title :" default_value="NEWS" />
   <UserPref name="my_StrWidth" display_name="Width:" default_value="300" />  
@@ -118,7 +118,7 @@ function init() {
   if(myStrFeed!= ''){ 
     var feed = new google.feeds.Feed(myStrFeed);
   }else{
-    var feed = new google.feeds.Feed("http://www.blogger.com/feeds/1250534396920824067/posts/default/-/women");
+    var feed = new google.feeds.Feed("https://picasaweb.google.com/data/feed/api/user/105531333335129547555?kind=photo&max-results=10");
   }
   
 //  feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
