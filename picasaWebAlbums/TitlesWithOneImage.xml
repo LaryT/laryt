@@ -3,7 +3,7 @@
     <ModulePrefs title="__UP_my_name__" height="500" title_url="http://www.grbasket.gr" description="News |::| Display news in your blog or website " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s275/centralTitlesLogo.png" thumbnail="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s125/centralTitlesLogo.png" category="sport" category2="news" > 
     <Require feature="setprefs" />    
   </ModulePrefs>
-  <UserPref name="my_name" display_name="Name" default_value="Titles-Img from PicasaWeb" />
+  <UserPref name="my_name" display_name="Name" default_value="Titles Img from PicasaWeb" />
 
   <UserPref name="my_StrFeed" display_name="Feed,RSS:" default_value="" />    
   <UserPref name="my_ColorTitle" display_name="Color:" default_value="#BC0202" />
@@ -133,11 +133,12 @@ transition: 0.2s ease-in-out;
       var myBgColorTitle = prefs.getString("my_BgColorTitle"); 
     
       
-      
+       alert('..');
         
 
 function init() {
-  alert('..');
+
+  alert('.2.');
   if(myStrFeed!= ''){ 
     var feed = new google.feeds.Feed(myStrFeed);
   }else{
@@ -153,6 +154,7 @@ function init() {
   }
   
   feed.load( function(result) {
+  
   if (!result.error) {
         // Get and clear our content div.
         var content = document.getElementById('content');
@@ -239,7 +241,7 @@ function theMouseOver(strUrl){
 
 
 
-}//--- end function feedLoaded
+});//--- end function feedLoaded
 
 
 
