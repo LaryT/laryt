@@ -154,20 +154,23 @@ function init() {
         html.push('</div>');
         
         var item = items[0];
-        alert('XML item OUT PDATE');
+        
 //        var myPdate = item.getElementsByTagName('pubDate')[0].firstChild.nodeValue;
 //        alert ('myPdate = '+myPdate);
         //------  xxx date
         var strPubDate ="";
-         alert (' 2.');
+        
      
         //--------
+        alert('ιτεμσ');
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
+         alert (myLink );
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
+        alert (myTitle);
       var imgUrl='';
       
       imgUrl = item.getElementsByTagName('enclosure')[0].getAttributeNode('url').nodeValue;
-
+        alert (imgUrl);
     
       
       
