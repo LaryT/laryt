@@ -122,7 +122,7 @@ function init() {
   }
   
   feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
-//  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+//---  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
   if(myPosoiTitloi !=''){
     feed.setNumEntries(myPosoiTitloi);
   }else{
@@ -141,8 +141,8 @@ function init() {
             strMIExplorer = true;
         }
 
-        // --  var items = result.xmlDocument.getElementsByTagName('entry');
-        var items = result.xmlDocument.getElementsByTagName('item');
+        var items = result.xmlDocument.getElementsByTagName('entry');
+        //-- var items = result.xmlDocument.getElementsByTagName('item');
         
               
         
