@@ -9,6 +9,7 @@
   <UserPref name="my_ColorTitle" display_name="Color:" default_value="#BC0202" />
   <UserPref name="my_StrTitle" display_name="Title :" default_value="NEWS" />
   <UserPref name="my_StrHeight" display_name="Image Height:" default_value="300" />  
+  <UserPref name="my_PhotoListHeight" display_name="Photo List Height:" default_value="200" />    
   <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
   <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
  
@@ -16,7 +17,6 @@
 <![CDATA[
     
 <style>   
-
 .visVis {
     opacity:1.0; 
    
@@ -111,6 +111,20 @@ transition: 0.5s ease-in-out;
 transition: 0.2s ease-in-out;     
 }
 
+#exoterikoDiv{
+ border-top:1px solid gray;
+ border-bottom:1px solid gray;    
+}
+
+#periexomenaDivCollapseTableID{
+  height: 200px;
+  background-color : #f8f8f8;
+  border-top:1px solid gray;       
+  border-bottom:1px solid gray;      
+  overflow-x: hidden;
+  overflow-y: visible;  
+}    
+
   
 </style>   
      
@@ -127,6 +141,8 @@ transition: 0.2s ease-in-out;
       var myColorTitle = prefs.getString("my_ColorTitle");
       var myStrTitle = prefs.getString("my_StrTitle");
       var myStrHeight = prefs.getString("my_StrHeight");
+      var myPhotoListHeight= prefs.getString("my_PhotoListHeight");
+      
       var myStrFeed = prefs.getString("my_StrFeed");    
       var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
 
@@ -207,7 +223,7 @@ function init() {
    var items = result.xmlDocument.getElementsByTagName('entry');
     // Loop through our items
     html.push('<div>');        
-    html.push('<div id="exoterikoDiv" style="border:1px solid blue;">');
+    html.push('<div id="exoterikoDiv">');
     for (var i = 0; i < items.length; i++) {
         var item = items[i];
         if(strMIExplorer){
@@ -225,7 +241,7 @@ function init() {
           html.push('<h3 id="imgCentralYpotitlos">'+myTitle+'</h3>');  
           html.push('</div>');          
           html.push('</div>');
-         html.push('<table style="width:100%;border-spacing: 0px;"><tbody><hr>');
+         html.push('<div id="periexomenaDivCollapseTableID"><table style="width:100%;border-spacing: 0px;"><tbody>');
         } 
              
            html.push('<tr class="trClass" onclick="javascript:theMouseClick(&quot;myImg_'+i+'&quot;,&quot;'+myTitle+'&quot;);return true;">');
@@ -234,12 +250,12 @@ function init() {
            html.push('</tr>');
 
     }//--- end for-loop
-    html.push('</tbody></table>');
+    html.push('</tbody></table></div>');
     content.innerHTML = html.join('');
     }//--- end if erorr
     
     document.getElementById("topImg_0").style.height=myStrHeight;
-
+    document.getElementById("periexomenaDivCollapseTableID").style.height=myPhotoListHeight;
 });//--- end function feedLoaded
 
 
