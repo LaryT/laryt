@@ -156,7 +156,7 @@ function theTopMouseOut(strUrl){
         document.getElementById("imgCentralYpotitlos").style.top="0px";
         document.getElementById("imgCentralYpotitlos").style.color="black";
         document.getElementById("imgCentralYpotitlos").style.fontSize ="20px";  
-          document.getElementById("imgCentralYpotitlos").style.overflow="hidden";      
+        document.getElementById("imgCentralYpotitlos").style.overflow="hidden";      
         document.getElementById("imgCentralYpotitlos").style.backgroundColor="transparent";
         document.getElementById("imgCentralYpotitlos").style.backgroundColor="rgba(0, 0, 0, .0)";         
 
@@ -225,7 +225,7 @@ function init() {
           html.push('<h3 id="imgCentralYpotitlos">'+myTitle+'</h3>');  
           html.push('</div>');          
           html.push('</div>');
-         html.push('<table style="width:100%;"><tbody><hr>');
+         html.push('<table style="width:100%;border-spacing: 0px;"><tbody><hr>');
         } 
              
            html.push('<tr class="trClass" onclick="javascript:theMouseClick(&quot;myImg_'+i+'&quot;,&quot;'+myTitle+'&quot;);return true;">');
