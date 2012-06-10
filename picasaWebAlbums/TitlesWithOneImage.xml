@@ -8,7 +8,7 @@
   <UserPref name="my_StrFeed" display_name="Feed,RSS:" default_value="" />    
   <UserPref name="my_ColorTitle" display_name="Color:" default_value="#BC0202" />
   <UserPref name="my_StrTitle" display_name="Title :" default_value="NEWS" />
-  <UserPref name="my_StrWidth" display_name="Width:" default_value="300" />  
+  <UserPref name="my_StrHeight" display_name="Image Height:" default_value="300" />  
   <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
   <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
  
@@ -126,7 +126,7 @@ transition: 0.2s ease-in-out;
       
       var myColorTitle = prefs.getString("my_ColorTitle");
       var myStrTitle = prefs.getString("my_StrTitle");
-      var myStrWidth = prefs.getString("my_StrWidth");
+      var myStrHeight = prefs.getString("my_StrHeight");
       var myStrFeed = prefs.getString("my_StrFeed");    
       var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
 
@@ -237,7 +237,8 @@ function init() {
     html.push('</tbody></table>');
     content.innerHTML = html.join('');
     }//--- end if erorr
-
+    
+    document.getElementById("topImg_0").style.height=myStrHeight;
 
 });//--- end function feedLoaded
 
