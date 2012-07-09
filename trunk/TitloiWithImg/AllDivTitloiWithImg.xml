@@ -82,7 +82,7 @@
     color:#BC0202;
     text-decoration:none;
     text-shadow : gray 0px 3px 3px;
-    -webkit-transition: color, 2s, padding-left, 500ms;
+    -webkit-transition: color 2s, padding-left 500ms;
     
 }
 .ns2-title a:hover, .ns2-titleFirst a:hover{
