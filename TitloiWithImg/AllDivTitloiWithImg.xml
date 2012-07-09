@@ -81,12 +81,15 @@
 .ns2-title a, .ns2-titleFirst a{
     color:#BC0202;
     text-decoration:none;
-     text-shadow : gray 0px 3px 3px;
+    text-shadow : gray 0px 3px 3px;
+    -webkit-transition: color, 2s, padding-left, 500ms;
     
 }
 .ns2-title a:hover, .ns2-titleFirst a:hover{
     color:#000000;
-   text-shadow : black 3px 0px 20px;
+    text-shadow : black 3px 0px 20px;
+    padding-left: 10px;
+    
 }
 .strDateMonth{    
      color:#333333;
