@@ -81,12 +81,12 @@
 .ns2-title a, .ns2-titleFirst a{
     color:#BC0202;
     text-decoration:none;
-     text-shadow : gray 0px 5px 5px;
+     text-shadow : gray 0px 3px 3px;
     
 }
 .ns2-title a:hover, .ns2-titleFirst a:hover{
     color:#000000;
-   text-shadow : black 5px 0px 20px;
+   text-shadow : black 3px 0px 20px;
 }
 .strDateMonth{    
      color:#333333;
