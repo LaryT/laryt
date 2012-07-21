@@ -27,6 +27,8 @@ h2{
   margin-top:15px;
   padding: 0px 10px 10px 20px;
   font-size:68px;
+  
+  -webkit-transform:rotate(180deg);
 }
 
 img{
