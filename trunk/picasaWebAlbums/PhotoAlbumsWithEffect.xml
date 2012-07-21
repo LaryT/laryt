@@ -93,9 +93,11 @@ function init() {
     
     
      var myButton = document.createElement("button");
+     alert('koy');
+     myButton.style.innerHTML = "reset"
      myButton.setAttribute('top', '1px');
      myButton.setAttribute('left', '250px');
-     
+     alert('koy2');
      myButton.addEventListener('click',epanaforaPhotos,false);
      
      body.appendChild(myButton);
