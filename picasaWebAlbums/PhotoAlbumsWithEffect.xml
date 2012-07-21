@@ -96,6 +96,9 @@ function init() {
     <!-- button name="button">Click me</button  -->
      var myButton = document.createElement("button");
      myButton.addEventListener('click',epanaforaPhotos,false);
+     myButton.style.top = 1;
+     myButton.style.left = 250;
+     
      body.appendChild(myButton);
      
     
