@@ -44,11 +44,15 @@ img{
   border: 1px solid #666666;
   background-color:white;
   
-  transition-property:transform, top, left;
+  transition-property: top, left, transform;
   transition-duration:3s;
   
   -webkit-transition-property: -webkit-transform, top, left;
   -webkit-transition-duration:3s;
+  
+  -o-transition-property: top, left, transform; 
+  -o-transition-duration: 3s; 
+  
 }
 </style>   
      
@@ -127,8 +131,11 @@ function init() {
         var item = items[i];
         
         var photo = document.createElement("img");
-        var transform = "-webkit-transform:rotate("+rotation+"deg) scale(1.1)";
+        var transform = "-webkit-transform:rotate("+rotation+"deg) scale(1.1);-moz-transform:rotate("+rotation+"deg) scale(1.1);transform:rotate("+rotation+"deg) scale(1.1)";
         photo.setAttribute("style", transform);
+        
+        // transform= "-moz-transform:rotate("+rotation+"deg) scale(1.1)";
+        // photo.setAttribute("style", transform);
         
         if(strMIExplorer){
             photo.setAttribute("src", item.getElementsByTagName('media:content')[0].getAttributeNode('url').nodeValue);         
