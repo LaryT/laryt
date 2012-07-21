@@ -16,7 +16,11 @@
 <Content type="html" xmlns:media='http://search.yahoo.com/mrss/'>
 <![CDATA[
     
-<style>   
+<style> 
+body{
+  background:lime;
+}
+
 #content{
   margin:0px;
   background: -webkit-gradient(linear, left top, left bottom, gray, white);
