@@ -22,6 +22,12 @@ body{
   margin:0px;
   background: -webkit-gradient(linear, left top, left bottom, from(#8888ff), to(white));
 }
+h2{
+  height:60px;
+  margin-top:15px;
+  padding: 0px 10px 10px 20px;
+  font-size:68px;
+}
 
 img{
   position:absolute;
@@ -86,25 +92,26 @@ function init() {
         }
     // Get all items returned.
     var items = result.xmlDocument.getElementsByTagName('entry');
-
     var size = items.length-1;
     var body = document.getElementById('content');
     var rotation = -30;
     
     
      var myButton = document.createElement("button");
-
-
      myButton.setAttribute('name', 'button');  
-
      myButton.style.position='absolute';
-     myButton.style.top=180;
-     myButton.style.left= 250;
-     myButton.innerHTML = "reset"
-
+     myButton.style.top = 250;
+     myButton.style.left = 300;
+     myButton.innerHTML = "reset - επανάληψη";
      myButton.addEventListener('click',epanaforaPhotos,false);
-     
      body.appendChild(myButton);
+     
+     var myH2 = document.createElement("h2");
+     myH2.setAttribute('id','myH2ID');
+     myH2.innerHTML = myStrTitle;
+     myH2.addEventListener('click',myMiniHelp,false);
+     body.appendChild(myH2);
+     
      
     
     // Loop through our items and add photos
@@ -138,6 +145,13 @@ function init() {
 
 
 } //-- end init
+
+function myMiniHelp(){
+    var myI =document.getElementsByTagName('img');
+    var mySize = myI.length;
+    
+   alert('Απολαύστε μια ξεχωριστή εμπειρία παρακολούθησης των φωτογραφιών που ανήκουν στο άλμπουμ " + myStrTitle +". Συνολικά "+ mySize +" εικόνες. \n\n Για να δείτε την επόμενη, απλά κάντε κλικ στη φωτογραφία που βρίσκεται στην κορυφή της στίβας..." ');
+}
 
 function petaMakria(){
   this.style.webkitTransform = 'rotate(360deg) scale(0.3)';
