@@ -16,7 +16,11 @@
 
 body{
   margin:0px;
+  background: linear-gradient(to bottom, #8888ff 0%, white 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#8888ff), to(white));
+  background: -moz-linear-gradient(to top left, #8888ff, white);
+  background: -o-linear-gradient(to bottom, #8888ff 0%, white 100%);
+  filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1,StartColorStr='#C08888ff', EndColorStr='#ffffff');
 }
 #myH2ID{
   height:20px;
@@ -79,9 +83,7 @@ function init() {
   feed.load( function(result) {
   
   if (!result.error) {
-        // Get and clear our content div.
-        
-        
+        // Get and clear our content div.   
         var strMIExplorer = false;
         if(navigator.appName =='Microsoft Internet Explorer'){        
             strMIExplorer = true;
@@ -159,7 +161,6 @@ function petaMakria(){
 }
 
 function epanaforaPhotos(){
-
     var myImages=document.getElementsByTagName('img');
     var mySize = myImages.length;
 
@@ -167,12 +168,8 @@ function epanaforaPhotos(){
    
        myImages[i].style.webkitTransform = 'rotate(360deg) scale(1.0)';
        myImages[i].style.top = +180;
-       myImages[i].style.left = +180;
-       // myImages[i].setAttribute("-webkit-transition-duration", "100ms");
-     
+       myImages[i].style.left = +180;     
      }
-
-
 }
 
 function hideDivAds(){
