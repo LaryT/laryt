@@ -105,7 +105,8 @@ function init() {
      var myH2 = document.createElement("h2");
      myH2.setAttribute('id','myH2ID');
      myH2.innerHTML = myStrTitle;
-     myH2.setAttribute( 'title', 'Απολαύστε μια ξεχωριστή εμπειρία παρακολούθησης των φωτογραφιών που ανήκουν στο άλμπουμ ' & myStrTitle & '. Συνολικά ' & size & ' εικόνες. \n\n Για να δείτε την επόμενη, απλά κάντε κλικ στη φωτογραφία που βρίσκεται στην κορυφή της στίβας... ');
+     var strTitle = 'Απολαύστε μια ξεχωριστή εμπειρία παρακολούθησης των φωτογραφιών που ανήκουν στο άλμπουμ ' & myStrTitle & '. Συνολικά ' & size & ' εικόνες. \n \n Για να δείτε την επόμενη, απλά κάντε κλικ στη φωτογραφία που βρίσκεται στην κορυφή της στίβας... ';
+     myH2.setAttribute( 'title', strTitle);
      body.appendChild(myH2);
      
     // Loop through our items and add photos
