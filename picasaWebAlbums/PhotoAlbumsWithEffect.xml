@@ -126,9 +126,10 @@ function init() {
 } //-- end init
 
 function petaMakria(){
-  this.style.webkitTransform = 'scale(0.1) rotate(360deg)';
-  this.style.top = '5px';
-  this.style.left = '5px';
+  this.style.top = '-50px';
+  this.style.left = '-50px';
+  this.style.webkitTransform = 'rotate(360deg)';
+
 }
 
   gadgets.util.registerOnLoadHandler(init); 
