@@ -17,15 +17,12 @@
 <![CDATA[
     
 <style> 
-body{
-  background: linear-gradient(top, blue, white);   
-  
-}
 
 #content{
   margin:0px;
   background: -webkit-gradient(linear, left top, left bottom, gray, white);
 }
+
 img{
   position:absolute;
   top:10px;
@@ -109,7 +106,7 @@ function init() {
         }else{
             photo.setAttribute("src", item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content')[0].getAttributeNode('url').nodeValue);
         }   
-        photo.addEventListeaner('click',petaMakria,false);
+        photo.addEventListener('click',petaMakria,false);
         
         body.appendChild(photo);
         
