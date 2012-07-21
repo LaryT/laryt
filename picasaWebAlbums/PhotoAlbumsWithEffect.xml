@@ -6,12 +6,8 @@
   <UserPref name="my_name" display_name="Name" default_value="Photoslides Effects Img" />
 
   <UserPref name="my_StrFeed" display_name="Feed,RSS:" default_value="" />    
-  <UserPref name="my_ColorTitle" display_name="Color:" default_value="#BC0202" />
-  <UserPref name="my_StrTitle" display_name="Title :" default_value="NEWS" />
-  <UserPref name="my_StrHeight" display_name="Image Height:" default_value="300" />  
-  <UserPref name="my_PhotoListHeight" display_name="Photo List Height:" default_value="200" />    
+  <UserPref name="my_StrTitle" display_name="Title :" default_value="NEWS" />   
   <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
-  <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
  
 <Content type="html" xmlns:media='http://search.yahoo.com/mrss/'>
 <![CDATA[
@@ -48,15 +44,9 @@ img{
      <script type="text/javascript">
       var prefs = new gadgets.Prefs();
       
-      var myColorTitle = prefs.getString("my_ColorTitle");
-      var myStrTitle = prefs.getString("my_StrTitle");
-      var myStrHeight = prefs.getString("my_StrHeight");
-      var myPhotoListHeight= prefs.getString("my_PhotoListHeight");
-      
+      var myStrTitle = prefs.getString("my_StrTitle");     
       var myStrFeed = prefs.getString("my_StrFeed");    
       var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
-
-      var myBgColorTitle = prefs.getString("my_BgColorTitle"); 
 
 //-----------------------
 function theClick(strUrl){
@@ -98,7 +88,7 @@ function init() {
      var myButton = document.createElement("button");
      myButton.setAttribute('name', 'button');  
      myButton.style.position='absolute';
-     myButton.style.top = 250;
+     myButton.style.top = 280;
      myButton.style.left = 300;
      myButton.innerHTML = "reset - επανάληψη";
      myButton.addEventListener('click',epanaforaPhotos,false);
@@ -174,13 +164,35 @@ function epanaforaPhotos(){
 
 }
 
+function hideDivAds(){
+   $("#addiv").animate({"height" : "0px"}, function(){
+       $("#addiv").hide();
+     });
+}
 
   gadgets.util.registerOnLoadHandler(init); 
   // google.setOnLoadCallback(init);
  
 </script>
 
-<div id="content"></div>
+<div id="content">
+
+<div id="addiv" style="position:absolute;top:0px;right:8px;"><center>
+<a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:9px;color:black;height:10px;" title="απόκρυψη - hide ads">X</a><br/>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-9529818444792202";
+/* 300 x 250 box match center */
+google_ad_slot = "7816887262";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></center>
+</div>
+
+</div>
 
     
     ]]>
