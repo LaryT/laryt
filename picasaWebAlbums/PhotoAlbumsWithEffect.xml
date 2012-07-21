@@ -20,7 +20,7 @@
 
 body{
   margin:0px;
-  background: -webkit-gradient(linear, left top, left bottom, from(gray), to(white));
+  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(white));
 }
 
 img{
