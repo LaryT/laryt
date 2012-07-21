@@ -98,7 +98,7 @@ function init() {
         var item = items[i];
         
         var photo = document.createElement("img");
-        var transform = "-webkit-transform:rotate("+rotation+"deg) scale(0.4)";
+        var transform = "-webkit-transform:rotate("+rotation+"deg) scale(0.9)";
         photo.setAttribute("style", transform);
         
         if(strMIExplorer){
@@ -126,7 +126,7 @@ function init() {
 } //-- end init
 
 function petaMakria(){
-  this.style.webkitTransform = 'rotate(360deg) scale(0.8)';
+  this.style.webkitTransform = 'rotate(360deg) scale(0.2)';
   this.style.top = 5;
   this.style.right = 5;
 }
