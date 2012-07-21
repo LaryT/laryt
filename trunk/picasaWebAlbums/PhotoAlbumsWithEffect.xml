@@ -17,7 +17,18 @@
 <![CDATA[
     
 <style>   
-
+body{
+  margin;0pt;
+  background : -webkit-gradient(linear, left top, left bottom, from(#3399ff), to(#fff),color-stop(0,3));
+}
+img{
+  position:absolute;
+  top:250px;
+  right:420px;
+  padding: 7px;
+  border: 1px solid #666666;
+  background-color:white;
+}
 </style>   
      
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -85,7 +96,7 @@ function init() {
         var item = items[i];
         
         var photo = document.createElement("img");
-        var transform = "-webkit-transform:rotate("+rotation+"deg)";
+        var transform = "-webkit-transform:rotate("+rotation+"deg) scale(0.9)";
         photo.setAttribute("style", transform);
         
         if(strMIExplorer){
