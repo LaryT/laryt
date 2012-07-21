@@ -18,15 +18,15 @@
     
 <style> 
 
-#content{
+body{
   margin:0px;
-  background: -webkit-gradient(linear, left top, left bottom, gray, white);
+  background: -webkit-gradient(linear, left top, left bottom, from(gray), to(white));
 }
 
 img{
   position:absolute;
   top:50px;
-  right:50px;
+  right:250px;
   padding: 7px;
   border: 1px solid #666666;
   background-color:white;
@@ -89,7 +89,7 @@ function init() {
     // merikes xrhsimes metablhtes
 
     var size = items.length;
-    var body = document.getElementById('content');
+    var body = document.getElementById('main');
     var rotation = -30;
 
     
@@ -98,7 +98,7 @@ function init() {
         var item = items[i];
         
         var photo = document.createElement("img");
-        var transform = "-webkit-transform:rotate("+rotation+"deg) scale(0.9)";
+        var transform = "-webkit-transform:rotate("+rotation+"deg) scale(1.2)";
         photo.setAttribute("style", transform);
         
         if(strMIExplorer){
@@ -126,12 +126,9 @@ function init() {
 } //-- end init
 
 function petaMakria(){
-  this.style.webkitTransform = 'rotate(360deg) scale(2.0)';
-  this.style.opacity = 0;
-  /*
+  this.style.webkitTransform = 'rotate(360deg) scale(0.4)';
   this.style.top = 5;
-  this.style.right = -900;
-  */
+  this.style.right = 5;
 }
 
   gadgets.util.registerOnLoadHandler(init); 
