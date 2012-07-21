@@ -17,11 +17,13 @@
 body{
   margin:0px;
   background-color:#8888ff;
-  background-image: linear-gradient(to bottom, #8888ff, white);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#8888ff), to(white));
+/*
+  background-image: linear-gradient(to bottom, #8888ff, white);
   background-image: -moz-linear-gradient(to bottom, #8888ff, white);
   background-image: -o-linear-gradient(top, #8888ff, white);
   filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1,StartColorStr='#C08888ff', EndColorStr='#ffffff');
+  */
 }
 #myH2ID{
   height:20px;
