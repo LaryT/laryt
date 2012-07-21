@@ -93,7 +93,7 @@ function init() {
     var rotation = -30;
     
     
-    <!-- button name="button">Click me</button  -->
+    /*  <!-- button name="button">Click me</button  -->   */
      var myButton = document.createElement("button");
      myButton.addEventListener('click',epanaforaPhotos,false);
      myButton.setAttribute('top', '1px');
