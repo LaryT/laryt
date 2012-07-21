@@ -105,7 +105,7 @@ function init() {
      var myH2 = document.createElement("h2");
      myH2.setAttribute('id','myH2ID');
      myH2.innerHTML = myStrTitle;
-     myH2.addEventListener('click',myMiniHelp,false);
+     myH2.title = 'Απολαύστε μια ξεχωριστή εμπειρία παρακολούθησης των φωτογραφιών που ανήκουν στο άλμπουμ ' & myStrTitle & '. Συνολικά ' & size & ' εικόνες. \n\n Για να δείτε την επόμενη, απλά κάντε κλικ στη φωτογραφία που βρίσκεται στην κορυφή της στίβας... ';
      body.appendChild(myH2);
      
      
@@ -142,12 +142,7 @@ function init() {
 
 } //-- end init
 
-function myMiniHelp(){
-    var myI =document.getElementsByTagName('img');
-    var mySize = myI.length;
-    
-   alert('Απολαύστε μια ξεχωριστή εμπειρία παρακολούθησης των φωτογραφιών που ανήκουν στο άλμπουμ ' & myStrTitle & '. Συνολικά ' & mySize & ' εικόνες. \n\n Για να δείτε την επόμενη, απλά κάντε κλικ στη φωτογραφία που βρίσκεται στην κορυφή της στίβας... ');
-}
+
 
 function petaMakria(){
   this.style.webkitTransform = 'rotate(360deg) scale(0.3)';
