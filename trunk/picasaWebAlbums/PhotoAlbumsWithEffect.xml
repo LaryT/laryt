@@ -96,8 +96,8 @@ function init() {
      alert('koy');
 
      myButton.setAttribute('name', 'button');         
-     myButton.setAttribute('top', '1px');
-     myButton.setAttribute('left', '250px');
+     myButton.style.top=1;
+     myButton..style.left= 250;
      myButton.innerHTML = "reset"
      alert('koy2');
      myButton.addEventListener('click',epanaforaPhotos,false);
