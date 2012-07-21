@@ -22,6 +22,11 @@ body{
   height:20px;
   font-size:20px;
 }
+#myH6ID{
+  height:7px;
+  font-size:7px;
+  color:silver;
+}
 
 img{
   position:absolute;
@@ -176,7 +181,7 @@ function hideDivAds(){
 </script>
 
 <div id="content">
-
+<h6 title="email : grbasket@gmail.com" id="myH6ID">by grbasket.gr</h6>
 <div id="addiv" style="position:absolute;top:0px;right:8px;"><center>
 <a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:9px;color:black;height:10px;" title="απόκρυψη - hide ads">X</a><br/>
 <script type="text/javascript"><!--
