@@ -23,13 +23,10 @@ body{
   background: -webkit-gradient(linear, left top, left bottom, from(#8888ff), to(white));
 }
 #myH2ID{
-  position:absolute;
+
   height:40px;
-  margin-bottom:5px;
-  // padding: 0px 10px 10px 20px;
   font-size:40px;
-  bottom:0px;
-  left:5px;
+ 
 
 
   transform-origin: bottom left;
