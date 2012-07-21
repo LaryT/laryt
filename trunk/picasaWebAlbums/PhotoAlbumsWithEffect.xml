@@ -91,7 +91,13 @@ function init() {
     var size = items.length-1;
     var body = document.getElementById('content');
     var rotation = -30;
-
+    
+    
+    <!-- button name="button">Click me</button  -->
+     var myButton = document.createElement("button");
+     myButton.addEventListener('click',epanaforaPhotos,false);
+     body.appendChild(myButton);
+     
     
     // Loop through our items and add photos
     for (var i = size; i >= 0; i--) {
@@ -130,6 +136,39 @@ function petaMakria(){
   this.style.top = -180;
   this.style.left = -180;
 }
+
+function epanaforaPhotos(){
+
+    var myImages=document.getElementsByTagName('img');
+
+     for (var i = 0; i <= size; i++) {
+   
+       myImages[i].style.webkitTransform = 'rotate(360deg) scale(1.2)';
+       myImages[i].style.top = +180;
+       myImages[i].style.left = +180;
+       myImages[i].setAttribute("-webkit-transition-duration", "100ms");
+       
+        /*
+        var item = items[i];
+        
+        var photo = document.createElement("img");
+        var transform = "-webkit-transform:rotate("+rotation+"deg) scale(1.2)";
+        photo.setAttribute("style", transform);
+        
+        
+        if (rotation <= 30){
+          rotation += 5;
+        }else{
+          rotation = -30;
+        }
+        */
+        
+        
+    }
+
+
+}
+
 
   gadgets.util.registerOnLoadHandler(init); 
   // google.setOnLoadCallback(init);
