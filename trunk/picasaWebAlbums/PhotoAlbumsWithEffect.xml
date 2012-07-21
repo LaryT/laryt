@@ -26,7 +26,7 @@ body{
 img{
   position:absolute;
   top:50px;
-  right:250px;
+  right:150px;
   padding: 7px;
   border: 1px solid #666666;
   background-color:white;
@@ -136,7 +136,7 @@ function petaMakria(){
  
 </script>
 
-<div id="content" onload="self.resizeTo(800,800);"></div>
+<div id="content"></div>
 
     
     ]]>
