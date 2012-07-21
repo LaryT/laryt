@@ -20,7 +20,7 @@
 
 body{
   margin:0px;
-  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(white));
+  background: -webkit-gradient(linear, left top, left bottom, from(#8888ff), to(white));
 }
 
 img{
@@ -96,8 +96,8 @@ function init() {
     <!-- button name="button">Click me</button  -->
      var myButton = document.createElement("button");
      myButton.addEventListener('click',epanaforaPhotos,false);
-     myButton.style.top = 1;
-     myButton.style.left = 250;
+     myButton.setAttribute('top', '1px');
+     myButton.setAttribute('left', '250px');
      
      body.appendChild(myButton);
      
@@ -149,7 +149,7 @@ function epanaforaPhotos(){
        myImages[i].style.webkitTransform = 'rotate(360deg) scale(1.2)';
        myImages[i].style.top = +180;
        myImages[i].style.left = +180;
-       myImages[i].setAttribute("-webkit-transition-duration", "100ms");
+      // myImages[i].setAttribute("-webkit-transition-duration", "100ms");
        
         /*
         var item = items[i];
