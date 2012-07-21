@@ -25,12 +25,12 @@ body{
 
 img{
   position:absolute;
-  top:50px;
-  right:150px;
+  top:100px;
+  left:150px;
   padding: 7px;
   border: 1px solid #666666;
   background-color:white;
-  -webkit-transition-property: -webkit-transform, top, right;
+  -webkit-transition-property: -webkit-transform, top, left;
   -webkit-transition-duration:3s;
 }
 </style>   
@@ -128,7 +128,7 @@ function init() {
 function petaMakria(){
   this.style.webkitTransform = 'rotate(360deg) scale(0.4)';
   this.style.top = 5;
-  this.style.right = 5;
+  this.style.left = 5;
 }
 
   gadgets.util.registerOnLoadHandler(init); 
