@@ -18,7 +18,7 @@ body{
   margin:0px;
   background: linear-gradient(to bottom, #8888ff 0%, white 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#8888ff), to(white));
-  background: -moz-linear-gradient(to top left, #8888ff, white);
+  background: -moz-linear-gradient(to top left, #8888ff 0%, white 100%);
   background: -o-linear-gradient(to bottom, #8888ff 0%, white 100%);
   filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1,StartColorStr='#C08888ff', EndColorStr='#ffffff');
 }
