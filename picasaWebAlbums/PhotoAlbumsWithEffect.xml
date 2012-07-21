@@ -65,14 +65,6 @@ function init() {
   if (!result.error) {
         // Get and clear our content div.
         
-       /* 
-        var content = document.getElementById('content');
-        content.innerHTML = '';
-        
-
-        var html =[];
-        */
-        
         
         var strMIExplorer = false;
         if(navigator.appName =='Microsoft Internet Explorer'){
@@ -95,7 +87,6 @@ function init() {
         var photo = document.createElement("img");
         var transform = "-webkit-transform:rotate("+rotation+"deg)";
         photo.setAttribute("style", transform);
-        photo.setAttribute("src",
         
         if(strMIExplorer){
             photo.setAttribute("src", item.getElementsByTagName('media:content')[0].getAttributeNode('url').nodeValue);         
