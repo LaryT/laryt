@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs title="__UP_my_name__" height="500" title_url="http://www.grbasket.gr" description="News |::| Display photos in your blog or website from a picasa web photo-rss " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s275/centralTitlesLogo.png" thumbnail="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s125/centralTitlesLogo.png" category="sport" category2="news" > 
+    <Require feature="setprefs" />    
+  </ModulePrefs>
+  <UserPref name="my_name" display_name="Name" default_value="Titles Img from PicasaWeb" />
+
+  <UserPref name="my_StrFeed" display_name="Feed,RSS:" default_value="" />    
+  <UserPref name="my_ColorTitle" display_name="Color:" default_value="#BC0202" />
+  <UserPref name="my_StrTitle" display_name="Title :" default_value="NEWS" />
+  <UserPref name="my_StrHeight" display_name="Image Height:" default_value="300" />  
+  <UserPref name="my_PhotoListHeight" display_name="Photo List Height:" default_value="200" />    
+  <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
+  <UserPref name="my_BgColorTitle" display_name="Bg Title Color:" default_value="#F8F8F8" />
+ 
+<Content type="html" xmlns:media='http://search.yahoo.com/mrss/'>
+<![CDATA[
+    
+<style>   
+.visVis {
+    opacity:1.0; 
+   
+}
+.visHid {
+    opacity:0.7;
+}
+
+h3#imgCentralYpotitlos2:hover {
+     height:98px;    
+  
+     bootom:98px;
+    top:-98px;
+    background-color: rgba(100, 100, 100, 0.8);
+}    
+#exoterikoDiv{
+    width:99%;  
+
+-webkit-transition: 0.5s ease-in-out;
+-moz-transition: 0.5s ease-in-out;
+-o-transition: 0.5s ease-in-out;
+-khtml-transition: 0.5s ease-in-out;
+transition: 0.5s ease-in-out;    
+}
+#topImg_0{
+    width:100%;
+    height:300px;
+    
+-webkit-transition: 0.5s ease-in-out;
+-moz-transition: 0.5s ease-in-out;
+-o-transition: 0.5s ease-in-out;
+-khtml-transition: 0.5s ease-in-out;
+transition: 0.5s ease-in-out;
+}
+.myImg{
+    width:50px;
+    height:50px;
+}
+.myImg:hover{
+    opacity:0.8;
+}
+
+#imgCentralYpotitlos{
+background-attachment: scroll;
+background-clip: border-box;
+background-color: rgba(0, 0, 0, 0);
+background-image: none;
+background-origin: padding-box;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+border-top-left-radius: 0px;
+border-top-right-radius: 0px;
+color: rgb(0, 0, 0);
+display: block;
+font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+font-size: 20px;
+font-style: normal;
+font-variant: normal;
+font-weight: 500;
+height: 48px;
+letter-spacing: -1px;
+line-height: 24px;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 3px;
+overflow-x: hidden;
+overflow-y: hidden;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 0px;
+position: relative;
+text-align: center;
+width: 100%;
+z-index: auto;
+    
+-webkit-transition: 0.5s ease-in-out;
+-moz-transition: 0.5s ease-in-out;
+-o-transition: 0.5s ease-in-out;
+-khtml-transition: 0.5s ease-in-out;
+transition: 0.5s ease-in-out;     
+}    
+.trClass:hover{
+  color:white;
+  background-color:gray;
+
+-webkit-transition: 0.2s ease-in-out;
+-moz-transition: 0.2s ease-in-out;
+-o-transition: 0.2s ease-in-out;
+-khtml-transition: 0.2s ease-in-out;
+transition: 0.2s ease-in-out;     
+}
+
+#exoterikoDiv{
+ border-top:1px solid gray;
+ border-bottom:1px solid gray;    
+}
+
+#periexomenaDivCollapseTableID{
+  height: 200px;
+  background-color : #f8f8f8;
+  border-top:1px solid gray;       
+  border-bottom:1px solid gray;      
+  overflow-x: hidden;
+  overflow-y: scroll;  
+}    
+
+  
+</style>   
+     
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" ></script>      
+    <script type="text/javascript">
+      google.load("feeds", "1");
+    </script>
+
+
+     <script type="text/javascript">
+      var prefs = new gadgets.Prefs();
+      
+      var myColorTitle = prefs.getString("my_ColorTitle");
+      var myStrTitle = prefs.getString("my_StrTitle");
+      var myStrHeight = prefs.getString("my_StrHeight");
+      var myPhotoListHeight= prefs.getString("my_PhotoListHeight");
+      
+      var myStrFeed = prefs.getString("my_StrFeed");    
+      var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
+
+      var myBgColorTitle = prefs.getString("my_BgColorTitle"); 
+    
+
+
+//-----------------------
+
+function theClick(strUrl){
+        // alert(strUrl);
+}
+        
+function theTopMouseOver(strUrl){
+        document.getElementById(strUrl).className='visHid'; 
+        document.getElementById("imgCentralYpotitlos").style.top="-100px";
+        document.getElementById("imgCentralYpotitlos").style.color="white";
+        document.getElementById("imgCentralYpotitlos").style.fontSize ="10pt";
+        document.getElementById("imgCentralYpotitlos").style.overflow="visible";        
+        document.getElementById("imgCentralYpotitlos").style.backgroundColor="#cccccc";        
+        document.getElementById("imgCentralYpotitlos").style.backgroundColor="rgba(0, 0, 0, .6)";         
+        
+}  
+        
+function theTopMouseOut(strUrl){
+        document.getElementById(strUrl).className='visVis';
+        document.getElementById("imgCentralYpotitlos").style.top="0px";
+        document.getElementById("imgCentralYpotitlos").style.color="black";
+        document.getElementById("imgCentralYpotitlos").style.fontSize ="20px";  
+        document.getElementById("imgCentralYpotitlos").style.overflow="hidden";      
+        document.getElementById("imgCentralYpotitlos").style.backgroundColor="transparent";
+        document.getElementById("imgCentralYpotitlos").style.backgroundColor="rgba(0, 0, 0, .0)";         
+
+
+}        
+
+function theMouseClick(strUrl,strTitle){
+    document.getElementById('topImg_0').src = document.getElementById(strUrl).src;
+    document.getElementById('imgCentralYpotitlos').innerHTML=strTitle;
+}      
+function theMouseOver(strUrl){
+        //document.getElementById('topImg_0').src = document.getElementById(strUrl).src;
+        //document.getElementById('imgCentralYpotitlos').innerHTML=strTitle;
+} 
+
+//---------------------- 
+
+function init() {
+
+  if(myStrFeed!= ''){ 
+    var feed = new google.feeds.Feed(myStrFeed);
+  }else{
+    var feed = new google.feeds.Feed("https://picasaweb.google.com/data/feed/api/user/105531333335129547555/albumid/5751354468699377921?imgmax=640");
+  }
+  
+  feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
+  //---  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+  if(myPosoiTitloi !=''){
+    feed.setNumEntries(myPosoiTitloi);
+  }else{
+    feed.setNumEntries(6);
+  }
+  
+  feed.load( function(result) {
+  
+  if (!result.error) {
+        // Get and clear our content div.
+        var content = document.getElementById('content');
+        content.innerHTML = '';
+        
+        var html =[];
+        var strMIExplorer = false;
+        if(navigator.appName =='Microsoft Internet Explorer'){
+        
+            strMIExplorer = true;
+        }
+        // Get all items returned.
+   var items = result.xmlDocument.getElementsByTagName('entry');
+    // Loop through our items
+    html.push('<div>');        
+    html.push('<div id="exoterikoDiv">');
+    for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        if(strMIExplorer){
+            imgUrl= item.getElementsByTagName('media:content')[0].getAttributeNode('url').nodeValue;          
+        }else{
+            imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content')[0].getAttributeNode('url').nodeValue;
+        }   
+       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;        
+        
+       if(i<1){
+
+          html.push('<img onmouseover="javascript:theTopMouseOver(&quot;topImg_0&quot;);return true;" onmouseout="javascript:theTopMouseOut(&quot;topImg_0&quot;);return true;" id="topImg_0" src="'+ imgUrl + '"  />');        
+          html.push('</div>');        
+          html.push('<div>');  
+          html.push('<h3 id="imgCentralYpotitlos">'+myTitle+'</h3>');  
+          html.push('</div>');          
+          html.push('</div>');
+         html.push('<div id="periexomenaDivCollapseTableID"><table style="width:100%;border-spacing: 0px;"><tbody>');
+        } 
+             
+           html.push('<tr class="trClass" onclick="javascript:theMouseClick(&quot;myImg_'+i+'&quot;,&quot;'+myTitle+'&quot;);return true;">');
+           html.push('<td><img class="myImg" id="myImg_'+i+'"src="'+ imgUrl + '" /></td>');
+           html.push('<td><h4 class="ns2-title"  style="font-size: 11px; margin: 0; padding-bottom: 8px; font-weight: bold;">'+myTitle+'</h4></td>');
+           html.push('</tr>');
+
+    }//--- end for-loop
+    html.push('</tbody></table></div>');
+    content.innerHTML = html.join('');
+    }//--- end if erorr
+    
+    document.getElementById("topImg_0").style.height=myStrHeight;
+    document.getElementById("periexomenaDivCollapseTableID").style.height=myPhotoListHeight;
+});//--- end function feedLoaded
+
+
+} //-- end init
+
+  gadgets.util.registerOnLoadHandler(init); 
+  // google.setOnLoadCallback(init);
+ 
+</script>
+
+<div id="content">.|.</div>
+
+    
+    ]]>
+  </Content>
+</Module>    
