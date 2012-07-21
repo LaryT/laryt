@@ -20,7 +20,7 @@
 
 body{
   margin:0px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#8888ff), to(white));
+  background: -webkit-gradient(linear, left top, left bottom, from(#88ff88), to(white));
 }
 
 img{
@@ -86,18 +86,17 @@ function init() {
         }
     // Get all items returned.
     var items = result.xmlDocument.getElementsByTagName('entry');
-    // merikes xrhsimes metablhtes
 
     var size = items.length-1;
     var body = document.getElementById('content');
     var rotation = -30;
     
     
-    /*  <!-- button name="button">Click me</button  -->   */
      var myButton = document.createElement("button");
-     myButton.addEventListener('click',epanaforaPhotos,false);
      myButton.setAttribute('top', '1px');
      myButton.setAttribute('left', '250px');
+     
+     myButton.addEventListener('click',epanaforaPhotos,false);
      
      body.appendChild(myButton);
      
