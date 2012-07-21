@@ -89,7 +89,7 @@ function init() {
     // merikes xrhsimes metablhtes
 
     var size = items.length;
-    var body = document.getElementById('main');
+    var body = document.getElementById('content');
     var rotation = -30;
 
     
