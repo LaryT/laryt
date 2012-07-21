@@ -44,14 +44,8 @@
 function theClick(strUrl){
         // alert(strUrl);
 }
-        
-
- 
-
 //---------------------- 
-
 function init() {
-
   if(myStrFeed!= ''){ 
     var feed = new google.feeds.Feed(myStrFeed);
   }else{
@@ -70,10 +64,16 @@ function init() {
   
   if (!result.error) {
         // Get and clear our content div.
+        
+       /* 
         var content = document.getElementById('content');
         content.innerHTML = '';
         
+
         var html =[];
+        */
+        
+        
         var strMIExplorer = false;
         if(navigator.appName =='Microsoft Internet Explorer'){
         
@@ -84,7 +84,7 @@ function init() {
     // merikes xrhsimes metablhtes
 
     var size = items.length;
-    var body = document.getElementById("content");
+    var body = document.getElementById('content');
     var rotation = -30;
 
     
@@ -125,7 +125,7 @@ function init() {
  
 </script>
 
-<div id="content"></div>
+<div id="content">.,</div>
 
     
     ]]>
