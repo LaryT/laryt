@@ -168,6 +168,10 @@ function init() {
 
 function petaMakria(){
   this.style.webkitTransform = 'rotate(360deg) scale(0.3)';
+  this.style.mozTransform = 'rotate(360deg) scale(0.3)';
+  this.style.Transform = 'rotate(360deg) scale(0.3)';
+  this.style.oTransform = 'rotate(360deg) scale(0.3)';
+  this.style.msTransform = 'rotate(360deg) scale(0.3)';
   this.style.top = -180;
   this.style.left = -180;
 }
@@ -179,6 +183,11 @@ function epanaforaPhotos(){
      for (var i = 0; i <= mySize; i++) {
    
        myImages[i].style.webkitTransform = 'rotate(360deg) scale(1.0)';
+       myImages[i].style.mozTransform = 'rotate(360deg) scale(1.0)';       
+       myImages[i].style.Transform = 'rotate(360deg) scale(1.0)';       
+       myImages[i].style.oTransform = 'rotate(360deg) scale(1.0)'; 
+       myImages[i].style.msTransform = 'rotate(360deg) scale(1.0)'; 
+       
        myImages[i].style.top = +180;
        myImages[i].style.left = +180;     
      }
