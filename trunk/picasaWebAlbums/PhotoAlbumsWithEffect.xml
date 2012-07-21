@@ -88,13 +88,13 @@ function init() {
     var items = result.xmlDocument.getElementsByTagName('entry');
     // merikes xrhsimes metablhtes
 
-    var size = items.length;
+    var size = items.length-1;
     var body = document.getElementById('content');
     var rotation = -30;
 
     
     // Loop through our items and add photos
-    for (var i = 0; i < size; i++) {
+    for (var i = size; i =>0; i--) {
         var item = items[i];
         
         var photo = document.createElement("img");
