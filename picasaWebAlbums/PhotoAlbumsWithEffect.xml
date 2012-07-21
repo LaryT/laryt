@@ -94,7 +94,7 @@ function init() {
 
     
     // Loop through our items and add photos
-    for (var i = size; i =>0; i--) {
+    for (var i = size; i >= 0; i--) {
         var item = items[i];
         
         var photo = document.createElement("img");
