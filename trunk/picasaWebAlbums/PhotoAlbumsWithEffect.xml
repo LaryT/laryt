@@ -186,8 +186,8 @@ function epanaforaPhotos(){
        var property = getTransformProperty(myImages[i]);
         myImages[i].style[property] = 'rotate(350deg) scale(1.0)';
   
-       myImages[i].style.top = +160;
-       myImages[i].style.left = +160;     
+       myImages[i].style.top = +120;
+       myImages[i].style.left = +120;     
      }
 }
 
