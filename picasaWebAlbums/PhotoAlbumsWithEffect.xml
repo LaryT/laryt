@@ -95,8 +95,10 @@ function init() {
      var myButton = document.createElement("button");
 
 
-     myButton.setAttribute('name', 'button');         
-     myButton.style.top=1;
+     myButton.setAttribute('name', 'button');  
+
+     myButton.style.position='absolute';
+     myButton.style.top=180;
      myButton.style.left= 250;
      myButton.innerHTML = "reset"
 
@@ -147,13 +149,13 @@ function epanaforaPhotos(){
 
     var myImages=document.getElementsByTagName('img');
     var mySize = myImages.length;
-    alert(mySize);
+
      for (var i = 0; i <= mySize; i++) {
    
        myImages[i].style.webkitTransform = 'rotate(360deg) scale(1.2)';
        myImages[i].style.top = +180;
        myImages[i].style.left = +180;
-      // myImages[i].setAttribute("-webkit-transition-duration", "100ms");
+       // myImages[i].setAttribute("-webkit-transition-duration", "100ms");
      
      }
 
