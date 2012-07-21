@@ -17,10 +17,10 @@
 body{
   margin:0px;
   background-color:#8888ff;
-  background: linear-gradient(to bottom, #8888ff, white);
-  background: -webkit-gradient(linear, left top, left bottom, from(#8888ff), to(white));
-  background: -moz-linear-gradient(top, #8888ff, white);
-  background: -o-linear-gradient(top, #8888ff, white);
+  background-image: linear-gradient(to bottom, #8888ff, white);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8888ff), to(white));
+  background-image: -moz-linear-gradient(top, #8888ff, white);
+  background-image: -o-linear-gradient(top, #8888ff, white);
   filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1,StartColorStr='#C08888ff', EndColorStr='#ffffff');
 }
 #myH2ID{
@@ -111,7 +111,7 @@ function init() {
      /*
      var strTitle = ' Απολαύστε μια ξεχωριστή εμπειρία παρακολούθησης των φωτογραφιών που ανήκουν στο άλμπουμ ' & myStrTitle & '. Συνολικά ' & size & ' εικόνες. \n \n Για να δείτε την επόμενη, απλά κάντε κλικ στη φωτογραφία που βρίσκεται στην κορυφή της στίβας... ';
      */
-     var strTitle = "by grbasket \n Απολαύστε μια ξεχωριστή εμπειρία παρακολούθησης των φωτογραφιών που ανήκουν στο άλμπουμ  \n Για να δείτε την επόμενη, απλά κάντε κλικ στη φωτογραφία που βρίσκεται στην κορυφή της στίβας... "
+     var strTitle = "developed by grbasket \n Απολαύστε μια ξεχωριστή εμπειρία παρακολούθησης των φωτογραφιών που ανήκουν στο άλμπουμ  \n Για να δείτε την επόμενη, απλά κάντε κλικ στη φωτογραφία που βρίσκεται στην κορυφή της στίβας... "
 
      myH2.setAttribute( 'title', strTitle);
      body.appendChild(myH2);
