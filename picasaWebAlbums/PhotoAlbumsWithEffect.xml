@@ -127,8 +127,8 @@ function init() {
 
 function petaMakria(){
   this.style.webkitTransform = 'rotate(360deg) scale(0.1)';
-  this.style.top =5;
-  this.style.right=5;
+  this.style.top = 5;
+  this.style.left = 5;
 }
 
   gadgets.util.registerOnLoadHandler(init); 
