@@ -65,7 +65,7 @@ body{
 
 #scroller {
 height: 70px;
-width: 780px;
+width: 100%;
 overflow: hidden;
 white-space: nowrap;
 padding: 5px;
