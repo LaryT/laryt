@@ -228,12 +228,13 @@ function hideDivAds(){
 <div id="content">
 
   <table style="width:100%;border:1px red solid;" border="1"> <tbody><tr>
-    <td>
+    <!--    to katv meros      -->
+    <td valign="bottom" style="width:100%">
       <div id="bottomDiv">
       <table id="tableBottom" cellspacing="0" cellpadding="0" border="1" >
         <tbody>
             <tr>
-              <!--    to katv meros      -->
+
             <td width="50" align="center" valign="middle"><img src="https://lh5.googleusercontent.com/-x97ihtfb7dw/T0NTCuuPIKI/AAAAAAAAgJ0/KJiTqzKkAxc/s800/velos_aristera.png" class="arrow" onmousedown="scrollup();" onmouseup="stopscroll();" onmouseout="stopscroll();">
             </td>
             <td>
@@ -242,7 +243,7 @@ function hideDivAds(){
             <td width="50" align="center" valign="middle"><img src="https://lh4.googleusercontent.com/-k9b-ESWzWdk/T0NTC4uBNxI/AAAAAAAAgJ4/dy6Qdv8bCkk/s800/velos_dejia.png" class="arrow" onmousedown="scrolldown();" onmouseup="stopscroll();" onmouseout="stopscroll();">
             </td>
           </tr>
-          <tr><td>  <h6 title="Πληροφορίες (Info), email : grbasket@gmail.com" id="myH6ID">by grbasket.gr</h6></td></tr>
+          <tr><td colspan="3">  <h6 title="Πληροφορίες (Info), email : grbasket@gmail.com" id="myH6ID">by grbasket.gr</h6></td></tr>
         </tbody>
       </table>
     </div>    
