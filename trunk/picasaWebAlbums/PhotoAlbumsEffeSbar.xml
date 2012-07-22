@@ -226,7 +226,7 @@ function hideDivAds(){
 
 <div id="content">
 
-  <table style="width:100%;"> <tbody><tr>
+  <table style="width:100%;border:1px red solid;"> <tbody><tr>
     <td>
       <div id="bottomDiv">
       <table id="tableBottom" cellspacing="0" cellpadding="0" border="0" >
