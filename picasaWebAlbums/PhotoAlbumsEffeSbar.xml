@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs title="__UP_my_name__" height="610" title_url="http://www.grbasket.gr" description="News |::| Display with effects photos in your blog or website from a picasa web photo-rss " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s275/centralTitlesLogo.png" thumbnail="https://lh6.googleusercontent.com/-OoLL6ZaQcn8/T4d8WMgecTI/AAAAAAAAjxQ/qSig_Taj7NA/s125/centralTitlesLogo.png" category="sport" category2="news" > 
+    <Require feature="setprefs" />    
+  </ModulePrefs>
+  <UserPref name="my_name" display_name="Name" default_value="Photoslides Effects Img" />
+
+  <UserPref name="my_StrFeed" display_name="Feed,RSS:" default_value="" />    
+  <UserPref name="my_StrTitle" display_name="Title :" default_value="NEWS" />   
+  <UserPref name="my_PosoiTitloi" display_name="Number of Title:" default_value="3" />
+ 
+<Content type="html" xmlns:media='http://search.yahoo.com/mrss/'>
+<![CDATA[
+    
+<style> 
+
+body{
+  margin:0px;
+  background-color:#8888ff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8888ff), to(white));
+}
+#myH2ID{
+  height:18px;
+  font-size:18px;
+}
+#myH6ID{
+  height:7px;
+  font-size:7px;
+  color:gray;
+  position:absolute;
+  bottom:3px;
+  left:3px;
+}
+
+img{
+  position:absolute;
+  top:90px;
+  left:70px;
+  padding: 7px;
+  border: 1px solid #666666;
+  background-color:white;
+  
+  transition-property: top, left, transform;
+  transition-duration:3s;
+  
+  -webkit-transition-property: -webkit-transform, top, left;
+  -webkit-transition-duration:3s;
+  
+  -o-transition-property: top, left, transform; 
+  -o-transition-duration: 3s; 
+  
+}
+</style>   
+     
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" ></script>      
+    <script type="text/javascript">
+      google.load("feeds", "1");
+    </script>
+
+     <script type="text/javascript">
+      var prefs = new gadgets.Prefs();
+      
+      var myStrTitle = prefs.getString("my_StrTitle");     
+      var myStrFeed = prefs.getString("my_StrFeed");    
+      var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
+
+//----------------------- 
+function init() {
+  if(myStrFeed!= ''){ 
+    var feed = new google.feeds.Feed(myStrFeed);
+  }else{
+    var feed = new google.feeds.Feed("https://picasaweb.google.com/data/feed/api/user/105531333335129547555/albumid/5751354468699377921?imgmax=640");
+  }
+  
+  feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
+  //---  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+  if(myPosoiTitloi !=''){
+    feed.setNumEntries(myPosoiTitloi);
+  }else{
+    feed.setNumEntries(6);
+  }
+  
+  feed.load( function(result) {
+  
+  if (!result.error) {
+    // Get and clear our content div.   
+        var strMIExplorer = false;
+        if(navigator.appName =='Microsoft Internet Explorer'){        
+            strMIExplorer = true;
+        }
+    // Get all items returned.
+    var items = result.xmlDocument.getElementsByTagName('entry');
+    var size = items.length-1;
+    var body = document.getElementById('content');
+    var rotation = -30;
+    
+    
+     var myButton = document.createElement("button");
+     myButton.setAttribute('name', 'button');  
+     myButton.style.position='absolute';
+     myButton.style.top = 280;
+     myButton.style.left = 280;
+     myButton.innerHTML = "reset - επανάληψη";
+     myButton.addEventListener('click',epanaforaPhotos,false);
+     body.appendChild(myButton);
+     
+     var myH2 = document.createElement("h2");
+     myH2.setAttribute('id','myH2ID');
+     myH2.innerHTML = myStrTitle;
+
+     var strTitle = " Απολαύστε μια ξεχωριστή εμπειρία παρακολούθησης των φωτογραφιών που ανήκουν στο άλμπουμ  \n Για να δείτε την επόμενη, απλά κάντε κλικ στη φωτογραφία που βρίσκεται στην κορυφή της στίβας... \n \n Τέλεια απόδοση - εμφάνιση σε Chrome, Safari (και σ' όλους του WebKit based browsers) \n \n O Firefox και γενικά οι Gecko based browsers δεν αποδίδουν απόλυτα την περιστοφική κίνηση με ταυτόχρονη σμίκρυνση... "
+
+     myH2.setAttribute( 'title', strTitle);
+     body.appendChild(myH2);
+     
+     document.getElementById("myH6ID").innerHTML="Απολαύστε μια ξεχωριστή εμπειρία παρακολούθησης των φωτογραφιών που ανήκουν στο άλμπουμ  <br> Για να δείτε την επόμενη, απλά κάντε κλικ στη φωτογραφία που βρίσκεται στην κορυφή της στίβας... <br><span style='font-size:6px;'>by grbasket</span> ";
+    
+    // Loop through our items and add photos
+    for (var i = size; i >= 0; i--) {
+        var item = items[i];
+        
+        var photo = document.createElement("img");
+        var transform = "-webkit-transform:rotate("+rotation+"deg) scale(1.1);-moz-transform:rotate("+rotation+"deg) scale(1.1);transform:rotate("+rotation+"deg) scale(1.1)";
+        photo.setAttribute("style", transform);
+
+        
+        if(strMIExplorer){
+            photo.setAttribute("src", item.getElementsByTagName('media:content')[0].getAttributeNode('url').nodeValue);         
+        }else{
+            photo.setAttribute("src", item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content')[0].getAttributeNode('url').nodeValue);
+        }   
+        photo.addEventListener('click',petaMakria,false);
+        
+        body.appendChild(photo);
+        
+        if (rotation <= 30){
+          rotation += 5;
+        }else{
+          rotation = -30;
+        }
+        
+    }//--- end for-loop
+
+    }//--- end if erorr
+    
+});//--- end function feedLoaded
+
+
+} //-- end init
+
+
+function getTransformProperty(element) {
+    // some versions of IE9 msTransform appear in list before MozTransform
+    var properties = [
+        'transform',
+        'WebkitTransform',
+        'msTransform',
+        'MozTransform',
+        'OTransform'
+    ];
+    var p;
+    while (p = properties.shift()) {
+        if (typeof element.style[p] != 'undefined') {
+            return p;
+        }
+    }
+    return false;
+}
+
+
+function petaMakria(){
+
+
+  var property = getTransformProperty(this);
+  this.style[property] = 'rotate(360deg) scale(0.3)';
+  this.style.top = -160;
+  this.style.left = -180;
+}
+
+function epanaforaPhotos(){
+    var myImages=document.getElementsByTagName('img');
+    var mySize = myImages.length;
+
+     for (var i = 0; i <= mySize; i++) {
+       var property = getTransformProperty(myImages[i]);
+        myImages[i].style[property] = 'rotate(350deg) scale(1.0)';
+  
+       myImages[i].style.top = +90;
+       myImages[i].style.left = +80;     
+     }
+}
+
+function hideDivAds(){
+   $("#addiv").animate({"height" : "0px"}, function(){
+       $("#addiv").hide();
+     });
+}
+
+  gadgets.util.registerOnLoadHandler(init); 
+  // google.setOnLoadCallback(init);
+ 
+</script>
+
+<div id="content">
+<h6 title="Πληροφορίες (Info), email : grbasket@gmail.com" id="myH6ID">by grbasket.gr</h6>
+<div id="addiv" style="position:absolute;top:0px;right:8px;"><center>
+<a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:9px;color:black;height:10px;" title="απόκρυψη - hide ads">X</a><br/>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-9529818444792202";
+/* ga 120x600 phototslideshow effect */
+google_ad_slot = "4457050214";
+google_ad_width = 120;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></center>
+</div>
+
+<table cellspacing="0" cellpadding="0" border="0">
+  <tbody>
+    <tr>
+      <td width="50" align="center" valign="middle"><img src="https://lh5.googleusercontent.com/-x97ihtfb7dw/T0NTCuuPIKI/AAAAAAAAgJ0/KJiTqzKkAxc/s800/velos_aristera.png" class="arrow" onmousedown="scrollup();" onmouseup="stopscroll();" onmouseout="stopscroll();">
+      </td>
+      <td>
+        <div id="scroller"></div>
+      </td>
+      <td width="50" align="center" valign="middle"><img src="https://lh4.googleusercontent.com/-k9b-ESWzWdk/T0NTC4uBNxI/AAAAAAAAgJ4/dy6Qdv8bCkk/s800/velos_dejia.png" class="arrow" onmousedown="scrolldown();" onmouseup="stopscroll();" onmouseout="stopscroll();">
+      </td>
+    </tr>
+  </tbody>
+</table>
+    
+    ]]>
+  </Content>
+</Module>    
