@@ -250,8 +250,8 @@ function hideDivAds(){
   <table style="width:100%;border:1px red solid;" border="1"> <tbody><tr>
     <!--    to katv meros      -->
     <td valign="bottom" style="width:100%">
-      <div id="bottomDiv" style="width:100%">
-      <table id="tableBottom" cellspacing="0" cellpadding="0" border="1" style="width:100%">
+      <div id="bottomDiv" style="width:100%"><center>
+      <table id="tableBottom" cellspacing="0" cellpadding="0" border="1" style="width:400px;">
         <tbody>
             <tr>
 
@@ -266,6 +266,7 @@ function hideDivAds(){
           <tr><td colspan="3">  <h6 title="Πληροφορίες (Info), email : grbasket@gmail.com" id="myH6ID">by grbasket.gr</h6></td></tr>
         </tbody>
       </table>
+      </center>
     </div>    
   </td>
   
