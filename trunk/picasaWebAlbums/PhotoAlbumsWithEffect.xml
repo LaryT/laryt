@@ -20,13 +20,13 @@ body{
   background-image: -webkit-gradient(linear, left top, left bottom, from(#8888ff), to(white));
 }
 #myH2ID{
-  height:20px;
-  font-size:20px;
+  height:18px;
+  font-size:18px;
 }
 #myH6ID{
   height:7px;
   font-size:7px;
-  color:silver;
+  color:gray;
   position:absolute;
   bottom:3px;
   left:3px;
@@ -34,8 +34,8 @@ body{
 
 img{
   position:absolute;
-  top:60px;
-  left:80px;
+  top:90px;
+  left:70px;
   padding: 7px;
   border: 1px solid #666666;
   background-color:white;
@@ -114,7 +114,7 @@ function init() {
      myH2.setAttribute( 'title', strTitle);
      body.appendChild(myH2);
      
-     document.getElementById("myH6ID").innerHTML="Απολαύστε μια ξεχωριστή εμπειρία παρακολούθησης των φωτογραφιών που ανήκουν στο άλμπουμ  <br> Για να δείτε την επόμενη, απλά κάντε κλικ στη φωτογραφία που βρίσκεται στην κορυφή της στίβας... <br>by grbasket ";
+     document.getElementById("myH6ID").innerHTML="Απολαύστε μια ξεχωριστή εμπειρία παρακολούθησης των φωτογραφιών που ανήκουν στο άλμπουμ  <br> Για να δείτε την επόμενη, απλά κάντε κλικ στη φωτογραφία που βρίσκεται στην κορυφή της στίβας... <br><span style="font-size:6px;">by grbasket</span> ";
     
     // Loop through our items and add photos
     for (var i = size; i >= 0; i--) {
@@ -187,7 +187,7 @@ function epanaforaPhotos(){
         myImages[i].style[property] = 'rotate(350deg) scale(1.0)';
   
        myImages[i].style.top = +90;
-       myImages[i].style.left = +90;     
+       myImages[i].style.left = +80;     
      }
 }
 
