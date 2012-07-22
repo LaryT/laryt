@@ -177,7 +177,7 @@ function init() {
  
         minPhoto.addEventListener('mousedown',scrollup(),false);
         minPhoto.addEventListener('mouseup',scrollup(),false);
-        minPhoto.addEventListener('onmouseout',stopscroll();,false);        
+        minPhoto.addEventListener('onmouseout',stopscroll(),false);        
         theScroller.appendChild(minPhoto);
         
         
