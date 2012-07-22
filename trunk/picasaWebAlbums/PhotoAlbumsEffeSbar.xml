@@ -49,8 +49,15 @@ body{
   -webkit-transition-duration:3s;
   
   -o-transition-property: top, left, transform; 
-  -o-transition-duration: 3s; 
-  
+  -o-transition-duration: 3s;   
+}
+
+.imgMiniCL{
+  border: 1px solid #8888ff;
+  margin: 5px 5px 0px 5px;
+  cursor: pointer;
+  width: 80px;
+  height: 60px;
 }
 
 #bottomDiv{
@@ -70,6 +77,11 @@ width: 100%;
 overflow: hidden;
 white-space: nowrap;
 padding: 5px;
+}
+
+.velos {
+margin-top: 4px;
+cursor: pointer;
 }
 
 </style>   
@@ -154,8 +166,14 @@ function init() {
             photo.setAttribute("src", item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content')[0].getAttributeNode('url').nodeValue);
         }   
         photo.addEventListener('click',petaMakria,false);
-        
         body.appendChild(photo);
+        //---- oi mikres photo toy slider
+        
+        var theScroller = document.getElementById("scroller");
+        var minPhoto = document.createElement("img");
+        minPhoto.setAttribute("class", "imgMiniCL");
+        theScroller.appendChild(minPhoto);
+        
         
         if (rotation <= 30){
           rotation += 5;
@@ -235,12 +253,12 @@ function hideDivAds(){
         <tbody>
             <tr>
 
-            <td width="50" align="center" valign="middle"><img src="https://lh5.googleusercontent.com/-x97ihtfb7dw/T0NTCuuPIKI/AAAAAAAAgJ0/KJiTqzKkAxc/s800/velos_aristera.png" class="arrow" onmousedown="scrollup();" onmouseup="stopscroll();" onmouseout="stopscroll();">
+            <td width="50" align="center" valign="middle"><img src="https://lh5.googleusercontent.com/-x97ihtfb7dw/T0NTCuuPIKI/AAAAAAAAgJ0/KJiTqzKkAxc/s800/velos_aristera.png" class="velos" onmousedown="scrollup();" onmouseup="stopscroll();" onmouseout="stopscroll();">
             </td>
             <td>
               <div id="scroller"></div>
             </td>
-            <td width="50" align="center" valign="middle"><img src="https://lh4.googleusercontent.com/-k9b-ESWzWdk/T0NTC4uBNxI/AAAAAAAAgJ4/dy6Qdv8bCkk/s800/velos_dejia.png" class="arrow" onmousedown="scrolldown();" onmouseup="stopscroll();" onmouseout="stopscroll();">
+            <td width="50" align="center" valign="middle"><img src="https://lh4.googleusercontent.com/-k9b-ESWzWdk/T0NTC4uBNxI/AAAAAAAAgJ4/dy6Qdv8bCkk/s800/velos_dejia.png" class="velos" onmousedown="scrolldown();" onmouseup="stopscroll();" onmouseout="stopscroll();">
             </td>
           </tr>
           <tr><td colspan="3">  <h6 title="Πληροφορίες (Info), email : grbasket@gmail.com" id="myH6ID">by grbasket.gr</h6></td></tr>
