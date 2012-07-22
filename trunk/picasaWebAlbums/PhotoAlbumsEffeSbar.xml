@@ -32,7 +32,7 @@ body{
   left:3px;
 }
 
-img{
+.imgCL{
   position:absolute;
   top:90px;
   left:70px;
@@ -121,10 +121,11 @@ function init() {
         var item = items[i];
         
         var photo = document.createElement("img");
+        
         var transform = "-webkit-transform:rotate("+rotation+"deg) scale(1.1);-moz-transform:rotate("+rotation+"deg) scale(1.1);transform:rotate("+rotation+"deg) scale(1.1)";
         photo.setAttribute("style", transform);
+        photo.setAttribute("class", "imgCL");
 
-        
         if(strMIExplorer){
             photo.setAttribute("src", item.getElementsByTagName('media:content')[0].getAttributeNode('url').nodeValue);         
         }else{
@@ -179,7 +180,7 @@ function petaMakria(){
 }
 
 function epanaforaPhotos(){
-    var myImages=document.getElementsByTagName('img');
+    var myImages=document.getElementsByClassName('imgCL');
     var mySize = myImages.length;
 
      for (var i = 0; i <= mySize; i++) {
@@ -232,7 +233,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     </tr>
   </tbody>
 </table>
-    
+
+</div>    
     ]]>
   </Content>
 </Module>    
