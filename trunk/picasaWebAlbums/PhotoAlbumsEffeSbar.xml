@@ -50,6 +50,12 @@ body{
   -o-transition-duration: 3s; 
   
 }
+#tableBottom{
+  position:absolute;
+  bottom: 0px;
+  left:0px;
+  width:100%;
+}
 </style>   
      
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -220,7 +226,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script></center>
 </div>
 
-<table cellspacing="0" cellpadding="0" border="0">
+<table id="tableBottom" cellspacing="0" cellpadding="0" border="0">
   <tbody>
     <tr>
       <td width="50" align="center" valign="middle"><img src="https://lh5.googleusercontent.com/-x97ihtfb7dw/T0NTCuuPIKI/AAAAAAAAgJ0/KJiTqzKkAxc/s800/velos_aristera.png" class="arrow" onmousedown="scrollup();" onmouseup="stopscroll();" onmouseout="stopscroll();">
