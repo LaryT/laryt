@@ -210,9 +210,9 @@ function hideDivAds(){
 </script>
 
 <div id="content">
-<h6 title="Πληροφορίες (Info), email : grbasket@gmail.com" id="myH6ID">by grbasket.gr</h6>
-<div id="addiv" style="position:absolute;top:0px;right:8px;"><center>
-<a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:9px;color:black;height:10px;" title="απόκρυψη - hide ads">X</a><br/>
+
+  <div id="addiv" style="position:absolute;top:0px;right:0px;width:135px;"><center>
+    <a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:9px;color:black;height:10px;" title="απόκρυψη - hide ads">X</a><br/>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
 /* ga 120x600 phototslideshow effect */
@@ -224,21 +224,24 @@ google_ad_height = 600;
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script></center>
-</div>
+  </div>
 
-<table id="tableBottom" cellspacing="0" cellpadding="0" border="0">
-  <tbody>
-    <tr>
-      <td width="50" align="center" valign="middle"><img src="https://lh5.googleusercontent.com/-x97ihtfb7dw/T0NTCuuPIKI/AAAAAAAAgJ0/KJiTqzKkAxc/s800/velos_aristera.png" class="arrow" onmousedown="scrollup();" onmouseup="stopscroll();" onmouseout="stopscroll();">
-      </td>
-      <td>
-        <div id="scroller"></div>
-      </td>
-      <td width="50" align="center" valign="middle"><img src="https://lh4.googleusercontent.com/-k9b-ESWzWdk/T0NTC4uBNxI/AAAAAAAAgJ4/dy6Qdv8bCkk/s800/velos_dejia.png" class="arrow" onmousedown="scrolldown();" onmouseup="stopscroll();" onmouseout="stopscroll();">
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <div id="bottomDiv"  style="position:absolute;top:0px;left:0px;width:100%;">
+    <table id="tableBottom" cellspacing="0" cellpadding="0" border="0">
+      <tbody>
+          <tr>
+          <td width="50" align="center" valign="middle"><img src="https://lh5.googleusercontent.com/-x97ihtfb7dw/T0NTCuuPIKI/AAAAAAAAgJ0/KJiTqzKkAxc/s800/velos_aristera.png" class="arrow" onmousedown="scrollup();" onmouseup="stopscroll();" onmouseout="stopscroll();">
+          </td>
+          <td>
+            <div id="scroller"></div>
+          </td>
+          <td width="50" align="center" valign="middle"><img src="https://lh4.googleusercontent.com/-k9b-ESWzWdk/T0NTC4uBNxI/AAAAAAAAgJ4/dy6Qdv8bCkk/s800/velos_dejia.png" class="arrow" onmousedown="scrolldown();" onmouseup="stopscroll();" onmouseout="stopscroll();">
+          </td>
+        </tr>
+        <tr><td>  <h6 title="Πληροφορίες (Info), email : grbasket@gmail.com" id="myH6ID">by grbasket.gr</h6></td></tr>
+      </tbody>
+    </table>
+  </div>
 
 </div>    
     ]]>
