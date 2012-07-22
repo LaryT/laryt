@@ -172,6 +172,7 @@ function init() {
         var theScroller = document.getElementById("scroller");
         var minPhoto = document.createElement("img");
         minPhoto.setAttribute("class", "imgMiniCL");
+        minPhoto.setAttribute("src", photo.getAttribute("src"));
         theScroller.appendChild(minPhoto);
         
         
