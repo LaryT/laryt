@@ -56,8 +56,8 @@ body{
   border: 1px solid #8888ff;
   margin: 5px 5px 0px 5px;
   cursor: pointer;
-  width: 80px;
-  height: 60px;
+  width: 70px;
+  height: 50px;
 }
 
 #bottomDiv{
@@ -72,8 +72,8 @@ body{
 }
 
 #scroller {
-height: 70px;
-width: 100%;
+height: 60px;
+width: 300px;
 overflow: hidden;
 white-space: nowrap;
 padding: 5px;
@@ -187,6 +187,7 @@ function init() {
     }//--- end if erorr
     
 });//--- end function feedLoaded
+
 
 
 } //-- end init
