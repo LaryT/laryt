@@ -62,6 +62,15 @@ body{
   width:100%;
   */
 }
+
+#scroller {
+height: 70px;
+width: 780px;
+overflow: hidden;
+white-space: nowrap;
+padding: 5px;
+}
+
 </style>   
      
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
