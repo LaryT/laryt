@@ -34,8 +34,8 @@ body{
 
 img{
   position:absolute;
-  top:80px;
-  left:110px;
+  top:60px;
+  left:80px;
   padding: 7px;
   border: 1px solid #666666;
   background-color:white;
@@ -174,8 +174,8 @@ function petaMakria(){
 
   var property = getTransformProperty(this);
   this.style[property] = 'rotate(360deg) scale(0.3)';
-  this.style.top = -180;
-  this.style.left = -180;
+  this.style.top = -150;
+  this.style.left = -150;
 }
 
 function epanaforaPhotos(){
@@ -186,8 +186,8 @@ function epanaforaPhotos(){
        var property = getTransformProperty(myImages[i]);
         myImages[i].style[property] = 'rotate(350deg) scale(1.0)';
   
-       myImages[i].style.top = +120;
-       myImages[i].style.left = +120;     
+       myImages[i].style.top = +90;
+       myImages[i].style.left = +90;     
      }
 }
 
