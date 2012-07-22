@@ -35,6 +35,7 @@ body{
 }
 
 .imgCL{
+  cursor: pointer;
   position:absolute;
   top:90px;
   left:70px;
@@ -173,6 +174,10 @@ function init() {
         var minPhoto = document.createElement("img");
         minPhoto.setAttribute("class", "imgMiniCL");
         minPhoto.setAttribute("src", photo.getAttribute("src"));
+ 
+        minPhoto.addEventListener('mousedown',scrollup(),false);
+        minPhoto.addEventListener('mouseup',scrollup(),false);
+        minPhoto.addEventListener('onmouseout',stopscroll();,false);        
         theScroller.appendChild(minPhoto);
         
         
@@ -213,8 +218,6 @@ function getTransformProperty(element) {
 
 
 function petaMakria(){
-
-
   var property = getTransformProperty(this);
   this.style[property] = 'rotate(360deg) scale(0.3)';
   this.style.top = -160;
@@ -239,6 +242,50 @@ function hideDivAds(){
        $("#addiv").hide();
      });
 }
+
+//----------- scroll
+var imgsArray = new Array();
+var miniImgArray = new Array();
+var pos = 0;
+var increment = 3;
+var delay = 10;
+var timer = 0;
+var ajax = null;
+var currentImage = "";
+
+function scrollup()
+{
+	stopscroll();
+	var aDiv = document.getElementById("scroller");
+	if (pos >= increment){
+		pos = pos - increment;
+		aDiv.scrollLeft = pos;
+		timer = setInterval("scrollup()", delay);
+	}
+}
+
+function scrolldown()
+{
+	stopscroll();
+	var aDiv = document.getElementById("scroller");
+	if (pos <= aDiv.scrollWidth - increment - aDiv.clientWidth){
+		pos = pos + increment;
+		aDiv.scrollLeft = pos;
+		timer = setInterval("scrolldown()", delay);
+	}
+}
+
+function stopscroll()
+{
+	clearInterval(timer);
+	var aDiv = document.getElementById("scroller");
+	var idx = aDiv.scrollLeft / 92;
+	//---  loadThumbnails(idx-4, idx+10);
+}
+
+//----------- end scroll
+
+
 
   gadgets.util.registerOnLoadHandler(init); 
   // google.setOnLoadCallback(init);
