@@ -54,10 +54,11 @@ body{
 }
 
 #bottomDiv{
-/*
+
   position:absolute;
   bottom: 0px;
   left: 0px;
+ /*
   width:100%;
   */
 }
@@ -217,7 +218,7 @@ function hideDivAds(){
 <div id="content">
 
   <table> <tbody><tr><td>
- <div id="bottomDiv">
+  <div id="bottomDiv">
       <table id="tableBottom" cellspacing="0" cellpadding="0" border="0" style="width:100%;">
         <tbody>
             <tr>
