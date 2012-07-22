@@ -226,9 +226,10 @@ function hideDivAds(){
 
 <div id="content">
 
-  <table> <tbody><tr><td>
-  <div id="bottomDiv">
-      <table id="tableBottom" cellspacing="0" cellpadding="0" border="0" style="width:100%;">
+  <table style="width:100%;"> <tbody><tr>
+    <td>
+      <div id="bottomDiv">
+      <table id="tableBottom" cellspacing="0" cellpadding="0" border="0" >
         <tbody>
             <tr>
               <!--    to katv meros      -->
@@ -247,8 +248,9 @@ function hideDivAds(){
   </td>
   
   <!--    to ads meros      -->
-  <td>
-     <div id="addiv" style="position:absolute;top:0px;right:0px;width:135px;">
+  <td  style="width:135px;">
+     <!--   old   div id="addiv" style="position:absolute;top:0px;right:0px;width:135px;"   -->
+     <div id="addiv" style="width:100%;">     
     <center>
     <a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:9px;color:black;height:10px;" title="απόκρυψη - hide ads">X</a><br/>
 <script type="text/javascript"><!--
