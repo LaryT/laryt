@@ -178,7 +178,12 @@ function init() {
         
         var theScroller = document.getElementById("scroller");
         var minPhoto = document.createElement("img");
-        minPhoto.setAttribute("class", "imgMiniCL");
+        if( i == 0 ){
+          minPhoto.setAttribute("class", "imgMiniSelectedCL");
+        }else{
+          minPhoto.setAttribute("class", "imgMiniCL");
+        } 
+         
         minPhoto.setAttribute("src", photo.getAttribute("src"));
  
         minPhoto.addEventListener('click',makeMeFirstInStack,false);
@@ -203,7 +208,7 @@ function init() {
 } //-- end init
 
 function makeMeFirstInStack(){
-  var myMinSelectedImage = document.getElementByclassName("imgMiniSelectedCL"); 
+  var myMinSelectedImage = document.getElementByClassName("imgMiniSelectedCL"); 
   myMinSelectedImage.className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
 
