@@ -176,7 +176,7 @@ function init() {
         minPhoto.setAttribute("class", "imgMiniCL");
         minPhoto.setAttribute("src", photo.getAttribute("src"));
  
-        minPhoto.addEventListener('onclick',makeMeFirstInStack(),false);
+        minPhoto.addEventListener("click",makeMeFirstInStack,false);
     
         theScroller.appendChild(minPhoto);
         
