@@ -72,10 +72,6 @@ body{
   position:relative;
   bottom: 0px;
   left: 0px;
- /*
-   position:absolute;
-  width:100%;
-  */
 }
 
 #scroller {
@@ -180,9 +176,9 @@ function init() {
         var minPhoto = document.createElement("img");
         
         if( i > 0 ){
-          minPhoto.setAttribute("class", "imgMiniCL");
+          minPhoto.className= "imgMiniCL";
         }else{
-          minPhoto.setAttribute("class", "imgMiniSelectedCL");
+          minPhoto.className= "imgMiniSelectedCL";
         } 
          
         minPhoto.setAttribute("src", photo.getAttribute("src"));
