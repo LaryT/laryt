@@ -218,8 +218,8 @@ function makeMeFirstInStack(){
 
   alert("There are " + num + " <img> elements in this scroller");
 
-
-  for(var i=0;i<miniImgs.lenght;i++){
+ 
+  for (var i=0; i <= num; i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
       pos=i;
       alert(i);
