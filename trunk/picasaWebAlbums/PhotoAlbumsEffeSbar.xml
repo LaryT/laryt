@@ -206,7 +206,8 @@ function makeMeFirstInStack(){
 alert("makeMeFirstInStack");
 
   var myMinSelectedImage = document.getElementByClassName("imgMiniSelectedCL"); 
-  myMinSelectedImage.className ="imgMiniCL";
+  alert(myMinSelectedImage.lenght);
+  myMinSelectedImage[0].className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
 
 }
