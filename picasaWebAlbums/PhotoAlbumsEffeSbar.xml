@@ -61,16 +61,15 @@ body{
   height: 50px;
 }
 
-.imgMiniCL_selected {
-border: 2px solid #8888ff;
-padding: 2px;
-background: white;
-}
-
 #bottomDiv{
+
   position:relative;
   bottom: 0px;
   left: 0px;
+ /*
+   position:absolute;
+  width:100%;
+  */
 }
 
 #scroller {
@@ -176,8 +175,9 @@ function init() {
         minPhoto.setAttribute("class", "imgMiniCL");
         minPhoto.setAttribute("src", photo.getAttribute("src"));
  
-        minPhoto.addEventListener("click",makeMeFirstInStack,false);
-    
+        minPhoto.addEventListener('mousedown',scrollup(),false);
+        minPhoto.addEventListener('mouseup',scrollup(),false);
+        minPhoto.addEventListener('onmouseout',stopscroll(),false);        
         theScroller.appendChild(minPhoto);
         
         
@@ -197,13 +197,6 @@ function init() {
 
 } //-- end init
 
-function makeMeFirstInStack(){
-
-  var myMinSelectedImage = document.getElementByclassName("imgMiniCL_selected"); 
-  myMinSelectedImage.className="imgMiniCL";
-  this.className = "imgMiniCL_selected";
-
-}
 
 function getTransformProperty(element) {
     // some versions of IE9 msTransform appear in list before MozTransform
@@ -262,32 +255,32 @@ var currentImage = "";
 
 function scrollup()
 {
-	stopscroll();
-	var aDiv = document.getElementById("scroller");
-	if (pos >= increment){
-		pos = pos - increment;
-		aDiv.scrollLeft = pos;
-		timer = setInterval("scrollup()", delay);
-	}
+        stopscroll();
+        var aDiv = document.getElementById("scroller");
+        if (pos >= increment){
+                pos = pos - increment;
+                aDiv.scrollLeft = pos;
+                timer = setInterval("scrollup()", delay);
+        }
 }
 
 function scrolldown()
 {
-	stopscroll();
-	var aDiv = document.getElementById("scroller");
-	if (pos <= aDiv.scrollWidth - increment - aDiv.clientWidth){
-		pos = pos + increment;
-		aDiv.scrollLeft = pos;
-		timer = setInterval("scrolldown()", delay);
-	}
+        stopscroll();
+        var aDiv = document.getElementById("scroller");
+        if (pos <= aDiv.scrollWidth - increment - aDiv.clientWidth){
+                pos = pos + increment;
+                aDiv.scrollLeft = pos;
+                timer = setInterval("scrolldown()", delay);
+        }
 }
 
 function stopscroll()
 {
-	clearInterval(timer);
-	var aDiv = document.getElementById("scroller");
-	var idx = aDiv.scrollLeft / 92;
-	//---  loadThumbnails(idx-4, idx+10);
+        clearInterval(timer);
+        var aDiv = document.getElementById("scroller");
+        var idx = aDiv.scrollLeft / 92;
+        //---  loadThumbnails(idx-4, idx+10);
 }
 
 //----------- end scroll
@@ -351,4 +344,4 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>    
     ]]>
   </Content>
-</Module>    
+</Module>   
