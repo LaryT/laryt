@@ -210,8 +210,14 @@ function makeMeFirstInStack(){
   this.className = "imgMiniSelectedCL";
   
   
-  var theScroller = document.getElementById("scroller");
-  var miniImgs = theScroller.getElementsByTagName("img");
+  var myScroller = document.getElementById("scroller");
+
+  var miniImgs = myScroller.getElementsByTagName("img");
+
+  var num = miniImgs.length;
+
+  alert("There are " + num + " <img> elements in this scroller");
+
 
   for(var i=0;i<miniImgs.lenght;i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
