@@ -203,12 +203,21 @@ function init() {
 } //-- end init
 
 function makeMeFirstInStack(){
-
-
+  var pos = 0;
   var myMinSelectedImage = document.getElementsByClassName("imgMiniSelectedCL"); 
-  alert(myMinSelectedImage[0].className);
+
   myMinSelectedImage[0].className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
+  
+  var theScroller = document.getElementById("scroller");
+  var miniImgs = theScroller.getElementsByTagName("img");
+  alert(miniImgs.lenght);
+  for(var i=0;i<miniImgs.lenght;i++){
+    if(miniImgs[i].className == "imgMiniSelectedCL"){
+      pos=i;
+      alert(i);
+    }
+  }
 
 }
 
@@ -258,14 +267,10 @@ function hideDivAds(){
 }
 
 //----------- scroll
-var imgsArray = new Array();
-var miniImgArray = new Array();
 var pos = 0;
 var increment = 3;
 var delay = 10;
 var timer = 0;
-var ajax = null;
-var currentImage = "";
 
 function scrollup()
 {
@@ -294,7 +299,6 @@ function stopscroll()
         clearInterval(timer);
         var aDiv = document.getElementById("scroller");
         var idx = aDiv.scrollLeft / 92;
-        //---  loadThumbnails(idx-4, idx+10);
 }
 
 //----------- end scroll
