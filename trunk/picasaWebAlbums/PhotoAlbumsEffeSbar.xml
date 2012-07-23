@@ -62,9 +62,9 @@ body{
 }
 
 .imgMiniSelectedCL{
-border: 2px solid #8888ff;
-padding: 2px;
-background: white;
+  border: 2px solid #8888ff;
+  padding: 2px;
+  background: white;
 }
 
 #bottomDiv{
@@ -178,14 +178,14 @@ function init() {
         
         var theScroller = document.getElementById("scroller");
         var minPhoto = document.createElement("img");
-        if( i == 0 ){
-          minPhoto.setAttribute("class", "imgMiniSelectedCL");
-        }else{
+        
+        if( i > 0 ){
           minPhoto.setAttribute("class", "imgMiniCL");
+        }else{
+          minPhoto.setAttribute("class", "imgMiniSelectedCL");
         } 
          
         minPhoto.setAttribute("src", photo.getAttribute("src"));
- 
         minPhoto.addEventListener('click',makeMeFirstInStack,false);
        
         theScroller.appendChild(minPhoto);
