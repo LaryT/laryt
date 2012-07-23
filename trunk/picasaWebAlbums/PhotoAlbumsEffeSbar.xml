@@ -61,6 +61,12 @@ body{
   height: 50px;
 }
 
+.imgMiniSelectedCL{
+border: 2px solid #8888ff;
+padding: 2px;
+background: white;
+}
+
 #bottomDiv{
 
   position:relative;
@@ -175,9 +181,8 @@ function init() {
         minPhoto.setAttribute("class", "imgMiniCL");
         minPhoto.setAttribute("src", photo.getAttribute("src"));
  
-        minPhoto.addEventListener('mousedown',scrollup(),false);
-        minPhoto.addEventListener('mouseup',scrollup(),false);
-        minPhoto.addEventListener('onmouseout',stopscroll(),false);        
+        minPhoto.addEventListener('click',makeMeFirstInStack,false);
+       
         theScroller.appendChild(minPhoto);
         
         
@@ -197,6 +202,12 @@ function init() {
 
 } //-- end init
 
+function makeMeFirstInStack(){
+  var myMinSelectedImage = document.getElementByclassName("imgMiniSelectedCL"); 
+  myMinSelectedImage.className ="imgMiniCL";
+  this.className = "imgMiniSelectedCL";
+
+}
 
 function getTransformProperty(element) {
     // some versions of IE9 msTransform appear in list before MozTransform
