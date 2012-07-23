@@ -209,9 +209,10 @@ function makeMeFirstInStack(){
   myMinSelectedImage[0].className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
   
+  
   var theScroller = document.getElementById("scroller");
   var miniImgs = theScroller.getElementsByTagName("img");
-  alert(miniImgs.lenght);
+
   for(var i=0;i<miniImgs.lenght;i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
       pos=i;
