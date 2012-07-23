@@ -174,14 +174,13 @@ function init() {
         
         var theScroller = document.getElementById("scroller");
         var minPhoto = document.createElement("img");
-        
+        minPhoto.setAttribute("src", photo.getAttribute("src"));
         if( i > 0 ){
           minPhoto.className= "imgMiniCL";
         }else{
           minPhoto.className= "imgMiniSelectedCL";
         } 
          
-        minPhoto.setAttribute("src", photo.getAttribute("src"));
         minPhoto.addEventListener('click',makeMeFirstInStack,false);
        
         theScroller.appendChild(minPhoto);
