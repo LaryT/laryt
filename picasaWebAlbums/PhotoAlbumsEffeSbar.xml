@@ -168,7 +168,7 @@ function init() {
         }else{
             photo.setAttribute("src", item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content')[0].getAttributeNode('url').nodeValue);
         }   
-        photo.addEventListener('click',petaMakria,false);
+        photo.addEventListener("click",petaMakria,false);
         body.appendChild(photo);
         //---- oi mikres photo toy slider
         
@@ -181,7 +181,7 @@ function init() {
           minPhoto.className= "imgMiniSelectedCL";
         } 
          
-        minPhoto.addEventListener('click',makeMeFirstInStack,false);
+        minPhoto.addEventListener("click",makeMeFirstInStack,false);
        
         theScroller.appendChild(minPhoto);
         
