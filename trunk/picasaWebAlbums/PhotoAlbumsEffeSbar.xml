@@ -215,13 +215,13 @@ function makeMeFirstInStack(){
   for (var i=0; i <= num; i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
       pos=i;
-           alert(num);    
+           alert(num-1);    
          
          // minPhoto.setAttribute("src", photo.getAttribute("src"));
          var myImages=document.getElementsByClassName('imgCL');
-         alert("yyy " + myImages[num].getAttribute("src") );
-         var myTopNowImage = myImages[num].getAttribute("src");
-         myImages[num].setAttribute("src", myImages[pos].getAttribute("src"));
+         alert("yyy " + myImages[num-1].getAttribute("src") );
+         var myTopNowImage = myImages[num-1].getAttribute("src");
+         myImages[num-1].setAttribute("src", myImages[pos].getAttribute("src"));
          myImages[pos].setAttribute("src", myTopNowImage);
    
 
