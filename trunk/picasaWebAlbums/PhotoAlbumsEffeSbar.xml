@@ -219,14 +219,16 @@ function makeMeFirstInStack(){
     }
   }
   
- 
+ alert("yyy" + pos);
   var myImages=document.getElementsByClassName('imgCL');
 
-alert("yyy");
+
      
    var myTopNowImage = myImages[0];
    myImages[0] = myImages[pos];
    myImages[pos] = myTopNowImage;
+   
+   alert("vvv2");
 
 }
 
