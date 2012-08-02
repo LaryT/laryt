@@ -201,8 +201,13 @@ function init() {
 
 function makeMeFirst(){
   epanaforaPhotos();
+  
+  var pos = 0;
+  var myMinSelectedImage = document.getElementsByClassName("imgMiniSelectedCL"); 
 
-
+  myMinSelectedImage[0].className ="imgMiniCL";
+  this.className = "imgMiniSelectedCL";
+  
 }
 
 
