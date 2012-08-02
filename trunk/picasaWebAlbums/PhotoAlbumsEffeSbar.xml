@@ -216,9 +216,10 @@ function makeMeFirstInStack(){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
       pos=i;
       
-         alert("yyy" + myImages[pos].getAttribute("src"));
+         
          // minPhoto.setAttribute("src", photo.getAttribute("src"));
          var myImages=document.getElementsByClassName('imgCL');
+         alert("yyy " + myImages[pos].getAttribute("src") );
          var myTopNowImage = myImages[0].getAttribute("src");
          myImages[0].setAttribute("src", myImages[pos].getAttribute("src"));
          myImages[pos].setAttribute("src", myTopNowImage);
