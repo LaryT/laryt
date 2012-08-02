@@ -215,7 +215,7 @@ function makeMeFirstInStack(){
   for (var i=0; i <= num; i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
       pos=i;
-      alert("There are " + i);
+      alert(".. " + i);
     }
   }
   
