@@ -151,7 +151,7 @@ function init() {
      myH2.setAttribute( 'title', strTitle);
      body.appendChild(myH2);
      
-     document.getElementById("myH6ID").innerHTML="Απολαύστε μια ξεχωριστή εμπειρία παρακολούθησης των φωτογραφιών που ανήκουν στο άλμπουμ  <br> Για να δείτε την επόμενη, απλά κάντε κλικ στη φωτογραφία που βρίσκεται στην κορυφή της στίβας... <br><span style='font-size:6px;'>by grbasket</span> ";
+     document.getElementById("myH6ID").innerHTML="";
     
     // Loop through our items and add photos
     for (var i = size; i >= 0; i--) {
@@ -211,11 +211,8 @@ function makeMeFirstInStack(){
   
   
   var myScroller = document.getElementById("scroller");
-
   var miniImgs = myScroller.getElementsByTagName("img");
-
   var num = miniImgs.length;
-
   alert("There are " + num + " <img> elements in this scroller");
 
  
