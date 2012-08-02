@@ -176,7 +176,8 @@ function init() {
           minPhoto.className= "imgMiniSelectedCL";
         } 
          
-        minPhoto.addEventListener("click",makeMeFirstInStack,false);
+//        minPhoto.addEventListener("click",makeMeFirstInStack,false);
+        minPhoto.addEventListener("click",makeMeFirst,false);
        
         theScroller.appendChild(minPhoto);
         
@@ -196,6 +197,16 @@ function init() {
 
 
 } //-- end init
+
+
+function makeMeFirst(){
+  epanaforaPhotos();
+
+
+}
+
+
+
 
 function makeMeFirstInStack(){
   var pos = 0;
