@@ -215,20 +215,19 @@ function makeMeFirstInStack(){
   for (var i=0; i <= num; i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
       pos=i;
-      alert(".. " + i);
+      
+         alert("yyy" + pos);
+         
+         var myImages=document.getElementsByClassName('imgCL');
+         var myTopNowImage = myImages[0];
+         myImages[0] = myImages[pos];
+         myImages[pos] = myTopNowImage;
+   
+         alert("vvv2");
+
     }
   }
   
- alert("yyy" + pos);
-  var myImages=document.getElementsByClassName('imgCL');
-
-
-     
-   var myTopNowImage = myImages[0];
-   myImages[0] = myImages[pos];
-   myImages[pos] = myTopNowImage;
-   
-   alert("vvv2");
 
 }
 
