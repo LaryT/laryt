@@ -216,14 +216,14 @@ function makeMeFirstInStack(){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
       pos=i;
       
-         alert("yyy" + pos);
-         
+         alert("yyy" + myImages[pos].getAttribute("src"));
+         // minPhoto.setAttribute("src", photo.getAttribute("src"));
          var myImages=document.getElementsByClassName('imgCL');
-         var myTopNowImage = myImages[0];
-         myImages[0] = myImages[pos];
-         myImages[pos] = myTopNowImage;
+         var myTopNowImage = myImages[0].getAttribute("src");
+         myImages[0].setAttribute("src", myImages[pos].getAttribute("src"));
+         myImages[pos].setAttribute("src", myTopNowImage);
    
-         alert("vvv2");
+         alert("vvv");
 
     }
   }
