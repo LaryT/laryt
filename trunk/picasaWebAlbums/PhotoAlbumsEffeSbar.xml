@@ -207,14 +207,23 @@ function makeMeFirst(){
   myMinSelectedImage[0].className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
 
-
-  
   var theParent = this.parentNode;
   alert(theParent.Id);
   var theFirstImg = theParent.firstChild;
   theParent.insertBefore(this,theFirstImg);
-  alert("the end of diadikasia");
+  alert("the end of diadikasia 1");
   
+  var myBigImages=document.getElementsByClassName('imgCL');
+  
+  
+  for (var i=0; i <= num; i++){
+    if(miniImgs[i].className == "imgMiniSelectedCL"){
+      var bigImgParent = myBigImages[i].parentNode;
+      var bigFirstImg = bigImgParent.firstChild;
+      theParent.insertBefore(myBigImages[i],bigFirstImg);    
+    }
+  }
+  alert('end second diadikasia 2');
   epanaforaPhotos();  
 }
 
