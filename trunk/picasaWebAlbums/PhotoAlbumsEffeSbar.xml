@@ -232,19 +232,21 @@ function epanaforaPhotosToFirst(){
        //  var myTopNowImage = myImages[num-1].getAttribute("src");
        //  myImages[num-1].setAttribute("src", myImages[pos].getAttribute("src"));
        //  myImages[pos].setAttribute("src", myTopNowImage);
-       alert( "the pos ");
+       
+        for (var k = 0; k <= i; k++) {
+          var property = getTransformProperty(myImages[k]);
+          myImages[k].style[property] = 'rotate(350deg) scale(1.0)';
+  
+          myImages[k].style.top = +90;
+          myImages[k].style.left = +80;     
+         }       
+        alert( "the pos at end");
     }
   }
 
 
-alert( pos);
-     for (var i = 0; i <= pos; i++) {
-       var property = getTransformProperty(myImages[i]);
-        myImages[i].style[property] = 'rotate(350deg) scale(1.0)';
-  
-       myImages[i].style.top = +90;
-       myImages[i].style.left = +80;     
-     }
+
+    
 }
 //-----------
 
