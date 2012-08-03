@@ -219,17 +219,17 @@ function epanaforaPhotosToFirst(){
   
   // alert("There are " + num + " <img> elements in this scroller");
 
- 
+ var pos;
   for (var i=0; i <= num; i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
       pos=i;
-           alert("num-1 = " & num-1);    
+           alert("i = " & i);    
 
-         var myImages=document.getElementsByClassName('imgCL');
-         alert("Onoma Arxeioy : " + myImages[num-1].getAttribute("src") );
-         var myTopNowImage = myImages[num-1].getAttribute("src");
-         myImages[num-1].setAttribute("src", myImages[pos].getAttribute("src"));
-         myImages[pos].setAttribute("src", myTopNowImage);
+       //  var myImages=document.getElementsByClassName('imgCL');
+       //  alert("Onoma Arxeioy : " + myImages[num-1].getAttribute("src") );
+       //  var myTopNowImage = myImages[num-1].getAttribute("src");
+       //  myImages[num-1].setAttribute("src", myImages[pos].getAttribute("src"));
+       //  myImages[pos].setAttribute("src", myTopNowImage);
     }
   }
   
