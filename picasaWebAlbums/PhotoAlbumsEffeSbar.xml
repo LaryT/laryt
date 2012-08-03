@@ -221,8 +221,9 @@ function makeMeFirst(){
   for (var i=0; i <= num; i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
       var theParentOfBigImages = document.getElementById("divBigImagesID");
+      var bigImages = theParentOfBigImages.getElementsByTagName("img");
       var theFirstBigImg = theParentOfBigImages.firstChild;
-      var theLastBigImg = miniImgs[i];
+      var theLastBigImg = bigImages[i];
       theParentOfBigImages.insertBefore( theLastBigImg, theFirstBigImg);    
     }    
   }
