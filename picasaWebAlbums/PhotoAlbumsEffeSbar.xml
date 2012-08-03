@@ -212,6 +212,11 @@ function makeMeFirst(){
   var theSRC = this.getAttribute("src");
   
   alert(theSRC);
+  
+  var theParent = this.parentNode;
+  var theFirstImg = theParent.firstChild;
+  theParent.insertBefore(this,theFirstImg);
+  
 /*
   var myScroller = document.getElementById("scroller");
   var miniImgs = myScroller.getElementsByTagName("img");
