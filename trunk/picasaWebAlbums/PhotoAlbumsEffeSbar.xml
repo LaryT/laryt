@@ -207,13 +207,15 @@ function makeMeFirst(){
   myMinSelectedImage[0].className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
 
-  epanaforaPhotos();
+
   
   var theParent = this.parentNode;
+  alert(theParent.Id);
   var theFirstImg = theParent.firstChild;
   theParent.insertBefore(this,theFirstImg);
   alert("the end of diadikasia");
   
+  epanaforaPhotos();  
 }
 
 //-----------
