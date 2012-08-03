@@ -211,10 +211,11 @@ function makeMeFirst(){
   alert(theParent.ID);
   var theFirstImg = theParent.firstChild;
   theParent.insertBefore(this,theFirstImg);
-  alert("the end of diadikasia 1");
+  alert("the end of diadikasia 1 begin 2");
   
   var myBigImages=document.getElementsByClassName('imgCL');
   
+  alert(myBigImages.length);
   
   for (var i=0; i <= myBigImages.length; i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
