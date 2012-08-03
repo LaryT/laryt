@@ -209,26 +209,32 @@ function makeMeFirst(){
 
   myMinSelectedImage[0].className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
-
-
+  var theSRC = this.getAttribute("src");
+  
+  alert(theSRC);
+/*
   var myScroller = document.getElementById("scroller");
   var miniImgs = myScroller.getElementsByTagName("img");
   var num = miniImgs.length;
+ 
+  var theParentOfBigImages = document.getElementById("divBigImagesID");
+  var bigImages = theParentOfBigImages.getElementsByTagName("img");
   
-  for (var i=0; i <= num; i++){
-    if(miniImgs[i].className == "imgMiniSelectedCL"){
-      
-      var theParentOfBigImages = document.getElementById("divBigImagesID");
-      var bigImages = theParentOfBigImages.getElementsByTagName("img");
-      var theLastBigImg = theParentOfBigImages.lastChild;
-      var theNowBigImg = bigImages[i];
-      theParentOfBigImages.insertBefore( theNowBigImg, theLastBigImg.nextSibling);    
-    }    
-  }
-  
+  var theLastBigImg = theParentOfBigImages.lastChild;
+  var theNowBigImg = bigImages[i];
+  theParentOfBigImages.insertBefore( theNowBigImg, theLastBigImg.nextSibling);    
+
   var theParent = this.parentNode;
   var theFirstImg = theParent.firstChild;
   theParent.insertBefore(this,theFirstImg);
+
+  for (var i=0; i <= num; i++){
+    if(bigImages[i].className == "imgMiniSelectedCL"){
+      
+    }    
+  }
+ */
+
  
  
   epanaforaPhotos();  
