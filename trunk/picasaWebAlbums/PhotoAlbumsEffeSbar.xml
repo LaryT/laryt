@@ -123,7 +123,7 @@ function init() {
         }
     // Get all items returned.
     var items = result.xmlDocument.getElementsByTagName('entry');
-    var size = items.length-1;
+    var size = items.length;
     var body = document.getElementById('content');
     var rotation = -30;
     
@@ -153,7 +153,7 @@ function init() {
      body.appendChild(divBigImg);
     
     // Loop through our items and add photos
-    for (var i = size; i >= 0; i--) {
+    for (var i = 0; i <= size; i++) {
         var item = items[i];
         
         var photo = document.createElement("img");
