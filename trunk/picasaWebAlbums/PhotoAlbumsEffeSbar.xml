@@ -205,7 +205,7 @@ function makeMeFirst(){
 
   myMinSelectedImage[0].className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
-
+  epanaforaPhotos();
   epanaforaPhotosToFirst();
 }
 
@@ -240,7 +240,7 @@ function epanaforaPhotosToFirst(){
           myImages[k].style.top = -160;
           myImages[k].style.left = -180;     
          }       
-        alert( "the pos at end");
+        alert( "the pos at end width 3 epabakol");
     }
   }
 
