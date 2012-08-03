@@ -235,10 +235,10 @@ function epanaforaPhotosToFirst(){
        
         for (var k = 0; k <= i; k++) {
           var property = getTransformProperty(myImages[k]);
-          myImages[k].style[property] = 'rotate(350deg) scale(1.0)';
+          myImages[k].style[property] = 'rotate(360deg) scale(0.3)';
   
-          myImages[k].style.top = +90;
-          myImages[k].style.left = +80;     
+          myImages[k].style.top = -160;
+          myImages[k].style.left = -180;     
          }       
         alert( "the pos at end");
     }
