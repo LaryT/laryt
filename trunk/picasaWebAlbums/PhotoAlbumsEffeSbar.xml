@@ -200,7 +200,7 @@ function init() {
 
 
 function makeMeFirst(){
-  var pos = 0;
+  
   var myMinSelectedImage = document.getElementsByClassName("imgMiniSelectedCL"); 
 
   myMinSelectedImage[0].className ="imgMiniCL";
