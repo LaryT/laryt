@@ -208,7 +208,7 @@ function makeMeFirst(){
   this.className = "imgMiniSelectedCL";
 
   var theParent = this.parentNode;
-  alert(theParent.ID);
+  alert(theParent.style.ID);
   var theFirstImg = theParent.firstChild;
   theParent.insertBefore(this,theFirstImg);
   alert("the end of diadikasia 1 begin 2");
@@ -223,9 +223,10 @@ function makeMeFirst(){
    
   for (var i=0; i <= num; i++){
     if( miniImgs[i].className == "imgMiniSelectedCL" ){
-      alert("now is the time");
+      alert(i);
       var bigImgParent = myBigImages[i].parentNode;
       var bigFirstImg = bigImgParent.firstChild;
+      alert(bigImgParent.style.ID);
       bigImgParent.insertBefore( myBigImages[i], bigFirstImg );    
     }
   }
