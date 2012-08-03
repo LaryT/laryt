@@ -217,7 +217,8 @@ function makeMeFirst(){
   theParent.insertBefore(this,theFirstImg);
   alert("the end of diadikasia 1 begin 2");
   
-  var theParentOfBigImages = document.grtElementByID("divBigImagesID");
+  var theParentOfBigImages = document.getElementByID("divBigImagesID");
+  alert("1");
   var theFirstBigImg = theParentOfBigImages.firstChild;
   var theLastBigImg = theParentOfBigImages.lastChild;
   theParentOfBigImages.insertBefore( theLastBigImg, theFirstBigImg);
