@@ -211,7 +211,7 @@ function makeMeFirst(){
 
 //-----------
 function epanaforaPhotosToFirst(){
-  alert("begin epanaforaPhotosToFirst");
+ // alert("begin epanaforaPhotosToFirst");
     var myImages=document.getElementsByClassName('imgCL');
     var mySize = myImages.length;
 
