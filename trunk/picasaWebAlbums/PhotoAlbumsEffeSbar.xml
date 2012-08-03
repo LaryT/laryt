@@ -146,7 +146,11 @@ function init() {
      myH2.setAttribute( 'title', strTitle);
      body.appendChild(myH2);
      
+     
      document.getElementById("myH6ID").innerHTML="";
+     var divBigImg = document.createElement("div");
+     divBigImg.setAttribute('id','divBigImagesID');
+     body.appendChild(divBigImg);
     
     // Loop through our items and add photos
     for (var i = size; i >= 0; i--) {
@@ -164,7 +168,7 @@ function init() {
             photo.setAttribute("src", item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content')[0].getAttributeNode('url').nodeValue);
         }   
         photo.addEventListener("click",petaMakria,false);
-        body.appendChild(photo);
+        divBigImg.appendChild(photo);
         
         //---- oi mikres photo toy slider
         
@@ -213,23 +217,11 @@ function makeMeFirst(){
   theParent.insertBefore(this,theFirstImg);
   alert("the end of diadikasia 1 begin 2");
   
-  var myBigImages=document.getElementsByClassName('imgCL');
-  
-  alert(myBigImages.length);
-  
-  var myScroller = document.getElementById("scroller");
-  var miniImgs = myScroller.getElementsByTagName("img");
-  var num = miniImgs.length;
-   
-  for (var i=0; i <= num; i++){
-    if( miniImgs[i].className == "imgMiniSelectedCL" ){
-      alert(i);
-      var bigImgParent = myBigImages[i].parentNode;
-      var bigFirstImg = bigImgParent.firstChild;
-      alert(bigImgParent.style.ID);
-      bigImgParent.insertBefore( myBigImages[i], bigFirstImg );    
-    }
-  }
+  var theParentOfBigImages = document.grtElementByID("divBigImagesID");
+  var theFirstBigImg = theParentOfBigImages.firstChild;
+  var theLastBigImg = theParentOfBigImages.lastChild;
+  theParentOfBigImages.insertBefore( theLastBigImg, theFirstBigImg);
+ 
   alert('end second diadikasia 2');
   epanaforaPhotos();  
 }
