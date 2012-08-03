@@ -181,7 +181,6 @@ function init() {
           minPhoto.className= "imgMiniSelectedCL";
         } 
          
-//        minPhoto.addEventListener("click",makeMeFirstInStack,false);
         minPhoto.addEventListener("click",makeMeFirst,false);
        
         theScroller.appendChild(minPhoto);
@@ -214,15 +213,21 @@ function makeMeFirst(){
   var theParent = this.parentNode;
   var theFirstImg = theParent.firstChild;
   theParent.insertBefore(this,theFirstImg);
-  alert("the end of diadikasia 1 begin 2");
-  
-  var theParentOfBigImages = document.getElementById("divBigImagesID");
-  alert("lary 1");
-  var theFirstBigImg = theParentOfBigImages.firstChild;
-  var theLastBigImg = theParentOfBigImages.lastChild;
-  theParentOfBigImages.insertBefore( theLastBigImg, theFirstBigImg);
  
-  alert('end second diadikasia 2');
+  var myScroller = document.getElementById("scroller");
+  var miniImgs = myScroller.getElementsByTagName("img");
+  var num = miniImgs.length;
+  
+  for (var i=0; i <= num; i++){
+    if(miniImgs[i].className == "imgMiniSelectedCL"){
+      var theParentOfBigImages = document.getElementById("divBigImagesID");
+      var theFirstBigImg = theParentOfBigImages.firstChild;
+      var theLastBigImg = miniImgs[i];
+      theParentOfBigImages.insertBefore( theLastBigImg, theFirstBigImg);    
+    }    
+  }
+  
+ 
   epanaforaPhotos();  
 }
 
