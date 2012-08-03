@@ -225,7 +225,7 @@ function epanaforaPhotosToFirst(){
   for (var i=0; i <= num; i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
       pos=i;
-           alert("i = " & i);    
+           alert(i);    
 
        //  var myImages=document.getElementsByClassName('imgCL');
        //  alert("Onoma Arxeioy : " + myImages[num-1].getAttribute("src") );
@@ -235,7 +235,7 @@ function epanaforaPhotosToFirst(){
     }
   }
   
-alert("pos = "& pos);
+alert("pos = " + pos);
      for (var i = 0; i <= pos; i++) {
        var property = getTransformProperty(myImages[i]);
         myImages[i].style[property] = 'rotate(350deg) scale(1.0)';
