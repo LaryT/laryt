@@ -223,17 +223,17 @@ function epanaforaPhotosToFirst(){
   for (var i=0; i <= num; i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
       pos=i;
-           alert("num-1 = " + num-1);    
+           alert("num-1 = " & num-1);    
 
          var myImages=document.getElementsByClassName('imgCL');
-         alert("onoma arxeioy : " + myImages[num-1].getAttribute("src") );
+         alert("Onoma Arxeioy : " + myImages[num-1].getAttribute("src") );
          var myTopNowImage = myImages[num-1].getAttribute("src");
          myImages[num-1].setAttribute("src", myImages[pos].getAttribute("src"));
          myImages[pos].setAttribute("src", myTopNowImage);
     }
   }
   
-alert("pos = "+ pos);
+alert("pos = "& pos);
      for (var i = 0; i <= pos; i++) {
        var property = getTransformProperty(myImages[i]);
         myImages[i].style[property] = 'rotate(350deg) scale(1.0)';
