@@ -232,10 +232,11 @@ function epanaforaPhotosToFirst(){
        //  var myTopNowImage = myImages[num-1].getAttribute("src");
        //  myImages[num-1].setAttribute("src", myImages[pos].getAttribute("src"));
        //  myImages[pos].setAttribute("src", myTopNowImage);
+       alert( "the pos ");
     }
   }
 
-alert( "the pos ");
+
 alert( pos);
      for (var i = 0; i <= pos; i++) {
        var property = getTransformProperty(myImages[i]);
