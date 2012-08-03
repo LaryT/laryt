@@ -165,6 +165,7 @@ function init() {
         }   
         photo.addEventListener("click",petaMakria,false);
         body.appendChild(photo);
+        
         //---- oi mikres photo toy slider
         
         var theScroller = document.getElementById("scroller");
@@ -205,49 +206,18 @@ function makeMeFirst(){
 
   myMinSelectedImage[0].className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
+
   epanaforaPhotos();
-  epanaforaPhotosToFirst();
+  
+  var theParent = this.parentNode;
+  var theFirstImg = theParent.firstChild;
+  theParent.insertBefore(this,theFirstImg);
+  alert("the end of diadikasia");
+  
 }
 
 //-----------
-function epanaforaPhotosToFirst(){
- // alert("begin epanaforaPhotosToFirst");
-    var myImages=document.getElementsByClassName('imgCL');
-    var mySize = myImages.length;
 
-  var myScroller = document.getElementById("scroller");
-  var miniImgs = myScroller.getElementsByTagName("img");
-  var num = miniImgs.length;
-  
-  // alert("There are " + num + " <img> elements in this scroller");
-
- var pos=0;
-  for (var i=0; i <= num; i++){
-    if(miniImgs[i].className == "imgMiniSelectedCL"){
-      pos=i;
-           alert(i);    
-
-       //  var myImages=document.getElementsByClassName('imgCL');
-       //  alert("Onoma Arxeioy : " + myImages[num-1].getAttribute("src") );
-       //  var myTopNowImage = myImages[num-1].getAttribute("src");
-       //  myImages[num-1].setAttribute("src", myImages[pos].getAttribute("src"));
-       //  myImages[pos].setAttribute("src", myTopNowImage);
-       
-        for (var k = 0; k <= i; k++) {
-          var property = getTransformProperty(myImages[k]);
-          myImages[k].style[property] = 'rotate(360deg) scale(0.3)';
-  
-          myImages[k].style.top = -160;
-          myImages[k].style.left = -180;     
-         }       
-        alert( "the pos at end width 3 epabakol");
-    }
-  }
-
-
-
-    
-}
 //-----------
 
 function makeMeFirstInStack(){
