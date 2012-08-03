@@ -210,10 +210,7 @@ function makeMeFirst(){
   myMinSelectedImage[0].className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
 
-  var theParent = this.parentNode;
-  var theFirstImg = theParent.firstChild;
-  theParent.insertBefore(this,theFirstImg);
- 
+
   var myScroller = document.getElementById("scroller");
   var miniImgs = myScroller.getElementsByTagName("img");
   var num = miniImgs.length;
@@ -229,6 +226,10 @@ function makeMeFirst(){
     }    
   }
   
+  var theParent = this.parentNode;
+  var theFirstImg = theParent.firstChild;
+  theParent.insertBefore(this,theFirstImg);
+ 
  
   epanaforaPhotos();  
 }
