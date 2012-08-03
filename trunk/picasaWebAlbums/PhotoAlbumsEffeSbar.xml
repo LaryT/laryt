@@ -208,7 +208,7 @@ function makeMeFirst(){
   this.className = "imgMiniSelectedCL";
 
   var theParent = this.parentNode;
-  alert(theParent.Id);
+  alert(theParent.ID);
   var theFirstImg = theParent.firstChild;
   theParent.insertBefore(this,theFirstImg);
   alert("the end of diadikasia 1");
@@ -216,11 +216,11 @@ function makeMeFirst(){
   var myBigImages=document.getElementsByClassName('imgCL');
   
   
-  for (var i=0; i <= num; i++){
+  for (var i=0; i <= myBigImages.length; i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
       var bigImgParent = myBigImages[i].parentNode;
       var bigFirstImg = bigImgParent.firstChild;
-      theParent.insertBefore(myBigImages[i],bigFirstImg);    
+      bigImgParent.insertBefore(myBigImages[i],bigFirstImg);    
     }
   }
   alert('end second diadikasia 2');
