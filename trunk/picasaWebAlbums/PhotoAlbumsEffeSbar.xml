@@ -217,11 +217,16 @@ function makeMeFirst(){
   
   alert(myBigImages.length);
   
-  for (var i=0; i <= myBigImages.length; i++){
-    if(miniImgs[i].className == "imgMiniSelectedCL"){
+  var myScroller = document.getElementById("scroller");
+  var miniImgs = myScroller.getElementsByTagName("img");
+  var num = miniImgs.length;
+   
+  for (var i=0; i <= num; i++){
+    if( miniImgs[i].className == "imgMiniSelectedCL" ){
+      alert("now is the time");
       var bigImgParent = myBigImages[i].parentNode;
       var bigFirstImg = bigImgParent.firstChild;
-      bigImgParent.insertBefore(myBigImages[i],bigFirstImg);    
+      bigImgParent.insertBefore( myBigImages[i], bigFirstImg );    
     }
   }
   alert('end second diadikasia 2');
