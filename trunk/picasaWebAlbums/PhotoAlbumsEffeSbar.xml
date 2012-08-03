@@ -205,11 +205,13 @@ function makeMeFirst(){
 
   myMinSelectedImage[0].className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
+
   epanaforaPhotosToFirst();
 }
 
 //-----------
 function epanaforaPhotosToFirst(){
+  alert("begin epanaforaPhotosToFirst");
     var myImages=document.getElementsByClassName('imgCL');
     var mySize = myImages.length;
 
