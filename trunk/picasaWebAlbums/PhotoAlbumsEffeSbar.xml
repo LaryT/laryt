@@ -221,7 +221,7 @@ function epanaforaPhotosToFirst(){
   
   // alert("There are " + num + " <img> elements in this scroller");
 
- var pos;
+ var pos=0;
   for (var i=0; i <= num; i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
       pos=i;
@@ -234,8 +234,9 @@ function epanaforaPhotosToFirst(){
        //  myImages[pos].setAttribute("src", myTopNowImage);
     }
   }
-  
-alert("pos = " + pos);
+
+alert( "the pos ");
+alert( pos);
      for (var i = 0; i <= pos; i++) {
        var property = getTransformProperty(myImages[i]);
         myImages[i].style[property] = 'rotate(350deg) scale(1.0)';
