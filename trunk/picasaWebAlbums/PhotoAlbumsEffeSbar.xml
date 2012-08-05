@@ -229,11 +229,9 @@ function makeMeFirst(){
   var thelastBigImg = theParentOfBigImages.lastChild;
   var theNowBigImg = bigImages[i];
   
+  theParentOfBigImages.insertBefore( theNowBigImg, thelastBigImg.nextSibling);
+  alert('nextSibling');
   
-  
-  theParentOfBigImages.lastChild.setAttribute("src", theNowBigImg.getAttribute("src")); 
-         alert('.la.'); 
-  bigImages[i].setAttribute("src", thelastBigImg.getAttribute("src"));
   
   //theParentOfBigImages.insertBefore( theNowBigImg, thelastBigImg.);      
     }    
