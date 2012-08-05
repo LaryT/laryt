@@ -216,7 +216,7 @@ function makeMeFirst(){
   var pos;
   for (var i=0; i <= num; i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
-       alert(i); 
+       alert('...'); 
   //--- mikres
   var theParent = this.parentNode;
   var theFirstImg = theParent.firstChild;
@@ -226,9 +226,15 @@ function makeMeFirst(){
   var theParentOfBigImages = document.getElementById("divBigImagesID");
   var bigImages = theParentOfBigImages.getElementsByTagName("img");
   
-  var thefirstBigImg = theParentOfBigImages.firstChild;
+  var thelastBigImg = theParentOfBigImages.lastChild;
   var theNowBigImg = bigImages[i];
-  theParentOfBigImages.insertBefore( theNowBigImg, thefirstBigImg);      
+  
+  
+  
+  theParentOfBigImages.lastChild = theNowBigImg;
+  bigImages[i] = thelastBigImg;
+  
+  //theParentOfBigImages.insertBefore( theNowBigImg, thelastBigImg.);      
     }    
   }
 
