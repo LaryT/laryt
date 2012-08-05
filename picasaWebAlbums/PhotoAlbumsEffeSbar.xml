@@ -216,13 +216,7 @@ function makeMeFirst(){
   var pos;
   for (var i=0; i <= num; i++){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
-       alert('lary'); 
-       pos=i;
-       alert(pos);    
-    }    
-  }
-
-
+       alert('terzis'); 
   //--- mikres
   var theParent = this.parentNode;
   var theFirstImg = theParent.firstChild;
@@ -233,8 +227,13 @@ function makeMeFirst(){
   var bigImages = theParentOfBigImages.getElementsByTagName("img");
   
   var theLastBigImg = theParentOfBigImages.lastChild;
-  var theNowBigImg = bigImages[pos];
-  theParentOfBigImages.insertBefore( theNowBigImg, theLastBigImg.nextSibling);    
+  var theNowBigImg = bigImages[i];
+  theParentOfBigImages.insertBefore( theNowBigImg, theLastBigImg.nextSibling);      
+    }    
+  }
+
+
+  
 
   epanaforaPhotos();  
   
