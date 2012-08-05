@@ -208,6 +208,7 @@ function makeMeFirst(){
   var myMinSelectedImage = document.getElementsByClassName("imgMiniSelectedCL"); 
   myMinSelectedImage[0].className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
+
   
   var theParent = this.parentNode;
   var theFirstImg = theParent.firstChild;
@@ -219,9 +220,8 @@ function makeMeFirst(){
 
   var pos;
   for (var i=0; i <= num; i++){
-    if(bigImages[i].className == "imgMiniSelectedCL"){
-       var theSRC = this.getAttribute("src");
-       alert(theSRC); 
+    if(myMinSelectedImage[i].className == "imgMiniSelectedCL"){
+
        pos=i;
        alert(pos);    
     }    
