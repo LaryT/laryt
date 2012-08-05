@@ -225,7 +225,7 @@ function makeMeFirst(){
 
   var theParentOfBigImages = document.getElementById("divBigImagesID");
   var bigImages = theParentOfBigImages.getElementsByTagName("img");
-  var myPosInBigImages = bigImages.lenght - i;
+  var myPosInBigImages = bigImages.length - i;
   
   var thelastBigImg = theParentOfBigImages.lastChild;
   var theNowBigImg = bigImages[myPosInBigImages];
