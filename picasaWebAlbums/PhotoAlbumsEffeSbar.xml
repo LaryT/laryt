@@ -215,8 +215,8 @@ function makeMeFirst(){
 
   var pos;
   for (var i=0; i <= num; i++){
-    if(myMinSelectedImage[i].className == "imgMiniSelectedCL"){
-
+    if(miniImgs[i].className == "imgMiniSelectedCL"){
+       alert('lary'); 
        pos=i;
        alert(pos);    
     }    
