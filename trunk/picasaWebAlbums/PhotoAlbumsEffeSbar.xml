@@ -220,9 +220,9 @@ function makeMeFirst(){
     if(miniImgs[i].className == "imgMiniSelectedCL"){
 
   //--- mikres
-  var theParent = this.parentNode;
-  var theFirstImg = theParent.firstChild;
-  theParent.insertBefore(this,theFirstImg);
+//  var theParent = this.parentNode;
+//  var theFirstImg = theParent.firstChild;
+//  theParent.insertBefore(this,theFirstImg);
   //------ megales
 
   var theParentOfBigImages = document.getElementById("divBigImagesID");
