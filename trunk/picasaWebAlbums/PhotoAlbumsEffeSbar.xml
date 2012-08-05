@@ -182,8 +182,10 @@ function init() {
         } 
          
         minPhoto.addEventListener("click",makeMeFirst,false);
+        
+        theScroller.insertBefore( minPhoto, theScroller.firstChild);
        
-        theScroller.appendChild(minPhoto);
+       // theScroller.appendChild(minPhoto);
         
         
         if (rotation <= 30){
