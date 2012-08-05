@@ -206,83 +206,45 @@ function init() {
 function makeMeFirst(){
   
   var myMinSelectedImage = document.getElementsByClassName("imgMiniSelectedCL"); 
-
   myMinSelectedImage[0].className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
-  var theSRC = this.getAttribute("src");
-  
-  alert(theSRC);
   
   var theParent = this.parentNode;
   var theFirstImg = theParent.firstChild;
   theParent.insertBefore(this,theFirstImg);
   
-/*
   var myScroller = document.getElementById("scroller");
   var miniImgs = myScroller.getElementsByTagName("img");
   var num = miniImgs.length;
- 
+
+  var pos;
+  for (var i=0; i <= num; i++){
+    if(bigImages[i].className == "imgMiniSelectedCL"){
+       var theSRC = this.getAttribute("src");
+       alert(theSRC); 
+       pos=i;
+       alert(pos);    
+    }    
+  }
+
+
   var theParentOfBigImages = document.getElementById("divBigImagesID");
   var bigImages = theParentOfBigImages.getElementsByTagName("img");
   
   var theLastBigImg = theParentOfBigImages.lastChild;
-  var theNowBigImg = bigImages[i];
+  var theNowBigImg = bigImages[pos];
   theParentOfBigImages.insertBefore( theNowBigImg, theLastBigImg.nextSibling);    
 
-  var theParent = this.parentNode;
-  var theFirstImg = theParent.firstChild;
-  theParent.insertBefore(this,theFirstImg);
-
-  for (var i=0; i <= num; i++){
-    if(bigImages[i].className == "imgMiniSelectedCL"){
-      
-    }    
-  }
- */
-
- 
- 
   epanaforaPhotos();  
-}
-
-//-----------
-
-//-----------
-
-function makeMeFirstInStack(){
-  var pos = 0;
-  var myMinSelectedImage = document.getElementsByClassName("imgMiniSelectedCL"); 
-
-  myMinSelectedImage[0].className ="imgMiniCL";
-  this.className = "imgMiniSelectedCL";
   
-  
-  var myScroller = document.getElementById("scroller");
-  var miniImgs = myScroller.getElementsByTagName("img");
-  var num = miniImgs.length;
-  
-  // alert("There are " + num + " <img> elements in this scroller");
-
  
-  for (var i=0; i <= num; i++){
-    if(miniImgs[i].className == "imgMiniSelectedCL"){
-      pos=i;
-           alert(num-1);    
-         
-         // minPhoto.setAttribute("src", photo.getAttribute("src"));
-         var myImages=document.getElementsByClassName('imgCL');
-         alert("yyy " + myImages[num-1].getAttribute("src") );
-         var myTopNowImage = myImages[num-1].getAttribute("src");
-         myImages[num-1].setAttribute("src", myImages[pos].getAttribute("src"));
-         myImages[pos].setAttribute("src", myTopNowImage);
-   
-
-
-    }
-  }
-  
 
 }
+
+//-----------
+
+//-----------
+
 
 function getTransformProperty(element) {
     // some versions of IE9 msTransform appear in list before MozTransform
