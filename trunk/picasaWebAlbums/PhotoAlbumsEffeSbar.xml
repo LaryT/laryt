@@ -225,12 +225,13 @@ function makeMeFirst(){
 
   var theParentOfBigImages = document.getElementById("divBigImagesID");
   var bigImages = theParentOfBigImages.getElementsByTagName("img");
+  var myPosInBigImages = bigImages.lenght - i;
   
   var thelastBigImg = theParentOfBigImages.lastChild;
-  var theNowBigImg = bigImages[i];
+  var theNowBigImg = bigImages[myPosInBigImages];
   
   theParentOfBigImages.insertBefore( theNowBigImg, thelastBigImg.nextSibling);
-  alert('nextSibling');
+  alert(myPosInBigImages);
   
   
   //theParentOfBigImages.insertBefore( theNowBigImg, thelastBigImg.);      
