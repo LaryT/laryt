@@ -208,11 +208,6 @@ function makeMeFirst(){
   var myMinSelectedImage = document.getElementsByClassName("imgMiniSelectedCL"); 
   myMinSelectedImage[0].className ="imgMiniCL";
   this.className = "imgMiniSelectedCL";
-
-  
-  var theParent = this.parentNode;
-  var theFirstImg = theParent.firstChild;
-  theParent.insertBefore(this,theFirstImg);
   
   var myScroller = document.getElementById("scroller");
   var miniImgs = myScroller.getElementsByTagName("img");
@@ -227,6 +222,12 @@ function makeMeFirst(){
     }    
   }
 
+
+  //--- mikres
+  var theParent = this.parentNode;
+  var theFirstImg = theParent.firstChild;
+  theParent.insertBefore(this,theFirstImg);
+  //------ megales
 
   var theParentOfBigImages = document.getElementById("divBigImagesID");
   var bigImages = theParentOfBigImages.getElementsByTagName("img");
