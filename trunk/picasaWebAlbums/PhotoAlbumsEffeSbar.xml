@@ -230,8 +230,8 @@ function makeMeFirst(){
   //var lastChildBigImg = theParentOfBigImages.lastChild;
  // var theNowBigImg = bigImages[i];
   alert(bigImages.length);
-  alert(i);
-  theParentOfBigImages.insertBefore( bigImages[i], theParentOfBigImages.lastChild.nextSibling);
+  alert(i+1);
+  theParentOfBigImages.insertBefore( bigImages[i+1], theParentOfBigImages.lastChild.nextSibling);
   
   
   
