@@ -409,7 +409,7 @@ border-right: 1px solid #eeeeee;
   var pubID="";
   var posoPxScroll=70;
   
-  var URLtrexontosDocs="";
+ 
 
    if( myURLfeed!="" ){
      var query = new google.visualization.Query(myURLfeed);
@@ -472,7 +472,8 @@ function embExpand(id,epiclass,URLforBathmologia)
      //-- elegxos an einai to 3o epipedo (teleytaio gia tiw bathmologis prepei na xtisei baumologies) 
      if (epiclass=='3' && id.charAt(id.length - 1)=='b'){ 
        pubID=id;
-       alert(URLforBathmologia);
+       var myStrURLforBathmologia = URLforBathmologia +"&single=true&gid=0&range=a1%3Ap1000&output=html"
+       // alert(myStrURLforBathmologia);
        makeBathmologia(URLforBathmologia);
      }
 
@@ -983,7 +984,7 @@ function handleQueryResponseBathmologia(response) {
 
       //---- velos pano
 
-       html.push('<div class="fpOtherPfeil"><img src="https://lh6.googleusercontent.com/-ZuNCj1hzNww/T0NTC0-Hf9I/AAAAAAAAgJ8/evL6XwtD56E/s30/velos_epano.png" border="0"  onclick="scroll(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3+ prosthetoID  + '&quot;, -1, posoPxScroll)"> &nbsp;&nbsp;<a href="'+ URLtrexontosDocs +'&single=true&gid=0&range=a1%3Ap1000&output=html" target="_blank"><img src="https://lh4.googleusercontent.com/-rYvi7HuZqko/UIfiwSPbRsI/AAAAAAAAvms/j_YV_l8yzdk/s800/icoSpSheet.png" title="Υπο κατασκευή - παραπομπή στο πηγαίο αρχείο : '+ URLtrexontosDocs +'&single=true&gid=0&range=a1%3Ap1000&output=html "/></a> </div>' );
+       html.push('<div class="fpOtherPfeil"><img src="https://lh6.googleusercontent.com/-ZuNCj1hzNww/T0NTC0-Hf9I/AAAAAAAAgJ8/evL6XwtD56E/s30/velos_epano.png" border="0"  onclick="scroll(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3+ prosthetoID  + '&quot;, -1, posoPxScroll)"> </div>' );
        //---- to periblma gia toys agones
        html.push('<div class="fpOtherInner" id="fpOtherInner_'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3 + prosthetoID + '" style="height: 336px; display: block;" >');
 
@@ -1047,12 +1048,12 @@ function makeBathmologia(URLforBathmologia){
      queryBathKathgorias.setQuery(strSQL);
      queryBathKathgorias.send(handleQueryBathKathgoriasResponse);
           //-------- trexon docs
-     URLtrexontosDocs = URLforBathmologia;
+     
 
    }else{
      alert('Δεν βρέθηκε το αρχείο με τις βαθμολογίες της κατηγορίας...');
           //-------- trexon docs
-     URLtrexontosDocs = "";
+     
    }
 
 }//--- end fnc makeBathmologia
@@ -1067,14 +1068,11 @@ function makeApotelesmataDiorganvshs(URLforBathmologia){
      var strSQL ="select B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, AW, AX, AY, AZ, BA, BB, BC, BD, BE, BG where  Q is not null  order by Q, D, E";
      queryApotelesmataDiorganvsh.setQuery(strSQL);
      queryApotelesmataDiorganvsh.send(handleQueryApotelesmataDiorgResponse);
-          //-------- trexon docs
-     URLtrexontosDocs = URLforBathmologia;
-     
+          //-------- trexon docs     
      
    }else{
      alert('Δεν βρέθηκε το αρχείο με τα αποτελέσματα της διοργανώσης - κατηγορίας...');
           //-------- trexon docs
-     URLtrexontosDocs = "";
    }
 
 }//--- end fnc makeApotelesmataDiorganvshs
@@ -1250,6 +1248,8 @@ function handleQueryBathKathgoriasResponse(response){
     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
   }
+  
+  alert("URLforBathmologia : "+URLforBathmologia);
 //---  GET THE DATA 
   var html =[];  
   var data = response.getDataTable();
@@ -1348,11 +1348,10 @@ function makeBathmologia(URLforBathmologia){
      var strSQL ="select AC, AD, AE, AF, AI,AJ,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV where  AE is not null  order by AE";
      queryBathKathgorias.setQuery(strSQL);
      queryBathKathgorias.send(handleQueryBathKathgoriasResponse);
-     //-------- trexon docs
-     URLtrexontosDocs = URLforBathmologia;
+
    }else{
      alert('Δεν βρέθηκε το αρχείο με τις βαθμολογίες της κατηγορίας...');
-     URLtrexontosDocs = "";
+
    }
 
 }//--- end fnc makeBathmologia
