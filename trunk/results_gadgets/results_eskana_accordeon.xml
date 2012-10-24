@@ -432,7 +432,7 @@ border-right: 1px solid #eeeeee;
 function embExpand(id,epiclass,URLforBathmologia)
 {
 
-alert(URLforBathmologia);
+
   $(".fpEmbTitle"+ epiclass +" .icon").attr("src", "https://lh6.googleusercontent.com/-FlqMiSON9SM/TLcMIbO9tqI/AAAAAAAAS6U/-BQZAQgV5yw/s800/velaki_kato.png");  
 
   if ($("#fpEmbCont_" + id).is(":visible")){
@@ -472,6 +472,7 @@ alert(URLforBathmologia);
      //-- elegxos an einai to 3o epipedo (teleytaio gia tiw bathmologis prepei na xtisei baumologies) 
      if (epiclass=='3' && id.charAt(id.length - 1)=='b'){ 
        pubID=id;
+       alert(URLforBathmologia);
        makeBathmologia(URLforBathmologia);
      }
 
