@@ -1066,7 +1066,7 @@ function makeApotelesmataDiorganvshs(URLforBathmologia){
      queryApotelesmataDiorganvsh.send(handleQueryApotelesmataDiorgResponse);
           //-------- trexon docs
      URLtrexontosDocs = URLforBathmologia;
-     alert(URLforBathmologia);
+     
      
    }else{
      alert('Δεν βρέθηκε το αρχείο με τα αποτελέσματα της διοργανώσης - κατηγορίας...');
