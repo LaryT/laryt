@@ -472,8 +472,7 @@ function embExpand(id,epiclass,URLforBathmologia)
      //-- elegxos an einai to 3o epipedo (teleytaio gia tiw bathmologis prepei na xtisei baumologies) 
      if (epiclass=='3' && id.charAt(id.length - 1)=='b'){ 
        pubID=id;
-       var myStrURLforBathmologia = URLforBathmologia +"&single=true&gid=0&range=a1%3Ap1000&output=html"
-       // alert(myStrURLforBathmologia);
+
        makeBathmologia(URLforBathmologia);
      }
 
@@ -1250,7 +1249,7 @@ function handleQueryBathKathgoriasResponse(response){
     return;
   }
   
-  alert("URLforBathmologia : " + URLforBathmologia );
+
 //---  GET THE DATA 
   var html =[];  
   var data = response.getDataTable();
