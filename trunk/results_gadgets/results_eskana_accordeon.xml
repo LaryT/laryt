@@ -686,7 +686,7 @@ function handleQueryResponseEbdomadiaioAnaHmera(response) {
      html.push('<div id="fpEmbCont_'+countTitlesGroup1+prosthetoID+'" class="fpEmbCont1" style="display: none;"> ');
 
       //---- velos pano
-       html.push('<div class="fpOtherPfeil"><img src="https://lh6.googleusercontent.com/-ZuNCj1hzNww/T0NTC0-Hf9I/AAAAAAAAgJ8/evL6XwtD56E/s30/velos_epano.png" border="0" onclick="scroll(&quot;'+ countTitlesGroup1 + prosthetoID  + '&quot;, -1, 170)">&nbsp;<img src="https://lh4.googleusercontent.com/-rYvi7HuZqko/UIfiwSPbRsI/AAAAAAAAvms/j_YV_l8yzdk/s800/icoSpSheet.png" title="Υπο κατασκευή - Σύντομα παραπομπή στο πηγσαίο αρχείο"/> </div>');
+       html.push('<div class="fpOtherPfeil"><img src="https://lh6.googleusercontent.com/-ZuNCj1hzNww/T0NTC0-Hf9I/AAAAAAAAgJ8/evL6XwtD56E/s30/velos_epano.png" border="0" onclick="scroll(&quot;'+ countTitlesGroup1 + prosthetoID  + '&quot;, -1, 170)"> </div>');
 
      //---- to periblma periexomenoy epipedoy 1
      html.push('<div class="fpOtherInner" id="fpOtherInner_'+ countTitlesGroup1+prosthetoID+'" style="display: block; ">');
@@ -978,7 +978,7 @@ function handleQueryResponseBathmologia(response) {
        html.push('<div id="fpEmbCont_'+countTitlesGroup1 +'_'+ countTitlesGroup2 +'_'+ countTitlesGroup3 + prosthetoID +'" class="fpEmbCont3" style="display:none;">');
 
       //---- velos pano
-       html.push('<div class="fpOtherPfeil"><img src="https://lh6.googleusercontent.com/-ZuNCj1hzNww/T0NTC0-Hf9I/AAAAAAAAgJ8/evL6XwtD56E/s30/velos_epano.png" border="0"  onclick="scroll(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3+ prosthetoID  + '&quot;, -1, posoPxScroll)"> </div>' );
+       html.push('<div class="fpOtherPfeil"><img src="https://lh6.googleusercontent.com/-ZuNCj1hzNww/T0NTC0-Hf9I/AAAAAAAAgJ8/evL6XwtD56E/s30/velos_epano.png" border="0"  onclick="scroll(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3+ prosthetoID  + '&quot;, -1, posoPxScroll)"> &nbsp;&nbsp;<img src="https://lh4.googleusercontent.com/-rYvi7HuZqko/UIfiwSPbRsI/AAAAAAAAvms/j_YV_l8yzdk/s800/icoSpSheet.png" title="Υπο κατασκευή - Σύντομα παραπομπή στο πηγαίο αρχείο"/> </div>' );
        //---- to periblma gia toys agones
        html.push('<div class="fpOtherInner" id="fpOtherInner_'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3 + prosthetoID + '" style="height: 336px; display: block;" >');
 
