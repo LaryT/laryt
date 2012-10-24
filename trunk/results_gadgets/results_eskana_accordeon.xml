@@ -984,7 +984,8 @@ function handleQueryResponseBathmologia(response) {
 
       //---- velos pano
 
-       html.push('<div class="fpOtherPfeil"><img src="https://lh6.googleusercontent.com/-ZuNCj1hzNww/T0NTC0-Hf9I/AAAAAAAAgJ8/evL6XwtD56E/s30/velos_epano.png" border="0"  onclick="scroll(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3+ prosthetoID  + '&quot;, -1, posoPxScroll)"> </div>' );
+       html.push('<div class="fpOtherPfeil"><img src="https://lh6.googleusercontent.com/-ZuNCj1hzNww/T0NTC0-Hf9I/AAAAAAAAgJ8/evL6XwtD56E/s30/velos_epano.png" border="0"  onclick="scroll(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3+ prosthetoID  + '&quot;, -1, posoPxScroll)"> &nbsp;&nbsp;<a href="'+ data.getFormattedValue(row, 7) +'&single=true&gid=0&range=a1%3Ap1000&output=html" target="_blank"><img src="https://lh4.googleusercontent.com/-rYvi7HuZqko/UIfiwSPbRsI/AAAAAAAAvms/j_YV_l8yzdk/s800/icoSpSheet.png" /></a> </div>' );
+       
        //---- to periblma gia toys agones
        html.push('<div class="fpOtherInner" id="fpOtherInner_'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3 + prosthetoID + '" style="height: 336px; display: block;" >');
 
@@ -1249,7 +1250,7 @@ function handleQueryBathKathgoriasResponse(response){
     return;
   }
   
-  alert("URLforBathmologia : "+URLforBathmologia);
+  alert("URLforBathmologia : " + URLforBathmologia );
 //---  GET THE DATA 
   var html =[];  
   var data = response.getDataTable();
