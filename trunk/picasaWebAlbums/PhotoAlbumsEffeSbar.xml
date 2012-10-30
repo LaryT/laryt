@@ -13,75 +13,7 @@
 <![CDATA[
     
 <style> 
-
-body{
-  margin:0px;
-  background-color:#8888ff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#8888ff), to(white));
-}
-#myH2ID{
-  height:18px;
-  font-size:18px;
-}
-#myH6ID{
-  height:7px;
-  font-size:7px;
-  color:gray;
-}
-
-.imgCL{
-  cursor: pointer;
-  position:absolute;
-  top:90px;
-  left:70px;
-  padding: 7px;
-  border: 1px solid #666666;
-  background-color:white;
-  
-  transition-property: top, left, transform;
-  transition-duration:3s;
-  
-  -webkit-transition-property: -webkit-transform, top, left;
-  -webkit-transition-duration:3s;
-  
-  -o-transition-property: top, left, transform; 
-  -o-transition-duration: 3s;   
-}
-
-.imgMiniCL, .imgMiniSelectedCL{
-  border: 1px solid #8888ff;
-  margin: 5px 5px 0px 5px;
-  cursor: pointer;
-  width: 70px;
-  height: 50px;
-}
-
-.imgMiniSelectedCL{
-  border: 2px solid #8888ff;
-  padding: 2px;
-  background: white;
-}
-
-#bottomDiv{
-
-  position:relative;
-  bottom: 0px;
-  left: 0px;
-}
-
-#scroller {
-height: 60px;
-width: 300px;
-overflow: hidden;
-white-space: nowrap;
-padding: 5px;
-}
-
-.velos {
-margin-top: 4px;
-cursor: pointer;
-}
-
+body{margin:0;background-color:#88f;background-image:-webkit-gradient(linear,left top,left bottom,from(#88f),to(white))}#myH2ID{height:18px;font-size:18px}#myH6ID{height:7px;font-size:7px;color:gray}.imgCL{cursor:pointer;position:absolute;top:90px;left:70px;padding:7px;border:1px solid #666;background-color:white;transition-property:top,left,transform;transition-duration:3s;-webkit-transition-property:-webkit-transform,top,left;-webkit-transition-duration:3s;-o-transition-property:top,left,transform;-o-transition-duration:3s}.imgMiniCL,.imgMiniSelectedCL{border:1px solid #88f;margin:5px 5px 0 5px;cursor:pointer;width:70px;height:50px}.imgMiniSelectedCL{border:2px solid #88f;padding:2px;background:white}#bottomDiv{position:relative;bottom:0;left:0}#scroller{height:60px;width:300px;overflow:hidden;white-space:nowrap;padding:5px}.velos{margin-top:4px;cursor:pointer}
 </style>   
      
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
