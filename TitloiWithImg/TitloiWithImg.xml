@@ -23,71 +23,7 @@
     <![CDATA[
     
      <style>   
-      a#myLinkCL{
-
-         -webkit-transition: all 600ms ease-in-out;
-         -moz-transition: all 600ms ease-in-out;
-         -o-transition: all 600ms ease-in-out;
-         -ms-transition: all 600ms ease-in-out;
-         transition: all 600ms ease-in-out;
-         text-decoration:none;
-       
-      }
-      a#myLinkCL:hover {
-         color:black;
- 
-      }
-
-      .ns2-links-wrap {
-          border-top: 1px dashed #E5E5E5;
-          padding-top: 10px;
-      }
-
-      .ns2-links-pages{
-        overflow: hidden;
-        position: relative;
-      }
-
-      .ns2-page {
-         overflow: hidden;
-      }
-
-    .ns2-inner{
-        overflow: hidden;
-        padding: 0 0 0 10px;
-        font-size: .917em;
-        background: url('https://lh4.googleusercontent.com/-OsntZYtcsnk/T6YCbbQsNLI/AAAAAAAAmbI/-ibKaoV6Mow/s800/sfera.gif') no-repeat left .4em;
-    }
-
-
-
-     #contentDivSn{
-       font-size: 10px;
-       margin: 0;
-       padding-bottom: 8px;
-       text-align: justify;
-       padding-right: 5px;       
-     }
-
-      img#my2img:hover{
-        opacity:.6
-      }
-      
-      img#my2img{
-       -webkit-transition: all 300ms ease-in-out;
-       -moz-transition: all 300ms ease-in-out;
-       -o-transition: all 300ms ease-in-out;
-       -ms-transition: all 300ms ease-in-out;
-       transition: all 300ms ease-in-out;
-       }
-      
-      div#moWrapperHeader{
-
-      }
-      
-      div.moWrapperCL{
-
-      }
+a#myLinkCL{-webkit-transition:all 600ms ease-in-out;-moz-transition:all 600ms ease-in-out;-o-transition:all 600ms ease-in-out;-ms-transition:all 600ms ease-in-out;transition:all 600ms ease-in-out;text-decoration:none}a#myLinkCL:hover{color:black}.ns2-links-wrap{border-top:1px dashed #e5e5e5;padding-top:10px}.ns2-links-pages{overflow:hidden;position:relative}.ns2-page{overflow:hidden}.ns2-inner{overflow:hidden;padding:0 0 0 10px;font-size:.917em;background:url('https://lh4.googleusercontent.com/-OsntZYtcsnk/T6YCbbQsNLI/AAAAAAAAmbI/-ibKaoV6Mow/s800/sfera.gif') no-repeat left .4em}#contentDivSn{font-size:10px;margin:0;padding-bottom:8px;text-align:justify;padding-right:5px}img#my2img:hover{opacity:.6}img#my2img{-webkit-transition:all 300ms ease-in-out;-moz-transition:all 300ms ease-in-out;-o-transition:all 300ms ease-in-out;-ms-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out}
       
      </style>   
      
