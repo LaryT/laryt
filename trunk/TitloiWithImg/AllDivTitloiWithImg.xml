@@ -17,88 +17,8 @@
 <![CDATA[
     
 <style>   
-.divImg{
-//  width: 60px;
-  float: left;
-}
-.myImg{
-    border-bottom:2px solid #cccccc;
-    border-right:2px solid #cccccc;
-    height:40px;
-    margin-top:2px;
-    margin-left:2px;
-    margin-right:5px;
-    padding-bottom:1px;
-    padding-right:1px;
-    width:50px;
-}
-.mytdFirst{
-   background-color:#f6f6f6;
-   border-bottom:1px solid #cccccc;
-   overflow: hidden;
-   padding-bottom:5px;
-}
-.myImgFirst{
-    height:90px;
-    margin-top:2px;
-    margin-left:2px;
-    padding-bottom:1px;
-    padding-right:1px;
-    width:120px;
-    float:right;
-}
+.divImg{float:left}.myImg{border-bottom:2px solid #ccc;border-right:2px solid #ccc;height:40px;margin-top:2px;margin-left:2px;margin-right:5px;padding-bottom:1px;padding-right:1px;width:50px}.mytdFirst{background-color:#f6f6f6;border-bottom:1px solid #ccc;overflow:hidden;padding-bottom:5px}.myImgFirst{height:90px;margin-top:2px;margin-left:2px;padding-bottom:1px;padding-right:1px;width:120px;float:right}.bigTitle{background-color:#f6f6f6;color:#bc0202;font-size:18px;font-weight:bold;margin:0;padding-bottom:10px;padding-left:10px;padding-top:10px;text-align:left}.divRowWrap{border-bottom:1px dashed #f1f1f1;height:50px;overflow:hidden}.ns2-title,.ns2-titleFirst{font-size:10px;font-weight:bold;margin:0;padding-top:5px;padding-bottom:1px;padding-left:1px;text-align:left}.ns2-titleFirst{padding-top:20px;font-size:16px}.ns2-title a,.ns2-titleFirst a{color:#bc0202;text-decoration:none;text-shadow:gray 0 3px 3px;-webkit-transition:color 500ms,padding-left 500ms}.ns2-title a:hover,.ns2-titleFirst a:hover{color:#000;text-shadow:black 3px 0 20px;padding-left:10px}.strDateMonth{color:#333;font-size:10px;font-weight:bold}
 
-.bigTitle{
-    background-color:#f6f6f6;
-    color:#BC0202;
-    font-size: 18px; 
-    font-weight: bold;
-    margin: 0; 
-    padding-bottom: 10px; 
-    padding-left:10px;
-    padding-top: 10px; 
-    text-align:left;    
-}
-.divRowWrap{
-  border-bottom: 1px dashed #f1f1f1;
-  height:50px;
-  overflow:hidden;
-}
-.ns2-title, .ns2-titleFirst {
-    font-size: 10px; 
-    font-weight: bold;
-    margin: 0; 
-    padding-top:5px;
-    padding-bottom: 1px; 
-    padding-left:1px;
-    text-align:left;
- }
-.ns2-titleFirst {
-
-    padding-top: 20px;
-    font-size: 16px; 
-}
-.ns2-title a, .ns2-titleFirst a{
-    color:#BC0202;
-    text-decoration:none;
-    text-shadow : gray 0px 3px 3px;
-    -webkit-transition: color 500ms, padding-left 500ms;
-    
-}
-.ns2-title a:hover, .ns2-titleFirst a:hover{
-    color:#000000;
-    text-shadow : black 3px 0px 20px;
-    padding-left: 10px;
-    
-}
-.strDateMonth{    
-     color:#333333;
-     font-size: 10px;
-     font-weight: bold;
-}
-
-
-  
 </style>   
      
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -106,7 +26,6 @@
     <script type="text/javascript">
       google.load("feeds", "1");
     </script>
-
 
      <script type="text/javascript">
       var prefs = new gadgets.Prefs();
@@ -118,10 +37,6 @@
       var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
 
       var myBgColorTitle = prefs.getString("my_BgColorTitle"); 
-    
-      
-      
-        
 
 function init() {
   if(myStrFeed!= ''){ 
@@ -129,8 +44,7 @@ function init() {
   }else{
     var feed = new google.feeds.Feed("http://www.blogger.com/feeds/1250534396920824067/posts/default/-/women");
   }
-  
-  // feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
+
  feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
   if(myPosoiTitloi !=''){
     feed.setNumEntries(myPosoiTitloi);
@@ -164,12 +78,6 @@ function init() {
         var strPubDate ="";
         var entry = result.feed.entries[0];
         var myPubDate = new Date(entry.publishedDate);        
-
-//        var myPubDate = new Date(item.published);
-//        var myPubDate = new Date(item.getElementsByTagName('published')[0].firstChild.nodeValue);
-
-//        strPubDate = [myPubDate.getDate(), myPubDate.getMonth()+1, myPubDate.getFullYear()].join('/');
-//         strPubDate =myPubDate.toLocaleDateString().substr(4);
         
           if(myPubDate.getDate()<10){
             strPubDate = "0"+myPubDate.getDate()+".";
@@ -211,14 +119,8 @@ function init() {
         
         //------  xxx date
         var strPubDate ="";
-//        var myPubDate = new Date(item.published); 
          entry = result.feed.entries[i]; 
-         myPubDate = new Date(entry.publishedDate);        
-//        var myPubDate = new Date(item.getElementsByTagName('published')[0].firstChild.nodeValue);
-//       strPubDate = [myPubDate.getDate(), myPubDate2.getMonth()+1, myPubDate2.getFullYear()].join('/');
-//        strPubDate = myPubDate.toLocaleDateString().substr(4); 
-//        alert(strPubDate);
-          
+         myPubDate = new Date(entry.publishedDate);          
           if(myPubDate.getDate()<10){
             strPubDate = "0"+myPubDate.getDate()+".";
           }else{
@@ -228,10 +130,8 @@ function init() {
              strPubDate = strPubDate+"0"+ (myPubDate.getMonth()+1);
           }else{
              strPubDate = strPubDate +(myPubDate.getMonth()+1);
-          }   
-          
+          }             
         //--------
-      
       var myLink = item.getElementsByTagName('link')[0].getAttributeNode('href').nodeValue;
       var myTitle = item.getElementsByTagName('title')[0].firstChild.nodeValue;
       if(strMIExplorer){
@@ -247,7 +147,7 @@ function init() {
         html.push('<div class="divImg"><'+ imgUrl + '" class="myImg" /></div>');
       }else{
         html.push('<div class="divImg"><img class="myImg" src="'+ imgUrl + '" /></div>');
-      }      
+      }
 
       html.push('<div class="ns2-title"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ strPubDate +')</span></div>');
       html.push('</div>');
@@ -257,45 +157,17 @@ function init() {
 
       html.push('</div></div>');
       content.innerHTML = html.join('');
-
-
-          if(myStrTitle != ''){document.getElementById("bigTitleID").innerHTML = myStrTitle;}  
-          
-/*
-          if(myColorTitle != ''){
-             $(".ns2-title a").css("color", myColorTitle); 
-             $(".ns2-titleFirst a").css("color", myColorTitle); 
-             $("div#bigTitleID").css("color", myColorTitle);              
-          }        
-         
-          if(myBgColorTitle != ''){
-             $(".bigTitle").css("background-color", myBgColorTitle ); 
-             $(".mytdFirst").css("background-color", myBgColorTitle ); 
-          }                 
-           
-          if(myStrWidth != ''){ $("#content").attr("width",myStrWidth);}
-          
-          if(myStrWidth != ''){ $("#myTable").attr("width",myStrWidth);}
-          
-
-          if(myStrWidth != ''){ $("#myFiDiv").attr("width",myStrWidth);}
-          
-*/
-
+      
+      if(myStrTitle != ''){document.getElementById("bigTitleID").innerHTML = myStrTitle;} 
    }
 });//---end fnc feedload
 
-  
 } //-- end init
-
   gadgets.util.registerOnLoadHandler(init); 
   // google.setOnLoadCallback(init);
  
 </script>
-
 <div id="content">l...</div>
-
-    
     ]]>
   </Content>
 </Module>    
