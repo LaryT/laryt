@@ -17,71 +17,7 @@
 <![CDATA[
     
 <style>   
-.myImg{
-    border-bottom:2px solid #cccccc;
-    border-right:2px solid #cccccc;
-    height:40px;
-    margin-top:2px;
-    margin-left:2px;
-    padding-bottom:1px;
-    padding-right:1px;
-    width:50px;
-}
-.mytdFirst{
-        background-color:#f6f6f6;
-        border-bottom:1px solid #cccccc;
-}
-.myImgFirst{
-    height:90px;
-    margin-top:2px;
-    margin-left:2px;
-    padding-bottom:1px;
-    padding-right:1px;
-    width:120px;
-    float:right;
-}
-
-.bigTitle{
-    background-color:#f6f6f6;
-    color:#BC0202;
-    font-size: 18px; 
-    font-weight: bold;
-    margin: 0; 
-    padding-bottom: 10px; 
-    padding-left:10px;
-    padding-top: 10px; 
-    text-align:left;    
-}
-.ns2-title, .ns2-titleFirst {
-    font-size: 10px; 
-    font-weight: bold;
-    margin: 0; 
-    padding-bottom: 1px; 
-    padding-left:10px;
-    text-align:left;
- }
-.ns2-titleFirst {
-
-    padding-top: 20px;
-    font-size: 16px; 
-}
-.ns2-title a, .ns2-titleFirst a{
-    color:#BC0202;
-    text-decoration:none;
-}
-.ns2-title a:hover, .ns2-titleFirst a:hover{
-    color:#000000;
-}
-.strDateMonth{    
-     color:#dddddd;
-     font-size: 10px;
-     font-weight: bold;
-}
-
-td{
-   border-bottom: 1px dashed #ededed;
-}
-  
+.myImg{border-bottom:2px solid #ccc;border-right:2px solid #ccc;height:40px;margin-top:2px;margin-left:2px;padding-bottom:1px;padding-right:1px;width:50px}.mytdFirst{background-color:#f6f6f6;border-bottom:1px solid #ccc}.myImgFirst{height:90px;margin-top:2px;margin-left:2px;padding-bottom:1px;padding-right:1px;width:120px;float:right}.bigTitle{background-color:#f6f6f6;color:#bc0202;font-size:18px;font-weight:bold;margin:0;padding-bottom:10px;padding-left:10px;padding-top:10px;text-align:left}.ns2-title,.ns2-titleFirst{font-size:10px;font-weight:bold;margin:0;padding-bottom:1px;padding-left:10px;text-align:left}.ns2-titleFirst{padding-top:20px;font-size:16px}.ns2-title a,.ns2-titleFirst a{color:#bc0202;text-decoration:none}.ns2-title a:hover,.ns2-titleFirst a:hover{color:#000}.strDateMonth{color:#ddd;font-size:10px;font-weight:bold}td{border-bottom:1px dashed #ededed}
 </style>   
      
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
