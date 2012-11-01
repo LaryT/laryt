@@ -226,8 +226,7 @@ function selectTab (myID, myTab, myCaption ) {
 
 function init(){
  if (myURLfeed !=""){
-  //sendQuery(); 
-  // selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');
+
  }
  else{
    document.getElementById("sourceID").innerHTML = "Δεν υπάρχει το αντίστοιχο URL του αρχείο των υπο παρακολούθηση κατηγοριών.  Παρακαλούμε από την επιλογή επεξεργασία των παραμέτρων, εισάγεται την αντίστοιη URL Διεύθυνση του Φύλλου των docs, με τον πίνακα των κατηγοριών  |..| There is no corresponding URL file of the monitored categories. Please edit the parameters, enter the URL address corresponding global sheet of googledocs, with the list of categories ... [more : grbasket@gmail.com]";
@@ -343,8 +342,6 @@ function handleQueryResponseEbdomadiaioAnaHmera(response) {
    
 
      html.push('<div class="numDiv"   style="display: block;" onclick="makeMarque(&quot;'+ strForCentralMarq  + '&quot;)">');
-
-//---     html.push('<div class="numDiv" style="display: block;">');
 
      html.push('<table border="0" width="100%" cellspacing="0" cellpadding="0"><tbody>');
      
@@ -750,9 +747,6 @@ function handleQueryApotelesmataDiorgResponse(response){
 //--------
      strForCentralMarq = data.getFormattedValue(row,18)+ ' | ' + data.getFormattedValue(row,19)+ ' | ' + data.getFormattedValue(row,20);
 
-
-   
-
      html.push('<div class="numDiv"  style="display: block;" onclick="makeMarque(&quot;'+ strForCentralMarq  + '&quot;)">');
      html.push('<table border="0" width="100%" cellspacing="0" cellpadding="0" ><tbody>');
      html.push('<tr><td colspan="6"></td></tr>');
@@ -761,9 +755,7 @@ function handleQueryApotelesmataDiorgResponse(response){
 
     // --  ----    1h seira omades - embhmata          -----   --
 
-
      html.push('<td class="pad font-10" width="30%" align="right">');
-
 
       //--- xarths ghpedoyxoy
      if (data.getFormattedValue(row, 25) != "" & data.getFormattedValue(row, 25) != "---" & data.getFormattedValue(row, 4) != "-" & data.getFormattedValue(row, 4) != "") {
@@ -794,10 +786,8 @@ function handleQueryApotelesmataDiorgResponse(response){
      strHmeromhniesGhpeda = data.getFormattedValue(row, 0) +' '+ data.getFormattedValue(row, 1)+' '+ data.getFormattedValue(row, 2)+' '+ data.getFormattedValue(row, 3)+' '+ data.getFormattedValue(row, 4) ;
 
 
-
-
-     // --  ----    2h seira apotelesmata (an yparxei skor)         -----   --
-
+     // --  ----    2h seira apotelesmata (an yparxei skor)    
+     
      if(data.getFormattedValue(row, 7) > 0 || data.getFormattedValue(row, 8)>0 ){
 
 
@@ -837,10 +827,7 @@ function handleQueryApotelesmataDiorgResponse(response){
 
      html.push('</td></tr>' );
 
-
-
     // ----    2h seira prin ton agvna stoixeia DIATHTES-KOMISARIOI-KRITES (an den yparxei skor) --
-
 
      html.push('<tr><td colspan="6"  align="center" title="'+strDiathtes+'"><span class="anametrhsh small-7">'+ strDiathtes+ '</span></td></tr>' );
 }
@@ -1030,6 +1017,3 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     ]]>
   </Content>
 </Module>
-
-
-
