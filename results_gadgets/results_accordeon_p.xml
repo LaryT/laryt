@@ -11,386 +11,7 @@
     
   <![CDATA[
 <style>
-* {
- margin: 0;
- padding: 0;
-}
-.small-7{
-  font-size: 7px !important;
-  font-weight: normal;
-}
-
-.small-9 {
-  font-size: 9px !important;
-  font-weight: normal;
-}
-
-.font-10{
-  font-size: 10px !important;
-  font-weight: bold;
-}
-
-.big {
-  font-size: 12px !important;
-  font-weight: bold;
-}
-
-
-.koyti{
-  background-color: transparent;
-}
-
-div.numDiv{
-  cursor:pointer;
-}
-
-div.periexomenaCL{
- height: 550px;
- display:none;
-}
-
-div#sourceIDBathm{
- display:block;
-}
-
-.fpOther {
- height: 549px;
- border-bottom: solid 1px #03273C;
- border-top: solid 0px white;
- overflow: hidden;
-}
-
-
-body {
-background-color: transparent;
-}
-
-
-#disDiv{
- background-color:#343437;
-  border-top-left-radius:  5px;
-  border-top-right-radius:  5px;
-  top:74px;
-  left:7px;
-  width:300px;
-  height:250px;
-}
-
-#inDisplay{
- background-color:#e7e7e8;
- border: 1px color white;
- width:298px;
- height:236px;
-}
-
-#myTitleID{
- 
-border-top: 1px solid #444;
-color: #2222f2;
-font-size: 14px;
-font-weight: bold;
-padding: 3px 10px;
-}
-
-
-.fpOtherInner {
- height: 525px;  
- width: 100%;
- overflow: hidden;
-}
-
-.fpEmbTitle1, .fpEmbTitle2, .fpEmbTitle3, .fpEmbTitle4{
- border: solid 1px #0B6BA5;
- cursor: pointer;
- font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
- text-transform: uppercase;
- color: white;
- font-size: 12px;
- font-weight: bold;
- height: 14px;
-}
-
-.fpEmbTitle1{
- background-image: url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s24/blueBG.png');
- padding: 3px 10px 3px 10px;
-}
-
-.fpEmbTitle2{
-  padding: 3px 10px 3px 35px;
-  background-image: url('https://lh5.googleusercontent.com/-ZfK9IGg7qeY/T0HuOBOLfgI/AAAAAAAAgIQ/sg6V6TWeqM8/s20/galdiplo1x67.png');
-}
-
-.fpEmbTitle3{
-  padding: 3px 10px 3px 50px;
-  background-image: url('https://lh3.googleusercontent.com/-QN_NMo_a1YA/T0Hxm24eIZI/AAAAAAAAgIc/hnBUgXrg77Q/s20/gray_glosy1x60.png');
-}
-
-.fpEmbTitle4{
-  padding: 3px 10px 3px 65px;
-  background-image: url('https://lh4.googleusercontent.com/-vhO393b6OJ4/T0LHvuxnPmI/AAAAAAAAgI0/ule1n_BfzII/s24/orange1x30.png');
-
-}
-
-
-.fpEmbTitle1 .icon {
- float: right;
- padding-top: 6px;
-padding-right: 10px;
-}
-
-.fpEmbTitle2 .icon {
- float: right;
- padding-top: 6px;
- padding-right: 20px;
-}
-
-.fpEmbTitle3 .icon {
- float: right;
- padding-top: 6px;
- padding-right: 30px;
-}
-
-.fpEmbTitle4 .icon {
- float: right;
- padding-top: 6px;
- padding-right: 40px;
-}
-
-.fpEmbCont1, .fpEmbCont2, .fpEmbCont3, fpEmbCont4  {
- display: none;
- overflow: hidden;
-}
-
-.fpOtherPfeil {
-  text-align: center;
-}
-
-.pad{
- border-bottom: 1px solid #D6D6D6;
- padding-bottom:2px;
-}
-
-.padBath{
- border-bottom: 0px solid #D6D6D6;
- padding-bottom:1px;
-}
-
-
-#theLoadingID {
- width: 100%;
- height: 100%;
-}
-
-.theLoading {
- position: absolute;
- background-color: white;
- background-image: url('https://lh3.googleusercontent.com/-U1qC603CKXQ/TSOH_e4K4pI/AAAAAAAATiY/FWwWiU4QOl4/s50/loading.gif');
- background-repeat: no-repeat;
- background-position: 50% 0%;
- display: block;
-}
-
-.scoreboard {
-  clear: both;
-  background-image: url(https://lh5.googleusercontent.com/-bIA3JYgMAzw/TObApoUYmcI/AAAAAAAATNU/Q171ifTcksE/s800/bkg.png);
-  background-repeat-x: repeat;
-  background-repeat-y: no-repeat;
-  background-attachment: initial;
-  background-position-x: 50%;
-  background-position-y: 0%;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: #DFDFDF;
-}
-
-table.agonasRec {
-  clear: both;
-  border: 1px solid #D6D6D6;
-  border-bottom: 3px solid #D6D6D6;
-  font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
-  padding-top: 3px;
-}
-
-table.agonasApotelesmataDiorRec {
-  clear: both;
-  border: 0px solid #D6D6D6;
-  border-bottom: 1px solid #D6D6D6;
-  font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
-  padding-top: 1px;
-}
-
-table.bathmolRec {
-  clear: both;
-  border: 1px solid #D6D6D6;
-  border-bottom: 0px solid #D6D6D6;
-  font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
-  padding-top: 1px;
-}
-
-td.emblhmaImg{
- margin: 0;
- padding: 0;
- border-bottom: 1px solid #D6D6D6;
- padding-bottom: 2px;
-}
-
-img.emblhmaImg{
-  border: 1px solid #C5C5C5;
-  height:24px;
-  width :24px;
-}
-
-td.emblhmaImgBathmo{
- margin: 0;
- padding: 0;
- border-bottom: 1px solid #D6D6D6;
- padding-bottom: 1px;
-}
-
-img.emblhmaImgBathmo{
-  border: 1px solid #C5C5C5;
-  height:15px;
-  width :15px;
-}
-
-
-img.ImgMapVI{
-  margin: 0;
-  padding: 0;
-  height:9px;
-  width :9px;
-}
-
-img.ImgMapVIRight{
-  float:right;
-  text-align:right;
-  margin: 0;
-  padding: 0;
-  height:12px;
-  width :12px;
-}
-
-.objImgVideoMap{
-  border:1px solid gray; 
-  padding:5px;
-  margin:1px;
-  height:222px;
-  width:283px;
-}
-
-span.anametrhsh{
-  color:black;
-  text-decoration:none;
-  cursor:pointer;
-}
-
-a.anametrhsh{
-  color:black;
-  text-decoration:none;
-  cursor:pointer;
-}
-
-
-ul.tabG4{
-display: block;
-list-style: none;
-font-size: 11px;
-margin: 0 0 10px 0;
-font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
-font-size: 10px;
-}
-
-ul.tabG4 li{
-display: inline;
-font-size: 10px;
-font-weight: bold;
-text-decoration: none;
-}
-
-ul.tabG4 li a{
-font-size: 14px;
-font-weight: bold;
-margin: 10px 0px 6px 0;
-color: black;
-padding: 0 6px;
-text-decoration: none;
-}
-
-ul.tabG4 li a.selected,  ul.tabG4 li a:hover {
-background: #03273C url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s12/blueBG.png') repeat-x;
-color: white;
-border: 1px solid #aaaaff;
-padding: 0 5px;
-text-decoration: none;
-}
-
-div.titleAgvnistikh{
-  width:100%;
-  background: #03273C url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s18/blueBG.png') repeat-x;
-  border: 1px solid #aaaaff;
-  padding: 0 5px;
-}
-
-div.titleAgvnistikh a{
-  color: white;
-  font-size:12px;
-  font-weight:bold;
-  text-decoration: none;
-}
-
-//----  tabs area
-div{
-
-}
-
-
-#bathmologies-tab{
-  z-index: 30;
-}
-#apotelesmata-tab{
-  z-index: 20;
-}
-
-#myTabs {
-margin-bottom: -1px;
-position: relative;
-z-index: 100;
-height: 35px;
-display: block;
-}
-
-#myTabs ul {
-/*
-background-color: #f5f5f5;
-
-  border-bottom: 1px solid #eeeeee;
-*/  
-  margin-top: 0;
-}
-
-#myTabs ul li{
-display: inline-block;
-float: left;
-padding: .6em 1em;
-font: normal normal 14px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
-color: #999999;
-border-left: 1px solid #ffffff;
-border-right: 1px solid #eeeeee;
-
- cursor:pointer;
-}
-
-#myTabs ul li a{
- text-decoration: none;
-}
-
-#mytabs ul li.tab-selected, #myTabs ul li.tab-selected a, #myTabs ul li a:hover, #myTabs ul li:hover {
- color: #000000;
- background-color: #eeeeee;
- text-decoration: none;
-}
-
-
+*{margin:0;padding:0}.small-7{font-size:7px!important;font-weight:normal}.small-9{font-size:9px!important;font-weight:normal}.font-10{font-size:10px!important;font-weight:bold}.big{font-size:12px!important;font-weight:bold}.koyti{background-color:transparent}div.numDiv{cursor:pointer}div.periexomenaCL{height:550px;display:none}div#sourceIDBathm{display:block}.fpOther{height:549px;border-bottom:solid 1px #03273c;border-top:solid 0 white;overflow:hidden}body{background-color:transparent}#disDiv{background-color:#343437;border-top-left-radius:5px;border-top-right-radius:5px;top:74px;left:7px;width:300px;height:250px}#inDisplay{background-color:#e7e7e8;border:1px color white;width:298px;height:236px}#myTitleID{border-top:1px solid #444;color:#2222f2;font-size:14px;font-weight:bold;padding:3px 10px}.fpOtherInner{height:525px;width:100%;overflow:hidden}.fpEmbTitle1,.fpEmbTitle2,.fpEmbTitle3,.fpEmbTitle4{border:solid 1px #0b6ba5;cursor:pointer;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;text-transform:uppercase;color:white;font-size:12px;font-weight:bold;height:14px}.fpEmbTitle1{background-image:url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s24/blueBG.png');padding:3px 10px 3px 10px}.fpEmbTitle2{padding:3px 10px 3px 35px;background-image:url('https://lh5.googleusercontent.com/-ZfK9IGg7qeY/T0HuOBOLfgI/AAAAAAAAgIQ/sg6V6TWeqM8/s20/galdiplo1x67.png')}.fpEmbTitle3{padding:3px 10px 3px 50px;background-image:url('https://lh3.googleusercontent.com/-QN_NMo_a1YA/T0Hxm24eIZI/AAAAAAAAgIc/hnBUgXrg77Q/s20/gray_glosy1x60.png')}.fpEmbTitle4{padding:3px 10px 3px 65px;background-image:url('https://lh4.googleusercontent.com/-vhO393b6OJ4/T0LHvuxnPmI/AAAAAAAAgI0/ule1n_BfzII/s24/orange1x30.png')}.fpEmbTitle1 .icon{float:right;padding-top:6px;padding-right:10px}.fpEmbTitle2 .icon{float:right;padding-top:6px;padding-right:20px}.fpEmbTitle3 .icon{float:right;padding-top:6px;padding-right:30px}.fpEmbTitle4 .icon{float:right;padding-top:6px;padding-right:40px}.fpEmbCont1,.fpEmbCont2,.fpEmbCont3,fpEmbCont4{display:none;overflow:hidden}.fpOtherPfeil{text-align:center}.pad{border-bottom:1px solid #d6d6d6;padding-bottom:2px}.padBath{border-bottom:0 solid #d6d6d6;padding-bottom:1px}#theLoadingID{width:100%;height:100%}.theLoading{position:absolute;background-color:white;background-image:url('https://lh3.googleusercontent.com/-U1qC603CKXQ/TSOH_e4K4pI/AAAAAAAATiY/FWwWiU4QOl4/s50/loading.gif');background-repeat:no-repeat;background-position:50% 0;display:block}.scoreboard{clear:both;background-image:url(https://lh5.googleusercontent.com/-bIA3JYgMAzw/TObApoUYmcI/AAAAAAAATNU/Q171ifTcksE/s800/bkg.png);background-repeat-x:repeat;background-repeat-y:no-repeat;background-attachment:initial;background-position-x:50%;background-position-y:0;background-origin:initial;background-clip:initial;background-color:#dfdfdf}table.agonasRec{clear:both;border:1px solid #d6d6d6;border-bottom:3px solid #d6d6d6;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;padding-top:3px}table.agonasApotelesmataDiorRec{clear:both;border:0 solid #d6d6d6;border-bottom:1px solid #d6d6d6;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;padding-top:1px}table.bathmolRec{clear:both;border:1px solid #d6d6d6;border-bottom:0 solid #d6d6d6;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;padding-top:1px}td.emblhmaImg{margin:0;padding:0;border-bottom:1px solid #d6d6d6;padding-bottom:2px}img.emblhmaImg{border:1px solid #c5c5c5;height:24px;width:24px}td.emblhmaImgBathmo{margin:0;padding:0;border-bottom:1px solid #d6d6d6;padding-bottom:1px}img.emblhmaImgBathmo{border:1px solid #c5c5c5;height:15px;width:15px}img.ImgMapVI{margin:0;padding:0;height:9px;width:9px}img.ImgMapVIRight{float:right;text-align:right;margin:0;padding:0;height:12px;width:12px}.objImgVideoMap{border:1px solid gray;padding:5px;margin:1px;height:222px;width:283px}span.anametrhsh{color:black;text-decoration:none;cursor:pointer}a.anametrhsh{color:black;text-decoration:none;cursor:pointer}ul.tabG4{display:block;list-style:none;font-size:11px;margin:0 0 10px 0;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;font-size:10px}ul.tabG4 li{display:inline;font-size:10px;font-weight:bold;text-decoration:none}ul.tabG4 li a{font-size:14px;font-weight:bold;margin:10px 0 6px 0;color:black;padding:0 6px;text-decoration:none}ul.tabG4 li a.selected,ul.tabG4 li a:hover{background:#03273c url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s12/blueBG.png') repeat-x;color:white;border:1px solid #aaf;padding:0 5px;text-decoration:none}div.titleAgvnistikh{width:100%;background:#03273c url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s18/blueBG.png') repeat-x;border:1px solid #aaf;padding:0 5px}div.titleAgvnistikh a{color:white;font-size:12px;font-weight:bold;text-decoration:none}//#bathmologies-tab{z-index:30}#apotelesmata-tab{z-index:20}#myTabs{margin-bottom:-1px;position:relative;z-index:100;height:35px;display:block}#myTabs ul{margin-top:0}#myTabs ul li{display:inline-block;float:left;padding:.6em 1em;font:normal normal 14px Arial,Tahoma,Helvetica,FreeSans,sans-serif;color:#999;border-left:1px solid #fff;border-right:1px solid #eee;cursor:pointer}#myTabs ul li a{text-decoration:none}#mytabs ul li.tab-selected,#myTabs ul li.tab-selected a,#myTabs ul li a:hover,#myTabs ul li:hover{color:#000;background-color:#eee;text-decoration:none}
 </style>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
@@ -408,6 +29,8 @@ border-right: 1px solid #eeeeee;
   var prosthetoID="";
   var pubID="";
   var posoPxScroll=70;
+  
+ 
 
    if( myURLfeed!="" ){
      var query = new google.visualization.Query(myURLfeed);
@@ -429,6 +52,7 @@ border-right: 1px solid #eeeeee;
 
 function embExpand(id,epiclass,URLforBathmologia)
 {
+
 
   $(".fpEmbTitle"+ epiclass +" .icon").attr("src", "https://lh6.googleusercontent.com/-FlqMiSON9SM/TLcMIbO9tqI/AAAAAAAAS6U/-BQZAQgV5yw/s800/velaki_kato.png");  
 
@@ -469,6 +93,7 @@ function embExpand(id,epiclass,URLforBathmologia)
      //-- elegxos an einai to 3o epipedo (teleytaio gia tiw bathmologis prepei na xtisei baumologies) 
      if (epiclass=='3' && id.charAt(id.length - 1)=='b'){ 
        pubID=id;
+
        makeBathmologia(URLforBathmologia);
      }
 
@@ -601,8 +226,7 @@ function selectTab (myID, myTab, myCaption ) {
 
 function init(){
  if (myURLfeed !=""){
-  //sendQuery(); 
-  // selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');
+
  }
  else{
    document.getElementById("sourceID").innerHTML = "Δεν υπάρχει το αντίστοιχο URL του αρχείο των υπο παρακολούθηση κατηγοριών.  Παρακαλούμε από την επιλογή επεξεργασία των παραμέτρων, εισάγεται την αντίστοιη URL Διεύθυνση του Φύλλου των docs, με τον πίνακα των κατηγοριών  |..| There is no corresponding URL file of the monitored categories. Please edit the parameters, enter the URL address corresponding global sheet of googledocs, with the list of categories ... [more : grbasket@gmail.com]";
@@ -718,8 +342,6 @@ function handleQueryResponseEbdomadiaioAnaHmera(response) {
    
 
      html.push('<div class="numDiv"   style="display: block;" onclick="makeMarque(&quot;'+ strForCentralMarq  + '&quot;)">');
-
-//---     html.push('<div class="numDiv" style="display: block;">');
 
      html.push('<table border="0" width="100%" cellspacing="0" cellpadding="0"><tbody>');
      
@@ -978,7 +600,9 @@ function handleQueryResponseBathmologia(response) {
        html.push('<div id="fpEmbCont_'+countTitlesGroup1 +'_'+ countTitlesGroup2 +'_'+ countTitlesGroup3 + prosthetoID +'" class="fpEmbCont3" style="display:none;">');
 
       //---- velos pano
-       html.push('<div class="fpOtherPfeil"><img src="https://lh6.googleusercontent.com/-ZuNCj1hzNww/T0NTC0-Hf9I/AAAAAAAAgJ8/evL6XwtD56E/s30/velos_epano.png" border="0"  onclick="scroll(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3+ prosthetoID  + '&quot;, -1, posoPxScroll)"> </div>' );
+
+       html.push('<div class="fpOtherPfeil"><img src="https://lh6.googleusercontent.com/-ZuNCj1hzNww/T0NTC0-Hf9I/AAAAAAAAgJ8/evL6XwtD56E/s30/velos_epano.png" border="0"  onclick="scroll(&quot;'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3+ prosthetoID  + '&quot;, -1, posoPxScroll)"> &nbsp;&nbsp;<a href="'+ data.getFormattedValue(row, 7) +'&single=true&gid=0&range=a1%3Ap1000&output=html" target="_blank"><img src="https://lh4.googleusercontent.com/-rYvi7HuZqko/UIfiwSPbRsI/AAAAAAAAvms/j_YV_l8yzdk/s800/icoSpSheet.png" /></a> </div>' );
+       
        //---- to periblma gia toys agones
        html.push('<div class="fpOtherInner" id="fpOtherInner_'+ countTitlesGroup1 +'_'+ countTitlesGroup2+'_'+ countTitlesGroup3 + prosthetoID + '" style="height: 336px; display: block;" >');
 
@@ -1041,9 +665,13 @@ function makeBathmologia(URLforBathmologia){
      var strSQL ="select AC, AD, AE, AF, AI,AJ,AM,AN,AO,AP,AQ,AR,AS,AT,AU,AV where  AE is not null  order by AE";
      queryBathKathgorias.setQuery(strSQL);
      queryBathKathgorias.send(handleQueryBathKathgoriasResponse);
+          //-------- trexon docs
+     
 
    }else{
      alert('Δεν βρέθηκε το αρχείο με τις βαθμολογίες της κατηγορίας...');
+          //-------- trexon docs
+     
    }
 
 }//--- end fnc makeBathmologia
@@ -1058,9 +686,11 @@ function makeApotelesmataDiorganvshs(URLforBathmologia){
      var strSQL ="select B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, AW, AX, AY, AZ, BA, BB, BC, BD, BE, BG where  Q is not null  order by Q, D, E";
      queryApotelesmataDiorganvsh.setQuery(strSQL);
      queryApotelesmataDiorganvsh.send(handleQueryApotelesmataDiorgResponse);
-
+          //-------- trexon docs     
+     
    }else{
      alert('Δεν βρέθηκε το αρχείο με τα αποτελέσματα της διοργανώσης - κατηγορίας...');
+          //-------- trexon docs
    }
 
 }//--- end fnc makeApotelesmataDiorganvshs
@@ -1117,9 +747,6 @@ function handleQueryApotelesmataDiorgResponse(response){
 //--------
      strForCentralMarq = data.getFormattedValue(row,18)+ ' | ' + data.getFormattedValue(row,19)+ ' | ' + data.getFormattedValue(row,20);
 
-
-   
-
      html.push('<div class="numDiv"  style="display: block;" onclick="makeMarque(&quot;'+ strForCentralMarq  + '&quot;)">');
      html.push('<table border="0" width="100%" cellspacing="0" cellpadding="0" ><tbody>');
      html.push('<tr><td colspan="6"></td></tr>');
@@ -1128,9 +755,7 @@ function handleQueryApotelesmataDiorgResponse(response){
 
     // --  ----    1h seira omades - embhmata          -----   --
 
-
      html.push('<td class="pad font-10" width="30%" align="right">');
-
 
       //--- xarths ghpedoyxoy
      if (data.getFormattedValue(row, 25) != "" & data.getFormattedValue(row, 25) != "---" & data.getFormattedValue(row, 4) != "-" & data.getFormattedValue(row, 4) != "") {
@@ -1161,10 +786,8 @@ function handleQueryApotelesmataDiorgResponse(response){
      strHmeromhniesGhpeda = data.getFormattedValue(row, 0) +' '+ data.getFormattedValue(row, 1)+' '+ data.getFormattedValue(row, 2)+' '+ data.getFormattedValue(row, 3)+' '+ data.getFormattedValue(row, 4) ;
 
 
-
-
-     // --  ----    2h seira apotelesmata (an yparxei skor)         -----   --
-
+     // --  ----    2h seira apotelesmata (an yparxei skor)    
+     
      if(data.getFormattedValue(row, 7) > 0 || data.getFormattedValue(row, 8)>0 ){
 
 
@@ -1204,10 +827,7 @@ function handleQueryApotelesmataDiorgResponse(response){
 
      html.push('</td></tr>' );
 
-
-
     // ----    2h seira prin ton agvna stoixeia DIATHTES-KOMISARIOI-KRITES (an den yparxei skor) --
-
 
      html.push('<tr><td colspan="6"  align="center" title="'+strDiathtes+'"><span class="anametrhsh small-7">'+ strDiathtes+ '</span></td></tr>' );
 }
@@ -1236,6 +856,8 @@ function handleQueryBathKathgoriasResponse(response){
     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
   }
+  
+
 //---  GET THE DATA 
   var html =[];  
   var data = response.getDataTable();
@@ -1337,6 +959,7 @@ function makeBathmologia(URLforBathmologia){
 
    }else{
      alert('Δεν βρέθηκε το αρχείο με τις βαθμολογίες της κατηγορίας...');
+
    }
 
 }//--- end fnc makeBathmologia
@@ -1372,9 +995,9 @@ gadgets.util.registerOnLoadHandler(init);
   </div>
 
 <center>
-<!-- a id="ensvmatvsh" href="http://posmporo.blogspot.com/2012/05/gadget-matchboxcenter.html" target="_blank" style="text-decoration:none;font-size:9px;color:gray;height:10px;">πληροφορίες για το boxMatchCenter</a --><span style="font-size:9px;color:gray;height:10px;" >GameCenter &nbsp;|&nbsp;</span><a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a><br/>
+<!-- a id="ensvmatvsh" href="http://posmporo.blogspot.com/2012/05/gadget-matchboxcenter.html" target="_blank" style="text-decoration:none;font-size:9px;color:gray;height:10px;">πληροφορίες για το boxGameCenterr</a --><span style="font-size:9px;color:gray;height:10px;" >GameCenter &nbsp;|&nbsp;</span><a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a><br/>
 
-<div id="addiv" style="position:absolute;top:110px;left:8px;"><center>
+<div id="addiv" style="position:absolute;top:250px;left:8px;"><center>
 <a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:9px;color:black;height:10px;" title="απόκρυψη - hide ads">X</a><br/>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
@@ -1394,5 +1017,3 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     ]]>
   </Content>
 </Module>
-
-
