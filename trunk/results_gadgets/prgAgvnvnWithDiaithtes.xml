@@ -39,6 +39,9 @@ var options = {'showRowNumber': true};
  options['cssClassNames'] = {   tableCell : 'mikra10Class'};
 
 function drawVisualization() {
+
+ document.getElementById("diorgID").innerHTML = myEventName;
+
  //https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdGNFVUZtanBOc1piRlFJNHNwck5LNkE
  if(myssDocsID !=''){
   var strQuery ="http://spreadsheets.google.com/tq?key=" + myssDocsID +"#gid=0&pub=1"; 
@@ -93,7 +96,7 @@ function setPagingButtonsConfiguration(value) {
 </script>
 
 <center><div  class="sImg"   style="background-color:#f0f0f0;color:#bc2020;width:100%;height:70px;">
-<span style="font-size:20px;font-weight:bold;">Πρόγραμμα αγώνων με τους διαιτητές, κριτές και κομισάριους</span><br/><span style="font-size:28px;">των αγωνιστικών αναμετρήσεων της</span><span id="diorgID">ΕΣΚΑΝΑ</span>
+<span style="font-size:20px;font-weight:bold;">Πρόγραμμα αγώνων με τους διαιτητές, κριτές και κομισάριους</span><br/><span style="font-size:28px;">των αγωνιστικών αναμετρήσεων της</span><span id="diorgID"> </span>
  </div></center>
 
 
@@ -114,18 +117,19 @@ function setPagingButtonsConfiguration(value) {
        <span style="font-size:12px;">*Ανανέωση δεδομένων πίνακα κάθε 4 ώρες με αυτοματοποιημένο τρόπο .</span><br/> 
       </div></td>
 <td  style="margin-bottom: 1px; padding: 0px;  background-color:#fcfcfc;width:480px;">
-<div><script type="text/javascript"><!--
+<div>
+<script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
-google_ad_host = "pub-1556223355139109";
-/* 468 X 60 agvnesTableVisualizition */
-google_ad_slot = "9477008288";
+/* 468x60 gadgPRGagvnvnDiai */
+google_ad_slot = "3560925487";
 google_ad_width = 468;
 google_ad_height = 60;
 //-->
 </script>
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script></div>
+</script>
+</div>
 </td></tr></tbody></table>
     <div id="table" style="margin-bottom: 0px; padding: 0px;  background-color:#fcfcfc;">Άντληση δεδομένων ... loading ...</div>
     ]]>
