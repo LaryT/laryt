@@ -44,7 +44,7 @@ function drawVisualization() {
  document.getElementById("diorgID").innerHTML = myEventName;
 
  //https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdGNFVUZtanBOc1piRlFJNHNwck5LNkE
- if(myssDocsID !=''){
+ if(myssDocsID != ""){
   var strQuery ="http://spreadsheets.google.com/tq?key=" + myssDocsID +"#gid=0&pub=1"; 
  }else{
   var strQuery = new google.visualization.Query('http://spreadsheets.google.com/tq?key=0AjrqMWGJ6suYdC1DOGJLd2pCOWlpRFY5THdfeTNfT1E#gid=0&pub=1');
