@@ -124,12 +124,12 @@ html.push('</div>');
   });
 */
 
-
+/*
 $(function() {
     $( "#myAccordion" ).accordion();
   });
 
-
+*/
 
 
 gadgets.util.registerOnLoadHandler(myInitMaxiAge); 
