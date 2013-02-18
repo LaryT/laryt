@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="__UP_my_name__" height="678" scrolling="false" width="335" scaling="false" title_url="http://www.grbasket.gr" description="Results, Αποτελέσματα |::| Display results in your blog or website " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s275/box_match_center.png" thumbnail="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s125/box_match_center.png" category="sport" category2="news" > 
+    <Require feature="setprefs" />    
+    <Require feature="dynamic-height" />
+  </ModulePrefs>
+  <UserPref name="my_name" display_name="Name" default_value="TeamsByCategory" />
+  <UserPref name="m_Category" display_name="Age Category (M45+):" default_value="" />
+<Content type="html">
+    
+  <![CDATA[
+<style>
+.imgFlagRadius{
+border-radius: 8px;
+height:16px;
+width:16px;
+}
+
+.boxOut20 {
+box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
+-webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
+-moz-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
+-o-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
+-ms-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+var prefs = new gadgets.Prefs();
+
+var mCategory = prefs.getString("m_Category");
+
+
+var urlMaxiCategories="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc&headers=1";
+var queryMaxiCategories;
+
+
+//--- myInitMaxiAge();
+
+function myInitMaxiAge(){
+// ----  alert('No source file for Categories');
+
+  if( urlMaxiCategories!="" ){
+     queryMaxiCategories = new google.visualization.Query(urlMaxiCategories);
+//--  alert('12th FIMBA World Maxibasketball Championship Thessaloniki 2013');
+     sendQueryMaxiCategories();
+  }else{
+   alert('No source file for  Categories');
+  }
+
+ //---- make maxi categories
+ function sendQueryMaxiCategories(){
+
+  if( mCategory!="" ){
+   var strQ='select L,M,P, count(K) where L="'+mCategory +'" group by L,M,P ';
+ }else{
+   var strQ='select L,M,P, count(K)  group by L,M,P ';
+}
+   queryMaxiCategories.setQuery(strQ);   
+   queryMaxiCategories.send(handleResponseQueryMaxiCategories);
+ }
+
+//---------------------------
+//-------------- Categories  : selectedIndex
+//---------------------------
+function handleResponseQueryMaxiCategories(response) {
+
+    if (response.isError()) {
+     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+     return;
+   }
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+
+
+ var html =[];  
+var strGroup1 = data.getFormattedValue(0, 0);
+
+
+// html.push('<select class="clDiorganvsh" id="mySelectCategories" onchange="epiloghCategories()">');
+
+//-----  html.push('<div id="accordion">');
+  html.push(' <h3>' + data.getFormattedValue(0, 0)   + '</h3>');
+  html.push(' <div>');
+
+ for (var row = 0; row < posesEggrafes; row++) {
+
+
+  if( strGroup1 != data.getFormattedValue(row, 0)){
+   html.push('  </div>');
+   html.push(' <h3>' + data.getFormattedValue(row, 0)   + '</h3>');
+   html.push(' <div>');
+    strGroup1 = data.getFormattedValue(row, 0);
+
+  }else{
+    html.push(' <table><tbody><tr><td><img class="imgFlagRadius boxOut20" src="'+data.getFormattedValue(row, 2)+'" /></td><td>' + data.getFormattedValue(row, 1)  + '</td></tr></tbody></table>');
+    // ---  html.push(' <div><p>Μέλη Ομάδας' + data.getFormattedValue(row, 1)  + '</p></div>');
+  }
+
+
+
+ }
+
+html.push('</div>');
+
+//-- apodosh html sto iD 
+ document.getElementById("myAccordion").innerHTML = html.join('');
+
+
+
+}
+
+}
+//----------------content
+
+/*
+  $(function(){
+    $( "#myAccordion" ).accordion({
+      heightStyle: "content"
+    });
+  });
+*/
+
+
+$(function() {
+    $( "#myAccordion" ).accordion();
+  });
+
+
+
+
+gadgets.util.registerOnLoadHandler(myInitMaxiAge); 
+
+</script>
+
+<div id="maxiTitle"><!--  The team participations for the 12th FIMBA World Maxibasketball Championship Thessaloniki 2013  --></div>
+<div id="myAccordion">...</div>  
+  
+  
+      ]]>
+  </Content>
+</Module>
