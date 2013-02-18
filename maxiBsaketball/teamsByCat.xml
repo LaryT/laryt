@@ -115,8 +115,7 @@ html.push('</div>');
 
 //-- apodosh html sto iD 
  document.getElementById("myAccordion").innerHTML = html.join('');
-
-
+ gadgets.window.adjustHeight();
 
 }
 
