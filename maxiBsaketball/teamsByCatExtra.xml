@@ -26,9 +26,8 @@ box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
 
 
 </style>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"/>
-
-<!-- script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js'/   -->
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 
@@ -146,7 +145,7 @@ gadgets.util.registerOnLoadHandler(myInitMaxiAge);
 </script>
 
 <div id="maxiTitle"><!--  The team participations for the 12th FIMBA World Maxibasketball Championship Thessaloniki 2013  --></div>
-<div id="myAccordion">789</div>  
+<div id="myAccordion">611</div>  
   
   
       ]]>
