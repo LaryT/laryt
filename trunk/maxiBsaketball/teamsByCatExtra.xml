@@ -64,14 +64,13 @@ function myInitMaxiAge(){
  function sendQueryMaxiCategories(){
 
   if( mCategory!="" ){
-   var strQ='select L,M,P, count(K) where L="'+mCategory +'" group by L,M,P ';
+   var strQ='select L,M,P,A,E, count(K) where L="'+mCategory +'" group by L,M,P,A,E';
  }else{
-   var strQ='select L,M,P, count(K)  group by L,M,P ';
+   var strQ='select L,M,P,A,E, count(K)  group by L,M,P,A,E';
 }
    queryMaxiCategories.setQuery(strQ);   
    queryMaxiCategories.send(handleResponseQueryMaxiCategories);
  }
-
 //---------------------------
 //-------------- Categories  : selectedIndex
 //---------------------------
@@ -88,32 +87,14 @@ function handleResponseQueryMaxiCategories(response) {
  var html =[];  
 var strGroup1 = data.getFormattedValue(0, 0);
 
-
-// html.push('<select class="clDiorganvsh" id="mySelectCategories" onchange="epiloghCategories()">');
-
-//-----  html.push('<div id="accordion">');
-  html.push(' <h3>' + data.getFormattedValue(0, 0)   + '</h3>');
-  html.push(' <div>');
-
  for (var row = 0; row < posesEggrafes; row++) {
-
-
-  if( strGroup1 != data.getFormattedValue(row, 0)){
-   html.push('  </div>');
-   html.push(' <h3>' + data.getFormattedValue(row, 0)   + '</h3>');
-   html.push(' <div>');
-    strGroup1 = data.getFormattedValue(row, 0);
-
-  }else{
-    html.push(' <table><tbody><tr><td><img class="imgFlagRadius boxOut20" src="'+data.getFormattedValue(row, 2)+'" /></td><td>' + data.getFormattedValue(row, 1)  + '</td></tr></tbody></table>');
-    // ---  html.push(' <div><p>Μέλη Ομάδας' + data.getFormattedValue(row, 1)  + '</p></div>');
-  }
-
-
+ 
+    html.push('<h3>' + data.getFormattedValue(row, 1)  + '</h3>');
+    html.push('<div><p>' + data.getFormattedValue(row, 3)  + '</p><p>' + data.getFormattedValue(row, 4)  + '</p></div>');
 
  }
 
-html.push('</div>');
+
 
 //-- apodosh html sto iD 
  document.getElementById("myAccordion").innerHTML = html.join('');
@@ -145,7 +126,7 @@ gadgets.util.registerOnLoadHandler(myInitMaxiAge);
 </script>
 
 <div id="maxiTitle"><!--  The team participations for the 12th FIMBA World Maxibasketball Championship Thessaloniki 2013  --></div>
-<div id="myAccordion">611</div>  
+<div id="myAccordion">100</div>  
   
   
       ]]>
