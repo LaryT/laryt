@@ -86,7 +86,7 @@ var strGroup1 = data.getFormattedValue(0, 0);
    strGroup1 = data.getFormattedValue(row, 0);
   }else{
     html.push(' <h3><table><tbody><tr><td><img class="imgFlagRadius boxOut20" src="'+data.getFormattedValue(row, 2)+'" /></td><td>' + data.getFormattedValue(row, 1)  + '</td></tr></tbody></table></h3>');
-    html.push(' <div><p>' + data.getFormattedValue(row, 3)+', RegisNumber: '+data.getFormattedValue(row, 4)+ '</p></div>');
+    html.push(' <div><p> Delegate : ' + data.getFormattedValue(row, 3)+'</p><p>Registration number : '+data.getFormattedValue(row, 4)+ '</p></div>');
   }
  }
  html.push('</div>');
@@ -107,12 +107,12 @@ var strGroup1 = data.getFormattedValue(0, 0);
   });
 */
 
-/*
+
 $(function() {
     $( "#myAccordion" ).accordion();
   });
 
-*/
+
 
 
 gadgets.util.registerOnLoadHandler(myInitMaxiAge); 
