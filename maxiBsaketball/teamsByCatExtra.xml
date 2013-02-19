@@ -24,12 +24,11 @@ box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
 -ms-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
 }
 </style>
-<!-- script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script  -->
+ 
 
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
-<script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'/>
-<script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js'/>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'/>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js'/>
 
 
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -88,7 +87,7 @@ var strGroup1 = data.getFormattedValue(0, 0);
 
 //---    html.push(' <h3><table><tbody><tr><td><img class="imgFlagRadius boxOut20" src="'+data.getFormattedValue(row, 2)+'" /></td><td>' + data.getFormattedValue(row, 1)  + '</td></tr></tbody></table></h3>');
 //    html.push(' <h3><img class="imgFlagRadius boxOut20" src="'+data.getFormattedValue(row, 2)+'" />' + data.getFormattedValue(row, 1)  + '</h3>');
-    html.push(' <h3 style="background-color:gray;">' + data.getFormattedValue(row, 1)  + '</h3>');
+    html.push(' <h3 style="background-color:yellow;">' + data.getFormattedValue(row, 1)  + '</h3>');
     html.push(' <div><p> Delegate : ' +
     data.getFormattedValue(row, 3)+'</p><p>Registration number : '+data.getFormattedValue(row, 4)+ '</p></div>');
 
@@ -109,11 +108,8 @@ gadgets.util.registerOnLoadHandler(myInitMaxiAge);
 $(function() {
     $( "#myAccordion" ).accordion();
 });
-  
 </script>
-
-<div id="maxiTitle"><!--  The team participations for the 12th FIMBA World Maxibasketball Championship Thessaloniki 2013  --></div>
-<div id="myAccordion">...</div>  
+<div id="myAccordion">._.</div>  
   
 
   
