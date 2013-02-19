@@ -1202,10 +1202,8 @@ body .ui-tooltip {
 </style>
 
 
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'/>
-<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js'/>
-
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"/>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript">
          google.load("visualization", "1");
@@ -1280,14 +1278,14 @@ var strGroup1 = data.getFormattedValue(0, 0);
 
 gadgets.util.registerOnLoadHandler(myInitMaxiAge); 
 
-/*
+
 $(function() {
     $( "#myAccordion" ).accordion();
 });
-*/
+
 
 </script>
-<div id="myAccordion">888</div>  
+<div id="myAccordion">999</div>  
   
 
   
