@@ -125,7 +125,7 @@ gadgets.util.registerOnLoadHandler(myInitMaxiAge);
 <div id="myAccordion">...</div>  
   
 <script>
-$( "#accordion" ).accordion();
+$( "#myAccordion" ).accordion();
 </script>
   
       ]]>
