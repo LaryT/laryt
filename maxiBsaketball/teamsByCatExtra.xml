@@ -107,12 +107,12 @@ var strGroup1 = data.getFormattedValue(0, 0);
   });
 */
 
-
+/*
 $(function() {
     $( "#myAccordion" ).accordion();
   });
 
-
+*/
 
 
 gadgets.util.registerOnLoadHandler(myInitMaxiAge); 
