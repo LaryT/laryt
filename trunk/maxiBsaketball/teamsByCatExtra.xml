@@ -4,7 +4,7 @@
     <Require feature="setprefs" />    
     <Require feature="dynamic-height" />
   </ModulePrefs>
-  <UserPref name="my_name" display_name="Name" default_value="TeamsByCategory" />
+  <UserPref name="my_name" display_name="Name" default_value="TeamsByCategoryEXTRA" />
   <UserPref name="m_Category" display_name="Age Category (M45+):" default_value="" />
 <Content type="html">
     
