@@ -98,13 +98,9 @@ var strGroup1 = data.getFormattedValue(0, 0);
 }
 //----------------content
 
-/*
-  $(function(){
-    $( "#myAccordion" ).accordion({
-      heightStyle: "content"
-    });
-  });
-*/
+
+
+
 
 /*
 $(function() {
@@ -116,13 +112,19 @@ $(function() {
 
 gadgets.util.registerOnLoadHandler(myInitMaxiAge); 
 
+
+  
 </script>
 
 <div id="maxiTitle"><!--  The team participations for the 12th FIMBA World Maxibasketball Championship Thessaloniki 2013  --></div>
 <div id="myAccordion">...</div>  
   
 <script>
-$( "#myAccordion" ).accordion();
+  $(function(){
+    $( "#myAccordion" ).accordion({
+      heightStyle: "content"
+    });
+  });
 </script>
   
       ]]>
