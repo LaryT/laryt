@@ -23,67 +23,51 @@ box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
 -o-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
 -ms-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
 }
-
-
 </style>
-
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-
 <script type="text/javascript">
          google.load("visualization", "1");
 </script>
 
-
 <script type="text/javascript">
-
 var prefs = new gadgets.Prefs();
-
 var mCategory = prefs.getString("m_Category");
-
 
 var urlMaxiCategories="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc&headers=1";
 var queryMaxiCategories;
 
-
 //--- myInitMaxiAge();
 
 function myInitMaxiAge(){
-// ----  alert('No source file for Categories');
-
   if( urlMaxiCategories!="" ){
-     queryMaxiCategories = new google.visualization.Query(urlMaxiCategories);
-//--  alert('12th FIMBA World Maxibasketball Championship Thessaloniki 2013');
-     sendQueryMaxiCategories();
+   queryMaxiCategories = new google.visualization.Query(urlMaxiCategories);
+   sendQueryMaxiCategories();
   }else{
    alert('No source file for  Categories');
   }
 
  //---- make maxi categories
- function sendQueryMaxiCategories(){
-
+function sendQueryMaxiCategories(){
   if( mCategory!="" ){
-   var strQ='select L,M,P, count(K) where L="'+mCategory +'" group by L,M,P ';
- }else{
-   var strQ='select L,M,P, count(K)  group by L,M,P ';
-}
+   var strQ='select L,M,P,A,E, count(K) where L="'+mCategory +'" group by L,M,P,A,E ';
+  }else{
+   var strQ='select L,M,P,A,E, count(K)  group by L,M,P,A,E ';
+  }
    queryMaxiCategories.setQuery(strQ);   
    queryMaxiCategories.send(handleResponseQueryMaxiCategories);
  }
-
 //---------------------------
 //-------------- Categories  : selectedIndex
 //---------------------------
 function handleResponseQueryMaxiCategories(response) {
+  if (response.isError()) {
+    alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+  }
+var data = response.getDataTable();
+var posesEggrafes = data.getNumberOfRows();
 
-    if (response.isError()) {
-     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-     return;
-   }
- var data = response.getDataTable();
- var posesEggrafes = data.getNumberOfRows();
-
-
- var html =[];  
+var html =[];  
 var strGroup1 = data.getFormattedValue(0, 0);
 
 
@@ -94,30 +78,23 @@ var strGroup1 = data.getFormattedValue(0, 0);
   html.push(' <div>');
 
  for (var row = 0; row < posesEggrafes; row++) {
-
-
+ 
   if( strGroup1 != data.getFormattedValue(row, 0)){
    html.push('  </div>');
    html.push(' <h3>' + data.getFormattedValue(row, 0)   + '</h3>');
    html.push(' <div>');
-    strGroup1 = data.getFormattedValue(row, 0);
-
+   strGroup1 = data.getFormattedValue(row, 0);
   }else{
-    html.push(' <table><tbody><tr><td><img class="imgFlagRadius boxOut20" src="'+data.getFormattedValue(row, 2)+'" /></td><td>' + data.getFormattedValue(row, 1)  + '</td></tr></tbody></table>');
-    // ---  html.push(' <div><p>Μέλη Ομάδας' + data.getFormattedValue(row, 1)  + '</p></div>');
+    html.push(' <h3><table><tbody><tr><td><img class="imgFlagRadius boxOut20" src="'+data.getFormattedValue(row, 2)+'" /></td><td>' + data.getFormattedValue(row, 1)  + '</td></tr></tbody></table></h3>');
+    html.push(' <div><p>' + data.getFormattedValue(row, 3)+', RegisNumber: '+data.getFormattedValue(row, 4)+ '</p></div>');
   }
-
-
-
  }
-
-html.push('</div>');
+ html.push('</div>');
 
 //-- apodosh html sto iD 
  document.getElementById("myAccordion").innerHTML = html.join('');
  gadgets.window.adjustHeight();
-
-}
+ }
 
 }
 //----------------content
