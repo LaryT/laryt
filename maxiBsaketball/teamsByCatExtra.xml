@@ -76,23 +76,18 @@ var strGroup1 = data.getFormattedValue(0, 0);
 
 // html.push('<select class="clDiorganvsh" id="mySelectCategories" onchange="epiloghCategories()">');
 
-//-----  html.push('<div id="accordion">');
-  html.push(' <h3>' + data.getFormattedValue(0, 0)   + '</h3>');
-  html.push(' <div>');
+
 
  for (var row = 0; row < posesEggrafes; row++) {
  
-  if( strGroup1 != data.getFormattedValue(row, 0)){
-   html.push('  </div>');
-   html.push(' <h3>' + data.getFormattedValue(row, 0)   + '</h3>');
-   html.push(' <div>');
-   strGroup1 = data.getFormattedValue(row, 0);
-  }else{
-    html.push(' <h3><table><tbody><tr><td><img class="imgFlagRadius boxOut20" src="'+data.getFormattedValue(row, 2)+'" /></td><td>' + data.getFormattedValue(row, 1)  + '</td></tr></tbody></table></h3>');
-    html.push(' <div><p> Delegate : ' + data.getFormattedValue(row, 3)+'</p><p>Registration number : '+data.getFormattedValue(row, 4)+ '</p></div>');
-  }
+
+//---    html.push(' <h3><table><tbody><tr><td><img class="imgFlagRadius boxOut20" src="'+data.getFormattedValue(row, 2)+'" /></td><td>' + data.getFormattedValue(row, 1)  + '</td></tr></tbody></table></h3>');
+    html.push(' <h3><img class="imgFlagRadius boxOut20" src="'+data.getFormattedValue(row, 2)+'" />' + data.getFormattedValue(row, 1)  + '</h3>');
+    html.push(' <div><p> Delegate : ' +
+    data.getFormattedValue(row, 3)+'</p><p>Registration number : '+data.getFormattedValue(row, 4)+ '</p></div>');
+
  }
- html.push('</div>');
+
 
 //-- apodosh html sto iD 
  document.getElementById("myAccordion").innerHTML = html.join('');
