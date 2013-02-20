@@ -27,7 +27,7 @@ box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
 .clSpDelegate{
 color : #555;
 font-size:9px;
-margin-left:16px;
+margin-left:26px;
 }
 
 </style>
@@ -110,7 +110,7 @@ var strGroup1 = data.getFormattedValue(0, 0);
   }else{
     html.push(' <table><tbody>');
     html.push('<tr><td><img class="imgFlagRadius boxOut20" src="'+data.getFormattedValue(row, 2)+'" /></td><td>' + data.getFormattedValue(row, 1)  + '</td></tr>');
-        html.push('<tr><td colspan="2"><span class="clSpDelegate">'+data.getFormattedValue(row, 3)+' (' + data.getFormattedValue(row, 4).substr(0,4)  + '...)</span></td></tr>');
+        html.push('<tr><td colspan="2"><span class="clSpDelegate">'+data.getFormattedValue(row, 3).toUpperCase()+' (' + data.getFormattedValue(row, 4).substr(0,4)  + '...)</span></td></tr>');
     html.push('</tbody></table>');
     // ---  html.push(' <div><p>Μέλη Ομάδας' + data.getFormattedValue(row, 1)  + '</p></div>');
   }
