@@ -90,7 +90,7 @@ var strGroup1 = data.getFormattedValue(0, 0);
 
  for (var row = 0; row < posesEggrafes; row++) {
  
-    html.push('<h3>' + data.getFormattedValue(row, 1)  + '</h3>');
+    html.push('<h3 style="background-color:lime;">' + data.getFormattedValue(row, 1)  + '</h3>');
     html.push('<div><p>' + data.getFormattedValue(row, 3)  + '</p><p>' + data.getFormattedValue(row, 4)  + '</p></div>');
 
  }
@@ -114,11 +114,11 @@ var strGroup1 = data.getFormattedValue(0, 0);
   });
 */
 
-
+/*
 $(function() {
     $( "#myAccordion" ).accordion();
   });
-
+*/
 
 
 
@@ -127,8 +127,11 @@ gadgets.util.registerOnLoadHandler(myInitMaxiAge);
 </script>
 
 <div id="maxiTitle"><!--  The team participations for the 12th FIMBA World Maxibasketball Championship Thessaloniki 2013  --></div>
-<div id="myAccordion">007</div>  
-  
+<div id="myAccordion">...</div>  
+
+<script>
+$( "#myAccordion" ).accordion();
+</script>
   
       ]]>
   </Content>
