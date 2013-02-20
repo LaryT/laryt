@@ -56,7 +56,7 @@ function myInitMaxiAge(){
  
  }
   
-  gadgets.util.registerOnLoadHandler(myInitMaxiAge);
+//-- gadgets.util.registerOnLoadHandler(myInitMaxiAge);
   
   </script>
   
@@ -66,6 +66,7 @@ function myInitMaxiAge(){
 <div id="accordion">oko</div>
  
 <script>
+myInitMaxiAge();
 $( "#accordion" ).accordion();
 </script>
  
