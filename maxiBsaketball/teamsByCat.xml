@@ -25,11 +25,13 @@ box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
 }
 
 .clSpDelegate{
-color : #555;
+color : rgb(221, 221, 221);;
 font-size:9px;
-padding-left:20px;
+padding-left:10px;
 }
-
+.myH3title{
+margin-top:10px;
+}
 </style>
 
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
@@ -95,7 +97,7 @@ var strGroup1 = data.getFormattedValue(0, 0);
 // html.push('<select class="clDiorganvsh" id="mySelectCategories" onchange="epiloghCategories()">');
 
 //-----  html.push('<div id="accordion">');
-  html.push(' <h3>' + data.getFormattedValue(0, 0)   + '</h3>');
+  html.push(' <h3 class="myH3title">' + data.getFormattedValue(0, 0)   + '</h3>');
   html.push(' <div>');
 
  for (var row = 0; row < posesEggrafes; row++) {
@@ -103,7 +105,7 @@ var strGroup1 = data.getFormattedValue(0, 0);
 
   if( strGroup1 != data.getFormattedValue(row, 0)){
    html.push('  </div>');
-   html.push(' <h3>' + data.getFormattedValue(row, 0)   + '</h3>');
+   html.push(' <h3 class="myH3title">' + data.getFormattedValue(row, 0)   + '</h3>');
    html.push(' <div>');
     strGroup1 = data.getFormattedValue(row, 0);
 
