@@ -132,7 +132,7 @@ gadgets.util.registerOnLoadHandler(myInitMaxiAge);
 
 <div id="maxiTitle"><!--  The team participations for the 12th FIMBA World Maxibasketball Championship Thessaloniki 2013  --></div>
 <div id="myAccordion">...</div>  
-
+<h3 class="myH3title">&nbsp;</h3>
 
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
