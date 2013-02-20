@@ -98,30 +98,16 @@ var strGroup1 = data.getFormattedValue(0, 0);
 
 //-----  html.push('<div id="accordion">');
   html.push(' <h3 class="myH3title">' + data.getFormattedValue(0, 0)   + '</h3>');
-  html.push(' <div>');
+
 
  for (var row = 0; row < posesEggrafes; row++) {
 
-
-  if( strGroup1 != data.getFormattedValue(row, 0)){
-   html.push('  </div>');
-   html.push(' <h3 class="myH3title">' + data.getFormattedValue(row, 0)   + '</h3>');
-   html.push(' <div>');
-    strGroup1 = data.getFormattedValue(row, 0);
-
-  }else{
-    html.push(' <table><tbody>');
-    html.push('<tr><td><img class="imgFlagRadius boxOut20" src="'+data.getFormattedValue(row, 2)+'" /></td><td>' + data.getFormattedValue(row, 1)  + '</td></tr>');
-        html.push('<tr><td colspan="2"><span class="clSpDelegate">'+data.getFormattedValue(row, 3).toUpperCase()+' (' + data.getFormattedValue(row, 4).substr(0,4)  + '...)</span></td></tr>');
-    html.push('</tbody></table>');
-    // ---  html.push(' <div><p>Μέλη Ομάδας' + data.getFormattedValue(row, 1)  + '</p></div>');
-  }
-
-
+    html.push('<h3 class="myH3title"><img class="imgFlagRadius boxOut20" src="'+data.getFormattedValue(row, 2)+'" /></td><td>' + data.getFormattedValue(row, 1)  + '</h3>');
+    html.push('<div><span class="clSpDelegate">'+data.getFormattedValue(row, 3).toUpperCase()+' (' + data.getFormattedValue(row, 4).substr(0,4)  + '...)</span></div>');
 
  }
 
-html.push('</div>');
+
 
 //-- apodosh html sto iD 
  document.getElementById("myAccordion").innerHTML = html.join('');
