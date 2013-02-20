@@ -9,130 +9,49 @@
 <Content type="html">
     
   <![CDATA[
-<style>
-.imgFlagRadius{
-border-radius: 8px;
-height:16px;
-width:16px;
-}
-
-.boxOut20 {
-box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
--webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
--moz-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
--o-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
--ms-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
-}
-
-
-</style>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>accordion demo</title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
-
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-
-<script type="text/javascript">
-         google.load("visualization", "1");
-</script>
-
-
-<script type="text/javascript">
-
-var prefs = new gadgets.Prefs();
-
-var mCategory = prefs.getString("m_Category");
-
-
-var urlMaxiCategories="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc&headers=1";
-var queryMaxiCategories;
-
-
-//--- myInitMaxiAge();
-
-function myInitMaxiAge(){
-// ----  alert('No source file for Categories');
-
-  if( urlMaxiCategories!="" ){
-     queryMaxiCategories = new google.visualization.Query(urlMaxiCategories);
-//--  alert('12th FIMBA World Maxibasketball Championship Thessaloniki 2013');
-     sendQueryMaxiCategories();
-  }else{
-   alert('No source file for  Categories');
-  }
-
- //---- make maxi categories
- function sendQueryMaxiCategories(){
-
-  if( mCategory!="" ){
-   var strQ='select L,M,P,A,E, count(K) where L="'+mCategory +'" group by L,M,P,A,E';
- }else{
-   var strQ='select L,M,P,A,E, count(K)  group by L,M,P,A,E';
-}
-   queryMaxiCategories.setQuery(strQ);   
-   queryMaxiCategories.send(handleResponseQueryMaxiCategories);
- }
-//---------------------------
-//-------------- Categories  : selectedIndex
-//---------------------------
-function handleResponseQueryMaxiCategories(response) {
-
-    if (response.isError()) {
-     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-     return;
-   }
- var data = response.getDataTable();
- var posesEggrafes = data.getNumberOfRows();
-
-
- var html =[];  
-var strGroup1 = data.getFormattedValue(0, 0);
-
- for (var row = 0; row < posesEggrafes; row++) {
+</head>
+<body>
  
-    html.push('<h3 style="background-color:lime;">' + data.getFormattedValue(row, 1)  + '</h3>');
-    html.push('<div><p>' + data.getFormattedValue(row, 3)  + '</p><p>' + data.getFormattedValue(row, 4)  + '</p></div>');
-
- }
-
-
-
-//-- apodosh html sto iD 
- document.getElementById("myAccordion").innerHTML = html.join('');
- gadgets.window.adjustHeight();
-
-}
-
-}
-//----------------content
-
-/*
-  $(function(){
-    $( "#myAccordion" ).accordion({
-      heightStyle: "content"
-    });
-  });
-*/
-
-/*
-$(function() {
-    $( "#myAccordion" ).accordion();
-  });
-*/
-
-
-
-gadgets.util.registerOnLoadHandler(myInitMaxiAge); 
-
-</script>
-
-<div id="maxiTitle"><!--  The team participations for the 12th FIMBA World Maxibasketball Championship Thessaloniki 2013  --></div>
-<div id="myAccordion">...</div>  
-
+<div id="accordion">
+  <h3>Section 1</h3>
+  <div>
+    <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget.
+    Integer ut neque. Vivamus nisi metus, molestie vel, gravida in,
+    condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros.
+    Nam mi. Proin viverra leo ut odio.</p>
+  </div>
+  <h3>Section 2</h3>
+  <div>
+    <p>Sed non urna. Phasellus eu ligula. Vestibulum sit amet purus.
+    Vivamus hendrerit, dolor aliquet laoreet, mauris turpis velit,
+    faucibus interdum tellus libero ac justo.</p>
+  </div>
+  <h3>Section 3</h3>
+  <div>
+    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus.
+    Quisque lobortis.Phasellus pellentesque purus in massa.</p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+</div>
+ 
 <script>
-$( "#myAccordion" ).accordion();
+$( "#accordion" ).accordion();
 </script>
-  
+ 
+</body>
+</html>
       ]]>
   </Content>
 </Module>
