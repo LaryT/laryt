@@ -25,6 +25,8 @@
 function myInitMaxiAge(){
   var html =[];  
   
+  alert('mpe');
+  
   html.push('<h3>Section 1</h3>');
   html.push('<div>
     <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget.
