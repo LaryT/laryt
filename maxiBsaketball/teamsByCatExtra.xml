@@ -47,6 +47,7 @@ function myInitMaxiAge(){
 <script>
 myInitMaxiAge();
 $( "#accordion" ).accordion();
+gadgets.window.adjustHeight();
 </script>
  
 </body>
