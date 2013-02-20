@@ -41,27 +41,17 @@ margin-bottom: 2px;
 <script type="text/javascript">
          google.load("visualization", "1");
 </script>
-
-
 <script type="text/javascript">
-
 var prefs = new gadgets.Prefs();
-
 var mCategory = prefs.getString("m_Category");
-
-
 var urlMaxiCategories="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc&headers=1";
 var queryMaxiCategories;
 
-
 //--- myInitMaxiAge();
-
 function myInitMaxiAge(){
-// ----  alert('No source file for Categories');
 
   if( urlMaxiCategories!="" ){
      queryMaxiCategories = new google.visualization.Query(urlMaxiCategories);
-//--  alert('12th FIMBA World Maxibasketball Championship Thessaloniki 2013');
      sendQueryMaxiCategories();
   }else{
    alert('No source file for  Categories');
@@ -99,7 +89,7 @@ var strGroup1 = data.getFormattedValue(0, 0);
 // html.push('<select class="clDiorganvsh" id="mySelectCategories" onchange="epiloghCategories()">');
 
 //-----  html.push('<div id="accordion">');
-  html.push(' <h3 class="myH3title">' + data.getFormattedValue(0, 0)   + '</h3>');
+  html.push(' <h3 class="myH3title">' + data.getFormattedValue(0, 0)   + ' | Teams : '+ posesEggrafes +'</h3>');
 
 
  for (var row = 0; row < posesEggrafes; row++) {
