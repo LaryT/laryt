@@ -17,12 +17,11 @@
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
-</head>
-<body>
- 
-<div id="accordion">
-  <h3>Section 1</h3>
-  <div>
+  <script>
+  var html =[];  
+  
+  html.push('<h3>Section 1</h3>');
+  html.push('<div>
     <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget.
     Integer ut neque. Vivamus nisi metus, molestie vel, gravida in,
     condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros.
@@ -43,8 +42,17 @@
       <li>List item two</li>
       <li>List item three</li>
     </ul>
-  </div>
-</div>
+  </div>');
+  
+ document.getElementById("accordion").innerHTML = html.join('');
+ gadgets.window.adjustHeight();
+  
+  </script>
+  
+</head>
+<body>
+ 
+<div id="accordion">oko</div>
  
 <script>
 $( "#accordion" ).accordion();
