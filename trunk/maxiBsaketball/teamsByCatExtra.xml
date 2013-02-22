@@ -97,7 +97,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 myInitMaxiAge();
 
 gadgets.window.adjustHeight();
-alert('a4 new Lary');
+alert('a10 new Lary');
 </script>
 
 
