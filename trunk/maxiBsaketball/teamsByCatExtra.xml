@@ -53,11 +53,11 @@ font-family: 'Jura', 'Play', Arial;
 font-size: 30px;
 
 background-color: rgb(35, 36, 46);
-background-image: -webkit-gradient(linear, top left, bottom right, from(rgb(35, 36, 46)), to( rgb(167, 169, 233)));
-background-image: -webkit-linear-gradient(left, rgb(35, 36, 46),  rgb(167, 169, 233));
-background-image: -moz-linear-gradient(left,rgb(35, 36, 46),  rgb(167, 169, 233));
-background-image: -ms-linear-gradient(left, rgb(35, 36, 46),  rgb(167, 169, 233));
-background-image: -o-linear-gradient(left, rgb(35, 36, 46),  rgb(167, 169, 233));
+background-image: -webkit-gradient(linear, top left, bottom right, from(rgb(35, 36, 46)), to( rgb(96, 114, 219)));
+background-image: -webkit-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));
+background-image: -moz-linear-gradient(left,rgb(35, 36, 46), rgb(96, 114, 219));
+background-image: -ms-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));
+background-image: -o-linear-gradient(left, rgb(35, 36, 46),  rgb(96, 114, 219));
 }
 
 .clDivData, .clDivData2seira{
