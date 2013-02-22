@@ -106,6 +106,7 @@ html.push('<h3>'+strGroup+'</h3><div>');
    strGroup = data.getFormattedValue(row, 1);
 //   html.push('</div><h3><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
    html.push('</div><h3>'+strGroup+'</h3><div>');
+   myCount=0;
   }
   myCount++;
   html.push('<div class="clDivData">'+myCount+'. '+data.getFormattedValue(row, 4)+'&nbsp;'+data.getFormattedValue(row, 7)+' '+data.getFormattedValue(row, 8)+'</div>');
