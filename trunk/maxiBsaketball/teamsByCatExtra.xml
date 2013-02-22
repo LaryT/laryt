@@ -68,8 +68,8 @@ function handleResponseQueryMaxiCategories(response) {
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup != data.getFormattedValue(row, 1) ){
    alert(strGroup +' = ' + data.getFormattedValue(row, 1));
-   html.push('</div><h3>'+strGroup+'</h3><div>');
    strGroup = data.getFormattedValue(row, 1);
+   html.push('</div><h3>'+strGroup+'</h3><div>');
     alert(html);
   }
   html.push('<p>'+data.getFormattedValue(row, 7)+'</p>');
@@ -114,7 +114,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 myInitMaxiAge();
 
 gadgets.window.adjustHeight();
-alert('html new Lary');
+alert('new HTML new Lary');
 </script>
 
 
