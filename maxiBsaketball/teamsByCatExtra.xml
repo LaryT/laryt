@@ -32,11 +32,12 @@ margin: 0 5;
 }
 
 .boxOut10 {
-box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
--webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
--moz-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
--o-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
--ms-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
+box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
+-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
+-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
+-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
+-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
+margin-right: 10px;
 }
 
 .clSpDelegate{
