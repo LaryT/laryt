@@ -94,7 +94,7 @@ function handleResponseQueryMaxiCategories(response) {
  var posesEggrafes = data.getNumberOfRows();
 
  var html =[]; 
- var strGroup = data.getFormattedValue(0, 1);
+ var strGroup = data.getFormattedValue(0, 1).toUpperCase();
  
  var myCount=0;
 
@@ -103,13 +103,13 @@ html.push('<h3>'+strGroup+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup != data.getFormattedValue(row, 1) ){
 
-   strGroup = data.getFormattedValue(row, 1);
+   strGroup = data.getFormattedValue(row, 1).toUpperCase();
 //   html.push('</div><h3><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
    html.push('</div><h3>'+strGroup+'</h3><div>');
    myCount=0;
   }
   myCount++;
-  html.push('<div class="clDivData">'+myCount+'. '+data.getFormattedValue(row, 4)+'&nbsp;'+data.getFormattedValue(row, 7)+' '+data.getFormattedValue(row, 8)+'</div>');
+  html.push('<div class="clDivData">'+myCount+'. '+data.getFormattedValue(row, 4)+'&nbsp;'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase()+'</div>');
  }
    html.push('</div>');
   
