@@ -72,7 +72,7 @@ function handleResponseQueryMaxiCategories(response) {
    html.push('</div><h3>'+strGroup+'</h3><div>');
 
   }
-  html.push('<p>'+data.getFormattedValue(row, 7)+'</p>');
+  html.push('<div style="font-size:10px;margin:1px 0px;">'+data.getFormattedValue(row, 4)+'&nbsp;'+data.getFormattedValue(row, 7)+' '+data.getFormattedValue(row, 8)+'</div>');
  }
    html.push('</div>');
   
@@ -109,7 +109,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 myInitMaxiAge();
 
 gadgets.window.adjustHeight();
-alert('new JQUERRY new Lary');
+alert('new div JQUERRY new Lary');
 </script>
 
 
