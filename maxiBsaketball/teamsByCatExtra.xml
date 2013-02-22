@@ -66,7 +66,7 @@ function handleResponseQueryMaxiCategories(response) {
   
  document.getElementById("accordion").innerHTML = html.join('');
  gadgets.window.adjustHeight();
- 
+ $( "#accordion" ).accordion();
 }
 
 
@@ -95,7 +95,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 <script>
 myInitMaxiAge();
-$( "#accordion" ).accordion();
+
 gadgets.window.adjustHeight();
 alert('a4 new Lary');
 </script>
