@@ -105,7 +105,7 @@ html.push('<h3>'+strGroup+'</h3><div>');
 
    strGroup = data.getFormattedValue(row, 1).toUpperCase();
 //   html.push('</div><h3><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
-   html.push('</div><h3>'+strGroup+'</h3><div>');
+   html.push('</div><h3><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
    myCount=0;
   }
   myCount++;
@@ -125,9 +125,6 @@ html.push('<h3>'+strGroup+'</h3><div>');
   
 </head>
 <body>
- 
-<div id="accordion">oko</div>
-
 <center><div>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
@@ -141,6 +138,8 @@ google_ad_height = 60;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </div></center>
+
+<div id="accordion"><img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" /></div>
 
 <script>
 myInitMaxiAge();
