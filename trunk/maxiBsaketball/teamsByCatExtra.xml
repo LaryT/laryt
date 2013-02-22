@@ -49,7 +49,7 @@ function myInitMaxiAge(){
  
 function sendQueryMaxiCategories(){
   if( mCategory!="" ){
-   var strQ='select C,B,E,G,H,I,J,K,L,M,N, count(A) where L="'+mCategory +'" group by C,B,E,G';
+   var strQ='select C,B,E,G,H,I,J,K,L,M,N, count(A) where C="'+mCategory +'" group by C,B,E,G';
   }else{
    var strQ='select C,B,E,G,H,I,J,K,L,M,N, count(A) group by C,B,E,G';
   }
@@ -82,7 +82,7 @@ function handleResponseQueryMaxiCategories(response) {
 myInitMaxiAge();
 $( "#accordion" ).accordion();
 gadgets.window.adjustHeight();
-alert(urlMaxiCategories);
+alert('Lary');
 </script>
  
 </body>
