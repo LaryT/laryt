@@ -19,8 +19,15 @@
   <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
   <script src="http://www.google.com/jsapi" type="text/javascript"></script>
   
-  <script>
+  <script type="text/javascript">
+         google.load("visualization", "1");
+  </script>
   
+  <script>
+var prefs = new gadgets.Prefs();
+var mCategory = prefs.getString("m_Category");
+var urlMaxiCategories="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc&headers=1";
+var queryMaxiCategories;  
   
 function myInitMaxiAge(){
   var html =[];     
@@ -45,6 +52,7 @@ function myInitMaxiAge(){
 myInitMaxiAge();
 $( "#accordion" ).accordion();
 gadgets.window.adjustHeight();
+alert(urlMaxiCategories);
 </script>
  
 </body>
