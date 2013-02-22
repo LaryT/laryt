@@ -30,7 +30,7 @@ width:16px;
 margin: 0 5;
 }
 
-.boxOut20 {
+.boxOut10 {
 box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
 -webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
 -moz-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
@@ -95,22 +95,25 @@ function handleResponseQueryMaxiCategories(response) {
 
  var html =[]; 
  var strGroup = data.getFormattedValue(0, 1);
+ 
+ var myCount=0;
 
- html.push('<h3>'+strGroup+'</h3><div>');
+ html.push('<h3><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup != data.getFormattedValue(row, 1) ){
 
    strGroup = data.getFormattedValue(row, 1);
-   html.push('</div><h3>'+strGroup+'</h3><div>');
+   html.push('</div><h3><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
 
   }
-  html.push('<div class="clDivData">'+data.getFormattedValue(row, 4)+'&nbsp;'+data.getFormattedValue(row, 7)+' '+data.getFormattedValue(row, 8)+'</div>');
+  myCount++;
+  html.push('<div class="clDivData">'+myCount+'.'+data.getFormattedValue(row, 4)+'&nbsp;'+data.getFormattedValue(row, 7)+' '+data.getFormattedValue(row, 8)+'</div>');
  }
    html.push('</div>');
   
  document.getElementById("accordion").innerHTML = html.join('');
- gadgets.window.adjustHeight();
  $( "#accordion" ).accordion({heightStyle: "content"});
+  gadgets.window.adjustHeight();
 }
 
 
@@ -140,7 +143,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <script>
 myInitMaxiAge();
 
-gadgets.window.adjustHeight();
+// gadgets.window.adjustHeight();
 
 </script>
 
