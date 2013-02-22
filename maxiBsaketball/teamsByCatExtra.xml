@@ -37,9 +37,6 @@ function myInitMaxiAge(){
   }else{
    alert('No source file for  Categories');
   }
-
- document.getElementById("accordion").innerHTML = html.join('');
- gadgets.window.adjustHeight();
  
 }
  
@@ -66,6 +63,9 @@ function handleResponseQueryMaxiCategories(response) {
  var html =[];     
   html.push('<h3>Section 1</h3>');
   html.push('<div><p>Mauris mauris ante, blandit et,</p></div><h3>Section 2</h3><div><p>Sed non urna. Phas.</p></div><h3>Section 3</h3><div><p>Nam enim risus, molestie et, porta ac, aliquam ac, risus.Quisque lobortis.Phasellus pellentesque purus in massa.</p><ul><li>List item one</li><li>List item two</li><li>List item three</li></ul></div>');
+  
+ document.getElementById("accordion").innerHTML = html.join('');
+ gadgets.window.adjustHeight();
  
 }
 
@@ -97,7 +97,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 myInitMaxiAge();
 $( "#accordion" ).accordion();
 gadgets.window.adjustHeight();
-alert('a 3 new Lary');
+alert('a4 new Lary');
 </script>
 
 
