@@ -30,6 +30,14 @@ var urlMaxiCategories="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suY
 var queryMaxiCategories;  
   
 function myInitMaxiAge(){
+
+  if( urlMaxiCategories!="" ){
+     queryMaxiCategories = new google.visualization.Query(urlMaxiCategories);
+     sendQueryMaxiCategories();
+  }else{
+   alert('No source file for  Categories');
+  }
+
   var html =[];     
   html.push('<h3>Section 1</h3>');
   html.push('<div><p>Mauris mauris ante, blandit et,</p></div><h3>Section 2</h3><div><p>Sed non urna. Phas.</p></div><h3>Section 3</h3><div><p>Nam enim risus, molestie et, porta ac, aliquam ac, risus.Quisque lobortis.Phasellus pellentesque purus in massa.</p><ul><li>List item one</li><li>List item two</li><li>List item three</li></ul></div>');
@@ -37,8 +45,30 @@ function myInitMaxiAge(){
  document.getElementById("accordion").innerHTML = html.join('');
  gadgets.window.adjustHeight();
  
+}
+ 
+function sendQueryMaxiCategories(){
+  if( mCategory!="" ){
+   var strQ='select C,B,E,G,H,I,J,K,L,M,N count(K) where L="'+mCategory +'" group by C,B,E,G';
+  }else{
+   var strQ='select C,B,E,G,H,I,J,K,L,M,N count(K) group by C,B,E,G';
+  }
+   queryMaxiCategories.setQuery(strQ);   
+   queryMaxiCategories.send(handleResponseQueryMaxiCategories);
+}
+ 
+function handleResponseQueryMaxiCategories(response) {
+
+ if (response.isError()) {
+     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+     return;
  }
-  
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+ alert(posesEggrafes);
+}
+
+
 //-- gadgets.util.registerOnLoadHandler(myInitMaxiAge);
   
   </script>
