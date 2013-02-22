@@ -42,9 +42,9 @@ function myInitMaxiAge(){
  
 function sendQueryMaxiCategories(){
   if( mCategory!="" ){
-   var strQ='select C,B,E,G,H,I,J,K,L,M,N, count(A) where C="'+mCategory +'" group by C,B,E,G,H,I,J,K,L,M,N';
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E,H,I';
   }else{
-   var strQ='select C,B,E,G,H,I,J,K,L,M,N, count(A) group by C,B,E,G,H,I,J,K,L,M,N';
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by C,B,E,H,I';
   }
    queryMaxiCategories.setQuery(strQ);   
    queryMaxiCategories.send(handleResponseQueryMaxiCategories);
@@ -97,7 +97,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 myInitMaxiAge();
 
 gadgets.window.adjustHeight();
-alert('a10 new Lary');
+alert('ALL new Lary');
 </script>
 
 
