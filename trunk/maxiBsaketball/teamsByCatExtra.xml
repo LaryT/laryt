@@ -101,7 +101,7 @@ function handleResponseQueryMaxiCategories(response) {
 // html.push('<h3><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
 html.push('<h3>'+strGroup+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
-  if( strGroup != data.getFormattedValue(row, 1) ){
+  if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
 
    strGroup = data.getFormattedValue(row, 1).toUpperCase();
 //   html.push('</div><h3><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
