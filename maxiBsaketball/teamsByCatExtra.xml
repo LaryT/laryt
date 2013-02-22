@@ -96,7 +96,7 @@ function handleResponseQueryMaxiCategories(response) {
  var html =[]; 
  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
  var myCount=0;
- html.push('<h3><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
+ html.push('<h3><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
 
