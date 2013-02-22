@@ -62,28 +62,23 @@ function handleResponseQueryMaxiCategories(response) {
  var html =[]; 
  var strGroup = data.getFormattedValue(0, 1);
 
- alert(strGroup);
+ // -- alert(strGroup);
  html.push('<h3>'+strGroup+'</h3><div>');
  alert(html);
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup != data.getFormattedValue(row, 1) ){
-   alert(strGroup +' = ' + data.getFormattedValue(row, 1));
+//---   alert(strGroup +' = ' + data.getFormattedValue(row, 1));
    strGroup = data.getFormattedValue(row, 1);
    html.push('</div><h3>'+strGroup+'</h3><div>');
-    alert(html);
+
   }
   html.push('<p>'+data.getFormattedValue(row, 7)+'</p>');
-   alert(html);
  }
    html.push('</div>');
-    /*
-  html.push('<h3>Section 1</h3>');
-  html.push('<div><p>Mauris mauris ante, blandit et,</p></div><h3>Section 2</h3><div><p>Sed non urna. Phas.</p></div><h3>Section 3</h3><div><p>Nam enim risus, molestie et, porta ac, aliquam ac, risus.Quisque lobortis.Phasellus pellentesque purus in massa.</p><ul><li>List item one</li><li>List item two</li><li>List item three</li></ul></div>');
-  */
   
  document.getElementById("accordion").innerHTML = html.join('');
  gadgets.window.adjustHeight();
- $( "#accordion" ).accordion();
+ $( "#accordion" ).accordion({heightStyle: "content"});
 }
 
 
@@ -114,7 +109,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 myInitMaxiAge();
 
 gadgets.window.adjustHeight();
-alert('new HTML new Lary');
+alert('new JQUERRY new Lary');
 </script>
 
 
