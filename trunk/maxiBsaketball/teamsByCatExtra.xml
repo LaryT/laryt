@@ -48,6 +48,7 @@ padding-left:10px;
 .myH3title{
 margin-top: 30px;
 margin-bottom: 2px;
+font-family: 'Jura', 'Play', Arial;
 }
 
 .clDivData, .clDivData2seira{
@@ -108,12 +109,12 @@ function handleResponseQueryMaxiCategories(response) {
  var html =[]; 
  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
  var myCount=0;
- html.push('<h3 class="font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
+ html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
 
    strGroup = data.getFormattedValue(row, 1).toUpperCase();
-   html.push('</div><h3 class="font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
+   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
    myCount=0;
   }
   myCount++;
