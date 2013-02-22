@@ -116,7 +116,7 @@ function handleResponseQueryMaxiCategories(response) {
    myCount=0;
   }
   myCount++;
-  html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 4) +') </div><div class="clDivData2seira">Position : '+data.getFormattedValue(row, 6)+', Year : '+ data.getFormattedValue(row, 9).substr(6,4) +', Size : ' + data.getFormattedValue(row, 10)+' P/ID '+ data.getFormattedValue(row, 11).substr(0,4)+'...</div></div>');
+  html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 4) +') </div><div class="clDivData2seira">Position : '+data.getFormattedValue(row, 6)+', Year : '+ data.getFormattedValue(row, 9).substr(6,4) +', Size : ' + data.getFormattedValue(row, 10)+', P/ID '+ data.getFormattedValue(row, 11).substr(0,4)+'...</div></div>');
  }
    html.push('</div>');
   
