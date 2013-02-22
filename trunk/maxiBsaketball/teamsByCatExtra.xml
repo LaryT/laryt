@@ -82,9 +82,9 @@ function myInitMaxiAge(){
  
 function sendQueryMaxiCategories(){
   if( mCategory!="" ){
-   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,F';
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
   }else{
-   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by C,B,F';
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F';
   }
    queryMaxiCategories.setQuery(strQ);   
    queryMaxiCategories.send(handleResponseQueryMaxiCategories);
