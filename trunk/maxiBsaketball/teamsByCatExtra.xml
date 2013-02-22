@@ -22,6 +22,40 @@
   <script type="text/javascript">
          google.load("visualization", "1");
   </script>
+  <style>
+.imgFlagRadius{
+border-radius: 8px;
+height:16px;
+width:16px;
+margin: 0 5;
+}
+
+.boxOut20 {
+box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
+-webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px;
+-moz-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
+-o-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
+-ms-box-shadow: rgba(0,0,0,0.9) 0 0 10px;
+}
+
+.clSpDelegate{
+color : rgb(221, 221, 221);;
+font-size:9px;
+padding-left:10px;
+}
+
+.myH3title{
+margin-top: 30px;
+margin-bottom: 2px;
+}
+
+.clDivData{
+font-size:10px;
+margin:1px 0px;
+}
+
+</style>
+  
   
   <script>
 var prefs = new gadgets.Prefs();
@@ -58,21 +92,19 @@ function handleResponseQueryMaxiCategories(response) {
  }
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- alert(posesEggrafes);
+
  var html =[]; 
  var strGroup = data.getFormattedValue(0, 1);
 
- // -- alert(strGroup);
  html.push('<h3>'+strGroup+'</h3><div>');
- alert(html);
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup != data.getFormattedValue(row, 1) ){
-//---   alert(strGroup +' = ' + data.getFormattedValue(row, 1));
+
    strGroup = data.getFormattedValue(row, 1);
    html.push('</div><h3>'+strGroup+'</h3><div>');
 
   }
-  html.push('<div style="font-size:10px;margin:1px 0px;">'+data.getFormattedValue(row, 4)+'&nbsp;'+data.getFormattedValue(row, 7)+' '+data.getFormattedValue(row, 8)+'</div>');
+  html.push('<div class="clDivData">'+data.getFormattedValue(row, 4)+'&nbsp;'+data.getFormattedValue(row, 7)+' '+data.getFormattedValue(row, 8)+'</div>');
  }
    html.push('</div>');
   
@@ -109,7 +141,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 myInitMaxiAge();
 
 gadgets.window.adjustHeight();
-alert('new div JQUERRY new Lary');
+
 </script>
 
 
