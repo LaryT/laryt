@@ -121,6 +121,8 @@ function handleResponseQueryMaxiCategories(response) {
   
 </head>
 <body>
+
+<div id="accordion"><img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" /></div>
 <center><div>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
@@ -135,13 +137,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </div></center>
 
-<div id="accordion"><img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" /></div>
-
 <script>
 myInitMaxiAge();
-
-// gadgets.window.adjustHeight();
-
 </script>
 
 
