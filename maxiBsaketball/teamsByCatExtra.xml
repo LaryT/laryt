@@ -49,6 +49,14 @@ padding-left:10px;
 margin-top: 30px;
 margin-bottom: 2px;
 font-family: 'Jura', 'Play', Arial;
+font-size: 26px;
+
+background-color: #777777;
+background-image: -webkit-gradient(linear, top left, bottom right, from(#777777), to(#111111));
+background-image: -webkit-linear-gradient(left, #777777, #111111);
+background-image: -moz-linear-gradient(left, #777777, #111111);
+background-image: -ms-linear-gradient(left, #777777, #111111);
+background-image: -o-linear-gradient(left, #777777, #111111);
 }
 
 .clDivData, .clDivData2seira{
