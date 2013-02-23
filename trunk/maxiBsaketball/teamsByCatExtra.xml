@@ -115,6 +115,7 @@ function handleResponseQueryMaxiCategories(response) {
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
 
+if(posesEggrafes > 0) {
  var html =[]; 
  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
  var myCount=0;
@@ -131,13 +132,12 @@ function handleResponseQueryMaxiCategories(response) {
  }
   html.push('</div>');
   
-  if (posesEggrafes > 0) {
-   document.getElementById("accordion").innerHTML = html.join('');
-   $( "#accordion" ).accordion({heightStyle: "content"});
-  }else{
-   document.getElementById("accordion").innerHTML = '<div> 0 TEAM Rosters (for registrated Teams at this Category</div>) ';
-  }
-  gadgets.window.adjustHeight();
+  document.getElementById("accordion").innerHTML = html.join('');
+  $( "#accordion" ).accordion({heightStyle: "content"});
+ }else{
+   document.getElementById("accordion").innerHTML = '<div> 0 TEAM Rosters (for registrated Teams at this Category</div>';
+ }
+ gadgets.window.adjustHeight();
 }
   
 </script>
@@ -146,7 +146,7 @@ function handleResponseQueryMaxiCategories(response) {
 <body>
 
 <div id="accordion"><img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" /></div>
-
+<hr/>
 <center><div>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
