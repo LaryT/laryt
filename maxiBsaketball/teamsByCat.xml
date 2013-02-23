@@ -117,10 +117,11 @@ gadgets.util.registerOnLoadHandler(myInitMaxiAge);
 <div id="myAccordion">...</div>  
 <h3 class="myH3title">&nbsp;</h3>
 
+<center><div>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
-/* 468x60 ga titles news */
-google_ad_slot = "4512294539";
+/* 468x60 maxiBasketball TeamRosters */
+google_ad_slot = "8698484285";
 google_ad_width = 468;
 google_ad_height = 60;
 //-->
@@ -128,6 +129,7 @@ google_ad_height = 60;
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
+</div></center>
   
 <script>
  gadgets.window.adjustHeight();
