@@ -129,10 +129,15 @@ function handleResponseQueryMaxiCategories(response) {
   myCount++;
   html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 4) +') </div><div class="clDivData2seira">Position : '+data.getFormattedValue(row, 6)+', Year : '+ data.getFormattedValue(row, 9).substr(6,4) +', Size : ' + data.getFormattedValue(row, 10)+', P/ID '+ data.getFormattedValue(row, 11).substr(0,4)+'...</div></div>');
  }
-   html.push('</div>');
+  html.push('</div>');
   
- document.getElementById("accordion").innerHTML = html.join('');
- $( "#accordion" ).accordion({heightStyle: "content"});
+  if (posesEggrafes > 0) {
+   document.getElementById("accordion").innerHTML = html.join('');
+   $( "#accordion" ).accordion({heightStyle: "content"});
+  }else{
+   html.push('<div> 0 TEAM Rosters (for registrated Teams at this Category</div>)');
+   document.getElementById("accordion").innerHTML = html.join('');
+  }
   gadgets.window.adjustHeight();
 }
   
@@ -145,10 +150,10 @@ function handleResponseQueryMaxiCategories(response) {
 <center><div>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
-/* 728x90 grafomhxanh gadget 25sep11 */
-google_ad_slot = "9322038109";
-google_ad_width = 728;
-google_ad_height = 90;
+/* 468x60 maxiBasketball TeamRosters */
+google_ad_slot = "8698484285";
+google_ad_width = 468;
+google_ad_height = 60;
 //-->
 </script>
 <script type="text/javascript"
