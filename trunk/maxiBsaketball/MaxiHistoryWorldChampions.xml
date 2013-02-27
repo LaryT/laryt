@@ -48,11 +48,11 @@ font-size:9px;
 padding-left:10px;
 }
 
-.myH3title{
+.myH3titleHistory{
 margin-top: 30px;
 margin-bottom: 2px;
 font-family: 'Jura', 'Play', Arial;
-font-size: 20px;
+font-size: 18px;
 
 background-color: rgb(35, 36, 46);
 background-image: -webkit-gradient(linear, top left, bottom right, from(rgb(35, 36, 46)), to( rgb(96, 114, 219)));
@@ -126,7 +126,7 @@ if(posesEggrafes > 0) {
  
  for (var row = 0; row < posesEggrafes; row++) {
 
-   html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 13)+'" />' + data.getFormattedValue(row, 3).toUpperCase() +' - '+ data.getFormattedValue(row, 4).toUpperCase() +' <img class="imgFlagRadius boxOut10" src="'+ data.getFormattedValue(row, 14) + '" /></h3>');
+   html.push('<h3 class="myH3titleHistory font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 13)+'" />' + data.getFormattedValue(row, 3).toUpperCase() +' - '+ data.getFormattedValue(row, 4).toUpperCase() +' <img class="imgFlagRadius boxOut10" src="'+ data.getFormattedValue(row, 14) + '" /></h3>');
    
    html.push('<div>');
    html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 2).toUpperCase()+'</span></div>');
