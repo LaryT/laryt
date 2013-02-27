@@ -123,21 +123,18 @@ if(posesEggrafes > 0) {
  var html =[]; 
  var strGroup = data.getFormattedValue(0, 3).toUpperCase(); 
  var myCount=0;
- html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0, 13)+'" />'+strGroup+'</h3><div>');
+ 
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
-
    strGroup = data.getFormattedValue(row, 3).toUpperCase();
-   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 13)+'" />'+strGroup+'</h3><div>');
+   html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 13)+'" />'+strGroup+'</h3>');
    myCount=0;
   }
   myCount++;
   html.push('<div><div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 2).toUpperCase()+'</span></div></div>');
-  
-//  html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 4) +') </div><div class="clDivData2seira">Position : '+data.getFormattedValue(row, 6)+', Year : '+ data.getFormattedValue(row, 9).substr(6,4) +', Size : ' + data.getFormattedValue(row, 10)+', P/ID '+ data.getFormattedValue(row, 11).substr(0,4)+'...</div></div>');
+  html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 13)+'" />'+strGroup+'</h3><div>');
  }
-  html.push('</div>');
-  
+
   document.getElementById("accordion").innerHTML = html.join('');
   $( "#accordion" ).accordion({heightStyle: "content"});
  }else{
