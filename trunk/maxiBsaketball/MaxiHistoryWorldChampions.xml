@@ -130,9 +130,10 @@ alert(data.getFormattedValue(row, 14));
    
    html.push('<div><div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 2).toUpperCase()+'</span></div></div>');
 
-
+}
   document.getElementById("accordion").innerHTML = html.join('');
   $( "#accordion" ).accordion({heightStyle: "content"});
+  
  }else{
    document.getElementById("accordion").innerHTML = '<div class="clSpanOnomateponymo"> 0 FIMBA event</div>';
  }
