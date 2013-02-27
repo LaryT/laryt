@@ -4,8 +4,10 @@
     <Require feature="setprefs" />    
     <Require feature="dynamic-height" />
   </ModulePrefs>
-  <UserPref name="my_name" display_name="Name" default_value="TeamsByCategory" />
+  <UserPref name="my_name" display_name="Name" default_value="MaxiHistoryWorldChampions" />
+  <UserPref name="m_Diorganvsh" display_name="World Maxibasketball Championships (1...12):" default_value="" />
   <UserPref name="m_Category" display_name="Age Category (M45+):" default_value="" />
+  <UserPref name="m_Country" display_name="Country:" default_value="" />
 <Content type="html">
     
   <![CDATA[
@@ -76,13 +78,15 @@ font-size:14px;
 font-weight:bold;
 }
 
-</style>
+</style>  
   
-  
-  <script>
+<script>
 var prefs = new gadgets.Prefs();
+var mDiorganvsh = prefs.getString("m_Diorganvsh");
 var mCategory = prefs.getString("m_Category");
-var urlMaxiCategories="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc&headers=1";
+var mCountry = prefs.getString("m_Country");
+
+var urlMaxiCategories="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdHFEbFV2RnROLUlQSzBHdXQ0dU1yYlE&headers=1";
 var queryMaxiCategories;  
   
 function myInitMaxiAge(){
@@ -100,7 +104,7 @@ function sendQueryMaxiCategories(){
   if( mCategory!="" ){
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
   }else{
-   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F';
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S order by B desc';
   }
    queryMaxiCategories.setQuery(strQ);   
    queryMaxiCategories.send(handleResponseQueryMaxiCategories);
@@ -117,25 +121,27 @@ function handleResponseQueryMaxiCategories(response) {
 
 if(posesEggrafes > 0) {
  var html =[]; 
- var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
+ var strGroup = data.getFormattedValue(0, 3).toUpperCase(); 
  var myCount=0;
- html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
+ html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0, 13)+'" />'+strGroup+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
 
-   strGroup = data.getFormattedValue(row, 1).toUpperCase();
-   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
+   strGroup = data.getFormattedValue(row, 3).toUpperCase();
+   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 13)+'" />'+strGroup+'</h3><div>');
    myCount=0;
   }
   myCount++;
-  html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 4) +') </div><div class="clDivData2seira">Position : '+data.getFormattedValue(row, 6)+', Year : '+ data.getFormattedValue(row, 9).substr(6,4) +', Size : ' + data.getFormattedValue(row, 10)+', P/ID '+ data.getFormattedValue(row, 11).substr(0,4)+'...</div></div>');
+  html.push('<div><div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 2).toUpperCase()+'</span></div>');
+  
+//  html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 4) +') </div><div class="clDivData2seira">Position : '+data.getFormattedValue(row, 6)+', Year : '+ data.getFormattedValue(row, 9).substr(6,4) +', Size : ' + data.getFormattedValue(row, 10)+', P/ID '+ data.getFormattedValue(row, 11).substr(0,4)+'...</div></div>');
  }
   html.push('</div>');
   
   document.getElementById("accordion").innerHTML = html.join('');
   $( "#accordion" ).accordion({heightStyle: "content"});
  }else{
-   document.getElementById("accordion").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
+   document.getElementById("accordion").innerHTML = '<div class="clSpanOnomateponymo"> 0 FIMBA event</div>';
  }
  gadgets.window.adjustHeight();
 }
