@@ -125,8 +125,9 @@ if(posesEggrafes > 0) {
 
  
  for (var row = 0; row < posesEggrafes; row++) {
-
-   html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 13)+'" />'+data.getFormattedValue(row, 3).toUpperCase()+' - '+ data.getFormattedValue(row, 4).toUpperCase() +'<img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 14)+'" /></h3>');
+alert(data.getFormattedValue(row, 14));
+   html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 13)+'" />' + data.getFormattedValue(row, 3).toUpperCase() +' - '+ data.getFormattedValue(row, 4).toUpperCase() +' <img class="imgFlagRadius boxOut10" src="'+ data.getFormattedValue(row, 14) + '" /></h3>');
+   
    html.push('<div><div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 2).toUpperCase()+'</span></div></div>');
 
 
