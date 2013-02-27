@@ -27,18 +27,18 @@
   </script>
   <style>
 .imgFlagRadius{
-border-radius: 12px;
-height:24px;
-width:24px;
+border-radius: 16px;
+height:32px;
+width:32px;
 margin: 0 5;
 }
 
 .boxOut10 {
-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
--webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
--moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
--o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
--ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
+box-shadow: rgba(220, 220, 220, 0.9) 0 0 16px;
+-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 16px;
+-moz-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
+-o-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
+-ms-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
 margin-right: 10px;
 }
 
@@ -133,7 +133,15 @@ if(posesEggrafes > 0) {
    html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 12)+'</span> </div>');
    html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 6)+'</span> countries, <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7)+'</span> teams,</div>');
    html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 9)+'</span> </div>');
-   
+   html.push('<div class="clDivData">Men Categories : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 10)+'</span> </div>');
+   html.push('<div class="clDivData">Women Categories : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 11)+'</span> </div>');
+
+   html.push('<div class="clDivData">Elder ΜΕΝ : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 15)+'</span> </div>');
+   html.push('<div class="clDivData">Elder Women : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 16)+'</span> </div>');
+    
+   html.push('<div class="clDivData">TOP 2P : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 17)+'</span> </div>');
+   html.push('<div class="clDivData">TOP 3P : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 18)+'</span> </div>');  
+      
    html.push('</div>');
 
 }
