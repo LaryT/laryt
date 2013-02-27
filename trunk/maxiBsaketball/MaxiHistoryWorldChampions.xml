@@ -130,7 +130,7 @@ alert(data.getFormattedValue(row, 14));
    
    html.push('<div>');
    html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 2).toUpperCase()+'</span></div>');
-      html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 2)+'</span> </div>');
+   html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 12)+'</span> </div>');
    html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 6)+'</span> countries, <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7)+'</span> teams,</div>');
    html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 9)+'</span> </div>');
    
