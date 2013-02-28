@@ -117,10 +117,10 @@ function handleResponseQueryMaxiCategories(response) {
 
 
 
-var dBorn = new Date( data.getFormattedValue(1, 9) );
+var dBorn = new Date( data.getValue(1, 9) );
 var myToday = new Date();
 
-alert ( 'dBorn = ' + dBorn );
+alert ( 'dBorn V = ' + dBorn );
 alert ( 'myToday = ' + myToday );
 
 
