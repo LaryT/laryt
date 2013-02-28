@@ -129,9 +129,9 @@ alert('myToday - dBorn = ' + (myToday- dBorn));
 var ypoDate = new Date(myToday- dBorn); 
 
 
-/// "daysID").innerHTML = Math.floor(ypoDate/86400000); 
+// "year in milisec = 31558464000; 
 
-alert('Age tranc 0-4  Year ? = ' + ( Math.floor(ypoDate/86400000) / 365).substr(0,4) );
+alert('Age floor  Year ? = ' + ( Math.floor(ypoDate/31558464000) ) );
 
 
 
