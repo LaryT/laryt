@@ -115,14 +115,16 @@ function handleResponseQueryMaxiCategories(response) {
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
 
-alert ( data.getFormattedValue(1, 9) );
-alert ( data.getFormattedValue(2, 9) );
 
+
+var dBorn = new Date( data.getFormattedValue(1, 9) );
 var myToday = new Date();
 
-alert('myToday = ' + myToday);
+alert ( 'dBorn = ' + dBorn );
+alert ( 'myToday = ' + myToday );
 
-alert('myToday - Borna = ' + (myToday- data.getFormattedValue(1, 9)));
+
+alert('myToday - dBorn = ' + (myToday- dBorn));
 
 if(posesEggrafes > 0) {
  var html =[]; 
