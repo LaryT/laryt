@@ -116,25 +116,6 @@ function handleResponseQueryMaxiCategories(response) {
  var posesEggrafes = data.getNumberOfRows();
 
 
-
-var dBorn = new Date( data.getValue(1, 9) );
-var myToday = new Date();
-
-alert ( 'dBorn V = ' + dBorn );
-alert ( 'myToday = ' + myToday );
-
-
-alert('myToday - dBorn = ' + (myToday- dBorn));
-
-var ypoDate = new Date(myToday- dBorn); 
-
-
-// "year in milisec = 31558464000; 
-
-alert('Age floor  Year ? = ' + ( Math.floor(ypoDate/31558464000) ) );
-
-
-
 if(posesEggrafes > 0) {
  var html =[]; 
  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
