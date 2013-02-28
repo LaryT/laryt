@@ -131,7 +131,7 @@ var ypoDate = new Date(myToday- dBorn);
 
 /// "daysID").innerHTML = Math.floor(ypoDate/86400000); 
 
-alert('Age after milisec Year ? = ' + ( Math.floor(ypoDate/86400000) / 365));
+alert('Age tranc 0-4  Year ? = ' + ( Math.floor(ypoDate/86400000) / 365).substr(0,4) );
 
 
 
