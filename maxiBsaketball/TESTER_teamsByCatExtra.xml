@@ -126,6 +126,15 @@ alert ( 'myToday = ' + myToday );
 
 alert('myToday - dBorn = ' + (myToday- dBorn));
 
+var ypoDate = new Date(myToday- dBorn); 
+
+
+/// "daysID").innerHTML = Math.floor(ypoMilisecond/86400000); 
+
+alert('Age Year ? = ' + ypoDate.getFullYear());
+
+
+
 if(posesEggrafes > 0) {
  var html =[]; 
  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
