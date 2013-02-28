@@ -129,9 +129,9 @@ alert('myToday - dBorn = ' + (myToday- dBorn));
 var ypoDate = new Date(myToday- dBorn); 
 
 
-/// "daysID").innerHTML = Math.floor(ypoMilisecond/86400000); 
+/// "daysID").innerHTML = Math.floor(ypoDate/86400000); 
 
-alert('Age Year ? = ' + ypoDate.getFullYear());
+alert('Age after milisec Year ? = ' + ( Math.floor(ypoDate/86400000) / 365));
 
 
 
