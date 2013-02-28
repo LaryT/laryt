@@ -4,7 +4,7 @@
     <Require feature="setprefs" />    
     <Require feature="dynamic-height" />
   </ModulePrefs>
-  <UserPref name="my_name" display_name="Name" default_value="TeamsByCategory" />
+  <UserPref name="my_name" display_name="Name" default_value="TESTER" />
   <UserPref name="m_Category" display_name="Age Category (M45+):" default_value="" />
 <Content type="html">
     
@@ -115,6 +115,15 @@ function handleResponseQueryMaxiCategories(response) {
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
 
+alert ( data.getFormattedValue(1, 9) );
+alert ( data.getFormattedValue(2, 9) );
+
+var myToday = new Date();
+
+alert('myToday = ' + myToday);
+
+alert('myToday - Borna = ' + (myToday- data.getFormattedValue(1, 9)));
+
 if(posesEggrafes > 0) {
  var html =[]; 
  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
@@ -129,7 +138,8 @@ if(posesEggrafes > 0) {
   }
   myCount++;
   html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 4) +') </div><div class="clDivData2seira">Position : '+data.getFormattedValue(row, 6)+', Year : '+ data.getFormattedValue(row, 9).substr(6,4) +', Size : ' + data.getFormattedValue(row, 10)+', P/ID '+ data.getFormattedValue(row, 11).substr(0,4)+'...</div></div>');
- }
+
+}
   html.push('</div>');
   
   document.getElementById("accordion").innerHTML = html.join('');
