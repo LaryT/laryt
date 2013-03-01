@@ -85,7 +85,7 @@ font-weight:bold;
 var prefs = new gadgets.Prefs();
 
 var mKey = prefs.getString("m_Key");
-if(mKey.isEmpty()){
+if(mKey === ""){
  mKey="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
  alert(mKey);
 }
