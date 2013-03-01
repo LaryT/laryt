@@ -28,18 +28,18 @@
   </script>
   <style>
 .imgFlagRadius{
-border-radius: 8px;
-height:16px;
-width:16px;
+border-radius: 16px;
+height:32px;
+width:32px;
 margin: 0 5;
 }
 
 .boxOut10 {
-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
--webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
--moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
--o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
--ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
+box-shadow: rgba(220, 220, 220, 0.9) 0 0 16px;
+-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 16px;
+-moz-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
+-o-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
+-ms-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
 margin-right: 10px;
 }
 
@@ -49,11 +49,11 @@ font-size:9px;
 padding-left:10px;
 }
 
-.myH3title{
+.myH3titleHistory{
 margin-top: 30px;
 margin-bottom: 2px;
 font-family: 'Jura', 'Play', Arial;
-font-size: 30px;
+font-size: 22px;
 
 background-color: rgb(35, 36, 46);
 background-image: -webkit-gradient(linear, top left, bottom right, from(rgb(35, 36, 46)), to( rgb(96, 114, 219)));
