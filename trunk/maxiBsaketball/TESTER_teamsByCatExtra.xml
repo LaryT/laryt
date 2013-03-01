@@ -5,7 +5,10 @@
     <Require feature="dynamic-height" />
   </ModulePrefs>
   <UserPref name="my_name" display_name="Name" default_value="TESTER" />
+  <UserPref name="m_Key" display_name="Source docID:" default_value="" />
+  <UserPref name="m_Diorganvsh" display_name="Event:" default_value="" />
   <UserPref name="m_Category" display_name="Age Category (M45+):" default_value="" />
+  <UserPref name="m_Country" display_name="Country:" default_value="" />
 <Content type="html">
     
   <![CDATA[
@@ -78,11 +81,19 @@ font-weight:bold;
 
 </style>
   
-  
-  <script>
+<script>
 var prefs = new gadgets.Prefs();
+
+var mKey = prefs.getString("m_Key");
+if(mKey.isEmpty()){
+ mKey="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
+ alert(mKey);
+}
+var mDiorganvsh = prefs.getString("m_Diorganvsh");
 var mCategory = prefs.getString("m_Category");
-var urlMaxiCategories="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc&headers=1";
+var mCountry = prefs.getString("m_Country");
+
+var urlMaxiCategories = "https://docs.google.com/spreadsheet/ccc?key="+ mKey +"&headers=1";
 var queryMaxiCategories;  
   
 function myInitMaxiAge(){
@@ -166,7 +177,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <script>
 myInitMaxiAge();
 </script>
-
 
 
 </body>
