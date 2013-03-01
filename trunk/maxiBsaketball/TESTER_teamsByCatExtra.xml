@@ -27,15 +27,23 @@
     google.load("visualization", "1");
   </script>
   <style>
+.imgLogoRadius{
+border-radius: 25px;
+height:50px;
+width:50px;
+margin: 0 5;
+}
+
 .imgFlagRadius{
-border-radius: 16px;
-height:32px;
-width:32px;
+border-radius: 12px;
+height:24px;
+width:24px;
 margin: 0 5;
 }
 
 .imgCategoryRadius{
-margin: 0 5;
+margin-top:-15px;
+margin-right:15px;
 float:right;
 }
 
@@ -45,6 +53,15 @@ box-shadow: rgba(220, 220, 220, 0.9) 0 0 16px;
 -moz-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
 -o-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
 -ms-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
+margin-right: 10px;
+}
+
+.boxOut10black {
+box-shadow: rgba(20, 20, 20, 0.9) 0 0 16px;
+-webkit-box-shadow: rgba(20, 20, 20, 0.9) 0 0 16px;
+-moz-box-shadow: rgba(20,20,20,0.9) 0 0 16px;
+-o-box-shadow: rgba(20,20,20,0.9) 0 0 16px;
+-ms-box-shadow: rgba(20,20,20,0.9) 0 0 16px;
 margin-right: 10px;
 }
 
@@ -137,11 +154,11 @@ if(posesEggrafes > 0) {
  var strGroup1 = data.getFormattedValue(0, 0).toUpperCase(); 
  var strGroup2 = data.getFormattedValue(0, 3).toUpperCase();
  var myCount=0;
- html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0,8)+'" />'+strGroup1+'</h3><div>');
+ html.push('<h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(0,8)+'" />'+strGroup1+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup1 != data.getFormattedValue(row, 0).toUpperCase() ){
    strGroup1 = data.getFormattedValue(row, 0).toUpperCase();
-   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 8)+'" />'+strGroup1+'</h3><div>');
+   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(row, 8)+'" />'+strGroup1+'</h3><div>');
    myCount=0;
   }
   myCount++;
@@ -153,7 +170,7 @@ if(posesEggrafes > 0) {
    html.push('<h3 class="myH3title font-effect-emboss">'+strGroup2+'<img class="imgCategoryRadius" src="'+data.getFormattedValue(row, 10)+'" /></h3>');
   }
   
-  html.push('<div class="clDivData">'+data.getFormattedValue(row, 6)+'. <img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 9)+'" /> <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 2) +') </div>');
+  html.push('<div class="clDivData">'+data.getFormattedValue(row, 6)+'. <img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /> <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 2) +') </div>');
   
 
   
