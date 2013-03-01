@@ -34,6 +34,10 @@ width:32px;
 margin: 0 5;
 }
 
+.imgCategoryRadius{
+margin: 0 5;
+}
+
 .boxOut10 {
 box-shadow: rgba(220, 220, 220, 0.9) 0 0 16px;
 -webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 16px;
@@ -145,7 +149,7 @@ if(posesEggrafes > 0) {
 
   if( strGroup2 != data.getFormattedValue(row, 3).toUpperCase() ){
    strGroup2 = data.getFormattedValue(row, 3).toUpperCase();
-   html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 10)+'" />'+strGroup2+'</h3>');
+   html.push('<h3 class="myH3title font-effect-emboss"><img class="imgCategoryRadius boxOut10" src="'+data.getFormattedValue(row, 10)+'" />'+strGroup2+'</h3>');
   }
   
   html.push('<div class="clDivData">'+data.getFormattedValue(row, 6)+'. <img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 9)+'" /> <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 2) +') </div>');
