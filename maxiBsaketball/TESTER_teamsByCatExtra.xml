@@ -42,7 +42,7 @@ margin: 0 5;
 }
 
 .imgCategoryRadius{
-margin-top:-15px;
+margin-top:-5px;
 margin-right:15px;
 float:right;
 }
