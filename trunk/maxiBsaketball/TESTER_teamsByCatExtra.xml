@@ -101,6 +101,16 @@ font-size:14px;
 font-weight:bold;
 }
 
+/*
+https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png
+https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI/AAAAAAAAAlk/eJg3ngivfyw/s32/asimenio.png
+https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png
+*/
+
+.clMetalioXryso{
+background-image:url('https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png');
+}
+
 </style>
   
 <script>
@@ -170,7 +180,7 @@ if(posesEggrafes > 0) {
    html.push('<h3 class="myH3title font-effect-emboss">'+strGroup2+'<img class="imgCategoryRadius" src="'+data.getFormattedValue(row, 10)+'" /></h3>');
   }
   
-  html.push('<div class="clDivData">'+data.getFormattedValue(row, 6)+'. <img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /> <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 2) +') </div>');
+  html.push('<div class="clDivData clMetalioXryso">'+data.getFormattedValue(row, 6)+'. <img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /> <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 2) +') </div>');
   
 
   
