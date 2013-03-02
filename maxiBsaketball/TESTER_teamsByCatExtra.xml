@@ -39,6 +39,8 @@ background-image:url('https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI
 background-image:url('https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png');
 }
 
+
+
 .clMetalioXryso, .clMetalioAshmenio, .clMetalioXalkino{
 background-repeat:no-repeat;
 background-position:center center; 
@@ -200,7 +202,7 @@ if(posesEggrafes > 0) {
 
   if( strGroup2 != data.getFormattedValue(row, 3).toUpperCase() ){
    strGroup2 = data.getFormattedValue(row, 3).toUpperCase();
-   html.push('<h3 class="myH3title font-effect-emboss">'+strGroup2+'<img class="imgCategoryRadius" src="'+data.getFormattedValue(row, 10)+'" /></h3>');
+   html.push('<h3 class="myH3title font-effect-emboss">'+strGroup2+'<!-- img class="imgCategoryRadius" src="'+data.getFormattedValue(row, 10)+'" /   --></h3>');
   }
   
   
