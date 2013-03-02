@@ -41,7 +41,7 @@ background-image:url('https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI
 
 
 
-.clMetalioXryso, .clMetalioAshmenio, .clMetalioXalkino{
+.clMetalioXryso, .clMetalioAshmenio, .clMetalioXalkino, .clXvrisMetalio{
 background-repeat:no-repeat;
 background-position:center center; 
 background-size:24px 24px;
@@ -102,10 +102,6 @@ padding-left:10px;
 .myH3title{
 
 clear: both;
-/*
-margin-top: 30px;
-margin-bottom: 2px;
-*/
 font-family: 'Jura', 'Play', Arial;
 font-size: 22px;
 
@@ -199,7 +195,6 @@ html.push('<h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius bo
   if( strGroup1 != data.getFormattedValue(row, 0).toUpperCase() ){
    strGroup1 = data.getFormattedValue(row, 0).toUpperCase();
    html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(row, 8)+'" />'+strGroup1+'</h3><div>');
-   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(row, 8)+'" />'+strGroup1+'</h3><div>');
    myCount=0;
   }
   myCount++;
@@ -224,7 +219,7 @@ html.push('<h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius bo
   }else if( data.getValue(row, 6) == 3 ){
     html.push('<div class="clMetalioXalkino clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');    
   }else{
-    html.push('<div class="clSpanOnomateponymo clDivLeft">'+data.getFormattedValue(row, 6)+'</div>');
+    html.push('<div class="clXvrisMetalio clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
   }
  
 
