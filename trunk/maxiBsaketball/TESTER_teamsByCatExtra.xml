@@ -185,7 +185,7 @@ if(posesEggrafes > 0) {
    html.push('<h3 class="myH3title font-effect-emboss">'+strGroup2+'<img class="imgCategoryRadius" src="'+data.getFormattedValue(row, 10)+'" /></h3>');
   }
   
-  html.push('<div class="clDivData"><div class="clMetalioXryso">'+data.getFormattedValue(row, 6)+'</div>. <div><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /></div> <div class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1).toUpperCase() + '</div> <div>('+ data.getFormattedValue(row, 2) +')</div> </div>');
+  html.push('<div class="clDivData"><div class="clMetalioXryso">'+data.getFormattedValue(row, 6)+'.</div> <div><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /></div> <div class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1).toUpperCase() + '</div> <div>('+ data.getFormattedValue(row, 2) +')</div> </div>');
   
 
   
