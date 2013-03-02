@@ -183,6 +183,7 @@ function handleResponseQueryMaxiCategories(response) {
  var posesEggrafes = data.getNumberOfRows();
 
 alert('..');
+
 if(posesEggrafes > 0) {
  var html =[]; 
  var strGroup1 = data.getFormattedValue(0, 0).toUpperCase(); 
@@ -207,11 +208,11 @@ if(posesEggrafes > 0) {
   html.push('<div class="clDivData">');
   
   
-  if(data.getFormattedValue(row, 6) = 1 ){
+  if(data.getFormattedValue(row, 6) == '1' ){
     html.push('<div class="clMetalioXryso clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
-  }else if(data.getFormattedValue(row, 6) = 2){
+  }else if(data.getFormattedValue(row, 6) == '2'){
     html.push('<div class="clMetalioAshmenio clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
-  }esle if(data.getFormattedValue(row, 6) = 3){
+  }esle if(data.getFormattedValue(row, 6) == '3'){
     html.push('<div class="clMetalioXalkino clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
   }else{
     html.push('<div class="clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
