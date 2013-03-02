@@ -201,7 +201,7 @@ if(posesEggrafes > 0) {
   
   html.push('<div class="clDivData">');
   
-  
+/*  
   if(data.getFormattedValue(row, 6) == '1' ){
     html.push('<div class="clMetalioXryso clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
   }else if(data.getFormattedValue(row, 6) == '2'){
@@ -211,8 +211,9 @@ if(posesEggrafes > 0) {
   }else{
     html.push('<div class="clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
   }
-  
-//  html.push('<div class="clMetalioXryso clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
+*/  
+
+  html.push('<div class="clMetalioXryso clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
   html.push('<div class="clDivLeft"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /></div>')
   html.push('<div class="clSpanOnomateponymo clDivLeft">'+data.getFormattedValue(row, 1).toUpperCase() + '</div>');
   html.push('<div class="clDivLeft" >('+ data.getFormattedValue(row, 2) +')</div>');
