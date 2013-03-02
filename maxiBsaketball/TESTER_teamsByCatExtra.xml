@@ -186,13 +186,15 @@ function handleResponseQueryMaxiCategories(response) {
 
 if(posesEggrafes > 0) {
  var html =[]; 
- var strGroup1 = data.getFormattedValue(0, 0).toUpperCase(); 
- var strGroup2 = data.getFormattedValue(0, 3).toUpperCase();
- var myCount=0;
- html.push('<h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(0,8)+'" />'+strGroup1+'</h3><div>');
+var strGroup1 = data.getFormattedValue(0, 0).toUpperCase();  
+var strGroup2;
+
+var myCount=0;
+html.push('<h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(0,8)+'" />'+strGroup1+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup1 != data.getFormattedValue(row, 0).toUpperCase() ){
    strGroup1 = data.getFormattedValue(row, 0).toUpperCase();
+   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(row, 8)+'" />'+strGroup1+'</h3><div>');
    html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(row, 8)+'" />'+strGroup1+'</h3><div>');
    myCount=0;
   }
@@ -207,7 +209,7 @@ if(posesEggrafes > 0) {
   
   
   
-  html.push('<div>');
+  html.push('<div style="float:left;display:block;">');
   html.push('<div class="clDivData">');
   
 
