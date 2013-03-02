@@ -113,18 +113,9 @@ background-image: -o-linear-gradient(left, rgb(35, 36, 46),  rgb(96, 114, 219));
 
 .clDivData, .clDivData2seira{
 font-size:10px;
-margin:1px 0px;
-float:none;
-
-
-font-size: 10px;
-margin: 1px 0px;
-float: none;
 width: 250px;
-
 height: 30px;
 float: left;
-
 }
 .clDivData2seira{
 color:rgb(221,221,221)
