@@ -27,13 +27,7 @@
     google.load("visualization", "1");
   </script>
   <style>
-/*
-https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png
-https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI/AAAAAAAAAlk/eJg3ngivfyw/s32/asimenio.png
-https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png
-*/
 
- 
 
 .clMetalioXryso{
 background-image:url('https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png');
@@ -182,7 +176,7 @@ function handleResponseQueryMaxiCategories(response) {
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
 
-alert('..');
+alert(data.getFormattedValue(1, 6));
 
 if(posesEggrafes > 0) {
  var html =[]; 
