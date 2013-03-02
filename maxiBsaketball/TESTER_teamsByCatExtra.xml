@@ -43,6 +43,7 @@ border-radius: 12px;
 height:24px;
 width:24px;
 
+text-align:center;
 }  
 
 .imgLogoRadius{
@@ -71,7 +72,7 @@ box-shadow: rgba(220, 220, 220, 0.9) 0 0 16px;
 -moz-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
 -o-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
 -ms-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
-margin-right: 10px;
+
 }
 
 .boxOut10black {
