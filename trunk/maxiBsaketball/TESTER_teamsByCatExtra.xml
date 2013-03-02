@@ -176,7 +176,7 @@ function handleResponseQueryMaxiCategories(response) {
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
 
-alert(data.getFormattedValue(1, 6));
+alert(data.getFormattedValue(3, 6));
 
 if(posesEggrafes > 0) {
  var html =[]; 
@@ -202,17 +202,20 @@ if(posesEggrafes > 0) {
   html.push('<div class="clDivData">');
   
 
-  if(data.getValue(row, 6) = 1 ){
+  if(data.getValue(row, 6) < 2 ){
     html.push('<div class="clMetalioXryso clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
-  }else if(data.getValue(row, 6) = 2){
-    html.push('<div class="clMetalioAshmenio clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
-  }esle if(data.getValue(row, 6) = 3){
-    html.push('<div class="clMetalioXalkino clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
   }else{
     html.push('<div class="clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
   }
  
 /*
+
+ }else if(data.getValue(row, 6) = 2){
+    html.push('<div class="clMetalioAshmenio clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
+  }esle if(data.getValue(row, 6) = 3){
+    html.push('<div class="clMetalioXalkino clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
+
+
   html.push('<div class="clMetalioXryso clSpanOnomateponymo clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
   */
   html.push('<div class="clDivLeft"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /></div>')
