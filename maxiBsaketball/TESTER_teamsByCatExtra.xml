@@ -27,6 +27,24 @@
     google.load("visualization", "1");
   </script>
   <style>
+/*
+https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png
+https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI/AAAAAAAAAlk/eJg3ngivfyw/s32/asimenio.png
+https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png
+*/
+
+.clMetalioXryso{
+background-image:url('https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png');
+background-repeat:no-repeat;
+background-position:center; 
+background-size:24px 24px;
+
+border-radius: 12px;
+height:24px;
+width:24px;
+margin: 0 5;
+}  
+
 .imgLogoRadius{
 border-radius: 25px;
 height:50px;
@@ -88,7 +106,7 @@ background-image: -o-linear-gradient(left, rgb(35, 36, 46),  rgb(96, 114, 219));
 .clDivData, .clDivData2seira{
 font-size:10px;
 margin:1px 0px;
-float:left;
+float:none;
 }
 .clDivData2seira{
 color:rgb(221,221,221)
@@ -102,19 +120,7 @@ font-size:14px;
 font-weight:bold;
 }
 
-/*
-https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png
-https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI/AAAAAAAAAlk/eJg3ngivfyw/s32/asimenio.png
-https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png
-*/
 
-.clMetalioXryso{
-background-image:url('https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png');
-background-repeat:no-repeat;
-background-position:center; 
-background-size:16px 16px;
-
-}
 
 </style>
   
@@ -185,10 +191,14 @@ if(posesEggrafes > 0) {
    html.push('<h3 class="myH3title font-effect-emboss">'+strGroup2+'<img class="imgCategoryRadius" src="'+data.getFormattedValue(row, 10)+'" /></h3>');
   }
   
-  html.push('<div class="clDivData"><div class="clMetalioXryso">'+data.getFormattedValue(row, 6)+'.</div> <div><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /></div> <div class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1).toUpperCase() + '</div> <div>('+ data.getFormattedValue(row, 2) +')</div> </div>');
+  html.push('<div class="clDivData">');
+  html.push('<div class="clMetalioXryso clSpanOnomateponymo clDivLeft">'+data.getFormattedValue(row, 6)+'</div>');
+  html.push('<div class="clDivLeft"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /></div>')
+  html.push('<div class="clSpanOnomateponymo clDivLeft">'+data.getFormattedValue(row, 1).toUpperCase() + '</div>');
+  html.push('<div class="clDivLeft" >('+ data.getFormattedValue(row, 2) +')</div>');
+  html.push('</div>');
   
 
-  
   html.push('</div>');
 
 }
