@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="__UP_my_name__" height="678" scrolling="true" width="335" scaling="false" title_url="http://www.grbasket.gr" description="Results, Αποτελέσματα |::| Display results in your blog or website " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s275/box_match_center.png" thumbnail="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s125/box_match_center.png" category="sport" category2="news" > 
+    <Require feature="setprefs" />    
+    <Require feature="dynamic-height" />
+  </ModulePrefs>
+  <UserPref name="my_name" display_name="Name" default_value="Maxi History World All Medals-Positions" />
+  <UserPref name="m_Key" display_name="Source docID:" default_value="" />
+  <UserPref name="m_Diorganvsh" display_name="Event:" default_value="" />
+  <UserPref name="m_Category" display_name="Age Category (M45+):" default_value="" />
+  <UserPref name="m_Country" display_name="Country:" default_value="" />
+<Content type="html">
+    
+  <![CDATA[
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>accordion demo</title>
+  <link href='http://fonts.googleapis.com/css?family=Jura|Play&amp;subset=latin,greek&amp;effect=shadow-multiple|emboss| static|neon|fire-animation' rel='stylesheet' type='text/css'/>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+  <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    google.load("visualization", "1");
+  </script>
+  <style>
+.clMetalioXryso{background-image:url('https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png');}
+.clMetalioAshmenio{background-image:url('https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI/AAAAAAAAAlk/eJg3ngivfyw/s32/asimenio.png');}
+.clMetalioXalkino{background-image:url('https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png');}
+.clMetalioXryso, .clMetalioAshmenio, .clMetalioXalkino, .clXvrisMetalio{background-repeat:no-repeat;background-position:center center; background-size:24px 24px;border-radius: 12px;font-size:18px;font-weight:bold;height:24px;width:24px;text-align:center;} 
+.imgLogoRadius{border-radius: 25px;height:50px;width:50px;margin: 0 5px;}
+.imgFlagRadius{border-radius: 12px;height:24px;width:24px;margin: 0 5px;}
+.imgCategoryRadius{margin-top:-5px;margin-right:15px;float:right;}
+.boxOut10 {box-shadow: rgba(220, 220, 220, 0.9) 0 0 16px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 16px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 16px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 16px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 16px;}
+.boxOut10black {box-shadow: rgba(20, 20, 20, 0.9) 0 0 16px;-webkit-box-shadow: rgba(20, 20, 20, 0.9) 0 0 16px;-moz-box-shadow: rgba(20,20,20,0.9) 0 0 16px;-o-box-shadow: rgba(20,20,20,0.9) 0 0 16px;-ms-box-shadow: rgba(20,20,20,0.9) 0 0 16px;}
+.clSpDelegate{color : rgb(221, 221, 221);font-size:9px;padding-left:10px;}
+.myH3title{clear: both;font-family: 'Jura', 'Play', Arial;font-size: 22px;background-color: rgb(35, 36, 46);background-image: -webkit-gradient(linear, top left, bottom right, from(rgb(35, 36, 46)), to( rgb(96, 114, 219)));background-image: -webkit-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));background-image: -moz-linear-gradient(left,rgb(35, 36, 46), rgb(96, 114, 219));background-image: -ms-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));background-image: -o-linear-gradient(left, rgb(35, 36, 46),  rgb(96, 114, 219));}
+.clDivData, .clDivData2seira{font-size:10px;width: 250px;height: 30px;float: left;}
+.clDivData2seira{color:rgb(221,221,221)}
+.clDivData2seira:hover{color:rgb(0,0,0)}
+.clSpanOnomateponymo{font-size:14px;font-weight:bold;}
+.clDivLeft{float:left;}
+</style>
+  
+<script>
+var prefs = new gadgets.Prefs();
+var mKey = prefs.getString("m_Key");
+if(mKey === ""){
+ mKey="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
+}
+var mDiorganvsh = prefs.getString("m_Diorganvsh");
+var mCategory = prefs.getString("m_Category");
+var mCountry = prefs.getString("m_Country");
+var urlMaxiCategories = "https://docs.google.com/spreadsheet/ccc?key="+ mKey +"&headers=1";
+var queryMaxiCategories;  
+  
+function myInitMaxiAge(){
+  if( urlMaxiCategories!="" ){
+     queryMaxiCategories = new google.visualization.Query(urlMaxiCategories);
+     sendQueryMaxiCategories();
+  }else{
+   alert('No source file for  Categories');
+  }
+}
+ 
+function sendQueryMaxiCategories(){
+  if( mCategory!="" ){
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L where C="'+mCategory +'"  order by H,D,G';
+  }else{
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L order by H,D,G';
+  }
+   queryMaxiCategories.setQuery(strQ);   
+   queryMaxiCategories.send(handleResponseQueryMaxiCategories);
+}
+ 
+function handleResponseQueryMaxiCategories(response) {
+ if (response.isError()) {
+     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+     return;
+ }
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+
+if(posesEggrafes > 0) {
+ var html =[]; 
+var strGroup1 = data.getFormattedValue(0, 0).toUpperCase();  
+var strGroup2;
+
+var myCount=0;
+html.push('<h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(0,8)+'" />'+strGroup1+'</h3><div>');
+ for (var row = 0; row < posesEggrafes; row++) {
+  if( strGroup1 != data.getFormattedValue(row, 0).toUpperCase() ){
+   strGroup1 = data.getFormattedValue(row, 0).toUpperCase();
+   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(row, 8)+'" />'+strGroup1+'</h3><div>');
+   myCount=0;
+  }
+  myCount++;
+
+  if( strGroup2 != data.getFormattedValue(row, 3).toUpperCase() ){
+   strGroup2 = data.getFormattedValue(row, 3).toUpperCase();
+   html.push('<h3 class="myH3title font-effect-emboss">'+strGroup2+'<!-- img class="imgCategoryRadius" src="'+data.getFormattedValue(row, 10)+'" /   --></h3>');
+  }
+  
+  html.push('<div style="float:left;display:block;">');
+  html.push('<div class="clDivData">');
+  
+  if (data.getValue(row, 6) == 1 ){
+    html.push('<div class="clMetalioXryso clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
+  }else if( data.getValue(row, 6) == 2 ){
+    html.push('<div class="clMetalioAshmenio clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
+  }else if( data.getValue(row, 6) == 3 ){
+    html.push('<div class="clMetalioXalkino clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');    
+  }else{
+    html.push('<div class="clXvrisMetalio clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
+  }
+ 
+  html.push('<div class="clDivLeft"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /></div>')
+  html.push('<div class="clSpanOnomateponymo clDivLeft">'+data.getFormattedValue(row, 1).toUpperCase() + '</div>');
+  html.push('<div class="clDivLeft" >('+ data.getFormattedValue(row, 2) +')</div>');
+  html.push('</div>');
+  
+  html.push('</div>');
+}
+  html.push('</div>');
+  
+  document.getElementById("accordion").innerHTML = html.join('');
+  $( "#accordion" ).accordion({heightStyle: "content"});
+ }else{
+   document.getElementById("accordion").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
+ }
+ gadgets.window.adjustHeight();
+}
+</script> 
+</head>
+<body>
+<div id="accordion"><img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" /></div>
+<center><div>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-9529818444792202";
+/* 468x60 maxiBasketball TeamRosters */
+google_ad_slot = "8698484285";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div></center>
+<script>
+myInitMaxiAge();
+</script>
+</body>
+</html>
+      ]]>
+  </Content>
+</Module>
