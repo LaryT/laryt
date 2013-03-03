@@ -128,6 +128,10 @@ color:rgb(0,0,0)
 .clSpanOnomateponymo{
 font-size:14px;
 font-weight:bold;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+width: 160px;
 }
 
 .clDivLeft{
