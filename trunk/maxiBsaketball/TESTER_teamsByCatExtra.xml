@@ -40,7 +40,6 @@ background-image:url('https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI
 }
 
 
-
 .clMetalioXryso, .clMetalioAshmenio, .clMetalioXalkino, .clXvrisMetalio{
 background-repeat:no-repeat;
 background-position:center center; 
@@ -94,7 +93,7 @@ box-shadow: rgba(20, 20, 20, 0.9) 0 0 16px;
 }
 
 .clSpDelegate{
-color : rgb(221, 221, 221);;
+color : rgb(221, 221, 221);
 font-size:9px;
 padding-left:10px;
 }
@@ -199,14 +198,11 @@ html.push('<h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius bo
   }
   myCount++;
 
-  
 
   if( strGroup2 != data.getFormattedValue(row, 3).toUpperCase() ){
    strGroup2 = data.getFormattedValue(row, 3).toUpperCase();
    html.push('<h3 class="myH3title font-effect-emboss">'+strGroup2+'<!-- img class="imgCategoryRadius" src="'+data.getFormattedValue(row, 10)+'" /   --></h3>');
   }
-  
-  
   
   html.push('<div style="float:left;display:block;">');
   html.push('<div class="clDivData">');
@@ -222,13 +218,11 @@ html.push('<h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius bo
     html.push('<div class="clXvrisMetalio clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
   }
  
-
   html.push('<div class="clDivLeft"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /></div>')
   html.push('<div class="clSpanOnomateponymo clDivLeft">'+data.getFormattedValue(row, 1).toUpperCase() + '</div>');
   html.push('<div class="clDivLeft" >('+ data.getFormattedValue(row, 2) +')</div>');
   html.push('</div>');
   
-
   html.push('</div>');
 
 }
