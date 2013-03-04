@@ -137,19 +137,7 @@ html.push('<h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius bo
 </head>
 <body>
 <div id="accordion"><img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" /></div>
-<center><div>
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-9529818444792202";
-/* 468x60 maxiBasketball TeamRosters */
-google_ad_slot = "8698484285";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div></center>
+
 <script>
 myInitMaxiAge();
 </script>
