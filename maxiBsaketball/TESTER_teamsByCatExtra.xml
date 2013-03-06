@@ -26,117 +26,7 @@
   <script type="text/javascript">
     google.load("visualization", "1");
   </script>
-  <style>
-
-
-.clMetalioXryso{
-background-image:url('https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png');
-}
-.clMetalioAshmenio{
-background-image:url('https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI/AAAAAAAAAlk/eJg3ngivfyw/s32/asimenio.png');
-}
-.clMetalioXalkino{
-background-image:url('https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png');
-}
-
-
-.clMetalioXryso, .clMetalioAshmenio, .clMetalioXalkino, .clXvrisMetalio{
-background-repeat:no-repeat;
-background-position:center center; 
-background-size:24px 24px;
-
-border-radius: 12px;
-font-size:18px;
-font-weight:bold;
-
-height:24px;
-width:24px;
-
-text-align:center;
-} 
-
-.imgLogoRadius{
-border-radius: 25px;
-height:50px;
-width:50px;
-margin: 0 5px;
-}
-
-.imgFlagRadius{
-border-radius: 12px;
-height:24px;
-width:24px;
-margin: 0 5px;
-}
-
-.imgCategoryRadius{
-margin-top:-5px;
-margin-right:15px;
-float:right;
-}
-
-.boxOut10 {
-box-shadow: rgba(220, 220, 220, 0.9) 0 0 16px;
--webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 16px;
--moz-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
--o-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
--ms-box-shadow: rgba(220,220,220,0.9) 0 0 16px;
-
-}
-
-.boxOut10black {
-box-shadow: rgba(20, 20, 20, 0.9) 0 0 16px;
--webkit-box-shadow: rgba(20, 20, 20, 0.9) 0 0 16px;
--moz-box-shadow: rgba(20,20,20,0.9) 0 0 16px;
--o-box-shadow: rgba(20,20,20,0.9) 0 0 16px;
--ms-box-shadow: rgba(20,20,20,0.9) 0 0 16px;
-}
-
-.clSpDelegate{
-color : rgb(221, 221, 221);
-font-size:9px;
-padding-left:10px;
-}
-
-.myH3title{
-
-clear: both;
-font-family: 'Jura', 'Play', Arial;
-font-size: 22px;
-
-background-color: rgb(35, 36, 46);
-background-image: -webkit-gradient(linear, top left, bottom right, from(rgb(35, 36, 46)), to( rgb(96, 114, 219)));
-background-image: -webkit-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));
-background-image: -moz-linear-gradient(left,rgb(35, 36, 46), rgb(96, 114, 219));
-background-image: -ms-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));
-background-image: -o-linear-gradient(left, rgb(35, 36, 46),  rgb(96, 114, 219));
-}
-
-.clDivData, .clDivData2seira{
-font-size:10px;
-width: 230px;
-height: 30px;
-float: left;
-}
-.clDivData2seira{
-color:rgb(221,221,221)
-}
-.clDivData2seira:hover{
-color:rgb(0,0,0)
-}
-
-.clSpanOnomateponymo{
-font-size:14px;
-font-weight:bold;
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;
-width: 160px;
-}
-
-.clDivLeft{
-float:left;
-}
+<style>
 
 </style>
   
@@ -153,116 +43,62 @@ var mCountry = prefs.getString("m_Country");
 
 var urlMaxiCategories = "https://docs.google.com/spreadsheet/ccc?key="+ mKey +"&headers=1";
 var queryMaxiCategories;  
-  
-function myInitMaxiAge(){
 
-  if( urlMaxiCategories!="" ){
-     queryMaxiCategories = new google.visualization.Query(urlMaxiCategories);
-     sendQueryMaxiCategories();
-  }else{
-   alert('No source file for  Categories');
-  }
- 
-}
- 
-function sendQueryMaxiCategories(){
-  if( mCategory!="" ){
-   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L where C="'+mCategory +'"  order by H,D,G';
-  }else{
-   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L order by H,D,G';
-   
-  }
-   queryMaxiCategories.setQuery(strQ);   
-   queryMaxiCategories.send(handleResponseQueryMaxiCategories);
-}
- 
-function handleResponseQueryMaxiCategories(response) {
-
- if (response.isError()) {
-     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-     return;
- }
- var data = response.getDataTable();
- var posesEggrafes = data.getNumberOfRows();
-
-
-
-if(posesEggrafes > 0) {
- var html =[]; 
-var strGroup1 = data.getFormattedValue(0, 0).toUpperCase();  
-var strGroup2;
-
-var myCount=0;
-html.push('<h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(0,8)+'" />'+strGroup1+'</h3><div>');
- for (var row = 0; row < posesEggrafes; row++) {
-  if( strGroup1 != data.getFormattedValue(row, 0).toUpperCase() ){
-   strGroup1 = data.getFormattedValue(row, 0).toUpperCase();
-   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(row, 8)+'" />'+strGroup1+'</h3><div>');
-   myCount=0;
-  }
-  myCount++;
-
-
-  if( strGroup2 != data.getFormattedValue(row, 3).toUpperCase() ){
-   strGroup2 = data.getFormattedValue(row, 3).toUpperCase();
-   html.push('<h3 class="myH3title font-effect-emboss">'+strGroup2+'<!-- img class="imgCategoryRadius" src="'+data.getFormattedValue(row, 10)+'" /   --></h3>');
-  }
-  
-  html.push('<div style="float:left;display:block;">');
-  html.push('<div class="clDivData">');
-  
-
-  if (data.getValue(row, 6) == 1 ){
-    html.push('<div class="clMetalioXryso clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
-  }else if( data.getValue(row, 6) == 2 ){
-    html.push('<div class="clMetalioAshmenio clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
-  }else if( data.getValue(row, 6) == 3 ){
-    html.push('<div class="clMetalioXalkino clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');    
-  }else{
-    html.push('<div class="clXvrisMetalio clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
-  }
- 
-  html.push('<div class="clDivLeft"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /></div>')
-  html.push('<div class="clSpanOnomateponymo clDivLeft">'+data.getFormattedValue(row, 1).toUpperCase() + '</div>');
-  html.push('<div class="clDivLeft" >('+ data.getFormattedValue(row, 2) +')</div>');
-  html.push('</div>');
-  
-  html.push('</div>');
-
-}
-  html.push('</div>');
-  
-  document.getElementById("accordion").innerHTML = html.join('');
-  $( "#accordion" ).accordion({heightStyle: "content"});
- }else{
-   document.getElementById("accordion").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
- }
- gadgets.window.adjustHeight();
-}
-  
 </script>
   
 </head>
 <body>
 
-<div id="accordion"><img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" /></div>
+<div id="accordion"></div>
 
-<center><div>
+<div id="disDiv" style="position:absolute;display:none;"><center>
+<a id="apokrychDisplay" href="javascript:hideDivDisp();" style="text-decoration:none;font-size:9px;color:#e7e7e8;height:10px;" title="απόκρυψη - hide">X</a><br/>
+<div id="inDisplay" ><img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" /></div>
+</center>
+</div>
+
+
+<div class="koyti">
+
+   <div id="pano-tmhma" >
+   <div id="myTabs">
+   <ul>
+     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a></li>
+     <li id="apotelesmata-tab" ><a title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="javascript:selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;">Πρόγραμμα</a></li>
+     <li id="ebdomada-tab"><a title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;">Ανά Ημέρα</a></li>
+     </ul>
+   </div>
+ </div>
+ <div>
+    <div id="myTitleID"><marquee>Πρόγραμμα Αγώνων Διοργανώσεων - Αποτελέσματα - Βαθμολογικοί Πίνακες </marquee></div>
+    <div id="sourceIDebdanahmera" class="periexomenaCL"><span style="font-size:9px;">.Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ).</span></div>
+    <div id="sourceID" class="periexomenaCL"><span style="font-size:9px;">.</span></div>
+    <div id="sourceIDBathm" class="periexomenaCL">.</div>
+  </div>
+
+<center>
+<span style="font-size:9px;color:gray;height:10px;" >GameCenter &nbsp;|&nbsp;</span><a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a><br/>
+
+<div id="addiv" style="position:absolute;top:250px;left:8px;"><center><a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="απόκρυψη - hide ads">X</a><br/>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
-/* 468x60 maxiBasketball TeamRosters */
-google_ad_slot = "8698484285";
-google_ad_width = 468;
-google_ad_height = 60;
+/* 300 x 250 box maxi ga history */
+google_ad_slot = "1196420280";
+google_ad_width = 300;
+google_ad_height = 250;
 //-->
 </script>
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-</div></center>
+</script></center>
+
+</div>
+</center>
+
 
 <script>
-myInitMaxiAge();
+// myInitMaxiAge();
 </script>
 
 
