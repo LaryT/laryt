@@ -31,9 +31,9 @@
 * {margin: 0;padding: 0;}
 
 #myTabs{
-border-bottom:1px solid #444;color:#2222f2;
+border-bottom:1px solid #444;
 display:block;
-height:34px;
+height:36px;
 position:relative;
 z-index:100;
 }
@@ -51,7 +51,7 @@ font:normal normal 12px Arial,Tahoma,Helvetica,FreeSans,sans-serif;
 color:#999;
 border-left:1px solid #fff;
 border-right:1px solid #eee;
-cursor:pointer
+cursor:pointer;
 }
 
 #myTabs ul li a{text-decoration:none}
@@ -60,10 +60,13 @@ cursor:pointer
 #myTabs ul li.tab-selected a,
 #myTabs ul li a:hover,
 #myTabs ul li:hover{
-color:#000;background-color:#eee;text-decoration:none
+color:#000;
+background-color:#eee;
+text-decoration:none;
 }
 
-#myTitleID{font-size:14px;font-weight:bold;padding:3px 10px}
+#myTitleID{color:#2222f2;font-size:14px;font-weight:bold;padding:3px 10px;}
+
 
 </style>
   
