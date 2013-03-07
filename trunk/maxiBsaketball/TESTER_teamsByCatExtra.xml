@@ -62,7 +62,6 @@ cursor:pointer;
 #myTabs ul li:hover{
 color:#000;
 background-color:#eee;
-padding:11px 10px;
 text-decoration:none;
 }
 
@@ -114,7 +113,7 @@ function makeMarque(strForRoll){
 }
 
 // --- gia ta tabs 
-function selectTab (myID, myTab, myCaption ) { 
+function selectTab(myID, myTab, myCaption ) { 
  $(".periexomenaCL").hide();
  $("#myTabs li").removeClass("tab-selected");
  $("#"+myID).show();
