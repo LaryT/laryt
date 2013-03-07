@@ -28,6 +28,8 @@
   </script>
 <style>
 
+
+
 #myTabs{margin-bottom:-1px;position:relative;z-index:100;height:35px;display:block}
 
 #myTabs ul{margin-top:0}
@@ -49,6 +51,8 @@ cursor:pointer}
 #myTabs ul li:hover{
 color:#000;background-color:#eee;text-decoration:none
 }
+
+#myTitleID{border-top:1px solid #444;color:#2222f2;font-size:14px;font-weight:bold;padding:3px 10px}
 
 </style>
   
@@ -85,9 +89,9 @@ var queryMaxiCategories;
    <div id="pano-tmhma" >
    <div id="myTabs">
    <ul>
-     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a></li>
-     <li id="apotelesmata-tab" ><a title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="javascript:selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;">Πρόγραμμα</a></li>
-     <li id="ebdomada-tab"><a title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;">Ανά Ημέρα</a></li>
+     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a></li>
+     <li id="apotelesmata-tab" ><a href="javascript:void(0);" title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;">Πρόγραμμα</a></li>
+     <li id="ebdomada-tab"><a href="javascript:void(0);" title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;">Ανά Ημέρα</a></li>
      </ul>
    </div>
  </div>
