@@ -36,7 +36,8 @@
 
 #myTabs ul li{display:inline-block;
 float:left;
-padding:.6em 1em;
+//padding:.6em 1em;
+padding:5px 10px;
 font:normal normal 14px Arial,Tahoma,Helvetica,FreeSans,sans-serif;
 color:#999;
 border-left:1px solid #fff;
