@@ -56,7 +56,7 @@ cursor:pointer;
 
 #myTabs ul li a{text-decoration:none}
 
-#mytabs ul li.tab-selected,
+#myTabs ul li.tab-selected,
 #myTabs ul li.tab-selected a,
 #myTabs ul li a:hover,
 #myTabs ul li:hover{
