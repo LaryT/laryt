@@ -62,6 +62,7 @@ cursor:pointer;
 #myTabs ul li:hover{
 color:#000;
 background-color:#eee;
+padding:11px 10px;
 text-decoration:none;
 }
 
