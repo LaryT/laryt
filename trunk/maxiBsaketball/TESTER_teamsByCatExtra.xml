@@ -136,13 +136,13 @@ function selectTab(myID, myTab, myCaption ) {
  }
  
  if( myTab == "apotelesmata-tab" ){
-    sendQueryAgonistikes();
+    sendQueryTab2();
  }
 
  if(myTab == "ebdomada-tab"){  
-    document.getElementById("myTitleID").innerHTML += "<span style='font-size:9px;'> (" + strAllDate +")</span>";
-    document.getElementById("ebdomada-tab").title = "Οι αγώνες ανά ημέρα (" + strAllDate +")";
-    sendQueryEbdomadiaioAnaHmera();
+   // document.getElementById("myTitleID").innerHTML += "<span style='font-size:9px;'> (" + strAllDate +")</span>";
+   // document.getElementById("ebdomada-tab").title = "Οι αγώνες ανά ημέρα (" + strAllDate +")";
+     sendQueryTab3();
   }
 }
 //---- xtizei periexomeno gia kathe tab
@@ -155,13 +155,13 @@ function sendQueryTab1() {
 }
 
 function sendQueryTab2() {
-    alert('La Zaro s 1');
+    alert('La Zaro s 2');
    // queryTab2.setQuery('select * order by B, D, F');
    // queryTab2.send(handleQueryResponseTab2;
 }
 
 function sendQueryTab3() {
-    alert('La Zaro s 1');
+    alert('La Zaro s 3');
    // queryTab3.setQuery('select * order by B, D, F');
    // queryTab3.send(handleQueryResponseTab3);
 }
