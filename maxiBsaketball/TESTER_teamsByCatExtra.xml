@@ -84,21 +84,16 @@ var mKey3 = prefs.getString("m_Key3");
 if(mKey1 === ""){
  mKey1="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
 }
-var mKey2 = prefs.getString("m_Key2");
 if(mKey2 === ""){
  mKey2="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
 }
-var mKey3 = prefs.getString("m_Key3");
 if(mKey3 === ""){
  mKey3="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
 }
 
-
 var mDiorganvsh = prefs.getString("m_Diorganvsh");
 var mCategory = prefs.getString("m_Category");
 var mCountry = prefs.getString("m_Country");
-
-var myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1";
 
 var queryTab1;
 var queryTab2;
