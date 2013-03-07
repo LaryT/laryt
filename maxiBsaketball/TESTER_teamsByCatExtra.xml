@@ -86,6 +86,15 @@ var mCountry = prefs.getString("m_Country");
 var urlMaxiCategories = "https://docs.google.com/spreadsheet/ccc?key="+ mKey +"&headers=1";
 var queryMaxiCategories;  
 
+if( myURLfeedTab1!="" ){
+ var queryTab1 = new google.visualization.Query(myURLfeedTab1);
+}
+if( myURLfeedTab2!="" ){
+ var queryTab2 = new google.visualization.Query(myURLfeedTab2);
+}
+if( myURLfeedTab3!="" ){  
+ var queryTab3 = new google.visualization.Query(myURLfeedTab3);
+}
 
 
 
@@ -121,18 +130,91 @@ function selectTab(myID, myTab, myCaption ) {
  if(myCaption !=""){
    document.getElementById("myTitleID").innerHTML = myCaption;
  }
+
+ if(myTab == "bathmologies-tab"){  
+    sendQueryTab1();
+ }
+ 
  if( myTab == "apotelesmata-tab" ){
     sendQueryAgonistikes();
  }
- if(myTab == "bathmologies-tab"){  
-    sendQueryBathmologia();
- }
+
  if(myTab == "ebdomada-tab"){  
     document.getElementById("myTitleID").innerHTML += "<span style='font-size:9px;'> (" + strAllDate +")</span>";
     document.getElementById("ebdomada-tab").title = "Οι αγώνες ανά ημέρα (" + strAllDate +")";
     sendQueryEbdomadiaioAnaHmera();
   }
 }
+//---- xtizei periexomeno gia kathe tab
+
+//---- make Query-tab 
+function sendQueryTab1() {
+   queryTab1.setQuery('select * order by B, D, F');
+   queryTab1.send(handleQueryResponseTab1);
+}
+
+function sendQueryTab2() {
+   queryTab2.setQuery('select * order by B, D, F');
+   queryTab2.send(handleQueryResponseTab2;
+}
+
+function sendQueryTab3() {
+   queryTab3.setQuery('select * order by B, D, F');
+   queryTab3.send(handleQueryResponseTab3);
+}
+
+//---------------------------
+//-------------- make div Tab1
+//---------------------------
+function handleQueryResponseTab1(response) {
+
+ if (response.isError()) {
+    alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+ }
+ 
+ var html =[];  
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+ 
+ alert('La Zaro s 1');
+}
+//---------------------------
+//-------------- make div Tab1
+//---------------------------
+function handleQueryResponseTab2(response) {
+
+ if (response.isError()) {
+    alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+ }
+ 
+ var html =[];  
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+ 
+ alert('La Zaro s 2');
+}
+
+//---------------------------
+//-------------- make div Tab3
+//---------------------------
+function handleQueryResponseTab3(response) {
+
+ if (response.isError()) {
+    alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+ }
+ 
+ var html =[];  
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+ 
+ alert('La Zaro s 3');
+}
+
+
+
 </script>
   
 </head>
