@@ -86,6 +86,53 @@ var mCountry = prefs.getString("m_Country");
 var urlMaxiCategories = "https://docs.google.com/spreadsheet/ccc?key="+ mKey +"&headers=1";
 var queryMaxiCategories;  
 
+
+
+
+//--- gia ta ads
+function hideDivAds(){
+   $("#addiv").animate({"height" : "0px"}, function(){
+       $("#addiv").hide();
+     });
+   $("#emfaniseAdsID").show();
+}
+
+function showDivAds(){
+   $("#addiv").animate({"height" : "250px"}, function(){
+       $("#addiv").show();
+     });
+   $("#emfaniseAdsID").hide();
+}
+
+function makeMarque(strForRoll){
+  if(strForRoll !=""){
+   document.getElementById("myTitleID").innerHTML = "<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();' title='"+strForRoll + "'>"+strForRoll+"</marquee>";
+  }else{
+   document.getElementById("myTitleID").innerHTML = "";
+  }
+}
+
+// --- gia ta tabs 
+function selectTab (myID, myTab, myCaption ) { 
+ $(".periexomenaCL").hide();
+ $("#myTabs li").removeClass("tab-selected");
+ $("#"+myID).show();
+ $("#"+myTab).addClass("tab-selected");
+ if(myCaption !=""){
+   document.getElementById("myTitleID").innerHTML = myCaption;
+ }
+ if( myTab == "apotelesmata-tab" ){
+    sendQueryAgonistikes();
+ }
+ if(myTab == "bathmologies-tab"){  
+    sendQueryBathmologia();
+ }
+ if(myTab == "ebdomada-tab"){  
+    document.getElementById("myTitleID").innerHTML += "<span style='font-size:9px;'> (" + strAllDate +")</span>";
+    document.getElementById("ebdomada-tab").title = "Οι αγώνες ανά ημέρα (" + strAllDate +")";
+    sendQueryEbdomadiaioAnaHmera();
+  }
+}
 </script>
   
 </head>
