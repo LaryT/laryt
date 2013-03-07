@@ -149,18 +149,21 @@ function selectTab(myID, myTab, myCaption ) {
 
 //---- make Query-tab 
 function sendQueryTab1() {
-   queryTab1.setQuery('select * order by B, D, F');
-   queryTab1.send(handleQueryResponseTab1);
+    alert('La Zaro s 1');
+   //  queryTab1.setQuery('select * order by B, D, F');
+   //  queryTab1.send(handleQueryResponseTab1);
 }
 
 function sendQueryTab2() {
-   queryTab2.setQuery('select * order by B, D, F');
-   queryTab2.send(handleQueryResponseTab2;
+    alert('La Zaro s 1');
+   // queryTab2.setQuery('select * order by B, D, F');
+   // queryTab2.send(handleQueryResponseTab2;
 }
 
 function sendQueryTab3() {
-   queryTab3.setQuery('select * order by B, D, F');
-   queryTab3.send(handleQueryResponseTab3);
+    alert('La Zaro s 1');
+   // queryTab3.setQuery('select * order by B, D, F');
+   // queryTab3.send(handleQueryResponseTab3);
 }
 
 //---------------------------
