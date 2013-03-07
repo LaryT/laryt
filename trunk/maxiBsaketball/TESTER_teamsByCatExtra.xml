@@ -65,7 +65,7 @@ background-color:#eee;
 text-decoration:none;
 }
 
-#myTitleID{color:#2222f2;font-size:14px;font-weight:bold;padding:3px 10px;}
+#myTitleID{color:#2222f2;font-size:14px;font-weight:bold;}
 
 
 </style>
