@@ -5,7 +5,9 @@
     <Require feature="dynamic-height" />
   </ModulePrefs>
   <UserPref name="my_name" display_name="Name" default_value="TESTER" />
-  <UserPref name="m_Key" display_name="Source docID:" default_value="" />
+  <UserPref name="m_Key1" display_name="Source docID 1:" default_value="" />
+  <UserPref name="m_Key2" display_name="Source docID 2:" default_value="" />    
+  <UserPref name="m_Key3" display_name="Source docID 3:" default_value="" />
   <UserPref name="m_Diorganvsh" display_name="Event:" default_value="" />
   <UserPref name="m_Category" display_name="Age Category (M45+):" default_value="" />
   <UserPref name="m_Country" display_name="Country:" default_value="" />
@@ -75,28 +77,49 @@ div#sourceIDBathm{display:block}
 <script>
 var prefs = new gadgets.Prefs();
 
-var mKey = prefs.getString("m_Key");
-if(mKey === ""){
- mKey="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
+var mKey1 = prefs.getString("m_Key1");
+var mKey2 = prefs.getString("m_Key2");
+var mKey3 = prefs.getString("m_Key3");
+
+if(mKey1 === ""){
+ mKey1="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
 }
+var mKey2 = prefs.getString("m_Key2");
+if(mKey2 === ""){
+ mKey2="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
+}
+var mKey3 = prefs.getString("m_Key3");
+if(mKey3 === ""){
+ mKey3="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
+}
+
+
 var mDiorganvsh = prefs.getString("m_Diorganvsh");
 var mCategory = prefs.getString("m_Category");
 var mCountry = prefs.getString("m_Country");
 
-var urlMaxiCategories = "https://docs.google.com/spreadsheet/ccc?key="+ mKey +"&headers=1";
-var queryMaxiCategories;  
+var myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1";
 
-if( myURLfeedTab1!="" ){
- var queryTab1 = new google.visualization.Query(myURLfeedTab1);
-}
-if( myURLfeedTab2!="" ){
- var queryTab2 = new google.visualization.Query(myURLfeedTab2);
-}
-if( myURLfeedTab3!="" ){  
- var queryTab3 = new google.visualization.Query(myURLfeedTab3);
-}
+var queryTab1;
+var queryTab2;
+var queryTab3;
 
+var myURLfeedTab1;
+var myURLfeedTab2;
+var myURLfeedTab3;
 
+if( mKey1!="" ){
+  myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1";
+  queryTab1 = new google.visualization.Query(myURLfeedTab1);
+}
+if( mKey2!="" ){
+  myURLfeedTab2 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey2 +"&headers=1";
+  queryTab2 = new google.visualization.Query(myURLfeedTab2);
+}
+if( mKey3!="" ){  
+  myURLfeedTab3 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey3 +"&headers=1";
+  queryTab3 = new google.visualization.Query(myURLfeedTab3);
+}
 
 //--- gia ta ads
 function hideDivAds(){
@@ -149,19 +172,19 @@ function selectTab(myID, myTab, myCaption ) {
 
 //---- make Query-tab 
 function sendQueryTab1() {
-    alert('La Zaro s 1');
+    alert('La   s 1');
    //  queryTab1.setQuery('select * order by B, D, F');
    //  queryTab1.send(handleQueryResponseTab1);
 }
 
 function sendQueryTab2() {
-    alert('La Zaro s 2');
+    alert('La   s 2');
    // queryTab2.setQuery('select * order by B, D, F');
    // queryTab2.send(handleQueryResponseTab2;
 }
 
 function sendQueryTab3() {
-    alert('La Zaro s 3');
+    alert('La   s 3');
    // queryTab3.setQuery('select * order by B, D, F');
    // queryTab3.send(handleQueryResponseTab3);
 }
