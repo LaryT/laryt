@@ -295,7 +295,7 @@ if(posesEggrafes > 0) {
     html4group2.push('Filter:');
     html4group2.push('<select id="query-3" onchange="setQuery(this.value)">');
     html4group2.push('<option value="">All</option>');
-    html4group2.push('<option value=" where C=&quot;'+strGroup2+'&quot;>'+strGroup2+'</option>');
+    html4group2.push('<option value=" where C=&quot;'+strGroup2+'&quot;">'+strGroup2+'</option>');
 
  
  var myCount=0;
@@ -304,7 +304,7 @@ if(posesEggrafes > 0) {
  
    if( strGroup2 != data.getFormattedValue(row, 2) ){
      strGroup2 = data.getFormattedValue(row, 2);
-     html4group2.push('<option value="where C="'+strGroup2+'">'+strGroup2+'</option>');
+     html4group2.push('<option value=" where C=&quot;'+strGroup2+'&quot;">'+strGroup2+'</option>');
    }
  
   if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
