@@ -271,7 +271,7 @@ function handleQueryResponseTab1(response) {
 
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- alert('accord  lary');
+ alert('yo  lary');
  
  if(posesEggrafes > 0) {
   var html =[]; 
@@ -334,6 +334,11 @@ if (response.isError()) {
 
 function setNewQuery(queryString) {  
        alert(queryString);
+ $("h3.myH3title").hide();
+ $("div.ui-accordion-content").hide();
+// $("#myTabs li").removeClass("tab-selected");
+// $("."+queryString).show();
+// $("#"+myTab).addClass("tab-selected");    
 }
     
 //---------------------------
