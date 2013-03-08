@@ -218,21 +218,16 @@ function selectTab(myID, myTab ) {
 
 
  if(myTab == "bathmologies-tab"){  
-   document.getElementById("myTitleID").innerHTML = captionTab1;
    sendQueryTab1();
  }
  
  if( myTab == "apotelesmata-tab" ){
-  document.getElementById("myTitleID").innerHTML = captionTab2;
   sendQueryTab2();
  }
 
  if(myTab == "ebdomada-tab"){  
-     document.getElementById("myTitleID").innerHTML = captionTab3;
-   // document.getElementById("myTitleID").innerHTML += "<span style='font-size:9px;'> (" + strAllDate +")</span>";
-   // document.getElementById("ebdomada-tab").title = "Οι αγώνες ανά ημέρα (" + strAllDate +")";
-     sendQueryTab3();
-  }
+  sendQueryTab3();
+ }
 }
 //---- xtizei periexomeno gia kathe tab
 
@@ -303,7 +298,7 @@ function handleQueryResponseTab1(response) {
 //-------------------
 //-------------------
 function handleQueryResponseTab1Filter(response) {
- alert('mpampaloykos');
+
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
@@ -312,7 +307,7 @@ if (response.isError()) {
  var posesEggrafes = data.getNumberOfRows();
  var html4group2 =[]; 
 
-  alert(posesEggrafes);
+
  if(posesEggrafes > 0) {
 
     html4group2.push('Filter:');
@@ -320,7 +315,7 @@ if (response.isError()) {
     html4group2.push('<option value="">All</option>');
  
   for (var row = 0; row < posesEggrafes; row++) {
-     html4group2.push('<option value="'+data.getFormattedValue(row, 0)+'">'+data.getFormattedValue(0, 0)+'</option>');  
+     html4group2.push('<option value="'+data.getFormattedValue(row, 0)+'">'+data.getFormattedValue(row, 0)+'</option>');  
   }
 
   html4group2.push('</select>');
