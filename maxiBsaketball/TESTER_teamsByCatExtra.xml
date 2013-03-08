@@ -271,7 +271,7 @@ function handleQueryResponseTab1(response) {
 
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- alert('poly  lary');
+ alert('go  lary');
  
  if(posesEggrafes > 0) {
   var html =[]; 
@@ -336,8 +336,8 @@ function setNewQuery(queryString) {
        alert(queryString);
  $("h3.myH3title").hide();
  $("div.ui-accordion-content").hide();
- $("h3.h3"+queryString).show();
- $("div.div"+queryString).show();
+ $(".divF35+").show();
+ $(".h3F35+"+queryString).show();
 // $("#myTabs li").removeClass("tab-selected");
 // $("."+queryString).show();
 // $("#"+myTab).addClass("tab-selected");    
