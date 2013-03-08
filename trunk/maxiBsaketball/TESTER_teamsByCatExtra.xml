@@ -224,10 +224,10 @@ if(posesEggrafes > 0) {
  }
   html.push('</div>');
   
-  document.getElementById("accordion").innerHTML = html.join('');
-  $( "#accordion" ).accordion({heightStyle: "content"});
+  document.getElementById("divIDTab1").innerHTML = html.join('');
+  $( "#divIDTab1" ).accordion({heightStyle: "content"});
  }else{
-   document.getElementById("accordion").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
+   document.getElementById("divIDTab1").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
  }
  gadgets.window.adjustHeight();
  
