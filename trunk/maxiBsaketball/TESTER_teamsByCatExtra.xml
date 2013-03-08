@@ -131,6 +131,9 @@ overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;
 
 .ui-accordion .ui-accordion-header {padding-top: 0em;padding-bottom: 0em;}
 
+.myClHide{display:none;}
+.myClShow{display:block;}
+
 </style>
   
 <script>
@@ -271,7 +274,7 @@ function handleQueryResponseTab1(response) {
 
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- alert('f45  lary');
+ alert('kayt  lary');
  
  if(posesEggrafes > 0) {
   var html =[]; 
@@ -334,16 +337,23 @@ if (response.isError()) {
 
 function setNewQuery(queryString) {  
        alert(queryString);
- $("h3.myH3title").hide();
- $("div.ui-accordion-content").hide();
+ $(".myH3title").hide();
+ $(".ui-accordion-content").hide();
  
- $(".h3F45+").css('display', 'block');
- $(".divF45+").css('display', 'block');
+ $(".h3F45+").show();
+ $(".divF45+").show();
+ 
+ //$(".h3F45+").css('display', 'block');
+ //$(".divF45+").css('display', 'block');
 
  
 // $("#myTabs li").removeClass("tab-selected");
 // $("."+queryString).show();
-// $("#"+myTab).addClass("tab-selected");    
+// $("#"+myTab).addClass("tab-selected");   
+
+//.myClHide{display:none;}
+//.myClShow{display:block;}
+
 }
     
 //---------------------------
