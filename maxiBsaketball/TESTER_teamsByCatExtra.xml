@@ -249,9 +249,9 @@ function sendQueryTab1() {
   
   //-------- gia ta filter cathgorivn
   
-  var strQ2='select C, count(B) group by C';
-  queryTab1.setQuery(strQ2);
-  queryTab1.send(handleQueryResponseFilterTab1);
+ // var strQ2='select C, count(D) group by C';
+ // queryTab1.setQuery(strQ2);
+ // queryTab1.send(handleQueryResponseFilterTab1);
 }
 
 function sendQueryTab2() {
