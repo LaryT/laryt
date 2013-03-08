@@ -28,8 +28,8 @@
   <script type="text/javascript">
     google.load("visualization", "1");
   </script>
+  
 <style>
-
 * {margin: 0;padding: 0;}
 #myTabs{
 border-bottom:1px solid #444;
@@ -72,12 +72,8 @@ div.periexomenaCL{height:550px;display:none}
 div#divIDTab1{display:block}
 
 //---- tab1 accordeon --
-.imgFlagRadius{
-border-radius: 8px;
-height:16px;
-width:16px;
-margin: 0 5px;
-}
+
+.imgFlagRadius {border-radius: 8px;height:16px;width:16px;margin: 0px 5px;}
 
 .boxOut10 {
 box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
@@ -97,7 +93,7 @@ padding-left:10px;
 .myH3title{
 margin-top: 30px;
 margin-bottom: 2px;
-font-family: 'Jura', 'Play', Arial;
+font-family: Arial, 'Jura', 'Play';
 font-size: 30px;
 
 background-color: rgb(35, 36, 46);
@@ -125,10 +121,6 @@ font-weight:bold;
 overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;
 
 }
-
-//------------------
-
-
 
 </style>
   
