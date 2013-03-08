@@ -76,7 +76,7 @@ div#divIDTab1{display:block}
 border-radius: 8px;
 height:16px;
 width:16px;
-margin: 0 5;
+margin: 0 5px;
 }
 
 .boxOut10 {
@@ -122,6 +122,8 @@ color:rgb(0,0,0)
 .clSpanOnomateponymo{
 font-size:14px;
 font-weight:bold;
+overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;
+
 }
 
 //------------------
