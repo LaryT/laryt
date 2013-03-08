@@ -244,8 +244,9 @@ function sendQueryTab1() {
   }else{
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F';
   }
+  alert('5555');
    queryTab1.setQuery(strQ);   
-   queryTab1.send(handleQueryResponseTab1);  
+//   queryTab1.send(handleQueryResponseTab1);  
   
   //-------- gia ta filter cathgorivn
   
