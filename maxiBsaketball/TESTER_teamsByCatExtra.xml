@@ -263,7 +263,7 @@ function sendQueryTab3() {
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
-    alert(' make 1');
+    alert('m 1');
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
@@ -275,16 +275,16 @@ if(posesEggrafes > 0) {
  var html =[]; 
  var html4group2 =[]; 
  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
- var strGroup2 = data.getFormattedValue(0, 0); 
+ var strGroup2 = data.getFormattedValue(0, 3); 
  
  
  var myCount=0;
  html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
  
-   if( strGroup2 != data.getFormattedValue(row, 0) ){
-    html4group2.push(data.getFormattedValue(row, 0) +'&nbsp;');
-        strGroup2 = data.getFormattedValue(row, 0);
+   if( strGroup2 != data.getFormattedValue(row, 3) ){
+     html4group2.push(data.getFormattedValue(row, 3) +'&nbsp;');
+     strGroup2 = data.getFormattedValue(row, 3);
    }
  
  
