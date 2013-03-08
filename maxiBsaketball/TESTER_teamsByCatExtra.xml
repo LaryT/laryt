@@ -31,7 +31,6 @@
 <style>
 
 * {margin: 0;padding: 0;}
-
 #myTabs{
 border-bottom:1px solid #444;
 display:block;
@@ -71,6 +70,63 @@ text-decoration:none;
 
 div.periexomenaCL{height:550px;display:none}
 div#divIDTab1{display:block}
+
+//---- tab1 accordeon --
+.imgFlagRadius{
+border-radius: 8px;
+height:16px;
+width:16px;
+margin: 0 5;
+}
+
+.boxOut10 {
+box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
+-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
+-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
+-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
+-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
+margin-right: 10px;
+}
+
+.clSpDelegate{
+color : rgb(221, 221, 221);;
+font-size:9px;
+padding-left:10px;
+}
+
+.myH3title{
+margin-top: 30px;
+margin-bottom: 2px;
+font-family: 'Jura', 'Play', Arial;
+font-size: 30px;
+
+background-color: rgb(35, 36, 46);
+background-image: -webkit-gradient(linear, top left, bottom right, from(rgb(35, 36, 46)), to( rgb(96, 114, 219)));
+background-image: -webkit-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));
+background-image: -moz-linear-gradient(left,rgb(35, 36, 46), rgb(96, 114, 219));
+background-image: -ms-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));
+background-image: -o-linear-gradient(left, rgb(35, 36, 46),  rgb(96, 114, 219));
+}
+
+.clDivData, .clDivData2seira{
+font-size:10px;
+margin:1px 0px;
+}
+.clDivData2seira{
+color:rgb(221,221,221)
+}
+.clDivData2seira:hover{
+color:rgb(0,0,0)
+}
+
+.clSpanOnomateponymo{
+font-size:14px;
+font-weight:bold;
+}
+
+//------------------
+
+
 
 </style>
   
