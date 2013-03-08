@@ -70,7 +70,7 @@ text-decoration:none;
 #myTitleID{color:#2222f2;font-size:14px;font-family: Arial,Tahoma,Helvetica;padding-top:5px;}
 
 div.periexomenaCL{height:550px;display:none}
-div#sourceIDBathm{display:block}
+div#divIDTab1{display:block}
 
 </style>
   
@@ -82,13 +82,13 @@ var mKey2 = prefs.getString("m_Key2");
 var mKey3 = prefs.getString("m_Key3");
 
 if(mKey1 === ""){
- mKey1="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
+ mKey1="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
 }
 if(mKey2 === ""){
- mKey2="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
+ mKey2="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
 }
 if(mKey3 === ""){
- mKey3="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
+ mKey3="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
 }
 
 var mDiorganvsh = prefs.getString("m_Diorganvsh");
@@ -106,14 +106,20 @@ var myURLfeedTab3;
 if( mKey1!="" ){
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
+}else{
+   alert('No source file for  Categories');
 }
 if( mKey2!="" ){
   myURLfeedTab2 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey2 +"&headers=1";
   queryTab2 = new google.visualization.Query(myURLfeedTab2);
+}else{
+   alert('No source file for  Categories');
 }
 if( mKey3!="" ){  
   myURLfeedTab3 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey3 +"&headers=1";
   queryTab3 = new google.visualization.Query(myURLfeedTab3);
+}else{
+   alert('No source file for  Categories');
 }
 
 //--- gia ta ads
@@ -167,15 +173,20 @@ function selectTab(myID, myTab, myCaption ) {
 
 //---- make Query-tab 
 function sendQueryTab1() {
-    alert('La   s 1');
-   //  queryTab1.setQuery('select * order by B, D, F');
-   //  queryTab1.send(handleQueryResponseTab1);
+  if( mCategory!="" ){
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
+  }else{
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F';
+  }
+   queryTab1.setQuery(strQ);   
+   queryTab1.send(handleQueryResponseTab1);   
+  
 }
 
 function sendQueryTab2() {
     alert('La   s 2');
    // queryTab2.setQuery('select * order by B, D, F');
-   // queryTab2.send(handleQueryResponseTab2;
+   // queryTab2.send(handleQueryResponseTab2);
 }
 
 function sendQueryTab3() {
@@ -188,20 +199,42 @@ function sendQueryTab3() {
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
-
- if (response.isError()) {
-    alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-    return;
+ alert('make div Tab1');
+if (response.isError()) {
+     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+     return;
  }
- 
- var html =[];  
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
+
+if(posesEggrafes > 0) {
+ var html =[]; 
+ var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
+ var myCount=0;
+ html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
+ for (var row = 0; row < posesEggrafes; row++) {
+  if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
+
+   strGroup = data.getFormattedValue(row, 1).toUpperCase();
+   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
+   myCount=0;
+  }
+  myCount++;
+  html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 4) +') </div><div class="clDivData2seira">Position : '+data.getFormattedValue(row, 6)+', Year : <span class="clSpanOnomateponymo">'+ data.getFormattedValue(row, 9)  +'</span>, Size : ' + data.getFormattedValue(row, 10)+', P/ID '+ data.getFormattedValue(row, 11).substr(0,4)+'...</div></div>');
+ }
+  html.push('</div>');
+  
+  document.getElementById("accordion").innerHTML = html.join('');
+  $( "#accordion" ).accordion({heightStyle: "content"});
+ }else{
+   document.getElementById("accordion").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
+ }
+ gadgets.window.adjustHeight();
  
- alert('La Zaro s 1');
+
 }
 //---------------------------
-//-------------- make div Tab1
+//-------------- make div Tab2
 //---------------------------
 function handleQueryResponseTab2(response) {
 
@@ -255,7 +288,7 @@ function handleQueryResponseTab3(response) {
    <div id="pano-tmhma" >
    <div id="myTabs">
    <ul>
-     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a></li>
+     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a></li>
      <li id="apotelesmata-tab" ><a href="javascript:void(0);" title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;">Πρόγραμμα</a></li>
      <li id="ebdomada-tab"><a href="javascript:void(0);" title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;">Ανά Ημέρα</a></li>
      </ul>
@@ -265,7 +298,7 @@ function handleQueryResponseTab3(response) {
     <div id="myTitleID"><marquee>Πρόγραμμα Αγώνων Διοργανώσεων - Αποτελέσματα - Βαθμολογικοί Πίνακες </marquee></div>
     <div id="sourceIDebdanahmera" class="periexomenaCL"><span style="font-size:9px;">.Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ).</span></div>
     <div id="sourceID" class="periexomenaCL"><span style="font-size:9px;">.</span></div>
-    <div id="sourceIDBathm" class="periexomenaCL">.</div>
+    <div id="divIDTab1" class="periexomenaCL">.</div>
   </div>
 
 <center>
