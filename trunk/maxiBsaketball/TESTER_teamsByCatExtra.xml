@@ -273,41 +273,29 @@ function sendQueryTab3() {
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
-    
 
-if (response.isError()) {
+ if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
-}
+ }
 
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
  alert('pan lary');
  
  if(posesEggrafes > 0) {
- var html =[]; 
- 
- var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
- var myCount=0; 
- 
- html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
- for (var row = 0; row < posesEggrafes; row++) {
- 
-  myCount++;
-  
- }
-  html.push('</div>');'
-  
-  document.getElementById("divIDTab1").innerHTML = html.join('');
-  $( "#divIDTab1" ).accordion({heightStyle: "content"});
- 
- }else{
+  var html =[]; 
+  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
+  var myCount=0;  
+  for (var row = 0; row < posesEggrafes; row++) {
+   myCount++;
+  }
+  document.getElementById("divIDTab1").innerHTML = myCount;
+  }else {
    document.getElementById("divIDTab1").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
- }
+  }
 
- 
-  alert(posesEggrafes);
-
+ alert(posesEggrafes);
  gadgets.window.adjustHeight();
 }
 
@@ -402,7 +390,7 @@ function handleQueryResponseTab3(response) {
    <div id="pano-tmhma" >
    <div id="myTabs">
    <ul>
-     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','bathmologies-tab' );return false;"><span id="spanIDTab1">Βαθμολογίες 99</span></a></li>
+     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','bathmologies-tab' );return false;"><span id="spanIDTab1">Βαθμολογίες papa</span></a></li>
      <li id="apotelesmata-tab" ><a href="javascript:void(0);" onclick="selectTab('sourceID','apotelesmata-tab' );return false;"><span id="spanIDTab2">Πρόγραμμα</span></a></li>
      <li id="ebdomada-tab"><a href="javascript:void(0);" onclick="selectTab('sourceIDebdanahmera','ebdomada-tab' );return false;"><span id="spanIDTab3">Ανά Ημέρα</span></a></li>
      </ul>
