@@ -248,6 +248,7 @@ function sendQueryTab1() {
    queryTab1.send(handleQueryResponseTab1);  
   
   //-------- gia ta filter cathgorivn
+  
   var strQ2='select C, count(C)  group by C';
   queryTab1.setQuery(strQ2);
   queryTab1.send(handleQueryResponseFilterTab1);
@@ -352,8 +353,9 @@ if(posesEggrafes > 0) {
 
   html4group2.push('</select>');
   document.getElementById("myTitleID").innerHTML = html4group2.join('');
-
+ }
  gadgets.window.adjustHeight();
+
 }
 //----------- epilogh cathgorias
 
