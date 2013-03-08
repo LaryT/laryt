@@ -237,8 +237,8 @@ function selectTab(myID, myTab ) {
 
 //---- make Query-tab 
 function sendQueryTab1() {
-  if( mCategory!="" ){
   mCategory="M40+";
+  if( mCategory!="" ){
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
   }else{
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F';
@@ -249,12 +249,12 @@ function sendQueryTab1() {
 }
 
 function sendQueryTab2() {
-    alert('La   s 2');
+    alert('  2');
 
 }
 
 function sendQueryTab3() {
-    alert('La   s 3');
+    alert('  3');
    // queryTab3.setQuery('select * order by B, D, F');
    // queryTab3.send(handleQueryResponseTab3);
 }
@@ -263,7 +263,7 @@ function sendQueryTab3() {
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
-    alert('New 1');
+    alert('  1');
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
@@ -295,7 +295,7 @@ if(posesEggrafes > 0) {
  }
  gadgets.window.adjustHeight();
  
-    alert(' La Zaros ');
+    alert('   Zaros ');
 }
 //---------------------------
 //-------------- make div Tab2
