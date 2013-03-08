@@ -158,6 +158,7 @@ var captionTab3 = "Mary";
 
 
 var queryTab1;
+var queryTab1filter;
 var queryTab2;
 var queryTab3;
 
@@ -238,7 +239,6 @@ function selectTab(myID, myTab ) {
 //---- make Query-tab 
 function sendQueryTab1() {
 
-
   if( mCategory!="" ){
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
   }else{
@@ -246,7 +246,7 @@ function sendQueryTab1() {
   }
   alert('5555');
    queryTab1.setQuery(strQ);   
-//   queryTab1.send(handleQueryResponseTab1);  
+   queryTab1.send(handleQueryResponseTab1);  
   
   //-------- gia ta filter cathgorivn
   
