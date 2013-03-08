@@ -323,7 +323,7 @@ if (response.isError()) {
  if(posesEggrafes > 0) {
 
     html4group2.push('Filter:');
-    html4group2.push('<select id="query-3" onchange="setQuery(this.value)">');
+    html4group2.push('<select id="query-3" onchange="setNewQuery(this.value)">');
     html4group2.push('<option value="">All</option>');
  
   for (var row = 0; row < posesEggrafes; row++) {
@@ -338,7 +338,7 @@ if (response.isError()) {
 }
 //----------- epilogh cathgorias
 
-  function setQuery(queryString) {  
+  function setNewQuery(queryString) {  
        alert(queryString);
     }
     
