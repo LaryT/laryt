@@ -129,7 +129,8 @@ font-weight:bold;
 overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;
 }
 
-.ui-accordion .ui-accordion-header {padding: 0em .5em 0em .7em;}
+.ui-accordion-header {padding: 0em .5em 0em .7em;}
+
 </style>
   
 <script>
@@ -270,7 +271,7 @@ function handleQueryResponseTab1(response) {
 
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- alert('ei  lary');
+ alert('koympo  lary');
  
  if(posesEggrafes > 0) {
   var html =[]; 
