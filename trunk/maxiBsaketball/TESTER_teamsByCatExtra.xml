@@ -128,7 +128,7 @@ font-size:14px;
 font-weight:bold;
 overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;
 }
-.ui-accordion .ui-accordion-header {padding: .2em .2em .2em .2em;}
+
 </style>
   
 <script>
@@ -238,6 +238,7 @@ function selectTab(myID, myTab ) {
 //---- make Query-tab 
 function sendQueryTab1() {
   if( mCategory!="" ){
+  mCategory="M40+";
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
   }else{
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F';
@@ -249,8 +250,7 @@ function sendQueryTab1() {
 
 function sendQueryTab2() {
     alert('La   s 2');
-   // queryTab2.setQuery('select * order by B, D, F');
-   // queryTab2.send(handleQueryResponseTab2);
+
 }
 
 function sendQueryTab3() {
