@@ -31,6 +31,7 @@
   
 <style>
 * {margin: 0;padding: 0;}
+
 #myTabs{
 border-bottom:1px solid #444;
 display:block;
@@ -71,11 +72,8 @@ text-decoration:none;
 div.periexomenaCL{height:550px;display:none}
 div#divIDTab1{display:block}
 
-//---- tab1 accordeon --
-
-.imgFlagRadius {border-radius: 8px;height:16px;width:16px;margin: 0px 5px;}
-
-.boxOut10 {
+.imgFlagRadius{border-radius: 8px;height:16px;width:16px; }
+.boxOut10{
 box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
 -webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
 -moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
@@ -262,12 +260,12 @@ if(posesEggrafes > 0) {
  var html =[]; 
  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
  var myCount=0;
- html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
+ html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
 
    strGroup = data.getFormattedValue(row, 1).toUpperCase();
-   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
+   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
    myCount=0;
   }
   myCount++;
@@ -282,7 +280,7 @@ if(posesEggrafes > 0) {
  }
  gadgets.window.adjustHeight();
  
-
+    alert('End');
 }
 //---------------------------
 //-------------- make div Tab2
