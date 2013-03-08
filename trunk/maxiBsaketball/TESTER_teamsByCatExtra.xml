@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="__UP_my_name__" height="678" scrolling="true" width="335" scaling="false" title_url="http://www.grbasket.gr" description="Results, Αποτελέσματα |::| Display results in your blog or website " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s275/box_match_center.png" thumbnail="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s125/box_match_center.png" category="sport" category2="news" > 
+  <ModulePrefs title="__UP_my_name__" height="800" scrolling="true" width="335" scaling="true" title_url="http://www.grbasket.gr" description="Results, Αποτελέσματα |::| Display results in your blog or website " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s275/box_match_center.png" thumbnail="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s125/box_match_center.png" category="sport" category2="news" > 
     <Require feature="setprefs" />    
     <Require feature="dynamic-height" />
   </ModulePrefs>
@@ -237,7 +237,7 @@ function selectTab(myID, myTab ) {
 
 //---- make Query-tab 
 function sendQueryTab1() {
-  mCategory="M40+";
+//  mCategory="M40+";
   if( mCategory!="" ){
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
   }else{
@@ -263,7 +263,7 @@ function sendQueryTab3() {
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
-    alert('  1');
+    alert(' make 1');
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
@@ -273,10 +273,21 @@ if (response.isError()) {
 
 if(posesEggrafes > 0) {
  var html =[]; 
+ var html4group2 =[]; 
  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
+ var strGroup2 = data.getFormattedValue(0, 0); 
+ 
+ 
  var myCount=0;
  html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
+ 
+   if( strGroup2 != data.getFormattedValue(row, 0) ){
+    html4group2.push(data.getFormattedValue(row, 0) +'&nbsp;');
+        strGroup2 = data.getFormattedValue(row, 0);
+   }
+ 
+ 
   if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
 
    strGroup = data.getFormattedValue(row, 1).toUpperCase();
@@ -288,6 +299,8 @@ if(posesEggrafes > 0) {
  }
   html.push('</div>');
   
+ 
+  document.getElementById("myTitleID").innerHTML = html4group2.join('');
   document.getElementById("divIDTab1").innerHTML = html.join('');
   $( "#divIDTab1" ).accordion({heightStyle: "content"});
  }else{
