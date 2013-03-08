@@ -271,18 +271,18 @@ function handleQueryResponseTab1(response) {
 
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- alert('yo  lary');
+ alert('poly  lary');
  
  if(posesEggrafes > 0) {
   var html =[]; 
   var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
   var myCount=0;  
   
-  html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
+  html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 2)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(0, 2)+'">');
   for (var row = 0; row < posesEggrafes; row++) {
    if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
     strGroup = data.getFormattedValue(row, 1).toUpperCase();
-    html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
+    html.push('</div><h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 2)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(0, 2)+'">');
     myCount=0;
    }
   
@@ -336,6 +336,8 @@ function setNewQuery(queryString) {
        alert(queryString);
  $("h3.myH3title").hide();
  $("div.ui-accordion-content").hide();
+ $("h3.h3"+queryString).show();
+ $("div.div"+queryString).show();
 // $("#myTabs li").removeClass("tab-selected");
 // $("."+queryString).show();
 // $("#"+myTab).addClass("tab-selected");    
