@@ -272,7 +272,7 @@ function sendQueryTab3() {
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
-    alert('edv 1');
+    alert('oui 1');
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
@@ -317,19 +317,17 @@ if (response.isError()) {
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
     alert(posesEggrafes);
-if(posesEggrafes > 0) {
+ if(posesEggrafes > 0) {
 
- var html4group2 =[]; 
-// var strGroup2 = data.getFormattedValue(0, 2); 
- 
+    var html4group2 =[]; 
 
     html4group2.push('Filter:');
     html4group2.push('<select id="query-3" onchange="setQuery(this.value)">');
     html4group2.push('<option value="">All</option>');
  
- for (var row = 0; row < posesEggrafes; row++) {
+  for (var row = 0; row < posesEggrafes; row++) {
      html4group2.push('<option value="'+data.getFormattedValue(0, 0)+'">'+data.getFormattedValue(0, 0)+'</option>');  
- }
+  }
 
   html4group2.push('</select>');
   document.getElementById("myTitleID").innerHTML = html4group2.join('');
@@ -339,11 +337,8 @@ if(posesEggrafes > 0) {
 }
 //----------- epilogh cathgorias
 
-    function setQuery(queryString) {  
+  function setQuery(queryString) {  
        alert(queryString);
-      //queryTab1.setQuery(queryString);
-      //sendAndDrawTab1();
-      // queryInput.value = queryString;
     }
     
 //---------------------------
