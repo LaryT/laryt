@@ -73,12 +73,22 @@ div.periexomenaCL{height:550px;display:none}
 div#divIDTab1{display:block}
 
 .imgFlagRadius{border-radius: 8px;height:16px;width:16px; }
+
 .boxOut10{
 box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
 -webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
 -moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
 -o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
 -ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
+margin-right: 10px;
+}
+
+.boxOut10black{
+box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;
+-webkit-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;
+-moz-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;
+-o-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;
+-ms-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;
 margin-right: 10px;
 }
 
@@ -117,9 +127,8 @@ color:rgb(0,0,0)
 font-size:14px;
 font-weight:bold;
 overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;
-
 }
-
+.ui-accordion .ui-accordion-header {padding: .2em .2em .2em .2em;}
 </style>
   
 <script>
@@ -259,12 +268,12 @@ if(posesEggrafes > 0) {
  var html =[]; 
  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
  var myCount=0;
- html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
+ html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
 
    strGroup = data.getFormattedValue(row, 1).toUpperCase();
-   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
+   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
    myCount=0;
   }
   myCount++;
@@ -279,7 +288,7 @@ if(posesEggrafes > 0) {
  }
  gadgets.window.adjustHeight();
  
-    alert('End Lazaros');
+    alert('O Lazaros');
 }
 //---------------------------
 //-------------- make div Tab2
