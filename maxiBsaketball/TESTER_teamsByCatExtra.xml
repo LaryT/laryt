@@ -252,7 +252,7 @@ function sendQueryTab1() {
   
    var strQ2='select C, count(D) group by C';
    queryTab1filter.setQuery(strQ2);
-   queryTab1.send(handleQueryResponseFilterTab1);
+   queryTab1filter.send(handleQueryResponseTab1Filter);
 }
 
 function sendQueryTab2() {
@@ -302,7 +302,7 @@ function handleQueryResponseTab1(response) {
 //-------------------
 //-------------------
 //-------------------
-function handleQueryResponseFilterTab1(response) {
+function handleQueryResponseTab1Filter(response) {
  alert('koyroypakos');
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
