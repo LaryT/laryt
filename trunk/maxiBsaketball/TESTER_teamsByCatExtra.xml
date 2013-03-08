@@ -360,7 +360,7 @@ function handleQueryResponseTab3(response) {
  </div>
  <div>
     <div id="myTitleID"><marquee>Πρόγραμμα Αγώνων Διοργανώσεων - Αποτελέσματα - Βαθμολογικοί Πίνακες </marquee></div>
-    <div id="divIDlabelcato" style="float:right;"><span style="font-size:9px;color:gray;height:10px;" >InfoCenter &nbsp;|&nbsp;</span><a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a><br/>
+    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter &nbsp;|&nbsp; <a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a>
     </div>
     <div id="sourceIDebdanahmera" class="periexomenaCL"><span style="font-size:9px;">.Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ).</span></div>
     <div id="sourceID" class="periexomenaCL"><span style="font-size:9px;">.</span></div>
