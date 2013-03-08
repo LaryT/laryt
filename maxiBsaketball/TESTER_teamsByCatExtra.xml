@@ -303,7 +303,7 @@ function handleQueryResponseTab1(response) {
 //-------------------
 //-------------------
 function handleQueryResponseTab1Filter(response) {
- alert('koyroypakos');
+ alert('mpampaloykos');
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
@@ -320,7 +320,7 @@ if (response.isError()) {
     html4group2.push('<option value="">All</option>');
  
   for (var row = 0; row < posesEggrafes; row++) {
-     html4group2.push('<option value="'+data.getFormattedValue(0, 0)+'">'+data.getFormattedValue(0, 0)+'</option>');  
+     html4group2.push('<option value="'+data.getFormattedValue(row, 0)+'">'+data.getFormattedValue(0, 0)+'</option>');  
   }
 
   html4group2.push('</select>');
