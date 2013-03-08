@@ -274,7 +274,7 @@ function handleQueryResponseTab1(response) {
 
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- alert('kayt  lary');
+ alert('class edd  lary');
  
  if(posesEggrafes > 0) {
   var html =[]; 
@@ -337,11 +337,19 @@ if (response.isError()) {
 
 function setNewQuery(queryString) {  
        alert(queryString);
- $(".myH3title").hide();
- $(".ui-accordion-content").hide();
+       
+ $(".myH3title").removeClass("myClShow");
+ $(".ui-accordion-content").removeClass("myClShow");
  
- $(".h3F45+").show();
- $(".divF45+").show();
+ $(".myH3title").addClass("myClHide");
+ $(".ui-accordion-content").addClass("myClHide");
+ 
+  $(".h3F45+").addClass("myClShow");
+  $(".divF45+").addClass("myClShow");
+ 
+ 
+ // $(".h3F45+").addClass("tab-selected");
+// $(".divF45+").addClass("tab-selected");
  
  //$(".h3F45+").css('display', 'block');
  //$(".divF45+").css('display', 'block');
