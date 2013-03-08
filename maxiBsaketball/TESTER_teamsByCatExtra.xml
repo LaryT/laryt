@@ -274,7 +274,7 @@ function handleQueryResponseTab1(response) {
 
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- alert('class edd  lary');
+ alert('mpros lary');
  
  if(posesEggrafes > 0) {
   var html =[]; 
@@ -344,8 +344,13 @@ function setNewQuery(queryString) {
  $(".myH3title").addClass("myClHide");
  $(".ui-accordion-content").addClass("myClHide");
  
+  $(".h3F45").removeClass("myClHide");
+  $(".divF45").removeClass("myClHide");
+ 
   $(".h3F45+").addClass("myClShow");
   $(".divF45+").addClass("myClShow");
+ 
+
  
  
  // $(".h3F45+").addClass("tab-selected");
