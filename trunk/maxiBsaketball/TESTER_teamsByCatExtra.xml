@@ -93,8 +93,9 @@ padding-left:10px;
 .myH3title{
 margin-top: 30px;
 margin-bottom: 2px;
-font-family: Arial, 'Jura', 'Play';
-font-size: 30px;
+font-family: Arial, Hlevetica, Verdana; 
+// font-family: Arial, 'Jura', 'Play';
+// font-size: 30px;
 
 background-color: rgb(35, 36, 46);
 background-image: -webkit-gradient(linear, top left, bottom right, from(rgb(35, 36, 46)), to( rgb(96, 114, 219)));
@@ -249,7 +250,7 @@ function sendQueryTab3() {
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
-
+    alert('New 1');
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
