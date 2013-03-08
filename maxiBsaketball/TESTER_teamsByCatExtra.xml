@@ -274,7 +274,7 @@ function handleQueryResponseTab1(response) {
 
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- alert('mpros lary');
+ alert('koyve lary');
  
  if(posesEggrafes > 0) {
   var html =[]; 
@@ -342,8 +342,8 @@ function setNewQuery(queryString) {
  $(".ui-accordion-content").hide();
  
  
-  $(".h3F40").show();
-  $(".divF40").show();
+  $(".myH3title .h3F40").show();
+  $(".ui-accordion-content .divF40").show();
  
 
 }
