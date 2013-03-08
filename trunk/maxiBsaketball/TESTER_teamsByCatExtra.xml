@@ -292,13 +292,9 @@ if (response.isError()) {
  
  html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
-  if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
-   strGroup = data.getFormattedValue(row, 1).toUpperCase();
-   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
-   myCount=0;
-  }
+ 
   myCount++;
-  html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 4) +') </div><div class="clDivData2seira">Position : '+data.getFormattedValue(row, 6)+', Year : <span class="clSpanOnomateponymo">'+ data.getFormattedValue(row, 9)  +'</span>, Size : ' + data.getFormattedValue(row, 10)+', P/ID '+ data.getFormattedValue(row, 11).substr(0,4)+'...</div></div>');
+  
  }
   html.push('</div>');'
   
@@ -406,7 +402,7 @@ function handleQueryResponseTab3(response) {
    <div id="pano-tmhma" >
    <div id="myTabs">
    <ul>
-     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','bathmologies-tab' );return false;"><span id="spanIDTab1">Βαθμολογίες 100</span></a></li>
+     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','bathmologies-tab' );return false;"><span id="spanIDTab1">Βαθμολογίες 99</span></a></li>
      <li id="apotelesmata-tab" ><a href="javascript:void(0);" onclick="selectTab('sourceID','apotelesmata-tab' );return false;"><span id="spanIDTab2">Πρόγραμμα</span></a></li>
      <li id="ebdomada-tab"><a href="javascript:void(0);" onclick="selectTab('sourceIDebdanahmera','ebdomada-tab' );return false;"><span id="spanIDTab3">Ανά Ημέρα</span></a></li>
      </ul>
