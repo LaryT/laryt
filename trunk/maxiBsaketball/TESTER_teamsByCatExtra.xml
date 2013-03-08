@@ -156,9 +156,7 @@ var captionTab1 = "Roster";
 var captionTab2 = "Lary";
 var captionTab3 = "Mary";
 
-document.getElementById("spanIDTab1").innerHTML = captionTab1;
-document.getElementById("spanIDTab2").innerHTML = captionTab2;
-document.getElementById("spanIDTab3").innerHTML = captionTab3;
+
 
 var queryTab1;
 var queryTab2;
@@ -297,7 +295,7 @@ if(posesEggrafes > 0) {
  }
  gadgets.window.adjustHeight();
  
-    alert('O Lazaros');
+    alert(' La Zaros ');
 }
 //---------------------------
 //-------------- make div Tab2
@@ -313,7 +311,7 @@ function handleQueryResponseTab2(response) {
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
  
- alert('La Zaro s 2');
+ alert(' Zaro s 2');
 }
 
 //---------------------------
@@ -330,7 +328,7 @@ function handleQueryResponseTab3(response) {
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
  
- alert('La Zaro s 3');
+ alert(' Zaro s 3');
 }
 
 
@@ -393,6 +391,9 @@ google_ad_height = 250;
 
 <script>
 // myInitMaxiAge();
+document.getElementById("spanIDTab1").innerHTML = captionTab1;
+document.getElementById("spanIDTab2").innerHTML = captionTab2;
+document.getElementById("spanIDTab3").innerHTML = captionTab3;
 </script>
 
 
