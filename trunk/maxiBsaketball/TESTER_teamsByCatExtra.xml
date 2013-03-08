@@ -129,7 +129,7 @@ font-weight:bold;
 overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;
 }
 
-.ui-accordion-header {padding: 0em .5em 0em .7em;}
+.ui-accordion .ui-accordion-header {padding-top: 0em;padding-bottom: 0em;}
 
 </style>
   
@@ -271,7 +271,7 @@ function handleQueryResponseTab1(response) {
 
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- alert('koympo  lary');
+ alert('accord  lary');
  
  if(posesEggrafes > 0) {
   var html =[]; 
