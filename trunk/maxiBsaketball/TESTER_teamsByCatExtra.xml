@@ -338,34 +338,13 @@ if (response.isError()) {
 function setNewQuery(queryString) {  
        alert(queryString);
        
- $(".myH3title").removeClass("myClShow");
- $(".ui-accordion-content").removeClass("myClShow");
- 
- $(".myH3title").addClass("myClHide");
- $(".ui-accordion-content").addClass("myClHide");
- 
-  $(".h3F45").removeClass("myClHide");
-  $(".divF45").removeClass("myClHide");
- 
-  $(".h3F45+").addClass("myClShow");
-  $(".divF45+").addClass("myClShow");
- 
-
+ $(".myH3title").hide();
+ $(".ui-accordion-content").hide();
  
  
- // $(".h3F45+").addClass("tab-selected");
-// $(".divF45+").addClass("tab-selected");
+  $(".h3F40").show();
+  $(".divF40").show();
  
- //$(".h3F45+").css('display', 'block');
- //$(".divF45+").css('display', 'block');
-
- 
-// $("#myTabs li").removeClass("tab-selected");
-// $("."+queryString).show();
-// $("#"+myTab).addClass("tab-selected");   
-
-//.myClHide{display:none;}
-//.myClShow{display:block;}
 
 }
     
