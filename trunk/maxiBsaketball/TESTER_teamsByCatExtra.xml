@@ -152,6 +152,14 @@ var mDiorganvsh = prefs.getString("m_Diorganvsh");
 var mCategory = prefs.getString("m_Category");
 var mCountry = prefs.getString("m_Country");
 
+var captionTab1 = "Roster";
+var captionTab2 = "Lary";
+var captionTab3 = "Mary";
+
+document.getElementById("spanIDTab1").innerHTML = captionTab1;
+document.getElementById("spanIDTab2").innerHTML = captionTab2;
+document.getElementById("spanIDTab3").innerHTML = captionTab3;
+
 var queryTab1;
 var queryTab2;
 var queryTab3;
@@ -203,24 +211,25 @@ function makeMarque(strForRoll){
 }
 
 // --- gia ta tabs 
-function selectTab(myID, myTab, myCaption ) { 
+function selectTab(myID, myTab ) { 
  $(".periexomenaCL").hide();
  $("#myTabs li").removeClass("tab-selected");
  $("#"+myID).show();
  $("#"+myTab).addClass("tab-selected");
- if(myCaption !=""){
-   document.getElementById("myTitleID").innerHTML = myCaption;
- }
+
 
  if(myTab == "bathmologies-tab"){  
-    sendQueryTab1();
+   document.getElementById("myTitleID").innerHTML = captionTab1;
+   sendQueryTab1();
  }
  
  if( myTab == "apotelesmata-tab" ){
-    sendQueryTab2();
+  document.getElementById("myTitleID").innerHTML = captionTab2;
+  sendQueryTab2();
  }
 
  if(myTab == "ebdomada-tab"){  
+     document.getElementById("myTitleID").innerHTML = captionTab3;
    // document.getElementById("myTitleID").innerHTML += "<span style='font-size:9px;'> (" + strAllDate +")</span>";
    // document.getElementById("ebdomada-tab").title = "Οι αγώνες ανά ημέρα (" + strAllDate +")";
      sendQueryTab3();
@@ -345,15 +354,15 @@ function handleQueryResponseTab3(response) {
    <div id="pano-tmhma" >
    <div id="myTabs">
    <ul>
-     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a></li>
-     <li id="apotelesmata-tab" ><a href="javascript:void(0);" title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;">Πρόγραμμα</a></li>
-     <li id="ebdomada-tab"><a href="javascript:void(0);" title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;">Ανά Ημέρα</a></li>
+     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','bathmologies-tab' );return false;"><span id="spanIDTab1">Βαθμολογίες</span></a></li>
+     <li id="apotelesmata-tab" ><a href="javascript:void(0);" onclick="selectTab('sourceID','apotelesmata-tab' );return false;"><span id="spanIDTab2">Πρόγραμμα</span></a></li>
+     <li id="ebdomada-tab"><a href="javascript:void(0);" onclick="selectTab('sourceIDebdanahmera','ebdomada-tab' );return false;"><span id="spanIDTab3">Ανά Ημέρα</span></a></li>
      </ul>
    </div>
  </div>
  <div>
     <div id="myTitleID"><marquee>Πρόγραμμα Αγώνων Διοργανώσεων - Αποτελέσματα - Βαθμολογικοί Πίνακες </marquee></div>
-        <div id="divIDlabelcato"><span style="font-size:9px;color:gray;height:10px;" >InfoCenter &nbsp;|&nbsp;</span><a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a><br/>
+    <div id="divIDlabelcato" style="float:right;"><span style="font-size:9px;color:gray;height:10px;" >InfoCenter &nbsp;|&nbsp;</span><a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a><br/>
     </div>
     <div id="sourceIDebdanahmera" class="periexomenaCL"><span style="font-size:9px;">.Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ).</span></div>
     <div id="sourceID" class="periexomenaCL"><span style="font-size:9px;">.</span></div>
