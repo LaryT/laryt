@@ -156,7 +156,6 @@ var captionTab1 = "Roster";
 var captionTab2 = "Lary";
 var captionTab3 = "Mary";
 
-alert('ou');
 
 var queryTab1;
 var queryTab2;
@@ -169,6 +168,7 @@ var myURLfeedTab3;
 if( mKey1!="" ){
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
+  queryTab1filter  = new google.visualization.Query(myURLfeedTab1);
 }else{
    alert('No source file for  Categories');
 }
@@ -251,7 +251,7 @@ function sendQueryTab1() {
   //-------- gia ta filter cathgorivn
   
  // var strQ2='select C, count(D) group by C';
- // queryTab1.setQuery(strQ2);
+ // queryTab1filter.setQuery(strQ2);
  // queryTab1.send(handleQueryResponseFilterTab1);
 }
 
@@ -273,11 +273,11 @@ function sendQueryTab3() {
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
-    alert('oui 1');
+     alert('oui 1');
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
- }
+}
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
 
@@ -317,10 +317,10 @@ if (response.isError()) {
  }
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
-    alert(posesEggrafes);
- if(posesEggrafes > 0) {
+ var html4group2 =[]; 
 
-    var html4group2 =[]; 
+  alert(posesEggrafes);
+ if(posesEggrafes > 0) {
 
     html4group2.push('Filter:');
     html4group2.push('<select id="query-3" onchange="setQuery(this.value)">');
