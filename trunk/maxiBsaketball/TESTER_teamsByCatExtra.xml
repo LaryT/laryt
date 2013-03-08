@@ -92,15 +92,14 @@ padding-left:10px;
 margin-top: 30px;
 margin-bottom: 2px;
 font-family: Arial, Hlevetica, Verdana; 
-// font-family: Arial, 'Jura', 'Play';
-// font-size: 30px;
-
+/*
 background-color: rgb(35, 36, 46);
 background-image: -webkit-gradient(linear, top left, bottom right, from(rgb(35, 36, 46)), to( rgb(96, 114, 219)));
 background-image: -webkit-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));
 background-image: -moz-linear-gradient(left,rgb(35, 36, 46), rgb(96, 114, 219));
 background-image: -ms-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));
 background-image: -o-linear-gradient(left, rgb(35, 36, 46),  rgb(96, 114, 219));
+*/
 }
 
 .clDivData, .clDivData2seira{
@@ -260,12 +259,12 @@ if(posesEggrafes > 0) {
  var html =[]; 
  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
  var myCount=0;
- html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
+ html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
   if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
 
    strGroup = data.getFormattedValue(row, 1).toUpperCase();
-   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
+   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div>');
    myCount=0;
   }
   myCount++;
@@ -280,7 +279,7 @@ if(posesEggrafes > 0) {
  }
  gadgets.window.adjustHeight();
  
-    alert('End');
+    alert('End Lazaros');
 }
 //---------------------------
 //-------------- make div Tab2
@@ -345,11 +344,12 @@ function handleQueryResponseTab3(response) {
  </div>
  <div>
     <div id="myTitleID"><marquee>Πρόγραμμα Αγώνων Διοργανώσεων - Αποτελέσματα - Βαθμολογικοί Πίνακες </marquee></div>
+        <div id="divIDlabelcato"><span style="font-size:9px;color:gray;height:10px;" >InfoCenter &nbsp;|&nbsp;</span><a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a><br/>
+    </div>
     <div id="sourceIDebdanahmera" class="periexomenaCL"><span style="font-size:9px;">.Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ).</span></div>
     <div id="sourceID" class="periexomenaCL"><span style="font-size:9px;">.</span></div>
     <div id="divIDTab1" class="periexomenaCL">.</div>
-    <div id="divIDlabelcato"><span style="font-size:9px;color:gray;height:10px;" >InfoCenter &nbsp;|&nbsp;</span><a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a><br/>
-    </div>
+
   </div>
 
 <center>
