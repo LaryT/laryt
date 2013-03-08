@@ -237,15 +237,20 @@ function selectTab(myID, myTab ) {
 
 //---- make Query-tab 
 function sendQueryTab1() {
-//  mCategory="M40+";
+
+
   if( mCategory!="" ){
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
   }else{
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F';
   }
    queryTab1.setQuery(strQ);   
-   queryTab1.send(handleQueryResponseTab1);   
+   queryTab1.send(handleQueryResponseTab1);  
   
+  //-------- gia ta filter cathgorivn
+  var strQ2='select C, count(C)  group by C';
+  queryTab1.setQuery(strQ2);
+  queryTab1.send(handleQueryResponseFilterTab1);
 }
 
 function sendQueryTab2() {
@@ -265,16 +270,6 @@ function sendQueryTab3() {
 //---------------------------
 //-------------- make div Tab1
 //---------------------------
-    function setQuery(queryString) {  
-      queryTab1.setQuery(queryString);
-      sendAndDrawTab1();
-   //   queryInput.value = queryString;
-    }
-    
-   function sendAndDrawTab1() {
-      queryTab1.send(handleQueryResponseTab1); 
-    }
-
 function handleQueryResponseTab1(response) {
     alert('edv 1');
 if (response.isError()) {
@@ -286,26 +281,26 @@ if (response.isError()) {
 
 if(posesEggrafes > 0) {
  var html =[]; 
- var html4group2 =[]; 
+//-- var html4group2 =[]; 
  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
- var strGroup2 = data.getFormattedValue(0, 2); 
+//-- var strGroup2 = data.getFormattedValue(0, 2); 
  
  
  
-    html4group2.push('Filter:');
-    html4group2.push('<select id="query-3" onchange="setQuery(this.value)">');
-    html4group2.push('<option value="">All</option>');
-    html4group2.push('<option value=" where C=&quot;'+strGroup2+'&quot;">'+strGroup2+'</option>');
-
+//-- html4group2.push('Filter:');
+//-- html4group2.push('<select id="query-3" onchange="setQuery(this.value)">');
+//-- html4group2.push('<option value="">All</option>');
+//-- html4group2.push('<option value=" where C=&quot;'+strGroup2+'&quot;">'+strGroup2+'</option>');
  
  var myCount=0;
- html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
+ 
+html.push('<h3 class="myH3title font-effect-emboss"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
  
-   if( strGroup2 != data.getFormattedValue(row, 2) ){
-     strGroup2 = data.getFormattedValue(row, 2);
-     html4group2.push('<option value=" where C=&quot;'+strGroup2+'&quot;">'+strGroup2+'</option>');
-   }
+//-- if( strGroup2 != data.getFormattedValue(row, 2) ){
+//-- strGroup2 = data.getFormattedValue(row, 2);
+//-- html4group2.push('<option value=" where C=&quot;'+strGroup2+'&quot;">'+strGroup2+'</option>');
+//-- }
  
   if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
 
@@ -317,19 +312,58 @@ if(posesEggrafes > 0) {
   html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 4) +') </div><div class="clDivData2seira">Position : '+data.getFormattedValue(row, 6)+', Year : <span class="clSpanOnomateponymo">'+ data.getFormattedValue(row, 9)  +'</span>, Size : ' + data.getFormattedValue(row, 10)+', P/ID '+ data.getFormattedValue(row, 11).substr(0,4)+'...</div></div>');
  }
   html.push('</div>');
-  html4group2.push('</select>');
+//-- html4group2.push('</select>');
 
 
-  document.getElementById("myTitleID").innerHTML = html4group2.join('');
+//-- document.getElementById("myTitleID").innerHTML = html4group2.join('');
   document.getElementById("divIDTab1").innerHTML = html.join('');
   $( "#divIDTab1" ).accordion({heightStyle: "content"});
  }else{
    document.getElementById("divIDTab1").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
  }
  gadgets.window.adjustHeight();
- 
-    alert('  Naiii ');
 }
+
+//-------------------
+//-------------------
+//-------------------
+function handleQueryResponseFilterTab1(response) {
+    alert('koko 1');
+if (response.isError()) {
+     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+     return;
+ }
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+
+if(posesEggrafes > 0) {
+
+ var html4group2 =[]; 
+// var strGroup2 = data.getFormattedValue(0, 2); 
+ 
+
+    html4group2.push('Filter:');
+    html4group2.push('<select id="query-3" onchange="setQuery(this.value)">');
+    html4group2.push('<option value="">All</option>');
+ 
+ for (var row = 0; row < posesEggrafes; row++) {
+     html4group2.push('<option value="'+strGroup2+'">'+data.getFormattedValue(0, 2)+'</option>');  
+ }
+
+  html4group2.push('</select>');
+  document.getElementById("myTitleID").innerHTML = html4group2.join('');
+
+ gadgets.window.adjustHeight();
+}
+//----------- epilogh cathgorias
+
+    function setQuery(queryString) {  
+       alert(queryString);
+      //queryTab1.setQuery(queryString);
+      //sendAndDrawTab1();
+      // queryInput.value = queryString;
+    }
+    
 //---------------------------
 //-------------- make div Tab2
 //---------------------------
@@ -371,7 +405,7 @@ function handleQueryResponseTab3(response) {
 </head>
 <body>
 
-<!-- div id="accordion"></div  -->
+
 
 <div id="disDiv" style="position:absolute;display:none;"><center>
 <a id="apokrychDisplay" href="javascript:hideDivDisp();" style="text-decoration:none;font-size:9px;color:#e7e7e8;height:10px;" title="απόκρυψη - hide">X</a><br/>
