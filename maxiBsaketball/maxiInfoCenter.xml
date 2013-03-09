@@ -4,7 +4,7 @@
     <Require feature="setprefs" />    
     <Require feature="dynamic-height" />
   </ModulePrefs>
-  <UserPref name="my_name" display_name="Name" default_value="TESTER" />
+  <UserPref name="my_name" display_name="Name" default_value="maxiInfoCenter" />
   <UserPref name="m_Key1" display_name="Source docID 1:" default_value="" />
   <UserPref name="m_Key2" display_name="Source docID 2:" default_value="" />    
   <UserPref name="m_Key3" display_name="Source docID 3:" default_value="" />
@@ -406,6 +406,7 @@ google_ad_height = 250;
 document.getElementById("spanIDTab1").innerHTML = captionTab1;
 document.getElementById("spanIDTab2").innerHTML = captionTab2;
 document.getElementById("spanIDTab3").innerHTML = captionTab3;
+gadgets.window.adjustHeight();
 </script>
 </body>
 </html>
