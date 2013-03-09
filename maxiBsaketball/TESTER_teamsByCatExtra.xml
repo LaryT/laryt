@@ -358,7 +358,7 @@ if( mCatTab3!="" ){
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
- alert('lary + anas');
+
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
@@ -401,7 +401,7 @@ if (response.isError()) {
 //-------------------
 //-------------------
 function handleQueryResponseTab1Filter(response) {
-alert('F + Lary');
+
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
