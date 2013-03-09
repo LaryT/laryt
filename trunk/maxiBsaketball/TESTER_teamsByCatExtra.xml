@@ -342,8 +342,8 @@ function setNewQuery(queryString) {
  $(".ui-accordion-content").hide();
  
  
-  $(".h3F40+").show();
-  $(".divF40+").show();
+  $(".h3F40+").toggle();
+  $(".divF40+").toggle();
  
 
 }
