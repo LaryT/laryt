@@ -336,9 +336,14 @@ if (response.isError()) {
 
 function setNewQuery(queryString) {  
 
+  document.getElementById("divIDTab1").innerHTML ="";
   $( "#divIDTab1" ).accordion( "destroy" );
 
+if(queryString !=""){
    queryTab1.setQuery('where C="'+queryString+'"');   
+}else{
+    queryTab1.setQuery('select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F');
+}
    queryTab1.send(handleQueryResponseTab1);  
  
  
