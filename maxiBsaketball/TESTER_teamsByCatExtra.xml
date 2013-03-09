@@ -72,6 +72,15 @@ text-decoration:none;
 div.periexomenaCL{height:550px;display:none}
 div#divIDTab1{display:block}
 
+.clMetalioXryso{background-image:url('https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png');}
+.clMetalioAshmenio{background-image:url('https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI/AAAAAAAAAlk/eJg3ngivfyw/s32/asimenio.png');}
+.clMetalioXalkino{background-image:url('https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png');}
+.clMetalioXryso, .clMetalioAshmenio, .clMetalioXalkino, .clXvrisMetalio{background-repeat:no-repeat;background-position:center center; background-size:24px 24px;border-radius: 12px;font-size:18px;font-weight:bold;height:24px;width:24px;text-align:center;} 
+.imgLogoRadius{border-radius: 25px;height:50px;width:50px;margin: 0 5px;}
+.imgFlagRadiusMedals{border-radius: 12px;height:24px;width:24px;margin: 0 5px;}
+.imgCategoryRadius{margin-top:-5px;margin-right:15px;float:right;}
+
+
 .imgFlagRadius{border-radius: 8px;height:16px;width:16px; }
 
 .boxOut10{
@@ -171,7 +180,7 @@ if(mKey2 === ""){
  mKey2="0AjrqMWGJ6suYdHFEbFV2RnROLUlQSzBHdXQ0dU1yYlE";
 }
 if(mKey3 === ""){
- mKey3="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
+ mKey3="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
 }
 
 //for filter in a Tab
@@ -179,9 +188,9 @@ var mCatTab1 = prefs.getString("m_CatTab1");
 var mCatTab2 = prefs.getString("m_CatTab2");
 var mCatTab3 = prefs.getString("m_CatTab3");
 
-var captionTab1 = "Roster";
+var captionTab1 = "Rosters";
 var captionTab2 = "Championships";
-var captionTab3 = "Mary";
+var captionTab3 = "Medals";
 
 
 var queryTab1;
@@ -198,19 +207,19 @@ if( mKey1!="" ){
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
   queryTab1filter  = new google.visualization.Query(myURLfeedTab1);
 }else{
-   alert('No source file for  Categories');
+   alert('No source file for  Tab1');
 }
 if( mKey2!="" ){
   myURLfeedTab2 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey2 +"&headers=1";
   queryTab2 = new google.visualization.Query(myURLfeedTab2);
 }else{
-   alert('No source file for  Categories');
+   alert('No source file for  Tab2');
 }
 if( mKey3!="" ){  
   myURLfeedTab3 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey3 +"&headers=1";
   queryTab3 = new google.visualization.Query(myURLfeedTab3);
 }else{
-   alert('No source file for  Categories');
+   alert('No source file for Tab3');
 }
 
 //--- gia ta ads
@@ -283,9 +292,14 @@ function sendQueryTab2() {
 }
 
 function sendQueryTab3() {
-    alert('  3');
-   // queryTab3.setQuery('select * order by B, D, F');
-   // queryTab3.send(handleQueryResponseTab3);
+
+  if( mCatTab3!="" ){
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L where C="'+mCategory +'"  order by H,D,G';
+  }else{
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L order by H,D,G';
+  }
+  queryTab3.setQuery(strQ);   
+  queryTab3.send(handleQueryResponseTab3); 
 }
     
 //---------------------------
@@ -422,17 +436,63 @@ for (var row = 0; row < posesEggrafes; row++) {
 //-------------- make div Tab3
 //---------------------------
 function handleQueryResponseTab3(response) {
-
  if (response.isError()) {
     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
  }
- 
+
  var html =[];  
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
+
+if(posesEggrafes > 0) {
+var strGroup1 = data.getFormattedValue(0, 0).toUpperCase();  
+var strGroup2;
+
+var myCount=0;
+html.push('<h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(0,8)+'" />'+strGroup1+'</h3><div>');
+ for (var row = 0; row < posesEggrafes; row++) {
+  if( strGroup1 != data.getFormattedValue(row, 0).toUpperCase() ){
+   strGroup1 = data.getFormattedValue(row, 0).toUpperCase();
+   html.push('</div><h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(row, 8)+'" />'+strGroup1+'</h3><div>');
+   myCount=0;
+  }
+  myCount++;
+
+  if( strGroup2 != data.getFormattedValue(row, 3).toUpperCase() ){
+   strGroup2 = data.getFormattedValue(row, 3).toUpperCase();
+   html.push('<h3 class="myH3title font-effect-emboss">'+strGroup2+'<!-- img class="imgCategoryRadius" src="'+data.getFormattedValue(row, 10)+'" /   --></h3>');
+  }
+  
+  html.push('<div style="float:left;display:block;">');
+  html.push('<div class="clDivData">');
+  
+  if (data.getValue(row, 6) == 1 ){
+    html.push('<div class="clMetalioXryso clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
+  }else if( data.getValue(row, 6) == 2 ){
+    html.push('<div class="clMetalioAshmenio clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
+  }else if( data.getValue(row, 6) == 3 ){
+    html.push('<div class="clMetalioXalkino clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');    
+  }else{
+    html.push('<div class="clXvrisMetalio clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
+  }
  
- alert(' Zaro s 3');
+  html.push('<div class="clDivLeft"><img class="imgFlagRadiusMedals boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /></div>')
+  html.push('<div class="clSpanOnomateponymo clDivLeft">'+data.getFormattedValue(row, 1).toUpperCase() + '</div>');
+  html.push('<div class="clDivLeft" >('+ data.getFormattedValue(row, 2) +')</div>');
+  html.push('</div>');
+  
+  html.push('</div>');
+}
+  html.push('</div>');
+  
+  document.getElementById("divIDTab3").innerHTML = html.join('');
+  $( "#divIDTab3" ).accordion({heightStyle: "content"});
+ }else{
+   document.getElementById("divIDTab3").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
+ }
+ $("#divIDTab3").accordion( "refresh" );
+ gadgets.window.adjustHeight();
 }
 
 
