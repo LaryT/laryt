@@ -312,10 +312,10 @@ function sendQueryTab1() {
    queryTab1.setQuery(strQTab1);   
    queryTab1.send(handleQueryResponseTab1);  
   //-------- gia ta filter cathgorivn
-   strTab1filter = new google.visualization.Query(myURLfeedTab1);
+   queryTab1 = new google.visualization.Query(myURLfeedTab1);
    strTab1filter = 'select C, count(D) group by C';
-   queryTab1filter.setQuery(strTab1filter);
-   queryTab1filter.send(handleQueryResponseTab1Filter);
+   queryTab1.setQuery(strTab1filter);
+   queryTab1.send(handleQueryResponseTab1Filter);
    $( "#divIDTab1" ).accordion( "refresh" );
 }
 
@@ -401,7 +401,7 @@ if (response.isError()) {
 //-------------------
 //-------------------
 function handleQueryResponseTab1Filter(response) {
-
+alert('F + Lary');
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
