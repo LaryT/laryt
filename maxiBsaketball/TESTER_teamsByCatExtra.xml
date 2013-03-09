@@ -453,11 +453,14 @@ for (var row = 0; row < posesEggrafes; row++) {
 
 }
   document.getElementById("divIDTab2").innerHTML = html.join('');
+  document.getElementById("myTitleID").innerHTML = '';
   $("#divIDTab2").accordion({heightStyle: "content"});
+
   
  }else{
    document.getElementById("divIDTab1").innerHTML = '<div class="clSpanOnomateponymo"> 0 FIMBA event</div>';
  }
+ document.getElementById("myTitleID").innerHTML = '';
  $( "#divIDTab2" ).accordion( "refresh" );
  gadgets.window.adjustHeight();
 }
@@ -523,6 +526,8 @@ html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRad
  }else{
    document.getElementById("divIDTab3").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
  }
+ 
+ document.getElementById("myTitleID").innerHTML = '';
  $("#divIDTab3").accordion( "refresh" );
  gadgets.window.adjustHeight();
 }
