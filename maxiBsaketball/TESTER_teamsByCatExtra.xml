@@ -131,9 +131,11 @@ overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;
 
 .ui-accordion .ui-accordion-header {padding-top: 0em;padding-bottom: 0em;}
 
-.myClHide{display:none;}
-.myClShow{display:block;}
 
+
+
+.pClepikefalida{font-size:12px; font-weight:bold;}
+.pClRow{font-size:9px;}
 </style>
   
 <script>
@@ -422,9 +424,11 @@ function handleQueryResponseTab3(response) {
   </div>
 
 <center>
-
-
-<div id="addiv" style="position:absolute;top:250px;left:8px;"><center><a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="απόκρυψη - hide ads">X</a><br/>
+<div id="addiv" style="position:absolute;top:100px;left:8px;"><p class="pClepikefalida">Welcome to InfoCenter<br/></p>
+<p class="pClRow">1st Step : Click the "X" button to continue.</p>
+<p class="pClRow">2nd Step : Select at the top the tab-category.</p>
+<p class="pClRow">3rd Step : Select the Filter from the Option Field.<br/><br/><br/></p>
+<center><a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="απόκρυψη - hide ads">X</a><br/>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
 /* 300 x 250 box maxi ga history */
