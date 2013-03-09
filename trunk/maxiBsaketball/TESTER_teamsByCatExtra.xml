@@ -312,7 +312,8 @@ function sendQueryTab1() {
    queryTab1.setQuery(strQTab1);   
    queryTab1.send(handleQueryResponseTab1);  
   //-------- gia ta filter cathgorivn
-   strTab1filter='select C, count(D) group by C';
+   strTab1filter = new google.visualization.Query(myURLfeedTab1);
+   strTab1filter = 'select C, count(D) group by C';
    queryTab1filter.setQuery(strTab1filter);
    queryTab1filter.send(handleQueryResponseTab1Filter);
    $( "#divIDTab1" ).accordion( "refresh" );
@@ -357,7 +358,7 @@ if( mCatTab3!="" ){
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
- alert('lary + mary');
+ alert('lary + anas');
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
