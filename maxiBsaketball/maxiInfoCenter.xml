@@ -28,177 +28,44 @@
   </script>
 <style>
 * {margin: 0;padding: 0;}
-#myTabs{
-border-bottom:1px solid #444;
-display:block;
-height:36px;
-position:relative;
-z-index:100;
-}
-
-#myTabs ul{
-margin-top:0;
-}
-
-#myTabs ul li{
-display:inline-block;
-float:left;
-
-padding:11px 10px;
-font:normal normal 12px Arial,Tahoma,Helvetica,FreeSans,sans-serif;
-color:#999;
-border-left:1px solid #fff;
-border-right:1px solid #eee;
-cursor:pointer;
-}
-
+#myTabs{border-bottom:1px solid #444;display:block;height:36px;position:relative;z-index:100;}
+#myTabs ul{margin-top:0;}
+#myTabs ul li{display:inline-block;float:left;padding:11px 10px;font:normal normal 12px Arial,Tahoma,Helvetica,FreeSans,sans-serif;color:#999;border-left:1px solid #fff;border-right:1px solid #eee;cursor:pointer;}
 #myTabs ul li a{text-decoration:none}
-
-#myTabs ul li.tab-selected,
-#myTabs ul li.tab-selected a,
-#myTabs ul li a:hover,
-#myTabs ul li:hover{
-color:#000;
-background-color:#eee;
-text-decoration:none;
-}
-
+#myTabs ul li.tab-selected,#myTabs ul li.tab-selected a,#myTabs ul li a:hover,#myTabs ul li:hover{color:#000;background-color:#eee;text-decoration:none;}
 #myTitleID{color:#2222f2;font-size:14px;font-family: Arial,Tahoma,Helvetica;padding-top:5px;}
-
 div.periexomenaCL{height:550px;display:none}
 div#divIDTab1{display:block}
-
 .clDivLeft{float:left;}
-
-.myH3titleMedals{
-clear: both;
-margin-top: 30px;
-margin-bottom: 2px;
-font-size: 14px;
-font-family: Arial, Hlevetica, Verdana; 
-
-background-color: rgb(50, 50, 150);
-/*
-background-image: -webkit-gradient(linear, top left, bottom right, from(rgb(35, 36, 46)), to( rgb(96, 114, 219)));
-background-image: -webkit-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));
-background-image: -moz-linear-gradient(left,rgb(35, 36, 46), rgb(96, 114, 219));
-background-image: -ms-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));
-background-image: -o-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));
-*/
-}
-
+.myH3titleMedals{clear: both;color: gray;background-color: #e6e6e6;border: 1px solid #d3d3d3;margin-top: 30px;margin-bottom: 2px;font-size: 14px;font-family: Arial, Hlevetica, Verdana; }
 .clDivDataMedals, .clDivData2seiraMedals{font-size:10px;width: 230px;height: 30px;float: left;}
-clSpanOnomateponymoMedals{
-font-size:12px;
-font-weight:bold;
-overflow: hidden;
-white-space: nowrap;
-text-overflow: ellipsis;}
-
-
+.clSpanOnomateponymoMedals{font-size:12px;font-weight:bold;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 .clMetalioXryso{background-image:url('https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png');}
 .clMetalioAshmenio{background-image:url('https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI/AAAAAAAAAlk/eJg3ngivfyw/s32/asimenio.png');}
 .clMetalioXalkino{background-image:url('https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png');}
 .clMetalioXryso, .clMetalioAshmenio, .clMetalioXalkino, .clXvrisMetalio{background-repeat:no-repeat;background-position:center center; background-size:24px 24px;border-radius: 12px;font-size:18px;font-weight:bold;height:24px;width:24px;text-align:center;} 
-
 .imgLogoRadius{border-radius: 12px;height:24px;width:24px;margin: 0 5px;}
 .imgFlagRadiusMedals{border-radius: 12px;height:24px;width:24px;margin: 0 5px;}
 .imgCategoryRadius{margin-top:-5px;margin-right:15px;float:right;}
-
-
 .imgFlagRadius{border-radius: 8px;height:16px;width:16px; }
-
-.boxOut10{
-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
--webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
--moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
--o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
--ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
-margin-right: 10px;
-}
-
-.boxOut10black{
-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;
--webkit-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;
--moz-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;
--o-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;
--ms-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;
-margin-right: 10px;
-}
-
-.clSpDelegate{
-color : rgb(221, 221, 221);;
-font-size:9px;
-padding-left:10px;
-}
-
-.myH3title{
-margin-top: 30px;
-margin-bottom: 2px;
-font-size: 14px;
-font-family: Arial, Hlevetica, Verdana; 
-/*
-background-color: rgb(35, 36, 46);
-background-image: -webkit-gradient(linear, top left, bottom right, from(rgb(35, 36, 46)), to( rgb(96, 114, 219)));
-background-image: -webkit-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));
-background-image: -moz-linear-gradient(left,rgb(35, 36, 46), rgb(96, 114, 219));
-background-image: -ms-linear-gradient(left, rgb(35, 36, 46), rgb(96, 114, 219));
-background-image: -o-linear-gradient(left, rgb(35, 36, 46),  rgb(96, 114, 219));
-*/
-}
-
-
-.clDivData, .clDivData2seira{
-font-size:10px;
-margin:1px 0px;
-}
-.clDivData2seira{
-color:rgb(221,221,221)
-}
-.clDivData2seira:hover{
-color:rgb(0,0,0)
-}
-
-.clSpanOnomateponymo{
-font-size:12px;
-font-weight:bold;
-overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;
-}
-
+.boxOut10{box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}
+.boxOut10black{box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-webkit-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-moz-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-o-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-ms-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;margin-right: 10px;}
+.clSpDelegate{color : rgb(221, 221, 221);font-size:9px;padding-left:10px;}
+.myH3title{margin-top: 30px;margin-bottom: 2px;font-size: 14px;font-family: Arial, Hlevetica, Verdana; }
+.clDivData, .clDivData2seira{font-size:10px;margin:1px 0px;}
+.clDivData2seira{color:rgb(221,221,221)}
+.clDivData2seira:hover{color:rgb(0,0,0)}
+.clSpanOnomateponymo{font-size:12px;font-weight:bold;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;}
 .ui-accordion .ui-accordion-header {padding-top: 0em;padding-bottom: 0em;}
-
-
-#addiv{
-
-background-color:rgba(255, 255, 255, 0.96);
-position:absolute;
-
-top:75px;
-height: 100%;
-width:100%;
-
-margin-left:1px;
-padding-left: 10px;
-padding-right: 10px;
-
-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
--webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
--moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
--o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
--ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
-}
-
+#addiv{background-color:rgba(255, 255, 255, 0.96);position:absolute;top:75px;height: 100%;width:100%;margin-left:1px;padding-left: 10px;padding-right: 10px;box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;}
 .pClepikefalida{font-family:Verdana, Arial,sans-serif; font-size:12px; font-weight:bold;}
 .pClRow{font-family:Verdana, Arial,sans-serif; font-size:9px;}
 </style>
-  
 <script>
 var prefs = new gadgets.Prefs();
-
 var mKey1 = prefs.getString("m_Key1");
 var mKey2 = prefs.getString("m_Key2");
 var mKey3 = prefs.getString("m_Key3");
-
 if(mKey1 === ""){
  mKey1="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
 }
@@ -208,37 +75,30 @@ if(mKey2 === ""){
 if(mKey3 === ""){
  mKey3="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
 }
-
 //for filter in a Tab
 var mCatTab1 = prefs.getString("m_CatTab1");
 var mCatTab2 = prefs.getString("m_CatTab2");
 var mCatTab3 = prefs.getString("m_CatTab3");
-
 var captionTab1 = "Rosters";
 var captionTab2 = "Championships";
 var captionTab3 = "Medals";
-
-
 var strQTab1;
 var strQTab1filter;
 var strQTab2;
 var strQTab3;
-
 var queryTab1;
 var queryTab1filter;
 var queryTab2;
 var queryTab3;
-
 var myURLfeedTab1;
 var myURLfeedTab2;
 var myURLfeedTab3;
-
 if( mKey1!="" ){
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
   queryTab1filter  = new google.visualization.Query(myURLfeedTab1);
 }else{
-   alert('No source file for  Tab1');
+  alert('No source file for  Tab1');
 }
 if( mKey2!="" ){
   myURLfeedTab2 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey2 +"&headers=1";
@@ -252,18 +112,15 @@ if( mKey3!="" ){
 }else{
    alert('No source file for Tab3');
 }
-
 //--- gia ta ads
 function hideDivAds(){
  $("#addiv").hide();
  $("#emfaniseAdsID").show();
 }
-
 function showDivAds(){
  $("#addiv").show();
  $("#emfaniseAdsID").hide();
 }
-
 function makeMarque(strForRoll){
   if(strForRoll !=""){
    document.getElementById("myTitleID").innerHTML = "<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();' title='"+strForRoll + "'>"+strForRoll+"</marquee>";
@@ -271,38 +128,28 @@ function makeMarque(strForRoll){
    document.getElementById("myTitleID").innerHTML = "";
   }
 }
-
 // --- gia ta tabs 
 function selectTab(myID, myTab ) { 
  $(".periexomenaCL").hide();
  $("#myTabs li").removeClass("tab-selected");
  $("#"+myID).show();
  $("#"+myTab).addClass("tab-selected");
-
-
  if(myTab == "bathmologies-tab"){  
    sendQueryTab1();
  }
- 
  if( myTab == "apotelesmata-tab" ){
   sendQueryTab2();
  }
-
  if(myTab == "ebdomada-tab"){  
   sendQueryTab3();
  }
 }
 //---- xtizei periexomeno gia kathe tab
-
-//---- make Query-tab 
 function sendQueryTab1() {
-
  document.getElementById("myTitleID").innerHTML = '';
  document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
-
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
-
   if( mCatTab1!="" ){
    strQTab1='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCatTab1 +'"  order by C,B,E desc,F';
   }else{
@@ -317,15 +164,11 @@ function sendQueryTab1() {
    queryTab1.send(handleQueryResponseTab1Filter);
    $( "#divIDTab1" ).accordion( "refresh" );
 }
-
 function sendQueryTab2() {
  document.getElementById("myTitleID").innerHTML = '';
  document.getElementById("divIDTab2").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
- 
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey2 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
- 
- 
   if( mCatTab2!="" ){
    strQTab2='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
   }else{
@@ -333,40 +176,30 @@ function sendQueryTab2() {
   }
   queryTab1.setQuery(strQTab2);   
   queryTab1.send(handleQueryResponseTab2); 
-
 }
-
 function sendQueryTab3() {
  document.getElementById("myTitleID").innerHTML = '';
  document.getElementById("divIDTab3").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
-
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey3 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
-
 if( mCatTab3!="" ){
    strQTab3='select A,B,C,D,E,F,G,H,I,J,K,L where C="'+mCategory +'"  order by H,D,G';
   }else{
    strQTab3='select A,B,C,D,E,F,G,H,I,J,K,L order by H,D,G';
   }
-
   queryTab1.setQuery(strQTab3);   
   queryTab1.send(handleQueryResponseTab3); 
-}
-    
-//---------------------------
-//-------------- make div Tab1
-//---------------------------
+} 
+//-----
+//- make div Tab1
+//-----
 function handleQueryResponseTab1(response) {
-
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
  }
-
-
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- 
  if(posesEggrafes > 0) {
   var html =[]; 
   var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
@@ -396,9 +229,9 @@ if (response.isError()) {
  gadgets.window.adjustHeight();
 }
 
-//-------------------
-//-------------------
-//-------------------
+//-----
+//- make div Tab1Filter
+//-----
 function handleQueryResponseTab1Filter(response) {
 
 if (response.isError()) {
@@ -426,7 +259,6 @@ if (response.isError()) {
 
 }
 //----------- epilogh cathgorias
-
 function setNewQuery(queryString) {  
 document.getElementById("divIDTab1").innerHTML ="";
 $( "#divIDTab1" ).accordion( "destroy" );
@@ -438,26 +270,21 @@ $( "#divIDTab1" ).accordion( "destroy" );
  }  
  queryTab1.send(handleQueryResponseTab1);  
 }
-    
-//---------------------------
-//-------------- make div Tab2
-//---------------------------
+//-----
+//- make div Tab2
+//-----
 function handleQueryResponseTab2(response) {
   document.getElementById("divIDTab2").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
-
  if (response.isError()) {
     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
  }
- 
  var html =[];  
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
 if(posesEggrafes > 0) {
 for (var row = 0; row < posesEggrafes; row++) {
-
    html.push('<h3 class="myH3titleHistory font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 13)+'" />' + data.getFormattedValue(row, 3).toUpperCase() +' - '+ data.getFormattedValue(row, 4).toUpperCase() +' <img class="imgFlagRadius boxOut10" src="'+ data.getFormattedValue(row, 14) + '" /></h3>');
-   
    html.push('<div>');
    html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 2).toUpperCase()+'</span></div>');
    html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 12)+'</span> </div>');
@@ -465,46 +292,35 @@ for (var row = 0; row < posesEggrafes; row++) {
    html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 9)+'</span> </div>');
    html.push('<div class="clDivData">Men Categories : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 10)+'</span> </div>');
    html.push('<div class="clDivData">Women Categories : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 11)+'</span> </div>');
-
    html.push('<div class="clDivData">Elder ΜΕΝ : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 15)+'</span> </div>');
    html.push('<div class="clDivData">Elder Women : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 16)+'</span> </div>');
-    
    html.push('<div class="clDivData">TOP 2P : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 17)+'</span> </div>');
-   html.push('<div class="clDivData">TOP 3P : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 18)+'</span> </div>');  
-      
+   html.push('<div class="clDivData">TOP 3P : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 18)+'</span> </div>');     
    html.push('</div>');
-
 }
   document.getElementById("divIDTab2").innerHTML = html.join('');
   $("#divIDTab2").accordion({heightStyle: "content"});
-
-  
  }else{
    document.getElementById("divIDTab1").innerHTML = '<div class="clSpanOnomateponymo"> 0 FIMBA event</div>';
  }
  $( "#divIDTab2" ).accordion( "refresh" );
  gadgets.window.adjustHeight();
 }
-
-//---------------------------
-//-------------- make div Tab3
-//---------------------------
+//-----
+//- make div Tab3
+//-----
 function handleQueryResponseTab3(response) {
- document.getElementById("divIDTab3").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
-  
+ document.getElementById("divIDTab3").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />'; 
  if (response.isError()) {
     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
  }
-
  var html =[];  
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
-
 if(posesEggrafes > 0) {
 var strGroup1 = data.getFormattedValue(0, 0).toUpperCase();  
 var strGroup2;
-
 var myCount=0;
 html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(0,8)+'" />'+strGroup1+'</h3><div>');
  for (var row = 0; row < posesEggrafes; row++) {
@@ -514,15 +330,12 @@ html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRad
    myCount=0;
   }
   myCount++;
-
   if( strGroup2 != data.getFormattedValue(row, 3).toUpperCase() ){
    strGroup2 = data.getFormattedValue(row, 3).toUpperCase();
-   html.push('<h3 class="myH3titleMedals font-effect-emboss">'+strGroup2+'<!-- img class="imgCategoryRadius" src="'+data.getFormattedValue(row, 10)+'" /   --></h3>');
+   html.push('<h3 class="myH3titleMedals font-effect-emboss">'+strGroup2+'</h3>');
   }
-  
   html.push('<div style="float:left;display:block;">');
   html.push('<div class="clDivDataMedals">');
-  
   if (data.getValue(row, 6) == 1 ){
     html.push('<div class="clMetalioXryso clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
   }else if( data.getValue(row, 6) == 2 ){
@@ -532,16 +345,13 @@ html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRad
   }else{
     html.push('<div class="clXvrisMetalio clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
   }
- 
   html.push('<div class="clDivLeft"><img class="imgFlagRadiusMedals boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /></div>')
   html.push('<div class="clSpanOnomateponymoMedals clDivLeft">'+data.getFormattedValue(row, 1).toUpperCase() + '</div>');
   html.push('<div class="clDivLeft" >('+ data.getFormattedValue(row, 2) +')</div>');
   html.push('</div>');
-  
   html.push('</div>');
 }
   html.push('</div>');
-  
   document.getElementById("divIDTab3").innerHTML = html.join('');
   $( "#divIDTab3" ).accordion({heightStyle: "content"});
  }else{
@@ -550,25 +360,10 @@ html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRad
  $("#divIDTab3").accordion( "refresh" );
  gadgets.window.adjustHeight();
 }
-
-
-
-</script>
-  
+</script>  
 </head>
 <body>
-
-
-
-<!--  div id="disDiv" style="position:absolute;display:none;"><center>
-<a id="apokrychDisplay" href="javascript:hideDivDisp();" style="text-decoration:none;font-size:9px;color:#e7e7e8;height:10px;" title="απόκρυψη - hide">X</a><br/>
-<div id="inDisplay" ><img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" /></div>
-</center>
-</div    -->
-
-
 <div class="koyti">
-
    <div id="pano-tmhma" >
    <div id="myTabs">
    <ul>
@@ -585,9 +380,7 @@ html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRad
     <div id="divIDTab3" class="periexomenaCL"></div>
     <div id="divIDTab2" class="periexomenaCL"></div>
     <div id="divIDTab1" class="periexomenaCL"></div>
-
   </div>
-
 <center>
 <div id="addiv"><p class="pClepikefalida"><br/><br/><br/>Welcome to InfoCenter<br/></p>
 <p class="pClRow">1st Step : Click the "X" button to continue.</p>
@@ -606,19 +399,14 @@ google_ad_height = 250;
 </script>
 </center>
 
-
 </div>
 </center>
-
-
 <script>
 // myInitMaxiAge();
 document.getElementById("spanIDTab1").innerHTML = captionTab1;
 document.getElementById("spanIDTab2").innerHTML = captionTab2;
 document.getElementById("spanIDTab3").innerHTML = captionTab3;
 </script>
-
-
 </body>
 </html>
       ]]>
