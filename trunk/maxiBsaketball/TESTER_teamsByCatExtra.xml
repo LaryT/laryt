@@ -279,7 +279,7 @@ function sendQueryTab2() {
   }
   queryTab2.setQuery(strQ);   
   queryTab2.send(handleQueryResponseTab2); 
-  
+
 }
 
 function sendQueryTab3() {
@@ -386,8 +386,36 @@ function handleQueryResponseTab2(response) {
  var html =[];  
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- 
- alert(' Zaro s 2');
+if(posesEggrafes > 0) {
+for (var row = 0; row < posesEggrafes; row++) {
+
+   html.push('<h3 class="myH3titleHistory font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 13)+'" />' + data.getFormattedValue(row, 3).toUpperCase() +' - '+ data.getFormattedValue(row, 4).toUpperCase() +' <img class="imgFlagRadius boxOut10" src="'+ data.getFormattedValue(row, 14) + '" /></h3>');
+   
+   html.push('<div>');
+   html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 2).toUpperCase()+'</span></div>');
+   html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 12)+'</span> </div>');
+   html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 6)+'</span> countries, <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7)+'</span> teams,</div>');
+   html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 9)+'</span> </div>');
+   html.push('<div class="clDivData">Men Categories : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 10)+'</span> </div>');
+   html.push('<div class="clDivData">Women Categories : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 11)+'</span> </div>');
+
+   html.push('<div class="clDivData">Elder ΜΕΝ : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 15)+'</span> </div>');
+   html.push('<div class="clDivData">Elder Women : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 16)+'</span> </div>');
+    
+   html.push('<div class="clDivData">TOP 2P : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 17)+'</span> </div>');
+   html.push('<div class="clDivData">TOP 3P : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 18)+'</span> </div>');  
+      
+   html.push('</div>');
+
+}
+  document.getElementById("divIDTab2").innerHTML = html.join('');
+  $("#divIDTab2").accordion({heightStyle: "content"});
+  
+ }else{
+   document.getElementById("divIDTab1").innerHTML = '<div class="clSpanOnomateponymo"> 0 FIMBA event</div>';
+ }
+ $( "#divIDTab2" ).accordion( "refresh" );
+ gadgets.window.adjustHeight();
 }
 
 //---------------------------
