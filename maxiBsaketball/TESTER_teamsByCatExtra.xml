@@ -301,6 +301,9 @@ function sendQueryTab1() {
  document.getElementById("myTitleID").innerHTML = '';
  document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
 
+  myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1";
+  queryTab1 = new google.visualization.Query(myURLfeedTab1);
+
   if( mCatTab1!="" ){
    strQTab1='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCatTab1 +'"  order by C,B,E desc,F';
   }else{
@@ -354,7 +357,7 @@ if( mCatTab3!="" ){
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
- alert('lary + spyros');
+ alert('lary + mary');
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
