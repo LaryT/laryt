@@ -73,6 +73,9 @@ div.periexomenaCL{height:550px;display:none}
 div#divIDTab1{display:block}
 
 .clDivLeft{float:left;}
+
+.clDivDataMedals, .clDivData2seiraMedals{font-size:10px;width: 230px;height: 30px;float: left;}
+
 .clMetalioXryso{background-image:url('https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png');}
 .clMetalioAshmenio{background-image:url('https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI/AAAAAAAAAlk/eJg3ngivfyw/s32/asimenio.png');}
 .clMetalioXalkino{background-image:url('https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png');}
@@ -466,7 +469,7 @@ html.push('<h3 class="myH3title font-effect-emboss"><img class="imgLogoRadius bo
   }
   
   html.push('<div style="float:left;display:block;">');
-  html.push('<div class="clDivData">');
+  html.push('<div class="clDivDataMedals">');
   
   if (data.getValue(row, 6) == 1 ){
     html.push('<div class="clMetalioXryso clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
