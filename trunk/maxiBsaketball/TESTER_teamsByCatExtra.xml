@@ -8,9 +8,9 @@
   <UserPref name="m_Key1" display_name="Source docID 1:" default_value="" />
   <UserPref name="m_Key2" display_name="Source docID 2:" default_value="" />    
   <UserPref name="m_Key3" display_name="Source docID 3:" default_value="" />
-  <UserPref name="m_Diorganvsh" display_name="Event:" default_value="" />
-  <UserPref name="m_Category" display_name="Age Category (M45+):" default_value="" />
-  <UserPref name="m_Country" display_name="Country:" default_value="" />
+  <UserPref name="m_CatTab1" display_name="Filter Tab1:" default_value="" />
+  <UserPref name="m_CatTab2" display_name="Filter Tab2:" default_value="" />
+  <UserPref name="m_CatTab3" display_name="Filter Tab3:" default_value="" />
 <Content type="html">
     
   <![CDATA[
@@ -168,18 +168,19 @@ if(mKey1 === ""){
  mKey1="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
 }
 if(mKey2 === ""){
- mKey2="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
+ mKey2="0AjrqMWGJ6suYdHFEbFV2RnROLUlQSzBHdXQ0dU1yYlE";
 }
 if(mKey3 === ""){
  mKey3="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
 }
 
-var mDiorganvsh = prefs.getString("m_Diorganvsh");
-var mCategory = prefs.getString("m_Category");
-var mCountry = prefs.getString("m_Country");
+//for filter in a Tab
+var mCatTab1 = prefs.getString("m_CatTab1");
+var mCatTab2 = prefs.getString("m_CatTab2");
+var mCatTab3 = prefs.getString("m_CatTab3");
 
 var captionTab1 = "Roster";
-var captionTab2 = "Lary";
+var captionTab2 = "Championships";
 var captionTab3 = "Mary";
 
 
@@ -255,11 +256,9 @@ function selectTab(myID, myTab ) {
 
 //---- make Query-tab 
 function sendQueryTab1() {
- //  document.getElementById("divIDTab1").innerHTML ="";
- //  $( "#divIDTab1" ).accordion( "destroy" );
 
-  if( mCategory!="" ){
-   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
+  if( mCatTab1!="" ){
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCatTab1 +'"  order by C,B,E desc,F';
   }else{
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F';
   }
@@ -273,7 +272,14 @@ function sendQueryTab1() {
 }
 
 function sendQueryTab2() {
-    alert('  2');
+  if( mCatTab2!="" ){
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
+  }else{
+   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S order by B desc';
+  }
+  queryTab2.setQuery(strQ);   
+  queryTab2.send(handleQueryResponseTab2); 
+  
 }
 
 function sendQueryTab3() {
