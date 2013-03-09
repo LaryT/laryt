@@ -255,8 +255,8 @@ function selectTab(myID, myTab ) {
 
 //---- make Query-tab 
 function sendQueryTab1() {
- document.getElementById("divIDTab1").innerHTML ="";
- $( "#divIDTab1" ).accordion( "destroy" );
+ //  document.getElementById("divIDTab1").innerHTML ="";
+ //  $( "#divIDTab1" ).accordion( "destroy" );
 
   if( mCategory!="" ){
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
@@ -269,6 +269,7 @@ function sendQueryTab1() {
    var strQ2='select C, count(D) group by C';
    queryTab1filter.setQuery(strQ2);
    queryTab1filter.send(handleQueryResponseTab1Filter);
+   $( "#divIDTab1" ).accordion( "refresh" );
 }
 
 function sendQueryTab2() {
@@ -318,7 +319,8 @@ if (response.isError()) {
   }else {
    document.getElementById("divIDTab1").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
   }
-
+  
+ $( "#divIDTab1" ).accordion( "refresh" );
  gadgets.window.adjustHeight();
 }
 
