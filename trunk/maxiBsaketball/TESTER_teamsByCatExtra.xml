@@ -72,6 +72,7 @@ text-decoration:none;
 div.periexomenaCL{height:550px;display:none}
 div#divIDTab1{display:block}
 
+.clDivLeft{float:left;}
 .clMetalioXryso{background-image:url('https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png');}
 .clMetalioAshmenio{background-image:url('https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI/AAAAAAAAAlk/eJg3ngivfyw/s32/asimenio.png');}
 .clMetalioXalkino{background-image:url('https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png');}
