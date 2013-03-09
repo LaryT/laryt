@@ -319,34 +319,42 @@ function sendQueryTab2() {
  document.getElementById("myTitleID").innerHTML = '';
  document.getElementById("divIDTab2").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
  
+  myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey2 +"&headers=1";
+  queryTab1 = new google.visualization.Query(myURLfeedTab1);
+ 
+ 
   if( mCatTab2!="" ){
    strQTab2='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
   }else{
    strQTab2='select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S order by B desc';
   }
-  queryTab2.setQuery(strQTab2);   
-  queryTab2.send(handleQueryResponseTab2); 
+  queryTab1.setQuery(strQTab2);   
+  queryTab1.send(handleQueryResponseTab2); 
 
 }
 
 function sendQueryTab3() {
  document.getElementById("myTitleID").innerHTML = '';
  document.getElementById("divIDTab3").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
-  if( mCatTab3!="" ){
+
+  myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey3 +"&headers=1";
+  queryTab1 = new google.visualization.Query(myURLfeedTab1);
+
+if( mCatTab3!="" ){
    strQTab3='select A,B,C,D,E,F,G,H,I,J,K,L where C="'+mCategory +'"  order by H,D,G';
   }else{
    strQTab3='select A,B,C,D,E,F,G,H,I,J,K,L order by H,D,G';
   }
 
-  queryTab3.setQuery(strQTab3);   
-  queryTab3.send(handleQueryResponseTab3); 
+  queryTab1.setQuery(strQTab3);   
+  queryTab1.send(handleQueryResponseTab3); 
 }
     
 //---------------------------
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
- alert('lary');
+ alert('lary + spyros');
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
