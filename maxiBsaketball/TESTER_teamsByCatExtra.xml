@@ -325,6 +325,7 @@ function sendQueryTab3() {
   }else{
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L order by H,D,G';
   }
+  document.getElementById("divIDTab3").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
   queryTab3.setQuery(strQ);   
   queryTab3.send(handleQueryResponseTab3); 
 }
@@ -531,11 +532,11 @@ html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRad
 
 
 
-<div id="disDiv" style="position:absolute;display:none;"><center>
+<!--  div id="disDiv" style="position:absolute;display:none;"><center>
 <a id="apokrychDisplay" href="javascript:hideDivDisp();" style="text-decoration:none;font-size:9px;color:#e7e7e8;height:10px;" title="απόκρυψη - hide">X</a><br/>
 <div id="inDisplay" ><img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" /></div>
 </center>
-</div>
+</div    -->
 
 
 <div class="koyti">
@@ -553,9 +554,9 @@ html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRad
     <div id="myTitleID"><marquee>Team participations - Team rosters - History FIMBA World Maxibasketball Championships. From 1st to 12th </marquee></div>
     <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter &nbsp;|&nbsp; <a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a>
     </div>
-    <div id="divIDTab3" class="periexomenaCL">.</div>
-    <div id="divIDTab2" class="periexomenaCL">.</div>
-    <div id="divIDTab1" class="periexomenaCL">.</div>
+    <div id="divIDTab3" class="periexomenaCL"></div>
+    <div id="divIDTab2" class="periexomenaCL"></div>
+    <div id="divIDTab1" class="periexomenaCL"></div>
 
   </div>
 
