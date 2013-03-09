@@ -101,6 +101,7 @@ padding-left:10px;
 .myH3title{
 margin-top: 30px;
 margin-bottom: 2px;
+font-size: 14px;
 font-family: Arial, Hlevetica, Verdana; 
 /*
 background-color: rgb(35, 36, 46);
@@ -124,7 +125,7 @@ color:rgb(0,0,0)
 }
 
 .clSpanOnomateponymo{
-font-size:14px;
+font-size:12px;
 font-weight:bold;
 overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;
 }
