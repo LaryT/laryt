@@ -132,7 +132,21 @@ overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;
 .ui-accordion .ui-accordion-header {padding-top: 0em;padding-bottom: 0em;}
 
 
+#addiv{
 
+background-color:rgba(220, 220, 220, 0.9);
+
+position:absolute;
+top:100px;
+left:10px;
+padding-left: 10px;
+
+box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
+-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;
+-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
+-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
+-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;
+}
 
 .pClepikefalida{font-family:Verdana, Arial,sans-serif; font-size:12px; font-weight:bold;}
 .pClRow{font-family:Verdana, Arial,sans-serif; font-size:9px;}
@@ -202,7 +216,7 @@ function hideDivAds(){
 }
 
 function showDivAds(){
-   $("#addiv").animate({"height" : "250px"}, function(){
+   $("#addiv").animate({"height" : "350px"}, function(){
        $("#addiv").show();
      });
    $("#emfaniseAdsID").hide();
@@ -424,7 +438,7 @@ function handleQueryResponseTab3(response) {
   </div>
 
 <center>
-<div id="addiv" style="position:absolute;top:100px;left:8px;"><p class="pClepikefalida">Welcome to InfoCenter<br/></p>
+<div id="addiv"><p class="pClepikefalida">Welcome to InfoCenter<br/></p>
 <p class="pClRow">1st Step : Click the "X" button to continue.</p>
 <p class="pClRow">2nd Step : Select at the top the tab-category.</p>
 <p class="pClRow">3rd Step : Select the Filter from the Option Field.<br/><br/><br/></p>
