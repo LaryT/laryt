@@ -255,6 +255,8 @@ function selectTab(myID, myTab ) {
 
 //---- make Query-tab 
 function sendQueryTab1() {
+ document.getElementById("divIDTab1").innerHTML ="";
+ $( "#divIDTab1" ).accordion( "destroy" );
 
   if( mCategory!="" ){
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
@@ -283,15 +285,10 @@ function sendQueryTab3() {
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
-
- document.getElementById("divIDTab1").innerHTML ="";
- $( "#divIDTab1" ).accordion( "destroy" );
-
- if (response.isError()) {
+if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
  }
-
 
 
  var data = response.getDataTable();
@@ -357,8 +354,9 @@ if (response.isError()) {
 //----------- epilogh cathgorias
 
 function setNewQuery(queryString) {  
-//  document.getElementById("divIDTab1").innerHTML ="";
-//  $( "#divIDTab1" ).accordion( "destroy" );
+document.getElementById("divIDTab1").innerHTML ="";
+$( "#divIDTab1" ).accordion( "destroy" );
+
  if(queryString !=""){
    queryTab1.setQuery('where C="'+queryString+'"');   
  }else{
