@@ -220,6 +220,11 @@ var captionTab2 = "Championships";
 var captionTab3 = "Medals";
 
 
+var strQTab1;
+var strQTab1filter;
+var strQTab2;
+var strQTab3;
+
 var queryTab1;
 var queryTab1filter;
 var queryTab2;
@@ -297,15 +302,15 @@ function sendQueryTab1() {
  document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
 
   if( mCatTab1!="" ){
-   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCatTab1 +'"  order by C,B,E desc,F';
+   strQTab1='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCatTab1 +'"  order by C,B,E desc,F';
   }else{
-   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F';
+   strQTab1='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F';
   }
-   queryTab1.setQuery(strQ);   
+   queryTab1.setQuery(strQTab1);   
    queryTab1.send(handleQueryResponseTab1);  
   //-------- gia ta filter cathgorivn
-   var strQ2='select C, count(D) group by C';
-   queryTab1filter.setQuery(strQ2);
+   strTab1filter='select C, count(D) group by C';
+   queryTab1filter.setQuery(strTab1filter);
    queryTab1filter.send(handleQueryResponseTab1Filter);
    $( "#divIDTab1" ).accordion( "refresh" );
 }
@@ -315,11 +320,11 @@ function sendQueryTab2() {
  document.getElementById("divIDTab2").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
  
   if( mCatTab2!="" ){
-   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
+   strQTab2='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
   }else{
-   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S order by B desc';
+   strQTab2='select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S order by B desc';
   }
-  queryTab2.setQuery(strQ);   
+  queryTab2.setQuery(strQTab2);   
   queryTab2.send(handleQueryResponseTab2); 
 
 }
@@ -328,12 +333,12 @@ function sendQueryTab3() {
  document.getElementById("myTitleID").innerHTML = '';
  document.getElementById("divIDTab3").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
   if( mCatTab3!="" ){
-   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L where C="'+mCategory +'"  order by H,D,G';
+   strQTab3='select A,B,C,D,E,F,G,H,I,J,K,L where C="'+mCategory +'"  order by H,D,G';
   }else{
-   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L order by H,D,G';
+   strQTab3='select A,B,C,D,E,F,G,H,I,J,K,L order by H,D,G';
   }
 
-  queryTab3.setQuery(strQ);   
+  queryTab3.setQuery(strQTab3);   
   queryTab3.send(handleQueryResponseTab3); 
 }
     
@@ -341,7 +346,7 @@ function sendQueryTab3() {
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
- 
+ alert('lary');
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
