@@ -274,7 +274,6 @@ function handleQueryResponseTab1(response) {
 
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- alert('++ lary');
  
  if(posesEggrafes > 0) {
   var html =[]; 
@@ -336,7 +335,6 @@ if (response.isError()) {
 //----------- epilogh cathgorias
 
 function setNewQuery(queryString) {  
-       alert(queryString);
 
   $( "#divIDTab1" ).accordion( "destroy" );
 
