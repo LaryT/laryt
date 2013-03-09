@@ -213,17 +213,13 @@ if( mKey3!="" ){
 
 //--- gia ta ads
 function hideDivAds(){
-//   $("#addiv").animate({"height" : "0px"}, function(){
-       $("#addiv").hide();
-//     });
-   $("#emfaniseAdsID").show();
+ $("#addiv").hide();
+ $("#emfaniseAdsID").show();
 }
 
 function showDivAds(){
-//   $("#addiv").animate({"height" : "350px"}, function(){
-       $("#addiv").show();
-//     });
-   $("#emfaniseAdsID").hide();
+ $("#addiv").show();
+ $("#emfaniseAdsID").hide();
 }
 
 function makeMarque(strForRoll){
@@ -287,10 +283,15 @@ function sendQueryTab3() {
 //---------------------------
 function handleQueryResponseTab1(response) {
 
+ document.getElementById("divIDTab1").innerHTML ="";
+ $( "#divIDTab1" ).accordion( "destroy" );
+
  if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
  }
+
+
 
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
@@ -355,19 +356,14 @@ if (response.isError()) {
 //----------- epilogh cathgorias
 
 function setNewQuery(queryString) {  
-
-  document.getElementById("divIDTab1").innerHTML ="";
-  $( "#divIDTab1" ).accordion( "destroy" );
-
-if(queryString !=""){
+//  document.getElementById("divIDTab1").innerHTML ="";
+//  $( "#divIDTab1" ).accordion( "destroy" );
+ if(queryString !=""){
    queryTab1.setQuery('where C="'+queryString+'"');   
-}else{
+ }else{
     queryTab1.setQuery('select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F');
-}
-   queryTab1.send(handleQueryResponseTab1);  
- 
- 
-
+ }  
+ queryTab1.send(handleQueryResponseTab1);  
 }
     
 //---------------------------
