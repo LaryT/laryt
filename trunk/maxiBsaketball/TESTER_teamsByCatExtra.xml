@@ -442,7 +442,7 @@ function handleQueryResponseTab3(response) {
   </div>
 
 <center>
-<div id="addiv"><p class="pClepikefalida">Welcome to InfoCenter<br/></p>
+<div id="addiv"><p class="pClepikefalida"><br/><br/>Welcome to InfoCenter<br/></p>
 <p class="pClRow">1st Step : Click the "X" button to continue.</p>
 <p class="pClRow">2nd Step : Select at the top the tab-category.</p>
 <p class="pClRow">3rd Step : Select the Filter from the Option Field.<br/><br/><br/></p>
