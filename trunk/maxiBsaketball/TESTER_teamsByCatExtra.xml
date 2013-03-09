@@ -134,8 +134,8 @@ overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;
 
 
 
-.pClepikefalida{font-size:12px; font-weight:bold;}
-.pClRow{font-size:9px;}
+.pClepikefalida{font-family:Verdana, Arial,sans-serif; font-size:12px; font-weight:bold;}
+.pClRow{font-family:Verdana, Arial,sans-serif; font-size:9px;}
 </style>
   
 <script>
