@@ -293,6 +293,9 @@ function selectTab(myID, myTab ) {
 //---- make Query-tab 
 function sendQueryTab1() {
 
+ document.getElementById("myTitleID").innerHTML = '';
+ document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
+
   if( mCatTab1!="" ){
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCatTab1 +'"  order by C,B,E desc,F';
   }else{
@@ -308,6 +311,9 @@ function sendQueryTab1() {
 }
 
 function sendQueryTab2() {
+ document.getElementById("myTitleID").innerHTML = '';
+ document.getElementById("divIDTab2").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
+ 
   if( mCatTab2!="" ){
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCategory +'"  order by C,B,E desc,F';
   }else{
@@ -319,7 +325,8 @@ function sendQueryTab2() {
 }
 
 function sendQueryTab3() {
-
+ document.getElementById("myTitleID").innerHTML = '';
+ document.getElementById("divIDTab3").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
   if( mCatTab3!="" ){
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L where C="'+mCategory +'"  order by H,D,G';
   }else{
@@ -334,7 +341,7 @@ function sendQueryTab3() {
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
-  document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
+ 
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
@@ -453,14 +460,12 @@ for (var row = 0; row < posesEggrafes; row++) {
 
 }
   document.getElementById("divIDTab2").innerHTML = html.join('');
-  document.getElementById("myTitleID").innerHTML = '';
   $("#divIDTab2").accordion({heightStyle: "content"});
 
   
  }else{
    document.getElementById("divIDTab1").innerHTML = '<div class="clSpanOnomateponymo"> 0 FIMBA event</div>';
  }
- document.getElementById("myTitleID").innerHTML = '';
  $( "#divIDTab2" ).accordion( "refresh" );
  gadgets.window.adjustHeight();
 }
@@ -526,8 +531,6 @@ html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRad
  }else{
    document.getElementById("divIDTab3").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
  }
- 
- document.getElementById("myTitleID").innerHTML = '';
  $("#divIDTab3").accordion( "refresh" );
  gadgets.window.adjustHeight();
 }
