@@ -274,7 +274,7 @@ function handleQueryResponseTab1(response) {
 
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
- alert('plus lary');
+ alert('++ lary');
  
  if(posesEggrafes > 0) {
   var html =[]; 
@@ -338,12 +338,9 @@ if (response.isError()) {
 function setNewQuery(queryString) {  
        alert(queryString);
        
- $(".myH3title").hide();
- $(".ui-accordion-content").hide();
+   queryTab1.setQuery('where C="'+queryString+'"');   
+   queryTab1.send(handleQueryResponseTab1);  
  
- 
-  $(".h3F40+").toggle();
-  $(".divF40+").toggle();
  
 
 }
