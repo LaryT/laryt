@@ -337,7 +337,9 @@ if (response.isError()) {
 
 function setNewQuery(queryString) {  
        alert(queryString);
-       
+
+  $( "#divIDTab1" ).accordion( "destroy" );
+
    queryTab1.setQuery('where C="'+queryString+'"');   
    queryTab1.send(handleQueryResponseTab1);  
  
