@@ -442,10 +442,10 @@ function handleQueryResponseTab3(response) {
   </div>
 
 <center>
-<div id="addiv"><p class="pClepikefalida"><br/><br/>Welcome to InfoCenter<br/></p>
+<div id="addiv"><p class="pClepikefalida"><br/><br/><br/>Welcome to InfoCenter<br/></p>
 <p class="pClRow">1st Step : Click the "X" button to continue.</p>
 <p class="pClRow">2nd Step : Select at the top the tab-category.</p>
-<p class="pClRow">3rd Step : Select the Filter from the Option Field.<br/><br/><br/></p>
+<p class="pClRow">3rd Step : Select the Filter from the Option Field.<br/><br/></p>
 <center><a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="απόκρυψη - hide ads">X</a><br/>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
