@@ -325,7 +325,7 @@ function sendQueryTab3() {
   }else{
    var strQ='select A,B,C,D,E,F,G,H,I,J,K,L order by H,D,G';
   }
-  document.getElementById("divIDTab3").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
+
   queryTab3.setQuery(strQ);   
   queryTab3.send(handleQueryResponseTab3); 
 }
@@ -334,6 +334,7 @@ function sendQueryTab3() {
 //-------------- make div Tab1
 //---------------------------
 function handleQueryResponseTab1(response) {
+  document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
 if (response.isError()) {
      alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
      return;
@@ -419,6 +420,7 @@ $( "#divIDTab1" ).accordion( "destroy" );
 //-------------- make div Tab2
 //---------------------------
 function handleQueryResponseTab2(response) {
+  document.getElementById("divIDTab2").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
 
  if (response.isError()) {
     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
@@ -464,6 +466,8 @@ for (var row = 0; row < posesEggrafes; row++) {
 //-------------- make div Tab3
 //---------------------------
 function handleQueryResponseTab3(response) {
+ document.getElementById("divIDTab3").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
+  
  if (response.isError()) {
     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
