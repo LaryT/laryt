@@ -57,7 +57,7 @@ div#divIDTab1{display:block}
 .clDivData2seira:hover{color:rgb(0,0,0)}
 .clSpanOnomateponymo{font-size:12px;font-weight:bold;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;}
 .ui-accordion .ui-accordion-header {padding-top: 0em;padding-bottom: 0em;}
-#addiv{background-color:rgba(255, 255, 255, 0.90);position:absolute;top:75px;height:80%;width:95%;margin-left:1px;padding-left: 10px;padding-right: 10px;box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;}
+#addiv{background-color: rgba(255, 255, 255, 0.96);position: absolute;top: 40px;bottom: 5px;right: 0px;left: 0px;}
 .pClepikefalida{font-family:Verdana, Arial,sans-serif; font-size:12px; font-weight:bold;}
 .pClRow{font-family:Verdana, Arial,sans-serif; font-size:9px;}
 </style>
@@ -370,6 +370,7 @@ html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRad
      <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','bathmologies-tab' );return false;"><span id="spanIDTab1">Tab1</span></a></li>
      <li id="apotelesmata-tab" ><a href="javascript:void(0);" onclick="selectTab('divIDTab2','apotelesmata-tab' );return false;"><span id="spanIDTab2">Tab2</span></a></li>
      <li id="ebdomada-tab"><a href="javascript:void(0);" onclick="selectTab('divIDTab3','ebdomada-tab' );return false;"><span id="spanIDTab3">Tab3</span></a></li>
+     <!--  li id="ebdomada-tab"><a href="javascript:void(0);" ><span id="spanIDTab3">.</span></a></li   -->
      </ul>
    </div>
  </div>
