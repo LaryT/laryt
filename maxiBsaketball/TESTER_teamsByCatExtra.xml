@@ -58,10 +58,10 @@ div#divIDTab1{display:block}
 <script>
 var prefs = new gadgets.Prefs();
 // var mKey1 = prefs.getString("m_Key1");
-var mKey1;
-var mKey2; 
-var mKey3;
-var mKey4;
+var mKey1 ="";
+var mKey2 ="";
+var mKey3 ="";
+var mKey4 ="";
 
 if(mKey1 === ""){
  mKey1="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
