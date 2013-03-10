@@ -57,7 +57,7 @@ div#divIDTab1{display:block}
 .clDivData2seira:hover{color:rgb(0,0,0)}
 .clSpanOnomateponymo{font-size:12px;font-weight:bold;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;}
 .ui-accordion .ui-accordion-header {padding-top: 0em;padding-bottom: 0em;}
-#addiv{background-color:rgba(255, 255, 255, 0.96);position:absolute;top:75px;height:80%;width:95%;margin-left:1px;padding-left: 10px;padding-right: 10px;box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;}
+#addiv{background-color:rgba(255, 255, 255, 0.90);position:absolute;top:75px;height:80%;width:95%;margin-left:1px;padding-left: 10px;padding-right: 10px;box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;}
 .pClepikefalida{font-family:Verdana, Arial,sans-serif; font-size:12px; font-weight:bold;}
 .pClRow{font-family:Verdana, Arial,sans-serif; font-size:9px;}
 </style>
@@ -381,12 +381,15 @@ html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRad
     <div id="divIDTab2" class="periexomenaCL"></div>
     <div id="divIDTab1" class="periexomenaCL"></div>
   </div>
+  
 <center>
 <div id="addiv"><p class="pClepikefalida"><br/><br/><br/>Welcome to InfoCenter<br/></p>
 <p class="pClRow">1st Step : Click the "X" button to continue.</p>
 <p class="pClRow">2nd Step : Select at the top the tab-category.</p>
 <p class="pClRow">3rd Step : Select the Filter from the Option Field.<br/><br/></p>
-<center><a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="απόκρυψη - hide ads">X</a><br/>
+
+
+<a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="απόκρυψη - hide ads">X</a><br/>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
 /* 300 x 250 box maxi ga history */
@@ -397,10 +400,9 @@ google_ad_height = 250;
 </script>
 <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
-</center>
-
 </div>
 </center>
+
 <script>
 // myInitMaxiAge();
 document.getElementById("spanIDTab1").innerHTML = captionTab1;
