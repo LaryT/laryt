@@ -57,7 +57,7 @@ div#divIDTab1{display:block}
 .clDivData2seira:hover{color:rgb(0,0,0)}
 .clSpanOnomateponymo{font-size:12px;font-weight:bold;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;}
 .ui-accordion .ui-accordion-header {padding-top: 0em;padding-bottom: 0em;}
-#addiv{background-color: rgba(255, 255, 255, 0.96);position: absolute;top: 40px;bottom: 5px;right: 0px;left: 0px;}
+#addiv{background-color: rgb(255, 255, 255);position: absolute;top: 40px;bottom: 5px;right: 0px;left: 0px;}
 .pClepikefalida{font-family:Verdana, Arial,sans-serif; font-size:12px; font-weight:bold;}
 .pClRow{font-family:Verdana, Arial,sans-serif; font-size:9px;}
 </style>
