@@ -215,12 +215,12 @@ if( mCatTab3!="" ){
 function sendQueryTab4() {
  document.getElementById("myTitleID").innerHTML = '';
  document.getElementById("divIDTab4").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
-//--- myURLfeedTab4 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey4 +"&headers=1";
-  queryTab1 = new google.visualization.Query(myURLfeedTab4);
+  myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey4 +"&headers=1";
+  queryTab1 = new google.visualization.Query(myURLfeedTab1);
 if( mCatTab4!="" ){
-   strQTab4='select A,B,C,D,E,F,G,H,I,J,K,L where C="'+mCatTab4 +'"  order by H,D,G';
+   strQTab4='select upper(J), K, L, upper(M) where J="'+mCatTab4 +'"  order by J';
   }else{
-   strQTab4='select A,B,C,D,E,F,G,H,I,J,K,L order by H,D,G';
+   strQTab4='SELECT upper(J), K, L, upper(M) order by J';
   }
   queryTab1.setQuery(strQTab4);   
   queryTab1.send(handleQueryResponseTab4); 
@@ -467,6 +467,7 @@ google_ad_height = 250;
 document.getElementById("spanIDTab1").innerHTML = captionTab1;
 document.getElementById("spanIDTab2").innerHTML = captionTab2;
 document.getElementById("spanIDTab3").innerHTML = captionTab3;
+document.getElementById("spanIDTab4").innerHTML = captionTab4;
 gadgets.window.adjustHeight();
 </script>
 </body>
