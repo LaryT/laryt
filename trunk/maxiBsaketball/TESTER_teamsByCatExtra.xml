@@ -415,9 +415,7 @@ function handleQueryResponseTab4(response) {
   var html =[]; 
   var strGroup = data.getFormattedValue(0, 0).toUpperCase(); 
   var myCount=0;  
-  var myNoCountries=1;
-   alert(strGroup);
-   
+  var myNoCountries=1;   
   html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 0)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 4)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(0, 0)+'">');
   for (var row = 0; row < posesEggrafes; row++) {
    if( strGroup != data.getFormattedValue(row, 0).toUpperCase() ){
