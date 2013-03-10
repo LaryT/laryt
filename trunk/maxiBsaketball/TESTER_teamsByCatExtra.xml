@@ -76,15 +76,15 @@ if(mKey4 === ""){
  mKey4="0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc";
 }
 //for filter in a Tab
-var mCatTab1;
-var mCatTab2;
-var mCatTab3;
-var mCatTab4;
+var mCatTab1 ="";
+var mCatTab2 ="";
+var mCatTab3 ="";
+var mCatTab4 ="";
 
 var captionTab1 = "Rosters";
 var captionTab2 = "Championships";
 var captionTab3 = "Medals";
-var captionTab4 = "Teams";
+var captionTab4 = "Teams NEw";
 
 var strQTab1;
 var strQTab1filter;
