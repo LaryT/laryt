@@ -424,7 +424,6 @@ html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRad
  $("#divIDTab3").accordion( "refresh" );
  gadgets.window.adjustHeight();
 }
-
 //-----
 //- make div Tab4
 //-----
@@ -468,9 +467,8 @@ function handleQueryResponseTab4(response) {
  $("#divIDTab4").accordion( "refresh" );
  gadgets.window.adjustHeight();
  }
-
 //-----
-//- make div Tab5 strQTab5='SELECT upper(J), K, L, upper(M),P,E,A order by L,J,M';
+//- make div Tab5
 //-----
 function handleQueryResponseTab5(response) {
  document.getElementById("divIDTab5").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />'; 
@@ -501,7 +499,7 @@ function handleQueryResponseTab5(response) {
   
   }
   html.push('</div>');
-   var strForRoll5 = 'Teams : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>, from <span class="clSpanOnomateponymo">'+myNoCountries+'</span> categories';
+   var strForRoll5 = 'Teams : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>  ||  Categories : <span class="clSpanOnomateponymo">'+myNoCountries+'</span>';
    document.getElementById("myTitleID").innerHTML ="<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();'>"+strForRoll5+"</marquee>";
   document.getElementById("divIDTab5").innerHTML = html.join('');
   $("#divIDTab5").accordion({heightStyle: "content"});
@@ -512,10 +510,6 @@ function handleQueryResponseTab5(response) {
  $("#divIDTab5").accordion( "refresh" );
  gadgets.window.adjustHeight();
  }
- 
- 
- 
- 
 </script>  
 </head>
 <body>
