@@ -411,13 +411,14 @@ function handleQueryResponseTab4(response) {
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
  
- alert('SELECT upper(J), K, L, upper(M),P,E,A order by J,L,M');
+ alert(posesEggrafes);
  
  if(posesEggrafes > 0) {
   var html =[]; 
   var strGroup = data.getFormattedValue(0, 0).toUpperCase(); 
   var myCount=0;  
-  
+   alert(strGroup);
+   
   html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 0)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 4)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(0, 0)+'">');
   for (var row = 0; row < posesEggrafes; row++) {
    if( strGroup != data.getFormattedValue(row, 0).toUpperCase() ){
@@ -427,7 +428,7 @@ function handleQueryResponseTab4(response) {
    }
   
    myCount++;
-   html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1).toUpperCase()+' '+data.getFormattedValue(row, 3).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 2) +') </div><div class="clDivData2seira">Team Delegate: '+data.getFormattedValue(row, 7).toUpperCase()+', Reg/No '+ data.getFormattedValue(row, 5).substr(0,4)+'...</div></div>');
+   html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1).toUpperCase()+' '+data.getFormattedValue(row, 3).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 2) +') </div><div class="clDivData2seira">Team Delegate: '+data.getFormattedValue(row, 6).toUpperCase()+', Reg/No '+ data.getFormattedValue(row, 5).substr(0,4)+'...</div></div>');
   
   }
   html.push('</div>');
