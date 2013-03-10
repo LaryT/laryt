@@ -432,8 +432,8 @@ function handleQueryResponseTab4(response) {
   
   }
   html.push('</div>');
-  
-   document.getElementById("myTitleID").innerHTML = 'Teams : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>, from <span class="clSpanOnomateponymo">'+myNoCountries+'</span> countries';
+   var strForRoll4 = 'Teams : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>, from <span class="clSpanOnomateponymo">'+myNoCountries+'</span> countries';
+   document.getElementById("myTitleID").innerHTML ="<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();'>"+strForRoll4+"</marquee>";
   document.getElementById("divIDTab4").innerHTML = html.join('');
   $("#divIDTab4").accordion({heightStyle: "content"});
   }else {
