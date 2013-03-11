@@ -561,13 +561,13 @@ function handleQueryResponseTab6(response) {
   for (var row = 0; row < posesEggrafes; row++) {
    if( strGroup != data.getFormattedValue(row, 2).toUpperCase() ){
     strGroup = data.getFormattedValue(row, 2).toUpperCase();
-    html.push('</div><h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(row, 2)+'"><img src="https://lh6.googleusercontent.com/-fZS-2QS1yC8/UT2mAdfnJbI/AAAAAAAAyF0/EG-Jj_8hub8/s24/BBallTr36.png" /> '+strGroup+'</h3><div class="div'+data.getFormattedValue(row, 2)+'">');
+    html.push('</div><h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(row, 2)+'"><img class="imgFlagRadius boxOut10black" src="https://lh6.googleusercontent.com/-fZS-2QS1yC8/UT2mAdfnJbI/AAAAAAAAyF0/EG-Jj_8hub8/s24/BBallTr36.png" /> '+strGroup+'</h3><div class="div'+data.getFormattedValue(row, 2)+'">');
     myCount=0;
     myNoCountries++;
    }
   
    myCount++;
-   html.push('<div><div class="clDivData"> <img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /> '+ data.getFormattedValue(row, 2).toUpperCase()+ ' <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 4).toUpperCase() + '</span></div><div class="clDivData2seira">T : '+data.getFormattedValue(row, 3).toUpperCase()+', <br/>Bus : '+ data.getFormattedValue(row, 8)+'<br/>Greek Name : '+data.getFormattedValue(row, 14) +'</div></div>');
+   html.push('<div><div class="clDivData"> <img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /> '+ data.getFormattedValue(row, 2).toUpperCase()+ ' <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 4).toUpperCase() + '</span></div><div class="clDivData2seira">T : '+data.getFormattedValue(row, 3).toUpperCase()+', <br/>Bus : '+ data.getFormattedValue(row, 8)+'<br/><br/>Greek Name : '+data.getFormattedValue(row, 14) +'</div></div>');
   
   }
   html.push('</div>');
