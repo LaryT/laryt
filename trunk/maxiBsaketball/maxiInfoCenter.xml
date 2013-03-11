@@ -567,7 +567,18 @@ function handleQueryResponseTab6(response) {
    }
   
    myCount++;
-   html.push('<div><div class="clDivData"> <img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /> '+ data.getFormattedValue(row, 2).toUpperCase()+ ' <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 4).toUpperCase() + '</span></div><div class="clDivData2seira">T : '+data.getFormattedValue(row, 3).toUpperCase()+', <br/>Bus : '+ data.getFormattedValue(row, 8)+'<br/><br/>Greek Name : '+data.getFormattedValue(row, 14) +'</div></div>');
+   html.push('<div>');
+   
+   html.push('<div class="clDivData"> <img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /> '+ data.getFormattedValue(row, 2).toUpperCase()+ ' <span class="clSpanOnomateponymo"><br/>'+data.getFormattedValue(row, 4).toUpperCase() + '</span></div>');
+   
+   html.push('<div class="clDivData2seira">');
+   html.push('<div>T : '+data.getFormattedValue(row, 3).toUpperCase()+'</div>');
+   html.push('<div>BUS : '+ data.getFormattedValue(row, 8)+'</div>');
+   html.push('<div>&nbsp;</div>');
+   html.push('<div>Greek Name : '+data.getFormattedValue(row, 14) +'</div>');
+   html.push('</div>');
+   
+   html.push('</div>');
   
   }
   html.push('</div>');
