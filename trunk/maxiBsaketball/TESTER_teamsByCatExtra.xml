@@ -580,7 +580,7 @@ function handleQueryResponseTab6(response) {
    html.push('</div>');
    
    
-  html.push('<hr/><iframe src="'+ data.getFormattedValue(row, 5) +'" style="border:1px solid lightgray; padding:5px;margin:1px;"  width="425" height="350" scrolling="no" marginheight="0" marginwidth="0" /></iframe>);
+  html.push('<hr/><iframe src="'+ data.getFormattedValue(row, 5) +'" style="border:1px solid #eee; padding:5px;margin:1px;"  width="425" height="350" scrolling="no" marginheight="0" marginwidth="0" /></iframe>');
   
    html.push('<hr/><div class="clDivData2seira">Map  : <a href="'+data.getFormattedValue(row, 5)+'" style="color:#2200c1;text-decoration:none;" target="_blank"> Open in new window </a></div><hr/>');
    
