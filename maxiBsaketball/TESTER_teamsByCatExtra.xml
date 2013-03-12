@@ -573,10 +573,17 @@ function handleQueryResponseTab6(response) {
    
    html.push('<div class="clDivData2seira">');
    html.push('<div>T : '+data.getFormattedValue(row, 3).toUpperCase()+'</div>');
-   html.push('<div>BUS : '+ data.getFormattedValue(row, 8)+'</div>');
+   html.push('<div>BUS : <br/>'+ data.getFormattedValue(row, 8)+'</div>');
    html.push('<div>&nbsp;</div>');
    html.push('<div>Greek Name : '+data.getFormattedValue(row, 14) +'</div>');
    html.push('</div>');
+   html.push('</div>');
+   
+   
+  html.push('<hr/><iframe src='"+ data.getFormattedValue(row, 5) +"&t=h&output=embed' style='border:1px solid gray; padding:5px;margin:1px;height:325px;width:95%;'  scrolling='no' marginheight='0' marginwidth='0' /></iframe>');
+  
+   html.push('<hr/><div>Map  : <a href="'+data.getFormattedValue(row, 5)+'" target="_blank">'+Open in new window +'</div><hr/>');
+   
    
    html.push('</div>');
   
