@@ -580,7 +580,7 @@ function handleQueryResponseTab6(response) {
    html.push('</div>');
    
    
-  html.push('<hr/><center><iframe src="'+ data.getFormattedValue(row, 5) +'&t=h&output=embed" style="border:1px solid gray; padding:5px;margin:1px;height:325px;width:80%;"  scrolling="no" marginheight="0" marginwidth="0" /></iframe></center>');
+  html.push('<hr/><center><iframe src="'+ data.getFormattedValue(row, 5) +'" style="border:1px solid gray; padding:5px;margin:1px;height:480px;width:640px;"  scrolling="no" marginheight="0" marginwidth="0" /></iframe></center>');
   
    html.push('<hr/><div class="clSpanOnomateponymo">Map  : <a href="'+data.getFormattedValue(row, 5)+'" target="_blank"> Open in new window </a></div><hr/>');
    
