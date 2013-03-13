@@ -580,7 +580,7 @@ function handleQueryResponseTab6(response) {
    html.push('</div>');
    
    
-  html.push('<hr/><img src="http://maps.googleapis.com/maps/api/staticmap?center=40.656086,22.946577&zoom=11&size=400x400&sensor=false">');
+  html.push('<hr/><img src="http://maps.googleapis.com/maps/api/staticmap?center=40.656086,22.946577&zoom=15&size=300x300&sensor=false&markers=color:blue%7Clabel:S%7C40.656086,22.946577">');
   
    html.push('<hr/><div class="clDivData2seira">Map  : <a href="'+data.getFormattedValue(row, 5)+'" style="color:#2200c1;text-decoration:none;" target="_blank"> Open in new window </a></div><hr/>');
    
