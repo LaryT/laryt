@@ -536,7 +536,7 @@ function handleQueryResponseTab5(response) {
   document.getElementById("divIDTab5").innerHTML = html.join('');
   $("#divIDTab5").accordion({heightStyle: "content"});
   }else {
-   document.getElementById("divIDTab5").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAMs (for registrated Teams)</div>';
+   document.getElementById("divIDTab5").innerHTML = '<div class="clSpanOnomateponymo"> 0 Ομάδες </div>';
   }
 
  $("#divIDTab5").accordion( "refresh" );
@@ -603,11 +603,11 @@ function handleQueryResponseTab6(response) {
   }
   html.push('</div>');
    var strForRoll6 = 'Πληροφορίες για <span class="clSpanOnomateponymo">'+posesEggrafes+' γήπεδα μπάσκετ</span>';
-   document.getElementById("myTitleID").innerHTML ="<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();'>"+strForRoll6+"</marquee>";
+  document.getElementById("myTitleID").innerHTML +="<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();'>"+strForRoll6+"</marquee>";
   document.getElementById("divIDTab6").innerHTML = html.join('');
   $("#divIDTab6").accordion({heightStyle: "content"});
   }else {
-   document.getElementById("divIDTab6").innerHTML = '<div class="clSpanOnomateponymo"> 0 Stadiums</div>';
+   document.getElementById("divIDTab6").innerHTML = '<div class="clSpanOnomateponymo"> 0 Γήπεδα</div>';
   }
 
  $("#divIDTab6").accordion( "refresh" );
@@ -673,7 +673,7 @@ $( "#divIDTab6" ).accordion( "destroy" );
  </div>
  <div>
     <div id="myTitleID"><marquee>Πληροφορίες για τα : Γήπεδα, Ομάδες και Στοιχεία πρωταθλημάτων  </marquee></div>
-    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter ΕΣΚΑΝΑ &nbsp;|&nbsp; <a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a>
+    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter &nbsp;|&nbsp; <a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a>
     </div>
   
     <div id="divIDTab1" class="periexomenaCL"></div>
@@ -685,7 +685,7 @@ $( "#divIDTab6" ).accordion( "destroy" );
   </div>
   
 <center>
-<div id="addiv"><p class="pClepikefalida"><br/><br/><br/>ΕΣΚΑΝΑ InfoCenter<br/></p>
+<div id="addiv"><p class="pClepikefalida"><br/><br/><br/>InfoCenter<br/></p>
 <p class="pClRow">1ο Βήμα : Click στο "X" για συνέχεια.</p>
 <p class="pClRow">2ο Βήμα : Επιλογή της επιθυμητής καρτέλας (tab).</p>
 <p class="pClRow">3ο Βήμα : Διαλογή δεδομένων από το πεδίο Επιλογή.<br/><br/></p>
