@@ -201,9 +201,9 @@ function sendQueryTab1() {
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
   if( mCatTab1!="" ){
-   strQTab1='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCatTab1 +'"  order by C,B,E desc,F';
+   strQTab1='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCatTab1 +'"  order by C,B,F,G';
   }else{
-   strQTab1='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F';
+   strQTab1='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,F,G';
   }
    queryTab1.setQuery(strQTab1);   
    queryTab1.send(handleQueryResponseTab1);  
@@ -304,7 +304,7 @@ if (response.isError()) {
    }
   
    myCount++;
-   html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 4) +') </div><div class="clDivData2seira">Position : '+data.getFormattedValue(row, 6)+', Year : <span class="clSpanOnomateponymo">'+ data.getFormattedValue(row, 9)  +'</span>, Size : ' + data.getFormattedValue(row, 10)+', P/ID '+ data.getFormattedValue(row, 11).substr(0,4)+'...</div></div>');
+   html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 4) +') </div><div class="clDivData2seira">Θέση : '+data.getFormattedValue(row, 6)+', Ετος : <span class="clSpanOnomateponymo">'+ data.getFormattedValue(row, 9)  +'</span>, Ύψος : ' + data.getFormattedValue(row, 10)+', Φωτο: '+ data.getFormattedValue(row, 11).substr(0,4)+'...</div></div>');
   
   }
   html.push('</div>');
@@ -312,7 +312,7 @@ if (response.isError()) {
   document.getElementById("divIDTab1").innerHTML = html.join('');
   $( "#divIDTab1" ).accordion({heightStyle: "content"});
   }else {
-   document.getElementById("divIDTab1").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
+   document.getElementById("divIDTab1").innerHTML = '<div class="clSpanOnomateponymo"> Δεν υπάρχουν Rosters (για την κατηγορία αυτή)</div>';
   }
   
  $( "#divIDTab1" ).accordion( "refresh" );
@@ -334,9 +334,9 @@ if (response.isError()) {
 
 
  if(posesEggrafes > 0) {
-    html4group2.push('Filter : ');
+    html4group2.push('Επιλογή : ');
     html4group2.push('<select id="query-3" onchange="setNewQuery(this.value)">');
-    html4group2.push('<option value="">All</option>');
+    html4group2.push('<option value="">Όλα</option>');
  
   for (var row = 0; row < posesEggrafes; row++) {
      html4group2.push('<option value="'+data.getFormattedValue(row, 0)+'">'+data.getFormattedValue(row, 0)+'</option>');  
