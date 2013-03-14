@@ -587,23 +587,13 @@ function handleQueryResponseTab6(response) {
    
    
   html.push('<hr/><img src="http://maps.googleapis.com/maps/api/staticmap?center='+data.getFormattedValue(row, 5)+'&zoom=15&size=400x300&maptype=hybrid&sensor=false&markers=color:gold%7Clabel:'+data.getFormattedValue(row, 15)+'%7C'+data.getFormattedValue(row, 5)+'">');
-  
-  /*
-  html.push('<hr/><img src="http://maps.googleapis.com/maps/api/streetview?size=600x400&location='+data.getFormattedValue(row, 5)+'&sensor=false" />');
-  
-  https://maps.google.com/maps/ms?msid=205502481779518675699.0004909c0ee934dd8cf70&msa=0&ll=37.895447,23.67897&spn=0.435651,0.8638
-  
-  */
-  
+    
    html.push('<hr/><div class="clDivData2seira">Χάρτης Γηπέδων Μπάσκετ  : <a href="https://maps.google.com/maps/ms?msa=0&msid=205502481779518675699.0004909c0ee934dd8cf70&ie=UTF8&t=h&ll=37.895447,23.67897&spn=0.435651,0.8638&z=12&output=embed" style="color:#2200c1;text-decoration:none;" target="_blank"> Άνοιγμα σε νέο παράθυρο </a></div><hr/>');
-   
-   
-   html.push('</div>');
   
+   html.push('</div>');  
   }
   html.push('</div>');
-   var strForRoll6 = 'Πληροφορίες για <span class="clSpanOnomateponymo">'+posesEggrafes+' γήπεδα μπάσκετ</span>';
-  document.getElementById("myTitleID").innerHTML +="<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();'>"+strForRoll6+"</marquee>";
+ 
   document.getElementById("divIDTab6").innerHTML = html.join('');
   $("#divIDTab6").accordion({heightStyle: "content"});
   }else {
