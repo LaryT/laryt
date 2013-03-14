@@ -273,12 +273,18 @@ function sendQueryTab6() {
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey6 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
 if( mCatTab6!="" ){
-   strQTab6='select A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P where J="'+mCatTab6 +'"  order by A';
+   strQTab6='select A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P where J="'+mCatTab6 +'"  order by C';
   }else{
-   strQTab6='SELECT A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P order by A';
+   strQTab6='SELECT A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P order by C';
   }
   queryTab1.setQuery(strQTab6);   
   queryTab1.send(handleQueryResponseTab6); 
+    //-------- gia ta filter cathgorivn
+   queryTab1 = new google.visualization.Query(myURLfeedTab1);
+   strTab1filter = 'select B, count(C) group by B';
+   queryTab1.setQuery(strTab1filter);
+   queryTab1.send(handleQueryResponseTab6Filter);
+   $( "#divIDTab6" ).accordion( "refresh" );
 }
 //-----
 //- make div Tab1
@@ -295,11 +301,11 @@ if (response.isError()) {
   var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
   var myCount=0;  
   
-  html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 2)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(0, 2)+'">');
+  html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 2)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(0, 2)+'"><div><span class="pClRow">'+data.getFormattedValue(0, 2)+'</span></div>');
   for (var row = 0; row < posesEggrafes; row++) {
    if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
     strGroup = data.getFormattedValue(row, 1).toUpperCase();
-    html.push('</div><h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(row, 2)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(row, 2)+'">');
+    html.push('</div><h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(row, 2)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(row, 2)+'"><div><span class="pClRow">'+data.getFormattedValue(row, 2)+'</span></div>');
     myCount=0;
    }
   
@@ -530,7 +536,7 @@ function handleQueryResponseTab5(response) {
   document.getElementById("divIDTab5").innerHTML = html.join('');
   $("#divIDTab5").accordion({heightStyle: "content"});
   }else {
-   document.getElementById("divIDTab5").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAMs (for registrated Teams)</div>';
+   document.getElementById("divIDTab5").innerHTML = '<div class="clSpanOnomateponymo"> 0 Ομάδες </div>';
   }
 
  $("#divIDTab5").accordion( "refresh" );
@@ -569,7 +575,7 @@ function handleQueryResponseTab6(response) {
    myCount++;
    html.push('<div>');
    
-   html.push('<div class="clDivData"> <img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /> '+ data.getFormattedValue(row, 2).toUpperCase()+ ' <span class="clSpanOnomateponymo"><br/>'+data.getFormattedValue(row, 4).toUpperCase() + '</span></div>');
+   html.push('<div class="clDivData"> <img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /> '+ data.getFormattedValue(row, 2).toUpperCase()+'<br/> Περιοχή : <span class="clSpanOnomateponymo">'+ data.getFormattedValue(row, 1)+'  <br/>'+data.getFormattedValue(row, 4).toUpperCase() + '</span></div>');
    
    html.push('<div class="clDivData2seira">');
    html.push('<div>T : '+data.getFormattedValue(row, 3).toUpperCase()+'</div>');
@@ -581,32 +587,63 @@ function handleQueryResponseTab6(response) {
    
    
   html.push('<hr/><img src="http://maps.googleapis.com/maps/api/staticmap?center='+data.getFormattedValue(row, 5)+'&zoom=15&size=400x300&maptype=hybrid&sensor=false&markers=color:gold%7Clabel:'+data.getFormattedValue(row, 15)+'%7C'+data.getFormattedValue(row, 5)+'">');
-  
-  /*
-  html.push('<hr/><img src="http://maps.googleapis.com/maps/api/streetview?size=600x400&location='+data.getFormattedValue(row, 5)+'&sensor=false" />');
-  
-  https://maps.google.com/maps/ms?msid=205502481779518675699.0004909c0ee934dd8cf70&msa=0&ll=37.895447,23.67897&spn=0.435651,0.8638
-  
-  */
-  
+    
    html.push('<hr/><div class="clDivData2seira">Χάρτης Γηπέδων Μπάσκετ  : <a href="https://maps.google.com/maps/ms?msa=0&msid=205502481779518675699.0004909c0ee934dd8cf70&ie=UTF8&t=h&ll=37.895447,23.67897&spn=0.435651,0.8638&z=12&output=embed" style="color:#2200c1;text-decoration:none;" target="_blank"> Άνοιγμα σε νέο παράθυρο </a></div><hr/>');
-   
-   
-   html.push('</div>');
   
+   html.push('</div>');  
   }
   html.push('</div>');
-   var strForRoll6 = 'Πληροφορίες για <span class="clSpanOnomateponymo">'+posesEggrafes+' γήπεδα μπάσκετ</span>';
-   document.getElementById("myTitleID").innerHTML ="<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();'>"+strForRoll6+"</marquee>";
+ 
   document.getElementById("divIDTab6").innerHTML = html.join('');
   $("#divIDTab6").accordion({heightStyle: "content"});
   }else {
-   document.getElementById("divIDTab6").innerHTML = '<div class="clSpanOnomateponymo"> 0 Stadiums</div>';
+   document.getElementById("divIDTab6").innerHTML = '<div class="clSpanOnomateponymo"> 0 Γήπεδα</div>';
   }
 
  $("#divIDTab6").accordion( "refresh" );
  gadgets.window.adjustHeight();
  }
+//-----
+//- make div Tab6Filter
+//-----
+function handleQueryResponseTab6Filter(response) {
+
+if (response.isError()) {
+     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+     return;
+ }
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+ var html4group2 =[]; 
+
+
+ if(posesEggrafes > 0) {
+    html4group2.push('Επιλογή : ');
+    html4group2.push('<select id="query-6" onchange="setNewQueryTab6Filter(this.value)">');
+    html4group2.push('<option value="">Όλα</option>');
+ 
+  for (var row = 0; row < posesEggrafes; row++) {
+     html4group2.push('<option value="'+data.getFormattedValue(row, 0)+'">'+data.getFormattedValue(row, 0)+'</option>');  
+  }
+
+  html4group2.push('</select>');
+  document.getElementById("myTitleID").innerHTML = html4group2.join('');
+ }
+ gadgets.window.adjustHeight();
+
+}
+//----------- epilogh filtroy tab6
+function setNewQueryTab6Filter(queryString) {  
+document.getElementById("divIDTab6").innerHTML ="";
+$( "#divIDTab6" ).accordion( "destroy" );
+
+ if(queryString !=""){
+   queryTab1.setQuery('where B="'+queryString+'"');   
+ }else{
+    queryTab1.setQuery('SELECT A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P order by C');
+ }  
+ queryTab1.send(handleQueryResponseTab6);  
+} 
 </script>  
 </head>
 <body>
@@ -626,7 +663,7 @@ function handleQueryResponseTab6(response) {
  </div>
  <div>
     <div id="myTitleID"><marquee>Πληροφορίες για τα : Γήπεδα, Ομάδες και Στοιχεία πρωταθλημάτων  </marquee></div>
-    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter ΕΣΚΑΝΑ &nbsp;|&nbsp; <a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a>
+    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter &nbsp;|&nbsp; <a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a>
     </div>
   
     <div id="divIDTab1" class="periexomenaCL"></div>
@@ -638,10 +675,10 @@ function handleQueryResponseTab6(response) {
   </div>
   
 <center>
-<div id="addiv"><!--  p class="pClepikefalida"><br/><br/><br/>Welcome to InfoCenter<br/></p>
-<p class="pClRow">1st Step : Click the "X" button to continue.</p>
-<p class="pClRow">2nd Step : Select at the top the tab-category.</p>
-<p class="pClRow">3rd Step : Select the Filter from the Option Field.<br/><br/></p  -->
+<div id="addiv"><p class="pClepikefalida"><br/><br/><br/>InfoCenter<br/></p>
+<p class="pClRow">1ο Βήμα : Click στο "X" για συνέχεια.</p>
+<p class="pClRow">2ο Βήμα : Επιλογή της επιθυμητής καρτέλας (tab).</p>
+<p class="pClRow">3ο Βήμα : Διαλογή δεδομένων από το πεδίο Επιλογή.<br/><br/></p>
 
 
 <a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="απόκρυψη - hide ads">X</a><br/>
