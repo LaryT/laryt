@@ -279,6 +279,12 @@ if( mCatTab6!="" ){
   }
   queryTab1.setQuery(strQTab6);   
   queryTab1.send(handleQueryResponseTab6); 
+    //-------- gia ta filter cathgorivn
+   queryTab1 = new google.visualization.Query(myURLfeedTab1);
+   strTab1filter = 'select B, count(C) group by B';
+   queryTab1.setQuery(strTab1filter);
+   queryTab1.send(handleQueryResponseTab6Filter);
+   $( "#divIDTab6" ).accordion( "refresh" );
 }
 //-----
 //- make div Tab1
@@ -607,6 +613,47 @@ function handleQueryResponseTab6(response) {
  $("#divIDTab6").accordion( "refresh" );
  gadgets.window.adjustHeight();
  }
+//-----
+//- make div Tab6Filter
+//-----
+function handleQueryResponseTab6Filter(response) {
+
+if (response.isError()) {
+     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+     return;
+ }
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+ var html4group2 =[]; 
+
+
+ if(posesEggrafes > 0) {
+    html4group2.push('Επιλογή : ');
+    html4group2.push('<select id="query-6" onchange="setNewQueryTab6Filter(this.value)">');
+    html4group2.push('<option value="">Όλα</option>');
+ 
+  for (var row = 0; row < posesEggrafes; row++) {
+     html4group2.push('<option value="'+data.getFormattedValue(row, 1)+'">'+data.getFormattedValue(row, 0)+'</option>');  
+  }
+
+  html4group2.push('</select>');
+  document.getElementById("myTitleID").innerHTML = html4group2.join('');
+ }
+ gadgets.window.adjustHeight();
+
+}
+//----------- epilogh filtroy tab6
+function setNewQueryTab6Filter(queryString) {  
+document.getElementById("divIDTab6").innerHTML ="";
+$( "#divIDTab6" ).accordion( "destroy" );
+
+ if(queryString !=""){
+   queryTab1.setQuery('where B="'+queryString+'"');   
+ }else{
+    queryTab1.setQuery('SELECT A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P order by C');
+ }  
+ queryTab1.send(handleQueryResponseTab6);  
+} 
 </script>  
 </head>
 <body>
