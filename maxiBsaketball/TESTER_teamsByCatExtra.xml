@@ -295,11 +295,11 @@ if (response.isError()) {
   var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
   var myCount=0;  
   
-  html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 2)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(0, 2)+'">');
+  html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 2)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(0, 2)+'"><div><span class="pClRow">'+data.getFormattedValue(0, 2)+'</span></div>');
   for (var row = 0; row < posesEggrafes; row++) {
    if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
     strGroup = data.getFormattedValue(row, 1).toUpperCase();
-    html.push('</div><h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(row, 2)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(row, 2)+'">');
+    html.push('</div><h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(row, 2)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(row, 2)+'"><div><span class="pClRow">'+data.getFormattedValue(row, 2)+'</span></div>');
     myCount=0;
    }
   
