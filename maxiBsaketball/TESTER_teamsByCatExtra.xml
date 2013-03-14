@@ -273,9 +273,9 @@ function sendQueryTab6() {
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey6 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
 if( mCatTab6!="" ){
-   strQTab6='select A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P where J="'+mCatTab6 +'"  order by B';
+   strQTab6='select A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P where J="'+mCatTab6 +'"  order by C';
   }else{
-   strQTab6='SELECT A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P order by B';
+   strQTab6='SELECT A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P order by C';
   }
   queryTab1.setQuery(strQTab6);   
   queryTab1.send(handleQueryResponseTab6); 
@@ -556,12 +556,12 @@ function handleQueryResponseTab6(response) {
   var myNoCountries=1;   
   
   
-  html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 2)+'"><img class="imgFlagRadius boxOut10black"  src="https://lh6.googleusercontent.com/-fZS-2QS1yC8/UT2mAdfnJbI/AAAAAAAAyF0/EG-Jj_8hub8/s24/BBallTr36.png" /> '+strGroup+' ['+ data.getFormattedValue(0, 1) +']</h3><div class="div'+data.getFormattedValue(0, 2)+'">');
+  html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 2)+'"><img class="imgFlagRadius boxOut10black"  src="https://lh6.googleusercontent.com/-fZS-2QS1yC8/UT2mAdfnJbI/AAAAAAAAyF0/EG-Jj_8hub8/s24/BBallTr36.png" /> '+strGroup+'</h3><div class="div'+data.getFormattedValue(0, 2)+'">');
   
   for (var row = 0; row < posesEggrafes; row++) {
    if( strGroup != data.getFormattedValue(row, 2).toUpperCase() ){
     strGroup = data.getFormattedValue(row, 2).toUpperCase();
-    html.push('</div><h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(row, 2)+'"><img class="imgFlagRadius boxOut10black" src="https://lh6.googleusercontent.com/-fZS-2QS1yC8/UT2mAdfnJbI/AAAAAAAAyF0/EG-Jj_8hub8/s24/BBallTr36.png" /> '+strGroup+' ['+ data.getFormattedValue(row, 1) +']</h3><div class="div'+data.getFormattedValue(row, 2)+'">');
+    html.push('</div><h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(row, 2)+'"><img class="imgFlagRadius boxOut10black" src="https://lh6.googleusercontent.com/-fZS-2QS1yC8/UT2mAdfnJbI/AAAAAAAAyF0/EG-Jj_8hub8/s24/BBallTr36.png" /> '+strGroup+'</h3><div class="div'+data.getFormattedValue(row, 2)+'">');
     myCount=0;
     myNoCountries++;
    }
@@ -569,7 +569,7 @@ function handleQueryResponseTab6(response) {
    myCount++;
    html.push('<div>');
    
-   html.push('<div class="clDivData"> <img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /> '+ data.getFormattedValue(row, 2).toUpperCase()+' Περιοχή : '+ data.getFormattedValue(row, 1) +' <span class="clSpanOnomateponymo"><br/>'+data.getFormattedValue(row, 4).toUpperCase() + '</span></div>');
+   html.push('<div class="clDivData"> <img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /> '+ data.getFormattedValue(row, 2).toUpperCase()+'<br/> Περιοχή : <span class="clSpanOnomateponymo">'+ data.getFormattedValue(row, 1)+'  <br/>'+data.getFormattedValue(row, 4).toUpperCase() + '</span></div>');
    
    html.push('<div class="clDivData2seira">');
    html.push('<div>T : '+data.getFormattedValue(row, 3).toUpperCase()+'</div>');
