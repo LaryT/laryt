@@ -633,7 +633,7 @@ if (response.isError()) {
     html4group2.push('<option value="">Όλα</option>');
  
   for (var row = 0; row < posesEggrafes; row++) {
-     html4group2.push('<option value="'+data.getFormattedValue(row, 1)+'">'+data.getFormattedValue(row, 0)+'</option>');  
+     html4group2.push('<option value="'+data.getFormattedValue(row, 0)+'">'+data.getFormattedValue(row, 0)+'</option>');  
   }
 
   html4group2.push('</select>');
@@ -685,10 +685,10 @@ $( "#divIDTab6" ).accordion( "destroy" );
   </div>
   
 <center>
-<div id="addiv"><!--  p class="pClepikefalida"><br/><br/><br/>Welcome to InfoCenter<br/></p>
-<p class="pClRow">1st Step : Click the "X" button to continue.</p>
-<p class="pClRow">2nd Step : Select at the top the tab-category.</p>
-<p class="pClRow">3rd Step : Select the Filter from the Option Field.<br/><br/></p  -->
+<div id="addiv"><p class="pClepikefalida"><br/><br/><br/>ΕΣΚΑΝΑ InfoCenter<br/></p>
+<p class="pClRow">1ο Βήμα : Click στο "X" για συνέχεια.</p>
+<p class="pClRow">2ο Βήμα : Επιλογή της επιθυμητής καρτέλας (tab).</p>
+<p class="pClRow">3ο Βήμα : Διαλογή δεδομένων από το πεδίο Επιλογή.<br/><br/></p>
 
 
 <a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="απόκρυψη - hide ads">X</a><br/>
