@@ -586,7 +586,7 @@ function handleQueryResponseTab6(response) {
    html.push('</div>');
    
    
-  html.push('<hr/><img src="http://maps.googleapis.com/maps/api/staticmap?center='+data.getFormattedValue(row, 5)+'&zoom=15&size=400x300&maptype=hybrid&sensor=false&markers=color:gold%7Clabel:'+data.getFormattedValue(row, 15)+'%7C'+data.getFormattedValue(row, 5)+'">');
+  html.push('<hr/><img src="http://maps.googleapis.com/maps/api/staticmap?center='+data.getFormattedValue(row, 5)+'&zoom=15&size=400x300&maptype=hybrid&sensor=false&markers=color:gold%7Clabel:'+data.getFormattedValue(row, 15)+'%7C'+data.getFormattedValue(row, 5)+'"/>');
     
    html.push('<hr/><div class="clDivData2seira">Χάρτης Γηπέδων Μπάσκετ  : <a href="https://maps.google.com/maps/ms?msa=0&msid=205502481779518675699.0004909c0ee934dd8cf70&ie=UTF8&t=h&ll=37.895447,23.67897&spn=0.435651,0.8638&z=12&output=embed" style="color:#2200c1;text-decoration:none;" target="_blank"> Άνοιγμα σε νέο παράθυρο </a></div><hr/>');
   
