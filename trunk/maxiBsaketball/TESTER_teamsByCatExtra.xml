@@ -81,7 +81,7 @@ if(mKey5 === ""){
  mKey5="0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc";
 }
 if(mKey6 === ""){
- mKey6="0AjrqMWGJ6suYdDJrYWRjVXZ6ZVNWNDJLdjBjaGQyVkE";
+ mKey6="0AjrqMWGJ6suYdFM2MVZJdmVKZGNpRVF4YUJKYXo5Wnc";
 }
 //for filter in a Tab
 var mCatTab1 ="";
@@ -96,7 +96,7 @@ var captionTab2 = "Championships";
 var captionTab3 = "Medals";
 var captionTab4 = "Teams";
 var captionTab5 = "Categories";
-var captionTab6 = "Stadiums";
+var captionTab6 = "Γήπεδα";
 
 
 var strQTab1;
@@ -573,9 +573,9 @@ function handleQueryResponseTab6(response) {
    
    html.push('<div class="clDivData2seira">');
    html.push('<div>T : '+data.getFormattedValue(row, 3).toUpperCase()+'</div>');
-   html.push('<div>BUS : <br/>'+ data.getFormattedValue(row, 8)+'</div>');
+   html.push('<div>Συγκοινωνία : <br/>'+ data.getFormattedValue(row, 8)+'</div>');
    html.push('<div>&nbsp;</div>');
-   html.push('<div>Greek Name : '+data.getFormattedValue(row, 14) +'</div>');
+   html.push('<div>Πληροφορίες : '+data.getFormattedValue(row, 14) +'</div>');
    html.push('</div>');
    html.push('</div>');
    
@@ -584,16 +584,19 @@ function handleQueryResponseTab6(response) {
   
   /*
   html.push('<hr/><img src="http://maps.googleapis.com/maps/api/streetview?size=600x400&location='+data.getFormattedValue(row, 5)+'&sensor=false" />');
+  
+  https://maps.google.com/maps/ms?msid=205502481779518675699.0004909c0ee934dd8cf70&msa=0&ll=37.895447,23.67897&spn=0.435651,0.8638
+  
   */
   
-   html.push('<hr/><div class="clDivData2seira">Map  : <a href="https://maps.google.com/maps/ms?msa=0&msid=205502481779518675699.0004c1acbad79f1068b50&ie=UTF8&t=h&ll=40.656086,22.946577&spn=0.00617,0.011845&z=12&output=embed" style="color:#2200c1;text-decoration:none;" target="_blank"> Open in new window </a></div><hr/>');
+   html.push('<hr/><div class="clDivData2seira">Χάρτης Γηπέδων Μπάσκετ  : <a href="https://maps.google.com/maps/ms?msa=0&msid=205502481779518675699.0004909c0ee934dd8cf70&ie=UTF8&t=h&ll=37.895447,23.67897&spn=0.435651,0.8638&z=12&output=embed" style="color:#2200c1;text-decoration:none;" target="_blank"> Άνοιγμα σε νέο παράθυρο </a></div><hr/>');
    
    
    html.push('</div>');
   
   }
   html.push('</div>');
-   var strForRoll6 = 'Arenas  : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>';
+   var strForRoll6 = 'Πληροφορίες για <span class="clSpanOnomateponymo">'+posesEggrafes+' γήπεδα μπάσκετ</span>';
    document.getElementById("myTitleID").innerHTML ="<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();'>"+strForRoll6+"</marquee>";
   document.getElementById("divIDTab6").innerHTML = html.join('');
   $("#divIDTab6").accordion({heightStyle: "content"});
@@ -611,19 +614,19 @@ function handleQueryResponseTab6(response) {
    <div id="pano-tmhma" >
    <div id="myTabs">
    <ul>
-     <li id="tabLi4"><a href="javascript:void(0);" onclick="selectTab('divIDTab4','tabLi4' );return false;"><span id="spanIDTab4">Tab4</span></a></li>
+     <!-- li id="tabLi4"><a href="javascript:void(0);" onclick="selectTab('divIDTab4','tabLi4' );return false;"><span id="spanIDTab4">Tab4</span></a></li>
      <li id="tabLi5"><a href="javascript:void(0);" onclick="selectTab('divIDTab5','tabLi5' );return false;"><span id="spanIDTab5">Tab5</span></a></li>     
-     <li id="tabLi1"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','tabLi1' );return false;"><span id="spanIDTab1">Tab1</span></a></li>
+     <li id="tabLi1"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','tabLi1' );return false;"><span id="spanIDTab1">Tab1</span></a></li  -->
      <li id="tabLi6"><a href="javascript:void(0);" onclick="selectTab('divIDTab6','tabLi6' );return false;"><span id="spanIDTab6">Tab6</span></a></li>     
-     <li id="tabLi2"><a href="javascript:void(0);" onclick="selectTab('divIDTab2','tabLi2' );return false;"><span id="spanIDTab2">Tab2</span></a></li>
-     <li id="tabLi3"><a href="javascript:void(0);" onclick="selectTab('divIDTab3','tabLi3' );return false;"><span id="spanIDTab3">Tab3</span></a></li>
+     <!-- li id="tabLi2"><a href="javascript:void(0);" onclick="selectTab('divIDTab2','tabLi2' );return false;"><span id="spanIDTab2">Tab2</span></a></li>
+     <li id="tabLi3"><a href="javascript:void(0);" onclick="selectTab('divIDTab3','tabLi3' );return false;"><span id="spanIDTab3">Tab3</span></a></li  -->
 
      </ul>
    </div>
  </div>
  <div>
-    <div id="myTitleID"><marquee>Team participations - Team rosters - History FIMBA World Maxibasketball Championships. From 1st to 12th </marquee></div>
-    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter : Data updating every 4-6 hours &nbsp;|&nbsp; <a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a>
+    <div id="myTitleID"><marquee>Πληροφορίες για τα : Γήπεδα, Ομάδες και Στοιχεία πρωταθλημάτων  </marquee></div>
+    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter ΕΣΚΑΝΑ &nbsp;|&nbsp; <a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a>
     </div>
   
     <div id="divIDTab1" class="periexomenaCL"></div>
@@ -635,33 +638,36 @@ function handleQueryResponseTab6(response) {
   </div>
   
 <center>
-<div id="addiv"><p class="pClepikefalida"><br/><br/><br/>Welcome to InfoCenter<br/></p>
+<div id="addiv"><!--  p class="pClepikefalida"><br/><br/><br/>Welcome to InfoCenter<br/></p>
 <p class="pClRow">1st Step : Click the "X" button to continue.</p>
 <p class="pClRow">2nd Step : Select at the top the tab-category.</p>
-<p class="pClRow">3rd Step : Select the Filter from the Option Field.<br/><br/></p>
+<p class="pClRow">3rd Step : Select the Filter from the Option Field.<br/><br/></p  -->
 
 
 <a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="απόκρυψη - hide ads">X</a><br/>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
-/* 300 x 250 box maxi ga history */
-google_ad_slot = "1196420280";
+/* 300 x 250 box info center */
+google_ad_slot = "5017931393";
 google_ad_width = 300;
 google_ad_height = 250;
 //-->
 </script>
-<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 </div>
 </center>
 
 <script>
 // myInitMaxiAge();
+/*
 document.getElementById("spanIDTab1").innerHTML = captionTab1;
 document.getElementById("spanIDTab2").innerHTML = captionTab2;
 document.getElementById("spanIDTab3").innerHTML = captionTab3;
 document.getElementById("spanIDTab4").innerHTML = captionTab4;
 document.getElementById("spanIDTab5").innerHTML = captionTab5;
+*/
 document.getElementById("spanIDTab6").innerHTML = captionTab6;
 gadgets.window.adjustHeight();
 </script>
