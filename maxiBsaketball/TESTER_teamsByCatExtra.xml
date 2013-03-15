@@ -72,7 +72,7 @@ if(mKey2 === ""){
  mKey2="0AjrqMWGJ6suYdHFEbFV2RnROLUlQSzBHdXQ0dU1yYlE";
 }
 if(mKey3 === ""){
- mKey3="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
+ mKey3="0AjrqMWGJ6suYdGt3TDdHSVBKWDlmY0Z0YUVJMGpHcGc";
 }
 if(mKey4 === ""){
  mKey4="0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc";
@@ -93,7 +93,7 @@ var mCatTab6 ="";
 
 var captionTab1 = "Rosters";
 var captionTab2 = "Championships";
-var captionTab3 = "Medals";
+var captionTab3 = "Διακρίσεις";
 var captionTab4 = "Teams";
 var captionTab5 = "Categories";
 var captionTab6 = "Γήπεδα";
@@ -233,9 +233,9 @@ function sendQueryTab3() {
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey3 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
 if( mCatTab3!="" ){
-   strQTab3='select A,B,C,D,E,F,G,H,I,J,K,L where C="'+mCatTab3 +'"  order by H,D,G';
+   strQTab3='select A,B,C,D,E,F,G,H,I,J,K,L where C="'+mCatTab3 +'"  order by H desc,D,G';
   }else{
-   strQTab3='select A,B,C,D,E,F,G,H,I,J,K,L order by H,D,G';
+   strQTab3='select A,B,C,D,E,F,G,H,I,J,K,L order by H desc,D,G';
   }
   queryTab1.setQuery(strQTab3);   
   queryTab1.send(handleQueryResponseTab3); 
@@ -451,7 +451,7 @@ html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRad
   document.getElementById("divIDTab3").innerHTML = html.join('');
   $( "#divIDTab3" ).accordion({heightStyle: "content"});
  }else{
-   document.getElementById("divIDTab3").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
+   document.getElementById("divIDTab3").innerHTML = '<div class="clSpanOnomateponymo"> 0 Διακρίσεις</div>';
  }
  $("#divIDTab3").accordion( "refresh" );
  gadgets.window.adjustHeight();
@@ -702,7 +702,9 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 document.getElementById("spanIDTab1").innerHTML = captionTab1;
 /*
 document.getElementById("spanIDTab2").innerHTML = captionTab2;
+*/
 document.getElementById("spanIDTab3").innerHTML = captionTab3;
+/*
 document.getElementById("spanIDTab4").innerHTML = captionTab4;
 document.getElementById("spanIDTab5").innerHTML = captionTab5;
 */
