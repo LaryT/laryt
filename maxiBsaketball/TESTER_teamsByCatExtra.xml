@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="__UP_my_name__" height="800" scrolling="true" width="335" scaling="true" title_url="http://www.grbasket.gr" description="Results" author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="." screenshot="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s275/box_match_center.png" thumbnail="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s125/box_match_center.png" category="sport" category2="news" > 
+  <ModulePrefs title="__UP_my_name__" height="800" scrolling="true" width="335" scaling="true" title_url="http://www.grbasket.gr" description="Results |::| Display results in your blog or website " author="LaryT" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="AIEN ARISTEYEIN" screenshot="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s275/box_match_center.png" thumbnail="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s125/box_match_center.png" category="sport" category2="news" > 
     <Require feature="setprefs" />    
     <Require feature="dynamic-height" />
   </ModulePrefs>
@@ -586,7 +586,7 @@ function handleQueryResponseTab6(response) {
    html.push('</div>');
    
    
-  html.push('<hr/><img src="http://maps.googleapis.com/maps/api/staticmap?center='+data.getFormattedValue(row, 5)+'&zoom=15&size=400x300&maptype=hybrid&sensor=false&markers=color:gold%7Clabel:'+data.getFormattedValue(row, 15)+'%7C'+data.getFormattedValue(row, 5)+'"/>');
+  html.push('<hr/><img src="http://maps.googleapis.com/maps/api/staticmap?center='+data.getFormattedValue(row, 5)+'&zoom=15&size=400x300&maptype=hybrid&sensor=false&markers=color:gold%7Clabel:'+data.getFormattedValue(row, 15)+'%7C'+data.getFormattedValue(row, 5)+'" />');
     
    html.push('<hr/><div class="clDivData2seira">Χάρτης Γηπέδων Μπάσκετ  : <a href="https://maps.google.com/maps/ms?msa=0&msid=205502481779518675699.0004909c0ee934dd8cf70&ie=UTF8&t=h&ll=37.895447,23.67897&spn=0.435651,0.8638&z=12&output=embed" style="color:#2200c1;text-decoration:none;" target="_blank"> Άνοιγμα σε νέο παράθυρο </a></div><hr/>');
   
@@ -700,15 +700,14 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 // myInitMaxiAge();
 
 document.getElementById("spanIDTab1").innerHTML = captionTab1;
+document.getElementById("spanIDTab3").innerHTML = captionTab3;
+document.getElementById("spanIDTab6").innerHTML = captionTab6;
 /*
 document.getElementById("spanIDTab2").innerHTML = captionTab2;
-*/
-document.getElementById("spanIDTab3").innerHTML = captionTab3;
-/*
 document.getElementById("spanIDTab4").innerHTML = captionTab4;
 document.getElementById("spanIDTab5").innerHTML = captionTab5;
 */
-document.getElementById("spanIDTab6").innerHTML = captionTab6;
+
 gadgets.window.adjustHeight();
 </script>
 </body>
