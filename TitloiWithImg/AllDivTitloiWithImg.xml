@@ -162,8 +162,8 @@ function init() {
    }
 });//---end fnc feedload
 
- $('.bigTitle').css('color',myColorTitle);
- alert('l')
+ $(".bigTitle").css('color',myColorTitle);
+
 } //-- end init
   gadgets.util.registerOnLoadHandler(init); 
   // google.setOnLoadCallback(init);
