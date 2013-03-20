@@ -162,6 +162,10 @@ function init() {
    }
 });//---end fnc feedload
 
+
+$("div.ns2-title a").css('color',myColorTitle);
+$("div.ns2-titleFirst a").css('color',myColorTitle);
+
  $(".bigTitle").css('color',myColorTitle);
 
 } //-- end init
