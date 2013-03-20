@@ -109,7 +109,7 @@ function init() {
         html.push('<div class="divImgFirst"><img class="myImgFirst" src="'+ imgUrl + '" /></div>');
       }      
 
-      html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'">'+myTitle+'</a><span class="strDateMonth"> ('+ strPubDate +')</span> </div>');   
+      html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'" style="color:'+myColorTitle+';">'+myTitle+'</a><span class="strDateMonth"> ('+ strPubDate +')</span> </div>');   
       html.push('</div>');    
 
     html.push('<div>');    
