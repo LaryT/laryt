@@ -162,16 +162,15 @@ function init() {
    }
 });//---end fnc feedload
 
+ $(.bigTitle).css('color',myColorTitle);
+ alert('l')
 } //-- end init
   gadgets.util.registerOnLoadHandler(init); 
   // google.setOnLoadCallback(init);
  
 </script>
 <div id="content">l...</div>
-<script>
- $(.bigTitle).css('color',myColorTitle);
- alert(myColorTitle);
-</script>
+
     ]]>
   </Content>
 </Module>    
