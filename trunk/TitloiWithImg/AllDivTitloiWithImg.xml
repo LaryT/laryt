@@ -140,7 +140,7 @@ function init() {
       }else{
           imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
       }      
-      html.push('<div class="divRowWrap">');
+      html.push('<div class="divRowWrap" style="background-color:'+myBgColorTitle+';">');
       html.push('<div>');      
 
       if(strMIExplorer){
