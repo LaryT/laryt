@@ -31,7 +31,7 @@
       var prefs = new gadgets.Prefs();
       
       var myColorTitle = prefs.getString("my_ColorTitle");
-      var myStrTitle = prefs.getString("my_StrTitle");
+      var myStrTitle = '<span style="color:'+ myColorTitle +';">' + prefs.getString("my_StrTitle") +'</span>';
       var myStrWidth = prefs.getString("my_StrWidth");
       var myStrFeed = prefs.getString("my_StrFeed");    
       var myPosoiTitloi = prefs.getString("my_PosoiTitloi"); 
