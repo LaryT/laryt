@@ -178,7 +178,7 @@ $("div.ns2-titleFirst a").css('color',myColorTitle);
 </head>
 <body>
 <div id="content">l...</div>
-</script>
+<script>
  gadgets.window.adjustHeight();
 </script>
 </body>
