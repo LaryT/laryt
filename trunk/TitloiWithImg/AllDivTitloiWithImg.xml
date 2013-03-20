@@ -17,7 +17,7 @@
 <![CDATA[
     
 <style>   
-.divImg{float:left}.myImg{border-bottom:2px solid #ccc;border-right:2px solid #ccc;height:40px;margin-top:2px;margin-left:2px;margin-right:5px;padding-bottom:1px;padding-right:1px;width:50px}.mytdFirst{background-color:#f6f6f6;border-bottom:1px solid #ccc;overflow:hidden;padding-bottom:5px}.myImgFirst{height:90px;margin-top:2px;margin-left:2px;padding-bottom:1px;padding-right:1px;width:120px;float:right}.bigTitle{background-color:#f6f6f6;color:#bc0202;font-size:18px;font-weight:bold;margin:0;padding-bottom:10px;padding-left:10px;padding-top:10px;text-align:left}.divRowWrap{border-bottom:1px dashed #f1f1f1;height:50px;overflow:hidden}.ns2-title,.ns2-titleFirst{font-size:10px;font-weight:bold;margin:0;padding-top:5px;padding-bottom:1px;padding-left:1px;text-align:left}.ns2-titleFirst{padding-top:20px;font-size:16px}.ns2-title a,.ns2-titleFirst a{color:#bc0202;text-decoration:none;text-shadow:gray 0 3px 3px;-webkit-transition:color 500ms,padding-left 500ms}.ns2-title a:hover,.ns2-titleFirst a:hover{color:#000;text-shadow:black 3px 0 20px;padding-left:10px}.strDateMonth{color:#333;font-size:10px;font-weight:bold}
+.divImg{float:left}.myImg{border-bottom:2px solid #ccc;border-right:2px solid #ccc;height:40px;margin-top:2px;margin-left:2px;margin-right:5px;padding-bottom:1px;padding-right:1px;width:50px}.mytdFirst{background-color:#f6f6f6;border-bottom:1px solid #ccc;overflow:hidden;padding-bottom:5px}.myImgFirst{height:90px;margin-top:2px;margin-left:2px;padding-bottom:1px;padding-right:1px;width:120px;float:right}.bigTitle{background-color:#f6f6f6;color:#bc0202;font-size:18px;font-weight:bold;margin:0;padding-bottom:10px;padding-left:10px;padding-top:10px;text-align:left}.divRowWrap{border-bottom:1px dashed #f1f1f1;height:50px;overflow:hidden}.ns2-title,.ns2-titleFirst{font-size:12px;font-weight:bold;margin:0;padding-top:5px;padding-bottom:1px;padding-left:1px;text-align:left}.ns2-titleFirst{padding-top:20px;font-size:16px}.ns2-title a,.ns2-titleFirst a{color:#bc0202;text-decoration:none;text-shadow:gray 0 3px 3px;-webkit-transition:color 500ms,padding-left 500ms}.ns2-title a:hover,.ns2-titleFirst a:hover{color:#000;text-shadow:black 3px 0 20px;padding-left:10px}.strDateMonth{color:#333;font-size:12px;font-weight:bold}
 
 </style>   
      
@@ -68,7 +68,7 @@ function init() {
         html.push('<div id="myFiDiv" width="300"><div id="myTable" width="300">');
         html.push('<div>');
         html.push('<div>');
-        html.push('<div id="bigTitleID" class="bigTitle"> Women </div>'); 
+        html.push('<div id="bigTitleID" class="bigTitle" style="background-color:'+myBgColorTitle+';"> Women </div>'); 
         html.push('</div>');
         html.push('</div>');
         
@@ -109,7 +109,7 @@ function init() {
         html.push('<div class="divImgFirst"><img class="myImgFirst" src="'+ imgUrl + '" /></div>');
       }      
 
-      html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'" style="color:'+myColorTitle+';">'+myTitle+'</a><span class="strDateMonth"> ('+ strPubDate +')</span> </div>');   
+      html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'" style="color:'+myColorTitle+';background-color:'+myBgColorTitle+';">'+myTitle+'</a><span class="strDateMonth"> ('+ strPubDate +')</span> </div>');   
       html.push('</div>');    
 
     html.push('<div>');    
