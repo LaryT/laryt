@@ -100,7 +100,7 @@ function init() {
       }else{
           imgUrl= item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0].getAttributeNode('url').nodeValue;
       }
-      html.push('<div class="mytdFirst">');
+      html.push('<div class="mytdFirst" style="background-color:'+myBgColorTitle+';">');
       
 
       if(strMIExplorer){
@@ -109,7 +109,7 @@ function init() {
         html.push('<div class="divImgFirst"><img class="myImgFirst" src="'+ imgUrl + '" /></div>');
       }      
 
-      html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'" style="color:'+myColorTitle+';background-color:'+myBgColorTitle+';">'+myTitle+'</a><span class="strDateMonth"> ('+ strPubDate +')</span> </div>');   
+      html.push('<div class="ns2-titleFirst"><a target="_blank" href="'+myLink+'" style="color:'+myColorTitle+';">'+myTitle+'</a><span class="strDateMonth"> ('+ strPubDate +')</span> </div>');   
       html.push('</div>');    
 
     html.push('<div>');    
