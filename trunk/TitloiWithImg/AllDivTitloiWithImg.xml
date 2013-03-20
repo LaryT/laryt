@@ -22,7 +22,7 @@
 </style>   
      
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" ></script>      
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>      
     <script type="text/javascript">
       google.load("feeds", "1");
     </script>
@@ -168,6 +168,9 @@ function init() {
  
 </script>
 <div id="content">l...</div>
+<script>
+ $(.bigTitle).css("color",myColorTitle);
+</script>
     ]]>
   </Content>
 </Module>    
