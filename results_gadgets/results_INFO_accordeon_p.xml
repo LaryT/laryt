@@ -385,7 +385,7 @@ for (var row = 0; row < posesEggrafes; row++) {
    html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 3).toUpperCase()+' '+data.getFormattedValue(row, 4).toUpperCase()+'</span></div>');
    html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 5)+'</span> </div>');
    
-   html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7)+'</span>,<br/>T:<span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 6)+'</span> </div>');
+   html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7)+'</span><br/>T:<span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 6)+'</span> </div>');
    
    html.push('<div class="clDivData">URL :<span><a href="'+data.getFormattedValue(row, 10)+'" target="_blank">'+data.getFormattedValue(row, 10)+'</a></span><br/></div>');
    
