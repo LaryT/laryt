@@ -387,9 +387,9 @@ for (var row = 0; row < posesEggrafes; row++) {
    
    html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7)+'</span>,<br/>T:<span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 6)+'</span> </div>');
    
-   html.push('<div class="clDivData">URL :<span><a href="'+data.getFormattedValue(row, 10)+'" target="_blank">'+data.getFormattedValue(row, 10)+'</a></span> </div>');
+   html.push('<div class="clDivData">URL :<span><a href="'+data.getFormattedValue(row, 10)+'" target="_blank">'+data.getFormattedValue(row, 10)+'</a></span><br/></div>');
    
-   html.push('<div class="clDivData">Χρώματα :<span>'+data.getFormattedValue(row, 8)+'</span> </div>');
+   html.push('<div class="clDivData">Χρώματα :<span>'+data.getFormattedValue(row, 8)+'</span><br/></div>');
    
    html.push('<div class="clDivData"> Έδρα : <br/><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 11)+'</span> </div>');
     
