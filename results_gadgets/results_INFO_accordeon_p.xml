@@ -514,6 +514,7 @@ function handleQueryResponseTab5(response) {
  var html =[];  
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
+ 
 if(posesEggrafes > 0) {
 for (var row = 0; row < posesEggrafes; row++) {
    html.push('<h3 class="myH3titleHistory font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 5)+'" />' + data.getFormattedValue(row, 0).toUpperCase() +'</h3>');
@@ -525,7 +526,7 @@ for (var row = 0; row < posesEggrafes; row++) {
    html.push('</div>');
 }
 
-  
+  document.getElementById("divIDTab5").innerHTML = html.join('');
   $("#divIDTab5").accordion({heightStyle: "content"});
   }else {
    document.getElementById("divIDTab5").innerHTML = '<div class="clSpanOnomateponymo"> 0 ΔΣ </div>';
