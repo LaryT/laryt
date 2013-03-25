@@ -520,21 +520,23 @@ function handleQueryResponseTab5(response) {
  
  if(posesEggrafes > 0) {
    
-   html.push('<h3 class="myH3titleHistory font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0, 5)+'" />' + data.getFormattedValue(0, 0).toUpperCase() +'</h3>');
+   html.push('<h3 class="myH3titleHistory font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0, 5)+'" />' + data.getFormattedValue(0, 0).toUpperCase() +'</h3><div>');
    
  for (var row = 0; row < posesEggrafes; row++) {
    if( strGroup != data.getFormattedValue(row, 0).toUpperCase() ){
-    strGroup = data.getFormattedValue(row, 0).toUpperCase();
-    html.push('<h3 class="myH3titleHistory font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 5)+'" />' + data.getFormattedValue(row, 0).toUpperCase() +'</h3>');
+
+    html.push('</div><h3 class="myH3titleHistory font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 5)+'" />' + data.getFormattedValue(row, 0).toUpperCase() +'</h3><div>');
+
+     strGroup = data.getFormattedValue(row, 0).toUpperCase();
    }
    
-   html.push('<div>');
+
    html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1)+'</span></div>');
    html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 2).toUpperCase()+' '+data.getFormattedValue(row, 3).toUpperCase()+'</span> </div>');
  
-   html.push('</div>');
- }
 
+ }
+   html.push('</div>');
   document.getElementById("divIDTab5").innerHTML = html.join('');
   $("#divIDTab5").accordion({heightStyle: "content"});
   }else {
