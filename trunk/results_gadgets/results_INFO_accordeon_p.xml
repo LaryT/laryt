@@ -514,10 +514,15 @@ function handleQueryResponseTab5(response) {
  var html =[];  
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
+ var strGroup = data.getFormattedValue(0, 0).toUpperCase();  
  
-if(posesEggrafes > 0) {
-for (var row = 0; row < posesEggrafes; row++) {
+   html.push('<h3 class="myH3titleHistory font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(0, 5)+'" />' + data.getFormattedValue(0, 0).toUpperCase() +'</h3>');
+  for (var row = 0; row < posesEggrafes; row++) {
+  
+   if( strGroup != data.getFormattedValue(row, 0).toUpperCase() ){
+    strGroup = data.getFormattedValue(row, 0).toUpperCase();
    html.push('<h3 class="myH3titleHistory font-effect-emboss"><img class="imgFlagRadius boxOut10" src="'+data.getFormattedValue(row, 5)+'" />' + data.getFormattedValue(row, 0).toUpperCase() +'</h3>');
+   }
    
    html.push('<div>');
    html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1)+'</span></div>');
