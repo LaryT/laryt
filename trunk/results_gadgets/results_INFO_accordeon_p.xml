@@ -532,7 +532,7 @@ function handleQueryResponseTab5(response) {
    
 
    html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 1)+'</span></div>');
-   html.push('<div class="clDivData"><span class="clSpanOnomateponymo boxOut10" >'+data.getFormattedValue(row, 2).toUpperCase()+' '+data.getFormattedValue(row, 3).toUpperCase()+'</span> </div>');
+   html.push('<div class="clDivData"><span class="clSpanOnomateponymo" >'+data.getFormattedValue(row, 2).toUpperCase()+' '+data.getFormattedValue(row, 3).toUpperCase()+'</span> </div>');
     html.push('<div>&nbsp;</div>');
 
  }
