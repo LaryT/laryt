@@ -99,17 +99,34 @@ var map_options = {
 //----
 var adUnitDiv = document.createElement('div');
   var adUnitOptions = {
-    format: google.maps.adsense.AdFormat.HALF_BANNER,
+    format: google.maps.adsense.AdFormat.SMALL_HORIZONTAL_LINK_UNIT,
     position: google.maps.ControlPosition.TOP,
-    backgroundColor: '#c4d4f3',
-    borderColor: '#e5ecf9',
-    titleColor: '#0000cc',
-    textColor: '#000000',
-    urlColor: '#009900',
+    backgroundColor: '#eeeeee',
+    borderColor: '#666666',
+    titleColor: '#333333',
+    textColor: '#666666',
+    urlColor: '#999999',
     map: map,
     visible: true,
     publisherId: 'pub-9529818444792202'
   }
+  /*
+ format: google.maps.adsense.AdFormat.HALF_BANNER,
+  monochrome': {
+          'color_bg': '#eeeeee',
+          'color_border': '#666666',
+          'color_link': '#333333',
+          'color_text': '#666666',
+          'color_url': '#999999',
+        },
+        
+    backgroundColor: '#c4d4f3',
+    borderColor: '#e5ecf9',
+    titleColor: '#0000cc',
+    textColor: '#000000',
+    urlColor: '#009900',        
+        
+  */
   adUnit = new google.maps.adsense.AdUnit(adUnitDiv, adUnitOptions); 
 }
 
