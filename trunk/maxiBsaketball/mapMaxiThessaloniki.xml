@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+ <ModulePrefs title="mytester2">
+   <Require feature="dynamic-height" />
+ </ModulePrefs>
+  
+<Content type="html">
+    
+  <![CDATA[
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map-canvas, #map_canvas {
+  height: 100%;
+}
+
+@media print {
+  html, body {
+    height: auto;
+  }
+
+  #map_canvas {
+    height: 650px;
+  }
+}
+  
+      #directions-panel {
+        height: 100%;
+        float: right;
+        width: 290px;
+        overflow: auto;
+      }
+
+      #map-canvas {
+        margin-right: 300px;
+      }
+
+      #control {
+        background: #fff;
+        padding: 5px;
+        font-size: 14px;
+        font-family: Arial;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+        display: none;
+      }
+
+      @media print {
+        #map-canvas {
+          height: 500px;
+          margin: 0;
+        }
+
+        #directions-panel {
+          float: none;
+          width: auto;
+        }
+      }
+      
+   </style>
+   <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=adsense"></script>
+<script>
+google.load("visualization", "1");
+
+
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+var urlCategories ="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdDROYk9hU0lraGptWE9EdzlZNHhXWWc&headers=1";
+var queryCategories;
+// var srcKml ='https://developers.google.com/kml/training/westcampus.kml';
+var srcKml ='http://www.seeyourhotel.com/city/2177.Thessaloniki.en.kml';
+   
+   
+function initMap(){
+directionsDisplay = new google.maps.DirectionsRenderer();
+var map_canvas = document.getElementById('map-canvas');
+var thessaloniki = new google.maps.LatLng(40.626852,22.95619);
+var map_options = {
+  center : thessaloniki,
+  zoom : 14,
+  mapTypeId : google.maps.MapTypeId.ROADMAP
+  }
+      var map = new google.maps.Map(map_canvas, map_options);
+      directionsDisplay.setMap(map);
+      directionsDisplay.setPanel(document.getElementById('directions-panel'));
+      //----  loadKmlLayer(srcKml,map);
+  //--- diadikasia diabasmatos proorismvn 
+  myInitCategories();
+//----
+var adUnitDiv = document.createElement('div');
+  var adUnitOptions = {
+    format: google.maps.adsense.AdFormat.HALF_BANNER,
+    position: google.maps.ControlPosition.TOP,
+    backgroundColor: '#c4d4f3',
+    borderColor: '#e5ecf9',
+    titleColor: '#0000cc',
+    textColor: '#000000',
+    urlColor: '#009900',
+    map: map,
+    visible: true,
+    publisherId: 'pub-9529818444792202'
+  }
+  adUnit = new google.maps.adsense.AdUnit(adUnitDiv, adUnitOptions); 
+}
+
+function myInitCategories(){
+ if( urlCategories!="" ){
+     queryCategories = new google.visualization.Query(urlCategories);
+     sendQueryCategories();
+  }else{
+   alert('No source file for  Categories');
+  }
+
+}
+
+
+function calcRoute(){
+var start = document.getElementById("start").value;
+var end = document.getElementById("end").value;
+var selectedMode = document.getElementById('mode').value;
+
+var request = {
+  origin:start,
+  destination:end,
+  travelMode: google.maps.TravelMode[selectedMode]
+  }
+
+ directionsService.route(request, function(result,status){
+  if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(result);
+     }
+ });
+
+}
+
+function loadKmlLayer(srcKml,map){
+ var kml_options = {
+     suppressInfoWindows : true,
+     preserveViewport : false,
+     map : map
+    }
+ var kmlLayer = new google.maps.KmlLayer(srcKml,kml_options);
+ }
+
+
+//---- make categories
+function sendQueryCategories(){
+
+   queryCategories.setQuery('select A, B, C  where C is not null order by A, B, C');   
+   queryCategories.send(handleQueryResponseCategories);
+}
+
+//---------------------------
+//-------------- Categories  : selectedIndex
+//---------------------------
+function handleQueryResponseCategories(response) {
+
+   if (response.isError()) {
+    alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+  }
+
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+
+ var html =[];  
+ var strGroup1 = data.getFormattedValue(0, 0);
+
+ html.push('<optgroup label="' + strGroup1+ '">');
+ for (var row = 0; row < posesEggrafes; row++) {
+
+  if( strGroup1 != data.getFormattedValue(row, 0)){
+    html.push('</optgroup>');
+    strGroup1 = data.getFormattedValue(row, 0);
+    html.push('<optgroup label="' + strGroup1+ '">');
+    html.push('<option value="'+data.getFormattedValue(row, 2)+'">');
+    html.push( data.getFormattedValue(row, 1)  );
+    html.push('</option>');
+  } else{
+
+  html.push('<option value="'+data.getFormattedValue(row, 2)+'">');
+  html.push( data.getFormattedValue(row, 1)  );
+  html.push('</option>');
+  }
+ }
+
+//-- apodosh html sto iD 
+ document.getElementById("start").innerHTML = html.join('');
+ document.getElementById("end").innerHTML = html.join('');
+
+}
+
+
+google.maps.event.addDomListener(window, 'load', initMap);
+   
+   </script>
+  </head>
+  <body>
+   <div style="text-align:center">
+    <b>Start: </b>
+    <select id="start">
+    </select>
+    <b>End: </b>
+    <select id="end" onchange="calcRoute();">
+    </select>
+    <b>Mode of Travel: </b>
+    <select id="mode" onchange="calcRoute();">
+      <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+      <option value="TRANSIT">Transit</option>
+    </select>
+   </div>
+    
+    <div id="directions-panel"></div>
+    <div id="map-canvas">.!.</div>
+    <script>
+       gadgets.window.adjustHeight();
+    </script>
+  </body>
+</html>
+
+      ]]>
+  </Content>
+</Module>
