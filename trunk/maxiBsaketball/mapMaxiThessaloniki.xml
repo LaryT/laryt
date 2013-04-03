@@ -37,7 +37,7 @@ html, body {
         float: right;
         width: 200px;
         overflow: auto;
-        font-size:9px;
+        font-size:11px;
       }
 
       #map-canvas {
@@ -113,7 +113,7 @@ var map_options = {
 //----
 var adUnitDiv = document.createElement('div');
   var adUnitOptions = {
-    format: google.maps.adsense.AdFormat.SMALL_HORIZONTAL_LINK_UNIT,
+    format: google.maps.adsense.AdFormat.HALF_BANNER,
     position: google.maps.ControlPosition.TOP,
     backgroundColor: '#eeeeee',
     borderColor: '#666666',
@@ -125,7 +125,7 @@ var adUnitDiv = document.createElement('div');
     publisherId: 'pub-9529818444792202'
   }
   /*
- format: google.maps.adsense.AdFormat.HALF_BANNER,
+ format: google.maps.adsense.AdFormat.SMALL_HORIZONTAL_LINK_UNIT,
   monochrome': {
           'color_bg': '#eeeeee',
           'color_border': '#666666',
