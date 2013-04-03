@@ -64,7 +64,20 @@ html, body {
           width: auto;
         }
       }
-      
+.stitched {
+   padding: 5px;
+   margin: 5px;
+   background: orange;
+   color: #fff;
+   font-size: 18px;
+   font-weight: bold;
+   line-height: 1.3em;
+   border: 2px dashed #fff;
+   border-radius: 10px;
+   box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+   text-shadow: -1px -1px #aa3030;
+   font-weight: normal;
+}     
    </style>
    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=adsense"></script>
