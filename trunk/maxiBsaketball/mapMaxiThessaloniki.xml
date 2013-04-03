@@ -239,6 +239,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
   <body>
 
    <div style="text-align:center" class="stitched">
+    Directions Service [Driving-Walking-Bicycling-Transit]<hr/>
     <b>Start: </b>
     <select id="start">
     </select>
