@@ -70,7 +70,7 @@ html, body {
    margin: 5px;
    background: orange;
    color: #fff;
-   font-size: 18px;
+   font-size: 14px;
    font-weight: bold;
    line-height: 1.3em;
    border: 2px dashed #fff;
@@ -237,8 +237,8 @@ google.maps.event.addDomListener(window, 'load', initMap);
    </script>
   </head>
   <body>
-<div>
-   <div style="text-align:center">
+
+   <div style="text-align:center" class="stitched">
     <b>Start: </b>
     <select id="start">
     </select>
@@ -256,7 +256,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
     
     <div id="directions-panel"></div>
     <div id="map-canvas">.!.</div>
-</div>
+
     <script>
        gadgets.window.adjustHeight();
     </script>
