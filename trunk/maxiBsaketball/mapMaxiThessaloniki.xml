@@ -237,7 +237,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
    </script>
   </head>
   <body>
-<div class="stitched">
+<div>
    <div style="text-align:center">
     <b>Start: </b>
     <select id="start">
