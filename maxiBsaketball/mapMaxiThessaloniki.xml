@@ -14,7 +14,6 @@
   <style>
 
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -305,7 +304,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
     <div id="map-canvas">.!.</div>
 
     <script>
- //      gadgets.window.adjustHeight();
+     gadgets.window.adjustHeight();
     </script>
   </body>
 </html>
