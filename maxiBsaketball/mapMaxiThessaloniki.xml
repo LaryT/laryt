@@ -194,7 +194,7 @@ function HomeControl(controlDiv, map) {
   // Setup the click event listeners: simply set the map to Chicago.
   google.maps.event.addDomListener(controlUI, 'click', function() {
     map.setCenter(thessaloniki);
-    map.setZoom(8);
+    map.setZoom(12);
   });
 }
 
