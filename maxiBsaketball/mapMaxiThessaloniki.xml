@@ -72,7 +72,7 @@ html, body {
    text-shadow: -1px -1px #aa3030;
    font-weight: normal;
 }   
-#start, #end{
+#start, #end, #mode{
 font-size:10px;
 }
 
