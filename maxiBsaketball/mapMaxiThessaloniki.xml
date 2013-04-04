@@ -18,11 +18,6 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
-
-#map-canvas, #map_canvas {
-  height: 90%;
-}
 /*
 @media print {
   html, body {
@@ -46,9 +41,13 @@ html, body {
         }
  }
  */
- 
- #directions-panel {
-        height: 90%;
+
+#map-canvas, #map_canvas {
+  height: 88%;
+}
+
+#directions-panel {
+        height: 88%;
         float: right;
         width: 180px;
         overflow: auto;
@@ -59,15 +58,6 @@ html, body {
         margin-right: 190px;
 }
 
-#control {
-        background: #fff;
-        padding: 5px;
-        font-size: 14px;
-        font-family: Arial;
-        border: 1px solid #ccc;
-        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
-        display: none;
-}
 #mapStitched {
    padding: 5px;
    margin: 5px;
