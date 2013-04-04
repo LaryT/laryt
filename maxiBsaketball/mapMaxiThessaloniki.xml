@@ -28,20 +28,20 @@ html, body {
   }
 
   #map_canvas {
-    height: 650px;
+    height: 600px;
   }
 }
   
       #directions-panel {
         height: 100%;
         float: right;
-        width: 200px;
+        width: 180px;
         overflow: auto;
         font-size:11px;
       }
 
       #map-canvas {
-        margin-right: 210px;
+        margin-right: 190px;
       }
 
       #control {
@@ -56,7 +56,7 @@ html, body {
 
       @media print {
         #map-canvas {
-          height: 500px;
+   //       height: 500px;
           margin: 0;
         }
 
@@ -110,6 +110,15 @@ var map_options = {
       //----  loadKmlLayer(srcKml,map);
   //--- diadikasia diabasmatos proorismvn 
   myInitCategories();
+//---  
+var weatherLayer = new google.maps.weather.WeatherLayer({
+  temperatureUnits: google.maps.weather.TemperatureUnit.FAHRENHEIT
+});
+weatherLayer.setMap(map);
+
+var cloudLayer = new google.maps.weather.CloudLayer();
+cloudLayer.setMap(map);  
+  
 //----
 var adUnitDiv = document.createElement('div');
   var adUnitOptions = {
