@@ -90,6 +90,7 @@ google.load("visualization", "1");
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
+var thessaloniki = new google.maps.LatLng(40.626852,22.95619);
 var urlCategories ="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdDROYk9hU0lraGptWE9EdzlZNHhXWWc&headers=1";
 var queryCategories;
 // var srcKml ='https://developers.google.com/kml/training/westcampus.kml';
@@ -99,7 +100,7 @@ var srcKml ='http://www.seeyourhotel.com/city/2177.Thessaloniki.en.kml';
 function initMap(){
 directionsDisplay = new google.maps.DirectionsRenderer();
 var map_canvas = document.getElementById('map-canvas');
-var thessaloniki = new google.maps.LatLng(40.626852,22.95619);
+
 var map_options = {
   center : thessaloniki,
   zoom : 14,
