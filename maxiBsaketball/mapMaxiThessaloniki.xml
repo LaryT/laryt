@@ -81,7 +81,7 @@ html, body {
 }     
    </style>
    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&language=en&libraries=adsense&libraries=weather"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&language=en&libraries=adsense,weather"></script>
 <script>
 google.load("visualization", "1");
 
