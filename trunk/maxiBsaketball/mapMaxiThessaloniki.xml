@@ -159,7 +159,7 @@ adUnit = new google.maps.adsense.AdUnit(adUnitDiv, adUnitOptions);
  var homeControl = new HomeControl(homeControlDiv, map);
 
  homeControlDiv.index = 1;
- map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
+ map.controls[google.maps.ControlPosition.RIGHT_TOP].push(homeControlDiv);
 
 
 
