@@ -12,6 +12,7 @@
 <html>
  <head>
   <style>
+
 html, body {
   height: 100%;
   margin: 0;
@@ -150,10 +151,52 @@ var adUnitDiv = document.createElement('div');
     urlColor: '#009900',        
         
   */
-  adUnit = new google.maps.adsense.AdUnit(adUnitDiv, adUnitOptions); 
-  
+adUnit = new google.maps.adsense.AdUnit(adUnitDiv, adUnitOptions); 
+
+//--- 
+ var homeControlDiv = document.createElement('div');
+ var homeControl = new HomeControl(homeControlDiv, map);
+
+ homeControlDiv.index = 1;
+ map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
+
+
+
  gadgets.window.adjustHeight();
 }
+
+
+function HomeControl(controlDiv, map) {
+
+
+  controlDiv.style.padding = '5px';
+
+  //  border.
+  var controlUI = document.createElement('div');
+  controlUI.style.backgroundColor = 'white';
+  controlUI.style.borderStyle = 'solid';
+  controlUI.style.borderWidth = '2px';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.textAlign = 'center';
+  controlUI.title = 'Click to set the map to Home';
+  controlDiv.appendChild(controlUI);
+
+  //the control interior.
+  var controlText = document.createElement('div');
+  controlText.style.fontFamily = 'Arial,sans-serif';
+  controlText.style.fontSize = '12px';
+  controlText.style.paddingLeft = '4px';
+  controlText.style.paddingRight = '4px';
+  controlText.innerHTML = '<strong>Home - Weather</strong>';
+  controlUI.appendChild(controlText);
+
+  // Setup the click event listeners: simply set the map to Chicago.
+  google.maps.event.addDomListener(controlUI, 'click', function() {
+    map.setCenter(thessaloniki);
+    map.setZoom(8);
+  });
+}
+
 
 function myInitCategories(){
  if( urlCategories!="" ){
@@ -164,7 +207,6 @@ function myInitCategories(){
   }
 
 }
-
 
 function calcRoute(){
 var start = document.getElementById("start").value;
