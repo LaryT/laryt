@@ -14,7 +14,7 @@
   <style>
 
 html, body {
-  height:auto;
+  height:99%;
   margin: 0;
   padding: 0;
 }
