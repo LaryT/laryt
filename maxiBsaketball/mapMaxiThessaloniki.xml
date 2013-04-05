@@ -5,7 +5,7 @@
  </ModulePrefs>
 <UserPref name="m_BackgroundColor" display_name="Background Color:" default_value="rgb(205,133,63)" />
 <UserPref name="m_SourceID" display_name="Source ID:" default_value="" />
-<UserPref name="m_HomeCity" display_name="Home city:" default_value="thessaloniki" />
+<UserPref name="m_HomeCity" display_name="Home city:" default_value="" />
 <UserPref name="m_Language" display_name="Language (EN or GR):" default_value="EN" />
   
 <Content type="html">
