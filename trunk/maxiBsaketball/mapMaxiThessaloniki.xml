@@ -16,7 +16,7 @@
   <style>
 
 html, body {
-  height:99%;
+  height:96%;
   margin: 0;
   padding: 0;
 }
@@ -40,7 +40,7 @@ html, body {
 #mapStitched {
    padding: 5px;
    margin: 5px;
-   background: orange;
+//   background: orange;
    color: #fff;
    font-size: 14px;
    font-weight: bold;
@@ -48,7 +48,7 @@ html, body {
    border: 2px dashed #fff;
    border-radius: 10px;
    box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-   text-shadow: -1px -1px #aa3030;
+//   text-shadow: -1px -1px #aa3030;
    font-weight: normal;
 }   
 #start, #end, #mode{
@@ -292,7 +292,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
       <option value="WALKING">Walking</option>
       <option value="BICYCLING">Bicycling</option>
       <option value="TRANSIT">Transit</option>
-    </select>
+    </select><hr/>
    </div>
     
     <div id="directions-panel"></div>
