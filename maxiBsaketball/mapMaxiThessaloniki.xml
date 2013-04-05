@@ -281,10 +281,10 @@ if(posesEggrafes>0){
   var lng = parseFloat(latlngStr[1]);
 
   var latlng = new google.maps.LatLng(lat, lng, false);
-  alert (latlng);
+
   map.setCenter(latlng);
   map.setZoom(12);
-  alert (map.getCenter());
+
  }
 
 }
