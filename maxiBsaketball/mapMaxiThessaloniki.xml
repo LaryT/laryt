@@ -247,10 +247,13 @@ function handleQueryResponseCategories(response) {
 
  if(posesEggrafes>0){
   var input = data.getFormattedValue(0, 2);
+  alert('in ' +  input);
   var latlngStr = input.split(',', 2);
   var lat = parseFloat(latlngStr[0]);
   var lng = parseFloat(latlngStr[1]);
+  alert('lng ' +  lng);
   thessaloniki = new google.maps.LatLng(lat, lng);
+  alert('t ' +thessaloniki);
   map.setCenter(thessaloniki);
   map.setZoom(12);
  }
