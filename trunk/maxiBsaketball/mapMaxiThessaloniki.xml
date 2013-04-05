@@ -85,7 +85,7 @@ var strTitleHome ="Click to set the map to Home";
   if (mLanguage =="GR"){
     strHome ="<strong>Αρχική - Καιρός</strong>";
     strTitleHome ="Click για την αρχική θέση του χάρτη";  
-    document.getElementById('mode').innerHTML="<option value=\"DRIVING\">Οδηγώντας</option><option value=\"WALKING\">Περπατώντας</option><option value=\"BICYCLING\">Ποδηλατώντας</option><option value=\"TRANSIT\">Δημόσια συγκοινωνία</option>";
+    document.getElementById('mode').innerHTML="<option value=&quot;DRIVING&quot;>Οδηγώντας</option><option value=&quot;WALKING&quot;>Περπατώντας</option><option value=&quot;BICYCLING&quot;>Ποδηλατώντας</option><option value=&quot;TRANSIT&quot;>Δημόσια συγκοινωνία</option>";
   }
 
 var directionsDisplay;
