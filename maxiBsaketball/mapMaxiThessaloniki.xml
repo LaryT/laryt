@@ -96,7 +96,7 @@ var strTitleHome ="Click to set the map to Home";
 
   if (mLanguage =="GR"){
     strHome ="<strong>Αρχική - Καιρός</strong>";
-     strTitleHome ="Click για να θέσεις το χάρτη στην αρχική θέση";  
+     strTitleHome ="Click για την αρχική θέση του χάρτη";  
   }
 
 var directionsDisplay;
