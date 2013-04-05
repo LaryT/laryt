@@ -142,37 +142,14 @@ var adUnitDiv = document.createElement('div');
     visible: true,
     publisherId: 'pub-9529818444792202'
   }
-  /*
- format: google.maps.adsense.AdFormat.HALF_BANNER,
-  monochrome': {
-          'color_bg': '#eeeeee',
-          'color_border': '#666666',
-          'color_link': '#333333',
-          'color_text': '#666666',
-          'color_url': '#999999',
-        },
-        
-    backgroundColor: '#c4d4f3',
-    borderColor: '#e5ecf9',
-    titleColor: '#0000cc',
-    textColor: '#000000',
-    urlColor: '#009900',        
-        
-  */
 adUnit = new google.maps.adsense.AdUnit(adUnitDiv, adUnitOptions); 
-
 //--- 
  var homeControlDiv = document.createElement('div');
  var homeControl = new HomeControl(homeControlDiv, map);
 
  homeControlDiv.index = 1;
  map.controls[google.maps.ControlPosition.RIGHT_TOP].push(homeControlDiv);
-
-
-
-// gadgets.window.adjustHeight();
 }
-
 
 function HomeControl(controlDiv, map) {
 
@@ -269,9 +246,13 @@ function handleQueryResponseCategories(response) {
  var strGroup1 = data.getFormattedValue(0, 0);
 
  if(posesEggrafes>0){
- //  thessaloniki = new google.maps.LatLng(data.getFormattedValue(0, 2));
- //  map.setCenter(thessaloniki);
- //  map.setZoom(12);
+  var input = data.getFormattedValue(0, 2);
+  var latlngStr = input.split(',', 2);
+  var lat = parseFloat(latlngStr[0]);
+  var lng = parseFloat(latlngStr[1]);
+  thessaloniki = new google.maps.LatLng(lat, lng);
+  map.setCenter(thessaloniki);
+  map.setZoom(12);
  }
 
  html.push('<optgroup label="' + strGroup1+ '">');
