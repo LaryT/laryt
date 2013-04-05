@@ -96,7 +96,7 @@ var strTitleHome ="Click to set the map to Home";
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
-var thessaloniki = new google.maps.LatLng("39.073868,22.91798");
+var thessaloniki = new google.maps.LatLng(39.073868,22.91798);
 
 //40.626852,22.95619
 
