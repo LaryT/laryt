@@ -252,10 +252,11 @@ function handleQueryResponseCategories(response) {
   var lat = parseFloat(latlngStr[0]);
   var lng = parseFloat(latlngStr[1]);
 
-  var latlng = new google.maps.LatLng(lat, lng, true);
+  var latlng = new google.maps.LatLng(lat, lng, false);
 
   map.setCenter(latlng);
   map.setZoom(12);
+  alert (map.getCenter());
  }
 
  html.push('<optgroup label="' + strGroup1+ '">');
