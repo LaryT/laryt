@@ -245,19 +245,7 @@ function handleQueryResponseCategories(response) {
  var html =[];  
  var strGroup1 = data.getFormattedValue(0, 0);
 
- if(posesEggrafes>0){
-  var input = data.getFormattedValue(0, 2);
 
-  var latlngStr = input.split(',', 2);
-  var lat = parseFloat(latlngStr[0]);
-  var lng = parseFloat(latlngStr[1]);
-
-  var latlng = new google.maps.LatLng(lat, lng, false);
-
-  map.setCenter(latlng);
-  map.setZoom(12);
-  alert (map.getCenter());
- }
 
  html.push('<optgroup label="' + strGroup1+ '">');
  for (var row = 0; row < posesEggrafes; row++) {
@@ -275,8 +263,23 @@ function handleQueryResponseCategories(response) {
   html.push( data.getFormattedValue(row, 1)  );
   html.push('</option>');
   }
+  
  }
 
+ if(posesEggrafes>0){
+  var input = data.getFormattedValue(0, 2);
+
+  var latlngStr = input.split(',', 2);
+  var lat = parseFloat(latlngStr[0]);
+  var lng = parseFloat(latlngStr[1]);
+
+  var latlng = new google.maps.LatLng(lat, lng, false);
+  alert (latlng);
+  map.setCenter(latlng);
+  map.setZoom(12);
+  alert (map.getCenter());
+ }
+ 
 //-- apodosh html sto iD 
  document.getElementById("start").innerHTML = html.join('');
  document.getElementById("end").innerHTML = html.join('');
