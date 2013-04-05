@@ -266,7 +266,14 @@ function handleQueryResponseCategories(response) {
   
  }
 
- if(posesEggrafes>0){
+ 
+ 
+//-- apodosh html sto iD 
+ document.getElementById("start").innerHTML = html.join('');
+ document.getElementById("end").innerHTML = html.join('');
+
+
+if(posesEggrafes>0){
   var input = data.getFormattedValue(0, 2);
 
   var latlngStr = input.split(',', 2);
@@ -279,10 +286,6 @@ function handleQueryResponseCategories(response) {
   map.setZoom(12);
   alert (map.getCenter());
  }
- 
-//-- apodosh html sto iD 
- document.getElementById("start").innerHTML = html.join('');
- document.getElementById("end").innerHTML = html.join('');
 
 }
 
