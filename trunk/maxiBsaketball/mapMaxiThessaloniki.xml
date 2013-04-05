@@ -80,7 +80,7 @@ var mLanguage = prefs.getString("m_Language");
 
 var strHome ="<strong>Home - Weather</strong>";
 var strTitleHome ="Click to set the map to Home";
-var strMode;
+
 
   if (mLanguage =="GR"){
     strHome ="<strong>Αρχική - Καιρός</strong>";
@@ -299,12 +299,12 @@ google.maps.event.addDomListener(window, 'load', initMap);
     <b>End: </b>
     <select id="end" onchange="calcRoute();">
     </select>
-    <b>Mode of Travel: </b>
+    <b><span id="idStrMetabash">Mode of Travel: </span></b>
     <select id="mode" onchange="calcRoute();">
-      <option value="DRIVING">Driving</option>
-      <option value="WALKING">Walking</option>
-      <option value="BICYCLING">Bicycling</option>
-      <option value="TRANSIT">Transit</option>
+      <option value="DRIVING" id="idDriving">Driving</option>
+      <option value="WALKING" id="idWalking">Walking</option>
+      <option value="BICYCLING" id="idBicycling">Bicycling</option>
+      <option value="TRANSIT" id="idTransit">Transit</option>
     </select><hr/>
    </div>
     
@@ -315,7 +315,14 @@ google.maps.event.addDomListener(window, 'load', initMap);
      gadgets.window.adjustHeight();
        var controlBg = document.getElementById("mapStitched");
        controlBg.style.backgroundColor = mBackgroundColor;
-       document.getElementById("mode").innerHTML=strMode;
+       
+       if (mLanguage =="GR"){
+        document.getElementById("idStrMetabash").innerHTML="Τρόπος μετακίνησης :";
+        document.getElementById("idDriving").innerHTML="Οδηγώντας";
+        document.getElementById("idWalking").innerHTML="Περπατώντας";
+        document.getElementById("idBicycling").innerHTML="Ποδηλατώντας";
+        document.getElementById("idTransit").innerHTML="Δημόσια συγκοινωνία";
+       }
     </script>
   </body>
 </html>
