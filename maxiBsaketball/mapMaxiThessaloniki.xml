@@ -5,7 +5,6 @@
  </ModulePrefs>
 <UserPref name="m_BackgroundColor" display_name="Background Color:" default_value="rgb(205,133,63)" />
 <UserPref name="m_SourceID" display_name="Source ID:" default_value="" />
-<UserPref name="m_HomeCity" display_name="Home city:" default_value="" />
 <UserPref name="m_Language" display_name="Language (EN or GR):" default_value="EN" />
   
 <Content type="html">
@@ -78,11 +77,6 @@ var queryCategories;
     urlCategories ="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdDROYk9hU0lraGptWE9EdzlZNHhXWWc&headers=1";
   }
 
-var mHomeCity = prefs.getString("m_HomeCity");
-  if( mHomeCity!="" ){
-  }else{
-    mHomeCity ="40.626852,22.95619";
-  }
   
 var mLanguage = prefs.getString("m_Language");
   if( mLanguage!="" ){
@@ -102,7 +96,7 @@ var strTitleHome ="Click to set the map to Home";
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
-var thessaloniki = new google.maps.LatLng(mHomeCity);
+var thessaloniki = new google.maps.LatLng("40.626852,22.95619");
 // var srcKml ='https://developers.google.com/kml/training/westcampus.kml';
 var srcKml ='http://www.seeyourhotel.com/city/2177.Thessaloniki.en.kml';
    
@@ -270,6 +264,10 @@ function handleQueryResponseCategories(response) {
 
  var html =[];  
  var strGroup1 = data.getFormattedValue(0, 0);
+
+ if(posesEggrafes>0){
+   thessaloniki = new google.maps.LatLng(data.getFormattedValue(row, 2));
+ }
 
  html.push('<optgroup label="' + strGroup1+ '">');
  for (var row = 0; row < posesEggrafes; row++) {
