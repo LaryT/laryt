@@ -41,16 +41,10 @@ html, body {
 #mapStitched {
    padding: 5px;
    margin: 5px;
-//   background: orange;
-//   color: #fff;
-//   font-size: 14px;
-//   font-weight: bold;
    line-height: 1.3em;
    border: 2px dashed #fff;
    border-radius: 10px;
    box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-//   text-shadow: -1px -1px #aa3030;
-//   font-weight: normal;
 }   
 #start, #end, #mode{
 font-size:10px;
@@ -86,11 +80,12 @@ var mLanguage = prefs.getString("m_Language");
 
 var strHome ="<strong>Home - Weather</strong>";
 var strTitleHome ="Click to set the map to Home";
-
+ 
 
   if (mLanguage =="GR"){
     strHome ="<strong>Αρχική - Καιρός</strong>";
-     strTitleHome ="Click για την αρχική θέση του χάρτη";  
+    strTitleHome ="Click για την αρχική θέση του χάρτη";  
+    document.getElementById('mode').innerHTML="<option value="DRIVING">Οδηγώντας</option><option value="WALKING">Περπατώντας</option><option value="BICYCLING">Ποδηλατώντας</option><option value="TRANSIT">Δημόσια συγκοινωνία</option>";
   }
 
 var directionsDisplay;
@@ -272,7 +267,7 @@ function handleQueryResponseCategories(response) {
  document.getElementById("start").innerHTML = html.join('');
  document.getElementById("end").innerHTML = html.join('');
 
-
+/*
 if(posesEggrafes>0){
   var input = data.getFormattedValue(0, 2);
 
@@ -286,6 +281,7 @@ if(posesEggrafes>0){
   map.setZoom(10);
 
  }
+*/
 
 }
 
