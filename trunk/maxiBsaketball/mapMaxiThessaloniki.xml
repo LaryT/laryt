@@ -16,7 +16,7 @@
   <style>
 
 html, body {
-  height:96%;
+  height:97%;
   margin: 0;
   padding: 0;
 }
@@ -41,15 +41,15 @@ html, body {
    padding: 5px;
    margin: 5px;
 //   background: orange;
-   color: #fff;
-   font-size: 14px;
-   font-weight: bold;
+//   color: #fff;
+//   font-size: 14px;
+//   font-weight: bold;
    line-height: 1.3em;
    border: 2px dashed #fff;
    border-radius: 10px;
    box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
 //   text-shadow: -1px -1px #aa3030;
-   font-weight: normal;
+//   font-weight: normal;
 }   
 #start, #end, #mode{
 font-size:10px;
