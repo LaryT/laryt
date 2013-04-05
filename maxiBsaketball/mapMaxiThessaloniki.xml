@@ -252,9 +252,9 @@ function handleQueryResponseCategories(response) {
   var lat = parseFloat(latlngStr[0]);
   var lng = parseFloat(latlngStr[1]);
 
-  thessaloniki = new google.maps.LatLng(lat, lng);
+  var latlng = new google.maps.LatLng(lat, lng);
 
-  map.setCenter(thessaloniki);
+  map.setCenter(latlng);
   map.setZoom(12);
  }
 
