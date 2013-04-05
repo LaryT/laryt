@@ -80,12 +80,12 @@ var mLanguage = prefs.getString("m_Language");
 
 var strHome ="<strong>Home - Weather</strong>";
 var strTitleHome ="Click to set the map to Home";
- 
+var strMode;
 
   if (mLanguage =="GR"){
     strHome ="<strong>Αρχική - Καιρός</strong>";
     strTitleHome ="Click για την αρχική θέση του χάρτη";  
-    document.getElementById('mode').innerHTML="<option value=&quot;DRIVING&quot;>Οδηγώντας</option><option value=&quot;WALKING&quot;>Περπατώντας</option><option value=&quot;BICYCLING&quot;>Ποδηλατώντας</option><option value=&quot;TRANSIT&quot;>Δημόσια συγκοινωνία</option>";
+    strMode='<option value="DRIVING">'+'Οδηγώντας'+'</option><option value="WALKING">'+'Περπατώντας'+'</option><option value="BICYCLING">'+'Ποδηλατώντας'+'</option><option value="TRANSIT">'+'Δημόσια συγκοινωνία'+'</option>';
   }
 
 var directionsDisplay;
@@ -191,7 +191,7 @@ function myInitCategories(){
 function calcRoute(){
 var start = document.getElementById("start").value;
 var end = document.getElementById("end").value;
-var selectedMode = document.getElementById('mode').value;
+var selectedMode = document.getElementById("mode").value;
 
 var request = {
   origin:start,
@@ -313,8 +313,9 @@ google.maps.event.addDomListener(window, 'load', initMap);
 
     <script>
      gadgets.window.adjustHeight();
-       var controlBg = document.getElementById('mapStitched');
+       var controlBg = document.getElementById("mapStitched");
        controlBg.style.backgroundColor = mBackgroundColor;
+       document.getElementById("mode").innerHTML=strMode;
     </script>
   </body>
 </html>
