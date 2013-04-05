@@ -267,6 +267,8 @@ function handleQueryResponseCategories(response) {
 
  if(posesEggrafes>0){
    thessaloniki = new google.maps.LatLng(data.getFormattedValue(0, 2));
+   map.setCenter(thessaloniki);
+   map.setZoom(12);
  }
 
  html.push('<optgroup label="' + strGroup1+ '">');
