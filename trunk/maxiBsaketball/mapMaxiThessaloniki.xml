@@ -266,7 +266,7 @@ function handleQueryResponseCategories(response) {
  var strGroup1 = data.getFormattedValue(0, 0);
 
  if(posesEggrafes>0){
-   thessaloniki = new google.maps.LatLng(data.getFormattedValue(row, 2));
+   thessaloniki = new google.maps.LatLng(data.getFormattedValue(0, 2));
  }
 
  html.push('<optgroup label="' + strGroup1+ '">');
