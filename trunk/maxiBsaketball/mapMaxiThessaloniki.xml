@@ -292,11 +292,11 @@ google.maps.event.addDomListener(window, 'load', initMap);
   <body id="mapStitched">
 
    <div style="text-align:center" >
-    Directions Service [Driving-Walking-Bicycling-Transit]<hr/>
-    <b>Start: </b>
+    <span id="idStrTitle">Directions Service [Driving-Walking-Bicycling-Transit]</span><hr/>
+    <b><span id="idStrStart">Start: </span>Start: </b>
     <select id="start" onchange="calcRoute();">
     </select>
-    <b>End: </b>
+    <b><span id="idStrEnd">End: </span></b>
     <select id="end" onchange="calcRoute();">
     </select>
     <b><span id="idStrMetabash">Mode of Travel: </span></b>
@@ -317,6 +317,9 @@ google.maps.event.addDomListener(window, 'load', initMap);
        controlBg.style.backgroundColor = mBackgroundColor;
        
        if (mLanguage =="GR"){
+       document.getElementById("idStrTitle").innerHTML="Ανακάλυψε πως θα πας... [Οδηγώντας-Περπατώντας-Ποδηλατώντας-Δημόσια συγκοινωνία]";
+       document.getElementById("idStrStart").innerHTML="Τρόπος μετακίνησης :";
+       document.getElementById("idStrEnd").innerHTML="Τρόπος μετακίνησης :";
         document.getElementById("idStrMetabash").innerHTML="Τρόπος μετακίνησης :";
         document.getElementById("idDriving").innerHTML="Οδηγώντας";
         document.getElementById("idWalking").innerHTML="Περπατώντας";
