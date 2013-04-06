@@ -301,10 +301,12 @@ google.maps.event.addDomListener(window, 'load', initMap);
     </select>
     <b><span id="idStrMetabash">Mode of Travel: </span></b>
     <select id="mode" onchange="calcRoute();">
+      <optgroup >Bicycling</optgroup>
+       <!-- id="idBicycling" value="BICYCLING"  -->
       <option value="DRIVING" id="idDriving">Driving</option>
       <option value="WALKING" id="idWalking">Walking</option>
       <option value="TRANSIT" id="idTransit">Transit</option>
-      <optgroup id="idBicycling">Bicycling</optgroup> <!--  value="BICYCLING"  -->
+       
     </select><hr/>
    </div>
     
