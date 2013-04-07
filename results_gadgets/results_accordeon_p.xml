@@ -200,7 +200,7 @@ function makeMarque(strForRoll){
 
 // --- gia ta tabs 
 
-function selectTab (myID, myTab, myCaption ) {
+function selectTab (myID, myTab, myCaption, mLanguage ) {
 
 //--- krybei perioxh  
     $(".periexomenaCL").hide();
@@ -235,7 +235,7 @@ function selectTab (myID, myTab, myCaption ) {
     document.getElementById("ebdomada-tab").title = "Οι αγώνες ανά ημέρα (" + strAllDate +")";
      if (mLanguage =="EN"){
        document.getElementById("ebdomada-tab").title = "Games / Day (" + strAllDate +")";
-       document.getElementById("myTitleID").innerHTML = "StanScheduledings";
+       document.getElementById("myTitleID").innerHTML = "Schedule";
       }
 
     sendQueryEbdomadiaioAnaHmera();
@@ -1000,9 +1000,9 @@ gadgets.util.registerOnLoadHandler(init);
    <div id="pano-tmhma" >
    <div id="myTabs">
    <ul>
-     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab', 'Βαθμολογίες');return false;" id="bathmologies-tab-a">Βαθμολογίες</a></li>
-     <li id="apotelesmata-tab" ><a onclick="javascript:selectTab('sourceID','apotelesmata-tab', 'Οι αγώνες των διοργανώσεων');return false;" id="apotelesmata-tab-a">Πρόγραμμα</a></li>
-     <li id="ebdomada-tab"><a onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab', 'Ανά ημέρα οι αγώνες');return false;" id="ebdomada-tab-a">Ανά Ημέρα</a></li>
+     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab', 'Βαθμολογίες', mLanguage);return false;" id="bathmologies-tab-a">Βαθμολογίες</a></li>
+     <li id="apotelesmata-tab" ><a onclick="javascript:selectTab('sourceID','apotelesmata-tab', 'Οι αγώνες των διοργανώσεων', mLanguage);return false;" id="apotelesmata-tab-a">Πρόγραμμα</a></li>
+     <li id="ebdomada-tab"><a onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab', 'Ανά ημέρα οι αγώνες',mLanguage );return false;" id="ebdomada-tab-a">Ανά Ημέρα</a></li>
      </ul>
    </div>
  </div>
@@ -1039,9 +1039,9 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
        
        if (mLanguage =="EN"){
-       document.getElementById("bathmologies-tab-a").innerHTML="Standings";
-       document.getElementById("apotelesmata-tab-a").innerHTML="Results";
-       document.getElementById("ebdomada-tab-a").innerHTML="Schedule";
+        document.getElementById("bathmologies-tab-a").innerHTML="Standings";
+        document.getElementById("apotelesmata-tab-a").innerHTML="Results";
+        document.getElementById("ebdomada-tab-a").innerHTML="Schedule";
        }
     </script>
 
