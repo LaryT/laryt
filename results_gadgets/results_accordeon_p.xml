@@ -6,7 +6,8 @@
   </ModulePrefs>
   <UserPref name="my_name" display_name="Name" default_value="ResultsBox4U" />
   <UserPref name="my_URLfeed" display_name="Resuls Sheet:" default_value="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdDc1MnBsc2d4Nl92ZGJZZGgwM3hwWEE#gid=0" />
-    <UserPref name="my_URLrank" display_name="Rank Sheet:" default_value="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdDc1MnBsc2d4Nl92ZGJZZGgwM3hwWEE#gid=6" />
+  <UserPref name="my_URLrank" display_name="Rank Sheet:" default_value="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdDc1MnBsc2d4Nl92ZGJZZGgwM3hwWEE#gid=6" />
+  <UserPref name="m_Language" display_name="Language (EN or GR):" default_value="EN" />
 <Content type="html">
     
   <![CDATA[
@@ -25,6 +26,11 @@
   var prefs = new gadgets.Prefs();
   var myURLfeed = prefs.getString("my_URLfeed");
   var myURLrank = prefs.getString("my_URLrank");
+  var mLanguage = prefs.getString("m_Language");
+  if( mLanguage!="" ){
+  }else{
+    mLanguage ="GR";
+  }
 
   var prosthetoID="";
   var pubID="";
