@@ -31,6 +31,10 @@
   }else{
     mLanguage ="GR";
   }
+  var strbathmologies-tab = "Βαθμολογίες";
+  var strapotelesmata-tab = "Οι αγώνες των διοργανώσεων";
+  var strebdomada-tab = "Ανά ημέρα οι αγώνες";
+
 
   var prosthetoID="";
   var pubID="";
@@ -987,9 +991,9 @@ gadgets.util.registerOnLoadHandler(init);
    <div id="pano-tmhma" >
    <div id="myTabs">
    <ul>
-     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;" id="bathmologies-tab-a">Βαθμολογίες</a></li>
-     <li id="apotelesmata-tab" ><a title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="javascript:selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;" id="apotelesmata-tab-a">Πρόγραμμα</a></li>
-     <li id="ebdomada-tab"><a title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;" id="ebdomada-tab-a">Ανά Ημέρα</a></li>
+     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab', strbathmologies-tab);return false;" id="bathmologies-tab-a">Βαθμολογίες</a></li>
+     <li id="apotelesmata-tab" ><a onclick="javascript:selectTab('sourceID','apotelesmata-tab', strapotelesmata-tab);return false;" id="apotelesmata-tab-a">Πρόγραμμα</a></li>
+     <li id="ebdomada-tab"><a onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab',strebdomada-tab);return false;" id="ebdomada-tab-a">Ανά Ημέρα</a></li>
      </ul>
    </div>
  </div>
@@ -1023,11 +1027,15 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
     <script>
      gadgets.window.adjustHeight();
+
        
        if (mLanguage =="EN"){
        document.getElementById("bathmologies-tab-a").innerHTML="Standings";
        document.getElementById("apotelesmata-tab-a").innerHTML="Results";
        document.getElementById("ebdomada-tab-a").innerHTML="Schedule";
+       strbathmologies-tab = "Standings";
+       strapotelesmata-tab = "Results";
+       strebdomada-tab = "Schedule";
 
        }
     </script>
