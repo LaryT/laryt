@@ -7,7 +7,7 @@
   <UserPref name="my_name" display_name="Name" default_value="ResultsBox4U" />
   <UserPref name="my_URLfeed" display_name="Resuls Sheet:" default_value="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdDc1MnBsc2d4Nl92ZGJZZGgwM3hwWEE#gid=0" />
   <UserPref name="my_URLrank" display_name="Rank Sheet:" default_value="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdDc1MnBsc2d4Nl92ZGJZZGgwM3hwWEE#gid=6" />
-  <UserPref name="m_Language" display_name="Language (EN or GR):" default_value="EN" />
+  <UserPref name="m_Language" display_name="Language (EN or GR):" default_value="GR" />
 <Content type="html">
     
   <![CDATA[
@@ -987,9 +987,9 @@ gadgets.util.registerOnLoadHandler(init);
    <div id="pano-tmhma" >
    <div id="myTabs">
    <ul>
-     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a></li>
-     <li id="apotelesmata-tab" ><a title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="javascript:selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;">Πρόγραμμα</a></li>
-     <li id="ebdomada-tab"><a title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;">Ανά Ημέρα</a></li>
+     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;" id="bathmologies-tab-a">Βαθμολογίες</a></li>
+     <li id="apotelesmata-tab" ><a title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="javascript:selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;" id="apotelesmata-tab-a">Πρόγραμμα</a></li>
+     <li id="ebdomada-tab"><a title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;" id="ebdomada-tab-a">Ανά Ημέρα</a></li>
      </ul>
    </div>
  </div>
@@ -1020,6 +1020,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </center>
 
 </div>
+
+    <script>
+     gadgets.window.adjustHeight();
+       
+       if (mLanguage =="EN"){
+       document.getElementById("bathmologies-tab-a").innerHTML="Standings";
+       document.getElementById("apotelesmata-tab-a").innerHTML="Results";
+       document.getElementById("ebdomada-tab-a").innerHTML="Schedule";
+
+       }
+    </script>
+
+
     ]]>
   </Content>
 </Module>
