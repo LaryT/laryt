@@ -1039,6 +1039,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
        
        if (mLanguage =="EN"){
+      
+        document.getElementById("myTitleID").innerHTML="<marquee>Schedule - Results - Standings </marquee>";
         document.getElementById("bathmologies-tab-a").innerHTML="Standings";
         document.getElementById("apotelesmata-tab-a").innerHTML="Results";
         document.getElementById("ebdomada-tab-a").innerHTML="Schedule";
