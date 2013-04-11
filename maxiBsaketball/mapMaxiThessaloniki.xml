@@ -96,8 +96,9 @@ var thessaloniki = new google.maps.LatLng(39.073868,22.91798);
 //40.626852,22.95619
 
 // var srcKml ='https://developers.google.com/kml/training/westcampus.kml';
-var srcKml ='http://www.seeyourhotel.com/city/2177.Thessaloniki.en.kml';
-   
+//var srcKml ='http://www.seeyourhotel.com/city/2177.Thessaloniki.en.kml';
+
+var srcKml = "https://maps.google.com/maps/ms?authuser=0&vps=2&ie=UTF8&msa=0&output=kml&msid=205502481779518675699.0004c1acbad79f1068b50";
    
 function initMap(){
 directionsDisplay = new google.maps.DirectionsRenderer();
@@ -111,7 +112,7 @@ var map_options = {
       var map = new google.maps.Map(map_canvas, map_options);
       directionsDisplay.setMap(map);
       directionsDisplay.setPanel(document.getElementById('directions-panel'));
-      //----  loadKmlLayer(srcKml,map);
+      loadKmlLayer(srcKml,map);
   //--- diadikasia diabasmatos proorismvn 
   myInitCategories();
 //---  
