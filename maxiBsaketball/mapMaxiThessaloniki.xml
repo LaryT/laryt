@@ -222,11 +222,13 @@ var request = {
 
 function loadKmlLayer(srcKml,map){
  var kml_options = {
-     suppressInfoWindows : true,
+     suppressInfoWindows : false,
      preserveViewport : false,
      map : map
     }
  var kmlLayer = new google.maps.KmlLayer(srcKml,kml_options);
+ 
+ 
  }
 
 
