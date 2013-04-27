@@ -107,7 +107,7 @@ $(document).ready(function(){
   </head>
 <body>
   <a id="idLink" href="http://www.maxibasketballthessaloniki2013.gr/" title="">
-  <div id="progressbar"><div class="progress-label"></div></div>
+  <div id="progressbar"><div class="progress-label">Loading...</div></div>
 
   </a>
 	</body>
