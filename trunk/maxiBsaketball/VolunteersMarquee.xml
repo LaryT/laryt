@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="__UP_my_name__" height="800" scrolling="true" width="100%" scaling="true" title_url="http://www.grbasket.gr" description="Results, Αποτελέσματα |::| Display results in your blog or website " author="LaZaros" author_email="terzisla@gmail.com" author_photo="https://lh5.googleusercontent.com/-fV5npoSYg1s/AAAAAAAAAAI/AAAAAAAAAAA/GuOR42Cme4M/s320/terzisla.jpg" author_link="http://www.grbasket.gr" author_aboutme="I am a webdeveloper and software programmer. Programming and scripting takes a huge part of my life routine. Every time I feel the passion to start a new creation. I work very hard with my favorite programming languages." screenshot="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s275/box_match_center.png" thumbnail="https://lh5.googleusercontent.com/-qKynsTsn0hQ/T0QNK4wlU6I/AAAAAAAAgKs/yO_77P0ZMm4/s125/box_match_center.png" category="sport" category2="news" > 
+    <Require feature="setprefs" />    
+    <Require feature="dynamic-height" />
+  </ModulePrefs>
+  <UserPref name="my_name" display_name="NameVolunteersMarque" default_value="maxiVolunteersMarquee" />
+<Content type="html">
+  <![CDATA[
+<!doctype html>
+<html>
+	<head>
+ <meta charset="utf-8" />
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+  <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+  <script type="text/javascript">
+    google.load("visualization", "1");
+  </script>
+
+	<style>
+   .progress-label {
+    float: left;
+    margin-left: 1%;
+    margin-top: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+  }
+    #progressbar .ui-progressbar-value {
+    background-color: lime;
+  }
+	</style>
+	<script type="text/javascript">
+  var today = new Date();
+  var myToday = today.getDate() + "." + (today.getMonth() + 1) + "." + today.getFullYear();
+  
+  
+  var vMax=130;
+  var textMarguee="Volunteer Application: www.maxibasketballthessaloniki2013.gr";
+  var idLinkTitle = "Online Volunteer Application, Online φόρμα αίτησης Εθελοντή";
+  var idLinkHref = "http://www.maxibasketballthessaloniki2013.gr/p/volunteer-application.html";
+
+$(document).ready(function(){
+  var mKey1 ="";
+  if(mKey1 === ""){
+   mKey1="0AjrqMWGJ6suYdDFsUy1ibHpIUmhZNzd2d3Brd21HT0E";
+  }
+  var myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1";
+  var queryTab1 = new google.visualization.Query(myURLfeedTab1);
+  var queryTab1filter  = new google.visualization.Query(myURLfeedTab1);
+  var strQTab1='select A, upper(C), upper(D) order by  A desc,C,D';
+  
+  queryTab1.setQuery(strQTab1);
+  queryTab1.send(handleQueryResponseTab1);
+  
+  function handleQueryResponseTab1(response) {
+    if (response.isError()) {
+     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+     return;
+    }
+    var data = response.getDataTable();
+    var posesEggrafes = data.getNumberOfRows();
+    vMax = posesEggrafes;
+   
+    if(posesEggrafes > 0) {
+       var html =[]; 
+       for (var row = 0; row < posesEggrafes; row++) {
+        var theDay = new Date(data.getValue(row, 0));
+        var myTheToday = theDay.getDate() + "." + (theDay.getMonth() + 1) + "." + theDay.getFullYear();
+        html.push( (row+1) + '. ' + data.getFormattedValue(row, 1) +' (' + data.getFormattedValue(row, 2) +' - '+ myTheToday +'), ');
+       }
+    }
+    textMarguee = textMarguee +' (' + vMax +') : '+ html.join('');
+     
+    $("#idLink").attr("title", idLinkTitle);
+    $("#idLink").attr("href", idLinkHref);
+    $( "#progressbar" ).find(".ui-progressbar-value").css({ "background": '#' + Math.floor( Math.random() * 16777215 ).toString( 16 )});
+    setTimeout( progress, 1000 );
+    var progressbar = $( "#progressbar" ),
+      progressLabel = $( ".progress-label" );
+
+ 
+    progressbar.progressbar({
+      max: vMax,
+      value: false,
+      change: function() {
+        progressLabel.text( myToday + " : " + progressbar.progressbar( "value" ) + " Εθελοντές [Volunteers]" );
+      },
+      complete: function() {
+        progressLabel.html( "<marquee behavior='scroll' direction='left' onmouseover='this.stop();' onmouseout='this.start();''>"+ textMarguee +" </marquee>" );
+        $( "#progressbar" ).find(".ui-progressbar-value").css({ "background": '#' + Math.floor( Math.random() * 16777215 ).toString( 16 )});
+      }
+    });
+ 
+    function progress() {
+      var val = progressbar.progressbar( "value" ) || 0;
+      progressbar.progressbar( "value", (val + 2) );
+ 
+      if ( val < vMax ) {
+        setTimeout( progress, 50 );
+      }
+    }
+  }
+});
+	</script>
+  </head>
+<body>
+  <a id="idLink" href="http://www.maxibasketballthessaloniki2013.gr/" title="">
+  <div id="progressbar"><div class="progress-label"></div></div>
+
+  </a>
+	</body>
+
+</html>
+      ]]>
+  </Content>
+</Module>
