@@ -510,7 +510,7 @@ function handleQueryResponseTab4(response) {
   
   }
   html.push('</div>');
-   var strForRoll4 = 'Teams : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>, from <span class="clSpanOnomateponymo">'+myNoCountries+'</span> countries';
+   var strForRoll4 = 'Ομάδες : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>';
    document.getElementById("myTitleID").innerHTML ="<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();'>"+strForRoll4+"</marquee>";
   document.getElementById("divIDTab4").innerHTML = html.join('');
   $("#divIDTab4").accordion({heightStyle: "content"});
@@ -553,7 +553,7 @@ function handleQueryResponseTab5(response) {
   
   }
   html.push('</div>');
-   var strForRoll5 = 'Teams : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>  ||  Categories : <span class="clSpanOnomateponymo">'+myNoCountries+'</span>';
+   var strForRoll5 = 'Ομάδες : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>  ||  Όμιλοι σε κατηγορίες : <span class="clSpanOnomateponymo">'+myNoCountries+'</span>';
    document.getElementById("myTitleID").innerHTML ="<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();'>"+strForRoll5+"</marquee>";
   document.getElementById("divIDTab5").innerHTML = html.join('');
   $("#divIDTab5").accordion({heightStyle: "content"});
@@ -621,7 +621,7 @@ function handleQueryResponseTab6(response) {
   
   }
   html.push('</div>');
-   var strForRoll6 = 'Arenas  : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>';
+   var strForRoll6 = 'Γήπεδα  : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>';
    document.getElementById("myTitleID").innerHTML ="<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();'>"+strForRoll6+"</marquee>";
   document.getElementById("divIDTab6").innerHTML = html.join('');
   $("#divIDTab6").accordion({heightStyle: "content"});
@@ -650,8 +650,8 @@ function handleQueryResponseTab6(response) {
    </div>
  </div>
  <div>
-    <div id="myTitleID"><marquee>Team participations - Team rosters - History FIMBA World Maxibasketball Championships. From 1st to 12th </marquee></div>
-    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter : Data updating every 4-6 hours &nbsp;|&nbsp; <a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a>
+    <div id="myTitleID"><marquee>Πληροφορίες - Ομάδες - Rosters  </marquee></div>
+    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter : Αυτόματη ενημέρωση στοιχείων κάθε 4-6 ώρες &nbsp;|&nbsp; <a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a>
     </div>
   
     <div id="divIDTab1" class="periexomenaCL"></div>
@@ -663,10 +663,10 @@ function handleQueryResponseTab6(response) {
   </div>
   
 <center>
-<div id="addiv"><p class="pClepikefalida"><br/><br/><br/>Welcome to InfoCenter<br/></p>
-<p class="pClRow">1st Step : Click the "X" button to continue.</p>
-<p class="pClRow">2nd Step : Select at the top the tab-category.</p>
-<p class="pClRow">3rd Step : Select the Filter from the Option Field.<br/><br/></p>
+<div id="addiv"><p class="pClepikefalida"><br/><br/><br/>InfoCenter<br/></p>
+<p class="pClRow">1o : Πατήστε στο "X" για συνέχεια.</p>
+<p class="pClRow">2ο : Επιλογή κατηγορίας πληροφοριών (tab).</p>
+<p class="pClRow">3ο : Επιλογή φίλτρων από το πεδίο επιλογής.<br/><br/></p>
 
 
 <a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="απόκρυψη - hide ads">X</a><br/>
