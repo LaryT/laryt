@@ -4,7 +4,24 @@
     <Require feature="setprefs" />    
     <Require feature="dynamic-height" />
   </ModulePrefs>
-  <UserPref name="my_name" display_name="Name" default_value="generInfoCenter" />
+  <UserPref name="my_name" display_name="Name" default_value="generInfoCenter" />  
+  <UserPref name="my_URLrank" display_name="Sheet1 key:" default_value="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc" />
+  <UserPref name="caption_Tab1" display_name="Tab1 Label:" default_value="Rosters" />
+  
+  <UserPref name="my_URLrank" display_name="Sheet2 key:" default_value="0AjrqMWGJ6suYdHFEbFV2RnROLUlQSzBHdXQ0dU1yYlE" />
+  <UserPref name="caption_Tab1" display_name="Tab2 Label:" default_value="Championships" />
+  
+  <UserPref name="my_URLrank" display_name="Sheet3 key:" default_value="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c" />
+  <UserPref name="caption_Tab1" display_name="Tab3 Label:" default_value="Medals" />
+
+  <UserPref name="my_URLrank" display_name="Sheet4 key:" default_value="0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc" />
+  <UserPref name="caption_Tab1" display_name="Tab4 Label:" default_value="Teams" />
+
+  <UserPref name="my_URLrank" display_name="Sheet5 key:" default_value="0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc" />
+  <UserPref name="caption_Tab1" display_name="Tab5 Label:" default_value="Categories" />
+  
+  <UserPref name="my_URLrank" display_name="Sheet6 key:" default_value="0AjrqMWGJ6suYdDJrYWRjVXZ6ZVNWNDJLdjBjaGQyVkE" />
+  <UserPref name="caption_Tab1" display_name="Tab6 Label:" default_value="Stadiums" />  
 <Content type="html">
   <![CDATA[
 <!doctype html>
