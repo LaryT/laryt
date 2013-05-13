@@ -688,33 +688,33 @@ google_ad_height = 250;
 if(captionTab1!=""){
  document.getElementById("spanIDTab1").innerHTML = captionTab1;
 }else{
- $("#spanIDTab1").hide();
+ $("#tabLi1").hide();
 }
 
 if(captionTab2!=""){
  document.getElementById("spanIDTab2").innerHTML = captionTab2;
 }else{
- $("#spanIDTab2").hide();
+ $("#tabLi2").hide();
 }
 if(captionTab3!=""){
  document.getElementById("spanIDTab3").innerHTML = captionTab3;
 }else{
- $("#spanIDTab3").hide();
+ $("#tabLi3").hide();
 }
 if(captionTab4!=""){
  document.getElementById("spanIDTab4").innerHTML = captionTab4;
 }else{
- $("#spanIDTab4").hide();
+ $("#tabLi4").hide();
 }
 if(captionTab5!=""){
  document.getElementById("spanIDTab5").innerHTML = captionTab5;
 }else{
- $("#spanIDTab5").hide();
+ $("#tabLi5").hide();
 }
 if(captionTab6!=""){
  document.getElementById("spanIDTab6").innerHTML = captionTab6;
 }else{
- $("#spanIDTab6").hide();
+ $("#tabLi6").hide();
 }
 
 gadgets.window.adjustHeight();
