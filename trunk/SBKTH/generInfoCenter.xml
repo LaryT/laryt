@@ -5,23 +5,24 @@
     <Require feature="dynamic-height" />
   </ModulePrefs>
   <UserPref name="my_name" display_name="Name" default_value="generInfoCenter" />  
-  <UserPref name="my_URLrank" display_name="Sheet1 key:" default_value="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc" />
+  
+  <UserPref name="my_SheetKey1" display_name="Sheet1 key:" default_value="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc" />
   <UserPref name="caption_Tab1" display_name="Tab1 Label:" default_value="Rosters" />
   
-  <UserPref name="my_URLrank" display_name="Sheet2 key:" default_value="0AjrqMWGJ6suYdHFEbFV2RnROLUlQSzBHdXQ0dU1yYlE" />
-  <UserPref name="caption_Tab1" display_name="Tab2 Label:" default_value="Championships" />
+  <UserPref name="my_SheetKey2" display_name="Sheet2 key:" default_value="0AjrqMWGJ6suYdHFEbFV2RnROLUlQSzBHdXQ0dU1yYlE" />
+  <UserPref name="caption_Tab2" display_name="Tab2 Label:" default_value="Championships" />
   
-  <UserPref name="my_URLrank" display_name="Sheet3 key:" default_value="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c" />
-  <UserPref name="caption_Tab1" display_name="Tab3 Label:" default_value="Medals" />
+  <UserPref name="my_SheetKey3" display_name="Sheet3 key:" default_value="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c" />
+  <UserPref name="caption_Tab3" display_name="Tab3 Label:" default_value="Medals" />
 
-  <UserPref name="my_URLrank" display_name="Sheet4 key:" default_value="0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc" />
-  <UserPref name="caption_Tab1" display_name="Tab4 Label:" default_value="Teams" />
+  <UserPref name="my_SheetKey4" display_name="Sheet4 key:" default_value="0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc" />
+  <UserPref name="caption_Tab4" display_name="Tab4 Label:" default_value="Teams" />
 
-  <UserPref name="my_URLrank" display_name="Sheet5 key:" default_value="0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc" />
-  <UserPref name="caption_Tab1" display_name="Tab5 Label:" default_value="Categories" />
+  <UserPref name="my_SheetKey5" display_name="Sheet5 key:" default_value="0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc" />
+  <UserPref name="caption_Tab5" display_name="Tab5 Label:" default_value="Categories" />
   
-  <UserPref name="my_URLrank" display_name="Sheet6 key:" default_value="0AjrqMWGJ6suYdDJrYWRjVXZ6ZVNWNDJLdjBjaGQyVkE" />
-  <UserPref name="caption_Tab1" display_name="Tab6 Label:" default_value="Stadiums" />  
+  <UserPref name="my_SheetKey6" display_name="Sheet6 key:" default_value="0AjrqMWGJ6suYdDJrYWRjVXZ6ZVNWNDJLdjBjaGQyVkE" />
+  <UserPref name="caption_Tab6" display_name="Tab6 Label:" default_value="Stadiums" />  
 <Content type="html">
   <![CDATA[
 <!doctype html>
@@ -75,12 +76,38 @@ div#divIDTab1{display:block}
 <script>
 var prefs = new gadgets.Prefs();
 // var mKey1 = prefs.getString("m_Key1");
-var mKey1 ="";
-var mKey2 ="";
-var mKey3 ="";
-var mKey4 ="";
-var mKey5 ="";
-var mKey6 ="";
+  <UserPref name="my_SheetKey1" display_name="Sheet1 key:" default_value="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc" />
+  <UserPref name="caption_Tab1" display_name="Tab1 Label:" default_value="Rosters" />
+  
+  <UserPref name="my_SheetKey2" display_name="Sheet2 key:" default_value="0AjrqMWGJ6suYdHFEbFV2RnROLUlQSzBHdXQ0dU1yYlE" />
+  <UserPref name="caption_Tab2" display_name="Tab2 Label:" default_value="Championships" />
+  
+  <UserPref name="my_SheetKey3" display_name="Sheet3 key:" default_value="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c" />
+  <UserPref name="caption_Tab3" display_name="Tab3 Label:" default_value="Medals" />
+
+  <UserPref name="my_SheetKey4" display_name="Sheet4 key:" default_value="0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc" />
+  <UserPref name="caption_Tab4" display_name="Tab4 Label:" default_value="Teams" />
+
+  <UserPref name="my_SheetKey5" display_name="Sheet5 key:" default_value="0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc" />
+  <UserPref name="caption_Tab5" display_name="Tab5 Label:" default_value="Categories" />
+  
+  <UserPref name="my_SheetKey6" display_name="Sheet6 key:" default_value="0AjrqMWGJ6suYdDJrYWRjVXZ6ZVNWNDJLdjBjaGQyVkE" />
+  <UserPref name="caption_Tab6" display_name="Tab6 Label:" default_value="Stadiums" />  
+
+
+var captionTab1 = "Rosters";
+var captionTab2 = "Championships";
+var captionTab3 = "Medals";
+var captionTab4 = "Teams";
+var captionTab5 = "Categories";
+var captionTab6 = "Stadiums";
+
+var mKey1 = prefs.getString("my_SheetKey1");
+var mKey2 = prefs.getString("my_SheetKey2");
+var mKey3 = prefs.getString("my_SheetKey3");
+var mKey4 = prefs.getString("my_SheetKey4");
+var mKey5 = prefs.getString("my_SheetKey5");
+var mKey6 = prefs.getString("my_SheetKey6");
 
 if(mKey1 === ""){
  mKey1="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
@@ -108,12 +135,7 @@ var mCatTab4 ="";
 var mCatTab5 ="";
 var mCatTab6 ="";
 
-var captionTab1 = "Rosters";
-var captionTab2 = "Championships";
-var captionTab3 = "Medals";
-var captionTab4 = "Teams";
-var captionTab5 = "Categories";
-var captionTab6 = "Stadiums";
+
 
 
 var strQTab1;
