@@ -56,7 +56,7 @@ div#divIDTab1{display:block}
 .pClRow{font-family:Verdana, Arial,sans-serif; font-size:9px;}
 </style>
 <script>
-var prefs = new gadgets.Prefs();
+// var prefs = new gadgets.Prefs();
 // var mKey1 = prefs.getString("m_Key1");
 var mKey1 ="";
 var mKey2 ="";
@@ -64,6 +64,7 @@ var mKey3 ="";
 var mKey4 ="";
 var mKey5 ="";
 var mKey6 ="";
+var mKey7 ="";
 
 if(mKey1 === ""){
  mKey1="0AjrqMWGJ6suYdEtaa3pyZUxfLU05YlBza1Y1ZXYtM3c";
@@ -87,6 +88,9 @@ if(mKey5 === ""){
 if(mKey6 === ""){
  mKey6="0AjrqMWGJ6suYdDJrYWRjVXZ6ZVNWNDJLdjBjaGQyVkE";
 }
+if(mKey7 === ""){
+ mKey7="0AjrqMWGJ6suYdHp1SmFQT3l1dm9UaUloTzBObHZ0YXc";
+}
 //for filter in a Tab
 var mCatTab1 ="";
 var mCatTab2 ="";
@@ -94,6 +98,7 @@ var mCatTab3 ="";
 var mCatTab4 ="";
 var mCatTab5 ="";
 var mCatTab6 ="";
+var mCatTab7 ="";
 
 var captionTab1 = "Rosters";
 var captionTab2 = "Championships";
@@ -101,6 +106,8 @@ var captionTab3 = "Medals";
 var captionTab4 = "Teams";
 var captionTab5 = "Categories";
 var captionTab6 = "Stadiums";
+var captionTab7 = "Stars";
+
 
 
 var strQTab1;
@@ -110,6 +117,7 @@ var strQTab3;
 var strQTab4;
 var strQTab5;
 var strQTab6;
+var strQTab7;
 
 var queryTab1;
 var queryTab1filter;
@@ -122,6 +130,7 @@ var myURLfeedTab3;
 var myURLfeedTab4;
 var myURLfeedTab5;
 var myURLfeedTab6;
+var myURLfeedTab7;
 
 if( mKey1!="" ){
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1";
@@ -157,6 +166,12 @@ if( mKey6!="" ){
 }else{
    alert('No source file for Tab6');
 }
+if( mKey7!="" ){  
+  myURLfeedTab7 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey7 +"&headers=1";
+}else{
+   alert('No source file for Tab7');
+}
+
 //--- gia ta ads
 function hideDivAds(){
  $("#addiv").hide();
@@ -196,6 +211,9 @@ function selectTab(myID, myTab ) {
  }
  if(myTab == "tabLi6"){  
   sendQueryTab6();
+ }
+ if(myTab == "tabLi7"){  
+  sendQueryTab7();
  }
 }
 //---- xtizei periexomeno gia kathe tab
@@ -250,9 +268,9 @@ function sendQueryTab4() {
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey4 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
 if( mCatTab4!="" ){
-   strQTab4='select upper(J), K, L, upper(M),P,E,A where J="'+mCatTab4 +'"  order by J,L,M';
+   strQTab4='select upper(J), K, L, upper(M),P,E,A,R,S,T,U,V,W,X,Y,Z,AA,AB where J="'+mCatTab4 +'"  order by J,L,M';
   }else{
-   strQTab4='SELECT upper(J), K, L, upper(M),P,E,A order by J,L,M';
+   strQTab4='SELECT upper(J), K, L, upper(M),P,E,A,R,S,T,U,V,W,X,Y,Z,AA,AB order by J,L,M';
   }
   queryTab1.setQuery(strQTab4);   
   queryTab1.send(handleQueryResponseTab4); 
@@ -263,9 +281,9 @@ function sendQueryTab5() {
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey5 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
 if( mCatTab5!="" ){
-   strQTab5='select upper(J), K, L, upper(M),P,E,A where J="'+mCatTab5 +'"  order by L,J,M';
+   strQTab5='select upper(J), K, L, upper(M),P,E,A,R,S,T,U,V,W,X,Y,Z,AA,AB where J="'+mCatTab5 +'"  order by L,J,M';
   }else{
-   strQTab5='SELECT upper(J), K, L, upper(M),P,E,A order by L,J,M';
+   strQTab5='SELECT upper(J), K, L, upper(M),P,E,A,R,S,T,U,V,W,X,Y,Z,AA,AB order by L,J,M';
   }
   queryTab1.setQuery(strQTab5);   
   queryTab1.send(handleQueryResponseTab5); 
@@ -284,6 +302,24 @@ if( mCatTab6!="" ){
   queryTab1.setQuery(strQTab6);   
   queryTab1.send(handleQueryResponseTab6); 
 }
+
+function sendQueryTab7() {
+ document.getElementById("myTitleID").innerHTML = '';
+ document.getElementById("divIDTab7").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
+  myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey7 +"&headers=1";
+  queryTab1 = new google.visualization.Query(myURLfeedTab1);
+  alert('soon');
+  /*
+if( mCatTab7!="" ){
+   strQTab7='select A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P where J="'+mCatTab7 +'"  order by A';
+  }else{
+   strQTab7='SELECT A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P order by A';
+  }
+  queryTab1.setQuery(strQTab7);   
+  queryTab1.send(handleQueryResponseTab7); 
+  */
+}
+
 //-----
 //- make div Tab1
 //-----
@@ -483,6 +519,10 @@ function handleQueryResponseTab4(response) {
   
    myCount++;
    html.push('<div><div class="clDivData">'+myCount+'. '+ data.getFormattedValue(row, 1).toUpperCase()+' ('+data.getFormattedValue(row, 2) +') <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 3).toUpperCase() + '</span></div><div class="clDivData2seira">Team Delegate : '+data.getFormattedValue(row, 6).toUpperCase()+', Reg/No : '+ data.getFormattedValue(row, 5).substr(0,4)+'...</div></div>');
+
+   html.push('<div><div class="clDivData2seira" title="'+data.getFormattedValue(row, 11)+'">Arrive : '+data.getFormattedValue(row, 7)+' '+data.getFormattedValue(row, 8)+' '+data.getFormattedValue(row, 9)+' '+data.getFormattedValue(row, 10)+'</div></div>');
+   html.push('<div><div class="clDivData2seira">Hotel : '+data.getFormattedValue(row, 12)+'</div></div>');
+   html.push('<div><div class="clDivData2seira" title="'+data.getFormattedValue(row, 17)+'">Departure : '+data.getFormattedValue(row, 13)+' '+data.getFormattedValue(row, 14)+' '+data.getFormattedValue(row, 15)+' '+data.getFormattedValue(row, 16)+'</div></div>');
   
   }
   html.push('</div>');
@@ -621,7 +661,7 @@ function handleQueryResponseTab6(response) {
      <li id="tabLi6"><a href="javascript:void(0);" onclick="selectTab('divIDTab6','tabLi6' );return false;"><span id="spanIDTab6">Tab6</span></a></li>     
      <li id="tabLi2"><a href="javascript:void(0);" onclick="selectTab('divIDTab2','tabLi2' );return false;"><span id="spanIDTab2">Tab2</span></a></li>
      <li id="tabLi3"><a href="javascript:void(0);" onclick="selectTab('divIDTab3','tabLi3' );return false;"><span id="spanIDTab3">Tab3</span></a></li>
-
+     <li id="tabLi7"><a href="javascript:void(0);" onclick="selectTab('divIDTab7','tabLi7' );return false;"><span id="spanIDTab7">Tab7</span></a></li>
      </ul>
    </div>
  </div>
@@ -636,6 +676,7 @@ function handleQueryResponseTab6(response) {
     <div id="divIDTab4" class="periexomenaCL"></div>  
     <div id="divIDTab5" class="periexomenaCL"></div>
     <div id="divIDTab6" class="periexomenaCL"></div>
+    <div id="divIDTab7" class="periexomenaCL"></div>
   </div>
   
 <center>
@@ -667,6 +708,7 @@ document.getElementById("spanIDTab3").innerHTML = captionTab3;
 document.getElementById("spanIDTab4").innerHTML = captionTab4;
 document.getElementById("spanIDTab5").innerHTML = captionTab5;
 document.getElementById("spanIDTab6").innerHTML = captionTab6;
+document.getElementById("spanIDTab7").innerHTML = captionTab7;
 gadgets.window.adjustHeight();
 </script>
 </body>
