@@ -54,6 +54,10 @@ div#divIDTab1{display:block}
 #addiv{background-color: rgb(255, 255, 255);position: absolute;top: 40px;bottom: 5px;right: 0px;left: 0px;}
 .pClepikefalida{font-family:Verdana, Arial,sans-serif; font-size:12px; font-weight:bold;}
 .pClRow{font-family:Verdana, Arial,sans-serif; font-size:9px;}
+.divImgStars{padding: 5px;float:left;border: 1px solid silver;margin-right:5px;}
+.divImgStars img:hover {-webkit-transform: scale(1.2) rotate(360deg);opacity: 1;-webkit-box-reflect: below 2px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(0.2,transparent),to(rgba(0,0,0,0.8)));}
+.divImgStars img {background: #ffffff;opacity: .8;-webkit-transition: all 300ms ease-in-out;-moz-transition: all 300ms ease-in-out;-o-transition: all 300ms ease-in-out;-ms-transition: all 300ms ease-in-out;transition: all 300ms ease-in-out;-webkit-box-reflect: below 2px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(0.8,transparent),to(rgba(0,0,0,0.8)));}
+.divVideStars{padding: 5px;clear:both;margin-right:5px;}
 </style>
 <script>
 // var prefs = new gadgets.Prefs();
@@ -67,9 +71,9 @@ var mKey6 ="";
 var mKey7 ="";
 
 if(mKey1 === ""){
- mKey1="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
+ mKey1="0AjrqMWGJ6suYdEtaa3pyZUxfLU05YlBza1Y1ZXYtM3c";
  // -- 0AjrqMWGJ6suYdEtaa3pyZUxfLU05YlBza1Y1ZXYtM3c  -- maxi_Regis_for_loopa_2nd_ALLROSTERsTeams
- // -- 0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc  -- maxi_Regis_ALLROSTERsTeams
+ // -- 0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc
  // -- 0AjrqMWGJ6suYdHFndS1qWlZXcWE4VGZsRll0YUF6YXc  -- maxi_Regis_2_ALLROSTERsTeams
 
 }
@@ -118,11 +122,14 @@ var strQTab4;
 var strQTab5;
 var strQTab6;
 var strQTab7;
+var strQTab7filter;
 
 var queryTab1;
 var queryTab1filter;
 var queryTab2;
 var queryTab3;
+var queryTab7;
+var queryTab7filter;
 
 var myURLfeedTab1;
 var myURLfeedTab2;
@@ -168,6 +175,8 @@ if( mKey6!="" ){
 }
 if( mKey7!="" ){  
   myURLfeedTab7 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey7 +"&headers=1";
+  queryTab7 = new google.visualization.Query(myURLfeedTab7);
+  queryTab7filter  = new google.visualization.Query(myURLfeedTab7);
 }else{
    alert('No source file for Tab7');
 }
@@ -306,18 +315,24 @@ if( mCatTab6!="" ){
 function sendQueryTab7() {
  document.getElementById("myTitleID").innerHTML = '';
  document.getElementById("divIDTab7").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
-  myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey7 +"&headers=1";
-  queryTab1 = new google.visualization.Query(myURLfeedTab1);
-  alert('soon');
-  /*
+  myURLfeedTab7 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey7 +"&headers=1";
+  queryTab7 = new google.visualization.Query(myURLfeedTab7);
+
 if( mCatTab7!="" ){
-   strQTab7='select A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P where J="'+mCatTab7 +'"  order by A';
+  // strQTab7='select upper(A),upper(B),upper(C),D,E,F,G,H,I,J,K,L,M,N where J="'+mCatTab7 +'"  order by B';
   }else{
-   strQTab7='SELECT A,B,upper(C),D,E,F,G,H,I,J,K,L,M,N,O,P order by A';
+   strQTab7='SELECT upper(A),upper(B),upper(C),D,E,F,G,H,I,J,K,L,M,N order by B';
   }
-  queryTab1.setQuery(strQTab7);   
-  queryTab1.send(handleQueryResponseTab7); 
-  */
+  queryTab7.setQuery(strQTab7);   
+  queryTab7.send(handleQueryResponseTab7); 
+  
+  //-------- gia ta filter cathgorivn
+   queryTab7 = new google.visualization.Query(myURLfeedTab7);
+   strTab7filter = 'select C, count(B) group by C';
+   queryTab7.setQuery(strTab7filter);
+   queryTab7.send(handleQueryResponseTab7Filter);
+   $( "#divIDTab7" ).accordion( "refresh" );
+
 }
 
 //-----
@@ -519,15 +534,11 @@ function handleQueryResponseTab4(response) {
   
    myCount++;
    html.push('<div><div class="clDivData">'+myCount+'. '+ data.getFormattedValue(row, 1).toUpperCase()+' ('+data.getFormattedValue(row, 2) +') <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 3).toUpperCase() + '</span></div><div class="clDivData2seira">Team Delegate : '+data.getFormattedValue(row, 6).toUpperCase()+', Reg/No : '+ data.getFormattedValue(row, 5).substr(0,4)+'...</div></div>');
-   
-   /*
-
+/*
    html.push('<div><div class="clDivData2seira" title="'+data.getFormattedValue(row, 11)+'">Arrive : '+data.getFormattedValue(row, 7)+' '+data.getFormattedValue(row, 8)+' '+data.getFormattedValue(row, 9)+' '+data.getFormattedValue(row, 10)+'</div></div>');
    html.push('<div><div class="clDivData2seira">Hotel : '+data.getFormattedValue(row, 12)+'</div></div>');
    html.push('<div><div class="clDivData2seira" title="'+data.getFormattedValue(row, 17)+'">Departure : '+data.getFormattedValue(row, 13)+' '+data.getFormattedValue(row, 14)+' '+data.getFormattedValue(row, 15)+' '+data.getFormattedValue(row, 16)+'</div></div>');
-  
-  */
-  
+*/
   }
   html.push('</div>');
    var strForRoll4 = 'Teams : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>, from <span class="clSpanOnomateponymo">'+myNoCountries+'</span> countries';
@@ -652,6 +663,118 @@ function handleQueryResponseTab6(response) {
  $("#divIDTab6").accordion( "refresh" );
  gadgets.window.adjustHeight();
  }
+
+
+//-----
+//- make div Tab7
+//-----
+function handleQueryResponseTab7(response) {
+if (response.isError()) {
+     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+     return;
+ }
+
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+ if(posesEggrafes > 0) {
+  var html =[]; 
+  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
+  var myCount=0;  
+  
+  html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 1)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 13)+'" />'+strGroup +' '+data.getFormattedValue(0, 0)+'</h3><div class="div'+data.getFormattedValue(0, 1)+'_'+data.getFormattedValue(0, 0)+'">');
+  for (var row = 0; row < posesEggrafes; row++) {
+   if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
+    strGroup = data.getFormattedValue(row, 1).toUpperCase();
+    html.push('</div><h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(row, 1)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 13)+'" />'+strGroup +' '+data.getFormattedValue(row, 0)+'</h3><div class="div'+data.getFormattedValue(row, 1)+'_'+data.getFormattedValue(0, 0)+'">');
+    myCount=0;
+   }
+  
+   myCount++;
+
+   if(data.getFormattedValue(row, 11) !=''){
+    html.push('<div class="divImgStars"><img src="'+ data.getFormattedValue(row, 11)+'" width="200" /></div>');
+   }
+
+   html.push('<div><div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1).toUpperCase()+' '+data.getFormattedValue(row, 0).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 2) +' '+ data.getFormattedValue(row, 3) +') </div><div class="clDivData2seira"><span class="clSpanOnomateponymo">Position</span> : '+data.getFormattedValue(row, 5)+' <br><span class="clSpanOnomateponymo">Born</span> : '+ data.getFormattedValue(row, 4)  +' <br><span class="clSpanOnomateponymo">Height</span> : ' + data.getFormattedValue(row, 6)+'<hr>');
+
+  if(data.getFormattedValue(row, 7) !=''){
+    html.push('<br><span class="clSpanOnomateponymo">Teams (carier)</span>:'+ data.getFormattedValue(row, 7) +'<br><br>');
+   }
+  if(data.getFormattedValue(row, 8) !=''){
+    html.push('<span class="clSpanOnomateponymo"></span>'+ data.getFormattedValue(row, 8) +'<br><br>');
+   }
+  if(data.getFormattedValue(row, 9) !=''){
+    html.push('<span class="clSpanOnomateponymo">Stats & Numbers </span>:'+ data.getFormattedValue(row, 9) +'<br><br>');
+   }
+  if(data.getFormattedValue(row, 10) !=''){
+    html.push('<hr/><span class="clSpanOnomateponymo">Teams (maxi)</span>:'+ data.getFormattedValue(row, 10) +'<br><br>');
+   }
+
+
+  html.push('</div></div>');
+
+  if(data.getFormattedValue(row, 12) !=''){
+    html.push('<div class="divVideStars"><br> <span class="clSpanOnomateponymo">Youtube video:'+data.getFormattedValue(row, 1).toUpperCase()+' '+data.getFormattedValue(row, 0).toUpperCase() + '</span><hr/><br><iframe width="400" height="250" src="http://www.youtube.com/embed/'+data.getFormattedValue(row, 12)+'" frameborder="0" allowfullscreen></iframe></div>');
+   }
+  
+  }
+  html.push('</div>');
+  
+  // document.getElementById("myTitleID").innerHTML ="";
+  document.getElementById("divIDTab7").innerHTML = html.join('');
+  $( "#divIDTab7" ).accordion({heightStyle: "content"});
+  }else {
+   document.getElementById("divIDTab7").innerHTML = '<div class="clSpanOnomateponymo"> 0 rec for maxibasketball Stars</div>';
+  }
+  
+ $( "#divIDTab7" ).accordion( "refresh" );
+ gadgets.window.adjustHeight();
+}
+
+//-----
+//- make div Tab7Filter
+//-----
+function handleQueryResponseTab7Filter(response) {
+
+if (response.isError()) {
+     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+     return;
+ }
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+ var html4group2 =[]; 
+
+
+ if(posesEggrafes > 0) {
+    html4group2.push('Filter : ');
+    html4group2.push('<select id="query-3" onchange="setNewQueryCountry(this.value)">');
+    html4group2.push('<option value="">All</option>');
+ 
+  for (var row = 0; row < posesEggrafes; row++) {
+     html4group2.push('<option value="'+data.getFormattedValue(row, 0)+'">'+data.getFormattedValue(row, 0)+'</option>');  
+  }
+
+  html4group2.push('</select>');
+  document.getElementById("myTitleID").innerHTML = html4group2.join('');
+ }
+ gadgets.window.adjustHeight();
+
+}
+//----------- epilogh xvras gia paiktes NEW ----
+function setNewQueryCountry(queryString) {  
+document.getElementById("divIDTab7").innerHTML ="";
+$( "#divIDTab7" ).accordion( "destroy" );
+
+ if(queryString !=""){
+   queryTab7.setQuery('where C="'+queryString+'"');   
+ }else{
+    queryTab7.setQuery('select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C');
+ }  
+ queryTab7.send(handleQueryResponseTab7);  
+}
+
+
+
 </script>  
 </head>
 <body>
@@ -717,6 +840,7 @@ gadgets.window.adjustHeight();
 </script>
 </body>
 </html>
+
       ]]>
   </Content>
 </Module>
