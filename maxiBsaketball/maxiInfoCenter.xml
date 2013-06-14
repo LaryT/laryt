@@ -698,7 +698,7 @@ if (response.isError()) {
    html.push('<div><div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1).toUpperCase()+' '+data.getFormattedValue(row, 0).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 2) +' '+ data.getFormattedValue(row, 3) +') </div><div class="clDivData2seira"><span class="clSpanOnomateponymo">Position</span> : '+data.getFormattedValue(row, 5)+' <br><span class="clSpanOnomateponymo">Born</span> : '+ data.getFormattedValue(row, 4)  +' <br><span class="clSpanOnomateponymo">Height</span> : ' + data.getFormattedValue(row, 6)+'<hr>');
 
   if(data.getFormattedValue(row, 7) !=''){
-    html.push('<br><span class="clSpanOnomateponymo">Teams (carier)</span>:'+ data.getFormattedValue(row, 7) +'<br><br>');
+    html.push('<br><span class="clSpanOnomateponymo">Teams (career)</span>:'+ data.getFormattedValue(row, 7) +'<br><br>');
    }
   if(data.getFormattedValue(row, 8) !=''){
     html.push('<span class="clSpanOnomateponymo"></span>'+ data.getFormattedValue(row, 8) +'<br><br>');
