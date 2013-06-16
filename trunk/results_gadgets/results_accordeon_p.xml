@@ -702,7 +702,7 @@ function makeApotelesmataDiorganvshs(URLforBathmologia){
 
    if( URLforBathmologia!="" ){
      var queryApotelesmataDiorganvsh = new google.visualization.Query(URLforBathmologia);
-     var strSQL ="select B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, AW, AX, AY, AZ, BA, BB, BC, BD, BE, BG where  Q is not null  order by Q, D, E";
+     var strSQL ="select B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, AW, AX, AY, AZ, BA, BB, BC, BD, BE, BG where Q<>'' order by Q, D, E";
      queryApotelesmataDiorganvsh.setQuery(strSQL);
      queryApotelesmataDiorganvsh.send(handleQueryApotelesmataDiorgResponse);
           //-------- trexon docs     
