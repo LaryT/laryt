@@ -234,7 +234,7 @@ function selectTab (myID, myTab, myCaption, mLanguage ) {
     document.getElementById("myTitleID").innerHTML += "<span style='font-size:9px;'> (" + strAllDate +")</span>";
     document.getElementById("ebdomada-tab").title = "Οι αγώνες ανά ημέρα (" + strAllDate +")";
      if (mLanguage =="EN"){
-       document.getElementById("ebdomada-tab").title = "Games / Day (" + strAllDate +")";
+       document.getElementById("ebdomada-tab").title = "Games / Day ";
        document.getElementById("myTitleID").innerHTML = "Schedule";
       }
 
@@ -918,26 +918,26 @@ function handleQueryBathKathgoriasResponse(response){
      html.push('<td class="padBath small-9" width="33%" align="left"> <span class="anametrhsh">' + data.getFormattedValue(row, 3)+'</span></td>');
 
     //-- sthlh 4 bathmoi
-     html.push('<td class="padBath small-9" width="5%" align="right" title="Βαθμοί"><span class="anametrhsh"><b>' + data.getFormattedValue(row, 4) +'</b></span></td>');
+     html.push('<td class="padBath small-9" width="5%" align="right" title="P"><span class="anametrhsh"><b>' + data.getFormattedValue(row, 4) +'</b></span></td>');
     
      //-- sthlh 5 agones
-     html.push('<td class="padBath small-9" width="5%" align="right" title="Αγώνες" ><span class="anametrhsh" >' + data.getFormattedValue(row, 5) +'</span></td>');
+     html.push('<td class="padBath small-9" width="5%" align="right" title="Games" ><span class="anametrhsh" >' + data.getFormattedValue(row, 5) +'</span></td>');
 
      //-- sthlh 6 nikes/ht
-     html.push('<td class="padBath small-9" width="7%" align="right" title="Νίκες/Ήττες" ><span class="anametrhsh" >' + data.getFormattedValue(row, 6)+ '</span>|<span class="anametrhsh">' + data.getFormattedValue(row, 7)+'</span></td>');
+     html.push('<td class="padBath small-9" width="7%" align="right" title="W | D" ><span class="anametrhsh" >' + data.getFormattedValue(row, 6)+ '</span>|<span class="anametrhsh">' + data.getFormattedValue(row, 7)+'</span></td>');
 
      //-- sthlh 7 mhd
      if(data.getFormattedValue(row, 8) != '0' ){
-       html.push('<td class="padBath small-9" width="3%" align="right" title="Μηδενισμοί"><span class="anametrhsh" >' + data.getFormattedValue(row, 8)+'</span></td>');
+       html.push('<td class="padBath small-9" width="3%" align="right" title="Z"><span class="anametrhsh" >' + data.getFormattedValue(row, 8)+'</span></td>');
      }else{
-       html.push('<td class="padBath small-9" width="3%" align="right" title="Μηδενισμοί"><span class="anametrhsh">&nbsp;</span></td>');
+       html.push('<td class="padBath small-9" width="3%" align="right" title="Z"><span class="anametrhsh">&nbsp;</span></td>');
      }
 
      //-- sthlh 8
-     html.push('<td class="padBath small-9" width="8%" align="right" title="Επιθ/Αμυν"><span class="anametrhsh" >' + data.getFormattedValue(row, 9)+'</span>-<span class="anametrhsh">' + data.getFormattedValue(row, 10)+'</span></td>');
+     html.push('<td class="padBath small-9" width="8%" align="right" title="pts A | D"><span class="anametrhsh" >' + data.getFormattedValue(row, 9)+'</span>-<span class="anametrhsh">' + data.getFormattedValue(row, 10)+'</span></td>');
 
      //-- sthlh 9
-     html.push('<td class="padBath small-9" width="6%" align="right" title="Διαφορά πόντων"><span class="anametrhsh" >' + data.getFormattedValue(row, 11)+'</span></td>');
+     html.push('<td class="padBath small-9" width="6%" align="right" title="Pts difference"><span class="anametrhsh" >' + data.getFormattedValue(row, 11)+'</span></td>');
 
      //-- sthlh 10
      if(data.getFormattedValue(row, 12) !=''){
@@ -947,7 +947,7 @@ function handleQueryBathKathgoriasResponse(response){
      }
 
   }else{   // an einai h prvth seira dhladh exei to koytaki =0
-     html.push('<td class="padBath small-9" colspan="10"><center><b>Βαθμολογικός Πίνακας</b></center></td>');
+     html.push('<td class="padBath small-9" colspan="10"><center><b>&nbsp;</b></center></td>');
   }        // endif exei periexomeno bathmologiko
 
   html.push('</tr></tbody></table></td></tr>' );
@@ -977,7 +977,7 @@ function makeBathmologia(URLforBathmologia){
      queryBathKathgorias.send(handleQueryBathKathgoriasResponse);
 
    }else{
-     alert('Δεν βρέθηκε το αρχείο με τις βαθμολογίες της κατηγορίας...');
+     alert('No source file detect. Δεν βρέθηκε το αρχείο με τις βαθμολογίες της κατηγορίας...');
 
    }
 
@@ -1008,7 +1008,7 @@ gadgets.util.registerOnLoadHandler(init);
  </div>
  <div>
     <div id="myTitleID"><marquee>Πρόγραμμα Αγώνων Διοργανώσεων - Αποτελέσματα - Βαθμολογικοί Πίνακες </marquee></div>
-    <div id="sourceIDebdanahmera" class="periexomenaCL"><span style="font-size:9px;">.Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ).</span></div>
+    <div id="sourceIDebdanahmera" class="periexomenaCL"><span style="font-size:9px;">&nbsp;</span></div>
     <div id="sourceID" class="periexomenaCL"><span style="font-size:9px;">.</span></div>
     <div id="sourceIDBathm" class="periexomenaCL">.</div>
   </div>
