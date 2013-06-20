@@ -397,7 +397,7 @@ function handleQueryResponseEbdomadiaioAnaHmera(response) {
 
      html.push('</tr>');
 
-     strDiathtes ='(Δ):'+data.getFormattedValue(row, 15) +', '+ data.getFormattedValue(row, 16)+' (Π):'+ data.getFormattedValue(row, 17)+' (Κ):'+ data.getFormattedValue(row, 18)+', '+ data.getFormattedValue(row, 19) +', '+ data.getFormattedValue(row, 20) ;
+     strDiathtes ='(R):'+data.getFormattedValue(row, 15) +', '+ data.getFormattedValue(row, 16)+' (K):'+ data.getFormattedValue(row, 17)+' (C):'+ data.getFormattedValue(row, 18)+', '+ data.getFormattedValue(row, 19) +', '+ data.getFormattedValue(row, 20) ;
 
 
      strHmeromhniesGhpeda = '<b>'+ data.getFormattedValue(row, 9)+ '</b> '+ data.getFormattedValue(row, 10)+ ' <span style="font-size:7px">( ' + data.getFormattedValue(row, 6) + ' ' + data.getFormattedValue(row, 7)+' '+ data.getFormattedValue(row, 8)+ ')</span>';
@@ -800,7 +800,7 @@ function handleQueryApotelesmataDiorgResponse(response){
 
      html.push('</tr>');
 
-     strDiathtes ='(Δ):'+data.getFormattedValue(row, 9) +', '+ data.getFormattedValue(row, 10)+' (Π):'+ data.getFormattedValue(row, 11)+' (Κ):'+ data.getFormattedValue(row, 12)+', '+ data.getFormattedValue(row, 13) +', '+ data.getFormattedValue(row, 14) ;
+     strDiathtes ='(R):'+data.getFormattedValue(row, 9) +', '+ data.getFormattedValue(row, 10)+' (K):'+ data.getFormattedValue(row, 11)+' (C):'+ data.getFormattedValue(row, 12)+', '+ data.getFormattedValue(row, 13) +', '+ data.getFormattedValue(row, 14) ;
 
      strHmeromhniesGhpeda = data.getFormattedValue(row, 0) +' '+ data.getFormattedValue(row, 1)+' '+ data.getFormattedValue(row, 2)+' '+ data.getFormattedValue(row, 3)+' '+ data.getFormattedValue(row, 4) ;
 
