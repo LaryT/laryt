@@ -24,7 +24,7 @@
 * {margin: 0;padding: 0;}
 #myTabs{border-bottom:1px solid #444;display:block;height:36px;position:relative;z-index:100;}
 #myTabs ul{margin-top:0;}
-#myTabs ul li{display:inline-block;float:left;padding:11px 10px;font:normal normal 12px Arial,Tahoma,Helvetica,FreeSans,sans-serif;color:#999;border-left:1px solid #fff;border-right:1px solid #eee;cursor:pointer;}
+#myTabs ul li{display:inline-block;float:left;padding:11px 6px;font:normal normal 12px Arial,Tahoma,Helvetica,FreeSans,sans-serif;color:#999;border-left:1px solid #fff;border-right:1px solid #eee;cursor:pointer;}
 #myTabs ul li a{text-decoration:none}
 #myTabs ul li.tab-selected,#myTabs ul li.tab-selected a,#myTabs ul li a:hover,#myTabs ul li:hover{color:#000;background-color:#eee;text-decoration:none;}
 #myTitleID{color:#2222f2;font-size:14px;font-family: Arial,Tahoma,Helvetica;padding-top:5px;}
