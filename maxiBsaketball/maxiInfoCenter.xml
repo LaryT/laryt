@@ -18,7 +18,7 @@
   <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
   <script src="http://www.google.com/jsapi" type="text/javascript"></script>
   <script type="text/javascript">
-    google.load("visualization", "1");
+    google.load('visualization', '1', {packages: ['table']});
   </script>
 <style>
 * {margin: 0;padding: 0;}
@@ -111,7 +111,7 @@ var captionTab4 = "Teams";
 var captionTab5 = "Categories";
 var captionTab6 = "Stadiums";
 var captionTab7 = "Stars";
-
+var captionTab8 = "Stats";
 
 
 var strQTab1;
@@ -224,6 +224,9 @@ function selectTab(myID, myTab ) {
  if(myTab == "tabLi7"){  
   sendQueryTab7();
  }
+ if(myTab == "tabLi8"){  
+  sendQueryTab8();
+ }
 }
 //---- xtizei periexomeno gia kathe tab
 function sendQueryTab1() {
@@ -332,7 +335,28 @@ if( mCatTab7!="" ){
    queryTab7.setQuery(strTab7filter);
    queryTab7.send(handleQueryResponseTab7Filter);
    $( "#divIDTab7" ).accordion( "refresh" );
+}
+function sendQueryTab8() {
+document.getElementById("myTitleID").innerHTML = '';
+ document.getElementById("sizeID").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
 
+
+    var query1 = new google.visualization.Query(
+          'http://spreadsheets.google.com/tq?key='+mKey1+'&pub=0');
+
+     // Apply query language.
+       query1.setQuery("SELECT K, count(A)  where A != 'COUNTRY'  group by K label K 'Size', count(A) 'Persons(s)' ");
+    
+      // Send the query with a callback function.
+        query1.send(handleQueryResponseTab8Chart1);
+
+    var query2 = new google.visualization.Query(
+          'http://spreadsheets.google.com/tq?key='+mKey1+'&pub=0');
+
+        query2.setQuery("SELECT J, count(A)  where A != 'COUNTRY'  group by J label J 'Year',count(A) 'Team(s)' ");
+    
+      // Send the query with a callback function.
+        query2.send(handleQueryResponseTab8Chart2);
 }
 
 //-----
@@ -773,6 +797,42 @@ $( "#divIDTab7" ).accordion( "destroy" );
  queryTab7.send(handleQueryResponseTab7);  
 }
 
+//-----
+//- make div Tab8 stats
+//-----
+function handleQueryResponseTab8Chart1(response) {
+  if (response.isError()) {
+     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+     return;
+ }
+  var data = response.getDataTable();
+
+
+  var table = new google.visualization.Table(document.getElementById('sizeID'));
+  
+  var formatter = new google.visualization.BarFormat({width: 120});
+  formatter.format(data, 1); // Apply formatter to second column
+  
+  table.draw(data, {allowHtml: true, showRowNumber: true});
+
+}
+
+function handleQueryResponseTab8Chart2(response) {
+  if (response.isError()) {
+     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+     return;
+ }
+  var data = response.getDataTable();
+
+
+  var table = new google.visualization.Table(document.getElementById('bornID'));
+  
+  var formatter = new google.visualization.BarFormat();
+  formatter.format(data, 1); // Apply formatter to second column
+  
+  table.draw(data, {allowHtml: true, showRowNumber: true});
+
+}
 
 
 </script>  
@@ -789,6 +849,7 @@ $( "#divIDTab7" ).accordion( "destroy" );
      <li id="tabLi2"><a href="javascript:void(0);" onclick="selectTab('divIDTab2','tabLi2' );return false;"><span id="spanIDTab2">Tab2</span></a></li>
      <li id="tabLi3"><a href="javascript:void(0);" onclick="selectTab('divIDTab3','tabLi3' );return false;"><span id="spanIDTab3">Tab3</span></a></li>
      <li id="tabLi7"><a href="javascript:void(0);" onclick="selectTab('divIDTab7','tabLi7' );return false;"><span id="spanIDTab7">Tab7</span></a></li>
+      <li id="tabLi8"><a href="javascript:void(0);" onclick="selectTab('divIDTab8','tabLi8' );return false;"><span id="spanIDTab8">Tab8</span></a></li>
      </ul>
    </div>
  </div>
@@ -804,6 +865,18 @@ $( "#divIDTab7" ).accordion( "destroy" );
     <div id="divIDTab5" class="periexomenaCL"></div>
     <div id="divIDTab6" class="periexomenaCL"></div>
     <div id="divIDTab7" class="periexomenaCL"></div>
+    
+    <div id="divIDTab8" class="periexomenaCL">
+          <div><span style="font-size:10px">*The data, such as teams send. The Organizing Committee will process the data before issuing accreditations</span></div>
+          <hr/> <h1>Size's (from roster webForms)</h1>
+          <hr/>
+          <div id="sizeID"></div>
+          <hr/>
+          <h1>Person / Year (born)</h1>
+          <hr/>
+          <div id="bornID"></div>
+    </div>
+    
   </div>
   
 <center>
@@ -836,6 +909,7 @@ document.getElementById("spanIDTab4").innerHTML = captionTab4;
 document.getElementById("spanIDTab5").innerHTML = captionTab5;
 document.getElementById("spanIDTab6").innerHTML = captionTab6;
 document.getElementById("spanIDTab7").innerHTML = captionTab7;
+document.getElementById("spanIDTab8").innerHTML = captionTab8;
 gadgets.window.adjustHeight();
 </script>
 </body>
