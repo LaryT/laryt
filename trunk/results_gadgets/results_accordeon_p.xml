@@ -1014,9 +1014,9 @@ gadgets.util.registerOnLoadHandler(init);
 <center>
 
 <div id="addiv"><p class="pClepikefalida"><br/><br/><br/>Welcome to GameCenter <br/>12th FIMBA World Maxibasketball Championship Thessaloniki 2013<br/><br/></p>
-<p class="pClRow">GameCenter show all the  Games, Groups, Results, Standings with a easy way.</p>
+<p class="pClRow">All the  Games, Groups, Results, Standings with a easy way.</p>
 <p class="pClRow">1st Step : Click the "X" button to continue.</p>
-<p class="pClRow">2nd Step : Select at the top the tab-category (Standings | Results | Schedule).</p>
+<p class="pClRow">2nd Step : Select at the top the tab-category.</p>
 <p class="pClRow">3rd Step : Select the Age Category, the Group and the Round.</p>
 <p class="pClRow">They are 2 Rounds at every Group <br/></p>
 
