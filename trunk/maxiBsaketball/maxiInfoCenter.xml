@@ -11,6 +11,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="refresh" content="30">
   <title>maxiInfoCenter</title>
   <link href='http://fonts.googleapis.com/css?family=Jura|Play&amp;subset=latin,greek&amp;effect=shadow-multiple|emboss| static|neon|fire-animation' rel='stylesheet' type='text/css'/>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
