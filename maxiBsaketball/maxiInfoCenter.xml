@@ -5,6 +5,7 @@
     <Require feature="dynamic-height" />
   </ModulePrefs>
   <UserPref name="my_name" display_name="Name" default_value="maxiInfoCenter" />
+  <UserPref name="my_Lang" display_name="Languege" default_value="EN" />
 <Content type="html">
   <![CDATA[
 <!doctype html>
@@ -60,8 +61,8 @@ div#divIDTab1{display:block}
 .divVideStars{padding: 5px;clear:both;margin-right:5px;}
 </style>
 <script>
-// var prefs = new gadgets.Prefs();
-// var mKey1 = prefs.getString("m_Key1");
+ var prefs = new gadgets.Prefs();
+ var myLang = prefs.getString("my_Lang");
 var mKey1 ="";
 var mKey2 ="";
 var mKey3 ="";
