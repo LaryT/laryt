@@ -35,17 +35,16 @@ var prefs = new gadgets.Prefs();
 var mCategory = prefs.getString("m_Category");
 var mKey1 = prefs.getString("m_Code");
 
-      //---  var mKey1 ="";
-      if(mKey1 === ""){
-        mKey1="0AjrqMWGJ6suYdHpVN2tUbkZXWWtzT3BkOG1DWlM5ZVE";
-      }
+//---  var mKey1 ="";
+ if(mKey1 === ""){
+    mKey1="0AjrqMWGJ6suYdHpVN2tUbkZXWWtzT3BkOG1DWlM5ZVE";
+  }
 
+var urlMaxiCategories="https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1"; 
+var queryMaxiCategories;
+        
  //--- myInitMaxiAge();
       function myInitMaxiAge(){
-       alert(mKey1);
-        var urlMaxiCategories="https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1"; 
-        var queryMaxiCategories;
-
         if( urlMaxiCategories!="" ){
            queryMaxiCategories = new google.visualization.Query(urlMaxiCategories);
            sendQueryMaxiCategories();
@@ -131,6 +130,7 @@ var mKey1 = prefs.getString("m_Code");
       
       //----------------content
      gadgets.util.registerOnLoadHandler(myInitMaxiAge); 
+     gadgets.window.adjustHeight();  
      // $(document).ready(function(){       
      //   myInitMaxiAge();
      // })
