@@ -12,7 +12,7 @@
     
   <![CDATA[
 <style>
-*{margin:0;padding:0}.small-7{font-size:7px!important;font-weight:normal}.small-9{font-size:9px!important;font-weight:normal}.font-10{font-size:10px!important;font-weight:bold}.big{font-size:12px!important;font-weight:bold}.koyti{background-color:transparent}div.numDiv{cursor:pointer}div.periexomenaCL{height:550px;display:none}div#sourceIDBathm{display:block}.fpOther{height:549px;border-bottom:solid 1px #03273c;border-top:solid 0 white;overflow:hidden}body{background-color:transparent}#disDiv{background-color:#343437;border-top-left-radius:5px;border-top-right-radius:5px;top:74px;left:7px;width:300px;height:250px}#inDisplay{background-color:#e7e7e8;border:1px color white;width:298px;height:236px}#myTitleID{border-top:1px solid #444;color:#2222f2;font-size:14px;font-weight:bold;padding:3px 10px}.fpOtherInner{height:525px;width:100%;overflow:hidden}.fpEmbTitle1,.fpEmbTitle2,.fpEmbTitle3,.fpEmbTitle4{border:solid 1px #0b6ba5;cursor:pointer;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;text-transform:uppercase;color:white;font-size:12px;font-weight:bold;height:14px}.fpEmbTitle1{background-image:url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s24/blueBG.png');padding:3px 10px 3px 10px}.fpEmbTitle2{padding:3px 10px 3px 35px;background-image:url('https://lh5.googleusercontent.com/-ZfK9IGg7qeY/T0HuOBOLfgI/AAAAAAAAgIQ/sg6V6TWeqM8/s20/galdiplo1x67.png')}.fpEmbTitle3{padding:3px 10px 3px 50px;background-image:url('https://lh3.googleusercontent.com/-QN_NMo_a1YA/T0Hxm24eIZI/AAAAAAAAgIc/hnBUgXrg77Q/s20/gray_glosy1x60.png')}.fpEmbTitle4{padding:3px 10px 3px 65px;background-image:url('https://lh4.googleusercontent.com/-vhO393b6OJ4/T0LHvuxnPmI/AAAAAAAAgI0/ule1n_BfzII/s24/orange1x30.png')}.fpEmbTitle1 .icon{float:right;padding-top:6px;padding-right:10px}.fpEmbTitle2 .icon{float:right;padding-top:6px;padding-right:20px}.fpEmbTitle3 .icon{float:right;padding-top:6px;padding-right:30px}.fpEmbTitle4 .icon{float:right;padding-top:6px;padding-right:40px}.fpEmbCont1,.fpEmbCont2,.fpEmbCont3,fpEmbCont4{display:none;overflow:hidden}.fpOtherPfeil{text-align:center}.pad{border-bottom:1px solid #d6d6d6;padding-bottom:2px}.padBath{border-bottom:0 solid #d6d6d6;padding-bottom:1px}#theLoadingID{width:100%;height:100%}.theLoading{position:absolute;background-color:white;background-image:url('https://lh3.googleusercontent.com/-U1qC603CKXQ/TSOH_e4K4pI/AAAAAAAATiY/FWwWiU4QOl4/s50/loading.gif');background-repeat:no-repeat;background-position:50% 0;display:block}.scoreboard{clear:both;background-image:url(https://lh5.googleusercontent.com/-bIA3JYgMAzw/TObApoUYmcI/AAAAAAAATNU/Q171ifTcksE/s800/bkg.png);background-repeat-x:repeat;background-repeat-y:no-repeat;background-attachment:initial;background-position-x:50%;background-position-y:0;background-origin:initial;background-clip:initial;background-color:#dfdfdf}table.agonasRec{clear:both;border:1px solid #d6d6d6;border-bottom:3px solid #d6d6d6;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;padding-top:3px}table.agonasApotelesmataDiorRec{clear:both;border:0 solid #d6d6d6;border-bottom:1px solid #d6d6d6;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;padding-top:1px}table.bathmolRec{clear:both;border:1px solid #d6d6d6;border-bottom:0 solid #d6d6d6;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;padding-top:1px}td.emblhmaImg{margin:0;padding:0;border-bottom:1px solid #d6d6d6;padding-bottom:2px}img.emblhmaImg{height:24px;width:24px;border-radius: 12px;box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-webkit-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-moz-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-o-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-ms-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;margin-right: 10px;}td.emblhmaImgBathmo{margin:0;padding:0;border-bottom:1px solid #d6d6d6;padding-bottom:1px}img.emblhmaImgBathmo{height: 16px;width: 16px;border-radius: 8px;box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-webkit-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-moz-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-o-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-ms-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;margin-right: 10px;}img.ImgMapVI{margin:0;padding:0;height:9px;width:9px}img.ImgMapVIRight{float:right;text-align:right;margin:0;padding:0;height:12px;width:12px}.objImgVideoMap{border:1px solid gray;padding:5px;margin:1px;height:222px;width:283px}span.anametrhsh{color:black;text-decoration:none;cursor:pointer}a.anametrhsh{color:black;text-decoration:none;cursor:pointer}ul.tabG4{display:block;list-style:none;font-size:11px;margin:0 0 10px 0;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;font-size:10px}ul.tabG4 li{display:inline;font-size:10px;font-weight:bold;text-decoration:none}ul.tabG4 li a{font-size:14px;font-weight:bold;margin:10px 0 6px 0;color:black;padding:0 6px;text-decoration:none}ul.tabG4 li a.selected,ul.tabG4 li a:hover{background:#03273c url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s12/blueBG.png') repeat-x;color:white;border:1px solid #aaf;padding:0 5px;text-decoration:none}div.titleAgvnistikh{width:100%;background:#03273c url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s18/blueBG.png') repeat-x;border:1px solid #aaf;padding:0 5px}div.titleAgvnistikh a{color:white;font-size:12px;font-weight:bold;text-decoration:none}//#bathmologies-tab{z-index:30}#apotelesmata-tab{z-index:20}#myTabs{margin-bottom:-1px;position:relative;z-index:100;height:35px;display:block}#myTabs ul{margin-top:0}#myTabs ul li{display:inline-block;float:left;padding:.6em 1em;font:normal normal 14px Arial,Tahoma,Helvetica,FreeSans,sans-serif;color:#999;border-left:1px solid #fff;border-right:1px solid #eee;cursor:pointer}#myTabs ul li a{text-decoration:none}#mytabs ul li.tab-selected,#myTabs ul li.tab-selected a,#myTabs ul li a:hover,#myTabs ul li:hover{color:#000;background-color:#eee;text-decoration:none}#addiv{background-color: rgb(255, 255, 255);position: absolute;top: 40px;bottom: 5px;right: 0px;left: 0px;}.pClepikefalida{font-family:Verdana, Arial,sans-serif; font-size:12px; font-weight:bold;}.pClRow{font-family:Verdana, Arial,sans-serif; font-size:9px;}
+*{margin:0;padding:0}.small-7{font-size:7px!important;font-weight:normal}.small-9{font-size:9px!important;font-weight:normal}.font-10{font-size:10px!important;font-weight:bold}.big{font-size:12px!important;font-weight:bold}.koyti{background-color:transparent}div.numDiv{cursor:pointer}div.periexomenaCL{height:550px;display:none}div#sourceIDBathm{display:block}.fpOther{height:549px;border-bottom:solid 1px #03273c;border-top:solid 0 white;overflow:hidden}body{background-color:transparent}#disDiv{background-color:#343437;border-top-left-radius:5px;border-top-right-radius:5px;top:74px;left:7px;width:300px;height:250px}#inDisplay{background-color:#e7e7e8;border:1px color white;width:298px;height:236px}#myTitleID{border-top:1px solid #444;color:#2222f2;font-size:14px;font-weight:bold;padding:3px 10px}.fpOtherInner{height:525px;width:100%;overflow:hidden}.fpEmbTitle1,.fpEmbTitle2,.fpEmbTitle3,.fpEmbTitle4{border:solid 1px #0b6ba5;cursor:pointer;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;text-transform:uppercase;color:white;font-size:12px;font-weight:bold;height:14px}.fpEmbTitle1{background-image:url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s24/blueBG.png');padding:3px 10px 3px 10px}.fpEmbTitle2{padding:3px 10px 3px 35px;background-image:url('https://lh5.googleusercontent.com/-ZfK9IGg7qeY/T0HuOBOLfgI/AAAAAAAAgIQ/sg6V6TWeqM8/s20/galdiplo1x67.png')}.fpEmbTitle3{padding:3px 10px 3px 50px;background-image:url('https://lh3.googleusercontent.com/-QN_NMo_a1YA/T0Hxm24eIZI/AAAAAAAAgIc/hnBUgXrg77Q/s20/gray_glosy1x60.png')}.fpEmbTitle4{padding:3px 10px 3px 65px;background-image:url('https://lh4.googleusercontent.com/-vhO393b6OJ4/T0LHvuxnPmI/AAAAAAAAgI0/ule1n_BfzII/s24/orange1x30.png')}.fpEmbTitle1 .icon{float:right;padding-top:6px;padding-right:10px}.fpEmbTitle2 .icon{float:right;padding-top:6px;padding-right:20px}.fpEmbTitle3 .icon{float:right;padding-top:6px;padding-right:30px}.fpEmbTitle4 .icon{float:right;padding-top:6px;padding-right:40px}.fpEmbCont1,.fpEmbCont2,.fpEmbCont3,fpEmbCont4{display:none;overflow:hidden}.fpOtherPfeil{text-align:center}.pad{border-bottom:1px solid #d6d6d6;padding-bottom:2px}.padBath{border-bottom:0 solid #d6d6d6;padding-bottom:1px}#theLoadingID{width:100%;height:100%}.theLoading{position:absolute;background-color:white;background-image:url('https://lh3.googleusercontent.com/-U1qC603CKXQ/TSOH_e4K4pI/AAAAAAAATiY/FWwWiU4QOl4/s50/loading.gif');background-repeat:no-repeat;background-position:50% 0;display:block}.scoreboard{clear:both;background-image:url(https://lh5.googleusercontent.com/-bIA3JYgMAzw/TObApoUYmcI/AAAAAAAATNU/Q171ifTcksE/s800/bkg.png);background-repeat-x:repeat;background-repeat-y:no-repeat;background-attachment:initial;background-position-x:50%;background-position-y:0;background-origin:initial;background-clip:initial;background-color:#dfdfdf}table.agonasRec{clear:both;border:1px solid #d6d6d6;border-bottom:3px solid #d6d6d6;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;padding-top:3px}table.agonasApotelesmataDiorRec{clear:both;border:0 solid #d6d6d6;border-bottom:1px solid #d6d6d6;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;padding-top:1px}table.bathmolRec{clear:both;border:1px solid #d6d6d6;border-bottom:0 solid #d6d6d6;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;padding-top:1px}td.emblhmaImg{margin:0;padding:0;border-bottom:1px solid #d6d6d6;padding-bottom:2px}img.emblhmaImg{height:24px;width:24px;border-radius: 12px;box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-webkit-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-moz-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-o-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-ms-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;margin-right: 10px;}td.emblhmaImgBathmo{margin:0;padding:0;border-bottom:1px solid #d6d6d6;padding-bottom:1px}img.emblhmaImgBathmo{height: 16px;width: 16px;border-radius: 8px;box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-webkit-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-moz-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-o-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-ms-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;margin-right: 10px;}img.ImgMapVI{margin:0;padding:0;height:9px;width:9px}img.ImgMapVIRight{float:right;text-align:right;margin:0;padding:0;height:12px;width:12px}.objImgVideoMap{border:1px solid gray;padding:5px;margin:1px;height:222px;width:283px}span.anametrhsh{color:black;text-decoration:none;cursor:pointer}a.anametrhsh{color:black;text-decoration:none;cursor:pointer}ul.tabG4{display:block;list-style:none;font-size:11px;margin:0 0 10px 0;font-family:Arial,Verdana,Geneva,Helvetica,sans-serif;font-size:10px}ul.tabG4 li{display:inline;font-size:10px;font-weight:bold;text-decoration:none}ul.tabG4 li a{font-size:14px;font-weight:bold;margin:10px 0 6px 0;color:black;padding:0 6px;text-decoration:none}ul.tabG4 li a.selected,ul.tabG4 li a:hover{background:#03273c url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s12/blueBG.png') repeat-x;color:white;border:1px solid #aaf;padding:0 5px;text-decoration:none}div.titleAgvnistikh{width:100%;background:#03273c url('https://lh4.googleusercontent.com/-MQFtp5q089A/Tz4Q7LGVnRI/AAAAAAAAf9A/qeBQxYaHTfY/s18/blueBG.png') repeat-x;border:1px solid #aaf;padding:0 5px}div.titleAgvnistikh a{color:white;font-size:12px;font-weight:bold;text-decoration:none}//#bathmologies-tab{z-index:30}#apotelesmata-tab{z-index:20}#myTabs{margin-bottom:-1px;position:relative;z-index:100;height:35px;display:block}#myTabs ul{margin-top:0}#myTabs ul li{display:inline-block;float:left;padding:.6em 1em;font:normal normal 14px Arial,Tahoma,Helvetica,FreeSans,sans-serif;color:#999;border-left:1px solid #fff;border-right:1px solid #eee;cursor:pointer}#myTabs ul li a{text-decoration:none}#mytabs ul li.tab-selected,#myTabs ul li.tab-selected a,#myTabs ul li a:hover,#myTabs ul li:hover{color:#000;background-color:#eee;text-decoration:none}#addiv,#adTopdiv{background-color: rgb(255, 255, 255);position: absolute;top: 40px;bottom: 5px;right: 0px;left: 0px;}.pClepikefalida{font-family:Verdana, Arial,sans-serif; font-size:12px; font-weight:bold;}.pClRow{font-family:Verdana, Arial,sans-serif; font-size:9px;}
 </style>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
@@ -985,77 +985,74 @@ gadgets.util.registerOnLoadHandler(init);
 
 </script>
 
-<div id="disDiv" style="position:absolute;display:none;"><center>
-<a id="apokrychDisplay" href="javascript:hideDivDisp();" style="text-decoration:none;font-size:9px;color:#e7e7e8;height:10px;" title="απόκρυψη - hide">X</a><br/>
-<div id="inDisplay" >load...φορτώνει..
-</div>
-</center>
+<div id="disDiv" style="position:absolute;display:none;">
+  <center>
+    <!-- a id="apokrychDisplay" href="javascript:hideDivDisp();" style="text-decoration:none;font-size:9px;color:#e7e7e8;height:10px;" title="απόκρυψη - hide">X</a><br/  -->
+    <div id="inDisplay" >load...φορτώνει..</div>
+  </center>
 </div>
 
 
 <div class="koyti">
 
-   <div id="pano-tmhma" >
-   <div id="myTabs">
-   <ul>
-     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab', 'Βαθμολογίες', mLanguage);return false;" id="bathmologies-tab-a">Βαθμολογίες</a></li>
-     <li id="apotelesmata-tab" ><a onclick="javascript:selectTab('sourceID','apotelesmata-tab', 'Οι αγώνες των διοργανώσεων', mLanguage);return false;" id="apotelesmata-tab-a">Πρόγραμμα</a></li>
-     <li id="ebdomada-tab"><a onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab', 'Ανά ημέρα οι αγώνες',mLanguage );return false;" id="ebdomada-tab-a">Ανά Ημέρα</a></li>
-     </ul>
-   </div>
- </div>
- <div>
+  <div id="pano-tmhma" >
+    <div id="myTabs">
+      <ul>
+        <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab', 'Βαθμολογίες', mLanguage);return false;" id="bathmologies-tab-a">Βαθμολογίες</a></li>
+        <li id="apotelesmata-tab" ><a onclick="javascript:selectTab('sourceID','apotelesmata-tab', 'Οι αγώνες των διοργανώσεων', mLanguage);return false;" id="apotelesmata-tab-a">Πρόγραμμα</a></li>
+        <li id="ebdomada-tab"><a onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab', 'Ανά ημέρα οι αγώνες',mLanguage );return false;" id="ebdomada-tab-a">Ανά Ημέρα</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
     <div id="myTitleID"><marquee>Πρόγραμμα Αγώνων Διοργανώσεων - Αποτελέσματα - Βαθμολογικοί Πίνακες </marquee></div>
     <div id="sourceIDebdanahmera" class="periexomenaCL"><span style="font-size:9px;">&nbsp;</span></div>
     <div id="sourceID" class="periexomenaCL"><span style="font-size:9px;">.</span></div>
     <div id="sourceIDBathm" class="periexomenaCL">.</div>
   </div>
+  
+  <center>
 
-<center>
+    <div id="addiv">
+      <div id="adTopTextEngdiv">
+        <p class="pClepikefalida"><br/><br/><br/>Welcome to GameCenter <br/>12th FIMBA World Maxibasketball Championship Thessaloniki 2013<br/><br/></p>
+        <p class="pClRow">GameCenter show all the  Games, Groups, Results, Standings with a easy way.</p>
+        <p class="pClRow">1st Step : Click the "X" to continue.</p>
+        <p class="pClRow">2nd Step : Select at the top the tab-category (Standings | Results | Schedule).</p>
+        <p class="pClRow">3rd Step : Select the Age Category, the Group and the Round.</p>
+        <p class="pClRow">They are 2 Rounds at every Group <br/></p>
+      </div>
 
-<div id="addiv"><p class="pClepikefalida"><br/><br/><br/>Welcome to GameCenter <br/>12th FIMBA World Maxibasketball Championship Thessaloniki 2013<br/><br/></p>
-<p class="pClRow">All the  Games, Groups, Results, Standings with a easy way.</p>
-<p class="pClRow">1st Step : Click the "X" button to continue.</p>
-<p class="pClRow">2nd Step : Select at the top the tab-category.</p>
-<p class="pClRow">3rd Step : Select the Age Category, the Group and the Round.</p>
-<p class="pClRow">They are 2 Rounds at every Group <br/></p>
-
-
-
-<div id="addiv" style="position:absolute;top:180px;left:10px;"><center>
-<a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="απόκρυψη - hide ads">X</a><br/>
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-9529818444792202";
-/* 300 x 250 box match center */
-google_ad_slot = "7816887262";
-google_ad_width = 300;
-google_ad_height = 250;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script></center>
+      <div id="adTopdiv" style="position:absolute;top:160px;left:10px;">
+      <center>
+        <a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="continue, hide, απόκρυψη">X</a><br/>
+        <script type="text/javascript"><!--
+          google_ad_client = "ca-pub-9529818444792202";
+          /* 300 x 250 box match center */
+          google_ad_slot = "7816887262";
+          google_ad_width = 300;
+          google_ad_height = 250;
+          //-->
+        </script>
+        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+      </center>
+      </div>
+      <p id="ypoShmeivsh" style="position:absolute;bottom:0px;border-top:1px solid silver;" class="pClRow"><span style="font-size:9px;color:gray;" >GameCenter : Please note that the Dates, Gyms, Referees of the Games will be updated one week before the Games</span></p>
+    </div>
+  </center>
 </div>
-<p style="position:absolute;bottom:0px;border-top:1px solid silver;" class="pClRow"><span style="font-size:9px;color:gray;" >Please note that the Dates, Gyms, Referees of the Games will be updated one week before the Games</span></p>
-
-<!-- span style="position:absolute;bottom:0px;font-size:9px;color:gray;height:10px;" >GameCenter &nbsp;</span><a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">|&nbsp;≙</a><br/-->
-</center>
-
-
-</div>
-
-    <script>
+<script>
     gadgets.window.adjustHeight();
 
        
        if (mLanguage =="EN"){
-      
         document.getElementById("myTitleID").innerHTML="<marquee>Schedule - Results - Standings </marquee>";
         document.getElementById("bathmologies-tab-a").innerHTML="Standings";
         document.getElementById("apotelesmata-tab-a").innerHTML="Results";
         document.getElementById("ebdomada-tab-a").innerHTML="Schedule";
        }
-    </script>
+</script>
 
     ]]>
   </Content>
