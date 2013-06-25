@@ -75,7 +75,7 @@ var mKey1 = prefs.getString("m_Code");
           html.push(' <h3 class="myH3title">' + data.getFormattedValue(0, 0)   + ' | Games : '+ posesEggrafes +'</h3>');
 
           for (var row = 0; row < posesEggrafes; row++) {
-            html.push('<table class="wrapGame">');
+            html.push('<table class="wrapGame" width="100%">');
 
               html.push('<tbody>');
                 html.push('<tr class="rowBorder">');
