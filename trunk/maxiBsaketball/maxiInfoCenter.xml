@@ -22,43 +22,7 @@
     google.load('visualization', '1', {packages: ['table']});
   </script>
 <style>
-* {margin: 0;padding: 0;}
-#myTabs{border-bottom:1px solid #444;display:block;height:36px;position:relative;z-index:100;}
-#myTabs ul{margin-top:0;}
-#myTabs ul li{display:inline-block;float:left;padding:11px 6px;font:normal normal 12px Arial,Tahoma,Helvetica,FreeSans,sans-serif;color:#999;border-left:1px solid #fff;border-right:1px solid #eee;cursor:pointer;}
-#myTabs ul li a{text-decoration:none}
-#myTabs ul li.tab-selected,#myTabs ul li.tab-selected a,#myTabs ul li a:hover,#myTabs ul li:hover{color:#000;background-color:#eee;text-decoration:none;}
-#myTitleID{color:#2222f2;font-size:14px;font-family: Arial,Tahoma,Helvetica;padding-top:5px;}
-div.periexomenaCL{height:550px;display:none}
-div#divIDTab1{display:block}
-.clDivLeft{float:left;}
-.myH3titleMedals{clear: both;color: gray;background-color: #e6e6e6;border: 1px solid #d3d3d3;margin-top: 30px;margin-bottom: 2px;font-size: 14px;font-family: Arial, Hlevetica, Verdana; }
-.clDivDataMedals, .clDivData2seiraMedals{font-size:10px;width: 230px;height: 30px;float: left;}
-.clSpanOnomateponymoMedals{font-size:12px;font-weight:bold;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
-.clMetalioXryso{background-image:url('https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png');}
-.clMetalioAshmenio{background-image:url('https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI/AAAAAAAAAlk/eJg3ngivfyw/s32/asimenio.png');}
-.clMetalioXalkino{background-image:url('https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png');}
-.clMetalioXryso, .clMetalioAshmenio, .clMetalioXalkino, .clXvrisMetalio{background-repeat:no-repeat;background-position:center center; background-size:24px 24px;border-radius: 12px;font-size:18px;font-weight:bold;height:24px;width:24px;text-align:center;} 
-.imgLogoRadius{border-radius: 12px;height:24px;width:24px;margin: 0 5px;}
-.imgFlagRadiusMedals{border-radius: 12px;height:24px;width:24px;margin: 0 5px;}
-.imgCategoryRadius{margin-top:-5px;margin-right:15px;float:right;}
-.imgFlagRadius{border-radius: 8px;height:16px;width:16px; }
-.boxOut10{box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}
-.boxOut10black{box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-webkit-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-moz-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-o-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-ms-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;margin-right: 10px;}
-.clSpDelegate{color : rgb(221, 221, 221);font-size:9px;padding-left:10px;}
-.myH3title{margin-top: 30px;margin-bottom: 2px;font-size: 14px;font-family: Arial, Hlevetica, Verdana; }
-.clDivData, .clDivData2seira{font-size:10px;margin:1px 0px;}
-.clDivData2seira{color:rgb(221,221,221)}
-.clDivData2seira:hover{color:rgb(0,0,0)}
-.clSpanOnomateponymo{font-size:12px;font-weight:bold;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;}
-.ui-accordion .ui-accordion-header {padding-top: 0em;padding-bottom: 0em;}
-#addiv{background-color: rgb(255, 255, 255);position: absolute;top: 40px;bottom: 5px;right: 0px;left: 0px;}
-.pClepikefalida{font-family:Verdana, Arial,sans-serif; font-size:12px; font-weight:bold;}
-.pClRow{font-family:Verdana, Arial,sans-serif; font-size:9px;}
-.divImgStars{padding: 5px;float:left;border: 1px solid silver;margin-right:5px;}
-.divImgStars img:hover {-webkit-transform: scale(1.2) rotate(360deg);opacity: 1;-webkit-box-reflect: below 2px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(0.2,transparent),to(rgba(0,0,0,0.8)));}
-.divImgStars img {background: #ffffff;opacity: .8;-webkit-transition: all 300ms ease-in-out;-moz-transition: all 300ms ease-in-out;-o-transition: all 300ms ease-in-out;-ms-transition: all 300ms ease-in-out;transition: all 300ms ease-in-out;-webkit-box-reflect: below 2px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(0.8,transparent),to(rgba(0,0,0,0.8)));}
-.divVideStars{padding: 5px;clear:both;margin-right:5px;}
+* {margin: 0;padding: 0;}#myTabs{border-bottom:1px solid #444;display:block;height:36px;position:relative;z-index:100;}#myTabs ul{margin-top:0;}#myTabs ul li{display:inline-block;float:left;padding:11px 6px;font:normal normal 12px Arial,Tahoma,Helvetica,FreeSans,sans-serif;color:#999;border-left:1px solid #fff;border-right:1px solid #eee;cursor:pointer;}#myTabs ul li a{text-decoration:none}#myTabs ul li.tab-selected,#myTabs ul li.tab-selected a,#myTabs ul li a:hover,#myTabs ul li:hover{color:#000;background-color:#eee;text-decoration:none;}#myTitleID{color:#2222f2;font-size:14px;font-family: Arial,Tahoma,Helvetica;padding-top:5px;}div.periexomenaCL{height:550px;display:none}div#divIDTab1{display:block}.clDivLeft{float:left;}.myH3titleMedals{clear: both;color: gray;background-color: #e6e6e6;border: 1px solid #d3d3d3;margin-top: 30px;margin-bottom: 2px;font-size: 14px;font-family: Arial, Hlevetica, Verdana; }.clDivDataMedals, .clDivData2seiraMedals{font-size:10px;width: 230px;height: 30px;float: left;}.clSpanOnomateponymoMedals{font-size:12px;font-weight:bold;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}.clMetalioXryso{background-image:url('https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png');}.clMetalioAshmenio{background-image:url('https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI/AAAAAAAAAlk/eJg3ngivfyw/s32/asimenio.png');}.clMetalioXalkino{background-image:url('https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png');}.clMetalioXryso, .clMetalioAshmenio, .clMetalioXalkino, .clXvrisMetalio{background-repeat:no-repeat;background-position:center center; background-size:24px 24px;border-radius: 12px;font-size:18px;font-weight:bold;height:24px;width:24px;text-align:center;} .imgLogoRadius{border-radius: 12px;height:24px;width:24px;margin: 0 5px;}.imgFlagRadiusMedals{border-radius: 12px;height:24px;width:24px;margin: 0 5px;}.imgCategoryRadius{margin-top:-5px;margin-right:15px;float:right;}.imgFlagRadius{border-radius: 8px;height:16px;width:16px; }.boxOut10{box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}.boxOut10black{box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-webkit-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-moz-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-o-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-ms-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;margin-right: 10px;}.clSpDelegate{color : rgb(221, 221, 221);font-size:9px;padding-left:10px;}.myH3title{margin-top: 30px;margin-bottom: 2px;font-size: 14px;font-family: Arial, Hlevetica, Verdana; }.clDivData, .clDivData2seira{font-size:10px;margin:1px 0px;}.clDivData2seira{color:rgb(221,221,221)}.clDivData2seira:hover{color:rgb(0,0,0)}.clSpanOnomateponymo{font-size:12px;font-weight:bold;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;}.ui-accordion .ui-accordion-header {padding-top: 0em;padding-bottom: 0em;}#addiv{background-color: rgb(255, 255, 255);position: absolute;top: 40px;bottom: 5px;right: 0px;left: 0px;}.pClepikefalida{font-family:Verdana, Arial,sans-serif; font-size:12px; font-weight:bold;}.pClRow{font-family:Verdana, Arial,sans-serif; font-size:9px;}.divImgStars{padding: 5px;float:left;border: 1px solid silver;margin-right:5px;}.divImgStars img:hover {-webkit-transform: scale(1.2) rotate(360deg);opacity: 1;-webkit-box-reflect: below 2px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(0.2,transparent),to(rgba(0,0,0,0.8)));}.divImgStars img {background: #ffffff;opacity: .8;-webkit-transition: all 300ms ease-in-out;-moz-transition: all 300ms ease-in-out;-o-transition: all 300ms ease-in-out;-ms-transition: all 300ms ease-in-out;transition: all 300ms ease-in-out;-webkit-box-reflect: below 2px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(0.8,transparent),to(rgba(0,0,0,0.8)));}.divVideStars{padding: 5px;clear:both;margin-right:5px;}.hGroup{background-color: silver;border-radius: 8px;box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-webkit-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-moz-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-o-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-ms-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;margin-right: 10px; font-size: 14px; line-height: 18px;padding-left: 8px;margin-top: 10px; margin-bottom: 10px;}
 </style>
 <script>
  var prefs = new gadgets.Prefs();
@@ -294,9 +258,9 @@ function sendQueryTab5() {
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey5 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
 if( mCatTab5!="" ){
-   strQTab5='select upper(J), K, L, upper(M),P,E,A,R,S,T,U,V,W,X,Y,Z,AC,AD,AE,AF where J="'+mCatTab5 +'"  order by L,J,AC,AD';
+   strQTab5='select upper(J), K, L, upper(M),P,E,A,R,S,T,U,V,W,X,Y,Z,AC,AD,AE,AF where J="'+mCatTab5 +'"  order by L,AC,AD';
   }else{
-   strQTab5='SELECT upper(J), K, L, upper(M),P,E,A,R,S,T,U,V,W,X,Y,Z,AC,AD,AE,AF order by L,J,AC,AD';
+   strQTab5='SELECT upper(J), K, L, upper(M),P,E,A,R,S,T,U,V,W,X,Y,Z,AC,AD,AE,AF order by L,AC,AD';
   }
   queryTab1.setQuery(strQTab5);   
   queryTab1.send(handleQueryResponseTab5); 
@@ -593,15 +557,24 @@ function handleQueryResponseTab5(response) {
  if(posesEggrafes > 0) {
   var html =[]; 
   var strGroup = data.getFormattedValue(0, 2).toUpperCase(); 
+  var strGroup2 = data.getFormattedValue(0, 16).toUpperCase(); 
+
   var myCount=0;  
   var myNoCountries=1;   
   html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 2)+'">'+strGroup+'</h3><div class="div'+data.getFormattedValue(0, 0)+'">');
+  html.push('<h3 class="hGroup">'+strGroup2+' Group</h3>');
+
   for (var row = 0; row < posesEggrafes; row++) {
    if( strGroup != data.getFormattedValue(row, 2).toUpperCase() ){
     strGroup = data.getFormattedValue(row, 2).toUpperCase();
     html.push('</div><h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(row, 2)+'">'+strGroup+'</h3><div class="div'+data.getFormattedValue(row, 2)+'">');
     myCount=0;
     myNoCountries++;
+   }
+
+    if( strGroup2 != data.getFormattedValue(row, 16).toUpperCase() ){
+    strGroup2 = data.getFormattedValue(row, 16).toUpperCase();
+    html.push('<h3 class="hGroup">'+strGroup2+' Group</h3>');
    }
   
    myCount++;
@@ -611,7 +584,7 @@ function handleQueryResponseTab5(response) {
   html.push('</div>');
    var strForRoll5 = 'Teams : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>  ||  Categories : <span class="clSpanOnomateponymo">'+myNoCountries+'</span>';
    document.getElementById("myTitleID").innerHTML ="<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();'>"+strForRoll5+"</marquee>";
-  document.getElementById("divIDTab5").innerHTML = html.join('');
+   document.getElementById("divIDTab5").innerHTML = html.join('');
   $("#divIDTab5").accordion({heightStyle: "content"});
   }else {
    document.getElementById("divIDTab5").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAMs (for registrated Teams)</div>';
