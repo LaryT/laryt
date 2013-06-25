@@ -52,7 +52,9 @@ var mKey1 = prefs.getString("m_Code");
         }else{
          alert('No source file for  Categories');
         }
-        function sendQueryMaxiCategories(){
+      }
+      
+      function sendQueryMaxiCategories(){
           if( mCategory!="" ){
             var strQ='select A,C,E,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,AW,AX where A="'+mCategory +'" order by I,J,V';
           }else{
@@ -61,8 +63,9 @@ var mKey1 = prefs.getString("m_Code");
 
          queryMaxiCategories.setQuery(strQ);   
          queryMaxiCategories.send(handleResponseQueryMaxiCategories);
-        }
-        function handleResponseQueryMaxiCategories(response) {
+      }
+      
+      function handleResponseQueryMaxiCategories(response) {
           if (response.isError()) {
            alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
            return;
@@ -124,7 +127,8 @@ var mKey1 = prefs.getString("m_Code");
           gadgets.window.adjustHeight();  
         }
 
-      }
+      
+      
       //----------------content
      gadgets.util.registerOnLoadHandler(myInitMaxiAge); 
      // $(document).ready(function(){       
