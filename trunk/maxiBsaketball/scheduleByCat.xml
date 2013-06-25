@@ -157,7 +157,7 @@ var mKey1 = prefs.getString("m_Code");
     </center>
 
     <script>
-     // gadgets.window.adjustHeight();
+      gadgets.window.adjustHeight();
     </script>
 </div>  
       ]]>
