@@ -156,10 +156,12 @@ var mKey1 = prefs.getString("m_Code");
       </div>
     </center>
 
+
+</div>  
+
     <script>
       gadgets.window.adjustHeight();
     </script>
-</div>  
       ]]>
   </Content>
 </Module>
