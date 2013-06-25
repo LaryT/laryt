@@ -42,7 +42,7 @@ var mKey1 = prefs.getString("m_Code");
 
  //--- myInitMaxiAge();
       function myInitMaxiAge(){
-        var mCategory = "M40+";
+       alert(mKey1);
         var urlMaxiCategories="https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1"; 
         var queryMaxiCategories;
 
