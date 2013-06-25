@@ -998,31 +998,23 @@ gadgets.util.registerOnLoadHandler(init);
    <div id="pano-tmhma" >
    <div id="myTabs">
    <ul>
-     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab', 'Βαθμολογίες', mLanguage);return false;" id="bathmologies-tab-a">Βαθμολογίες</a></li>
-     <li id="apotelesmata-tab" ><a onclick="javascript:selectTab('sourceID','apotelesmata-tab', 'Οι αγώνες των διοργανώσεων', mLanguage);return false;" id="apotelesmata-tab-a">Πρόγραμμα</a></li>
-     <li id="ebdomada-tab"><a onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab', 'Ανά ημέρα οι αγώνες',mLanguage );return false;" id="ebdomada-tab-a">Ανά Ημέρα</a></li>
+     <li id="bathmologies-tab"><a href="javascript:void(0);" onclick="javascript:selectTab('sourceIDBathm','bathmologies-tab','Βαθμολογίες');return false;">Βαθμολογίες</a></li>
+     <li id="apotelesmata-tab" ><a title="Πρόγραμμα αγώνων των διοργανώσεων" onclick="javascript:selectTab('sourceID','apotelesmata-tab','Οι αγώνες των διοργανώσεων');return false;">Πρόγραμμα</a></li>
+     <li id="ebdomada-tab"><a title="Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ) " onclick="javascript:selectTab('sourceIDebdanahmera','ebdomada-tab','Ανά ημέρα οι αγώνες');return false;">Ανά Ημέρα</a></li>
      </ul>
    </div>
  </div>
  <div>
     <div id="myTitleID"><marquee>Πρόγραμμα Αγώνων Διοργανώσεων - Αποτελέσματα - Βαθμολογικοί Πίνακες </marquee></div>
-    <div id="sourceIDebdanahmera" class="periexomenaCL"><span style="font-size:9px;">&nbsp;</span></div>
+    <div id="sourceIDebdanahmera" class="periexomenaCL"><span style="font-size:9px;">.Ανά ημέρα οι αγώνες (-7ημ. -> +6ημ).</span></div>
     <div id="sourceID" class="periexomenaCL"><span style="font-size:9px;">.</span></div>
     <div id="sourceIDBathm" class="periexomenaCL">.</div>
   </div>
 
 <center>
+<!-- a id="ensvmatvsh" href="http://posmporo.blogspot.com/2012/05/gadget-matchboxcenter.html" target="_blank" style="text-decoration:none;font-size:9px;color:gray;height:10px;">πληροφορίες για το boxGameCenterr</a --><span style="font-size:9px;color:gray;height:10px;" >GameCenter &nbsp;|&nbsp;</span><a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a><br/>
 
-<div id="addiv"><p class="pClepikefalida"><br/><br/><br/>Welcome to GameCenter <br/>12th FIMBA World Maxibasketball Championship Thessaloniki 2013<br/><br/></p>
-<p class="pClRow">All the  Games, Groups, Results, Standings with a easy way.</p>
-<p class="pClRow">1st Step : Click the "X" button to continue.</p>
-<p class="pClRow">2nd Step : Select at the top the tab-category.</p>
-<p class="pClRow">3rd Step : Select the Age Category, the Group and the Round.</p>
-<p class="pClRow">They are 2 Rounds at every Group <br/></p>
-
-
-
-<div id="addiv" style="position:absolute;top:180px;left:10px;"><center>
+<div id="addiv" style="position:absolute;top:250px;left:8px;"><center>
 <a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="απόκρυψη - hide ads">X</a><br/>
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-9529818444792202";
@@ -1036,27 +1028,9 @@ google_ad_height = 250;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script></center>
 </div>
-<p style="position:absolute;bottom:0px;border-top:1px solid silver;" class="pClRow"><span style="font-size:9px;color:gray;" >Please note that the Dates, Gyms, Referees of the Games will be updated one week before the Games</span></p>
-
-<!-- span style="position:absolute;bottom:0px;font-size:9px;color:gray;height:10px;" >GameCenter &nbsp;</span><a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">|&nbsp;≙</a><br/-->
 </center>
 
-
 </div>
-
-    <script>
-    gadgets.window.adjustHeight();
-
-       
-       if (mLanguage =="EN"){
-      
-        document.getElementById("myTitleID").innerHTML="<marquee>Schedule - Results - Standings </marquee>";
-        document.getElementById("bathmologies-tab-a").innerHTML="Standings";
-        document.getElementById("apotelesmata-tab-a").innerHTML="Results";
-        document.getElementById("ebdomada-tab-a").innerHTML="Schedule";
-       }
-    </script>
-
     ]]>
   </Content>
 </Module>
