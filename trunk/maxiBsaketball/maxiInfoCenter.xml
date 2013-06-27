@@ -829,7 +829,7 @@ function handleQueryResponseTab8Chart2(response) {
  </div>
  <div>
     <div id="myTitleID"><marquee>Team participations - Team rosters - History FIMBA World Maxibasketball Championships. From 1st to 12th </marquee></div>
-    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter : Data updating every 4-6 hours &nbsp;|&nbsp; <a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a>
+    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter : Data updating every 4-6 hours &nbsp;|&nbsp; <!-- a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a -->
     </div>
   
     <div id="divIDTab1" class="periexomenaCL"></div>
