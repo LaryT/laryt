@@ -860,7 +860,7 @@ function handleQueryResponseTab8Chart2(response) {
 <p class="pClRow">3rd Step : Select the Filter from the Option Field.<br/><br/></p>
 
 
-<a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="απόκρυψη - hide ads">X</a><br/>
+<a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="hide this message and continue...">X</a><br/>
 <!-- script type="text/javascript">
 google_ad_client = "ca-pub-9529818444792202";
 /* 300 x 250 box maxi ga history */
