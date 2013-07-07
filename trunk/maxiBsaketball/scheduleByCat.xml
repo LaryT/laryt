@@ -73,10 +73,17 @@ var queryMaxiCategories;
           var posesEggrafes = data.getNumberOfRows();
           var html =[];  
           var strGroup1 = data.getFormattedValue(0, 0);
+          var strGroup2 = data.getFormattedValue(0, 5);  //date          
           //-----  html.push('<div id="accordion">');
           html.push(' <h3 class="myH3title">' + data.getFormattedValue(0, 0)   + ' | Games : '+ posesEggrafes +'</h3>');
-
+          html.push('<h3 class="wrapGame">'+strGroup2+'</h3>');
+          
           for (var row = 0; row < posesEggrafes; row++) {
+            if( strGroup2 != data.getFormattedValue(row, 5) ){
+             strGroup2 = data.getFormattedValue(row, 5);
+             html.push('<h3 class="wrapGame">'+strGroup2+'</h3>');
+            }
+          
             html.push('<table class="wrapGame" width="100%">');
 
               html.push('<tbody>');
