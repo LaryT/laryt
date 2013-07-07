@@ -25,6 +25,7 @@
       .tdShmaias{width: 20px;}
       .min6Group{font-size: 7px;}
       .sOmada{font-size: 10px;font-weight: bold;}
+      .sGhpedo{font-size: 9px;font-weight: bold;}
 
       .imgFlagRadius{border-radius: 9px;height:18px;width:18px; box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}
 </style>
@@ -108,7 +109,7 @@ var queryMaxiCategories;
                     html.push(data.getFormattedValue(row, 10)+'-'+data.getFormattedValue(row, 11)); // skor
                   html.push('</td>');
                   html.push('<td width="80" class="no-rowBorder" align="center" rowspan="2">');
-                      html.push('<div style="overflow:hidden;width:80px;">'+data.getFormattedValue(row, 7)+'<br>'); // ghpedo
+                      html.push('<div style="overflow:hidden;width:80px;" class="sGhpedo">'+data.getFormattedValue(row, 7)+'<br>'); // ghpedo
                         html.push('<span>'+data.getFormattedValue(row, 12)+'&nbsp;'+data.getFormattedValue(row, 13)+'</span>'); // diaithtes
                       html.push('</div>');
                  html.push('</td>');
