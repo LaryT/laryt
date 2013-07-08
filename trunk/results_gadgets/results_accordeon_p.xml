@@ -1040,7 +1040,7 @@ gadgets.util.registerOnLoadHandler(init);
 
       </center>
       </div>
-      <p id="ypoShmeivsh" style="position:absolute;bottom:0px;border-top:1px solid silver;" class="pClRow"><span style="font-size:9px;color:gray;" >GameCenter : Please note that the Dates, Gyms, Referees of the Games will be updated one week before the Games</span></p>
+      <p id="ypoShmeivsh" style="position:absolute;bottom:0px;border-top:1px solid silver;" class="pClRow"><span style="font-size:9px;color:gray;" >GameCenter</span></p>
     </div>
   </center>
 </div>
