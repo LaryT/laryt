@@ -356,7 +356,7 @@ if (response.isError()) {
   document.getElementById("divIDTab1").innerHTML = html.join('');
   $( "#divIDTab1" ).accordion({heightStyle: "content"});
   }else {
-   document.getElementById("divIDTab1").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
+   document.getElementById("divIDTab1").innerHTML = '<div class="clSpanOnomateponymo"> 0 Ομάδες με δηλωμένα Roster </div>';
   }
   
  $( "#divIDTab1" ).accordion( "refresh" );
@@ -422,7 +422,7 @@ for (var row = 0; row < posesEggrafes; row++) {
    html.push('<div>');
    html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 2).toUpperCase()+'</span></div>');
    html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 12)+'</span> </div>');
-   html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 6)+'</span> countries, <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7)+'</span> teams,</div>');
+   html.push('<div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 6)+'</span><!-- countries, --> <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7)+'</span> ομάδες,</div>');
    html.push('<div class="clDivData"><span>'+data.getFormattedValue(row, 9)+'</span> </div>');
    html.push('<div class="clDivData">Men Categories : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 10)+'</span> </div>');
    html.push('<div class="clDivData">Women Categories : <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 11)+'</span> </div>');
@@ -489,7 +489,7 @@ html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRad
   document.getElementById("divIDTab3").innerHTML = html.join('');
   $( "#divIDTab3" ).accordion({heightStyle: "content"});
  }else{
-   document.getElementById("divIDTab3").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAM Rosters (for registrated Teams at this Category)</div>';
+   document.getElementById("divIDTab3").innerHTML = '<div class="clSpanOnomateponymo"> 0 Rosters</div>';
  }
  $("#divIDTab3").accordion( "refresh" );
  gadgets.window.adjustHeight();
@@ -530,12 +530,12 @@ function handleQueryResponseTab4(response) {
 */
   }
   html.push('</div>');
-   var strForRoll4 = 'Teams : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>, from <span class="clSpanOnomateponymo">'+myNoCountries+'</span> countries';
+   var strForRoll4 = 'Ομάδες : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>';
    document.getElementById("myTitleID").innerHTML ="<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();'>"+strForRoll4+"</marquee>";
   document.getElementById("divIDTab4").innerHTML = html.join('');
   $("#divIDTab4").accordion({heightStyle: "content"});
   }else {
-   document.getElementById("divIDTab4").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAMs (for registrated Teams)</div>';
+   document.getElementById("divIDTab4").innerHTML = '<div class="clSpanOnomateponymo"> 0 Ομάδες</div>';
   }
 
  $("#divIDTab4").accordion( "refresh" );
@@ -582,12 +582,12 @@ function handleQueryResponseTab5(response) {
   
   }
   html.push('</div>');
-   var strForRoll5 = 'Teams : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>  ||  Categories : <span class="clSpanOnomateponymo">'+myNoCountries+'</span>';
+   var strForRoll5 = 'Ομάδες : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>  ||  Κατηγορίες : <span class="clSpanOnomateponymo">'+myNoCountries+'</span>';
    document.getElementById("myTitleID").innerHTML ="<marquee scrollamount='4' onmouseover='this.stop();' onmouseout='this.start();'>"+strForRoll5+"</marquee>";
    document.getElementById("divIDTab5").innerHTML = html.join('');
   $("#divIDTab5").accordion({heightStyle: "content"});
   }else {
-   document.getElementById("divIDTab5").innerHTML = '<div class="clSpanOnomateponymo"> 0 TEAMs (for registrated Teams)</div>';
+   document.getElementById("divIDTab5").innerHTML = '<div class="clSpanOnomateponymo"> 0 Ομάδες </div>';
   }
 
  $("#divIDTab5").accordion( "refresh" );
@@ -696,7 +696,7 @@ if (response.isError()) {
    html.push('<div><div class="clDivData"><span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 1).toUpperCase()+' '+data.getFormattedValue(row, 0).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 2) +' '+ data.getFormattedValue(row, 3) +') </div><div class="clDivData2seira"><span class="clSpanOnomateponymo">Position</span> : '+data.getFormattedValue(row, 5)+' <br><span class="clSpanOnomateponymo">Born</span> : '+ data.getFormattedValue(row, 4)  +' <br><span class="clSpanOnomateponymo">Height</span> : ' + data.getFormattedValue(row, 6)+'<hr>');
 
   if(data.getFormattedValue(row, 7) !=''){
-    html.push('<br><span class="clSpanOnomateponymo">Teams (career)</span>:'+ data.getFormattedValue(row, 7) +'<br><br>');
+    html.push('<br><span class="clSpanOnomateponymo">Ομάδες (career)</span>:'+ data.getFormattedValue(row, 7) +'<br><br>');
    }
   if(data.getFormattedValue(row, 8) !=''){
     html.push('<span class="clSpanOnomateponymo"></span>'+ data.getFormattedValue(row, 8) +'<br><br>');
@@ -705,7 +705,7 @@ if (response.isError()) {
     html.push('<span class="clSpanOnomateponymo">Stats & Numbers </span>:'+ data.getFormattedValue(row, 9) +'<br><br>');
    }
   if(data.getFormattedValue(row, 10) !=''){
-    html.push('<hr/><span class="clSpanOnomateponymo">Teams (maxi)</span>:'+ data.getFormattedValue(row, 10) +'<br><br>');
+    html.push('<hr/><span class="clSpanOnomateponymo">Ομάδες (maxi)</span>:'+ data.getFormattedValue(row, 10) +'<br><br>');
    }
 
 
@@ -831,17 +831,16 @@ function handleQueryResponseTab8Chart2(response) {
     <div id="myTitleID"><marquee>Πληροφορίες - Ομάδες που συμμετέχουν - Rosters Ομάδων - Γήπεδα</marquee></div>
     <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter : Αυτόματη ενημέρωση δεοδομένων κάθε 4-6 ώρες &nbsp;|&nbsp; <!-- a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a -->
     </div>
-/*  
+<!-- 
     <div id="divIDTab1" class="periexomenaCL"></div>
     <div id="divIDTab2" class="periexomenaCL"></div>
     <div id="divIDTab3" class="periexomenaCL"></div>
-*/
     <div id="divIDTab4" class="periexomenaCL"></div>  
     <div id="divIDTab5" class="periexomenaCL"></div>
-/*  
+--> 
     <div id="divIDTab6" class="periexomenaCL"></div>
     <div id="divIDTab7" class="periexomenaCL"></div>
-    
+<!--    
     <div id="divIDTab8" class="periexomenaCL">
           <div><span style="font-size:10px">*Τα δεδομένα εμφανίζονται όπως αποστέλλονται από τις ομάδες </span></div>
           <hr/> <h1>Μεγέθη (από τα roster webForms)</h1>
@@ -852,17 +851,17 @@ function handleQueryResponseTab8Chart2(response) {
           <hr/>
           <div id="bornID"></div>
     </div>
- */   
+-->  
   </div>
   
 <center>
 <div id="addiv"><p class="pClepikefalida"><br/><br/><br/>Καλώς ήρθατε στο InfoCenter<br/></p>
-<p class="pClRow">1ο Βήμα : Click στο "X" button για συνέχεια.</p>
-<p class="pClRow">2ο Βήμα : Επιλέξτε από την κορυφή την κατηγορία των πληροφιών.</p>
-<p class="pClRow">3ο Βήμα : Επιλέξτε το φίλτρο από το αντίστοιχο πεδίο Επιλογής.<br/><br/></p>
+<p class="pClRow">1ο βήμα : Click στο "X" button για συνέχεια.</p>
+<p class="pClRow">2ο βήμα : Επιλέξτε από την κορυφή την κατηγορία των πληροφιών.</p>
+<p class="pClRow">3ο βήμα : Επιλέξτε το φίλτρο από το αντίστοιχο πεδίο Επιλογής.<br/><br/></p>
 
 
-<a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="Συνέχεια και απόκρυψη του μηνύματος...">X</a><br/>
+<a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="Συνέχεια...">X</a><br/>
 <!-- ***  -->
 
 <script type="text/javascript"><!--
