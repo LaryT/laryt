@@ -258,9 +258,9 @@ function sendQueryTab5() {
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey5 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
 if( mCatTab5!="" ){
-   strQTab5='select upper(J), K, L, upper(M),P,E,A,R,S,T,U,V,W,X,Y,Z,AC,AD,AE,AF where J="'+mCatTab5 +'"  order by L,AC,AD';
+   strQTab5='select upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I where J="'+mCatTab5 +'"  order by L';
   }else{
-   strQTab5='SELECT upper(J), K, L, upper(M),P,E,A,R,S,T,U,V,W,X,Y,Z,AC,AD,AE,AF order by L,AC,AD';
+   strQTab5='SELECT upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I order by L';
   }
   queryTab1.setQuery(strQTab5);   
   queryTab1.send(handleQueryResponseTab5); 
@@ -555,12 +555,12 @@ function handleQueryResponseTab5(response) {
  if(posesEggrafes > 0) {
   var html =[]; 
   var strGroup = data.getFormattedValue(0, 2).toUpperCase(); 
-  var strGroup2 = data.getFormattedValue(0, 16).toUpperCase(); 
+
 
   var myCount=0;  
   var myNoCountries=1;   
   html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 2)+'">'+strGroup+'</h3><div class="div'+data.getFormattedValue(0, 0)+'">');
-  html.push('<h3 class="hGroup">'+strGroup2+' Group</h3>');
+
 
   for (var row = 0; row < posesEggrafes; row++) {
    if( strGroup != data.getFormattedValue(row, 2).toUpperCase() ){
@@ -570,13 +570,12 @@ function handleQueryResponseTab5(response) {
     myNoCountries++;
    }
 
-    if( strGroup2 != data.getFormattedValue(row, 16).toUpperCase() ){
-    strGroup2 = data.getFormattedValue(row, 16).toUpperCase();
-    html.push('<h3 class="hGroup">'+strGroup2+' Group</h3>');
-   }
+
+  
+  // upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I
   
    myCount++;
-   html.push('<div><div class="clDivData">'+myCount+'. <img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 4)+'" /> '+ data.getFormattedValue(row, 0).toUpperCase()+ ' <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 3).toUpperCase() + '</span></div><div class="clDivData2seira"><span>GROUP : <b>'+data.getFormattedValue(row, 16)+' | ' +data.getFormattedValue(row, 17) + '</b></span><br/>Team Delegate : '+data.getFormattedValue(row, 6).toUpperCase()+', Reg/No : '+ data.getFormattedValue(row, 5).substr(0,4)+'...</div></div>');
+ html.push('<div><div class="clDivData">'+myCount+'. '+ data.getFormattedValue(row, 1).toUpperCase()+' ('+data.getFormattedValue(row, 2)+') <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 3).toUpperCase() + '</span></div><div class="clDivData2seira"><span>Έδρα : <b>'+data.getFormattedValue(row, 6)+' <br/> Γραφεία : ' +data.getFormattedValue(row, 7) + '</b></span><br/>Χρώματα : '+data.getFormattedValue(row, 8).toUpperCase()+'<br/> Πρόεδρος : '+ data.getFormattedValue(row, 9).toUpperCase()+'<br/>Υπεύθυνοι : '+data.getFormattedValue(row, 5).toUpperCase()+'<br/>Προπονητής : '+data.getFormattedValue(row, 10).toUpperCase()+'<br/>email :'+data.getFormattedValue(row, 11)+'</div></div>');
   
   }
   html.push('</div>');
