@@ -886,16 +886,17 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 document.getElementById("spanIDTab4").innerHTML = captionTab4;
 document.getElementById("spanIDTab5").innerHTML = captionTab5;
-gadgets.window.adjustHeight();
 
 
+/*
 document.getElementById("spanIDTab1").innerHTML = captionTab1;
 document.getElementById("spanIDTab2").innerHTML = captionTab2;
 document.getElementById("spanIDTab3").innerHTML = captionTab3;
 document.getElementById("spanIDTab6").innerHTML = captionTab6;
 document.getElementById("spanIDTab7").innerHTML = captionTab7;
 document.getElementById("spanIDTab8").innerHTML = captionTab8;
-
+*/
+gadgets.window.adjustHeight();
 
 
 
