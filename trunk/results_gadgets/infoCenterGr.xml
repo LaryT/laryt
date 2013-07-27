@@ -882,6 +882,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <script>
 // myInitMaxiAge();
 
+gadgets.window.adjustHeight();
 document.getElementById("spanIDTab4").innerHTML = captionTab4;
 document.getElementById("spanIDTab5").innerHTML = captionTab5;
 /*
@@ -895,7 +896,7 @@ document.getElementById("spanIDTab6").innerHTML = captionTab6;
 document.getElementById("spanIDTab7").innerHTML = captionTab7;
 document.getElementById("spanIDTab8").innerHTML = captionTab8;
 */
-gadgets.window.adjustHeight();
+
 </script>
 </body>
 </html>
