@@ -49,10 +49,10 @@ if(mKey3 === ""){
  mKey3="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
 }
 if(mKey4 === ""){
- mKey4="0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc";
+ mKey4="0AjrqMWGJ6suYdF9ZeDc2ekdwMzFzbVROWjNsTnprT3c";
 }
 if(mKey5 === ""){
- mKey5="0AjrqMWGJ6suYdEU1b1RqWktGZnFlWjlKVVZPZ1FmSGc";
+ mKey5="0AjrqMWGJ6suYdF9ZeDc2ekdwMzFzbVROWjNsTnprT3c";
 }
 if(mKey6 === ""){
  mKey6="0AjrqMWGJ6suYdDJrYWRjVXZ6ZVNWNDJLdjBjaGQyVkE";
@@ -70,11 +70,11 @@ var mCatTab6 ="";
 var mCatTab7 ="";
 
 var captionTab1 = "Rosters";
-var captionTab2 = "Championships";
+var captionTab2 = "Πρωταθλήματα";
 var captionTab3 = "Medals";
-var captionTab4 = "Teams";
-var captionTab5 = "Categories";
-var captionTab6 = "Stadiums";
+var captionTab4 = "Ομάδες";
+var captionTab5 = "Κατγορίες";
+var captionTab6 = "Γήπεδα";
 var captionTab7 = "Stars";
 var captionTab8 = "Stats";
 
@@ -828,8 +828,8 @@ function handleQueryResponseTab8Chart2(response) {
    </div>
  </div>
  <div>
-    <div id="myTitleID"><marquee>Team participations - Team rosters - History FIMBA World Maxibasketball Championships. From 1st to 12th </marquee></div>
-    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter : Data updating every 4-6 hours &nbsp;|&nbsp; <!-- a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a -->
+    <div id="myTitleID"><marquee>Πληροφορίες - Ομάδες που συμμετέχουν - Rosters Ομάδων - Γήπεδα</marquee></div>
+    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter : Αυτόματη ενημέρωση δεοδομένων κάθε 4-6 ώρες &nbsp;|&nbsp; <!-- a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a -->
     </div>
   
     <div id="divIDTab1" class="periexomenaCL"></div>
@@ -841,12 +841,12 @@ function handleQueryResponseTab8Chart2(response) {
     <div id="divIDTab7" class="periexomenaCL"></div>
     
     <div id="divIDTab8" class="periexomenaCL">
-          <div><span style="font-size:10px">*The data, such as teams send. The Organizing Committee will process the data before issuing accreditations</span></div>
-          <hr/> <h1>Size's (from roster webForms)</h1>
+          <div><span style="font-size:10px">*Τα δεδομένα εμφανίζονται όπως αποστέλλονται από τις ομάδες </span></div>
+          <hr/> <h1>Μεγέθη (από τα roster webForms)</h1>
           <hr/>
           <div id="sizeID"></div>
           <hr/>
-          <h1>Person / Year (born)</h1>
+          <h1>Άτομα / Έτος (Γέννησης)</h1>
           <hr/>
           <div id="bornID"></div>
     </div>
@@ -854,13 +854,13 @@ function handleQueryResponseTab8Chart2(response) {
   </div>
   
 <center>
-<div id="addiv"><p class="pClepikefalida"><br/><br/><br/>Welcome to InfoCenter<br/></p>
-<p class="pClRow">1st Step : Click the "X" button to continue.</p>
-<p class="pClRow">2nd Step : Select at the top the tab-category.</p>
-<p class="pClRow">3rd Step : Select the Filter from the Option Field.<br/><br/></p>
+<div id="addiv"><p class="pClepikefalida"><br/><br/><br/>Καλώς ήρθατε στο InfoCenter<br/></p>
+<p class="pClRow">1ο Βήμα : Click στο "X" button για συνέχεια.</p>
+<p class="pClRow">2ο Βήμα : Επιλέξτε από την κορυφή την κατηγορία των πληροφιών.</p>
+<p class="pClRow">3ο Βήμα : Επιλέξτε το φίλτρο από το αντίστοιχο πεδίο Επιλογής.<br/><br/></p>
 
 
-<a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="hide this message and continue...">X</a><br/>
+<a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="Συνέχεια και απόκρυψη του μηνύματος...">X</a><br/>
 <!-- ***  -->
 </div>
 </center>
