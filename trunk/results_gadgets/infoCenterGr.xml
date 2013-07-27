@@ -524,7 +524,7 @@ function handleQueryResponseTab4(response) {
   // upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I
   
    myCount++;
- html.push('<div><div class="clDivData">'+myCount+'. '+ data.getFormattedValue(row, 1).toUpperCase()+' ('+data.getFormattedValue(row, 2)+') <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 3).toUpperCase() + '</span></div><div class="clDivData2seira"><span>Έδρα : <b>'+data.getFormattedValue(row, 6)+' <br/> Γραφεία : ' +data.getFormattedValue(row, 7) + '</b></span><br/>Χρώματα : '+data.getFormattedValue(row, 8).toUpperCase()+'<br/> Πρόεδρος : '+ data.getFormattedValue(row, 9).toUpperCase()+'<br/>Υπεύθυνοι : '+data.getFormattedValue(row, 10).toUpperCase()+'<br/>Προπονητής : '+data.getFormattedValue(row, 11).toUpperCase()+'<br/>email :'+data.getFormattedValue(row, 12)+'</div></div>');
+ html.push('<div><div class="clDivData">'+myCount+'. '+ data.getFormattedValue(row, 1).toUpperCase()+' ('+data.getFormattedValue(row, 2)+') <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 3).toUpperCase() + '</span></div><div class="clDivData2seira"><span>Έδρα : <b>'+data.getFormattedValue(row, 6)+' <br/> Γραφεία : ' +data.getFormattedValue(row, 7) + '</b></span><br/>Χρώματα : '+data.getFormattedValue(row, 8).toUpperCase()+'<br/> Πρόεδρος : '+ data.getFormattedValue(row, 9).toUpperCase()+'<br/>Υπεύθυνοι : '+data.getFormattedValue(row, 5).toUpperCase()+'<br/>Προπονητής : '+data.getFormattedValue(row, 10).toUpperCase()+'<br/>email :'+data.getFormattedValue(row, 11)+'</div></div>');
 
   }
   html.push('</div>');
