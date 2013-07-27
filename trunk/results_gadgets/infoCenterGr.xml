@@ -835,12 +835,13 @@ function handleQueryResponseTab8Chart2(response) {
     <div id="divIDTab1" class="periexomenaCL"></div>
     <div id="divIDTab2" class="periexomenaCL"></div>
     <div id="divIDTab3" class="periexomenaCL"></div>
+--> 
     <div id="divIDTab4" class="periexomenaCL"></div>  
     <div id="divIDTab5" class="periexomenaCL"></div>
---> 
+    
+<!-- 
     <div id="divIDTab6" class="periexomenaCL"></div>
     <div id="divIDTab7" class="periexomenaCL"></div>
-<!--    
     <div id="divIDTab8" class="periexomenaCL">
           <div><span style="font-size:10px">*Τα δεδομένα εμφανίζονται όπως αποστέλλονται από τις ομάδες </span></div>
           <hr/> <h1>Μεγέθη (από τα roster webForms)</h1>
@@ -882,7 +883,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <script>
 // myInitMaxiAge();
 
-gadgets.window.adjustHeight();
+
 document.getElementById("spanIDTab4").innerHTML = captionTab4;
 document.getElementById("spanIDTab5").innerHTML = captionTab5;
 /*
@@ -896,6 +897,9 @@ document.getElementById("spanIDTab6").innerHTML = captionTab6;
 document.getElementById("spanIDTab7").innerHTML = captionTab7;
 document.getElementById("spanIDTab8").innerHTML = captionTab8;
 */
+
+
+gadgets.window.adjustHeight();
 
 </script>
 </body>
