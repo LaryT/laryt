@@ -73,7 +73,7 @@ var captionTab1 = "Rosters";
 var captionTab2 = "Πρωταθλήματα";
 var captionTab3 = "Medals";
 var captionTab4 = "Ομάδες";
-var captionTab5 = "Κατγορίες";
+var captionTab5 = "Κατηγορίες";
 var captionTab6 = "Γήπεδα";
 var captionTab7 = "Stars";
 var captionTab8 = "Stats";
@@ -245,9 +245,9 @@ function sendQueryTab4() {
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey4 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
 if( mCatTab4!="" ){
-   strQTab4='select upper(J), K, L, upper(M),P,E,A,R,S,T,U,V,W,X,Y,Z,AC,AD,AE,AF where J="'+mCatTab4 +'"  order by J,L,M';
+   strQTab4='select upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I where J="'+mCatTab4 +'"  order by J,L,M';
   }else{
-   strQTab4='SELECT upper(J), K, L, upper(M),P,E,A,R,S,T,U,V,W,X,Y,Z,AC,AD,AE,AF order by J,L,M';
+   strQTab4='SELECT upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I order by J,L,M';
   }
   queryTab1.setQuery(strQTab4);   
   queryTab1.send(handleQueryResponseTab4); 
@@ -521,13 +521,11 @@ function handleQueryResponseTab4(response) {
     myNoCountries++;
    }
   
+  // upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I
+  
    myCount++;
- html.push('<div><div class="clDivData">'+myCount+'. '+ data.getFormattedValue(row, 1).toUpperCase()+' ('+data.getFormattedValue(row, 2)+') <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 3).toUpperCase() + '</span></div><div class="clDivData2seira"><span>GROUP : <b>'+data.getFormattedValue(row, 16)+' | ' +data.getFormattedValue(row, 17) + '</b></span><br/>Team Delegate : '+data.getFormattedValue(row, 6).toUpperCase()+', Reg/No : '+ data.getFormattedValue(row, 5).substr(0,4)+'...</div></div>');
-/*
-   html.push('<div><div class="clDivData2seira" title="'+data.getFormattedValue(row, 11)+'">Arrive : '+data.getFormattedValue(row, 7)+' '+data.getFormattedValue(row, 8)+' '+data.getFormattedValue(row, 9)+' '+data.getFormattedValue(row, 10)+'</div></div>');
-   html.push('<div><div class="clDivData2seira">Hotel : '+data.getFormattedValue(row, 12)+'</div></div>');
-   html.push('<div><div class="clDivData2seira" title="'+data.getFormattedValue(row, 17)+'">Departure : '+data.getFormattedValue(row, 13)+' '+data.getFormattedValue(row, 14)+' '+data.getFormattedValue(row, 15)+' '+data.getFormattedValue(row, 16)+'</div></div>');
-*/
+ html.push('<div><div class="clDivData">'+myCount+'. '+ data.getFormattedValue(row, 1).toUpperCase()+' ('+data.getFormattedValue(row, 2)+') <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 3).toUpperCase() + '</span></div><div class="clDivData2seira"><span>Έδρα : <b>'+data.getFormattedValue(row, 7)+' <br/> Γραφεία : ' +data.getFormattedValue(row, 8) + '</b></span><br/>Χρώματα : '+data.getFormattedValue(row, 9).toUpperCase()+'<br/> Πρόεδρος : '+ data.getFormattedValue(row, 10).toUpperCase()+'<br/>Υπεύθυνοι : '+data.getFormattedValue(row, 11).toUpperCase()+'<br/>Προπονητής : '+data.getFormattedValue(row, 12).toUpperCase()+'<br/>email :'+data.getFormattedValue(row, 12)+'</div></div>');
+
   }
   html.push('</div>');
    var strForRoll4 = 'Ομάδες : <span class="clSpanOnomateponymo">'+posesEggrafes+'</span>';
