@@ -245,9 +245,9 @@ function sendQueryTab4() {
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey4 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
 if( mCatTab4!="" ){
-   strQTab4='select upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I where J="'+mCatTab4 +'"  order by J,L,M';
+   strQTab4='select upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I,AC where J="'+mCatTab4 +'"  order by J,L,M';
   }else{
-   strQTab4='SELECT upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I order by J,L,M';
+   strQTab4='SELECT upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I,AC order by J,L,M';
   }
   queryTab1.setQuery(strQTab4);   
   queryTab1.send(handleQueryResponseTab4); 
@@ -258,9 +258,9 @@ function sendQueryTab5() {
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey5 +"&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
 if( mCatTab5!="" ){
-   strQTab5='select upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I where J="'+mCatTab5 +'"  order by L';
+   strQTab5='select upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I,AC where J="'+mCatTab5 +'"  order by L,AC';
   }else{
-   strQTab5='SELECT upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I order by L';
+   strQTab5='SELECT upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I,AC order by L,AC';
   }
   queryTab1.setQuery(strQTab5);   
   queryTab1.send(handleQueryResponseTab5); 
@@ -521,10 +521,10 @@ function handleQueryResponseTab4(response) {
     myNoCountries++;
    }
   
-  // upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I
+  // upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I,AC
   
    myCount++;
- html.push('<div><div class="clDivData">'+myCount+'. '+ data.getFormattedValue(row, 1).toUpperCase()+' ('+data.getFormattedValue(row, 2)+') <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 3).toUpperCase() + '</span></div><div class="clDivData2seira"><span>Έδρα : <b>'+data.getFormattedValue(row, 6)+' <br/> Γραφεία : ' +data.getFormattedValue(row, 7) + '</b></span><br/>Χρώματα : '+data.getFormattedValue(row, 8).toUpperCase()+'<br/> Πρόεδρος : '+ data.getFormattedValue(row, 9).toUpperCase()+'<br/>Υπεύθυνοι : '+data.getFormattedValue(row, 5).toUpperCase()+'<br/>Προπονητής : '+data.getFormattedValue(row, 10).toUpperCase()+'<br/>email :'+data.getFormattedValue(row, 11)+'</div></div>');
+ html.push('<div><div class="clDivData">'+myCount+'. '+ data.getFormattedValue(row, 1).toUpperCase()+' ('+data.getFormattedValue(row, 2)+' '+data.getFormattedValue(row, 13)+') <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 3).toUpperCase() + '</span></div><div class="clDivData2seira"><span>Έδρα : <b>'+data.getFormattedValue(row, 6)+' <br/> Γραφεία : ' +data.getFormattedValue(row, 7) + '</b></span><br/>Χρώματα : '+data.getFormattedValue(row, 8).toUpperCase()+'<br/> Πρόεδρος : '+ data.getFormattedValue(row, 9).toUpperCase()+'<br/>Υπεύθυνοι : '+data.getFormattedValue(row, 5).toUpperCase()+'<br/>Προπονητής : '+data.getFormattedValue(row, 10).toUpperCase()+'<br/>email :'+data.getFormattedValue(row, 11)+'</div></div>');
 
   }
   html.push('</div>');
@@ -555,11 +555,13 @@ function handleQueryResponseTab5(response) {
  if(posesEggrafes > 0) {
   var html =[]; 
   var strGroup = data.getFormattedValue(0, 2).toUpperCase(); 
+  var strGroup2 = data.getFormattedValue(0, 13).toUpperCase(); 
 
 
   var myCount=0;  
   var myNoCountries=1;   
   html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 2)+'">'+strGroup+'</h3><div class="div'+data.getFormattedValue(0, 0)+'">');
+  html.push('<h3 class="hGroup">'+strGroup2+' Group</h3>');
 
 
   for (var row = 0; row < posesEggrafes; row++) {
@@ -570,12 +572,15 @@ function handleQueryResponseTab5(response) {
     myNoCountries++;
    }
 
-
+    if( strGroup2 != data.getFormattedValue(row, 16).toUpperCase() ){
+    strGroup2 = data.getFormattedValue(row, 16).toUpperCase();
+    html.push('<h3 class="hGroup">'+strGroup2+' Group</h3>');
+   }
   
   // upper(J), K, L, upper(M),P,E,A,B,C,D,F,H,I
   
    myCount++;
- html.push('<div><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 4)+'" /><div class="clDivData">'+myCount+'. '+ data.getFormattedValue(row, 1).toUpperCase()+' ('+data.getFormattedValue(row, 2)+') <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 3).toUpperCase() + '</span></div><div class="clDivData2seira"><span>Έδρα : <b>'+data.getFormattedValue(row, 6)+' <br/> Γραφεία : ' +data.getFormattedValue(row, 7) + '</b></span><br/>Χρώματα : '+data.getFormattedValue(row, 8).toUpperCase()+'<br/> Πρόεδρος : '+ data.getFormattedValue(row, 9).toUpperCase()+'<br/>Υπεύθυνοι : '+data.getFormattedValue(row, 5).toUpperCase()+'<br/>Προπονητής : '+data.getFormattedValue(row, 10).toUpperCase()+'<br/>email :'+data.getFormattedValue(row, 11)+'</div></div>');
+ html.push('<div><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 4)+'" /><div class="clDivData">'+myCount+'. '+ data.getFormattedValue(row, 1).toUpperCase()+' ('+data.getFormattedValue(row, 2)+' '+ data.getFormattedValue(row, 13)+' ) <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 3).toUpperCase() + '</span></div><div class="clDivData2seira"><span>Έδρα : <b>'+data.getFormattedValue(row, 6)+' <br/> Γραφεία : ' +data.getFormattedValue(row, 7) + '</b></span><br/>Χρώματα : '+data.getFormattedValue(row, 8).toUpperCase()+'<br/> Πρόεδρος : '+ data.getFormattedValue(row, 9).toUpperCase()+'<br/>Υπεύθυνοι : '+data.getFormattedValue(row, 5).toUpperCase()+'<br/>Προπονητής : '+data.getFormattedValue(row, 10).toUpperCase()+'<br/>email :'+data.getFormattedValue(row, 11)+'</div></div>');
   
   }
   html.push('</div>');
