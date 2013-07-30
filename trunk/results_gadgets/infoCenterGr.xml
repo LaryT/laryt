@@ -572,8 +572,8 @@ function handleQueryResponseTab5(response) {
     myNoCountries++;
    }
 
-    if( strGroup2 != data.getFormattedValue(row, 16).toUpperCase() ){
-    strGroup2 = data.getFormattedValue(row, 16).toUpperCase();
+    if( strGroup2 != data.getFormattedValue(row, 13).toUpperCase() ){
+    strGroup2 = data.getFormattedValue(row, 13).toUpperCase();
     html.push('<h3 class="hGroup">'+strGroup2+' Group</h3>');
    }
   
