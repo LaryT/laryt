@@ -769,7 +769,7 @@ function handleQueryApotelesmataDiorgResponse(response){
      }else{
        html.push('<td class="emblhmaImgBathmo" width="5%" align="right"><img class="emblhmaImgBathmo" src="'+ data.getFormattedValue(row, 16) +'"></td>');
      }
-     html.push('<td class="pad" width="1%">&nbsp;</td>');
+     html.push('<td class="pad" width="1%"><span style="font-size:7px;">'+data.getFormattedValue(row, 16)+'</span></td>');
 
      if (data.getFormattedValue(row, 17) == "" || data.getFormattedValue(row, 17) == "---" ){
        html.push('<td class="emblhmaImgBathmo" width="5%">&nbsp;</td>');     
