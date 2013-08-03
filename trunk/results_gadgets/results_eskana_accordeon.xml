@@ -249,7 +249,7 @@ function sendQueryBathmologia() {
 
 //---- make agvnistikes
 function sendQueryAgonistikes() {
-   queryApotelesmataDiorg.setQuery('select * order by B, D, F');
+   queryApotelesmataDiorg.setQuery('select * where  Q is not null  order by Β, D, E');
    prosthetoID="_a";
    posoPxScroll=70;
    queryApotelesmataDiorg.send(handleQueryResponseBathmologia);
