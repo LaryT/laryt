@@ -769,7 +769,7 @@ function handleQueryApotelesmataDiorgResponse(response){
      }else{
        html.push('<td class="emblhmaImgBathmo" width="5%" align="right"><img class="emblhmaImgBathmo" src="'+ data.getFormattedValue(row, 16) +'"></td>');
      }
-     html.push('<td class="pad" width="1%"><span style="font-size:7px;">'+data.getFormattedValue(row, 15)+'</span></td>');
+     html.push('<td class="pad" width="1%">&nbsp;</td>');
 
      if (data.getFormattedValue(row, 17) == "" || data.getFormattedValue(row, 17) == "---" ){
        html.push('<td class="emblhmaImgBathmo" width="5%">&nbsp;</td>');     
@@ -781,7 +781,7 @@ function handleQueryApotelesmataDiorgResponse(response){
 
      html.push('</tr>');
 
-     strDiathtes ='(Δ):'+data.getFormattedValue(row, 9) +', '+ data.getFormattedValue(row, 10)+' (Π):'+ data.getFormattedValue(row, 11)+' (Κ):'+ data.getFormattedValue(row, 12)+', '+ data.getFormattedValue(row, 13) +', '+ data.getFormattedValue(row, 14) ;
+     strDiathtes ='<span style="font-size:7px;">'+data.getFormattedValue(row, 15)+' </span>(Δ):'+data.getFormattedValue(row, 9) +', '+ data.getFormattedValue(row, 10)+' (Π):'+ data.getFormattedValue(row, 11)+' (Κ):'+ data.getFormattedValue(row, 12)+', '+ data.getFormattedValue(row, 13) +', '+ data.getFormattedValue(row, 14) ;
 
      strHmeromhniesGhpeda = data.getFormattedValue(row, 0) +' '+ data.getFormattedValue(row, 1)+' '+ data.getFormattedValue(row, 2)+' '+ data.getFormattedValue(row, 3)+' '+ data.getFormattedValue(row, 4) ;
 
