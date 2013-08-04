@@ -478,8 +478,8 @@ function handleQueryResponseTab3(response) {
     document.getElementById("myTitleID").innerHTML = html4group2.join('');
   }
 
-   setNewQueryPrgCategory(data.getFormattedValue(0, 7)); //stelnei thn 1 eggrafh gia initilize
- // gadgets.window.adjustHeight();
+ setNewQueryPrgCategory(data.getFormattedValue(0, 7)); //stelnei thn 1 eggrafh gia initilize
+
 
 
 }
@@ -493,7 +493,6 @@ document.getElementById("divIDTab3").innerHTML = '<img src="https://lh3.googleus
   var queryTabPrgCat = new google.visualization.Query(strURLprgCatergory);  
 
   var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,AW,AX where Q != "" order by D,E,F';
-
 
   queryTabPrgCat.setQuery(strQ);   
   queryTabPrgCat.send(handleQueryResponseForProgrammCategory); 
@@ -567,7 +566,7 @@ function handleQueryResponseForProgrammCategory(response) {
           }
           //-- apodosh html sto iD 
           document.getElementById("divIDTab3").innerHTML = html.join('');
-
+ gadgets.window.adjustHeight();
 }
 
 
