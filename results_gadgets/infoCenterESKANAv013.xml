@@ -36,7 +36,12 @@
 
       .imgFlagRadius{border-radius: 9px;height:18px;width:18px; box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}
 </style>
+<script>
+// on at laryt --- of at local
 
+ var prefs = new gadgets.Prefs();
+ var myLang = prefs.getString("my_Lang");
+ 
 var mKey1 ="";
 var mKey2 ="";
 var mKey3 ="";
