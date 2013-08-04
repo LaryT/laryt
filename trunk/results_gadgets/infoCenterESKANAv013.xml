@@ -492,7 +492,7 @@ document.getElementById("divIDTab3").innerHTML = '<img src="https://lh3.googleus
   strURLprgCatergory=strURLprgCatergory+'&headers=1';
   var queryTabPrgCat = new google.visualization.Query(strURLprgCatergory);  
 
-  var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,AW,AX where Q != "" order by D,E,F';
+  var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,AW,AX where Q != "" order by D,E,Q';
 
   queryTabPrgCat.setQuery(strQ);   
   queryTabPrgCat.send(handleQueryResponseForProgrammCategory); 
