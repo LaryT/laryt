@@ -946,7 +946,7 @@ function handleQueryResponseTab8Chart2(response) {
  
   </div>
   
-<center>
+<!--  center>
 <div id="addiv"><p class="pClepikefalida"><br/><br/><br/>Καλώς ήρθατε στο InfoCenter<br/></p>
 <p class="pClRow">1ο βήμα : Click στο "X" button για συνέχεια.</p>
 <p class="pClRow">2ο βήμα : Επιλέξτε από την κορυφή την κατηγορία των πληροφιών.</p>
@@ -954,11 +954,11 @@ function handleQueryResponseTab8Chart2(response) {
 
 
 <a id="apokrychID" href="javascript:hideDivAds();" style="text-decoration:none;font-size:11px;color:black;height:12px;" title="Συνέχεια...">X</a><br/>
-<!-- ***  -->
+
 
 
 </div>
-</center>
+</center  -->
 
 <script>
 // myInitMaxiAge();
