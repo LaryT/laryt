@@ -23,10 +23,20 @@
   </script>
 <style>
 * {margin: 0;padding: 0;}#myTabs{border-bottom:1px solid #444;display:block;height:36px;position:relative;z-index:100;}#myTabs ul{margin-top:0;}#myTabs ul li{display:inline-block;float:left;padding:11px 6px;font:normal normal 12px Arial,Tahoma,Helvetica,FreeSans,sans-serif;color:#999;border-left:1px solid #fff;border-right:1px solid #eee;cursor:pointer;}#myTabs ul li a{text-decoration:none}#myTabs ul li.tab-selected,#myTabs ul li.tab-selected a,#myTabs ul li a:hover,#myTabs ul li:hover{color:#000;background-color:#eee;text-decoration:none;}#myTitleID{color:#2222f2;font-size:14px;font-family: Arial,Tahoma,Helvetica;padding-top:5px;}div.periexomenaCL{height:550px;display:none}div#divIDTab1{display:block}.clDivLeft{float:left;}.myH3titleMedals{clear: both;color: gray;background-color: #e6e6e6;border: 1px solid #d3d3d3;margin-top: 30px;margin-bottom: 2px;font-size: 14px;font-family: Arial, Hlevetica, Verdana; }.clDivDataMedals, .clDivData2seiraMedals{font-size:10px;width: 230px;height: 30px;float: left;}.clSpanOnomateponymoMedals{font-size:12px;font-weight:bold;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}.clMetalioXryso{background-image:url('https://lh3.googleusercontent.com/-JSBLXDQvEUw/UTEcFwfOWBI/AAAAAAAAAls/HLHyisPSGSs/s32/xryso.png');}.clMetalioAshmenio{background-image:url('https://lh4.googleusercontent.com/-xuv3HnzXu7k/UTEcFRFFwsI/AAAAAAAAAlk/eJg3ngivfyw/s32/asimenio.png');}.clMetalioXalkino{background-image:url('https://lh5.googleusercontent.com/-cJAMcQMzpzA/UTEcFpLhBmI/AAAAAAAAAlo/FI6kxU9rhRM/s32/xalkino.png');}.clMetalioXryso, .clMetalioAshmenio, .clMetalioXalkino, .clXvrisMetalio{background-repeat:no-repeat;background-position:center center; background-size:24px 24px;border-radius: 12px;font-size:18px;font-weight:bold;height:24px;width:24px;text-align:center;} .imgLogoRadius{border-radius: 12px;height:24px;width:24px;margin: 0 5px;}.imgFlagRadiusMedals{border-radius: 12px;height:24px;width:24px;margin: 0 5px;}.imgCategoryRadius{margin-top:-5px;margin-right:15px;float:right;}.imgFlagRadius{border-radius: 8px;height:16px;width:16px; }.boxOut10{box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}.boxOut10black{box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-webkit-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-moz-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-o-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-ms-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;margin-right: 10px;}.clSpDelegate{color : rgb(221, 221, 221);font-size:9px;padding-left:10px;}.myH3title{margin-top: 30px;margin-bottom: 2px;font-size: 14px;font-family: Arial, Hlevetica, Verdana; }.clDivData, .clDivData2seira{font-size:10px;margin:1px 0px;}.clDivData2seira{color:rgb(221,221,221)}.clDivData2seira:hover{color:rgb(0,0,0)}.clSpanOnomateponymo{font-size:12px;font-weight:bold;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 300px;}.ui-accordion .ui-accordion-header {padding-top: 0em;padding-bottom: 0em;}#addiv{background-color: rgb(255, 255, 255);position: absolute;top: 40px;bottom: 5px;right: 0px;left: 0px;}.pClepikefalida{font-family:Verdana, Arial,sans-serif; font-size:12px; font-weight:bold;}.pClRow{font-family:Verdana, Arial,sans-serif; font-size:9px;}.divImgStars{padding: 5px;float:left;border: 1px solid silver;margin-right:5px;}.divImgStars img:hover {-webkit-transform: scale(1.2) rotate(360deg);opacity: 1;-webkit-box-reflect: below 2px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(0.2,transparent),to(rgba(0,0,0,0.8)));}.divImgStars img {background: #ffffff;opacity: .8;-webkit-transition: all 300ms ease-in-out;-moz-transition: all 300ms ease-in-out;-o-transition: all 300ms ease-in-out;-ms-transition: all 300ms ease-in-out;transition: all 300ms ease-in-out;-webkit-box-reflect: below 2px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(0.8,transparent),to(rgba(0,0,0,0.8)));}.divVideStars{padding: 5px;clear:both;margin-right:5px;}.hGroup{background-color: silver;border-radius: 8px;box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-webkit-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-moz-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-o-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;-ms-box-shadow: rgba(10, 10, 10, 0.9) 0 0 10px;margin-right: 10px; font-size: 14px; line-height: 18px;padding-left: 8px;margin-top: 10px; margin-bottom: 10px;}
+.wrapGame{clear: both; background-color: white; background-image: url(https://lh5.googleusercontent.com/-wcFG2_g9GyI/UcnOekXFCtI/AAAAAAAA1BI/SHbgx69IZas/s800/bgGray.gif); background-repeat: repeat-x; background-position :bottom;border:1px solid silver;}
+      tr.rowBorder td, .rowBorder{border-right: 1px solid #bbb;}
+      td.no-rowBorder{border-right: none !important;}
+      td.p4{padding-left: 4px !important;padding-right: 4px !important;}
+
+      .sCode{overflow:hidden;width:25px;font-size: 12px;font-weight: bold;}
+      .tdShmaias{width: 20px;}
+      .min6Group{font-size: 7px;}
+      .sOmada{font-size: 10px;font-weight: bold;}
+      .sGhpedo{font-size: 9px;font-weight: bold;}
+
+      .imgFlagRadius{border-radius: 9px;height:18px;width:18px; box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}
 </style>
-<script>
- var prefs = new gadgets.Prefs();
- var myLang = prefs.getString("my_Lang");
+
 var mKey1 ="";
 var mKey2 ="";
 var mKey3 ="";
@@ -46,7 +56,7 @@ if(mKey2 === ""){
  mKey2="0AjrqMWGJ6suYdHFEbFV2RnROLUlQSzBHdXQ0dU1yYlE";
 }
 if(mKey3 === ""){
- mKey3="0AjrqMWGJ6suYdHpjTFktMVF2bjdsdHkwaE5aQk83d3c";
+ mKey3="0AjrqMWGJ6suYdFJ4VXJjZzFSUjlMZ0QxZkJKQzRtWkE";
 }
 if(mKey4 === ""){
  mKey4="0AjrqMWGJ6suYdF9ZeDc2ekdwMzFzbVROWjNsTnprT3c";
@@ -71,7 +81,7 @@ var mCatTab7 ="";
 
 var captionTab1 = "Rosters";
 var captionTab2 = "Πρωταθλήματα";
-var captionTab3 = "Medals";
+var captionTab3 = "Προγράμματα αγώνων";
 var captionTab4 = "Ομάδες";
 var captionTab5 = "Κατηγορίες";
 var captionTab6 = "Γήπεδα";
@@ -118,8 +128,8 @@ if( mKey2!="" ){
    alert('No source file for  Tab2');
 }
 if( mKey3!="" ){  
-  myURLfeedTab3 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey3 +"&headers=1";
-  queryTab3 = new google.visualization.Query(myURLfeedTab3);
+ // myURLfeedTab3 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey3 +"#gid=6&headers=1";
+ // queryTab3 = new google.visualization.Query(myURLfeedTab3);
 }else{
    alert('No source file for Tab3');
 }
@@ -214,30 +224,27 @@ function sendQueryTab1() {
    $( "#divIDTab1" ).accordion( "refresh" );
 }
 function sendQueryTab2() {
- document.getElementById("myTitleID").innerHTML = '';
- document.getElementById("divIDTab2").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
-  myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey2 +"&headers=1";
-  queryTab1 = new google.visualization.Query(myURLfeedTab1);
-  if( mCatTab2!="" ){
-   strQTab2='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCatTab2 +'"  order by C,B,E desc,F';
-  }else{
-   strQTab2='select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S order by B desc';
-  }
-  queryTab1.setQuery(strQTab2);   
-  queryTab1.send(handleQueryResponseTab2); 
+
+  alert('LaZaros cool... sendQueryTab2');
+
+ // queryTab1.setQuery(strQTab2);   
+ // queryTab1.send(handleQueryResponseTab2); 
 }
 function sendQueryTab3() {
  document.getElementById("myTitleID").innerHTML = '';
  document.getElementById("divIDTab3").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
-  myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey3 +"&headers=1";
+  myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey3 +"&gid=6&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
-if( mCatTab3!="" ){
-   strQTab3='select A,B,C,D,E,F,G,H,I,J,K,L where C="'+mCatTab3 +'"  order by H,D,G';
+  if( mCatTab3!="" ){
+   strQTab3='select * order by B,D,F';
   }else{
-   strQTab3='select A,B,C,D,E,F,G,H,I,J,K,L order by H,D,G';
+   strQTab3='select * order by B,D,F';
   }
   queryTab1.setQuery(strQTab3);   
   queryTab1.send(handleQueryResponseTab3); 
+
+
+
 }
 function sendQueryTab4() {
  document.getElementById("myTitleID").innerHTML = '';
@@ -449,51 +456,117 @@ function handleQueryResponseTab3(response) {
     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
  }
- var html =[];  
+
  var data = response.getDataTable();
  var posesEggrafes = data.getNumberOfRows();
-if(posesEggrafes > 0) {
-var strGroup1 = data.getFormattedValue(0, 0).toUpperCase();  
-var strGroup2;
-var myCount=0;
-html.push('<h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(0,8)+'" />'+strGroup1+'</h3><div>');
- for (var row = 0; row < posesEggrafes; row++) {
-  if( strGroup1 != data.getFormattedValue(row, 0).toUpperCase() ){
-   strGroup1 = data.getFormattedValue(row, 0).toUpperCase();
-   html.push('</div><h3 class="myH3titleMedals font-effect-emboss"><img class="imgLogoRadius boxOut10" src="'+data.getFormattedValue(row, 8)+'" />'+strGroup1+'</h3><div>');
-   myCount=0;
+ var html4group2 =[]; 
+
+//------- mpoliasma
+ if(posesEggrafes > 0) {
+    html4group2.push('Πρόγραμμα αγώνων [Κατηγορία, Όμιλος] : ');
+    html4group2.push('<select id="query-3" onchange="setNewQueryPrgCategory(this.value)">');
+    //html4group2.push('<option value="">Επιλογή...</option>');
+    for (var row = 0; row < posesEggrafes; row++) {
+      html4group2.push('<option value="'+data.getFormattedValue(row, 7)+'">'+data.getFormattedValue(row, 4)+'</option>');  
+    }
+    html4group2.push('</select>');
+    document.getElementById("myTitleID").innerHTML = html4group2.join('');
   }
-  myCount++;
-  if( strGroup2 != data.getFormattedValue(row, 3).toUpperCase() ){
-   strGroup2 = data.getFormattedValue(row, 3).toUpperCase();
-   html.push('<h3 class="myH3titleMedals font-effect-emboss">'+strGroup2+'</h3>');
-  }
-  html.push('<div style="float:left;display:block;">');
-  html.push('<div class="clDivDataMedals">');
-  if (data.getValue(row, 6) == 1 ){
-    html.push('<div class="clMetalioXryso clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
-  }else if( data.getValue(row, 6) == 2 ){
-    html.push('<div class="clMetalioAshmenio clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
-  }else if( data.getValue(row, 6) == 3 ){
-    html.push('<div class="clMetalioXalkino clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');    
-  }else{
-    html.push('<div class="clXvrisMetalio clDivLeft boxOut10black">'+data.getFormattedValue(row, 6)+'</div>');
-  }
-  html.push('<div class="clDivLeft"><img class="imgFlagRadiusMedals boxOut10black" src="'+data.getFormattedValue(row, 9)+'" /></div>')
-  html.push('<div class="clSpanOnomateponymoMedals clDivLeft">'+data.getFormattedValue(row, 1).toUpperCase() + '</div>');
-  html.push('<div class="clDivLeft" >('+ data.getFormattedValue(row, 2) +')</div>');
-  html.push('</div>');
-  html.push('</div>');
+
+   setNewQueryPrgCategory(data.getFormattedValue(0, 7)); //stelnei thn 1 eggrafh gia initilize
+ // gadgets.window.adjustHeight();
+
+
 }
-  html.push('</div>');
-  document.getElementById("divIDTab3").innerHTML = html.join('');
-  $( "#divIDTab3" ).accordion({heightStyle: "content"});
- }else{
-   document.getElementById("divIDTab3").innerHTML = '<div class="clSpanOnomateponymo"> 0 Rosters</div>';
- }
- $("#divIDTab3").accordion( "refresh" );
- gadgets.window.adjustHeight();
+
+
+//----------- epilogh prvtathlhmatow  gia dhmiourgia programmatos  ----
+function setNewQueryPrgCategory(strURLprgCatergory) {  
+document.getElementById("divIDTab3").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
+
+  strURLprgCatergory=strURLprgCatergory+'&headers=1';
+  var queryTabPrgCat = new google.visualization.Query(strURLprgCatergory);  
+
+  var strQ='select A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,AW,AX where Q != "" order by D,E,F';
+
+
+  queryTabPrgCat.setQuery(strQ);   
+  queryTabPrgCat.send(handleQueryResponseForProgrammCategory); 
+ 
 }
+
+function handleQueryResponseForProgrammCategory(response) {
+
+  if (response.isError()) {
+    alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+  }
+          var data = response.getDataTable();
+          var posesEggrafes = data.getNumberOfRows();
+          var html =[];  
+          var strGroup1 = data.getFormattedValue(0, 0);
+          var strGroup2 = data.getFormattedValue(0, 3);  //date          
+          //-----  html.push('<div id="accordion">');
+          html.push(' <h3 class="myH3title">' + data.getFormattedValue(0, 0)   + ' | Games : '+ posesEggrafes +'</h3>');
+          html.push('<h3 class="wrapGame">'+strGroup2+'</h3>');
+          
+          for (var row = 0; row < posesEggrafes; row++) {
+            if( strGroup2 != data.getFormattedValue(row, 3) ){
+             strGroup2 = data.getFormattedValue(row, 3);
+             html.push('<h3 class="wrapGame">'+strGroup2+'</h3>');
+            }
+          
+            html.push('<table class="wrapGame" width="100%">');
+
+              html.push('<tbody>');
+                html.push('<tr class="rowBorder">');
+                  html.push('<td width="45" class="bold pad" align="center" rowspan="2">');
+                    html.push('<div class="sCode">'+data.getFormattedValue(row, 16)+'</div>'); // kvdikos agvna
+                  html.push('</td>');
+                  html.push(' <td width="50" class="pad" align="center" rowspan="2">');
+                    html.push('<div style="overflow:hidden;width:50px;">'+data.getFormattedValue(row, 4)+'<br><span class="min6Group">'+data.getFormattedValue(row, 2)+'<span></div>'); // vra agvna
+                  html.push('</td>');
+
+                  if (data.getFormattedValue(row, 17) == "" || data.getFormattedValue(row, 17) == "---" || data.getFormattedValue(row, 17) == "--"  ) {   //shmaia
+                    html.push('<td class="tdShmaias no-rowBorder">&nbsp;'); 
+                  }else{
+                    html.push('<td class="tdShmaias p4 no-rowBorder"><img class="imgFlagRadius" src="'+ data.getFormattedValue(row, 17) +'">');
+                  } 
+                  html.push('</td>');
+
+                  html.push('<td><a></a><span class="sOmada">'+data.getFormattedValue(row, 6)+'</span>'); // a omada
+                  html.push('</td>');
+                  html.push('<td width="50" align="center" class="result" rowspan="2">');
+                    html.push(data.getFormattedValue(row, 8)+'-'+data.getFormattedValue(row, 9)); // skor
+                  html.push('</td>');
+                  html.push('<td width="80" class="no-rowBorder" align="center" rowspan="2">');
+                      html.push('<div style="overflow:hidden;width:80px;" class="sGhpedo">'+data.getFormattedValue(row, 5)+'<br>'); // ghpedo
+                        html.push('<span>'+data.getFormattedValue(row, 10)+'&nbsp;'+data.getFormattedValue(row, 11)+'</span>'); // diaithtes
+                      html.push('</div>');
+                 html.push('</td>');
+                html.push(' </tr>');
+                html.push('<tr class="rowBorder">')
+                  if (data.getFormattedValue(row, 18) == "" || data.getFormattedValue(row, 18) == "---" || data.getFormattedValue(row, 18) == "--" ) { //shmaia
+                    html.push('<td class="tdShmaias no-rowBorder">&nbsp;'); 
+                  }else{
+                    html.push('<td class="tdShmaias p4 no-rowBorder"><img class="imgFlagRadius" src="'+ data.getFormattedValue(row, 18) +'">');
+                  } 
+                  html.push('</td>');
+                  html.push('<td>');
+                    html.push('<a></a><span class="sOmada">'+data.getFormattedValue(row, 7)+'</span>'); // omada b
+                  html.push('</td>');
+                html.push('</tr>');
+              html.push('</tbody>');
+            html.push('</table>');
+
+          }
+          //-- apodosh html sto iD 
+          document.getElementById("divIDTab3").innerHTML = html.join('');
+
+}
+
+
+
 //-----
 //- make div Tab4
 //-----
@@ -820,10 +893,11 @@ function handleQueryResponseTab8Chart2(response) {
    <ul>
      <li id="tabLi4"><a href="javascript:void(0);" onclick="selectTab('divIDTab4','tabLi4' );return false;"><span id="spanIDTab4">Tab4</span></a></li>
      <li id="tabLi5"><a href="javascript:void(0);" onclick="selectTab('divIDTab5','tabLi5' );return false;"><span id="spanIDTab5">Tab5</span></a></li>     
-     <!--  li id="tabLi1"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','tabLi1' );return false;"><span id="spanIDTab1">Tab1</span></a></li>
+     <li id="tabLi3"><a href="javascript:void(0);" onclick="selectTab('divIDTab3','tabLi3' );return false;"><span id="spanIDTab3">Tab3</span></a></li>
+
+     <!-- li id="tabLi1"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','tabLi1' );return false;"><span id="spanIDTab1">Tab1</span></a></li>
      <li id="tabLi6"><a href="javascript:void(0);" onclick="selectTab('divIDTab6','tabLi6' );return false;"><span id="spanIDTab6">Tab6</span></a></li>     
      <li id="tabLi2"><a href="javascript:void(0);" onclick="selectTab('divIDTab2','tabLi2' );return false;"><span id="spanIDTab2">Tab2</span></a></li>
-     <li id="tabLi3"><a href="javascript:void(0);" onclick="selectTab('divIDTab3','tabLi3' );return false;"><span id="spanIDTab3">Tab3</span></a></li>
      <li id="tabLi7"><a href="javascript:void(0);" onclick="selectTab('divIDTab7','tabLi7' );return false;"><span id="spanIDTab7">Tab7</span></a></li>
       <li id="tabLi8"><a href="javascript:void(0);" onclick="selectTab('divIDTab8','tabLi8' );return false;"><span id="spanIDTab8">Tab8</span></a></li   -->
      </ul>
@@ -831,7 +905,18 @@ function handleQueryResponseTab8Chart2(response) {
  </div>
  <div>
     <div id="myTitleID"><marquee>Πληροφορίες - Ομάδες που συμμετέχουν - Rosters Ομάδων - Γήπεδα</marquee></div>
-    <div id="divIDlabelcato" style="text-align: right;font-size:9px;color:gray;height:10px;"> InfoCenter : Αυτόματη ενημέρωση δεοδομένων κάθε 4-6 ώρες &nbsp;|&nbsp; <!-- a id="emfaniseAdsID" href="javascript:showDivAds();" style="text-decoration:none;font-size:9px;color:gray;height:10px;" title="εμφάνιση - show ads">≙</a -->
+    <div id="divIDlabelcato" style="text-align: center;font-size:10px;color:gray;height:110px;margin-top:5px;"><hr/> InfoCenter : Αυτόματη ενημέρωση δεοδομένων κάθε 4-6 ώρες 
+      <center>
+        <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- 728 x 90 schedule InfoCenter -->
+          <ins class="adsbygoogle"
+          style="display:inline-block;width:728px;height:90px"
+          data-ad-client="ca-pub-9529818444792202"
+          data-ad-slot="8732371089"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </center>
     </div>
 
     <div id="divIDTab1" class="periexomenaCL"></div>
@@ -877,12 +962,11 @@ function handleQueryResponseTab8Chart2(response) {
 
 document.getElementById("spanIDTab4").innerHTML = captionTab4;
 document.getElementById("spanIDTab5").innerHTML = captionTab5;
-
+document.getElementById("spanIDTab3").innerHTML = captionTab3;
 
 /*
 document.getElementById("spanIDTab1").innerHTML = captionTab1;
 document.getElementById("spanIDTab2").innerHTML = captionTab2;
-document.getElementById("spanIDTab3").innerHTML = captionTab3;
 document.getElementById("spanIDTab6").innerHTML = captionTab6;
 document.getElementById("spanIDTab7").innerHTML = captionTab7;
 document.getElementById("spanIDTab8").innerHTML = captionTab8;
