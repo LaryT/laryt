@@ -5,6 +5,8 @@
     <Require feature="dynamic-height" />
   </ModulePrefs>
   <UserPref name="my_name" display_name="Name" default_value="infoCenter ESKANA v013" />
+  <UserPref name="my_TeamsAndCategories" display_name="Teams And Categories[key]" default_value="" />
+  <UserPref name="my_Schedule" display_name="Schedules[key]" default_value="" />
   <UserPref name="my_Lang" display_name="Languege" default_value="EN" />
 <Content type="html">
   <![CDATA[
@@ -27,7 +29,6 @@
       tr.rowBorder td, .rowBorder{border-right: 1px solid #bbb;}
       td.no-rowBorder{border-right: none !important;}
       td.p4{padding-left: 4px !important;padding-right: 4px !important;}
-
       .sCode{overflow:hidden;width:25px;font-size: 12px;font-weight: bold;}
       .tdShmaias{width: 20px;}
       .min6Group{font-size: 7px;}
@@ -44,9 +45,9 @@
  
 var mKey1 ="";
 var mKey2 ="";
-var mKey3 ="";
-var mKey4 ="";
-var mKey5 ="";
+var mKey3 =prefs.getString("my_Schedule");
+var mKey4 =prefs.getString("my_TeamsAndCategories"); //einai koino to arxeio
+var mKey5 =prefs.getString("my_TeamsAndCategories"); //einai koino to arxeio
 var mKey6 ="";
 var mKey7 ="";
 
@@ -915,7 +916,7 @@ function handleQueryResponseTab8Chart2(response) {
  </div>
  <div>
     <div id="myTitleID"><marquee>Πληροφορίες - Ομάδες που συμμετέχουν - Rosters Ομάδων - Πρόγραμμα αγώνων</marquee></div>
-    <div id="divIDlabelcato" style="text-align: center;font-size:10px;color:gray;height:130px;margin-top:5px;"><hr/>    
+    <div id="divIDlabelcato" style="text-align: center;font-size:10px;color:gray;height:160px;margin-top:5px;"><hr/>    
       <p class="pClRow">InfoCenter</p>   
       <p class="pClRow">1ο βήμα : Επιλέξτε από την κορυφή την κατηγορία των πληροφιών.</p>
       <p class="pClRow">2ο βήμα : Επιλέξτε το φίλτρο από το αντίστοιχο πεδίο Επιλογής.<br/><br/></p>
