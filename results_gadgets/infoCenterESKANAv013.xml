@@ -86,7 +86,7 @@ var mCatTab7 ="";
 
 var captionTab1 = "Rosters";
 var captionTab2 = "Πρωταθλήματα";
-var captionTab3 = "Προγράμματα αγώνων";
+var captionTab3 = "Πρόγραμμα αγώνων";
 var captionTab4 = "Ομάδες";
 var captionTab5 = "Κατηγορίες";
 var captionTab6 = "Γήπεδα";
@@ -543,9 +543,15 @@ function handleQueryResponseForProgrammCategory(response) {
                   html.push('<td width="50" align="center" class="result" rowspan="2">');
                     html.push(data.getFormattedValue(row, 8)+'-'+data.getFormattedValue(row, 9)); // skor
                   html.push('</td>');
-                  html.push('<td width="80" class="no-rowBorder" align="center" rowspan="2">');
+                   html.push('<td width="80" align="center" rowspan="2">');
                       html.push('<div style="overflow:hidden;width:80px;" class="sGhpedo">'+data.getFormattedValue(row, 5)+'<br>'); // ghpedo
                         html.push('<span>'+data.getFormattedValue(row, 10)+'&nbsp;'+data.getFormattedValue(row, 11)+'</span>'); // diaithtes
+                      html.push('</div>');
+                 html.push('</td>');
+                  html.push('</td>');
+                  html.push('<td width="80" class="no-rowBorder" align="center" rowspan="2">');
+                      html.push('<div style="overflow:hidden;width:80px;" class="sGhpedo">'+data.getFormattedValue(row, 12)+'<br>'); // komisarios
+                        html.push('<span>'+data.getFormattedValue(row, 13)+'&nbsp;'+data.getFormattedValue(row, 14)+'&nbsp;'+data.getFormattedValue(row, 15)+'</span>'); // grammateia
                       html.push('</div>');
                  html.push('</td>');
                 html.push(' </tr>');
