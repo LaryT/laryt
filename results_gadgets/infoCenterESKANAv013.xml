@@ -92,7 +92,7 @@ var captionTab3 = "Πρόγραμμα αγώνων";
 var captionTab4 = "Ομάδες";
 var captionTab5 = "Κατηγορίες";
 var captionTab6 = "Γήπεδα";
-var captionTab7 = "Ta ΔΙΚΑ μας παιδιά";
+var captionTab7 = "Τα ΔΙΚΑ μας παιδιά";
 var captionTab8 = "Stats";
 
 
