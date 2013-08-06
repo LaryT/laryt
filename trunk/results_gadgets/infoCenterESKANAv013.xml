@@ -7,6 +7,7 @@
   <UserPref name="my_name" display_name="Name" default_value="infoCenter ESKANA v013" />
   <UserPref name="my_TeamsAndCategories" display_name="Teams And Categories[key]" default_value="" />
   <UserPref name="my_Schedule" display_name="Schedules[key]" default_value="" />
+  <UserPref name="my_Stars" display_name="Stars[key]" default_value="" />
   <UserPref name="my_Lang" display_name="Languege" default_value="EN" />
 <Content type="html">
   <![CDATA[
@@ -49,7 +50,7 @@ var mKey3 =prefs.getString("my_Schedule");
 var mKey4 =prefs.getString("my_TeamsAndCategories"); //einai koino to arxeio
 var mKey5 =prefs.getString("my_TeamsAndCategories"); //einai koino to arxeio
 var mKey6 ="";
-var mKey7 ="";
+var mKey7 =prefs.getString("my_Stars");
 
 if(mKey1 === ""){
  mKey1="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
@@ -74,7 +75,7 @@ if(mKey6 === ""){
  mKey6="0AjrqMWGJ6suYdDJrYWRjVXZ6ZVNWNDJLdjBjaGQyVkE";
 }
 if(mKey7 === ""){
- mKey7="0AjrqMWGJ6suYdHp1SmFQT3l1dm9UaUloTzBObHZ0YXc";
+ mKey7="0AjrqMWGJ6suYdFZPOGZZX0JxOTAzTDI1R3JWZFhfRUE";
 }
 //for filter in a Tab
 var mCatTab1 ="";
@@ -91,7 +92,7 @@ var captionTab3 = "Πρόγραμμα αγώνων";
 var captionTab4 = "Ομάδες";
 var captionTab5 = "Κατηγορίες";
 var captionTab6 = "Γήπεδα";
-var captionTab7 = "Stars";
+var captionTab7 = "Ta ΔΙΚΑ μας παιδιά";
 var captionTab8 = "Stats";
 
 
@@ -830,9 +831,9 @@ if (response.isError()) {
 
 
  if(posesEggrafes > 0) {
-    html4group2.push('Filter : ');
+    html4group2.push('Επιλογή Φίλτρου : ');
     html4group2.push('<select id="query-3" onchange="setNewQueryCountry(this.value)">');
-    html4group2.push('<option value="">All</option>');
+    html4group2.push('<option value="">Όλα</option>');
  
   for (var row = 0; row < posesEggrafes; row++) {
      html4group2.push('<option value="'+data.getFormattedValue(row, 0)+'">'+data.getFormattedValue(row, 0)+'</option>');  
@@ -903,13 +904,13 @@ function handleQueryResponseTab8Chart2(response) {
    <div id="myTabs">
    <ul>
      <li id="tabLi4"><a href="javascript:void(0);" onclick="selectTab('divIDTab4','tabLi4' );return false;"><span id="spanIDTab4">Tab4</span></a></li>
-     <li id="tabLi5"><a href="javascript:void(0);" onclick="selectTab('divIDTab5','tabLi5' );return false;"><span id="spanIDTab5">Tab5</span></a></li>     
+     <li id="tabLi5"><a href="javascript:void(0);" onclick="selectTab('divIDTab5','tabLi5' );return false;"><span id="spanIDTab5">Tab5</span></a></li>    
      <li id="tabLi3"><a href="javascript:void(0);" onclick="selectTab('divIDTab3','tabLi3' );return false;"><span id="spanIDTab3">Tab3</span></a></li>
-
-     <!-- li id="tabLi1"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','tabLi1' );return false;"><span id="spanIDTab1">Tab1</span></a></li>
-     <li id="tabLi6"><a href="javascript:void(0);" onclick="selectTab('divIDTab6','tabLi6' );return false;"><span id="spanIDTab6">Tab6</span></a></li>     
-     <li id="tabLi2"><a href="javascript:void(0);" onclick="selectTab('divIDTab2','tabLi2' );return false;"><span id="spanIDTab2">Tab2</span></a></li>
      <li id="tabLi7"><a href="javascript:void(0);" onclick="selectTab('divIDTab7','tabLi7' );return false;"><span id="spanIDTab7">Tab7</span></a></li>
+     
+     <!-- li id="tabLi1"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','tabLi1' );return false;"><span id="spanIDTab1">Tab1</span></a></li>
+     <li id="tabLi6"><a href="javascript:void(0);" onclick="selectTab('divIDTab6','tabLi6' );return false;"><span id="spanIDTab6">Tab6</span></a></li>    
+     <li id="tabLi2"><a href="javascript:void(0);" onclick="selectTab('divIDTab2','tabLi2' );return false;"><span id="spanIDTab2">Tab2</span></a></li>
       <li id="tabLi8"><a href="javascript:void(0);" onclick="selectTab('divIDTab8','tabLi8' );return false;"><span id="spanIDTab8">Tab8</span></a></li   -->
      </ul>
    </div>
@@ -977,12 +978,12 @@ function handleQueryResponseTab8Chart2(response) {
 document.getElementById("spanIDTab4").innerHTML = captionTab4;
 document.getElementById("spanIDTab5").innerHTML = captionTab5;
 document.getElementById("spanIDTab3").innerHTML = captionTab3;
+document.getElementById("spanIDTab7").innerHTML = captionTab7;
 
 /*
 document.getElementById("spanIDTab1").innerHTML = captionTab1;
 document.getElementById("spanIDTab2").innerHTML = captionTab2;
 document.getElementById("spanIDTab6").innerHTML = captionTab6;
-document.getElementById("spanIDTab7").innerHTML = captionTab7;
 document.getElementById("spanIDTab8").innerHTML = captionTab8;
 */
 gadgets.window.adjustHeight();
