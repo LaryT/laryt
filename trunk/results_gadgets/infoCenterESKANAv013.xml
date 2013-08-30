@@ -8,6 +8,7 @@
   <UserPref name="my_TeamsAndCategories" display_name="Teams And Categories[key]" default_value="" />
   <UserPref name="my_Schedule" display_name="Schedules[key]" default_value="" />
   <UserPref name="my_Stars" display_name="Stars[key]" default_value="" />
+  <UserPref name="my_RosterStats" display_name="RosterStats[key]" default_value="" />  
   <UserPref name="my_Lang" display_name="Languege" default_value="EN" />
 <Content type="html">
   <![CDATA[
@@ -37,6 +38,9 @@
       .sGhpedo{font-size: 9px;font-weight: bold;}
 
       .imgFlagRadius{border-radius: 9px;height:18px;width:18px; box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}
+      .imgPersonRadius{border-radius: 40px;height:80px;width:80px; box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}
+      .imgPersonRadius:hover { -webkit-transform: scale(1.8); -moz-transform: scale(1.8); transform: scale(1.8); opacity: 1;border:2px gray solid;}
+      
 </style>
 <script>
 // on at laryt --- of at local
@@ -44,7 +48,7 @@
  var prefs = new gadgets.Prefs();
  var myLang = prefs.getString("my_Lang");
  
-var mKey1 ="";
+var mKey1 =prefs.getString("my_RosterStats"); // pinakas me omades kai links gia rosters
 var mKey2 ="";
 var mKey3 =prefs.getString("my_Schedule");
 var mKey4 =prefs.getString("my_TeamsAndCategories"); //einai koino to arxeio
@@ -53,7 +57,7 @@ var mKey6 ="";
 var mKey7 =prefs.getString("my_Stars");
 
 if(mKey1 === ""){
- mKey1="0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc";
+ mKey1="0AjrqMWGJ6suYdF9ZeDc2ekdwMzFzbVROWjNsTnprT3c";
  // -- 0AjrqMWGJ6suYdEtaa3pyZUxfLU05YlBza1Y1ZXYtM3c  -- maxi_Regis_for_loopa_2nd_ALLROSTERsTeams
  // -- 0AjrqMWGJ6suYdEJMMGF3UDdXOE5wTHp3MGk1T3ZhWHc
  // -- 0AjrqMWGJ6suYdHFndS1qWlZXcWE4VGZsRll0YUF6YXc  -- maxi_Regis_2_ALLROSTERsTeams
@@ -86,7 +90,7 @@ var mCatTab5 ="";
 var mCatTab6 ="";
 var mCatTab7 ="";
 
-var captionTab1 = "Rosters";
+var captionTab1 = "Rosters & Stats";
 var captionTab2 = "Πρωταθλήματα";
 var captionTab3 = "Πρόγραμμα αγώνων";
 var captionTab4 = "Ομάδες";
@@ -214,22 +218,336 @@ function selectTab(myID, myTab ) {
 function sendQueryTab1() {
  document.getElementById("myTitleID").innerHTML = '';
  document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
-  myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&headers=1";
+  myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&gid=6&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
-  if( mCatTab1!="" ){
-   strQTab1='select A,B,C,D,E,F,G,H,I,J,K,L,M,N  where C="'+mCatTab1 +'"  order by C,B,E desc,F';
-  }else{
-   strQTab1='select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F';
-  }
-   queryTab1.setQuery(strQTab1);   
-   queryTab1.send(handleQueryResponseTab1);  
-  //-------- gia ta filter cathgorivn
-   queryTab1 = new google.visualization.Query(myURLfeedTab1);
-   strTab1filter = 'select C, count(D) group by C';
-   queryTab1.setQuery(strTab1filter);
-   queryTab1.send(handleQueryResponseTab1Filter);
-   $( "#divIDTab1" ).accordion( "refresh" );
+
+  strQTab1='select L, count(N) where N != "" group by L';
+
+  queryTab1.setQuery(strQTab1);   
+  queryTab1.send(handleQueryResponseTab1); 
 }
+function handleQueryResponseTab1(response) {
+ document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />'; 
+ if (response.isError()) {
+    alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+ }
+
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+ var html4group2 =[]; 
+
+//------- mpoliasma
+ if(posesEggrafes > 0) {
+    html4group2.push(' Κατηγορία : ');
+    html4group2.push('<select id="query-category-rosters" onchange="createSelectionForTeamsCategories(this.value)">');
+    html4group2.push('<option value="">Επιλογή Κατηγορίας...</option>');
+    for (var row = 0; row < posesEggrafes; row++) {
+      html4group2.push('<option value="'+data.getFormattedValue(row, 0)+'">'+data.getFormattedValue(row, 0)+'</option>');  
+    }
+    html4group2.push('</select>');
+    document.getElementById("myTitleID").innerHTML = html4group2.join('');
+  }
+}
+
+
+function createSelectionForTeamsCategories(mySelectedCategory) {
+  document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
+
+  strQTab1='select L, M, N where L = "'+ mySelectedCategory +'" and N != "" ';
+  queryTab1.setQuery(strQTab1);   
+  queryTab1.send(handleQueryResponseTab1_createSelectionTeam);
+}
+
+function handleQueryResponseTab1_createSelectionTeam(response) {
+ if (response.isError()) {
+    alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+ }
+
+ var data = response.getDataTable();
+ var posesEggrafes = data.getNumberOfRows();
+ var html4group2 =[];
+ var existSelectOmadvn;
+
+//------- mpoliasma
+ if(posesEggrafes > 0) {
+    existSelectOmadvn = document.getElementById("query-category-team-rosters");
+    if (existSelectOmadvn != null ) {
+    }else{
+      html4group2.push(' Ομάδα : ');
+      html4group2.push('<select id="query-category-team-rosters" onchange="createSelectionForTeamsRoster(this.value)">');
+    }
+    html4group2.push('<option value="">Επιλογή Ομάδας...</option>');
+    for (var row = 0; row < posesEggrafes; row++) {
+      html4group2.push('<option value="'+data.getFormattedValue(row, 2)+'">'+data.getFormattedValue(row, 1)+'</option>');  
+    }
+
+    if (existSelectOmadvn != null ) {
+      document.getElementById("query-category-team-rosters").innerHTML =  html4group2.join('');
+    }else{
+      html4group2.push('</select>');
+      document.getElementById("myTitleID").innerHTML =  document.getElementById("myTitleID").innerHTML + html4group2.join('');
+    }
+    
+  }
+}
+
+
+function createSelectionForTeamsRoster(mySelectedTeamPathRoster) {
+ 
+  var queryRoster = new google.visualization.Query(mySelectedTeamPathRoster);
+
+  strQTab1='select A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, AA, AB, AC, AD, AE where D ="" and H!="" and I !="" order by G';
+
+  queryRoster.setQuery(strQTab1);   
+  queryRoster.send(handleQueryResponseTab1_TeamRoster);
+}
+
+
+function handleQueryResponseTab1_TeamRoster(response) {
+  if (response.isError()) {
+       alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+       return;
+  }
+  var data = response.getDataTable();
+  var posesEggrafes = data.getNumberOfRows();
+  if(posesEggrafes > 0) {
+    var html =[]; 
+    var myCount=1;
+
+      html.push('<table class="wrapGame" width="100%">');
+        html.push('<tbody style="font-size:9px;">');
+          html.push('<tr class="rowBorder">');
+
+            html.push(' <td width="60" class="pad" align="center">');  // --- cm
+              html.push('<div style="width:60px;">no, pos</div>');
+            html.push('</td>'); 
+
+            html.push(' <td width="60" class="pad" align="center">');  // --- cm
+              html.push('<div style="width:60px;">cm, BDate</div>');
+            html.push('</td>'); 
+
+            html.push(' <td width="84" class="pad" align="center">');  // --- img
+              html.push('<div style="width:84px;">img</div>');
+            html.push('</td>'); 
+
+            html.push(' <td width="160" class="pad" align="center">');  // --- names
+              html.push('<div style="width:160px;">Name</div>');
+            html.push('</td>'); 
+
+            html.push(' <td width="40" class="pad" align="center">');  // --- pts
+              html.push('<div style="width:40px;">pts</div>');
+            html.push('</td>'); 
+
+            html.push(' <td width="60" class="pad" align="center">');  // --- 1p
+              html.push('<div style="width:60px;">1p</div>');
+            html.push('</td>'); 
+
+            html.push(' <td width="60" class="pad" align="center">');  // --- 2p
+              html.push('<div style="width:60px;">2p</div>');
+            html.push('</td>');    
+
+            html.push(' <td width="60" class="pad" align="center">');  // --- 3p
+              html.push('<div style="width:60px;">3p</div>');
+            html.push('</td>');      
+
+            html.push(' <td width="40" class="pad" align="center">');
+              html.push('<div style="width:40px;">Fl</div>'); //fl
+            html.push('</td>');     
+
+            html.push(' <td width="40" class="pad" align="center">');
+              html.push('<div style="width:40px;">On</div>'); //on
+            html.push('</td>'); 
+
+            html.push(' <td width="40" class="pad" align="center">');
+              html.push('<div style="width:40px;">Df</div>'); //DF
+            html.push('</td>'); 
+
+            html.push(' <td width="40" class="pad" align="center">');
+              html.push('<div style="width:40px;">Of</div>'); //OF
+            html.push('</td>');    
+
+            html.push(' <td width="40" class="pad" align="center">');
+              html.push('<div style="width:40px;">To</div>'); //To
+            html.push('</td>');    
+
+            html.push(' <td width="40" class="pad" align="center">');
+              html.push('<div style="width:40px;">Assi</div>'); //As
+            html.push('</td>');  
+
+            html.push(' <td width="40" class="pad" align="center">');
+              html.push('<div style="width:40px;">Sto</div>'); //St
+            html.push('</td>');              
+
+            html.push(' <td width="40" class="pad" align="center">');
+              html.push('<div style="width:40px;">Blo</div>'); //Blo
+            html.push('</td>'); 
+
+
+
+          html.push('</tr>');
+        html.push('</tbody>');
+      html.push('</table>');
+
+    for (var row = 0; row < posesEggrafes; row++) {
+
+      html.push('<table class="wrapGame" width="100%">');
+        html.push('<tbody>');
+          html.push('<tr class="rowBorder">');
+            html.push('<td width="60" class="bold pad" align="center" rowspan="2">');
+              html.push('<div style="overflow:hidden;width:60px;">'+data.getFormattedValue(row, 6)+'<br><span style="font-size:10px">'+data.getFormattedValue(row, 11)+'<span></div>'); // aa fanella agvna - poso
+            html.push('</td>');
+            html.push(' <td width="60" class="pad" align="center" rowspan="2">');
+              html.push('<div style="overflow:hidden;width:60px;">'+data.getFormattedValue(row, 10)+'<br><span style="font-size:10px">'+data.getFormattedValue(row, 9)+'<span></div>'); // cm - hmera genn
+            html.push('</td>');
+
+            if (data.getFormattedValue(row, 13) == "" || data.getFormattedValue(row, 13) == "---" || data.getFormattedValue(row, 13) == "--"  ) {   //image
+              html.push('<td class="tdShmaias no-rowBorder"><img class="imgPersonRadius" src="https://lh4.googleusercontent.com/-8z9-JcPdKxw/UT2l_14rGJI/AAAAAAAAyFw/epMNwSNS-Qk/s800/BBallTr64.png">');
+            }else{
+              html.push('<td class="tdShmaias p4 no-rowBorder"><img class="imgPersonRadius" src="'+ data.getFormattedValue(row, 13) +'">');
+            } 
+            html.push('</td>');
+
+            html.push(' <td width="150" class="pad" rowspan="2">');
+              html.push('<div style="overflow:hidden;width:150px;">'+data.getFormattedValue(row, 7).toUpperCase()+'</div><div style="overflow:hidden;width:150px;">'+data.getFormattedValue(row, 8).toUpperCase()+'</div>'); //Onoma -eponymo
+            html.push('</td>');
+
+            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+              html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 16)+'</div>'); // points
+            html.push('</td>');
+
+            html.push(' <td width="60" class="pad" align="center" rowspan="2">');  // --- 1p
+              html.push('<div style="overflow:hidden;width:60px;">');
+                if(data.getFormattedValue(row, 18) == 0 ){
+                  html.push('&nbsp;');
+                }else{
+                  html.push( data.getFormattedValue(row, 17)+'/'+data.getFormattedValue(row, 18)+'<br>');
+                  if( data.getFormattedValue(row, 17)/data.getFormattedValue(row, 18)  > 0.7  ){
+                    html.push('<span style="font-size:13px;font-weight:bold;">'+((data.getFormattedValue(row, 17)/data.getFormattedValue(row, 18))*100).toFixed(2)+'%');  
+                  }else{
+                    html.push('<span style="font-size:10px">'+((data.getFormattedValue(row, 17)/data.getFormattedValue(row, 18))*100).toFixed(2)+'%');                  
+                  }
+                }
+              html.push('<span></div>');
+            html.push('</td>'); 
+
+            html.push(' <td width="60" class="pad" align="center" rowspan="2">');  // --- 2p
+              html.push('<div style="overflow:hidden;width:60px;">');
+                if(data.getFormattedValue(row, 20) == 0 ){
+                  html.push('&nbsp;');
+                }else{
+                  html.push( data.getFormattedValue(row, 19)+'/'+data.getFormattedValue(row, 20)+'<br>');
+                  if( data.getFormattedValue(row, 19)/data.getFormattedValue(row, 20)  > 0.7  ){
+                    html.push('<span style="font-size:13px;font-weight:bold;">'+((data.getFormattedValue(row, 19)/data.getFormattedValue(row, 20))*100).toFixed(2)+'%');  
+                  }else{
+                    html.push('<span style="font-size:10px">'+((data.getFormattedValue(row, 19)/data.getFormattedValue(row, 20))*100).toFixed(2)+'%');                  
+                  }
+                }
+              html.push('<span></div>');
+            html.push('</td>');  
+
+            html.push(' <td width="60" class="pad" align="center" rowspan="2">');  // --- 3p
+              html.push('<div style="overflow:hidden;width:60px;">');
+                if(data.getFormattedValue(row, 22) == 0 ){
+                  html.push('&nbsp;');
+                }else{
+                  html.push( data.getFormattedValue(row, 21)+'/'+data.getFormattedValue(row, 22)+'<br>');
+                  if( data.getFormattedValue(row, 21)/data.getFormattedValue(row, 22)  > 0.7  ){
+                    html.push('<span style="font-size:13px;font-weight:bold;">'+((data.getFormattedValue(row, 21)/data.getFormattedValue(row, 22))*100).toFixed(2)+'%');  
+                  }else{
+                    html.push('<span style="font-size:10px">'+((data.getFormattedValue(row, 21)/data.getFormattedValue(row, 22))*100).toFixed(2)+'%');                  
+                  }
+                }
+              html.push('<span></div>');
+            html.push('</td>');      
+
+            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+             if(data.getFormattedValue(row, 23) == 0 ){
+                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                }else{
+                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 23)+'</div>'); //fl
+              }
+            html.push('</td>');     
+
+            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+             if(data.getFormattedValue(row, 24) == 0 ){
+                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                }else{
+                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 24)+'</div>'); //fl
+              }
+            html.push('</td>'); 
+
+            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+             if(data.getFormattedValue(row, 25) == 0 ){
+                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                }else{
+                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 25)+'</div>'); //fl
+              }
+            html.push('</td>'); 
+
+            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+             if(data.getFormattedValue(row, 26) == 0 ){
+                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                }else{
+                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 26)+'</div>'); //fl
+              }
+            html.push('</td>');    
+
+            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+             if(data.getFormattedValue(row, 27) == 0 ){
+                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                }else{
+                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 27)+'</div>'); //fl
+              }
+            html.push('</td>');    
+
+            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+             if(data.getFormattedValue(row, 28) == 0 ){
+                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                }else{
+                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 28)+'</div>'); //fl
+              }
+            html.push('</td>'); 
+
+            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+             if(data.getFormattedValue(row, 29) == 0 ){
+                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                }else{
+                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 29)+'</div>'); //fl
+              }
+            html.push('</td>');              
+
+            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+             if(data.getFormattedValue(row, 30) == 0 ){
+                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                }else{
+                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 30)+'</div>'); //fl
+              }
+            html.push('</td>'); 
+
+          html.push('</tr>');
+        html.push('</tbody>');
+      html.push('</table>');
+
+      myCount++;
+    }
+    document.getElementById("divIDTab1").innerHTML = html.join('');
+  }  
+
+}
+
+function monoPsifiosToDicifios(myCount){
+  if (myCount < 10) {
+      return '0'+ myCount
+  }else{
+    return myCount
+  } 
+}
+
+
+//------- end periptvsh tab 1
+
 function sendQueryTab2() {
 
   alert('LaZaros cool... sendQueryTab2');
@@ -249,7 +567,6 @@ function sendQueryTab3() {
   }
   queryTab1.setQuery(strQTab3);   
   queryTab1.send(handleQueryResponseTab3); 
-
 
 
 }
@@ -338,86 +655,6 @@ document.getElementById("myTitleID").innerHTML = '';
         query2.send(handleQueryResponseTab8Chart2);
 }
 
-//-----
-//- make div Tab1
-//-----
-function handleQueryResponseTab1(response) {
-if (response.isError()) {
-     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-     return;
- }
- var data = response.getDataTable();
- var posesEggrafes = data.getNumberOfRows();
- if(posesEggrafes > 0) {
-  var html =[]; 
-  var strGroup = data.getFormattedValue(0, 1).toUpperCase(); 
-  var myCount=0;  
-  
-  html.push('<h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(0, 2)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(0, 12)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(0, 2)+'">');
-  for (var row = 0; row < posesEggrafes; row++) {
-   if( strGroup != data.getFormattedValue(row, 1).toUpperCase() ){
-    strGroup = data.getFormattedValue(row, 1).toUpperCase();
-    html.push('</div><h3 class="myH3title font-effect-emboss h3'+data.getFormattedValue(row, 2)+'"><img class="imgFlagRadius boxOut10black" src="'+data.getFormattedValue(row, 12)+'" />'+strGroup+'</h3><div class="div'+data.getFormattedValue(row, 2)+'">');
-    myCount=0;
-   }
-  
-   myCount++;
-   html.push('<div><div class="clDivData">'+myCount+'. <span class="clSpanOnomateponymo">'+data.getFormattedValue(row, 7).toUpperCase()+' '+data.getFormattedValue(row, 8).toUpperCase() + '</span> ('+ data.getFormattedValue(row, 4) +') </div><div class="clDivData2seira">Position : '+data.getFormattedValue(row, 6)+', Year : <span class="clSpanOnomateponymo">'+ data.getFormattedValue(row, 9)  +'</span>, Size : ' + data.getFormattedValue(row, 10)+', P/ID '+ data.getFormattedValue(row, 11).substr(0,4)+'...</div></div>');
-  
-  }
-  html.push('</div>');
-  
-  document.getElementById("divIDTab1").innerHTML = html.join('');
-  $( "#divIDTab1" ).accordion({heightStyle: "content"});
-  }else {
-   document.getElementById("divIDTab1").innerHTML = '<div class="clSpanOnomateponymo"> 0 Ομάδες με δηλωμένα Roster </div>';
-  }
-  
- $( "#divIDTab1" ).accordion( "refresh" );
- gadgets.window.adjustHeight();
-}
-
-//-----
-//- make div Tab1Filter
-//-----
-function handleQueryResponseTab1Filter(response) {
-
-if (response.isError()) {
-     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-     return;
- }
- var data = response.getDataTable();
- var posesEggrafes = data.getNumberOfRows();
- var html4group2 =[]; 
-
-
- if(posesEggrafes > 0) {
-    html4group2.push('Filter : ');
-    html4group2.push('<select id="query-3" onchange="setNewQuery(this.value)">');
-    html4group2.push('<option value="">All</option>');
- 
-  for (var row = 0; row < posesEggrafes; row++) {
-     html4group2.push('<option value="'+data.getFormattedValue(row, 0)+'">'+data.getFormattedValue(row, 0)+'</option>');  
-  }
-
-  html4group2.push('</select>');
-  document.getElementById("myTitleID").innerHTML = html4group2.join('');
- }
- gadgets.window.adjustHeight();
-
-}
-//----------- epilogh cathgorias
-function setNewQuery(queryString) {  
-document.getElementById("divIDTab1").innerHTML ="";
-$( "#divIDTab1" ).accordion( "destroy" );
-
- if(queryString !=""){
-   queryTab1.setQuery('where C="'+queryString+'"');   
- }else{
-    queryTab1.setQuery('select A,B,C,D,E,F,G,H,I,J,K,L,M,N order by  C,B,E desc,F');
- }  
- queryTab1.send(handleQueryResponseTab1);  
-}
 //-----
 //- make div Tab2
 //-----
@@ -907,9 +1144,9 @@ function handleQueryResponseTab8Chart2(response) {
      <li id="tabLi5"><a href="javascript:void(0);" onclick="selectTab('divIDTab5','tabLi5' );return false;"><span id="spanIDTab5">Tab5</span></a></li>    
      <li id="tabLi3"><a href="javascript:void(0);" onclick="selectTab('divIDTab3','tabLi3' );return false;"><span id="spanIDTab3">Tab3</span></a></li>
      <li id="tabLi7"><a href="javascript:void(0);" onclick="selectTab('divIDTab7','tabLi7' );return false;"><span id="spanIDTab7">Tab7</span></a></li>
-     
-     <!-- li id="tabLi1"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','tabLi1' );return false;"><span id="spanIDTab1">Tab1</span></a></li>
-     <li id="tabLi6"><a href="javascript:void(0);" onclick="selectTab('divIDTab6','tabLi6' );return false;"><span id="spanIDTab6">Tab6</span></a></li>    
+     <li id="tabLi1"><a href="javascript:void(0);" onclick="selectTab('divIDTab1','tabLi1' );return false;"><span id="spanIDTab1">Tab1</span></a></li>    
+
+     <!--  li id="tabLi6"><a href="javascript:void(0);" onclick="selectTab('divIDTab6','tabLi6' );return false;"><span id="spanIDTab6">Tab6</span></a></li>    
      <li id="tabLi2"><a href="javascript:void(0);" onclick="selectTab('divIDTab2','tabLi2' );return false;"><span id="spanIDTab2">Tab2</span></a></li>
       <li id="tabLi8"><a href="javascript:void(0);" onclick="selectTab('divIDTab8','tabLi8' );return false;"><span id="spanIDTab8">Tab8</span></a></li   -->
      </ul>
@@ -979,9 +1216,10 @@ document.getElementById("spanIDTab4").innerHTML = captionTab4;
 document.getElementById("spanIDTab5").innerHTML = captionTab5;
 document.getElementById("spanIDTab3").innerHTML = captionTab3;
 document.getElementById("spanIDTab7").innerHTML = captionTab7;
+document.getElementById("spanIDTab1").innerHTML = captionTab1;
 
 /*
-document.getElementById("spanIDTab1").innerHTML = captionTab1;
+
 document.getElementById("spanIDTab2").innerHTML = captionTab2;
 document.getElementById("spanIDTab6").innerHTML = captionTab6;
 document.getElementById("spanIDTab8").innerHTML = captionTab8;
