@@ -217,7 +217,7 @@ function selectTab(myID, myTab ) {
 //---- xtizei periexomeno gia kathe tab
 function sendQueryTab1() {
  document.getElementById("myTitleID").innerHTML = '';
- document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
+ document.getElementById("divIDTab1").innerHTML = '';
   myURLfeedTab1 = "https://docs.google.com/spreadsheet/ccc?key="+ mKey1 +"&gid=6&headers=1";
   queryTab1 = new google.visualization.Query(myURLfeedTab1);
 
@@ -227,7 +227,7 @@ function sendQueryTab1() {
   queryTab1.send(handleQueryResponseTab1); 
 }
 function handleQueryResponseTab1(response) {
- document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />'; 
+ document.getElementById("divIDTab1").innerHTML = ''; 
  if (response.isError()) {
     alert('Error in query_members: ' + response.getMessage() + ' ' + response.getDetailedMessage());
     return;
@@ -252,7 +252,7 @@ function handleQueryResponseTab1(response) {
 
 
 function createSelectionForTeamsCategories(mySelectedCategory) {
-  document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
+  document.getElementById("divIDTab1").innerHTML = '';
 
   strQTab1='select L, M, N where L = "'+ mySelectedCategory +'" and N != "" ';
   queryTab1.setQuery(strQTab1);   
@@ -295,7 +295,7 @@ function handleQueryResponseTab1_createSelectionTeam(response) {
 
 
 function createSelectionForTeamsRoster(mySelectedTeamPathRoster) {
- 
+  document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
   var queryRoster = new google.visualization.Query(mySelectedTeamPathRoster);
 
   strQTab1='select A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, AA, AB, AC, AD, AE where D ="" and H!="" and I !="" order by G';
