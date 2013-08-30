@@ -352,36 +352,36 @@ function handleQueryResponseTab1_TeamRoster(response) {
               html.push('<div style="width:60px;">3p</div>');
             html.push('</td>');      
 
-            html.push(' <td width="40" class="pad" align="center">');
-              html.push('<div style="width:40px;">Fl</div>'); //fl
+            html.push(' <td width="35" class="pad" align="center">');
+              html.push('<div style="width:35px;">Fl</div>'); //fl
             html.push('</td>');     
 
-            html.push(' <td width="40" class="pad" align="center">');
-              html.push('<div style="width:40px;">On</div>'); //on
+            html.push(' <td width="35" class="pad" align="center">');
+              html.push('<div style="width:35px;">On</div>'); //on
             html.push('</td>'); 
 
-            html.push(' <td width="40" class="pad" align="center">');
-              html.push('<div style="width:40px;">Df</div>'); //DF
+            html.push(' <td width="35" class="pad" align="center">');
+              html.push('<div style="width:35px;">Df</div>'); //DF
             html.push('</td>'); 
 
-            html.push(' <td width="40" class="pad" align="center">');
-              html.push('<div style="width:40px;">Of</div>'); //OF
+            html.push(' <td width="35" class="pad" align="center">');
+              html.push('<div style="width:35px;">Of</div>'); //OF
             html.push('</td>');    
 
-            html.push(' <td width="40" class="pad" align="center">');
-              html.push('<div style="width:40px;">To</div>'); //To
+            html.push(' <td width="35" class="pad" align="center">');
+              html.push('<div style="width:35px;">To</div>'); //To
             html.push('</td>');    
 
-            html.push(' <td width="40" class="pad" align="center">');
-              html.push('<div style="width:40px;">Assi</div>'); //As
+            html.push(' <td width="35" class="pad" align="center">');
+              html.push('<div style="width:35px;">Assi</div>'); //As
             html.push('</td>');  
 
-            html.push(' <td width="40" class="pad" align="center">');
-              html.push('<div style="width:40px;">Sto</div>'); //St
+            html.push(' <td width="35" class="pad" align="center">');
+              html.push('<div style="width:35px;">Sto</div>'); //St
             html.push('</td>');              
 
-            html.push(' <td width="40" class="pad" align="center">');
-              html.push('<div style="width:40px;">Blo</div>'); //Blo
+            html.push(' <td width="35" class="pad" align="center">');
+              html.push('<div style="width:35px;">Blo</div>'); //Blo
             html.push('</td>'); 
 
 
@@ -462,67 +462,67 @@ function handleQueryResponseTab1_TeamRoster(response) {
               html.push('<span></div>');
             html.push('</td>');      
 
-            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+            html.push(' <td width="35" class="pad" align="center" rowspan="2">');
              if(data.getFormattedValue(row, 23) == 0 ){
-                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                  html.push('<div style="overflow:hidden;width:35px;">&nbsp;</div>');
                 }else{
-                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 23)+'</div>'); //fl
+                html.push('<div style="overflow:hidden;width:35px;">'+data.getFormattedValue(row, 23)+'</div>'); //fl
               }
             html.push('</td>');     
 
-            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+            html.push(' <td width="35" class="pad" align="center" rowspan="2">');
              if(data.getFormattedValue(row, 24) == 0 ){
-                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                  html.push('<div style="overflow:hidden;width:35px;">&nbsp;</div>');
                 }else{
-                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 24)+'</div>'); //fl
+                html.push('<div style="overflow:hidden;width:35px;">'+data.getFormattedValue(row, 24)+'</div>'); //fl
               }
             html.push('</td>'); 
 
-            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+            html.push(' <td width="35" class="pad" align="center" rowspan="2">');
              if(data.getFormattedValue(row, 25) == 0 ){
-                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                  html.push('<div style="overflow:hidden;width:35px;">&nbsp;</div>');
                 }else{
-                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 25)+'</div>'); //fl
+                html.push('<div style="overflow:hidden;width:35px;">'+data.getFormattedValue(row, 25)+'</div>'); //fl
               }
             html.push('</td>'); 
 
-            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+            html.push(' <td width="35" class="pad" align="center" rowspan="2">');
              if(data.getFormattedValue(row, 26) == 0 ){
-                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                  html.push('<div style="overflow:hidden;width:35px;">&nbsp;</div>');
                 }else{
-                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 26)+'</div>'); //fl
+                html.push('<div style="overflow:hidden;width:35px;">'+data.getFormattedValue(row, 26)+'</div>'); //fl
               }
             html.push('</td>');    
 
-            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+            html.push(' <td width="35" class="pad" align="center" rowspan="2">');
              if(data.getFormattedValue(row, 27) == 0 ){
-                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                  html.push('<div style="overflow:hidden;width:35px;">&nbsp;</div>');
                 }else{
-                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 27)+'</div>'); //fl
+                html.push('<div style="overflow:hidden;width:35px;">'+data.getFormattedValue(row, 27)+'</div>'); //fl
               }
             html.push('</td>');    
 
-            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+            html.push(' <td width="35" class="pad" align="center" rowspan="2">');
              if(data.getFormattedValue(row, 28) == 0 ){
-                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                  html.push('<div style="overflow:hidden;width:35px;">&nbsp;</div>');
                 }else{
-                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 28)+'</div>'); //fl
+                html.push('<div style="overflow:hidden;width:35px;">'+data.getFormattedValue(row, 28)+'</div>'); //fl
               }
             html.push('</td>'); 
 
-            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+            html.push(' <td width="35" class="pad" align="center" rowspan="2">');
              if(data.getFormattedValue(row, 29) == 0 ){
-                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                  html.push('<div style="overflow:hidden;width:35px;">&nbsp;</div>');
                 }else{
-                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 29)+'</div>'); //fl
+                html.push('<div style="overflow:hidden;width:35px;">'+data.getFormattedValue(row, 29)+'</div>'); //fl
               }
             html.push('</td>');              
 
-            html.push(' <td width="40" class="pad" align="center" rowspan="2">');
+            html.push(' <td width="35" class="pad" align="center" rowspan="2">');
              if(data.getFormattedValue(row, 30) == 0 ){
-                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                  html.push('<div style="overflow:hidden;width:35px;">&nbsp;</div>');
                 }else{
-                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 30)+'</div>'); //fl
+                html.push('<div style="overflow:hidden;width:35px;">'+data.getFormattedValue(row, 30)+'</div>'); //fl
               }
             html.push('</td>'); 
 
