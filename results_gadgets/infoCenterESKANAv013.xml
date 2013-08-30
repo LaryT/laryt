@@ -414,7 +414,11 @@ function handleQueryResponseTab1_TeamRoster(response) {
             html.push('</td>');
 
             html.push(' <td width="40" class="pad" align="center" rowspan="2">');
-              html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 16)+'</div>'); // points
+              if(data.getFormattedValue(row, 16) == 0 ){
+                  html.push('<div style="overflow:hidden;width:40px;">&nbsp;</div>');
+                }else{
+                html.push('<div style="overflow:hidden;width:40px;">'+data.getFormattedValue(row, 16)+'</div>'); //points
+              }
             html.push('</td>');
 
             html.push(' <td width="60" class="pad" align="center" rowspan="2">');  // --- 1p
