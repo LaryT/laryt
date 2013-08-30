@@ -38,8 +38,8 @@
       .sGhpedo{font-size: 9px;font-weight: bold;}
 
       .imgFlagRadius{border-radius: 9px;height:18px;width:18px; box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}
-      .imgPersonRadius{border-radius: 40px;height:80px;width:80px; box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}
-      .imgPersonRadius:hover { -webkit-transform: scale(1.8); -moz-transform: scale(1.8); transform: scale(1.8); opacity: 1;border:2px gray solid;}
+      .imgPersonRadius{border-radius: 30px;height:60px;width:60px; box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}
+      .imgPersonRadius:hover { -webkit-transform: scale(2.0); -moz-transform: scale(1.8); transform: scale(1.8); opacity: 1;border:2px gray solid;}
       
 </style>
 <script>
@@ -328,8 +328,8 @@ function handleQueryResponseTab1_TeamRoster(response) {
               html.push('<div style="width:60px;">cm, BDate</div>');
             html.push('</td>'); 
 
-            html.push(' <td width="84" class="pad" align="center">');  // --- img
-              html.push('<div style="width:84px;">img</div>');
+            html.push(' <td width="62" class="pad" align="center">');  // --- img
+              html.push('<div style="width:62px;">img</div>');
             html.push('</td>'); 
 
             html.push(' <td width="160" class="pad" align="center">');  // --- names
