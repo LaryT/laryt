@@ -533,6 +533,7 @@ function handleQueryResponseTab1_TeamRoster(response) {
       myCount++;
     }
     document.getElementById("divIDTab1").innerHTML = html.join('');
+    gadgets.window.adjustHeight();
   }  
 
 }
