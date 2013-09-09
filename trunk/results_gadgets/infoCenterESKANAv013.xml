@@ -787,9 +787,15 @@ function handleQueryResponseForProgrammCategory(response) {
                   html.push('<td width="50" align="center" class="result" rowspan="2">');
                     html.push(data.getFormattedValue(row, 8)+'-'+data.getFormattedValue(row, 9)); // skor
                   html.push('</td>');
+                  
                    html.push('<td width="80" align="center" rowspan="2">');
-                      html.push('<div style="overflow:hidden;width:80px;" class="sGhpedo">'+data.getFormattedValue(row, 5)+'<br/>'); // ghpedo
-                        html.push('<span>'+data.getFormattedValue(row, 10)+'<br/>'+data.getFormattedValue(row, 11)+'</span>'); // diaithtes
+                      html.push('<div style="overflow:hidden;width:80px;" class="sGhpedo">'+data.getFormattedValue(row, 5) ); // ghpedo
+                      html.push('</div>');
+                 html.push('</td>');                  
+                  
+                  
+                   html.push('<td width="80" align="center" rowspan="2">');
+                      html.push('<div style="overflow:hidden;width:80px;" class="sGhpedo">'+data.getFormattedValue(row, 10)+'<br/>'+data.getFormattedValue(row, 11)); // diaithtes
                       html.push('</div>');
                  html.push('</td>');
                   html.push('</td>');
