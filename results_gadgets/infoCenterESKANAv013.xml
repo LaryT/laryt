@@ -31,11 +31,11 @@
       tr.rowBorder td, .rowBorder{border-right: 1px solid #bbb;}
       td.no-rowBorder{border-right: none !important;}
       td.p4{padding-left: 4px !important;padding-right: 4px !important;}
-      .sCode{overflow:hidden;width:25px;font-size: 12px;font-weight: bold;}
+      .sCode{overflow:hidden;width:35px;font-size: 12px;font-weight: bold;}
       .tdShmaias{width: 20px;}
       .min6Group{font-size: 7px;}
-      .sOmada{font-size: 10px;font-weight: bold;}
-      .sGhpedo{font-size: 9px;font-weight: bold;}
+      .sOmada{font-size: 12px;font-weight: bold;}
+      .sGhpedo{font-size: 10px;font-weight: bold;}
 
       .imgFlagRadius{border-radius: 9px;height:18px;width:18px; box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}
       .imgPersonRadius{border-radius: 30px;height:60px;width:60px; box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-webkit-box-shadow: rgba(220, 220, 220, 0.9) 0 0 10px;-moz-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-o-box-shadow: rgba(220,220,220,0.9) 0 0 10px;-ms-box-shadow: rgba(220,220,220,0.9) 0 0 10px;margin-right: 10px;}
