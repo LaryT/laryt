@@ -753,15 +753,17 @@ function handleQueryResponseForProgrammCategory(response) {
           var posesEggrafes = data.getNumberOfRows();
           var html =[];  
           var strGroup1 = data.getFormattedValue(0, 0);
-          var strGroup2 = data.getFormattedValue(0, 3);  //date          
+          var strGroup2 = data.getFormattedValue(0, 3);  //date     
+          var strGroup3agvnistiki = data.getFormattedValue(0, 1);  //agvnistiki       
           //-----  html.push('<div id="accordion">');
           html.push(' <h3 class="myH3title">' + data.getFormattedValue(0, 0)   + ' | Αγώνες : '+ posesEggrafes +'</h3>');
-          html.push('<h3 class="wrapGame">'+strGroup2+'</h3>');
+          html.push('<h3 class="wrapGame">'+strGroup2+' <span style="font-size:8px;">('+strGroup3agvnistiki+')</span></h3>');
           
           for (var row = 0; row < posesEggrafes; row++) {
             if( strGroup2 != data.getFormattedValue(row, 3) ){
              strGroup2 = data.getFormattedValue(row, 3);
-             html.push('<h3 class="wrapGame">'+strGroup2+'</h3>');
+             strGroup3agvnistiki = data.getFormattedValue(0, 1); 
+             html.push('<h3 class="wrapGame">'+strGroup2+' <span style="font-size:8px;">('+strGroup3agvnistiki+')</span></h3>');
             }
           
             html.push('<table class="wrapGame" width="100%">');
