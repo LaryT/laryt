@@ -762,7 +762,7 @@ function handleQueryResponseForProgrammCategory(response) {
           for (var row = 0; row < posesEggrafes; row++) {
             if( strGroup2 != data.getFormattedValue(row, 3) ){
              strGroup2 = data.getFormattedValue(row, 3);
-             strGroup3agvnistiki = data.getFormattedValue(0, 1); 
+             strGroup3agvnistiki = data.getFormattedValue(row, 1); 
              html.push('<h3 class="wrapGame">'+strGroup2+' <span style="font-size:8px;">('+strGroup3agvnistiki+')</span></h3>');
             }
           
