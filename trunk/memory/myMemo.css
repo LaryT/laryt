@@ -1,0 +1,126 @@
+
+body{
+/*	color:white;
+*/
+	font-family: 'Sans';
+	text-align: center;
+	background-color: white;
+}
+
+.fixed {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+        filter: alpha(opacity=80);
+        opacity: 0.8;
+        background: blue;
+}
+
+#paixnidi{
+	margin:auto;
+	height:100%;
+	width: 860px;
+	border: 1em solid white;
+	padding: 0.5em;
+	border-radius: 2em;
+}
+
+#paixnidi li{
+	padding:2px;
+	list-style-type: none; 
+	display: inline-block;
+}
+
+.container{
+	position: relative;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	perspective: 800px;
+
+
+	box-shadow: 0 0 5px 4px rgba(50, 50, 50, 0.4);
+	-moz-box-shadow: 0 0 5px 4px rgba(50, 50, 50, 0.4);
+	-webkit-box-shadow: 0 0 5px 4px rgba(50, 50, 50, 0.4);
+	
+
+	border-radius: 5%;
+	-moz-border-radius: 5%;
+	-webkit-border-radius: 5%;
+
+}
+
+.container, .fixed,.karta .mprosta,.karta .pisv {
+	height : 125px;
+	width : 125px;
+}
+
+.karta{
+	position: relative;
+
+
+
+
+
+ 	-webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    -ms-transition: -ms-transform 1s;
+    transition: transform 1s;
+}
+
+.karta .pisv, .karta .mprosta{
+	position: absolute;
+	color:white;
+	font-family: 'Sans';
+	font-size: 10px;
+
+	top: 0;
+	left: 0;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+    border-radius: 5%;
+	-moz-border-radius: 5%;
+	-webkit-border-radius: 5%;
+}
+
+.karta .mprosta{
+	cursor: pointer;
+	background: red;
+}
+
+.karta .pisv{
+	background: blue;
+
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.flipped{
+
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+
+}
+
+div.pisv img {
+	border-radius: 5%;
+	-moz-border-radius: 5%;
+	-webkit-border-radius: 5%;
+}
+
+img.imgClassMprosta {
+	border-top-radius: 5%;
+	-moz-border-top-radius: 5%;
+	-webkit-border-top-radius: 5%;
+}
