@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>my Memory</title>
+	<link rel="stylesheet" type="text/css" href="myMemo.css">
+	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+	<script src="myMemo.js"></script>
+	<script type="text/javascript">
+    	google.load('visualization', '1', {packages: ['table']});
+    </script>
+<head>
+<!-- body onload='enarxi()'  -->
+<body onload='enarxi()'>
+	<h1>Βρές - Μάθε - Αποκάλυψε</h1>
+	<!-- h1><a href="http://www.eskana.gr" class="sliding-middle-out">test big </a></h1  -->
+	<div id="divIDTab1"></div>
+	<div id="myTitleID"></div>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- 468 x 60 gameMemory -->
+			<ins class="adsbygoogle"
+			     style="display:inline-block;width:468px;height:60px"
+			     data-ad-client="ca-pub-9529818444792202"
+			     data-ad-slot="1010612280"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+
+	<div id="paixnidi">
+		<ul id="kartes">
+		</ul>
+	</div>
+	<script type="text/javascript">
+		function enarxi(){
+			
+			//var paixe = new paixnidi();
+
+			var myKey="0AjrqMWGJ6suYdFJ4VXJjZzFSUjlMZ0QxZkJKQzRtWkE";
+			var myImgKapaki ="https://lh6.googleusercontent.com/-6NkDh1aEZ7s/TmL9cQeiRaI/AAAAAAAAY9E/xSVDPKEuDlU/s125/eskana_w_274.png";
+
+			var myInitFile ="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdHdKcW9HYTdBX29vWWFrMFltSlZjVXc";
+			var tmpl = document.querySelector("#kartaProtypo");
+			var myImg = tmpl.content.querySelector(".imgClassMprosta");
+			myImg.src=myImgKapaki;
+			
+			loadCategories(myKey);
+			createSelectionForTeamsCategories(myInitFile);
+			// var paixe = new paixnidi();
+			
+		}
+	</script>
+	 <!-- script type="text/template" id="kartaProtypo"  --> 
+
+	<template id="kartaProtypo">
+		<li>
+			<div class='container'>
+				<div class='karta' id='karta {0}' onclick='paixnidi.gyrnaKarta(this)'>
+					<div class='mprosta'><img class="imgClassMprosta" alt='Μπροστά' src=""></div>
+					<div class='pisv'><img title='Επικεφαλίδα' alt='Πίσω' src="https://lh3.googleusercontent.com/-hJ2A6vZjctI/UJJRufMHhAI/AAAAAAAAvsw/v2eS0QoSYNM/s125/eskanaLogoTrans200.png" style="width:125px;height:125px"></div>					
+				</div>
+			</div>
+		</li>
+	</template>
+	<!-- /script  -->
+</body>
+</html>
