@@ -201,6 +201,7 @@ function paixnidi(){
         myTPL = document.getElementById("kartaProtypo").innerHTML;
 
         kaneKartes(match, myTPL);
+        gadgets.window.adjustHeight();
 }
 
 
