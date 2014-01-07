@@ -4,6 +4,8 @@
     <Require feature="setprefs" />    
     <Require feature="dynamic-height" />
   </ModulePrefs>
+  <UserPref name="my_Categories" display_name="Categories[key]" default_value="" />
+  <UserPref name="my_LogoKapaki" display_name="Image [URL]" default_value="" />
   <Content type="html">
   <![CDATA[
  <!DOCTYPE html>
@@ -25,7 +27,6 @@
         opacity: 0.8;
         background: blue;
 }
-
 #paixnidi{
         margin:auto;
         height:100%;
@@ -34,44 +35,32 @@
         padding: 0.5em;
         border-radius: 2em;
 }
-
 #paixnidi li{
         padding:2px;
         list-style-type: none; 
         display: inline-block;
 }
-
 .container{
         position: relative;
         -webkit-perspective: 800px;
         -moz-perspective: 800px;
         perspective: 800px;
 
-
         box-shadow: 0 0 5px 4px rgba(50, 50, 50, 0.4);
         -moz-box-shadow: 0 0 5px 4px rgba(50, 50, 50, 0.4);
         -webkit-box-shadow: 0 0 5px 4px rgba(50, 50, 50, 0.4);
         
-
         border-radius: 5%;
         -moz-border-radius: 5%;
         -webkit-border-radius: 5%;
-
 }
-
 .container, .fixed,.karta .mprosta,.karta .pisv {
         height : 125px;
         width : 125px;
 }
-
 .karta{
         position: relative;
-
-
-
-
-
-        -webkit-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -107,7 +96,6 @@
 
 .karta .pisv{
         background: blue;
-
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
@@ -116,13 +104,11 @@
 }
 
 .flipped{
-
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
-
 }
 
 div.pisv img {
@@ -190,8 +176,6 @@ var kaneKartes = function (ypodoxeas, theTPL){
                 ypodoxeas.innerHTML+=kartaTPL(theTPL, pinakas[i]);
         }
 
-        console.log(pinakas);
-
 }
 
 function paixnidi(){
@@ -204,12 +188,10 @@ function paixnidi(){
         gadgets.window.adjustHeight();
 }
 
-
 var setFixed = function(karta){
         karta.className="fixed";
         karta.removeChild(karta.childNodes[1]);
         karta.onclick=null;
-
 }
 
 var checkRules = function(karta){
@@ -239,18 +221,12 @@ paixnidi.gyrnaKarta = function(karta){
 
                 }else{
                         teleytaiaKarta = karta;
-
                 }
         }
 
 }
-
-
 //----------
 //----------
-
-
-
 function loadCategories(dockey){
 
 //  alert(dockey);
@@ -258,8 +234,7 @@ function loadCategories(dockey){
   var queryTab1 = new google.visualization.Query(myURLfeedTab1);
 
  var strQTab1='select E, H';
-
-  
+ 
   queryTab1.setQuery(strQTab1);   
   queryTab1.send(handleQueryResponseTab1); 
 
@@ -291,13 +266,10 @@ function handleQueryResponseTab1(response) {
   }
 }
 
-
 function createSelectionForTeamsCategories(mySelectedCategory) {
 
   document.getElementById("divIDTab1").innerHTML = '<img src="https://lh3.googleusercontent.com/-zISmF0i4SbU/UCiI5UIpV-I/AAAAAAAAq8o/a6iqS-tKbI8/s800/loading.gif" />';
   
-    console.log(mySelectedCategory);
-
   var queryTheTeamsInCategory = new google.visualization.Query(mySelectedCategory);
 
 // AF= ONOMA, AV=src logo, AI=baumoi, AE Θέση, AJ Αγώνες, ΑΜ =Νίκες, ΑΝ = ΗΤΤΕΣ, AP=Epi, AQ Am
@@ -329,9 +301,6 @@ function handleQueryResponseTab1_TeamLogos(response) {
         pinakasBathmoi[i] = "Στην " + data.getFormattedValue(i, 3) + "η Θέση με " + data.getFormattedValue(i, 2) + " βαθμούς σε " + data.getFormattedValue(i, 4) +" αγώνες, με ";
         pinakasBathmoi[i] +=  data.getFormattedValue(i, 5) + " | " + data.getFormattedValue(i, 6) + " (Ν|Η) και " + data.getFormattedValue(i, 7) +":" + data.getFormattedValue(i, 8) + " (Επ:Αμ)"
     }
-    console.log(pinakasLogos);
-    console.log(pinakasNameLogos);
-    console.log(pinakasBathmoi);
 
     document.getElementById("divIDTab1").innerHTML = '';
     var paixe = new paixnidi();
@@ -341,7 +310,6 @@ function handleQueryResponseTab1_TeamLogos(response) {
 <!-- body onload='enarxi()'  -->
 <body onload='enarxi()'>
         <h1>Βρές - Μάθε - Αποκάλυψε</h1>
-        <!-- h1><a href="http://www.eskana.gr" class="sliding-middle-out">test big </a></h1  -->
         <div id="divIDTab1"></div>
         <div id="myTitleID"></div>
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -360,12 +328,23 @@ function handleQueryResponseTab1_TeamLogos(response) {
         </div>
         <script type="text/javascript">
                 function enarxi(){
-                        
+                    //----- for gadget parameters
+                    var prefs = new gadgets.Prefs();
+                    var myCategories = prefs.getString("my_Categories");
+                    var myLogoKapaki = prefs.getString("my_LogoKapaki");                    
+                    
+                    
                         //var paixe = new paixnidi();
-
                         var myKey="0AjrqMWGJ6suYdFJ4VXJjZzFSUjlMZ0QxZkJKQzRtWkE";
+                        if( myCategories!="" ){
+                            myKey = myCategories;
+                        }
+                                                
                         var myImgKapaki ="https://lh6.googleusercontent.com/-6NkDh1aEZ7s/TmL9cQeiRaI/AAAAAAAAY9E/xSVDPKEuDlU/s125/eskana_w_274.png";
-
+                        if( myImgKapaki !="" ){
+                            myImgKapaki = myLogoKapaki;
+                        }
+                        
                         var myInitFile ="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdHdKcW9HYTdBX29vWWFrMFltSlZjVXc";
                         var tmpl = document.querySelector("#kartaProtypo");
                         var myImg = tmpl.content.querySelector(".imgClassMprosta");
@@ -373,8 +352,7 @@ function handleQueryResponseTab1_TeamLogos(response) {
                         
                         loadCategories(myKey);
                         createSelectionForTeamsCategories(myInitFile);
-                        // var paixe = new paixnidi();
-                        
+                        // var paixe = new paixnidi();             
                 }
         </script>
          <!-- script type="text/template" id="kartaProtypo"  --> 
@@ -395,7 +373,6 @@ function handleQueryResponseTab1_TeamLogos(response) {
 enarxi();
 
 gadgets.window.adjustHeight();
-
 </script>
 
 </body>
