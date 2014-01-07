@@ -5,6 +5,7 @@
     <Require feature="dynamic-height" />
   </ModulePrefs>
   <UserPref name="my_Categories" display_name="Categories[key]" default_value="" />
+  <UserPref name="my_InitCategory" display_name="InitCategory[key]" default_value="" />
   <UserPref name="my_LogoKapaki" display_name="Image [URL]" default_value="" />
   <Content type="html">
   <![CDATA[
@@ -328,24 +329,36 @@ function handleQueryResponseTab1_TeamLogos(response) {
         </div>
         <script type="text/javascript">
                 function enarxi(){
-                    //----- for gadget parameters
-                    var prefs = new gadgets.Prefs();
-                    var myCategories = prefs.getString("my_Categories");
-                    var myLogoKapaki = prefs.getString("my_LogoKapaki");                    
+                 
                     
                     
                         //var paixe = new paixnidi();
                         var myKey="0AjrqMWGJ6suYdFJ4VXJjZzFSUjlMZ0QxZkJKQzRtWkE";
+                        var myImgKapaki ="https://lh6.googleusercontent.com/-6NkDh1aEZ7s/TmL9cQeiRaI/AAAAAAAAY9E/xSVDPKEuDlU/s125/eskana_w_274.png";    
+                        var myInitFile ="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdHdKcW9HYTdBX29vWWFrMFltSlZjVXc";                   
+                        
+                    //----- for gadget parameters
+                    var prefs = new gadgets.Prefs();
+                    var myCategories = prefs.getString("my_Categories");
+                    var myInitCategory = prefs.getString("my_Categories");
+                    var myLogoKapaki = prefs.getString("my_LogoKapaki");   
+                        
                         if( myCategories!="" ){
                             myKey = myCategories;
                         }
                                                 
-                        var myImgKapaki ="https://lh6.googleusercontent.com/-6NkDh1aEZ7s/TmL9cQeiRaI/AAAAAAAAY9E/xSVDPKEuDlU/s125/eskana_w_274.png";
-                        if( myImgKapaki !="" ){
+
+                        if( myLogoKapaki !="" ){
                             myImgKapaki = myLogoKapaki;
                         }
                         
-                        var myInitFile ="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdHdKcW9HYTdBX29vWWFrMFltSlZjVXc";
+
+                        if( myInitCategory !="" ){
+                            myInitFile = "https://docs.google.com/spreadsheet/ccc?key="+myInitCategory;
+                        } 
+                        
+                        //----- END for gadget parameters
+          
                         var tmpl = document.querySelector("#kartaProtypo");
                         var myImg = tmpl.content.querySelector(".imgClassMprosta");
                         myImg.src=myImgKapaki;
