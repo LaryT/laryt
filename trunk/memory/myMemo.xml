@@ -340,7 +340,7 @@ function handleQueryResponseTab1_TeamLogos(response) {
                     //----- for gadget parameters
                     var prefs = new gadgets.Prefs();
                     var myCategories = prefs.getString("my_Categories");
-                    var myInitCategory = prefs.getString("my_Categories");
+                    var myInitCategory = prefs.getString("my_InitCategory");
                     var myLogoKapaki = prefs.getString("my_LogoKapaki");   
                         
                         if( myCategories!="" ){
