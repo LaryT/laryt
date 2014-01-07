@@ -4,5 +4,5 @@
     <Require feature="setprefs" />    
     <Require feature="dynamic-height" />
   </ModulePrefs>
-  <Content type="url" href="https://code.google.com/p/laryt/source/browse/trunk/memory/myMemo.html" /> 
+  <Content type="url" href="http://code.google.com/p/laryt/source/browse/trunk/memory/myMemo.html" /> 
 </Module>
