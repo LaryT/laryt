@@ -389,6 +389,14 @@ function handleQueryResponseTab1_TeamLogos(response) {
                 </li>
         </template>
         <!-- /script  -->
+        
+<script>
+enarxi();
+
+gadgets.window.adjustHeight();
+
+</script>
+
 </body>
 </html>
   
