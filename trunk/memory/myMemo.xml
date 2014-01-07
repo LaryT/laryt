@@ -11,9 +11,9 @@
 <head>
         <meta charset="UTF-8">
         <title>my Memory</title>
-        <link rel="stylesheet" type="text/css" href="myMemo.css">
+        <link rel="stylesheet" type="text/css" href="http://code.google.com/p/laryt/source/browse/trunk/memory/myMemo.css">
         <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-        <script src="myMemo.js"></script>
+        <script src="http://code.google.com/p/laryt/source/browse/trunk/memory/myMemo.js"></script>
         <script type="text/javascript">
         google.load('visualization', '1', {packages: ['table']});
     </script>
