@@ -213,7 +213,7 @@ var checkRules = function(karta){
 }
 
 paixnidi.gyrnaKarta = function(karta){
-
+        document.getElementById("theStatusBar").innerHTML = (document.getElementById(karta.id).lastElementChild).lastElementChild.title;
         if(teleytaiaKarta!=karta && akalyptes<2 && ready){
                 karta.classList.toggle("flipped");
                 akalyptes++;
@@ -327,6 +327,7 @@ function handleQueryResponseTab1_TeamLogos(response) {
                         </script>
 
         <div id="paixnidi">
+                <div id="theStatusBar" style="font-size:11px;font-weight:bold;">&nbsp;</div>
                 <ul id="kartes">
                 </ul>
         </div>
