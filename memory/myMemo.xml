@@ -383,9 +383,10 @@ function handleQueryResponseTab1_TeamLogos(response) {
         <!-- /script  -->
         
 <script>
-enarxi();
+//--- enarxi();
 
 gadgets.window.adjustHeight();
+gadgets.util.registerOnLoadHandler(enarxi);  
 </script>
 
 </body>
