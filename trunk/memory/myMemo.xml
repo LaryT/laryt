@@ -156,10 +156,9 @@ String.prototype.format = function(){
   strReturn = strReturn.replace("https://lh3.googleusercontent.com/-hJ2A6vZjctI/UJJRufMHhAI/AAAAAAAAvsw/v2eS0QoSYNM/s125/eskanaLogoTrans200.png",myImgStr);
   strReturn = strReturn.replace("Πίσω", pinakasNameLogos[arguments[1]-1]);
   strReturn = strReturn.replace("Επικεφαλίδα", pinakasNameLogos[arguments[1]-1] + ", " + pinakasBathmoi[arguments[1]-1]);
-  
-  if(myImgKapaki != "https://lh5.googleusercontent.com/-tP-wJLyEpO4/UDV3yR9qBLI/AAAAAAAArTI/jkCZ0c6JUBI/s125/bodybgblue.jpg"){
-    strReturn = strReturn.replace("https://lh5.googleusercontent.com/-tP-wJLyEpO4/UDV3yR9qBLI/AAAAAAAArTI/jkCZ0c6JUBI/s125/bodybgblue.jpg", myImgKapaki);
-  }
+
+  strReturn = strReturn.replace("https://lh5.googleusercontent.com/-tP-wJLyEpO4/UDV3yR9qBLI/AAAAAAAArTI/jkCZ0c6JUBI/s125/bodybgblue.jpg", myImgKapaki);
+
 
   return strReturn;
 }
@@ -369,17 +368,14 @@ function handleQueryResponseTab1_TeamLogos(response) {
         </script>
          <!-- template id="kartaProtypo" -->
          <script type="text/template" id="kartaProtypo"> 
-
-
                 <li>
                         <div class='container'>
                                 <div class='karta' id='karta {0}' onclick='paixnidi.gyrnaKarta(this)'>
-                                        <div class='mprosta'><img class="imgClassMprosta" alt='Μπροστά' src="https://lh5.googleusercontent.com/-tP-wJLyEpO4/UDV3yR9qBLI/AAAAAAAArTI/jkCZ0c6JUBI/s125/bodybgblue.jpg"></div>
-                                        <div class='pisv'><img title='Επικεφαλίδα' alt='Πίσω' src="https://lh3.googleusercontent.com/-hJ2A6vZjctI/UJJRufMHhAI/AAAAAAAAvsw/v2eS0QoSYNM/s125/eskanaLogoTrans200.png" style="width:125px;height:125px"></div>                                      
+                                        <div class='mprosta'><img class="imgClassMprosta" alt='Μπροστά' src="https://lh5.googleusercontent.com/-tP-wJLyEpO4/UDV3yR9qBLI/AAAAAAAArTI/jkCZ0c6JUBI/s125/bodybgblue.jpg" /></div>
+                                        <div class='pisv'><img title='Επικεφαλίδα' alt='Πίσω' src="https://lh3.googleusercontent.com/-hJ2A6vZjctI/UJJRufMHhAI/AAAAAAAAvsw/v2eS0QoSYNM/s125/eskanaLogoTrans200.png" style="width:125px;height:125px" /></div>                                      
                                 </div>
                         </div>
                 </li>
-
         </script>
         <!--  /template  -->
 <script>
