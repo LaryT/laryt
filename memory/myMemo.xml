@@ -373,7 +373,7 @@ function handleQueryResponseTab1_TeamLogos(response) {
                 <li>
                         <div class='container'>
                                 <div class='karta' id='karta {0}' onclick='paixnidi.gyrnaKarta(this)'>
-                                        <div class='mprosta'><img class="imgClassMprosta" alt='Μπροστά' src=""></div>
+                                        <div class='mprosta'><img class="imgClassMprosta" alt='Μπροστά' src="https://lh5.googleusercontent.com/-tP-wJLyEpO4/UDV3yR9qBLI/AAAAAAAArTI/jkCZ0c6JUBI/s125/bodybgblue.jpg"></div>
                                         <div class='pisv'><img title='Επικεφαλίδα' alt='Πίσω' src="https://lh3.googleusercontent.com/-hJ2A6vZjctI/UJJRufMHhAI/AAAAAAAAvsw/v2eS0QoSYNM/s125/eskanaLogoTrans200.png" style="width:125px;height:125px"></div>                                      
                                 </div>
                         </div>
