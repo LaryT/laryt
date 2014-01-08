@@ -182,6 +182,7 @@ var kaneKartes = function (ypodoxeas, theTPL){
         }
         prospatheies=0;
         document.getElementById("divForCounter").innerHTML = prospatheies;
+        document.getElementById("theStatusBar").innerHTML ="";
 }
 
 function paixnidi(){
