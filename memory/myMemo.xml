@@ -133,7 +133,8 @@ var pinakas =[1,2,3,4,5,6,7,8,9,10,
                         teleytaiaKarta = [],
       pinakasLogos = [],
       pinakasNameLogos = [],
-      pinakasBathmoi = [];
+      pinakasBathmoi = [],
+      prospatheies = 0;
                         
 
 //---- var dockey="0AjrqMWGJ6suYdFJ4VXJjZzFSUjlMZ0QxZkJKQzRtWkE";
@@ -179,7 +180,8 @@ var kaneKartes = function (ypodoxeas, theTPL){
         for(var i=0;i<pinakas.length;i++){
                 ypodoxeas.innerHTML+=kartaTPL(theTPL, pinakas[i]);
         }
-
+        prospatheies=0;
+        document.getElementById("divForCounter").innerHTML = prospatheies;
 }
 
 function paixnidi(){
@@ -210,6 +212,8 @@ var checkRules = function(karta){
         karta.removeEventListener("transitionend",mylistener,false);
         akalyptes=0;
         ready=true;
+        prospatheies++;
+        document.getElementById("divForCounter").innerHTML = prospatheies;
 }
 
 paixnidi.gyrnaKarta = function(karta){
@@ -316,16 +320,20 @@ function handleQueryResponseTab1_TeamLogos(response) {
         <h1>Βρές - Μάθε - Αποκάλυψε</h1>
         <div id="divIDTab1"></div>
         <div id="myTitleID"></div>
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- 468 x 60 gameMemory -->
-                        <ins class="adsbygoogle"
-                             style="display:inline-block;width:468px;height:60px"
-                             data-ad-client="ca-pub-9529818444792202"
-                             data-ad-slot="1010612280"></ins>
-                        <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-
+        <div>
+          <div id="divForAd" style="width:478px;height:70px;float:left;">
+             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+             <!-- 468 x 60 gameMemory -->
+             <ins class="adsbygoogle"
+                style="display:inline-block;width:468px;height:60px"
+                data-ad-client="ca-pub-9529818444792202"
+                data-ad-slot="1010612280"></ins>
+             <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+             </script>
+		</div>
+		<div id="divForCounter" style="font-weight:bolder;width:478px;height:70px;font-size:50px;float:left;"><span>0</span></div>
+	</div>
         <div id="paixnidi">
                 <div id="theStatusBar" style="font-size:11px;font-weight:bold;">&nbsp;</div>
                 <ul id="kartes">
