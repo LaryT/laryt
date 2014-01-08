@@ -156,6 +156,10 @@ String.prototype.format = function(){
   strReturn = strReturn.replace("https://lh3.googleusercontent.com/-hJ2A6vZjctI/UJJRufMHhAI/AAAAAAAAvsw/v2eS0QoSYNM/s125/eskanaLogoTrans200.png",myImgStr);
   strReturn = strReturn.replace("Πίσω", pinakasNameLogos[arguments[1]-1]);
   strReturn = strReturn.replace("Επικεφαλίδα", pinakasNameLogos[arguments[1]-1] + ", " + pinakasBathmoi[arguments[1]-1]);
+  
+  if(myImgKapaki != "https://lh5.googleusercontent.com/-tP-wJLyEpO4/UDV3yR9qBLI/AAAAAAAArTI/jkCZ0c6JUBI/s125/bodybgblue.jpg"){
+    strReturn = strReturn.replace("https://lh5.googleusercontent.com/-tP-wJLyEpO4/UDV3yR9qBLI/AAAAAAAArTI/jkCZ0c6JUBI/s125/bodybgblue.jpg", myImgKapaki);
+  }
 
   return strReturn;
 }
@@ -309,7 +313,7 @@ function handleQueryResponseTab1_TeamLogos(response) {
 </script>
 <head>
 <!-- body onload='enarxi()'  -->
-<body onload='enarxi()'>
+<body>
         <h1>Βρές - Μάθε - Αποκάλυψε</h1>
         <div id="divIDTab1"></div>
         <div id="myTitleID"></div>
@@ -328,13 +332,13 @@ function handleQueryResponseTab1_TeamLogos(response) {
                 </ul>
         </div>
         <script type="text/javascript">
+                var myImgKapaki ="https://lh5.googleusercontent.com/-tP-wJLyEpO4/UDV3yR9qBLI/AAAAAAAArTI/jkCZ0c6JUBI/s125/bodybgblue.jpg";
                 function enarxi(){
                  
                     
                     
                         //var paixe = new paixnidi();
                         var myKey="0AjrqMWGJ6suYdFJ4VXJjZzFSUjlMZ0QxZkJKQzRtWkE";
-                        var myImgKapaki ="https://lh6.googleusercontent.com/-6NkDh1aEZ7s/TmL9cQeiRaI/AAAAAAAAY9E/xSVDPKEuDlU/s125/eskana_w_274.png";    
                         var myInitFile ="https://docs.google.com/spreadsheet/ccc?key=0AjrqMWGJ6suYdHdKcW9HYTdBX29vWWFrMFltSlZjVXc";                   
                         
                     //----- for gadget parameters
@@ -357,12 +361,7 @@ function handleQueryResponseTab1_TeamLogos(response) {
                             myInitFile = "https://docs.google.com/spreadsheet/ccc?key="+myInitCategory;
                         } 
                         
-                        //----- END for gadget parameters
-          
-                        var tmpl = document.querySelector("#kartaProtypo");
-                        var myImg = tmpl.content.querySelector(".imgClassMprosta");
-                        myImg.src=myImgKapaki;
-                        
+                        //----- END for gadget parameters          
                         loadCategories(myKey);
                         createSelectionForTeamsCategories(myInitFile);
                         // var paixe = new paixnidi();             
