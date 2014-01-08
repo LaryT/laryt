@@ -332,7 +332,7 @@ function handleQueryResponseTab1_TeamLogos(response) {
              (adsbygoogle = window.adsbygoogle || []).push({});
              </script>
 		</div>
-		<div id="divForCounter" style="font-weight:bolder;width:478px;height:70px;font-size:50px;float:left;"><span>0</span></div>
+		<div id="divForCounter" style="display: block;font-weight: bolder;height: 70px;font-size: 50px;text-align: center;padding-left: 300px;"><span>0</span></div>
 	</div>
         <div id="paixnidi">
                 <div id="theStatusBar" style="font-size:11px;font-weight:bold;">&nbsp;</div>
