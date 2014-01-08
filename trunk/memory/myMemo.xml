@@ -367,9 +367,10 @@ function handleQueryResponseTab1_TeamLogos(response) {
                         // var paixe = new paixnidi();             
                 }
         </script>
-         <!-- script type="text/template" id="kartaProtypo"  --> 
+         <!-- template id="kartaProtypo" -->
+         <script type="text/template" id="kartaProtypo"> 
 
-        <template id="kartaProtypo">
+
                 <li>
                         <div class='container'>
                                 <div class='karta' id='karta {0}' onclick='paixnidi.gyrnaKarta(this)'>
@@ -378,9 +379,9 @@ function handleQueryResponseTab1_TeamLogos(response) {
                                 </div>
                         </div>
                 </li>
-        </template>
-        <!-- /script  -->
-        
+
+        </script>
+        <!--  /template  -->
 <script>
 //--- enarxi();
 
